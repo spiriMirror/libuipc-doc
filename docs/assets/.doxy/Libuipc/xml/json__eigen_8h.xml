@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="json__eigen_8h" kind="file" language="C++">
+    <compoundname>json_eigen.h</compoundname>
+    <includes local="no">nlohmann/adl_serializer.hpp</includes>
+    <includes local="no">Eigen/Core</includes>
+    <includes refid="exception_8h" local="no">uipc/common/exception.h</includes>
+    <includes local="yes">details/eigen_json.inl</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>uipc/common/dllexport.h</label>
+        <link refid="dllexport_8h_source"/>
+      </node>
+      <node id="4">
+        <label>uipc/common/exception.h</label>
+        <link refid="exception_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/common/json_eigen.h</label>
+        <link refid="json__eigen_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc/common/string.h</label>
+        <link refid="string_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="9">
+        <label>details/eigen_json.inl</label>
+      </node>
+      <node id="8">
+        <label>exception</label>
+      </node>
+      <node id="2">
+        <label>nlohmann/adl_serializer.hpp</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classuipc_1_1_json_i_o_error" prot="public">uipc::JsonIOError</innerclass>
+    <innerclass refid="structnlohmann_1_1adl__serializer_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_761cd29d85d72c4c15331d22893c1439" prot="public">nlohmann::adl_serializer&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;</innerclass>
+    <innernamespace refid="namespaceuipc">uipc</innernamespace>
+    <innernamespace refid="namespacenlohmann">nlohmann</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nlohmann/adl_serializer.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Core&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/exception.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="classuipc_1_1_json_i_o_error" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1_json_i_o_error" kindref="compound">JsonIOError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1_exception" kindref="compound">Exception</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Exception::Exception;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">nlohmann</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Scalar,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Rows,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Cols,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Options,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MaxRows,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MaxCols&gt;</highlight></codeline>
+<codeline lineno="18" refid="structnlohmann_1_1adl__serializer_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_761cd29d85d72c4c15331d22893c1439" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">adl_serializer&lt;Eigen::Matrix&lt;Scalar,<sp/>Rows,<sp/>Cols,<sp/>Options,<sp/>MaxRows,<sp/>MaxCols&gt;&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>to_json(json&amp;<sp/>j,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Eigen::Matrix&lt;Scalar,<sp/>Rows,<sp/>Cols,<sp/>Options,<sp/>MaxRows,<sp/>MaxCols&gt;&amp;<sp/>m);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>from_json(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>json&amp;<sp/>j,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Eigen::Matrix&lt;Scalar,<sp/>Rows,<sp/>Cols,<sp/>Options,<sp/>MaxRows,<sp/>MaxCols&gt;&amp;<sp/>m);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nlohmann</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;details/eigen_json.inl&quot;</highlight></codeline>
+    </programlisting>
+    <location file="include/uipc/common/json_eigen.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="details_2attribute__name_8h" kind="file" language="C++">
+    <compoundname>attribute_name.h</compoundname>
+    <includedby refid="attribute__name_8h" local="no">include/uipc/builtin/attribute_name.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/uipc/builtin/attribute_name.h</label>
+        <link refid="attribute__name_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/builtin/details/attribute_name.h</label>
+        <link refid="details_2attribute__name_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/uipc/core.h</label>
+        <link refid="core_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/uipc/uipc.h</label>
+        <link refid="uipc_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>This file records all the built-in attribute names in the libuipc specification. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Programmers can define their own UIPC_BUILTIN_ATTRIBUTE macro outside this file, and include this file to get the built-in attribute names.</para>
+<para><programlisting filename=".cpp"><codeline><highlight class="preprocessor">#define<sp/>UIPC_BUILTIN_ATTRIBUTE(name)<sp/>constexpr<sp/>std::string_view<sp/>name<sp/>=<sp/>#name</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pyuipc/builtin/attribute_name.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>UIPC_BUILTIN_ATTRIBUTE</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="author"><para>MuGdxy </para>
+</simplesect>
+<simplesect kind="date"><para>September 2024 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Don&apos;t<sp/>put<sp/>#pragma<sp/>once<sp/>here,<sp/>this<sp/>file<sp/>may<sp/>be<sp/>included<sp/>multiple<sp/>times.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>UIPC_BUILTIN_ATTRIBUTE</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(topo);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(position);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(aim_position);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(transform);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(aim_transform);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(contact_element_id);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(constitution_uid);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(extra_constitution_uids);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(constraint_uid);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(implicit_geometry_uid);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(is_surf);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(is_facet);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(orient);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(parent_id);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(is_fixed);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(is_constrained);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(is_dynamic);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(mass);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(gravity);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(thickness);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(backend_fem_vertex_offset);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">UIPC_BUILTIN_ATTRIBUTE(backend_abd_body_offset);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/uipc/builtin/details/attribute_name.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceuipc" kind="namespace" language="C++">
+    <compoundname>uipc</compoundname>
+    <innerclass refid="classuipc_1_1_buffer_info" prot="public">uipc::BufferInfo</innerclass>
+    <innerclass refid="classuipc_1_1_exception" prot="public">uipc::Exception</innerclass>
+    <innerclass refid="classuipc_1_1_global_timer" prot="public">uipc::GlobalTimer</innerclass>
+    <innerclass refid="classuipc_1_1is__matrix" prot="public">uipc::is_matrix</innerclass>
+    <innerclass refid="classuipc_1_1is__matrix_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_options_00209f23989f4c2eaf53edf139526fd2cf" prot="public">uipc::is_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;</innerclass>
+    <innerclass refid="classuipc_1_1_json_i_o_error" prot="public">uipc::JsonIOError</innerclass>
+    <innerclass refid="classuipc_1_1_log_pattern_guard" prot="public">uipc::LogPatternGuard</innerclass>
+    <innerclass refid="structuipc_1_1_pmr_deleter" prot="public">uipc::PmrDeleter</innerclass>
+    <innerclass refid="structuipc_1_1propagate__const" prot="public">uipc::propagate_const</innerclass>
+    <innerclass refid="structuipc_1_1signature" prot="public">uipc::signature</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_6_08_07_args_8_8_8_08_4" prot="public">uipc::signature&lt; R(&amp;)(Args...)&gt;</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_5_08_07_args_8_8_8_08_4" prot="public">uipc::signature&lt; R(*)(Args...)&gt;</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_args_8_8_8_08_4" prot="public">uipc::signature&lt; R(Args...)&gt;</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01_6_6_01_4" prot="public">uipc::signature&lt; R(C::*)(Args...) &amp;&amp; &gt;</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01_4" prot="public">uipc::signature&lt; R(C::*)(Args...) const &gt;</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_4" prot="public">uipc::signature&lt; R(C::*)(Args...) const volatile &gt;</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_4" prot="public">uipc::signature&lt; R(C::*)(Args...) volatile &gt;</innerclass>
+    <innerclass refid="structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4" prot="public">uipc::signature&lt; R(C::*)(Args...)&gt;</innerclass>
+    <innerclass refid="classuipc_1_1_timer" prot="public">uipc::Timer</innerclass>
+    <innernamespace refid="namespaceuipc_1_1backend">uipc::backend</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1builtin">uipc::builtin</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1constitution">uipc::constitution</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1details">uipc::details</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1diff__sim">uipc::diff_sim</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1geometry">uipc::geometry</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1gui">uipc::gui</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1pmr">uipc::pmr</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="allocator_8h_1ac9be4f2eac29bb0cd6b305c53f210ecd" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::pmr::polymorphic_allocator&lt; T &gt;</type>
+        <definition>using uipc::Allocator = typedef std::pmr::polymorphic_allocator&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>Allocator</name>
+        <qualifiedname>uipc::Allocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/allocator.h" line="7" column="1" bodyfile="include/uipc/common/allocator.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="json_8h_1af0e87bd336ef43a56df46dceb25a7aca" prot="public" static="no">
+        <type>nlohmann::json</type>
+        <definition>using uipc::Json = typedef nlohmann::json</definition>
+        <argsstring></argsstring>
+        <name>Json</name>
+        <qualifiedname>uipc::Json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/json.h" line="6" column="1" bodyfile="include/uipc/common/json.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="smart__pointer_8h_1a5b4e26f974ef71ef1ebdf8eadda647c2" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::unique_ptr&lt; T, <ref refid="structuipc_1_1_pmr_deleter" kindref="compound">PmrDeleter</ref>&lt; T &gt; &gt;</type>
+        <definition>using uipc::U = typedef std::unique_ptr&lt;T, PmrDeleter&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>U</name>
+        <qualifiedname>uipc::U</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/smart_pointer.h" line="16" column="1" bodyfile="include/uipc/common/smart_pointer.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="smart__pointer_8h_1a32a1460d4f04c02e49f968b6ea93cca9" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>using uipc::S = typedef std::shared_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>S</name>
+        <qualifiedname>uipc::S</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/smart_pointer.h" line="25" column="1" bodyfile="include/uipc/common/smart_pointer.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="smart__pointer_8h_1a6c2c7b849aea7912830aee8ee6bfac35" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::weak_ptr&lt; T &gt;</type>
+        <definition>using uipc::W = typedef std::weak_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>W</name>
+        <qualifiedname>uipc::W</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/smart_pointer.h" line="31" column="1" bodyfile="include/uipc/common/smart_pointer.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="stack_8h_1af5b36dfea4feec72524671c83148d26a" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::stack&lt; T, std::pmr::deque&lt; T &gt; &gt;</type>
+        <definition>using uipc::stack = typedef std::stack&lt;T, std::pmr::deque&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>stack</name>
+        <qualifiedname>uipc::stack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/stack.h" line="8" column="1" bodyfile="include/uipc/common/stack.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a041ac1bfdc02405d78b944b71943a156" prot="public" static="no">
+        <type>double</type>
+        <definition>using uipc::Float = typedef double</definition>
+        <argsstring></argsstring>
+        <name>Float</name>
+        <qualifiedname>uipc::Float</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="5" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a2c7134a7a9194fa6522b448f3fe5fdeb" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>using uipc::IndexT = typedef int32_t</definition>
+        <argsstring></argsstring>
+        <name>IndexT</name>
+        <qualifiedname>uipc::IndexT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="6" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a936b3bc96b88d24de6e9881ce996083d" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>using uipc::SizeT = typedef std::size_t</definition>
+        <argsstring></argsstring>
+        <name>SizeT</name>
+        <qualifiedname>uipc::SizeT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="7" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a6fc02c496af97d82a7e20a51deed642b" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>using uipc::I32 = typedef int32_t</definition>
+        <argsstring></argsstring>
+        <name>I32</name>
+        <qualifiedname>uipc::I32</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="8" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a1445c6b9b972e536f3b18edce07f8077" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>using uipc::I64 = typedef int64_t</definition>
+        <argsstring></argsstring>
+        <name>I64</name>
+        <qualifiedname>uipc::I64</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="9" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a18c1e31e7e2794d7c4b5d2dd244d2ea4" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>using uipc::U32 = typedef uint32_t</definition>
+        <argsstring></argsstring>
+        <name>U32</name>
+        <qualifiedname>uipc::U32</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="10" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a9f18b97bdcad2c2a96138d7ea59111ef" prot="public" static="no">
+        <type>uint64_t</type>
+        <definition>using uipc::U64 = typedef uint64_t</definition>
+        <argsstring></argsstring>
+        <name>U64</name>
+        <qualifiedname>uipc::U64</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="11" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1ad98f4f0aa5762e722589355b9c5cf7b5" prot="public" static="no">
+        <type>Vector&lt; Float, 2 &gt;</type>
+        <definition>using uipc::Vector2 = typedef Vector&lt;Float, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector2</name>
+        <qualifiedname>uipc::Vector2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="16" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1adf7c62056f5b805b4ffd8d069c639b1e" prot="public" static="no">
+        <type>Vector&lt; Float, 3 &gt;</type>
+        <definition>using uipc::Vector3 = typedef Vector&lt;Float, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector3</name>
+        <qualifiedname>uipc::Vector3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="17" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1ac6fe7fc5f981f493b4c46036c306a68c" prot="public" static="no">
+        <type>Vector&lt; Float, 4 &gt;</type>
+        <definition>using uipc::Vector4 = typedef Vector&lt;Float, 4&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector4</name>
+        <qualifiedname>uipc::Vector4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="18" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a7202d75dd587750f7414790fe2d652ec" prot="public" static="no">
+        <type>Vector&lt; IndexT, 2 &gt;</type>
+        <definition>using uipc::Vector2i = typedef Vector&lt;IndexT, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector2i</name>
+        <qualifiedname>uipc::Vector2i</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="20" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a55256c0ec66bf5d69aade0f79b8874c7" prot="public" static="no">
+        <type>Vector&lt; IndexT, 3 &gt;</type>
+        <definition>using uipc::Vector3i = typedef Vector&lt;IndexT, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector3i</name>
+        <qualifiedname>uipc::Vector3i</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="21" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1ad2c7ce12de7f413d7061ad1c33b517d3" prot="public" static="no">
+        <type>Vector&lt; IndexT, 4 &gt;</type>
+        <definition>using uipc::Vector4i = typedef Vector&lt;IndexT, 4&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector4i</name>
+        <qualifiedname>uipc::Vector4i</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="22" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a4dfc8a15a812b3cd1b016c4791742be3" prot="public" static="no">
+        <type>Vector&lt; Float, 6 &gt;</type>
+        <definition>using uipc::Vector6 = typedef Vector&lt;Float, 6&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector6</name>
+        <qualifiedname>uipc::Vector6</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="24" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1afa101db4f6dd14bb9622957a5e1d42a6" prot="public" static="no">
+        <type>Vector&lt; Float, 9 &gt;</type>
+        <definition>using uipc::Vector9 = typedef Vector&lt;Float, 9&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector9</name>
+        <qualifiedname>uipc::Vector9</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="25" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a79503abe4eed710e624448ff3c9c99d0" prot="public" static="no">
+        <type>Vector&lt; Float, 12 &gt;</type>
+        <definition>using uipc::Vector12 = typedef Vector&lt;Float, 12&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector12</name>
+        <qualifiedname>uipc::Vector12</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="26" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a8fa86c8d3ad13a80734acb8fdd8e061a" prot="public" static="no">
+        <type>Matrix&lt; Float, 2, 2 &gt;</type>
+        <definition>using uipc::Matrix2x2 = typedef Matrix&lt;Float, 2, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix2x2</name>
+        <qualifiedname>uipc::Matrix2x2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="28" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1ab490126d74acdcc71c7171c4b897c982" prot="public" static="no">
+        <type>Matrix&lt; Float, 3, 3 &gt;</type>
+        <definition>using uipc::Matrix3x3 = typedef Matrix&lt;Float, 3, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix3x3</name>
+        <qualifiedname>uipc::Matrix3x3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="29" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1afae818f3965d22576ab64d517bc34d5d" prot="public" static="no">
+        <type>Matrix&lt; Float, 4, 4 &gt;</type>
+        <definition>using uipc::Matrix4x4 = typedef Matrix&lt;Float, 4, 4&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix4x4</name>
+        <qualifiedname>uipc::Matrix4x4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="30" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1abd949591d3da266a3e6c12815fe72d82" prot="public" static="no">
+        <type>Matrix&lt; Float, 6, 6 &gt;</type>
+        <definition>using uipc::Matrix6x6 = typedef Matrix&lt;Float, 6, 6&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix6x6</name>
+        <qualifiedname>uipc::Matrix6x6</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="31" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a1b784961a120b2ee334b951bd5ee1147" prot="public" static="no">
+        <type>Matrix&lt; Float, 9, 9 &gt;</type>
+        <definition>using uipc::Matrix9x9 = typedef Matrix&lt;Float, 9, 9&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix9x9</name>
+        <qualifiedname>uipc::Matrix9x9</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="32" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1aded81f058c6296ad63aaf97ce2358496" prot="public" static="no">
+        <type>Matrix&lt; Float, 12, 12 &gt;</type>
+        <definition>using uipc::Matrix12x12 = typedef Matrix&lt;Float, 12, 12&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix12x12</name>
+        <qualifiedname>uipc::Matrix12x12</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="33" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1aa0746a4c20eb4f3df3de40f9afa58722" prot="public" static="no">
+        <type>Eigen::Transform&lt; Float, 3, Eigen::Affine &gt;</type>
+        <definition>using uipc::Transform = typedef Eigen::Transform&lt;Float, 3, Eigen::Affine&gt;</definition>
+        <argsstring></argsstring>
+        <name>Transform</name>
+        <qualifiedname>uipc::Transform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="35" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a5f2640bf7a9d2a68b56d4b47838e6aaa" prot="public" static="no">
+        <type>Eigen::Translation&lt; Float, 3 &gt;</type>
+        <definition>using uipc::Translation = typedef Eigen::Translation&lt;Float, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>Translation</name>
+        <qualifiedname>uipc::Translation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="36" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a11a1a033d576410ff1fb3fef67196b67" prot="public" static="no">
+        <type>Eigen::VectorX&lt; Float &gt;</type>
+        <definition>using uipc::VectorX = typedef Eigen::VectorX&lt;Float&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorX</name>
+        <qualifiedname>uipc::VectorX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="38" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1a0a96889e0583cf6201bd3e3b2764efe5" prot="public" static="no">
+        <type>Eigen::VectorX&lt; IndexT &gt;</type>
+        <definition>using uipc::VectorXi = typedef Eigen::VectorX&lt;IndexT&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorXi</name>
+        <qualifiedname>uipc::VectorXi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="39" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1acb8003c4c50d4d6a05a13ac02532d37c" prot="public" static="no">
+        <type>Eigen::VectorX&lt; I64 &gt;</type>
+        <definition>using uipc::VectorXi64 = typedef Eigen::VectorX&lt;I64&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorXi64</name>
+        <qualifiedname>uipc::VectorXi64</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="40" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1afe849e5e56df267070b188ef0c9ab21b" prot="public" static="no">
+        <type>Eigen::VectorX&lt; U32 &gt;</type>
+        <definition>using uipc::VectorXu = typedef Eigen::VectorX&lt;U32&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorXu</name>
+        <qualifiedname>uipc::VectorXu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="41" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="common_2type__define_8h_1ad3d7ed2864655ed23811b21045393671" prot="public" static="no">
+        <type>Eigen::VectorX&lt; U64 &gt;</type>
+        <definition>using uipc::VectorXu64 = typedef Eigen::VectorX&lt;U64&gt;</definition>
+        <argsstring></argsstring>
+        <name>VectorXu64</name>
+        <qualifiedname>uipc::VectorXu64</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_define.h" line="42" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="type__traits_8h_1a16a20bc760afdf91c1452e58b4b77d49" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename DstT</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structuipc_1_1propagate__const" kindref="compound">propagate_const</ref>&lt; T, DstT &gt;::type</type>
+        <definition>using uipc::propagate_const_t = typedef typename propagate_const&lt;T, DstT&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>propagate_const_t</name>
+        <qualifiedname>uipc::propagate_const_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_traits.h" line="18" column="1" bodyfile="include/uipc/common/type_traits.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="type__traits_8h_1a3a65d6e3ce75b13ebca387866dd9fd68" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Sig</type>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structuipc_1_1signature" kindref="compound">signature</ref>&lt; Sig &gt;::type</type>
+        <definition>using uipc::signature_t = typedef typename signature&lt;Sig&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>signature_t</name>
+        <qualifiedname>uipc::signature_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_traits.h" line="66" column="1" bodyfile="include/uipc/common/type_traits.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="config_8h_1a909d9bca4c79c05d3ea39d63fa96adb2" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool uipc::RUNTIME_CHECK</definition>
+        <argsstring></argsstring>
+        <name>RUNTIME_CHECK</name>
+        <qualifiedname>uipc::RUNTIME_CHECK</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/config.h" line="8" column="16" bodyfile="include/uipc/common/config.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="type__traits_8h_1a66f926eba5f289bf4064a3f7169da694" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename MatrixT</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool uipc::is_matrix_v</definition>
+        <argsstring></argsstring>
+        <name>is_matrix_v</name>
+        <qualifiedname>uipc::is_matrix_v</qualifiedname>
+        <initializer>= <ref refid="classuipc_1_1is__matrix" kindref="compound">is_matrix</ref>&lt;MatrixT&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_traits.h" line="75" column="23" bodyfile="include/uipc/common/type_traits.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="run__length__encode_8h_1a84e9dce28fc0e024fb6b01763d46a08e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InputIt</type>
+          </param>
+          <param>
+            <type>typename OutputIt</type>
+          </param>
+          <param>
+            <type>typename OutputCountIt</type>
+          </param>
+          <param>
+            <type>typename Pred</type>
+          </param>
+        </templateparamlist>
+        <type>std::size_t</type>
+        <definition>std::size_t uipc::run_length_encode</definition>
+        <argsstring>(InputIt in_first, InputIt in_last, OutputIt out_unique, OutputCountIt out_counts, Pred &amp;&amp;pred)</argsstring>
+        <name>run_length_encode</name>
+        <qualifiedname>uipc::run_length_encode</qualifiedname>
+        <param>
+          <type>InputIt</type>
+          <declname>in_first</declname>
+        </param>
+        <param>
+          <type>InputIt</type>
+          <declname>in_last</declname>
+        </param>
+        <param>
+          <type>OutputIt</type>
+          <declname>out_unique</declname>
+        </param>
+        <param>
+          <type>OutputCountIt</type>
+          <declname>out_counts</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+    <requiresclause>requires(InputIt in_first, InputIt in_last, OutputIt out_unique, OutputCountIt out_counts, Pred p) { *out_unique = *in_first; std::integral&lt;typename std::iterator_traits&lt;OutputCountIt&gt;::value_type&gt;; *out_counts = 0; { p(*in_first, *in_first) } -&gt; std::convertible_to&lt;bool&gt;; }    </requiresclause>
+        <briefdescription>
+<para>Run-length encode the input range, the input range must be sorted. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in_first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input iterator to the beginning of the input range </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input iterator to the end of the input range </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_unique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output iterator to the beginning of the unique values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out_counts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output iterator to the beginning of the counts of the unique values</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::size_t The number of unique values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="30" column="13" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="30" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="run__length__encode_8h_1adaff214cf172f33a7dcffa1a910d79dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InputIt</type>
+          </param>
+          <param>
+            <type>typename OutputIt</type>
+          </param>
+          <param>
+            <type>typename OutputCountIt</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto uipc::run_length_encode</definition>
+        <argsstring>(InputIt in_first, InputIt in_last, OutputIt out_unique, OutputCountIt out_counts)</argsstring>
+        <name>run_length_encode</name>
+        <qualifiedname>uipc::run_length_encode</qualifiedname>
+        <param>
+          <type>InputIt</type>
+          <declname>in_first</declname>
+        </param>
+        <param>
+          <type>InputIt</type>
+          <declname>in_last</declname>
+        </param>
+        <param>
+          <type>OutputIt</type>
+          <declname>out_unique</declname>
+        </param>
+        <param>
+          <type>OutputCountIt</type>
+          <declname>out_counts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="76" column="6" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="run__length__encode_8h_1a345c6aac020f80e7258cf7f8ec971e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename RandIt</type>
+          </param>
+          <param>
+            <type>typename OffsetCountIt</type>
+          </param>
+          <param>
+            <type>typename Pred</type>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t uipc::encode_offset_count</definition>
+        <argsstring>(RandIt first, RandIt last, OffsetCountIt offsets, OffsetCountIt counts, Pred &amp;&amp;pred)</argsstring>
+        <name>encode_offset_count</name>
+        <qualifiedname>uipc::encode_offset_count</qualifiedname>
+        <param>
+          <type>RandIt</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>RandIt</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>OffsetCountIt</type>
+          <declname>offsets</declname>
+        </param>
+        <param>
+          <type>OffsetCountIt</type>
+          <declname>counts</declname>
+        </param>
+        <param>
+          <type>Pred &amp;&amp;</type>
+          <declname>pred</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="83" column="8" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="83" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="run__length__encode_8h_1a97e90cf9d10a67050818da24d710f167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename RandIt</type>
+          </param>
+          <param>
+            <type>typename OffsetCountIt</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto uipc::encode_offset_count</definition>
+        <argsstring>(RandIt first, RandIt last, OffsetCountIt offset, OffsetCountIt count)</argsstring>
+        <name>encode_offset_count</name>
+        <qualifiedname>uipc::encode_offset_count</qualifiedname>
+        <param>
+          <type>RandIt</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>RandIt</type>
+          <declname>last</declname>
+        </param>
+        <param>
+          <type>OffsetCountIt</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>OffsetCountIt</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="124" column="6" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1ac7b49fff7b09b87fb5c85a92cb77a8f4" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string uipc::readable_type_name</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>readable_type_name</name>
+        <qualifiedname>uipc::readable_type_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="15" column="20" bodyfile="include/uipc/common/readable_type_name.h" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a767ed1c17e157433b46573af0304f2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector2)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="20" column="1" declfile="include/uipc/common/readable_type_name.h" declline="20" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1aa4f053e3c28ee8787ab91be851f73ce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector3)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector3</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="21" column="1" declfile="include/uipc/common/readable_type_name.h" declline="21" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a0f7e4e8d04ec3721a4f76a74cca441da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector4)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector4</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="22" column="1" declfile="include/uipc/common/readable_type_name.h" declline="22" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a26edb3290a68d94c9ca09724e40cff46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector2i)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector2i</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="24" column="1" declfile="include/uipc/common/readable_type_name.h" declline="24" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a8efe78536f4f05b1be820d44112d6330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector3i)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector3i</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="25" column="1" declfile="include/uipc/common/readable_type_name.h" declline="25" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a07cbc677d88501001df057685ae9cf76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector4i)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector4i</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="26" column="1" declfile="include/uipc/common/readable_type_name.h" declline="26" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a2ffeeed7949b887826e1e4d676dce707" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector6)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="28" column="1" declfile="include/uipc/common/readable_type_name.h" declline="28" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a3b361ab64697764e831c2d3bd4aba755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector9)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector9</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="29" column="1" declfile="include/uipc/common/readable_type_name.h" declline="29" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a65743f3ae9a0d0e9063dafae886f8c6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Vector12)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Vector12</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="30" column="1" declfile="include/uipc/common/readable_type_name.h" declline="30" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a503bd80fe9e42b8e1b156f1b62394c68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Matrix2x2)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Matrix2x2</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="32" column="1" declfile="include/uipc/common/readable_type_name.h" declline="32" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1af5aaa66aa3c835d0b545668dceb1d939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Matrix3x3)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Matrix3x3</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="33" column="1" declfile="include/uipc/common/readable_type_name.h" declline="33" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1af5dd83259606e336437f3f6c8a84418e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Matrix4x4)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Matrix4x4</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="34" column="1" declfile="include/uipc/common/readable_type_name.h" declline="34" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1aa617a87100d028a81e946729c6f6ff31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Matrix6x6)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Matrix6x6</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="36" column="1" declfile="include/uipc/common/readable_type_name.h" declline="36" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a330903e8a8a9961db9f34b2937912807" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Matrix9x9)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Matrix9x9</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="37" column="1" declfile="include/uipc/common/readable_type_name.h" declline="37" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1abb2b93b8a3153d24e9f28e916fb02e1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(Matrix12x12)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>Matrix12x12</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="38" column="1" declfile="include/uipc/common/readable_type_name.h" declline="38" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1aa0f0c273407323c4064a8d243d1ed56c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(VectorX)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>VectorX</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="40" column="1" declfile="include/uipc/common/readable_type_name.h" declline="40" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1ab07cf942e92198254bb48c86aba66e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(VectorXi)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>VectorXi</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="41" column="1" declfile="include/uipc/common/readable_type_name.h" declline="41" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a5c18095f08dab421fcda0af6a6e01c6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(VectorXi64)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>VectorXi64</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="42" column="1" declfile="include/uipc/common/readable_type_name.h" declline="42" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1a971ad5090c7d72f1a66e0c600356fb4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(VectorXu)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>VectorXu</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="43" column="1" declfile="include/uipc/common/readable_type_name.h" declline="43" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="readable__type__name_8h_1aa454526411ee7588b3b275610f5cfb63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::READABLE_TYPE_NAME_AS_ALIAS</definition>
+        <argsstring>(VectorXu64)</argsstring>
+        <name>READABLE_TYPE_NAME_AS_ALIAS</name>
+        <qualifiedname>uipc::READABLE_TYPE_NAME_AS_ALIAS</qualifiedname>
+        <param>
+          <type>VectorXu64</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/readable_type_name.h" line="44" column="1" declfile="include/uipc/common/readable_type_name.h" declline="44" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="smart__pointer_8h_1a0ae28247f38fdb9b36b5321ee43c81df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>U&lt; T &gt;</type>
+        <definition>U&lt; T &gt; uipc::make_unique</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>make_unique</name>
+        <qualifiedname>uipc::make_unique</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/smart_pointer.h" line="19" column="3" declfile="include/uipc/common/smart_pointer.h" declline="19" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="smart__pointer_8h_1af5925091885d0542e9373a80c3b9d04c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DstT</type>
+          </param>
+          <param>
+            <type>typename SrcT</type>
+          </param>
+        </templateparamlist>
+        <type>U&lt; DstT &gt;</type>
+        <definition>U&lt; DstT &gt; uipc::static_pointer_cast</definition>
+        <argsstring>(U&lt; SrcT &gt; &amp;&amp;src)</argsstring>
+        <name>static_pointer_cast</name>
+        <qualifiedname>uipc::static_pointer_cast</qualifiedname>
+        <param>
+          <type>U&lt; SrcT &gt; &amp;&amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/smart_pointer.h" line="22" column="3" declfile="include/uipc/common/smart_pointer.h" declline="22" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="smart__pointer_8h_1aff813d4883f53307ee32ddb02c0b00b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>S&lt; T &gt;</type>
+        <definition>S&lt; T &gt; uipc::make_shared</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>make_shared</name>
+        <qualifiedname>uipc::make_shared</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/smart_pointer.h" line="28" column="3" declfile="include/uipc/common/smart_pointer.h" declline="28" declcolumn="3"/>
+      </memberdef>
+      <memberdef kind="function" id="common_2uipc_8h_1a37fe1ea7a32a38f03e65a9c9d0c5cae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API void</type>
+        <definition>UIPC_CORE_API void uipc::init</definition>
+        <argsstring>(const Json &amp;config)</argsstring>
+        <name>init</name>
+        <qualifiedname>uipc::init</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/uipc.h" line="7" column="27" declfile="include/uipc/common/uipc.h" declline="7" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="common_2uipc_8h_1aa3ab45316b0439216bab1c24665f0bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API Json</type>
+        <definition>UIPC_CORE_API Json uipc::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/uipc.h" line="8" column="27" declfile="include/uipc/common/uipc.h" declline="8" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="common_2uipc_8h_1a26dc24a1b397a82c3e3e4b00a142e85c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API const Json &amp;</type>
+        <definition>UIPC_CORE_API const Json &amp; uipc::config</definition>
+        <argsstring>()</argsstring>
+        <name>config</name>
+        <qualifiedname>uipc::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/uipc.h" line="9" column="26" declfile="include/uipc/common/uipc.h" declline="9" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1a257f545db7d8b4960548601671ed13d3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_s</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_s</name>
+        <qualifiedname>uipc::operator&quot;&quot;_s</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Second literal operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem></listitem><listitem><para><computeroutput>cpp</computeroutput></para>
+</listitem><listitem><para><computeroutput>auto time = 1.0_s; *</computeroutput> </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="12" column="23" bodyfile="include/uipc/common/unit.h" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1abdd0d480da9459d6bbc85f13ba5ee65a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_ms</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_ms</name>
+        <qualifiedname>uipc::operator&quot;&quot;_ms</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Second literal operator (ms) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="20" column="23" bodyfile="include/uipc/common/unit.h" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1a98e64bd68668a2bc7a409ff4a38d6368" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_m</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_m</name>
+        <qualifiedname>uipc::operator&quot;&quot;_m</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Meter literal operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>length<sp/>=<sp/>1.0_m;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="31" column="23" bodyfile="include/uipc/common/unit.h" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1ac2a5a854252c66ece7c4648ac8d6fcf8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_mm</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_mm</name>
+        <qualifiedname>uipc::operator&quot;&quot;_mm</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Meter literal operator (mm) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="39" column="23" bodyfile="include/uipc/common/unit.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1a47f7617d80198a047b02285297b755ac" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_km</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_km</name>
+        <qualifiedname>uipc::operator&quot;&quot;_km</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Meter literal operator (km) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="47" column="23" bodyfile="include/uipc/common/unit.h" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1a39b597fe3bbc0742edeaf0bcefaf2bdc" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_Pa</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_Pa</name>
+        <qualifiedname>uipc::operator&quot;&quot;_Pa</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Pascal literal operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pressure<sp/>=<sp/>1.0_Pa;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="59" column="23" bodyfile="include/uipc/common/unit.h" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1acb02f4932df97428626f761411bf870c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_kPa</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_kPa</name>
+        <qualifiedname>uipc::operator&quot;&quot;_kPa</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Pascal literal operator (kPa) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="67" column="23" bodyfile="include/uipc/common/unit.h" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1a861e98a8df18dccd4a225a581452f6f7" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_MPa</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_MPa</name>
+        <qualifiedname>uipc::operator&quot;&quot;_MPa</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Pascal literal operator (MPa) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="75" column="23" bodyfile="include/uipc/common/unit.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1ac6416e601174ab6caf1ade44ae75e434" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_GPa</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_GPa</name>
+        <qualifiedname>uipc::operator&quot;&quot;_GPa</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Pascal literal operator (GPa) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="83" column="23" bodyfile="include/uipc/common/unit.h" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="unit_8h_1a22eab1324a5f982dc202c24b1572d47e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr long double</type>
+        <definition>constexpr long double uipc::operator&quot;&quot;_N</definition>
+        <argsstring>(long double value)</argsstring>
+        <name>operator&quot;&quot;_N</name>
+        <qualifiedname>uipc::operator&quot;&quot;_N</qualifiedname>
+        <param>
+          <type>long double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Newton literal operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>force<sp/>=<sp/>1.0_N;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/unit.h" line="95" column="23" bodyfile="include/uipc/common/unit.h" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="gltf__io_8h_1a3b8fd088958f45a4cd8b9b3857ab5666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_IO_API int</type>
+        <definition>UIPC_IO_API int uipc::test_gltf</definition>
+        <argsstring>()</argsstring>
+        <name>test_gltf</name>
+        <qualifiedname>uipc::test_gltf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/gltf_io.h" line="7" column="17" declfile="include/uipc/io/gltf_io.h" declline="7" declcolumn="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/backend/buffer_view.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

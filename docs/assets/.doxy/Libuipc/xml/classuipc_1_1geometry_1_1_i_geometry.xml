@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1_i_geometry" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>uipc::geometry::IGeometry</compoundname>
+    <derivedcompoundref refid="classuipc_1_1geometry_1_1_geometry" prot="public" virt="non-virtual">uipc::geometry::Geometry</derivedcompoundref>
+    <includes refid="geometry_2geometry_8h" local="no">geometry.h</includes>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_i_geometry_1aa45708db5d0b4c1ec6aab5e7e4aad8dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>class</type>
+        <definition>friend class GeometryFriend</definition>
+        <argsstring></argsstring>
+        <name>GeometryFriend</name>
+        <qualifiedname>uipc::geometry::IGeometry::GeometryFriend</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_friend" kindref="compound">GeometryFriend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="18" column="18" bodyfile="include/uipc/geometry/geometry.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_i_geometry_1a507945a5c1e0a010114f885279500d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class backend::GeometryVisitor</definition>
+        <argsstring></argsstring>
+        <name>backend::GeometryVisitor</name>
+        <qualifiedname>uipc::geometry::IGeometry::GeometryVisitor</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1_geometry_visitor" kindref="compound">backend::GeometryVisitor</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="19" column="18" bodyfile="include/uipc/geometry/geometry.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_geometry_1acffe2791e52c598766df64c010b439d9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string_view</type>
+        <definition>std::string_view uipc::geometry::IGeometry::type</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>type</name>
+        <qualifiedname>uipc::geometry::IGeometry::type</qualifiedname>
+        <briefdescription>
+<para>Get the type of the geometries, check the type to downcast the geometries to a specific type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a string_view of the type of the geometries </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="27" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_geometry_1a53538e77e278ee6f3db36261181d21b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual uipc::geometry::IGeometry::~IGeometry</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IGeometry</name>
+        <qualifiedname>uipc::geometry::IGeometry::~IGeometry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="28" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_geometry_1a7e33167a2c1322aeed0303fb97e69a04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::geometry::IGeometry::to_json</definition>
+        <argsstring>() const</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::geometry::IGeometry::to_json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="29" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_geometry_1a8ebf50e0ad154bbeeff39c83a2deec22" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::geometry::IGeometry::get_type</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>get_type</name>
+        <qualifiedname>uipc::geometry::IGeometry::get_type</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1aa9f19b39920c1e51aab15abb8f3a5ff7">get_type</reimplementedby>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_implicit_geometry_1ab61c876f54204c0e1050f84768c7a534">get_type</reimplementedby>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_simplicial_complex_1a6fed69076bbeca05e0583f87235696b0">get_type</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="32" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_geometry_1a6046f5609186942aab1f6d92be8c6afb" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>Json</type>
+        <definition>virtual Json uipc::geometry::IGeometry::do_to_json</definition>
+        <argsstring>() const =0</argsstring>
+        <name>do_to_json</name>
+        <qualifiedname>uipc::geometry::IGeometry::do_to_json</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a8be6b2f7c5770a047cb8a963964e30db">do_to_json</reimplementedby>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_geometry_1a1c742d5ffed0d0e68019636ada8e4c20">do_to_json</reimplementedby>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_simplicial_complex_1ab5425e665b4e9974f9725d13fc9eb20e">do_to_json</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="33" column="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_geometry_1adab4bd86e2fe39abea5556c9e15309fb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::geometry::IGeometry::do_collect_attribute_collections</definition>
+        <argsstring>(vector&lt; std::string &gt; &amp;names, vector&lt; AttributeCollection * &gt; &amp;collections)=0</argsstring>
+        <name>do_collect_attribute_collections</name>
+        <qualifiedname>uipc::geometry::IGeometry::do_collect_attribute_collections</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_geometry_1a7af109c750cb7d3d4a2d75e8d64c14df">do_collect_attribute_collections</reimplementedby>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_simplicial_complex_1a465e6ffb5ee6f2961f02b70a6fcb1c52">do_collect_attribute_collections</reimplementedby>
+        <param>
+          <type>vector&lt; std::string &gt; &amp;</type>
+          <declname>names</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> * &gt; &amp;</type>
+          <declname>collections</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="34" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_geometry_1acd99e04a66327053bcd4dbe539b4040c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::IGeometry::collect_attribute_collections</definition>
+        <argsstring>(vector&lt; std::string &gt; &amp;names, vector&lt; AttributeCollection * &gt; &amp;collections)</argsstring>
+        <name>collect_attribute_collections</name>
+        <qualifiedname>uipc::geometry::IGeometry::collect_attribute_collections</qualifiedname>
+        <param>
+          <type>vector&lt; std::string &gt; &amp;</type>
+          <declname>names</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> * &gt; &amp;</type>
+          <declname>collections</declname>
+        </param>
+        <briefdescription>
+<para>Provide a way to use a generic way to iterate over the attribute collections. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The names of the attribute collections. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">collections</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute collections. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="44" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>An abstract class for geometries. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>uipc::geometry::AbstractSimplicialComplex</label>
+        <link refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::geometry::Geometry</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::geometry::IGeometry</label>
+        <link refid="classuipc_1_1geometry_1_1_i_geometry"/>
+      </node>
+      <node id="4">
+        <label>uipc::geometry::ImplicitGeometry</label>
+        <link refid="classuipc_1_1geometry_1_1_implicit_geometry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc::geometry::SimplicialComplex</label>
+        <link refid="classuipc_1_1geometry_1_1_simplicial_complex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/uipc/geometry/geometry.h" line="15" column="1" bodyfile="include/uipc/geometry/geometry.h" bodystart="16" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1a507945a5c1e0a010114f885279500d07" prot="public" virt="non-virtual"><scope>uipc::geometry::IGeometry</scope><name>backend::GeometryVisitor</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1acd99e04a66327053bcd4dbe539b4040c" prot="private" virt="non-virtual"><scope>uipc::geometry::IGeometry</scope><name>collect_attribute_collections</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1adab4bd86e2fe39abea5556c9e15309fb" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IGeometry</scope><name>do_collect_attribute_collections</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1a6046f5609186942aab1f6d92be8c6afb" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IGeometry</scope><name>do_to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1aa45708db5d0b4c1ec6aab5e7e4aad8dd" prot="private" virt="non-virtual"><scope>uipc::geometry::IGeometry</scope><name>GeometryFriend</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1a8ebf50e0ad154bbeeff39c83a2deec22" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IGeometry</scope><name>get_type</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1a7e33167a2c1322aeed0303fb97e69a04" prot="public" virt="non-virtual"><scope>uipc::geometry::IGeometry</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1acffe2791e52c598766df64c010b439d9" prot="public" virt="non-virtual"><scope>uipc::geometry::IGeometry</scope><name>type</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1a53538e77e278ee6f3db36261181d21b2" prot="public" virt="virtual"><scope>uipc::geometry::IGeometry</scope><name>~IGeometry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

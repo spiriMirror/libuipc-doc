@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_world" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::core::World</compoundname>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_world_1a72a514c41be451fe6c3654f89011cb6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class backend::WorldVisitor</definition>
+        <argsstring></argsstring>
+        <name>backend::WorldVisitor</name>
+        <qualifiedname>uipc::core::World::WorldVisitor</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1_world_visitor" kindref="compound">backend::WorldVisitor</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="18" column="18" bodyfile="include/uipc/core/world.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_world_1a0b621936c513f1176aac9746f0d06674" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* uipc::core::World::m_scene</definition>
+        <argsstring></argsstring>
+        <name>m_scene</name>
+        <qualifiedname>uipc::core::World::m_scene</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="34" column="18" bodyfile="include/uipc/core/world.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_world_1aa102c67066b7aa8e2f7504716c5141fb" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_engine" kindref="compound">core::Engine</ref> *</type>
+        <definition>core::Engine* uipc::core::World::m_engine</definition>
+        <argsstring></argsstring>
+        <name>m_engine</name>
+        <qualifiedname>uipc::core::World::m_engine</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="35" column="18" bodyfile="include/uipc/core/world.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_world_1aaa89736245fa0e684d85aa24b80c383a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool uipc::core::World::m_valid</definition>
+        <argsstring></argsstring>
+        <name>m_valid</name>
+        <qualifiedname>uipc::core::World::m_valid</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="36" column="19" bodyfile="include/uipc/core/world.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a909b2de3efc8e9a47dcdc89ac7c611b1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::World::World</definition>
+        <argsstring>(Engine &amp;e) noexcept</argsstring>
+        <name>World</name>
+        <qualifiedname>uipc::core::World::World</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_engine" kindref="compound">Engine</ref> &amp;</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="21" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a2991e6d09a0c1a1cc9ecbcb69fbfce7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::World::init</definition>
+        <argsstring>(Scene &amp;s)</argsstring>
+        <name>init</name>
+        <qualifiedname>uipc::core::World::init</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1ab7247ee6843e1e698872e5942be8e51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::World::advance</definition>
+        <argsstring>()</argsstring>
+        <name>advance</name>
+        <qualifiedname>uipc::core::World::advance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1ae0a4874d5d27e40cca4a738708cf819d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::World::sync</definition>
+        <argsstring>()</argsstring>
+        <name>sync</name>
+        <qualifiedname>uipc::core::World::sync</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a279e82b7999d0f14e16f57a41691a1f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::World::retrieve</definition>
+        <argsstring>()</argsstring>
+        <name>retrieve</name>
+        <qualifiedname>uipc::core::World::retrieve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a7ed0f76af4dda57e8dd3092f86563c12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::World::backward</definition>
+        <argsstring>()</argsstring>
+        <name>backward</name>
+        <qualifiedname>uipc::core::World::backward</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="27" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a2dcb15804a6a16e5868c5568dd6914e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool uipc::core::World::dump</definition>
+        <argsstring>()</argsstring>
+        <name>dump</name>
+        <qualifiedname>uipc::core::World::dump</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="28" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a2c50428dd9994020c17c810f1db8936c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool uipc::core::World::recover</definition>
+        <argsstring>(SizeT aim_frame=~0ull)</argsstring>
+        <name>recover</name>
+        <qualifiedname>uipc::core::World::recover</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>aim_frame</declname>
+          <defval>~0ull</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="29" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a33ccdaa57e6554436a144df10c348d4c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SizeT</type>
+        <definition>SizeT uipc::core::World::frame</definition>
+        <argsstring>() const</argsstring>
+        <name>frame</name>
+        <qualifiedname>uipc::core::World::frame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="31" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_world_1a62f35356c0dd3d7235f00a5c6177ede6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::World::sanity_check</definition>
+        <argsstring>(Scene &amp;s)</argsstring>
+        <name>sanity_check</name>
+        <qualifiedname>uipc::core::World::sanity_check</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/world.h" line="37" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/world.h" line="16" column="1" bodyfile="include/uipc/core/world.h" bodystart="17" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_world_1ab7247ee6843e1e698872e5942be8e51a" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>advance</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a72a514c41be451fe6c3654f89011cb6c" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>backend::WorldVisitor</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a7ed0f76af4dda57e8dd3092f86563c12" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>backward</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a2dcb15804a6a16e5868c5568dd6914e7" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>dump</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a33ccdaa57e6554436a144df10c348d4c" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>frame</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a2991e6d09a0c1a1cc9ecbcb69fbfce7c" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>init</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1aa102c67066b7aa8e2f7504716c5141fb" prot="private" virt="non-virtual"><scope>uipc::core::World</scope><name>m_engine</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a0b621936c513f1176aac9746f0d06674" prot="private" virt="non-virtual"><scope>uipc::core::World</scope><name>m_scene</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1aaa89736245fa0e684d85aa24b80c383a" prot="private" virt="non-virtual"><scope>uipc::core::World</scope><name>m_valid</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a2c50428dd9994020c17c810f1db8936c" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>recover</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a279e82b7999d0f14e16f57a41691a1f4" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>retrieve</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a62f35356c0dd3d7235f00a5c6177ede6" prot="private" virt="non-virtual"><scope>uipc::core::World</scope><name>sanity_check</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1ae0a4874d5d27e40cca4a738708cf819d" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>sync</name></member>
+      <member refid="classuipc_1_1core_1_1_world_1a909b2de3efc8e9a47dcdc89ac7c611b1" prot="public" virt="non-virtual"><scope>uipc::core::World</scope><name>World</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,676 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceuipc_1_1geometry" kind="namespace" language="C++">
+    <compoundname>uipc::geometry</compoundname>
+    <innerclass refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" prot="public">uipc::geometry::AbstractSimplicialComplex</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute" prot="public">uipc::geometry::Attribute</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_collection" prot="public">uipc::geometry::AttributeCollection</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_copy" prot="public">uipc::geometry::AttributeCopy</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_friend" prot="public">uipc::geometry::AttributeFriend</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_i_o" prot="public">uipc::geometry::AttributeIO</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_i_o_error" prot="public">uipc::geometry::AttributeIOError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_slot" prot="public">uipc::geometry::AttributeSlot</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry" prot="public">uipc::geometry::Geometry</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_attribute_error" prot="public">uipc::geometry::GeometryAttributeError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_collection" prot="public">uipc::geometry::GeometryCollection</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_friend" prot="public">uipc::geometry::GeometryFriend</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="private">uipc::geometry::GeometryIOError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot" prot="public">uipc::geometry::GeometrySlot</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t" prot="public">uipc::geometry::GeometrySlotT</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4" prot="public">uipc::geometry::GeometrySlotT&lt; ImplicitGeometry &gt;</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4" prot="public">uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_i_attribute" prot="public">uipc::geometry::IAttribute</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_i_attribute_slot" prot="public">uipc::geometry::IAttributeSlot</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_i_geometry" prot="public">uipc::geometry::IGeometry</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_i_geometry_collection" prot="public">uipc::geometry::IGeometryCollection</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_implicit_geometry" prot="public">uipc::geometry::ImplicitGeometry</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_simplex_utils" prot="public">uipc::geometry::SimplexUtils</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex" prot="public">uipc::geometry::SimplicialComplex</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" prot="public">uipc::geometry::SimplicialComplexAttributes</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" prot="public">uipc::geometry::SimplicialComplexIO</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_spread_sheet_i_o" prot="public">uipc::geometry::SpreadSheetIO</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="geometry__slot_8h_1a7326710289cfb2869320543ddf4c17ae" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>GeometrySlotState</name>
+        <qualifiedname>uipc::geometry::GeometrySlotState</qualifiedname>
+        <enumvalue id="geometry__slot_8h_1a7326710289cfb2869320543ddf4c17aea960b44c579bc2f6818d2daaf9e4c16f0" prot="public">
+          <name>Normal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="geometry__slot_8h_1a7326710289cfb2869320543ddf4c17aead7cc7901e0c996dc2b7da0ba6e80334b" prot="public">
+          <name>PendingCreate</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="geometry__slot_8h_1a7326710289cfb2869320543ddf4c17aea3cfd62ce77ecbc29a810a2c9c8beba2f" prot="public">
+          <name>PendingDestroy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="8" column="1" bodyfile="include/uipc/geometry/geometry_slot.h" bodystart="9" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="implicit__geometry__slot_8h_1a528c8d69e846369da7e96980516e40fb" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref> &gt;</type>
+        <definition>using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT&lt;ImplicitGeometry&gt;</definition>
+        <argsstring></argsstring>
+        <name>ImplicitGeometrySlot</name>
+        <qualifiedname>uipc::geometry::ImplicitGeometrySlot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/implicit_geometry_slot.h" line="26" column="1" bodyfile="include/uipc/geometry/implicit_geometry_slot.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="simplicial__complex__slot_8h_1a691c92538dea87476928ae3fb9d6ad1d" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
+        <definition>using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT&lt;SimplicialComplex&gt;</definition>
+        <argsstring></argsstring>
+        <name>SimplicialComplexSlot</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexSlot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_slot.h" line="38" column="1" bodyfile="include/uipc/geometry/simplicial_complex_slot.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="apply__transform_8h_1a438613fb33e8483d363b89d097ec0d65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API vector&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
+        <definition>UIPC_GEOMETRY_API vector&lt; SimplicialComplex &gt; uipc::geometry::apply_transform</definition>
+        <argsstring>(const SimplicialComplex &amp;complex)</argsstring>
+        <name>apply_transform</name>
+        <qualifiedname>uipc::geometry::apply_transform</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>complex</declname>
+        </param>
+        <briefdescription>
+<para>Apply the instance transform to the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>1) Vertex position of the result simplicial complex will be transformed. 2) The rest meta/instance/vertex/edge/face/tetrahedron attributes will be kept.</para>
+<para><simplesect kind="return"><para>vector&lt;SimplicialComplex&gt; the transformed simplicial complexes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/apply_transform.h" line="14" column="27" declfile="include/uipc/geometry/utils/apply_transform.h" declline="14" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="closure_8h_1a7b4fec03c6527d1d65cc4a5d2fa17877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::facet_closure</definition>
+        <argsstring>(const SimplicialComplex &amp;complex)</argsstring>
+        <name>facet_closure</name>
+        <qualifiedname>uipc::geometry::facet_closure</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>complex</declname>
+        </param>
+        <briefdescription>
+<para>Generate the closure from a collection of facet simplices, who only have the top dimension simplices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>E.g. 1) the input 3D tetmesh can only have tetrahedrons (no triangles, edges). 2) the input 2D trimesh can only have triangles (no edges). 3) the input 1D linemesh can only have edges. 4) the input 0D pointcloud can only have vertices. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/closure.h" line="15" column="38" declfile="include/uipc/geometry/utils/closure.h" declline="15" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="compute__vertex__mass_8h_1abcbeda9e5877379a28e22e225196538c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API S&lt; <ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt; Float &gt; &gt;</type>
+        <definition>UIPC_GEOMETRY_API S&lt; AttributeSlot&lt; Float &gt; &gt; uipc::geometry::compute_vertex_mass</definition>
+        <argsstring>(SimplicialComplex &amp;R, Float mass_density)</argsstring>
+        <name>compute_vertex_mass</name>
+        <qualifiedname>uipc::geometry::compute_vertex_mass</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>R</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mass_density</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/compute_vertex_mass.h" line="6" column="21" declfile="include/uipc/geometry/utils/compute_vertex_mass.h" declline="6" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="extract__surface_8h_1a80eecfbd8a333d6f4f91c380d17ea176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::extract_surface</definition>
+        <argsstring>(const SimplicialComplex &amp;src)</argsstring>
+        <name>extract_surface</name>
+        <qualifiedname>uipc::geometry::extract_surface</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Extract the surface of a tetrahedral mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tetrahedral mesh. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> The surface of the tetrahedral mesh. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/extract_surface.h" line="12" column="38" declfile="include/uipc/geometry/utils/extract_surface.h" declline="12" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="extract__surface_8h_1abf3aa83c105b784f90f152231214efae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::extract_surface</definition>
+        <argsstring>(span&lt; const SimplicialComplex * &gt; complexes)</argsstring>
+        <name>extract_surface</name>
+        <qualifiedname>uipc::geometry::extract_surface</qualifiedname>
+        <param>
+          <type>span&lt; const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> * &gt;</type>
+          <declname>complexes</declname>
+        </param>
+        <briefdescription>
+<para>Extract the surface of a list of tetrahedral meshes and merge them into one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>All the instances of the input tetrahedral meshes will be applied to the output surface.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>complexes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of tetrahedral meshes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> The surface of the tetrahedral meshes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/extract_surface.h" line="22" column="38" declfile="include/uipc/geometry/utils/extract_surface.h" declline="22" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="factory_8h_1a1045d44981bffaf213f391ab5087a39b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetmesh</definition>
+        <argsstring>(span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts)</argsstring>
+        <name>tetmesh</name>
+        <qualifiedname>uipc::geometry::tetmesh</qualifiedname>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>Vs</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector4i &gt;</type>
+          <declname>Ts</declname>
+        </param>
+        <briefdescription>
+<para>Create a simplicial complex from a tetrahedral mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vertex positions of the tetrahedral mesh </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tetrahedra of the tetrahedral mesh </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/factory.h" line="14" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="14" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="factory_8h_1a01f00693aa5d07f2c0dab9a64cf3fbfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::trimesh</definition>
+        <argsstring>(span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs)</argsstring>
+        <name>trimesh</name>
+        <qualifiedname>uipc::geometry::trimesh</qualifiedname>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>Vs</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector3i &gt;</type>
+          <declname>Fs</declname>
+        </param>
+        <briefdescription>
+<para>Create a simplicial complex from a triangle mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vertex positions of the triangle mesh </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Fs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The triangles of the triangle mesh </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/factory.h" line="23" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="23" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="factory_8h_1a6eb70e35d6972620da3da8d876869323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::linemesh</definition>
+        <argsstring>(span&lt; const Vector3 &gt; Vs, span&lt; const Vector2i &gt; Es)</argsstring>
+        <name>linemesh</name>
+        <qualifiedname>uipc::geometry::linemesh</qualifiedname>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>Vs</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector2i &gt;</type>
+          <declname>Es</declname>
+        </param>
+        <briefdescription>
+<para>Create a simplicial complex from a line mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vertex positions of the line mesh </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Es</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The edges of the line mesh </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/factory.h" line="32" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="32" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="factory_8h_1aa2e9088bf9d2b778426f5a7ebae010f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::pointcloud</definition>
+        <argsstring>(span&lt; const Vector3 &gt; Vs)</argsstring>
+        <name>pointcloud</name>
+        <qualifiedname>uipc::geometry::pointcloud</qualifiedname>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>Vs</declname>
+        </param>
+        <briefdescription>
+<para>Create a simplicial complex from a point cloud. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vertex positions of the point cloud </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/factory.h" line="40" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="40" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="factory_8h_1aca9de12b39baedb25dcf7fe2e9fab5d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref></type>
+        <definition>UIPC_GEOMETRY_API ImplicitGeometry uipc::geometry::halfplane</definition>
+        <argsstring>(const Vector3 &amp;P=Vector3::Zero(), const Vector3 &amp;N=Vector3::UnitY())</argsstring>
+        <name>halfplane</name>
+        <qualifiedname>uipc::geometry::halfplane</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>P</declname>
+          <defval>Vector3::Zero()</defval>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>N</declname>
+          <defval>Vector3::UnitY()</defval>
+        </param>
+        <briefdescription>
+<para>Create a half-plane. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the ground plane </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/factory.h" line="48" column="37" declfile="include/uipc/geometry/utils/factory.h" declline="48" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="factory_8h_1ad40a1598b9d7e853a483a020db95fa1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref></type>
+        <definition>UIPC_GEOMETRY_API ImplicitGeometry uipc::geometry::ground</definition>
+        <argsstring>(Float height=0.0, const Vector3 &amp;N=Vector3::UnitY())</argsstring>
+        <name>ground</name>
+        <qualifiedname>uipc::geometry::ground</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>height</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>N</declname>
+          <defval>Vector3::UnitY()</defval>
+        </param>
+        <briefdescription>
+<para>Create a gound plane. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the ground plane </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/factory.h" line="56" column="37" declfile="include/uipc/geometry/utils/factory.h" declline="56" declcolumn="37"/>
+      </memberdef>
+      <memberdef kind="function" id="flip__inward__triangles_8h_1a4c137afa7682ee35af954d95720ce3c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::flip_inward_triangles</definition>
+        <argsstring>(const SimplicialComplex &amp;sc)</argsstring>
+        <name>flip_inward_triangles</name>
+        <qualifiedname>uipc::geometry::flip_inward_triangles</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <briefdescription>
+<para>Flip the orientation of the triangles in the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The input simplicial complex should have the attribute slot &apos;orient&apos;:&lt;Index&gt; for each triangle. After the operation, the orientation of the triangles will be flipped, and the <computeroutput>orient</computeroutput> attribute will be updated.</para>
+<para><simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> the simplicial complex with the orientation of the triangles flipped. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/flip_inward_triangles.h" line="14" column="38" declfile="include/uipc/geometry/utils/flip_inward_triangles.h" declline="14" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="label__connected__vertices_8h_1abfd3492665c6eb9b36a372d92cf95bc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API S&lt; <ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt; IndexT &gt; &gt;</type>
+        <definition>UIPC_GEOMETRY_API S&lt; AttributeSlot&lt; IndexT &gt; &gt; uipc::geometry::label_connected_vertices</definition>
+        <argsstring>(SimplicialComplex &amp;complex)</argsstring>
+        <name>label_connected_vertices</name>
+        <qualifiedname>uipc::geometry::label_connected_vertices</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>complex</declname>
+        </param>
+        <briefdescription>
+<para>Label the connected vertices of a simplicial complex (by edges). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Create a <computeroutput>region</computeroutput> &lt;IndexT&gt; attribute on <computeroutput>vertices</computeroutput> to tell which region a vertex is belong to.</para>
+</listitem><listitem><para>Create a <computeroutput>region_count</computeroutput> &lt;IndexT&gt; attribute on <computeroutput>meta</computeroutput> to tell how many regions are there.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>S&lt;AttributeSlot&lt;IndexT&gt;&gt; The <computeroutput>region</computeroutput> attribute slot. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/label_connected_vertices.h" line="14" column="21" declfile="include/uipc/geometry/utils/label_connected_vertices.h" declline="14" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="label__region_8h_1ab5d93eaee5668468c042a8615b5766fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API void</type>
+        <definition>UIPC_GEOMETRY_API void uipc::geometry::label_region</definition>
+        <argsstring>(SimplicialComplex &amp;complex)</argsstring>
+        <name>label_region</name>
+        <qualifiedname>uipc::geometry::label_region</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>complex</declname>
+        </param>
+        <briefdescription>
+<para>Label the regions of a simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Create a <computeroutput>region</computeroutput> &lt;IndexT&gt; attribute on <computeroutput>edges</computeroutput> to tell which region an edge is belong to.</para>
+</listitem><listitem><para>Create a <computeroutput>region</computeroutput> &lt;IndexT&gt; attribute on <computeroutput>triangles</computeroutput> to tell which region a triangle is belong to. (if exists)</para>
+</listitem><listitem><para>Create a <computeroutput>region</computeroutput> &lt;IndexT&gt; attribute on <computeroutput>tetrahedra</computeroutput> to tell which region a tetrahedron is belong to. (if exists)</para>
+</listitem><listitem><para>Create a <computeroutput>region_count</computeroutput> &lt;IndexT&gt; attribute on <computeroutput>meta</computeroutput> to tell how many regions are there.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>S&lt;AttributeSlot&lt;IndexT&gt;&gt; The <computeroutput>region</computeroutput> attribute slot. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/label_region.h" line="16" column="24" declfile="include/uipc/geometry/utils/label_region.h" declline="16" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="label__surface_8h_1afb2b526f1cc340a206d0b17dd21c8833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API void</type>
+        <definition>UIPC_GEOMETRY_API void uipc::geometry::label_surface</definition>
+        <argsstring>(SimplicialComplex &amp;R)</argsstring>
+        <name>label_surface</name>
+        <qualifiedname>uipc::geometry::label_surface</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+<para>Label the surface of a simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>1) label &apos;is_surf&apos;:&lt;IndexT&gt; on vertices/edges/triangles/tetrahedra 2) set &apos;parent_id&apos;:&lt;IndexT&gt; on triangles, indicating the parent tetrahedron</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>R</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the simplicial complex to be labeled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/label_surface.h" line="14" column="24" declfile="include/uipc/geometry/utils/label_surface.h" declline="14" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="label__triangle__orient_8h_1af6e266c588cca12386e555a02e6713ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API S&lt; <ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt; IndexT &gt; &gt;</type>
+        <definition>UIPC_GEOMETRY_API S&lt; AttributeSlot&lt; IndexT &gt; &gt; uipc::geometry::label_triangle_orient</definition>
+        <argsstring>(SimplicialComplex &amp;sc)</argsstring>
+        <name>label_triangle_orient</name>
+        <qualifiedname>uipc::geometry::label_triangle_orient</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <briefdescription>
+<para>Label the orientation of the triangles in the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set &apos;orient&apos;:&lt;Index&gt; for each triangle in the simplicial complex. 1) orient=1 means the triangle is oriented outward the tetrahedron. 2) orient=0 means the orientation is undetermined. 3) orient=-1 means the triangle is oriented inward the tetrahedron.</para>
+<para><simplesect kind="return"><para>P&lt;AttributeSlot&lt;IndexT&gt;&gt; the attribute slot of the triangle orientation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/label_triangle_orient.h" line="16" column="21" declfile="include/uipc/geometry/utils/label_triangle_orient.h" declline="16" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="merge_8h_1ad04964c94afc06ffe31352d831f55c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::merge</definition>
+        <argsstring>(span&lt; const SimplicialComplex * &gt; complexes)</argsstring>
+        <name>merge</name>
+        <qualifiedname>uipc::geometry::merge</qualifiedname>
+        <param>
+          <type>span&lt; const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> * &gt;</type>
+          <declname>complexes</declname>
+        </param>
+        <briefdescription>
+<para>Merge a list of simplicial complexes into one simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>All input simplicial complexes must have only one instance.</para>
+<para><simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> the merged simplicial complex. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/merge.h" line="13" column="38" declfile="include/uipc/geometry/utils/merge.h" declline="13" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="merge_8h_1a487ce745624dd48be0dcd065623c9e1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::merge</definition>
+        <argsstring>(std::initializer_list&lt; const SimplicialComplex * &gt; &amp;&amp;complexes)</argsstring>
+        <name>merge</name>
+        <qualifiedname>uipc::geometry::merge</qualifiedname>
+        <param>
+          <type>std::initializer_list&lt; const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> * &gt; &amp;&amp;</type>
+          <declname>complexes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/merge.h" line="15" column="38" declfile="include/uipc/geometry/utils/merge.h" declline="15" declcolumn="38"/>
+      </memberdef>
+      <memberdef kind="function" id="mesh__partition_8h_1afe9f2b596027938b803bdd99e524565e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void UIPC_GEOMETRY_API</type>
+        <definition>void UIPC_GEOMETRY_API uipc::geometry::mesh_partition</definition>
+        <argsstring>(SimplicialComplex &amp;sc, SizeT part_max_size)</argsstring>
+        <name>mesh_partition</name>
+        <qualifiedname>uipc::geometry::mesh_partition</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>part_max_size</declname>
+        </param>
+        <briefdescription>
+<para>partition the simplicial complex </para>
+        </briefdescription>
+        <detaileddescription>
+<para>create a <computeroutput>mesh_part</computeroutput> &lt;IndexT&gt; attribute on the simplicial complex&apos; vertices</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>simplicial complex </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>part_max_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vertex number in each partition &lt;= part_max_size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/mesh_partition.h" line="15" column="24" declfile="include/uipc/geometry/utils/mesh_partition.h" declline="15" declcolumn="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/backend/visitors/geometry_visitor.h" line="4" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,530 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1_global_timer" kind="class" language="C++" prot="public">
+    <compoundname>uipc::GlobalTimer</compoundname>
+    <innerclass refid="structuipc_1_1_global_timer_1_1_merge_result" prot="private">uipc::GlobalTimer::MergeResult</innerclass>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1_global_timer_1a26fac46d2f030805136bc517694c4532" prot="private" static="no">
+        <type><ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">details::ScopedTimer</ref></type>
+        <definition>using uipc::GlobalTimer::STimer =  details::ScopedTimer</definition>
+        <argsstring></argsstring>
+        <name>STimer</name>
+        <qualifiedname>uipc::GlobalTimer::STimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="87" column="5" bodyfile="include/uipc/common/timer.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1_global_timer_1ae353e8f5a905171165ae4089b0955e30" prot="private" static="no" mutable="no">
+        <type>stack&lt; <ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">STimer</ref> * &gt;</type>
+        <definition>stack&lt;STimer*&gt; uipc::GlobalTimer::m_timer_stack</definition>
+        <argsstring></argsstring>
+        <name>m_timer_stack</name>
+        <qualifiedname>uipc::GlobalTimer::m_timer_stack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="89" column="11" bodyfile="include/uipc/common/timer.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1_global_timer_1a884a1e8d18d0306f3a2801665eac217b" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">STimer</ref> *</type>
+        <definition>STimer* uipc::GlobalTimer::m_root</definition>
+        <argsstring></argsstring>
+        <name>m_root</name>
+        <qualifiedname>uipc::GlobalTimer::m_root</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="90" column="19" bodyfile="include/uipc/common/timer.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1_global_timer_1a04210e5dc4c1a7bcf73d47222a48da37" prot="private" static="no" mutable="no">
+        <type>list&lt; U&lt; <ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">STimer</ref> &gt; &gt;</type>
+        <definition>list&lt;U&lt;STimer&gt; &gt; uipc::GlobalTimer::m_timers</definition>
+        <argsstring></argsstring>
+        <name>m_timers</name>
+        <qualifiedname>uipc::GlobalTimer::m_timers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="93" column="10" bodyfile="include/uipc/common/timer.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1_global_timer_1a255419a45dcd97e879d4240c8f966c35" prot="private" static="no" mutable="no">
+        <type>unordered_map&lt; string, U&lt; MergeResult &gt; &gt;</type>
+        <definition>unordered_map&lt;string, U&lt;MergeResult&gt; &gt; uipc::GlobalTimer::m_merge_timers</definition>
+        <argsstring></argsstring>
+        <name>m_merge_timers</name>
+        <qualifiedname>uipc::GlobalTimer::m_merge_timers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="121" column="19" bodyfile="include/uipc/common/timer.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1_global_timer_1acd849cfb3c592f0365b048bcd644b068" prot="private" static="no" mutable="no">
+        <type>MergeResult *</type>
+        <definition>MergeResult* uipc::GlobalTimer::m_merge_root</definition>
+        <argsstring></argsstring>
+        <name>m_merge_root</name>
+        <qualifiedname>uipc::GlobalTimer::m_merge_root</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="122" column="42" bodyfile="include/uipc/common/timer.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1_global_timer_1a527df86c62df861a00c1ec38f1e433d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class ScopedTimer</definition>
+        <argsstring></argsstring>
+        <name>ScopedTimer</name>
+        <qualifiedname>uipc::GlobalTimer::ScopedTimer</qualifiedname>
+        <param>
+          <type>ScopedTimer</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="91" column="18" bodyfile="include/uipc/common/timer.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1_global_timer_1a50de43af5bed41f30c071d8cce0e81bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Timer</definition>
+        <argsstring></argsstring>
+        <name>Timer</name>
+        <qualifiedname>uipc::GlobalTimer::Timer</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1_timer" kindref="compound">Timer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="95" column="18" bodyfile="include/uipc/common/timer.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classuipc_1_1_global_timer_1a7e77af99194e4d6181913246497b957a" prot="private" static="yes" mutable="no">
+        <type><ref refid="classuipc_1_1_global_timer" kindref="compound">GlobalTimer</ref></type>
+        <definition>GlobalTimer uipc::GlobalTimer::default_instance</definition>
+        <argsstring></argsstring>
+        <name>default_instance</name>
+        <qualifiedname>uipc::GlobalTimer::default_instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="99" column="25" bodyfile="include/uipc/common/timer.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1_global_timer_1a343ab9f9beb18d344e675437099a7470" prot="private" static="yes" mutable="no">
+        <type><ref refid="classuipc_1_1_global_timer" kindref="compound">GlobalTimer</ref> *</type>
+        <definition>GlobalTimer* uipc::GlobalTimer::m_current</definition>
+        <argsstring></argsstring>
+        <name>m_current</name>
+        <qualifiedname>uipc::GlobalTimer::m_current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="100" column="24" bodyfile="include/uipc/common/timer.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a20ee38a8b104754c6db81b8ba78ff56b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">STimer</ref> &amp;</type>
+        <definition>STimer &amp; uipc::GlobalTimer::push_timer</definition>
+        <argsstring>(std::string_view)</argsstring>
+        <name>push_timer</name>
+        <qualifiedname>uipc::GlobalTimer::push_timer</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="96" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1aab8fc2322e5fd8bc6efcd3db787389c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">STimer</ref> &amp;</type>
+        <definition>STimer &amp; uipc::GlobalTimer::pop_timer</definition>
+        <argsstring>()</argsstring>
+        <name>pop_timer</name>
+        <qualifiedname>uipc::GlobalTimer::pop_timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="97" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1ac72810f77e3192cd42560aaf6e231124" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::_print_timings</definition>
+        <argsstring>(std::ostream &amp;o, const STimer *timer, int depth)</argsstring>
+        <name>_print_timings</name>
+        <qualifiedname>uipc::GlobalTimer::_print_timings</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">STimer</ref> *</type>
+          <declname>timer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="102" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a29eaa93de401ec858a7301ffe7fb636d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t uipc::GlobalTimer::max_full_name_length</definition>
+        <argsstring>() const</argsstring>
+        <name>max_full_name_length</name>
+        <qualifiedname>uipc::GlobalTimer::max_full_name_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="104" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a4e1aea34dcc9cddf342545825f937a99" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t uipc::GlobalTimer::max_depth</definition>
+        <argsstring>() const</argsstring>
+        <name>max_depth</name>
+        <qualifiedname>uipc::GlobalTimer::max_depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="105" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a217a1a33e9dc27885df3e6c495ffd4c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::merge_timers</definition>
+        <argsstring>()</argsstring>
+        <name>merge_timers</name>
+        <qualifiedname>uipc::GlobalTimer::merge_timers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="124" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1ad35a5a4413cd445ea65ffa8cfeac6efc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::_print_merged_timings</definition>
+        <argsstring>(std::ostream &amp;o, const MergeResult *timer, size_t max_name_length, size_t max_depth)</argsstring>
+        <name>_print_merged_timings</name>
+        <qualifiedname>uipc::GlobalTimer::_print_merged_timings</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const MergeResult *</type>
+          <declname>timer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max_name_length</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max_depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="125" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1ab21dffc9097870519453a5f82b88650d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::_traverse_merge_timers</definition>
+        <argsstring>(Json &amp;j, const MergeResult *timer)</argsstring>
+        <name>_traverse_merge_timers</name>
+        <qualifiedname>uipc::GlobalTimer::_traverse_merge_timers</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const MergeResult *</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="129" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a875af1c44bd746777755fc917944b65d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::GlobalTimer::GlobalTimer</definition>
+        <argsstring>(std::string_view name=&quot;GlobalTimer&quot;)</argsstring>
+        <name>GlobalTimer</name>
+        <qualifiedname>uipc::GlobalTimer::GlobalTimer</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+          <defval>&quot;GlobalTimer&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="132" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1ae4b19d45d1c3ae9668925e90fa8aca8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::GlobalTimer::GlobalTimer</definition>
+        <argsstring>(const GlobalTimer &amp;)=delete</argsstring>
+        <name>GlobalTimer</name>
+        <qualifiedname>uipc::GlobalTimer::GlobalTimer</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1_global_timer" kindref="compound">GlobalTimer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="135" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a9f55857b1321181fe600a4e3b6084eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1_global_timer" kindref="compound">GlobalTimer</ref> &amp;</type>
+        <definition>GlobalTimer &amp; uipc::GlobalTimer::operator=</definition>
+        <argsstring>(const GlobalTimer &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::GlobalTimer::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1_global_timer" kindref="compound">GlobalTimer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="136" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a9ac4d0aab85166a205a808f9d880d357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::GlobalTimer::~GlobalTimer</definition>
+        <argsstring>()</argsstring>
+        <name>~GlobalTimer</name>
+        <qualifiedname>uipc::GlobalTimer::~GlobalTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="138" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1ae93f19c09bb5b2a54df3ffd74dbc51de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::set_as_current</definition>
+        <argsstring>()</argsstring>
+        <name>set_as_current</name>
+        <qualifiedname>uipc::GlobalTimer::set_as_current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="140" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a873f2812599d71176913d483e6d7c9a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::GlobalTimer::report_as_json</definition>
+        <argsstring>()</argsstring>
+        <name>report_as_json</name>
+        <qualifiedname>uipc::GlobalTimer::report_as_json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="142" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a5d1fed778a5b507282556dd7cacd7453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::GlobalTimer::report_merged_as_json</definition>
+        <argsstring>()</argsstring>
+        <name>report_merged_as_json</name>
+        <qualifiedname>uipc::GlobalTimer::report_merged_as_json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="143" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1ad42d588ba1d28c0b663198b4c87b04a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::print_timings</definition>
+        <argsstring>(std::ostream &amp;o=std::cout)</argsstring>
+        <name>print_timings</name>
+        <qualifiedname>uipc::GlobalTimer::print_timings</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+          <defval>std::cout</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="145" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1ab9de87dcd337555fcb972766d4e6df57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::print_merged_timings</definition>
+        <argsstring>(std::ostream &amp;o=std::cout)</argsstring>
+        <name>print_merged_timings</name>
+        <qualifiedname>uipc::GlobalTimer::print_merged_timings</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+          <defval>std::cout</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="147" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a1dc7d7de61a80412f7490af595800d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::GlobalTimer::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>uipc::GlobalTimer::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="149" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1_global_timer_1a175bf66d5e35ca3078e63c211be1dd25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1_global_timer" kindref="compound">GlobalTimer</ref> *</type>
+        <definition>static GlobalTimer * uipc::GlobalTimer::current</definition>
+        <argsstring>()</argsstring>
+        <name>current</name>
+        <qualifiedname>uipc::GlobalTimer::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="141" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/common/timer.h" line="85" column="1" bodyfile="include/uipc/common/timer.h" bodystart="86" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1_global_timer_1ad35a5a4413cd445ea65ffa8cfeac6efc" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>_print_merged_timings</name></member>
+      <member refid="classuipc_1_1_global_timer_1ac72810f77e3192cd42560aaf6e231124" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>_print_timings</name></member>
+      <member refid="classuipc_1_1_global_timer_1ab21dffc9097870519453a5f82b88650d" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>_traverse_merge_timers</name></member>
+      <member refid="classuipc_1_1_global_timer_1a1dc7d7de61a80412f7490af595800d90" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>clear</name></member>
+      <member refid="classuipc_1_1_global_timer_1a175bf66d5e35ca3078e63c211be1dd25" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>current</name></member>
+      <member refid="classuipc_1_1_global_timer_1a7e77af99194e4d6181913246497b957a" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>default_instance</name></member>
+      <member refid="classuipc_1_1_global_timer_1a875af1c44bd746777755fc917944b65d" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>GlobalTimer</name></member>
+      <member refid="classuipc_1_1_global_timer_1ae4b19d45d1c3ae9668925e90fa8aca8f" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>GlobalTimer</name></member>
+      <member refid="classuipc_1_1_global_timer_1a343ab9f9beb18d344e675437099a7470" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>m_current</name></member>
+      <member refid="classuipc_1_1_global_timer_1acd849cfb3c592f0365b048bcd644b068" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>m_merge_root</name></member>
+      <member refid="classuipc_1_1_global_timer_1a255419a45dcd97e879d4240c8f966c35" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>m_merge_timers</name></member>
+      <member refid="classuipc_1_1_global_timer_1a884a1e8d18d0306f3a2801665eac217b" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>m_root</name></member>
+      <member refid="classuipc_1_1_global_timer_1ae353e8f5a905171165ae4089b0955e30" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>m_timer_stack</name></member>
+      <member refid="classuipc_1_1_global_timer_1a04210e5dc4c1a7bcf73d47222a48da37" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>m_timers</name></member>
+      <member refid="classuipc_1_1_global_timer_1a4e1aea34dcc9cddf342545825f937a99" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>max_depth</name></member>
+      <member refid="classuipc_1_1_global_timer_1a29eaa93de401ec858a7301ffe7fb636d" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>max_full_name_length</name></member>
+      <member refid="classuipc_1_1_global_timer_1a217a1a33e9dc27885df3e6c495ffd4c6" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>merge_timers</name></member>
+      <member refid="classuipc_1_1_global_timer_1a9f55857b1321181fe600a4e3b6084eb0" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1_global_timer_1aab8fc2322e5fd8bc6efcd3db787389c9" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>pop_timer</name></member>
+      <member refid="classuipc_1_1_global_timer_1ab9de87dcd337555fcb972766d4e6df57" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>print_merged_timings</name></member>
+      <member refid="classuipc_1_1_global_timer_1ad42d588ba1d28c0b663198b4c87b04a5" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>print_timings</name></member>
+      <member refid="classuipc_1_1_global_timer_1a20ee38a8b104754c6db81b8ba78ff56b" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>push_timer</name></member>
+      <member refid="classuipc_1_1_global_timer_1a873f2812599d71176913d483e6d7c9a9" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>report_as_json</name></member>
+      <member refid="classuipc_1_1_global_timer_1a5d1fed778a5b507282556dd7cacd7453" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>report_merged_as_json</name></member>
+      <member refid="classuipc_1_1_global_timer_1a527df86c62df861a00c1ec38f1e433d2" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>ScopedTimer</name></member>
+      <member refid="classuipc_1_1_global_timer_1ae93f19c09bb5b2a54df3ffd74dbc51de" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>set_as_current</name></member>
+      <member refid="classuipc_1_1_global_timer_1a26fac46d2f030805136bc517694c4532" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>STimer</name></member>
+      <member refid="classuipc_1_1_global_timer_1a50de43af5bed41f30c071d8cce0e81bc" prot="private" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>Timer</name></member>
+      <member refid="classuipc_1_1_global_timer_1a9ac4d0aab85166a205a808f9d880d357" prot="public" virt="non-virtual"><scope>uipc::GlobalTimer</scope><name>~GlobalTimer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_object" kind="class" language="C++" prot="public">
+    <compoundname>uipc::core::Object</compoundname>
+    <basecompoundref refid="classuipc_1_1core_1_1_i_object" prot="public" virt="non-virtual">uipc::core::IObject</basecompoundref>
+    <innerclass refid="classuipc_1_1core_1_1_object_1_1_c_geometries" prot="public">uipc::core::Object::CGeometries</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object_1_1_geometries" prot="public">uipc::core::Object::Geometries</innerclass>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Scene</definition>
+        <argsstring></argsstring>
+        <name>Scene</name>
+        <qualifiedname>uipc::core::Object::Scene</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="58" column="18" bodyfile="include/uipc/core/object.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_1af47625f50036c466946f960db7320bcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Animation</definition>
+        <argsstring></argsstring>
+        <name>Animation</name>
+        <qualifiedname>uipc::core::Object::Animation</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_animation" kindref="compound">Animation</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="59" column="18" bodyfile="include/uipc/core/object.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_object_1a4f1d7b7cb89bbb8f87f2ce8887f8f264" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+        <definition>Scene&amp; uipc::core::Object::m_scene</definition>
+        <argsstring></argsstring>
+        <name>m_scene</name>
+        <qualifiedname>uipc::core::Object::m_scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="111" column="34" bodyfile="include/uipc/core/object.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_object_1a3d950ee87928818733daa08b1d773483" prot="private" static="no" mutable="no">
+        <type>IndexT</type>
+        <definition>IndexT uipc::core::Object::m_id</definition>
+        <argsstring></argsstring>
+        <name>m_id</name>
+        <qualifiedname>uipc::core::Object::m_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="112" column="35" bodyfile="include/uipc/core/object.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_object_1a9c09bcbd47859339d5453a6ca7cdbbc2" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string uipc::core::Object::m_name</definition>
+        <argsstring></argsstring>
+        <name>m_name</name>
+        <qualifiedname>uipc::core::Object::m_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="113" column="35" bodyfile="include/uipc/core/object.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_object_1a9e89955d9b2df902636b4189168d10ea" prot="private" static="no" mutable="no">
+        <type>vector&lt; IndexT &gt;</type>
+        <definition>vector&lt;IndexT&gt; uipc::core::Object::m_geometry_ids</definition>
+        <argsstring></argsstring>
+        <name>m_geometry_ids</name>
+        <qualifiedname>uipc::core::Object::m_geometry_ids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="114" column="27" bodyfile="include/uipc/core/object.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a6fd97ac9fa95d29d1080dcd6bc6c7bdb" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Object::Object</definition>
+        <argsstring>(Scene &amp;scene, IndexT id, std::string_view name=&quot;&quot;) noexcept</argsstring>
+        <name>Object</name>
+        <qualifiedname>uipc::core::Object::Object</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="95" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1adc748fd61eea16035f600a868fd42ab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Object::Object</definition>
+        <argsstring>(Object &amp;&amp;)=default</argsstring>
+        <name>Object</name>
+        <qualifiedname>uipc::core::Object::Object</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="96" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a5bd815ed0ef27fe224af070ded5e4bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Object::~Object</definition>
+        <argsstring>()</argsstring>
+        <name>~Object</name>
+        <qualifiedname>uipc::core::Object::~Object</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="97" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1aa1d653d7a2a97eb3313a775dc02cecd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Object::Object</definition>
+        <argsstring>(const Object &amp;)=delete</argsstring>
+        <name>Object</name>
+        <qualifiedname>uipc::core::Object::Object</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="99" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1aa8d44a0680afa5512ff108bcd0e626b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+        <definition>Object &amp; uipc::core::Object::operator=</definition>
+        <argsstring>(const Object &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::core::Object::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="100" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a7ff13a9df84ee6aff48bcbc7303eb241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+        <definition>Object &amp; uipc::core::Object::operator=</definition>
+        <argsstring>(Object &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::core::Object::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="101" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a2d9ab1d9c9836ae152be439cfdbde569" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_object_1_1_geometries" kindref="compound">Geometries</ref></type>
+        <definition>Geometries uipc::core::Object::geometries</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>geometries</name>
+        <qualifiedname>uipc::core::Object::geometries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="103" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a31de8c4e1be6ecdce18bfe917a159228" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_object_1_1_c_geometries" kindref="compound">CGeometries</ref></type>
+        <definition>CGeometries uipc::core::Object::geometries</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>geometries</name>
+        <qualifiedname>uipc::core::Object::geometries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="104" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1ae5186cbf90d820fa8ab10b7d0ddcb325" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>std::string_view</type>
+        <definition>std::string_view uipc::core::Object::get_name</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_name</name>
+        <qualifiedname>uipc::core::Object::get_name</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1_i_object_1aaa96730603cbef68ab2d5f4838b5728c">get_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="107" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a7fd3a7955c829f86e87030bdce7beb12" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>IndexT</type>
+        <definition>IndexT uipc::core::Object::get_id</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_id</name>
+        <qualifiedname>uipc::core::Object::get_id</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1_i_object_1a9bb5f3698c2cb19f9d84a60ea437a9a3">get_id</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="108" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a47143f67918f81c3df0a61b21830067b" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">geometry::GeometryCollection</ref> &amp;</type>
+        <definition>geometry::GeometryCollection &amp; uipc::core::Object::geometry_collection</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>geometry_collection</name>
+        <qualifiedname>uipc::core::Object::geometry_collection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="115" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1ae9139decffc59214d01601e7e1d849c8" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">geometry::GeometryCollection</ref> &amp;</type>
+        <definition>geometry::GeometryCollection &amp; uipc::core::Object::rest_geometry_collection</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>rest_geometry_collection</name>
+        <qualifiedname>uipc::core::Object::rest_geometry_collection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="116" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a98adc7dd2a365c088497dcdf7bc44e98" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool uipc::core::Object::scene_started</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>scene_started</name>
+        <qualifiedname>uipc::core::Object::scene_started</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="117" column="35"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::core::IObject</label>
+        <link refid="classuipc_1_1core_1_1_i_object"/>
+      </node>
+      <node id="1">
+        <label>uipc::core::Object</label>
+        <link refid="classuipc_1_1core_1_1_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::core::IObject</label>
+        <link refid="classuipc_1_1core_1_1_i_object"/>
+      </node>
+      <node id="1">
+        <label>uipc::core::Object</label>
+        <link refid="classuipc_1_1core_1_1_object"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/core/object.h" line="56" column="1" bodyfile="include/uipc/core/object.h" bodystart="57" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_object_1af47625f50036c466946f960db7320bcf" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>Animation</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a2d9ab1d9c9836ae152be439cfdbde569" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>geometries</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a31de8c4e1be6ecdce18bfe917a159228" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>geometries</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a47143f67918f81c3df0a61b21830067b" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>geometry_collection</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a7fd3a7955c829f86e87030bdce7beb12" prot="protected" virt="virtual"><scope>uipc::core::Object</scope><name>get_id</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1ae5186cbf90d820fa8ab10b7d0ddcb325" prot="protected" virt="virtual"><scope>uipc::core::Object</scope><name>get_name</name></member>
+      <member refid="classuipc_1_1core_1_1_i_object_1a100a8c6f87eb897a4e04661cc7659ce2" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>id</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a9e89955d9b2df902636b4189168d10ea" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>m_geometry_ids</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a3d950ee87928818733daa08b1d773483" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>m_id</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a9c09bcbd47859339d5453a6ca7cdbbc2" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>m_name</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a4f1d7b7cb89bbb8f87f2ce8887f8f264" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>m_scene</name></member>
+      <member refid="classuipc_1_1core_1_1_i_object_1a842c7b6a06ea627eff87dff21431aa99" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>name</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a6fd97ac9fa95d29d1080dcd6bc6c7bdb" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>Object</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1adc748fd61eea16035f600a868fd42ab3" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>Object</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1aa1d653d7a2a97eb3313a775dc02cecd5" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>Object</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1aa8d44a0680afa5512ff108bcd0e626b1" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a7ff13a9df84ee6aff48bcbc7303eb241" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1ae9139decffc59214d01601e7e1d849c8" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>rest_geometry_collection</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>Scene</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a98adc7dd2a365c088497dcdf7bc44e98" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>scene_started</name></member>
+      <member refid="classuipc_1_1core_1_1_i_object_1acd6a897554fd30c3d839fd03723120c1" prot="public" virt="virtual"><scope>uipc::core::Object</scope><name>~IObject</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a5bd815ed0ef27fe224af070ded5e4bfa" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>~Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

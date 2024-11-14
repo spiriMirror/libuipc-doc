@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1_timer" kind="class" language="C++" prot="public">
+    <compoundname>uipc::Timer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1_timer_1a12e3e673ba68333b9e152507db0bf262" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">details::ScopedTimer</ref> *</type>
+        <definition>details::ScopedTimer* uipc::Timer::m_timer</definition>
+        <argsstring></argsstring>
+        <name>m_timer</name>
+        <qualifiedname>uipc::Timer::m_timer</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="79" column="33" bodyfile="include/uipc/common/timer.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1_timer_1a5af6013e33981ba247cac1ae96f756bf" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool uipc::Timer::m_force_on</definition>
+        <argsstring></argsstring>
+        <name>m_force_on</name>
+        <qualifiedname>uipc::Timer::m_force_on</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="80" column="34" bodyfile="include/uipc/common/timer.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classuipc_1_1_timer_1a6bff191a1f7320175066e6273e6f766e" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool uipc::Timer::m_global_on</definition>
+        <argsstring></argsstring>
+        <name>m_global_on</name>
+        <qualifiedname>uipc::Timer::m_global_on</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="81" column="34" bodyfile="include/uipc/common/timer.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1_timer_1ae7f7de3bb65499a81ebe2623bcee1bf4" prot="private" static="yes" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; uipc::Timer::m_sync</definition>
+        <argsstring></argsstring>
+        <name>m_sync</name>
+        <qualifiedname>uipc::Timer::m_sync</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="82" column="26" bodyfile="include/uipc/common/timer.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1_timer_1a83538924efbfccd52623fe68e7d7d8b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::Timer::Timer</definition>
+        <argsstring>(std::string_view blockName, bool force_on=false)</argsstring>
+        <name>Timer</name>
+        <qualifiedname>uipc::Timer::Timer</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>blockName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force_on</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="66" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_timer_1a5acf9df791618ee5e8e62edbae2d0de6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::Timer::~Timer</definition>
+        <argsstring>()</argsstring>
+        <name>~Timer</name>
+        <qualifiedname>uipc::Timer::~Timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="67" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_timer_1a50d4e56a3200320e98d76f1021713c04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double uipc::Timer::elapsed</definition>
+        <argsstring>() const</argsstring>
+        <name>elapsed</name>
+        <qualifiedname>uipc::Timer::elapsed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="69" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1_timer_1a1c5f66e2ebe22d89398937b70abb8ec7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::Timer::disable_all</definition>
+        <argsstring>()</argsstring>
+        <name>disable_all</name>
+        <qualifiedname>uipc::Timer::disable_all</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="70" column="17" bodyfile="include/uipc/common/timer.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_timer_1ad64ffa5d91dd88aab7a98dc95fbfa7a3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::Timer::enable_all</definition>
+        <argsstring>()</argsstring>
+        <name>enable_all</name>
+        <qualifiedname>uipc::Timer::enable_all</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="71" column="17" bodyfile="include/uipc/common/timer.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_timer_1a733000d1139dc73d7ca4f1770c877ae6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::Timer::set_sync_func</definition>
+        <argsstring>(std::function&lt; void()&gt; sync)</argsstring>
+        <name>set_sync_func</name>
+        <qualifiedname>uipc::Timer::set_sync_func</qualifiedname>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>sync</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="72" column="17" bodyfile="include/uipc/common/timer.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_timer_1a909bb0906d0673c08c1aaff84d14e304" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::Timer::report</definition>
+        <argsstring>(std::ostream &amp;o=std::cout)</argsstring>
+        <name>report</name>
+        <qualifiedname>uipc::Timer::report</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+          <defval>std::cout</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="74" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1_timer_1a305a742caf17c4756aa9f7995fc2b2e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::Timer::report_as_json</definition>
+        <argsstring>()</argsstring>
+        <name>report_as_json</name>
+        <qualifiedname>uipc::Timer::report_as_json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="75" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1_timer_1a7418026498aa3982a667302af7b585d0" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Timer::sync</definition>
+        <argsstring>() const</argsstring>
+        <name>sync</name>
+        <qualifiedname>uipc::Timer::sync</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="78" column="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/common/timer.h" line="63" column="1" bodyfile="include/uipc/common/timer.h" bodystart="64" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1_timer_1a1c5f66e2ebe22d89398937b70abb8ec7" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>disable_all</name></member>
+      <member refid="classuipc_1_1_timer_1a50d4e56a3200320e98d76f1021713c04" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>elapsed</name></member>
+      <member refid="classuipc_1_1_timer_1ad64ffa5d91dd88aab7a98dc95fbfa7a3" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>enable_all</name></member>
+      <member refid="classuipc_1_1_timer_1a5af6013e33981ba247cac1ae96f756bf" prot="private" virt="non-virtual"><scope>uipc::Timer</scope><name>m_force_on</name></member>
+      <member refid="classuipc_1_1_timer_1a6bff191a1f7320175066e6273e6f766e" prot="private" virt="non-virtual"><scope>uipc::Timer</scope><name>m_global_on</name></member>
+      <member refid="classuipc_1_1_timer_1ae7f7de3bb65499a81ebe2623bcee1bf4" prot="private" virt="non-virtual"><scope>uipc::Timer</scope><name>m_sync</name></member>
+      <member refid="classuipc_1_1_timer_1a12e3e673ba68333b9e152507db0bf262" prot="private" virt="non-virtual"><scope>uipc::Timer</scope><name>m_timer</name></member>
+      <member refid="classuipc_1_1_timer_1a909bb0906d0673c08c1aaff84d14e304" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>report</name></member>
+      <member refid="classuipc_1_1_timer_1a305a742caf17c4756aa9f7995fc2b2e0" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>report_as_json</name></member>
+      <member refid="classuipc_1_1_timer_1a733000d1139dc73d7ca4f1770c877ae6" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>set_sync_func</name></member>
+      <member refid="classuipc_1_1_timer_1a7418026498aa3982a667302af7b585d0" prot="private" virt="non-virtual"><scope>uipc::Timer</scope><name>sync</name></member>
+      <member refid="classuipc_1_1_timer_1a83538924efbfccd52623fe68e7d7d8b7" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>Timer</name></member>
+      <member refid="classuipc_1_1_timer_1a5acf9df791618ee5e8e62edbae2d0de6" prot="public" virt="non-virtual"><scope>uipc::Timer</scope><name>~Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

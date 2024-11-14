@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structuipc_1_1propagate__const" kind="struct" language="C++" prot="public">
+    <compoundname>uipc::propagate_const</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename DstT</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structuipc_1_1propagate__const_1a3014858c8137e10d48b4930edd00b24e" prot="private" static="no">
+        <type>std::remove_cv_t&lt; DstT &gt;</type>
+        <definition>using uipc::propagate_const&lt; T, DstT &gt;::DstT_ =  std::remove_cv_t&lt;DstT&gt;</definition>
+        <argsstring></argsstring>
+        <name>DstT_</name>
+        <qualifiedname>uipc::propagate_const::DstT_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_traits.h" line="11" column="5" bodyfile="include/uipc/common/type_traits.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structuipc_1_1propagate__const_1a73381b9ac1e5c5eb0dfd7b74cb38e63e" prot="public" static="no">
+        <type>std::conditional_t&lt; std::is_const_v&lt; T &gt;, const DstT_, DstT_ &gt;</type>
+        <definition>using uipc::propagate_const&lt; T, DstT &gt;::type =  std::conditional_t&lt;std::is_const_v&lt;T&gt;, const DstT_, DstT_&gt;</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>uipc::propagate_const::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_traits.h" line="14" column="5" bodyfile="include/uipc/common/type_traits.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/common/type_traits.h" line="8" column="1" bodyfile="include/uipc/common/type_traits.h" bodystart="9" bodyend="15"/>
+    <listofallmembers>
+      <member refid="structuipc_1_1propagate__const_1a3014858c8137e10d48b4930edd00b24e" prot="private" virt="non-virtual"><scope>uipc::propagate_const</scope><name>DstT_</name></member>
+      <member refid="structuipc_1_1propagate__const_1a73381b9ac1e5c5eb0dfd7b74cb38e63e" prot="public" virt="non-virtual"><scope>uipc::propagate_const</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

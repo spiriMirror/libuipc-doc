@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceuipc_1_1constitution" kind="namespace" language="C++">
+    <compoundname>uipc::constitution</compoundname>
+    <innerclass refid="classuipc_1_1constitution_1_1_affine_body_constitution" prot="public">uipc::constitution::AffineBodyConstitution</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_affine_body_material" prot="public">uipc::constitution::AffineBodyMaterial</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_a_r_a_p" prot="public">uipc::constitution::ARAP</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_constraint" prot="public">uipc::constitution::Constraint</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_discrete_shell_bending" prot="public">uipc::constitution::DiscreteShellBending</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_elastic_moduli" prot="public">uipc::constitution::ElasticModuli</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_empty" prot="public">uipc::constitution::Empty</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_finite_element_constitution" prot="public">uipc::constitution::FiniteElementConstitution</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_finite_element_extra_constitution" prot="public">uipc::constitution::FiniteElementExtraConstitution</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_hookean_spring" prot="public">uipc::constitution::HookeanSpring</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_i_constitution" prot="public">uipc::constitution::IConstitution</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_kirchhoff_rod_bending" prot="public">uipc::constitution::KirchhoffRodBending</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_linear_motor" prot="public">uipc::constitution::LinearMotor</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_neo_hookean_shell" prot="public">uipc::constitution::NeoHookeanShell</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_particle" prot="public">uipc::constitution::Particle</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_rotating_motor" prot="public">uipc::constitution::RotatingMotor</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_soft_position_constraint" prot="public">uipc::constitution::SoftPositionConstraint</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_soft_transform_constraint" prot="public">uipc::constitution::SoftTransformConstraint</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1_stable_neo_hookean" prot="public">uipc::constitution::StableNeoHookean</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="conversion_8h_1a1f6b8fbcb632701b545547b7e3bb7991" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::EG_to_lame</definition>
+        <argsstring>(Float E, Float G, Float &amp;lambda, Float &amp;mu, Float &amp;poisson)</argsstring>
+        <name>EG_to_lame</name>
+        <qualifiedname>uipc::constitution::EG_to_lame</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>G</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>poisson</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/conversion.h" line="6" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="6" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="conversion_8h_1a1a8c1eff6643c48affd5ca3abb77f242" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::lame_to_EG</definition>
+        <argsstring>(Float lambda, Float mu, Float &amp;E, Float &amp;G, Float &amp;poisson)</argsstring>
+        <name>lame_to_EG</name>
+        <qualifiedname>uipc::constitution::lame_to_EG</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>G</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>poisson</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/conversion.h" line="19" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="conversion_8h_1a997c5704ad46fa3a4ca8e8c7358d92e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::lame_to_poisson</definition>
+        <argsstring>(Float lambda, Float mu, Float &amp;poisson)</argsstring>
+        <name>lame_to_poisson</name>
+        <qualifiedname>uipc::constitution::lame_to_poisson</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>poisson</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/conversion.h" line="31" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="conversion_8h_1a3227103baf7a3302637c43cdc1dae355" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::EG_to_poisson</definition>
+        <argsstring>(Float E, Float G, Float &amp;poisson)</argsstring>
+        <name>EG_to_poisson</name>
+        <qualifiedname>uipc::constitution::EG_to_poisson</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>G</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>poisson</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/conversion.h" line="37" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="conversion_8h_1a6577aeaf029d661332cdf64213423471" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::EP_to_lame</definition>
+        <argsstring>(Float E, Float poission, Float &amp;lambda, Float &amp;mu)</argsstring>
+        <name>EP_to_lame</name>
+        <qualifiedname>uipc::constitution::EP_to_lame</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>poission</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/conversion.h" line="43" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="43" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/constitution/affine_body_constitution.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

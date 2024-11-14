@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="elastic__moduli_8h" kind="file" language="C++">
+    <compoundname>elastic_moduli.h</compoundname>
+    <includes refid="dllexport_8h" local="no">uipc/common/dllexport.h</includes>
+    <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
+    <includedby refid="empty_8h" local="no">include/uipc/constitution/empty.h</includedby>
+    <includedby refid="hookean__spring_8h" local="no">include/uipc/constitution/hookean_spring.h</includedby>
+    <includedby refid="neo__hookean__shell_8h" local="no">include/uipc/constitution/neo_hookean_shell.h</includedby>
+    <includedby refid="particle_8h" local="no">include/uipc/constitution/particle.h</includedby>
+    <includedby refid="stable__neo__hookean_8h" local="no">include/uipc/constitution/stable_neo_hookean.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>uipc/common/dllexport.h</label>
+        <link refid="dllexport_8h_source"/>
+      </node>
+      <node id="3">
+        <label>uipc/common/type_define.h</label>
+        <link refid="common_2type__define_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/constitution/elastic_moduli.h</label>
+        <link refid="elastic__moduli_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Eigen/Core</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/uipc/constitution/elastic_moduli.h</label>
+        <link refid="elastic__moduli_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/uipc/constitution/empty.h</label>
+        <link refid="empty_8h_source"/>
+      </node>
+      <node id="3">
+        <label>include/uipc/constitution/hookean_spring.h</label>
+        <link refid="hookean__spring_8h_source"/>
+      </node>
+      <node id="4">
+        <label>include/uipc/constitution/neo_hookean_shell.h</label>
+        <link refid="neo__hookean__shell_8h_source"/>
+      </node>
+      <node id="5">
+        <label>include/uipc/constitution/particle.h</label>
+        <link refid="particle_8h_source"/>
+      </node>
+      <node id="6">
+        <label>include/uipc/constitution/stable_neo_hookean.h</label>
+        <link refid="stable__neo__hookean_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classuipc_1_1constitution_1_1_elastic_moduli" prot="public">uipc::constitution::ElasticModuli</innerclass>
+    <innernamespace refid="namespaceuipc">uipc</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1constitution">uipc::constitution</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/dllexport.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/type_define.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::constitution</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="classuipc_1_1constitution_1_1_elastic_moduli" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/><ref refid="classuipc_1_1constitution_1_1_elastic_moduli" kindref="compound">ElasticModuli</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1_elastic_moduli" kindref="compound">ElasticModuli</ref><sp/>lame(Float<sp/>lambda,<sp/>Float<sp/>mu)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1_elastic_moduli" kindref="compound">ElasticModuli</ref><sp/>youngs_shear(Float<sp/>E,<sp/>Float<sp/>G)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1_elastic_moduli" kindref="compound">ElasticModuli</ref><sp/>youngs_poisson(Float<sp/>E,<sp/>Float<sp/>nu);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lambda()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_lambda;<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mu()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_mu;<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1constitution_1_1_elastic_moduli" kindref="compound">ElasticModuli</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1constitution_1_1_elastic_moduli" kindref="compound">ElasticModuli</ref>(Float<sp/>lambda,<sp/>Float<sp/>mu)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/>m_lambda;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/>m_mu;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/uipc/constitution/elastic_moduli.h"/>
+  </compounddef>
+</doxygen>

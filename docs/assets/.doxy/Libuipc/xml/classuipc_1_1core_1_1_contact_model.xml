@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_contact_model" kind="class" language="C++" prot="public">
+    <compoundname>uipc::core::ContactModel</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_contact_model_1a6cab323d8f3cb5f0198cdcece987bc9f" prot="private" static="no" mutable="no">
+        <type>Vector2i</type>
+        <definition>Vector2i uipc::core::ContactModel::m_ids</definition>
+        <argsstring></argsstring>
+        <name>m_ids</name>
+        <qualifiedname>uipc::core::ContactModel::m_ids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="24" column="14" bodyfile="include/uipc/core/contact_model.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_contact_model_1a34a710ebfb7c0515c750a49d1fc22b71" prot="private" static="no" mutable="no">
+        <type>Float</type>
+        <definition>Float uipc::core::ContactModel::m_friction_rate</definition>
+        <argsstring></argsstring>
+        <name>m_friction_rate</name>
+        <qualifiedname>uipc::core::ContactModel::m_friction_rate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="25" column="14" bodyfile="include/uipc/core/contact_model.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_contact_model_1ab899105b9c04c93522f60243bfff12aa" prot="private" static="no" mutable="no">
+        <type>Float</type>
+        <definition>Float uipc::core::ContactModel::m_resistance</definition>
+        <argsstring></argsstring>
+        <name>m_resistance</name>
+        <qualifiedname>uipc::core::ContactModel::m_resistance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="26" column="14" bodyfile="include/uipc/core/contact_model.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_contact_model_1af8ac029ce8b3c37a6f46ed5599b8a480" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool uipc::core::ContactModel::m_enabled</definition>
+        <argsstring></argsstring>
+        <name>m_enabled</name>
+        <qualifiedname>uipc::core::ContactModel::m_enabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="27" column="14" bodyfile="include/uipc/core/contact_model.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_contact_model_1a3c94a89ebeb11d0eb108721f11491941" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::core::ContactModel::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::core::ContactModel::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="28" column="14" bodyfile="include/uipc/core/contact_model.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_1ad3c5fa9f296395863b30b67a0422027c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::ContactModel::ContactModel</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>ContactModel</name>
+        <qualifiedname>uipc::core::ContactModel::ContactModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="11" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_1a544d46e46afef0700970cc963219bb61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::ContactModel::ContactModel</definition>
+        <argsstring>(const Vector2i &amp;ids, Float friction_rate, Float resistance, bool enable, const Json &amp;config)</argsstring>
+        <name>ContactModel</name>
+        <qualifiedname>uipc::core::ContactModel::ContactModel</qualifiedname>
+        <param>
+          <type>const Vector2i &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>friction_rate</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>resistance</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_1ac8f4687b15cd3040ff01d6361a824014" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Vector2i &amp;</type>
+        <definition>const Vector2i &amp; uipc::core::ContactModel::ids</definition>
+        <argsstring>() const</argsstring>
+        <name>ids</name>
+        <qualifiedname>uipc::core::ContactModel::ids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="14" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_1a42664e7038b5353eca55fcf50428d463" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Float</type>
+        <definition>Float uipc::core::ContactModel::friction_rate</definition>
+        <argsstring>() const</argsstring>
+        <name>friction_rate</name>
+        <qualifiedname>uipc::core::ContactModel::friction_rate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="15" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_1a41e7cdc5f52dca1d4e0164332d4b2c87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Float</type>
+        <definition>Float uipc::core::ContactModel::resistance</definition>
+        <argsstring>() const</argsstring>
+        <name>resistance</name>
+        <qualifiedname>uipc::core::ContactModel::resistance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="16" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_1a15516f95da10edf821d06c254997b4d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool uipc::core::ContactModel::is_enabled</definition>
+        <argsstring>() const</argsstring>
+        <name>is_enabled</name>
+        <qualifiedname>uipc::core::ContactModel::is_enabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="17" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_1adc622324d6d5594f21c21a59addd3197" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Json &amp;</type>
+        <definition>const Json &amp; uipc::core::ContactModel::config</definition>
+        <argsstring>() const</argsstring>
+        <name>config</name>
+        <qualifiedname>uipc::core::ContactModel::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="18" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_contact_model_1ad40c79589db1996a4e6c6ee75989d148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void to_json</definition>
+        <argsstring>(Json &amp;json, const ContactModel &amp;model)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::ContactModel::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_contact_model" kindref="compound">ContactModel</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="20" column="17"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_contact_model_1a484b880632bf3bbc84c7d888230cae63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void from_json</definition>
+        <argsstring>(const Json &amp;json, ContactModel &amp;model)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::core::ContactModel::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_contact_model" kindref="compound">ContactModel</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="21" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/contact_model.h" line="8" column="1" bodyfile="include/uipc/core/contact_model.h" bodystart="9" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_contact_model_1adc622324d6d5594f21c21a59addd3197" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>config</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1ad3c5fa9f296395863b30b67a0422027c" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>ContactModel</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a544d46e46afef0700970cc963219bb61" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>ContactModel</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a42664e7038b5353eca55fcf50428d463" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>friction_rate</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a484b880632bf3bbc84c7d888230cae63" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>from_json</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1ac8f4687b15cd3040ff01d6361a824014" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>ids</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a15516f95da10edf821d06c254997b4d0" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>is_enabled</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a3c94a89ebeb11d0eb108721f11491941" prot="private" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1af8ac029ce8b3c37a6f46ed5599b8a480" prot="private" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>m_enabled</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a34a710ebfb7c0515c750a49d1fc22b71" prot="private" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>m_friction_rate</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a6cab323d8f3cb5f0198cdcece987bc9f" prot="private" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>m_ids</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1ab899105b9c04c93522f60243bfff12aa" prot="private" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>m_resistance</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1a41e7cdc5f52dca1d4e0164332d4b2c87" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>resistance</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_1ad40c79589db1996a4e6c6ee75989d148" prot="public" virt="non-virtual"><scope>uipc::core::ContactModel</scope><name>to_json</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

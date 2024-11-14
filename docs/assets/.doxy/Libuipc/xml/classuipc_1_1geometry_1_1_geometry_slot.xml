@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1_geometry_slot" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>uipc::geometry::GeometrySlot</compoundname>
+    <derivedcompoundref refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4" prot="public" virt="non-virtual">uipc::geometry::GeometrySlotT&lt; ImplicitGeometry &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4" prot="public" virt="non-virtual">uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;</derivedcompoundref>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_geometry_slot_1a0c44e887fac6b57baeb85e37286a9c5a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class GeometryCollection</definition>
+        <argsstring></argsstring>
+        <name>GeometryCollection</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::GeometryCollection</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="17" column="18" bodyfile="include/uipc/geometry/geometry_slot.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_geometry_slot_1ab01490bdeb5b913882714ea652af2643" prot="private" static="no" mutable="no">
+        <type>IndexT</type>
+        <definition>IndexT uipc::geometry::GeometrySlot::m_id</definition>
+        <argsstring></argsstring>
+        <name>m_id</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::m_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="37" column="23" bodyfile="include/uipc/geometry/geometry_slot.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_geometry_slot_1a80a8f3fcddf80e1c2610a9136fab0552" prot="private" static="no" mutable="no">
+        <type>GeometrySlotState</type>
+        <definition>GeometrySlotState uipc::geometry::GeometrySlot::m_state</definition>
+        <argsstring></argsstring>
+        <name>m_state</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::m_state</qualifiedname>
+        <initializer>= GeometrySlotState::Normal</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="38" column="23" bodyfile="include/uipc/geometry/geometry_slot.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a604572217eca178ddc8d147c5cad083b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::GeometrySlot::GeometrySlot</definition>
+        <argsstring>(IndexT id) noexcept</argsstring>
+        <name>GeometrySlot</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::GeometrySlot</qualifiedname>
+        <param>
+          <type>IndexT</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="20" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1aab65fb07d67b53a701f3d412b19e5ae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual uipc::geometry::GeometrySlot::~GeometrySlot</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GeometrySlot</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::~GeometrySlot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="21" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a850ae1bd151bc794ef6f21a0717a72de" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>IndexT</type>
+        <definition>IndexT uipc::geometry::GeometrySlot::id</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>id</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="22" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a3169bf659733096813285a055b2871b5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <definition>Geometry &amp; uipc::geometry::GeometrySlot::geometry</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>geometry</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::geometry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="23" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a6f99890dab3afc615dc694b1b0a36091" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>const <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <definition>const Geometry &amp; uipc::geometry::GeometrySlot::geometry</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>geometry</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::geometry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="24" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a5b724fde68c559640a8841c9f8ee6854" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>GeometrySlotState</type>
+        <definition>GeometrySlotState uipc::geometry::GeometrySlot::state</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>state</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="25" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a696c0260393f4bbad36e1eb7511ec5ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::GeometrySlot::GeometrySlot</definition>
+        <argsstring>(const GeometrySlot &amp;)=delete</argsstring>
+        <name>GeometrySlot</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::GeometrySlot</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a8352b2fb1fb522b83b2b968f14a35659" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::GeometrySlot::GeometrySlot</definition>
+        <argsstring>(GeometrySlot &amp;&amp;)=delete</argsstring>
+        <name>GeometrySlot</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::GeometrySlot</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1aea7ae96a031761255bfb6ed329e60cd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &amp;</type>
+        <definition>GeometrySlot &amp; uipc::geometry::GeometrySlot::operator=</definition>
+        <argsstring>(const GeometrySlot &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="29" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a2621a68f586ebcb9e7605ec60ba8115b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &amp;</type>
+        <definition>GeometrySlot &amp; uipc::geometry::GeometrySlot::operator=</definition>
+        <argsstring>(GeometrySlot &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="30" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1add9a7d83c8634c2971adabea73ce6008" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <definition>virtual Geometry &amp; uipc::geometry::GeometrySlot::get_geometry</definition>
+        <argsstring>() noexcept=0</argsstring>
+        <name>get_geometry</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::get_geometry</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4_1a6812f78a1ee900d2e9cffce8a5b99ef7">get_geometry</reimplementedby>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4_1a466e3c0b99297c3c3f35aed8cded72db">get_geometry</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="33" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1a8222724f5afdf8e412c430cfc9f2f38f" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>const <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <definition>virtual const Geometry &amp; uipc::geometry::GeometrySlot::get_geometry</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>get_geometry</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::get_geometry</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4_1a7efad8c97618f88e2e7e7e8dd7ff6add">get_geometry</reimplementedby>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4_1abaa22242ca99fadf56f5c9899e5c790b">get_geometry</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="34" column="28"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_slot_1af6242376382866dc51dc2610c0cdf6f8" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::GeometrySlot::state</definition>
+        <argsstring>(GeometrySlotState state) noexcept</argsstring>
+        <name>state</name>
+        <qualifiedname>uipc::geometry::GeometrySlot::state</qualifiedname>
+        <param>
+          <type>GeometrySlotState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_slot.h" line="39" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::geometry::GeometrySlot</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry_slot"/>
+      </node>
+      <node id="2">
+        <label>uipc::geometry::GeometrySlotT&lt; ImplicitGeometry &gt;</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="include/uipc/geometry/geometry_slot.h" line="15" column="1" bodyfile="include/uipc/geometry/geometry_slot.h" bodystart="16" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a3169bf659733096813285a055b2871b5" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>geometry</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a6f99890dab3afc615dc694b1b0a36091" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>geometry</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a0c44e887fac6b57baeb85e37286a9c5a" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>GeometryCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a604572217eca178ddc8d147c5cad083b" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>GeometrySlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a696c0260393f4bbad36e1eb7511ec5ae" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>GeometrySlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a8352b2fb1fb522b83b2b968f14a35659" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>GeometrySlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1add9a7d83c8634c2971adabea73ce6008" prot="protected" virt="pure-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>get_geometry</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a8222724f5afdf8e412c430cfc9f2f38f" prot="protected" virt="pure-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>get_geometry</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a850ae1bd151bc794ef6f21a0717a72de" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>id</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1ab01490bdeb5b913882714ea652af2643" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>m_id</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a80a8f3fcddf80e1c2610a9136fab0552" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>m_state</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1aea7ae96a031761255bfb6ed329e60cd4" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a2621a68f586ebcb9e7605ec60ba8115b" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a5b724fde68c559640a8841c9f8ee6854" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>state</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1af6242376382866dc51dc2610c0cdf6f8" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometrySlot</scope><name>state</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_slot_1aab65fb07d67b53a701f3d412b19e5ae7" prot="public" virt="virtual"><scope>uipc::geometry::GeometrySlot</scope><name>~GeometrySlot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

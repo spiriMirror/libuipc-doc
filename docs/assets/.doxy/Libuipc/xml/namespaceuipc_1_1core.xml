@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceuipc_1_1core" kind="namespace" language="C++">
+    <compoundname>uipc::core</compoundname>
+    <innerclass refid="classuipc_1_1core_1_1_animation" prot="public">uipc::core::Animation</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_animator" prot="public">uipc::core::Animator</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_constitution_tabular" prot="public">uipc::core::ConstitutionTabular</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_contact_element" prot="public">uipc::core::ContactElement</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_contact_model" prot="public">uipc::core::ContactModel</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_contact_tabular" prot="public">uipc::core::ContactTabular</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_diff_sim" prot="public">uipc::core::DiffSim</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_engine" prot="public">uipc::core::Engine</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_engine_exception" prot="public">uipc::core::EngineException</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_engine_status" prot="public">uipc::core::EngineStatus</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_engine_status_collection" prot="public">uipc::core::EngineStatusCollection</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_i_engine" prot="public">uipc::core::IEngine</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_i_object" prot="public">uipc::core::IObject</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_i_object_collection" prot="public">uipc::core::IObjectCollection</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_i_sanity_checker" prot="public">uipc::core::ISanityChecker</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object" prot="public">uipc::core::Object</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object_collection" prot="public">uipc::core::ObjectCollection</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots" prot="public">uipc::core::ObjectGeometrySlots</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots_3_01const_01geometry_1_1_geometry_01_4" prot="public">uipc::core::ObjectGeometrySlots&lt; const geometry::Geometry &gt;</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots_3_01geometry_1_1_geometry_01_4" prot="public">uipc::core::ObjectGeometrySlots&lt; geometry::Geometry &gt;</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_sanity_checker" prot="public">uipc::core::SanityChecker</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_sanity_checker_auto_register" prot="public">uipc::core::SanityCheckerAutoRegister</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_sanity_checker_collection" prot="public">uipc::core::SanityCheckerCollection</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_scene" prot="public">uipc::core::Scene</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_scene_i_o" prot="public">uipc::core::SceneIO</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_scene_i_o_error" prot="public">uipc::core::SceneIOError</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_world" prot="public">uipc::core::World</innerclass>
+    <innernamespace refid="namespaceuipc_1_1core_1_1detail">uipc::core::detail</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667" prot="public" static="no" strong="yes">
+        <type>int</type>
+        <name>SanityCheckResult</name>
+        <qualifiedname>uipc::core::SanityCheckResult</qualifiedname>
+        <enumvalue id="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667a505a83f220c02df2f85c3810cd9ceb38" prot="public">
+          <name>Success</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667a0eaadb4fcb48a0a0ed7bc9868be9fbaa" prot="public">
+          <name>Warning</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667a902b0d55fddef6f8d651fe1035b7d4bd" prot="public">
+          <name>Error</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/sanity_check/i_sanity_checker.h" line="9" column="1" bodyfile="include/uipc/sanity_check/i_sanity_checker.h" bodystart="10" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="contact__element_8h_1a7602785be3f9d015d583cf8b02e335a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::to_json</definition>
+        <argsstring>(Json &amp;j, const ContactElement &amp;element)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref> &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_element.h" line="26" column="6" declfile="include/uipc/core/contact_element.h" declline="26" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="contact__element_8h_1a4f843662793df62c096c01babd049c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::from_json</definition>
+        <argsstring>(const Json &amp;j, ContactElement &amp;element)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::core::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref> &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_element.h" line="27" column="6" declfile="include/uipc/core/contact_element.h" declline="27" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="contact__model_8h_1aedef044135cab1a2600278e260c1c956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::to_json</definition>
+        <argsstring>(Json &amp;json, const ContactModel &amp;model)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_contact_model" kindref="compound">ContactModel</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="31" column="6" declfile="include/uipc/core/contact_model.h" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="contact__model_8h_1a9a4eef4caab0ef9da47a18158a408194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::from_json</definition>
+        <argsstring>(const Json &amp;json, ContactModel &amp;model)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::core::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_contact_model" kindref="compound">ContactModel</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model.h" line="33" column="6" declfile="include/uipc/core/contact_model.h" declline="33" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="contact__tabular_8h_1abcd24d07abd7e67d377543c23fa79538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::to_json</definition>
+        <argsstring>(Json &amp;j, const ContactTabular &amp;ct)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_contact_tabular" kindref="compound">ContactTabular</ref> &amp;</type>
+          <declname>ct</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_tabular.h" line="48" column="6" declfile="include/uipc/core/contact_tabular.h" declline="48" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/backend/visitors/animator_visitor.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conversion_8h" kind="file" language="C++">
+    <compoundname>conversion.h</compoundname>
+    <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>uipc/common/type_define.h</label>
+        <link refid="common_2type__define_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/constitution/conversion.h</label>
+        <link refid="conversion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Eigen/Core</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceuipc">uipc</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1constitution">uipc::constitution</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/type_define.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::constitution</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EG_to_lame(Float<sp/>E,<sp/>Float<sp/>G,<sp/>Float&amp;<sp/>lambda,<sp/>Float&amp;<sp/>mu,<sp/>Float&amp;<sp/>poisson)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ref:<sp/>https://en.wikipedia.org/wiki/Lam%C3%A9_parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\mu<sp/>=<sp/>G$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>mu<sp/>=<sp/>G;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\lambda<sp/>=<sp/>\frac{G(E-2<sp/>G)}{3<sp/>G-E}$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>lambda<sp/>=<sp/>G<sp/>*<sp/>(E<sp/>-<sp/>2<sp/>*<sp/>G)<sp/>/<sp/>(3<sp/>*<sp/>G<sp/>-<sp/>E);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\nu<sp/>=<sp/>{\frac<sp/>{E}{2G}}-1$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>poisson<sp/>=<sp/>E<sp/>/<sp/>(2<sp/>*<sp/>G)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lame_to_EG(Float<sp/>lambda,<sp/>Float<sp/>mu,<sp/>Float&amp;<sp/>E,<sp/>Float&amp;<sp/>G,<sp/>Float&amp;<sp/>poisson)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ref:<sp/>https://en.wikipedia.org/wiki/Lam%C3%A9_parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$G<sp/>=<sp/>\mu$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>G<sp/>=<sp/>mu;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$<sp/>E<sp/>=<sp/>\frac{G(3<sp/>\lambda+2<sp/>G)}{\lambda+G}$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>E<sp/>=<sp/>G<sp/>*<sp/>(3<sp/>*<sp/>lambda<sp/>+<sp/>2<sp/>*<sp/>G)<sp/>/<sp/>(lambda<sp/>+<sp/>G);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\nu<sp/>=<sp/>\frac{\lambda}{2(\lambda+G)}$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>poisson<sp/>=<sp/>lambda<sp/>/<sp/>(2<sp/>*<sp/>(lambda<sp/>+<sp/>G));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>lame_to_poisson(Float<sp/>lambda,<sp/>Float<sp/>mu,<sp/>Float&amp;<sp/>poisson)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\nu<sp/>=<sp/>\frac{\lambda}{2(\lambda+\mu)}$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>poisson<sp/>=<sp/>lambda<sp/>/<sp/>(2<sp/>*<sp/>(lambda<sp/>+<sp/>mu));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EG_to_poisson(Float<sp/>E,<sp/>Float<sp/>G,<sp/>Float&amp;<sp/>poisson)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\nu<sp/>=<sp/>{\frac<sp/>{E}{2G}}-1$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>poisson<sp/>=<sp/>E<sp/>/<sp/>(2<sp/>*<sp/>G)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EP_to_lame(Float<sp/>E,<sp/>Float<sp/>poission,<sp/>Float&amp;<sp/>lambda,<sp/>Float&amp;<sp/>mu)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>lambda<sp/>=<sp/>E<sp/>*<sp/>poission<sp/>/<sp/>(1<sp/>+<sp/>poission)<sp/>/<sp/>(1<sp/>-<sp/>2<sp/>*<sp/>poission);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>mu<sp/><sp/><sp/><sp/><sp/>=<sp/>E<sp/>/<sp/>(2<sp/>*<sp/>(1<sp/>+<sp/>poission));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/uipc/constitution/conversion.h"/>
+  </compounddef>
+</doxygen>

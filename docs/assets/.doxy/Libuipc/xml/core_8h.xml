@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="core_8h" kind="file" language="C++">
+    <compoundname>core.h</compoundname>
+    <includes local="no">Eigen/Core</includes>
+    <includes local="no">Eigen/Geometry</includes>
+    <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
+    <includes refid="unit_8h" local="no">uipc/common/unit.h</includes>
+    <includes refid="range_8h" local="no">uipc/common/range.h</includes>
+    <includes refid="enumerate_8h" local="no">uipc/common/enumerate.h</includes>
+    <includes refid="common_2uipc_8h" local="no">uipc/common/uipc.h</includes>
+    <includes refid="engine_8h" local="no">uipc/core/engine.h</includes>
+    <includes refid="world_8h" local="no">uipc/core/world.h</includes>
+    <includes refid="simplicial__complex_8h" local="no">uipc/geometry/simplicial_complex.h</includes>
+    <includes refid="simplicial__complex__slot_8h" local="no">uipc/geometry/simplicial_complex_slot.h</includes>
+    <includes refid="implicit__geometry_8h" local="no">uipc/geometry/implicit_geometry.h</includes>
+    <includes refid="implicit__geometry__slot_8h" local="no">uipc/geometry/implicit_geometry_slot.h</includes>
+    <includes refid="attribute__name_8h" local="no">uipc/builtin/attribute_name.h</includes>
+    <includedby refid="uipc_8h" local="no">include/uipc/uipc.h</includedby>
+    <incdepgraph>
+      <node id="36">
+        <label>uipc/backend/buffer_view.h</label>
+        <link refid="buffer__view_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>uipc/backend/type_define.h</label>
+        <link refid="backend_2type__define_8h_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>uipc/backend/visitors/animator_visitor.h</label>
+        <link refid="animator__visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>uipc/backend/visitors/diff_sim_visitor.h</label>
+        <link refid="diff__sim__visitor_8h_source"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>uipc/backend/visitors/scene_visitor.h</label>
+        <link refid="scene__visitor_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>uipc/backend/visitors/world_visitor.h</label>
+        <link refid="world__visitor_8h_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>uipc/builtin/attribute_name.h</label>
+        <link refid="attribute__name_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>uipc/builtin/constitution_type.h</label>
+        <link refid="constitution__type_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>uipc/builtin/constitution_uid_collection.h</label>
+        <link refid="constitution__uid__collection_8h_source"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>uipc/builtin/details/attribute_name.h</label>
+        <link refid="details_2attribute__name_8h"/>
+      </node>
+      <node id="65">
+        <label>uipc/builtin/uid_info.h</label>
+        <link refid="uid__info_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>uipc/builtin/uid_register.h</label>
+        <link refid="uid__register_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>uipc/common/allocator.h</label>
+        <link refid="allocator_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>uipc/common/buffer_info.h</label>
+        <link refid="buffer__info_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>uipc/common/dllexport.h</label>
+        <link refid="dllexport_8h_source"/>
+      </node>
+      <node id="8">
+        <label>uipc/common/enumerate.h</label>
+        <link refid="enumerate_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>uipc/common/exception.h</label>
+        <link refid="exception_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>uipc/common/json.h</label>
+        <link refid="json_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>uipc/common/list.h</label>
+        <link refid="list_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>uipc/common/range.h</label>
+        <link refid="range_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>uipc/common/set.h</label>
+        <link refid="set_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>uipc/common/smart_pointer.h</label>
+        <link refid="smart__pointer_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>uipc/common/span.h</label>
+        <link refid="span_8h_source"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>uipc/common/string.h</label>
+        <link refid="string_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>uipc/common/type_define.h</label>
+        <link refid="common_2type__define_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>uipc/common/type_traits.h</label>
+        <link refid="type__traits_8h_source"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>uipc/common/uipc.h</label>
+        <link refid="common_2uipc_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc/common/unit.h</label>
+        <link refid="unit_8h_source"/>
+      </node>
+      <node id="31">
+        <label>uipc/common/unordered_map.h</label>
+        <link refid="unordered__map_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>uipc/common/vector.h</label>
+        <link refid="vector_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>uipc/constitution/constitution.h</label>
+        <link refid="constitution_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/core.h</label>
+        <link refid="core_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>uipc/core/animation.h</label>
+        <link refid="animation_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>uipc/core/animator.h</label>
+        <link refid="animator_8h_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>uipc/core/constitution_tabular.h</label>
+        <link refid="constitution__tabular_8h_source"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>uipc/core/contact_element.h</label>
+        <link refid="contact__element_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>uipc/core/contact_model.h</label>
+        <link refid="contact__model_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>uipc/core/contact_tabular.h</label>
+        <link refid="contact__tabular_8h_source"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>uipc/core/diff_sim.h</label>
+        <link refid="diff__sim_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>uipc/core/engine.h</label>
+        <link refid="engine_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>uipc/core/engine_status.h</label>
+        <link refid="engine__status_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>uipc/core/i_engine.h</label>
+        <link refid="i__engine_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>uipc/core/object.h</label>
+        <link refid="object_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>uipc/core/object_collection.h</label>
+        <link refid="object__collection_8h_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>uipc/core/scene.h</label>
+        <link refid="scene_8h_source"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>uipc/core/world.h</label>
+        <link refid="world_8h_source"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>uipc/diff_sim/parameter_collection.h</label>
+        <link refid="parameter__collection_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>uipc/diff_sim/sparse_coo_view.h</label>
+        <link refid="sparse__coo__view_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>uipc/geometry/abstract_simplicial_complex.h</label>
+        <link refid="abstract__simplicial__complex_8h_source"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>uipc/geometry/attribute.h</label>
+        <link refid="attribute_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>uipc/geometry/attribute_collection.h</label>
+        <link refid="attribute__collection_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>uipc/geometry/attribute_copy.h</label>
+        <link refid="attribute__copy_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>uipc/geometry/attribute_friend.h</label>
+        <link refid="attribute__friend_8h_source"/>
+      </node>
+      <node id="45">
+        <label>uipc/geometry/attribute_slot.h</label>
+        <link refid="attribute__slot_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>uipc/geometry/geometry.h</label>
+        <link refid="geometry_2geometry_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>uipc/geometry/geometry_collection.h</label>
+        <link refid="geometry__collection_8h_source"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>uipc/geometry/geometry_friend.h</label>
+        <link refid="geometry__friend_8h_source"/>
+      </node>
+      <node id="56">
+        <label>uipc/geometry/geometry_slot.h</label>
+        <link refid="geometry__slot_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>uipc/geometry/implicit_geometry.h</label>
+        <link refid="implicit__geometry_8h_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>uipc/geometry/implicit_geometry_slot.h</label>
+        <link refid="implicit__geometry__slot_8h_source"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>uipc/geometry/simplicial_complex.h</label>
+        <link refid="simplicial__complex_8h_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>uipc/geometry/simplicial_complex_attributes.h</label>
+        <link refid="simplicial__complex__attributes_8h_source"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>uipc/geometry/simplicial_complex_slot.h</label>
+        <link refid="simplicial__complex__slot_8h_source"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="3">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="75">
+        <label>Eigen/Sparse</label>
+      </node>
+      <node id="38">
+        <label>cinttypes</label>
+      </node>
+      <node id="55">
+        <label>concepts</label>
+      </node>
+      <node id="9">
+        <label>cppitertools/enumerate.hpp</label>
+      </node>
+      <node id="7">
+        <label>cppitertools/range.hpp</label>
+      </node>
+      <node id="44">
+        <label>details/attribute.inl</label>
+      </node>
+      <node id="48">
+        <label>details/attribute_collection.inl</label>
+      </node>
+      <node id="42">
+        <label>details/attribute_copy.inl</label>
+      </node>
+      <node id="47">
+        <label>details/attribute_slot.inl</label>
+      </node>
+      <node id="51">
+        <label>details/geometry.inl</label>
+      </node>
+      <node id="59">
+        <label>details/geometry_collection.inl</label>
+      </node>
+      <node id="60">
+        <label>details/object.inl</label>
+      </node>
+      <node id="20">
+        <label>details/smart_pointer.inl</label>
+      </node>
+      <node id="34">
+        <label>exception</label>
+      </node>
+      <node id="83">
+        <label>functional</label>
+      </node>
+      <node id="67">
+        <label>list</label>
+      </node>
+      <node id="46">
+        <label>map</label>
+      </node>
+      <node id="17">
+        <label>memory</label>
+      </node>
+      <node id="18">
+        <label>memory_resource</label>
+      </node>
+      <node id="13">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="58">
+        <label>set</label>
+      </node>
+      <node id="40">
+        <label>span</label>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="25">
+        <label>string_view</label>
+      </node>
+      <node id="53">
+        <label>type_traits</label>
+      </node>
+      <node id="32">
+        <label>unordered_map</label>
+      </node>
+      <node id="27">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/uipc/core.h</label>
+        <link refid="core_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/uipc/uipc.h</label>
+        <link refid="uipc_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Core&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Geometry&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/type_define.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/unit.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/range.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/enumerate.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/uipc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/core/engine.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/core/world.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/simplicial_complex.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/simplicial_complex_slot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/implicit_geometry.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/implicit_geometry_slot.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/builtin/attribute_name.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/uipc/core.h"/>
+  </compounddef>
+</doxygen>

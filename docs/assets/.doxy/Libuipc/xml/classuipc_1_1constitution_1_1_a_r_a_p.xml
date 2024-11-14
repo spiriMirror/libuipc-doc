@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1_a_r_a_p" kind="class" language="C++" prot="public">
+    <compoundname>uipc::constitution::ARAP</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1_finite_element_constitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementConstitution</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1_a_r_a_p_1a2ceb9ce7d9d7c59d3f0847e493143a56" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1_finite_element_constitution" kindref="compound">FiniteElementConstitution</ref></type>
+        <definition>using uipc::constitution::ARAP::Base =  FiniteElementConstitution</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::ARAP::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/arap.h" line="8" column="5" bodyfile="include/uipc/constitution/arap.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1_a_r_a_p_1a0864df59a83d7c9a1170c0d14c47515b" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::ARAP::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::ARAP::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/arap.h" line="21" column="10" bodyfile="include/uipc/constitution/arap.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1_a_r_a_p_1a51481f547d83e3af80d674daa0a4e6fc" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::ARAP::ARAP</definition>
+        <argsstring>(const Json &amp;config=default_config()) noexcept</argsstring>
+        <name>ARAP</name>
+        <qualifiedname>uipc::constitution::ARAP::ARAP</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/arap.h" line="11" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1_a_r_a_p_1a1a8b671dd90450e17539bc1b70c71182" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::ARAP::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float kappa, Float mass_density=1e3) const</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::ARAP::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>kappa</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mass_density</declname>
+          <defval>1e3</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/arap.h" line="13" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1_a_r_a_p_1a8f9e0b5cf4dd1e33458b3f2865e1b5d6" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::ARAP::default_config</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::ARAP::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/arap.h" line="15" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1_a_r_a_p_1aa38d637a1b8828f9e349e9cf5ddfffdf" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::constitution::ARAP::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::ARAP::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1_i_constitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/arap.h" line="18" column="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::constitution::ARAP</label>
+        <link refid="classuipc_1_1constitution_1_1_a_r_a_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::FiniteElementConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1_finite_element_constitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1_i_constitution"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::constitution::ARAP</label>
+        <link refid="classuipc_1_1constitution_1_1_a_r_a_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::FiniteElementConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1_finite_element_constitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1_i_constitution"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/arap.h" line="6" column="1" bodyfile="include/uipc/constitution/arap.h" bodystart="7" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a1a8b671dd90450e17539bc1b70c71182" prot="public" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a51481f547d83e3af80d674daa0a4e6fc" prot="public" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>ARAP</name></member>
+      <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a2ceb9ce7d9d7c59d3f0847e493143a56" prot="private" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a8f9e0b5cf4dd1e33458b3f2865e1b5d6" prot="public" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1aa38d637a1b8828f9e349e9cf5ddfffdf" prot="protected" virt="virtual"><scope>uipc::constitution::ARAP</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a0864df59a83d7c9a1170c0d14c47515b" prot="private" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1_i_constitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1_i_constitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1_i_constitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1_i_constitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::ARAP</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1_i_constitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::ARAP</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,591 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::AbstractSimplicialComplex</compoundname>
+    <basecompoundref refid="classuipc_1_1geometry_1_1_geometry" prot="public" virt="non-virtual">uipc::geometry::Geometry</basecompoundref>
+    <includes refid="abstract__simplicial__complex_8h" local="no">abstract_simplicial_complex.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3458344cad0902dff48b1014ff353ba1" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; false, 0 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::VertexAttributes =  SimplicialComplexAttributes&lt;false, 0&gt;</definition>
+        <argsstring></argsstring>
+        <name>VertexAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::VertexAttributes</qualifiedname>
+        <briefdescription>
+<para>Alias for the vertex attributes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="23" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a5b230e18181109838f6d9c3c35b847b1" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; true, 0 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::CVertexAttributes =  SimplicialComplexAttributes&lt;true, 0&gt;</definition>
+        <argsstring></argsstring>
+        <name>CVertexAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::CVertexAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="24" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a869beaef795dc63357e6289e45ce3357" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; false, 1 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::EdgeAttributes =  SimplicialComplexAttributes&lt;false, 1&gt;</definition>
+        <argsstring></argsstring>
+        <name>EdgeAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::EdgeAttributes</qualifiedname>
+        <briefdescription>
+<para>Alias for the edge attributes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="30" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1adbdc8c34523c7dbf97cd8838d498995a" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; true, 1 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::CEdgeAttributes =  SimplicialComplexAttributes&lt;true, 1&gt;</definition>
+        <argsstring></argsstring>
+        <name>CEdgeAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::CEdgeAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="31" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a14d19c780c538e73e2c336b1afabcaac" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; false, 2 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::TriangleAttributes =  SimplicialComplexAttributes&lt;false, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>TriangleAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::TriangleAttributes</qualifiedname>
+        <briefdescription>
+<para>Alias for the triangle attributes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="37" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a97890a24e8500f6367792fa8c96c400a" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; true, 2 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::CTriangleAttributes =  SimplicialComplexAttributes&lt;true, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>CTriangleAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::CTriangleAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="38" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a35d7d6de42e89e82526a2e82c7cc33a9" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; false, 3 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::TetrahedronAttributes =  SimplicialComplexAttributes&lt;false, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>TetrahedronAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::TetrahedronAttributes</qualifiedname>
+        <briefdescription>
+<para>Alias for the tetrahedron attributes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="44" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a43558df0494ad801a2c270db2364c95c" prot="public" static="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; true, 3 &gt;</type>
+        <definition>using uipc::geometry::AbstractSimplicialComplex::CTetrahedronAttributes =  SimplicialComplexAttributes&lt;true, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>CTetrahedronAttributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::CTetrahedronAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="45" column="5" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1abd621cd374772a67fae8b860ddfca14c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>class</type>
+        <definition>friend class AttributeFriend</definition>
+        <argsstring></argsstring>
+        <name>AttributeFriend</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::AttributeFriend</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_attribute_friend" kindref="compound">AttributeFriend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="15" column="18" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4f422fe213b58122c474bdfea57bcfa8" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref></type>
+        <definition>AttributeCollection uipc::geometry::AbstractSimplicialComplex::m_vertex_attributes</definition>
+        <argsstring></argsstring>
+        <name>m_vertex_attributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::m_vertex_attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="101" column="25" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a71b25427b7edba58115691aaa337c270" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref></type>
+        <definition>AttributeCollection uipc::geometry::AbstractSimplicialComplex::m_edge_attributes</definition>
+        <argsstring></argsstring>
+        <name>m_edge_attributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::m_edge_attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="102" column="25" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a52f14c990960f9006e9123492822ebf4" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref></type>
+        <definition>AttributeCollection uipc::geometry::AbstractSimplicialComplex::m_triangle_attributes</definition>
+        <argsstring></argsstring>
+        <name>m_triangle_attributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::m_triangle_attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="103" column="25" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a78db52340e18b6104accc3dc663f7c38" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref></type>
+        <definition>AttributeCollection uipc::geometry::AbstractSimplicialComplex::m_tetrahedron_attributes</definition>
+        <argsstring></argsstring>
+        <name>m_tetrahedron_attributes</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::m_tetrahedron_attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="104" column="25" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a6038c997b6473b13ce295554761e8b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AbstractSimplicialComplex::AbstractSimplicialComplex</definition>
+        <argsstring>()=default</argsstring>
+        <name>AbstractSimplicialComplex</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::AbstractSimplicialComplex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="47" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4dd5925809ebc6b999391332c012bd91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AbstractSimplicialComplex::AbstractSimplicialComplex</definition>
+        <argsstring>(const AbstractSimplicialComplex &amp;o)=default</argsstring>
+        <name>AbstractSimplicialComplex</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::AbstractSimplicialComplex</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kindref="compound">AbstractSimplicialComplex</ref> &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a063fae8f17aa8a6edc1963bc728a181c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AbstractSimplicialComplex::AbstractSimplicialComplex</definition>
+        <argsstring>(AbstractSimplicialComplex &amp;&amp;o)=default</argsstring>
+        <name>AbstractSimplicialComplex</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::AbstractSimplicialComplex</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kindref="compound">AbstractSimplicialComplex</ref> &amp;&amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="49" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a0bfbf697d755d894ad13743b7b927cfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kindref="compound">AbstractSimplicialComplex</ref> &amp;</type>
+        <definition>AbstractSimplicialComplex &amp; uipc::geometry::AbstractSimplicialComplex::operator=</definition>
+        <argsstring>(const AbstractSimplicialComplex &amp;o)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kindref="compound">AbstractSimplicialComplex</ref> &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="51" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a8ff6225f2f0fadd989737f5f004d0b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kindref="compound">AbstractSimplicialComplex</ref> &amp;</type>
+        <definition>AbstractSimplicialComplex &amp; uipc::geometry::AbstractSimplicialComplex::operator=</definition>
+        <argsstring>(AbstractSimplicialComplex &amp;&amp;o)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kindref="compound">AbstractSimplicialComplex</ref> &amp;&amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="52" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a9fa89ce0d596a1518756ad5af9d1a649" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3458344cad0902dff48b1014ff353ba1" kindref="member">VertexAttributes</ref></type>
+        <definition>VertexAttributes uipc::geometry::AbstractSimplicialComplex::vertices</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>vertices</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::vertices</qualifiedname>
+        <briefdescription>
+<para>A wrapper of the vertices and its attributes of the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>VertexAttributeInfo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="59" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4aa6a6618e76671c9a8583ae096854b7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>CVertexAttributes</type>
+        <definition>CVertexAttributes uipc::geometry::AbstractSimplicialComplex::vertices</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>vertices</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::vertices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="60" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a9d49dc38f791b735d0df5dc73b0208e4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a869beaef795dc63357e6289e45ce3357" kindref="member">EdgeAttributes</ref></type>
+        <definition>EdgeAttributes uipc::geometry::AbstractSimplicialComplex::edges</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>edges</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::edges</qualifiedname>
+        <briefdescription>
+<para>A wrapper of the edges and its attributes of the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>EdgeAttributes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="67" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a5c91054fb16eb70af5f87d812cf5e3d9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>CEdgeAttributes</type>
+        <definition>CEdgeAttributes uipc::geometry::AbstractSimplicialComplex::edges</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>edges</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::edges</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="68" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3a6fc18b5822bf4c8770a53465201972" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a14d19c780c538e73e2c336b1afabcaac" kindref="member">TriangleAttributes</ref></type>
+        <definition>TriangleAttributes uipc::geometry::AbstractSimplicialComplex::triangles</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>triangles</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::triangles</qualifiedname>
+        <briefdescription>
+<para>A wrapper of the triangles and its attributes of the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TriangleAttributes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="76" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1aa17b2725496b9b0046dd4eafb34fc3f7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>CTriangleAttributes</type>
+        <definition>CTriangleAttributes uipc::geometry::AbstractSimplicialComplex::triangles</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>triangles</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::triangles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="77" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4bfa7abbb784a3597d8840da6bcccb4d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a35d7d6de42e89e82526a2e82c7cc33a9" kindref="member">TetrahedronAttributes</ref></type>
+        <definition>TetrahedronAttributes uipc::geometry::AbstractSimplicialComplex::tetrahedra</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>tetrahedra</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::tetrahedra</qualifiedname>
+        <briefdescription>
+<para>A wrapper of the tetrahedra and its attributes of the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TetrahedronAttributes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="83" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a08f7731168e23884e026a581d957337c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>CTetrahedronAttributes</type>
+        <definition>CTetrahedronAttributes uipc::geometry::AbstractSimplicialComplex::tetrahedra</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>tetrahedra</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::tetrahedra</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="84" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3ed1bb198eb7024001d5701444c273e5" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>IndexT</type>
+        <definition>IndexT uipc::geometry::AbstractSimplicialComplex::dim</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>dim</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::dim</qualifiedname>
+        <briefdescription>
+<para>Get the dimension of the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the maximum dimension of the simplices in the simplicial complex.</para>
+<para><simplesect kind="return"><para>IndexT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="93" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1aa9f19b39920c1e51aab15abb8f3a5ff7" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::geometry::AbstractSimplicialComplex::get_type</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_type</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::get_type</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1_i_geometry_1a8ebf50e0ad154bbeeff39c83a2deec22">get_type</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="97" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a8be6b2f7c5770a047cb8a963964e30db" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>Json</type>
+        <definition>virtual Json uipc::geometry::AbstractSimplicialComplex::do_to_json</definition>
+        <argsstring>() const override</argsstring>
+        <name>do_to_json</name>
+        <qualifiedname>uipc::geometry::AbstractSimplicialComplex::do_to_json</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1_geometry_1a1c742d5ffed0d0e68019636ada8e4c20">do_to_json</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="98" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents an abstract simplicial complex, containing vertices, edges, triangles, and tetrahedra. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Abstract simplicial complex does not contain any geometric information, such as coordinates of vertices. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::geometry::AbstractSimplicialComplex</label>
+        <link refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::geometry::Geometry</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::geometry::IGeometry</label>
+        <link refid="classuipc_1_1geometry_1_1_i_geometry"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::geometry::AbstractSimplicialComplex</label>
+        <link refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>uipc::geometry::AttributeCollection</label>
+        <link refid="classuipc_1_1geometry_1_1_attribute_collection"/>
+      </node>
+      <node id="2">
+        <label>uipc::geometry::Geometry</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_intances</edgelabel>
+          <edgelabel>m_meta</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::geometry::IGeometry</label>
+        <link refid="classuipc_1_1geometry_1_1_i_geometry"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/geometry/abstract_simplicial_complex.h" line="12" column="1" bodyfile="include/uipc/geometry/abstract_simplicial_complex.h" bodystart="13" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a6038c997b6473b13ce295554761e8b1e" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>AbstractSimplicialComplex</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4dd5925809ebc6b999391332c012bd91" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>AbstractSimplicialComplex</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a063fae8f17aa8a6edc1963bc728a181c" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>AbstractSimplicialComplex</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a7fe466c99370a0ce5d6098b08d96972a" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>as</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1abd621cd374772a67fae8b860ddfca14c" prot="private" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>AttributeFriend</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1adbdc8c34523c7dbf97cd8838d498995a" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>CEdgeAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a56a9bf0d92e69e8040f3f79522c4e35b" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>CInstanceAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a97f4b2c6cfa74bd801a5841499410b71" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>CMetaAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a43558df0494ad801a2c270db2364c95c" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>CTetrahedronAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a97890a24e8500f6367792fa8c96c400a" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>CTriangleAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a5b230e18181109838f6d9c3c35b847b1" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>CVertexAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3ed1bb198eb7024001d5701444c273e5" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>dim</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a7af109c750cb7d3d4a2d75e8d64c14df" prot="protected" virt="virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>do_collect_attribute_collections</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a8be6b2f7c5770a047cb8a963964e30db" prot="protected" virt="virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>do_to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a869beaef795dc63357e6289e45ce3357" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>EdgeAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a9d49dc38f791b735d0df5dc73b0208e4" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>edges</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a5c91054fb16eb70af5f87d812cf5e3d9" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>edges</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a4d6132abf92ffa590f6aae1a296d7bee" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>Geometry</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1ab94ec634bfca89375d9d1c1309459a48" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>Geometry</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1ada716f388fdb0aca20b169e622b05a0f" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>Geometry</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1aa9f19b39920c1e51aab15abb8f3a5ff7" prot="protected" virt="virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>get_type</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a59dcea3b47abbf1f57d190ed34c789b8" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>InstanceAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a2c69a90d531766e530b07283cc658bd7" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>instances</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1afdd40b40772dacce92a29da6c77c6b77" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>instances</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a71b25427b7edba58115691aaa337c270" prot="private" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>m_edge_attributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a66813f55abb63ad18b2c8aa35f29d555" prot="protected" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>m_intances</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1ad5ef8aa6b1da3aa368de8f2baabdb397" prot="protected" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>m_meta</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a78db52340e18b6104accc3dc663f7c38" prot="private" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>m_tetrahedron_attributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a52f14c990960f9006e9123492822ebf4" prot="private" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>m_triangle_attributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4f422fe213b58122c474bdfea57bcfa8" prot="private" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>m_vertex_attributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a63fa2b147f6291979058c8904c9a7e05" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>meta</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a08509c0019bf17e77e90e93b0ae3d65b" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>meta</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1aeff3a87dbc61dd448bb575718d848cc0" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>MetaAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a0bfbf697d755d894ad13743b7b927cfd" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a8ff6225f2f0fadd989737f5f004d0b43" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a423d4829283031ce5187af7dd96e36aa" prot="public" virt="non-virtual" ambiguityscope="uipc::geometry::Geometry::"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1a544f93f60aad58d0e786ad7a20b3e198" prot="public" virt="non-virtual" ambiguityscope="uipc::geometry::Geometry::"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4bfa7abbb784a3597d8840da6bcccb4d" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>tetrahedra</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a08f7731168e23884e026a581d957337c" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>tetrahedra</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a35d7d6de42e89e82526a2e82c7cc33a9" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>TetrahedronAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1a7e33167a2c1322aeed0303fb97e69a04" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a14d19c780c538e73e2c336b1afabcaac" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>TriangleAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3a6fc18b5822bf4c8770a53465201972" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>triangles</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1aa17b2725496b9b0046dd4eafb34fc3f7" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>triangles</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1acffe2791e52c598766df64c010b439d9" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>type</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3458344cad0902dff48b1014ff353ba1" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>VertexAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a9fa89ce0d596a1518756ad5af9d1a649" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>vertices</name></member>
+      <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a4aa6a6618e76671c9a8583ae096854b7" prot="public" virt="non-virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>vertices</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_geometry_1a53538e77e278ee6f3db36261181d21b2" prot="public" virt="virtual"><scope>uipc::geometry::AbstractSimplicialComplex</scope><name>~IGeometry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

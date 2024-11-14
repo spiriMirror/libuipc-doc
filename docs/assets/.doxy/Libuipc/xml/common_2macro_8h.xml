@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="common_2macro_8h" kind="file" language="C++">
+    <compoundname>macro.h</compoundname>
+    <includedby refid="sanity__checker_8h" local="no">include/uipc/sanity_check/sanity_checker.h</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/uipc/common/macro.h</label>
+        <link refid="common_2macro_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/uipc/sanity_check/sanity_checker.h</label>
+        <link refid="sanity__checker_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="common_2macro_8h_1acdc2fb3c333b8db7769ad0edfccd5f4a" prot="public" static="no">
+        <name>UIPC_TO_STRING</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/macro.h" line="3" column="9" bodyfile="include/uipc/common/macro.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_2macro_8h_1a0becbf4b30fc2051ed0f94f281443bc1" prot="public" static="no">
+        <name>UIPC_CONCATE</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>x##y</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/macro.h" line="5" column="9" bodyfile="include/uipc/common/macro.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_2macro_8h_1a01617e255ce2552dadac5c6ec72c7b66" prot="public" static="no">
+        <name>UIPC_NAME_WITH_ID_IMPL</name>
+        <param><defname>x</defname></param>
+        <param><defname>ID</defname></param>
+        <initializer>UIPC_CONCATE(x, ID)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/macro.h" line="8" column="9" bodyfile="include/uipc/common/macro.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="common_2macro_8h_1a637181fd667dba92d6cd9d5d66a6bb41" prot="public" static="no">
+        <name>UIPC_NAME_WITH_ID</name>
+        <param><defname>x</defname></param>
+        <initializer>UIPC_NAME_WITH_ID_IMPL(x, __COUNTER__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/macro.h" line="11" column="9" bodyfile="include/uipc/common/macro.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UIPC_TO_STRING(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UIPC_CONCATE(x,<sp/>y)<sp/>x##y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>indirection<sp/>to<sp/>allow<sp/>the<sp/>__COUNTER__<sp/>macro<sp/>to<sp/>be<sp/>expanded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UIPC_NAME_WITH_ID_IMPL(x,<sp/>ID)<sp/>UIPC_CONCATE(x,<sp/>ID)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>unique<sp/>name<sp/>with<sp/>the<sp/>__COUNTER__<sp/>macro<sp/>appended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UIPC_NAME_WITH_ID(x)<sp/>UIPC_NAME_WITH_ID_IMPL(x,<sp/>__COUNTER__)</highlight></codeline>
+    </programlisting>
+    <location file="include/uipc/common/macro.h"/>
+  </compounddef>
+</doxygen>

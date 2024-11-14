@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_sanity_checker" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>uipc::core::SanityChecker</compoundname>
+    <basecompoundref refid="classuipc_1_1core_1_1_i_sanity_checker" prot="public" virt="non-virtual">uipc::core::ISanityChecker</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_sanity_checker_1a0156bfdd7e1042d7e67ff39fb8e0db07" prot="protected" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+        <definition>Scene&amp; uipc::core::SanityChecker::m_scene</definition>
+        <argsstring></argsstring>
+        <name>m_scene</name>
+        <qualifiedname>uipc::core::SanityChecker::m_scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/sanity_check/sanity_checker.h" line="25" column="11" bodyfile="include/uipc/sanity_check/sanity_checker.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1aaecc4882565c09a6694aa313a5653378" prot="public" static="no" const="no" explicit="yes" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::SanityChecker::SanityChecker</definition>
+        <argsstring>(Scene &amp;s) noexcept</argsstring>
+        <name>SanityChecker</name>
+        <qualifiedname>uipc::core::SanityChecker::SanityChecker</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/sanity_check/sanity_checker.h" line="17" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1ad059ad7476ecb29ef5c5501e96785fe2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::core::SanityChecker::get_id</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>get_id</name>
+        <qualifiedname>uipc::core::SanityChecker::get_id</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1_i_sanity_checker_1acb98dce232226d023ed94742a6b06a0d">get_id</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/sanity_check/sanity_checker.h" line="19" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a91cdfff3c76c5648e527b6682b827777" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>SanityCheckResult</type>
+        <definition>virtual SanityCheckResult uipc::core::SanityChecker::do_check</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>do_check</name>
+        <qualifiedname>uipc::core::SanityChecker::do_check</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1_i_sanity_checker_1a976b7fe045cd89d29b045aee78cc9a0d">do_check</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/sanity_check/sanity_checker.h" line="20" column="31"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a8c7879b1c21b1e978d7b2b8bf0150060" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>SanityCheckResult</type>
+        <definition>virtual SanityCheckResult uipc::core::SanityChecker::do_check</definition>
+        <argsstring>(backend::SceneVisitor &amp;scene) noexcept=0</argsstring>
+        <name>do_check</name>
+        <qualifiedname>uipc::core::SanityChecker::do_check</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1_scene_visitor" kindref="compound">backend::SceneVisitor</ref> &amp;</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/sanity_check/sanity_checker.h" line="23" column="31"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::core::ISanityChecker</label>
+        <link refid="classuipc_1_1core_1_1_i_sanity_checker"/>
+      </node>
+      <node id="1">
+        <label>uipc::core::SanityChecker</label>
+        <link refid="classuipc_1_1core_1_1_sanity_checker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::core::ISanityChecker</label>
+        <link refid="classuipc_1_1core_1_1_i_sanity_checker"/>
+      </node>
+      <node id="1">
+        <label>uipc::core::SanityChecker</label>
+        <link refid="classuipc_1_1core_1_1_sanity_checker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_scene</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::core::Scene</label>
+        <link refid="classuipc_1_1core_1_1_scene"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/sanity_check/sanity_checker.h" line="14" column="1" bodyfile="include/uipc/sanity_check/sanity_checker.h" bodystart="15" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_i_sanity_checker_1aba4bb9f00a1b7fe755011cda62ce0aa7" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>check</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a91cdfff3c76c5648e527b6682b827777" prot="public" virt="virtual"><scope>uipc::core::SanityChecker</scope><name>do_check</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a8c7879b1c21b1e978d7b2b8bf0150060" prot="protected" virt="pure-virtual"><scope>uipc::core::SanityChecker</scope><name>do_check</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1ad059ad7476ecb29ef5c5501e96785fe2" prot="public" virt="pure-virtual"><scope>uipc::core::SanityChecker</scope><name>get_id</name></member>
+      <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a75d05725f947e2853a4d9d486aa73f82" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>id</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a0156bfdd7e1042d7e67ff39fb8e0db07" prot="protected" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>m_scene</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1aaecc4882565c09a6694aa313a5653378" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>SanityChecker</name></member>
+      <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a75fcb119c1d11d87cb46afd16459cb7a" prot="public" virt="virtual"><scope>uipc::core::SanityChecker</scope><name>~ISanityChecker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

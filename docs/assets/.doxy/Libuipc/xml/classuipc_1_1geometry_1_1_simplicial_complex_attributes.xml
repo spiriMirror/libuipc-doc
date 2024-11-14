@@ -1,0 +1,639 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::SimplicialComplexAttributes</compoundname>
+    <templateparamlist>
+      <param>
+        <type>bool</type>
+        <declname>IsConst</declname>
+        <defname>IsConst</defname>
+      </param>
+      <param>
+        <type>IndexT</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a0ee464c5fb068c4ef171a7ae2c588d2f" prot="public" static="no">
+        <type>std::conditional_t&lt; IsConst, const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>, <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &gt;</type>
+        <definition>using uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::AutoAttributeCollection =  std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
+        <argsstring></argsstring>
+        <name>AutoAttributeCollection</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::AutoAttributeCollection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="22" column="5" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa0460ab1ca25d8cb3e6be6a13bb8af5a" prot="public" static="no">
+        <type>std::conditional_t&lt; IsScalar, IndexT, Vector&lt; IndexT, N+1 &gt; &gt;</type>
+        <definition>using uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::TopoValueT =  std::conditional_t&lt;IsScalar, IndexT, Vector&lt;IndexT, N + 1&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>TopoValueT</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::TopoValueT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="25" column="5" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1af8cb79237c847ca6baaa45ff91498795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class fmt::formatter&lt; SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>fmt::formatter&lt; SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::formatter&lt; SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;</qualifiedname>
+        <param>
+          <type>fmt::formatter&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; IsConst, N &gt; &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="159" column="8" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1abd621cd374772a67fae8b860ddfca14c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>class</type>
+        <definition>friend class AttributeFriend</definition>
+        <argsstring></argsstring>
+        <name>AttributeFriend</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::AttributeFriend</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_attribute_friend" kindref="compound">AttributeFriend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="15" column="18" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1adbbc2841ec16785f0189885fc840ebb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>OtherIsConst</declname>
+            <defname>OtherIsConst</defname>
+          </param>
+          <param>
+            <type>IndexT</type>
+            <declname>OtherN</declname>
+            <defname>OtherN</defname>
+          </param>
+        </templateparamlist>
+        <type>class</type>
+        <definition>friend class SimplicialComplexAttributes</definition>
+        <argsstring></argsstring>
+        <name>SimplicialComplexAttributes</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="18" column="18" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa98d109c0090a259301dea6317859f26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class SimplicialComplex</definition>
+        <argsstring></argsstring>
+        <name>SimplicialComplex</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::SimplicialComplex</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="139" column="18" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a6ba3fbde54cf27335e647618e0cffb03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AbstractSimplicialComplex</definition>
+        <argsstring></argsstring>
+        <name>AbstractSimplicialComplex</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::AbstractSimplicialComplex</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kindref="compound">AbstractSimplicialComplex</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="140" column="18" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a16edaf197fc79bd5a3068f3e37ab9281" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::IsScalar</definition>
+        <argsstring></argsstring>
+        <name>IsScalar</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::IsScalar</qualifiedname>
+        <initializer>= (N == 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="20" column="27" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1ac442402f4537f9cf026adb9c897f7f7c" prot="private" static="no" mutable="no">
+        <type>AutoAttributeCollection &amp;</type>
+        <definition>AutoAttributeCollection&amp; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::m_attributes</definition>
+        <argsstring></argsstring>
+        <name>m_attributes</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::m_attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="141" column="29" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1abe684cda07156bd4df2a5a15c65547b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::SimplicialComplexAttributes</definition>
+        <argsstring>(const SimplicialComplexAttributes &amp;o)=default</argsstring>
+        <name>SimplicialComplexAttributes</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a2ad01f31381dc591e065ccd2e433ab4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::SimplicialComplexAttributes</definition>
+        <argsstring>(SimplicialComplexAttributes &amp;&amp;o)=default</argsstring>
+        <name>SimplicialComplexAttributes</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> &amp;&amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aecc36b22291abd398512765378904de7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> &amp;</type>
+        <definition>SimplicialComplexAttributes &amp; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::operator=</definition>
+        <argsstring>(const SimplicialComplexAttributes &amp;o)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> &amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="29" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a7b86d2f27fbd4e1d5ea6e57a1833d0bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> &amp;</type>
+        <definition>SimplicialComplexAttributes &amp; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::operator=</definition>
+        <argsstring>(SimplicialComplexAttributes &amp;&amp;o)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref> &amp;&amp;</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="30" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a2634040fdc866c5c22f585cd48fc825c" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>OtherIsConst</declname>
+            <defname>OtherIsConst</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::SimplicialComplexAttributes</definition>
+        <argsstring>(const SimplicialComplexAttributes&lt; OtherIsConst, N &gt; &amp;o) noexcept</argsstring>
+        <name>SimplicialComplexAttributes</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; OtherIsConst, N &gt; &amp;</type>
+          <declname>o</declname>
+        </param>
+    <requiresclause>(!OtherIsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="33" column="5" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1acc738e0cceb84ff6819aa0a1ec63fccf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt; TopoValueT &gt; &amp;</type>
+        <definition>AttributeSlot&lt; TopoValueT &gt; &amp; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::topo</definition>
+        <argsstring>()</argsstring>
+        <name>topo</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::topo</qualifiedname>
+    <requiresclause>(!IsConst &amp;&amp; N &gt; 0)    </requiresclause>
+        <briefdescription>
+<para>Get the topology of the simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Topo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="44" column="20" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a460ff810dd7b92f27b7bd1b0f50a1d44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt; TopoValueT &gt; &amp;</type>
+        <definition>const AttributeSlot&lt; TopoValueT &gt; &amp; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::topo</definition>
+        <argsstring>() const</argsstring>
+        <name>topo</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::topo</qualifiedname>
+    <requiresclause>(N &gt; 0)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="50" column="26" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1ad7bc2ee9fe0e4916837604f58e80c0d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::resize</definition>
+        <argsstring>(SizeT size)</argsstring>
+        <name>resize</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::resize</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>size</declname>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_attribute_collection_1aa3ed4893b603f9ce9e28aeb6d2bede31" kindref="member">AttributeCollection::resize</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="59" column="10" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a5e73379d11c52c9ff86e6e1238eaa9d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::reserve</definition>
+        <argsstring>(SizeT size)</argsstring>
+        <name>reserve</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::reserve</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>size</declname>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_attribute_collection_1adcdeaa3ec0b024436751528fa2a2c9a7" kindref="member">AttributeCollection::reserve</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="68" column="10" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a4a5b6daae7a7fe1e8d123457fcf23b15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::clear</qualifiedname>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_attribute_collection_1a54e6a0538f4615fe428b238a2f4d5e8e" kindref="member">AttributeCollection::clear</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="76" column="10" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a200a4c1b03ad3c498f37563531e8464f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>SizeT</type>
+        <definition>SizeT uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_attribute_collection_1a69c0a11471d3f335f52b427773cb1216" kindref="member">AttributeCollection::size</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="84" column="12" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a96deddd675fcaca56c78f3dfb512d077" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::destroy</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>destroy</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::destroy</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classuipc_1_1geometry_1_1_attribute_collection_1aa8e469b36fcc1bf03ca58b5310d94d75" kindref="member">AttributeCollection::destroy</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="88" column="10" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1adfe0cf96f4e08b74dee380bec3093f77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::find</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+<para>Find an attribute by type and name, if the attribute does not exist, return nullptr. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="98" column="15" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="98" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a5a0c668355a57a278febb99b034dbf2e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::find</definition>
+        <argsstring>(std::string_view name) const</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Find an attribute by type and name, if the attribute does not exist, return nullptr. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="108" column="15" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa69105b6695abf5e107da6b786b54b35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::create</definition>
+        <argsstring>(std::string_view name, const T &amp;default_value={}, bool allow_destroy=true)</argsstring>
+        <name>create</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::create</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+          <defval>true</defval>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="114" column="14" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="114" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa8a3e013279702c340a68ef6144a55f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>decltype(auto)</type>
+        <definition>decltype(auto) uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::share</definition>
+        <argsstring>(std::string_view name, const AttributeSlot&lt; T &gt; &amp;slot, bool allow_destroy=true)</argsstring>
+        <name>share</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::share</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt; T &gt; &amp;</type>
+          <declname>slot</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+          <defval>true</defval>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="121" column="14" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a8bacbab0d070d55694f0d760d10fe72b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::copy_from</definition>
+        <argsstring>(SimplicialComplexAttributes&lt; true, N &gt; other, const AttributeCopy &amp;copy={}, span&lt; const string &gt; include_names={}, span&lt; const string &gt; exclude_names={})</argsstring>
+        <name>copy_from</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::copy_from</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes</ref>&lt; true, N &gt;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_copy" kindref="compound">AttributeCopy</ref> &amp;</type>
+          <declname>copy</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>span&lt; const string &gt;</type>
+          <declname>include_names</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>span&lt; const string &gt;</type>
+          <declname>exclude_names</declname>
+          <defval>{}</defval>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="127" column="10" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="127" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a6df527a9117ba0796741fc5f9a07c042" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::to_json</definition>
+        <argsstring>() const</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::to_json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="136" column="10" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="136" bodyend="136"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1adbdc14fcbea10f08a50b96fbadd711f9" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt;::SimplicialComplexAttributes</definition>
+        <argsstring>(AutoAttributeCollection &amp;attributes) noexcept</argsstring>
+        <name>SimplicialComplexAttributes</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes</qualifiedname>
+        <param>
+          <type>AutoAttributeCollection &amp;</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="143" column="5" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="143" bodyend="146"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/geometry/simplicial_complex_attributes.h" line="9" column="1" bodyfile="include/uipc/geometry/simplicial_complex_attributes.h" bodystart="10" bodyend="147"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a6ba3fbde54cf27335e647618e0cffb03" prot="private" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>AbstractSimplicialComplex</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1abd621cd374772a67fae8b860ddfca14c" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>AttributeFriend</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a0ee464c5fb068c4ef171a7ae2c588d2f" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>AutoAttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a4a5b6daae7a7fe1e8d123457fcf23b15" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>clear</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a8bacbab0d070d55694f0d760d10fe72b" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>copy_from</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa69105b6695abf5e107da6b786b54b35" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>create</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a96deddd675fcaca56c78f3dfb512d077" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>destroy</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1adfe0cf96f4e08b74dee380bec3093f77" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a5a0c668355a57a278febb99b034dbf2e" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1af8cb79237c847ca6baaa45ff91498795" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>fmt::formatter&lt; SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a16edaf197fc79bd5a3068f3e37ab9281" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>IsScalar</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1ac442402f4537f9cf026adb9c897f7f7c" prot="private" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>m_attributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aecc36b22291abd398512765378904de7" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a7b86d2f27fbd4e1d5ea6e57a1833d0bd" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a5e73379d11c52c9ff86e6e1238eaa9d0" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>reserve</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1ad7bc2ee9fe0e4916837604f58e80c0d6" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>resize</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa8a3e013279702c340a68ef6144a55f7" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>share</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa98d109c0090a259301dea6317859f26" prot="private" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>SimplicialComplex</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1adbbc2841ec16785f0189885fc840ebb3" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>SimplicialComplexAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1abe684cda07156bd4df2a5a15c65547b4" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>SimplicialComplexAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a2ad01f31381dc591e065ccd2e433ab4c" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>SimplicialComplexAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a2634040fdc866c5c22f585cd48fc825c" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>SimplicialComplexAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1adbdc14fcbea10f08a50b96fbadd711f9" prot="private" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>SimplicialComplexAttributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a200a4c1b03ad3c498f37563531e8464f" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>size</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a6df527a9117ba0796741fc5f9a07c042" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1acc738e0cceb84ff6819aa0a1ec63fccf" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>topo</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a460ff810dd7b92f27b7bd1b0f50a1d44" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>topo</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa0460ab1ca25d8cb3e6be6a13bb8af5a" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexAttributes</scope><name>TopoValueT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

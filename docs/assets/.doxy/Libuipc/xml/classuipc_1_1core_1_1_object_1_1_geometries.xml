@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_object_1_1_geometries" kind="class" language="C++" prot="public">
+    <compoundname>uipc::core::Object::Geometries</compoundname>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_1_1_geometries_1a0720b5f434e636e22a3ed34f847eec57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Object</definition>
+        <argsstring></argsstring>
+        <name>Object</name>
+        <qualifiedname>uipc::core::Object::Geometries::Object</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="64" column="22" bodyfile="include/uipc/core/object.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_object_1_1_geometries_1a95ff1749f27a2ce2e15a3aec3ceef8d1" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+        <definition>Object&amp; uipc::core::Object::Geometries::m_object</definition>
+        <argsstring></argsstring>
+        <name>m_object</name>
+        <qualifiedname>uipc::core::Object::Geometries::m_object</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="80" column="16" bodyfile="include/uipc/core/object.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1_1_geometries_1a0e19f17e2548f4572ec7b9797ef116b8" prot="public" static="no" const="no" explicit="no" inline="no" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::derived_from&lt; <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">geometry::Geometry</ref> &gt;</type>
+            <declname>GeometryT</declname>
+            <defname>GeometryT</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classuipc_1_1core_1_1_object_geometry_slots" kindref="compound">ObjectGeometrySlots</ref>&lt; GeometryT &gt;</type>
+        <definition>ObjectGeometrySlots&lt; GeometryT &gt; uipc::core::Object::Geometries::create</definition>
+        <argsstring>(const GeometryT &amp;geometry) &amp;&amp;</argsstring>
+        <name>create</name>
+        <qualifiedname>uipc::core::Object::Geometries::create</qualifiedname>
+        <param>
+          <type>const GeometryT &amp;</type>
+          <declname>geometry</declname>
+        </param>
+    <requiresclause>(!std::is_abstract_v&lt;GeometryT&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="69" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1_1_geometries_1a5e74c1167b4f02886656f134b83ddf3a" prot="public" static="no" const="no" explicit="no" inline="no" refqual="rvalue" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::derived_from&lt; <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">geometry::Geometry</ref> &gt;</type>
+            <declname>GeometryT</declname>
+            <defname>GeometryT</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classuipc_1_1core_1_1_object_geometry_slots" kindref="compound">ObjectGeometrySlots</ref>&lt; GeometryT &gt;</type>
+        <definition>ObjectGeometrySlots&lt; GeometryT &gt; uipc::core::Object::Geometries::create</definition>
+        <argsstring>(const GeometryT &amp;geometry, const GeometryT &amp;rest_geometry) &amp;&amp;</argsstring>
+        <name>create</name>
+        <qualifiedname>uipc::core::Object::Geometries::create</qualifiedname>
+        <param>
+          <type>const GeometryT &amp;</type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>const GeometryT &amp;</type>
+          <declname>rest_geometry</declname>
+        </param>
+    <requiresclause>(!std::is_abstract_v&lt;GeometryT&gt;)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="73" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1_1_geometries_1a2d1c3e161d4d26576526fa60fe5dbeb4" prot="public" static="no" const="no" explicit="no" inline="no" refqual="rvalue" noexcept="yes" virt="non-virtual">
+        <type>span&lt; const IndexT &gt;</type>
+        <definition>span&lt; const IndexT &gt; uipc::core::Object::Geometries::ids</definition>
+        <argsstring>() &amp;&amp;noexcept</argsstring>
+        <name>ids</name>
+        <qualifiedname>uipc::core::Object::Geometries::ids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="76" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1_1_geometries_1ab0a12ffbde91095bfceb45444000a25a" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Object::Geometries::Geometries</definition>
+        <argsstring>(Object &amp;object) noexcept</argsstring>
+        <name>Geometries</name>
+        <qualifiedname>uipc::core::Object::Geometries::Geometries</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="79" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/object.h" line="62" column="5" bodyfile="include/uipc/core/object.h" bodystart="63" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_object_1_1_geometries_1a0e19f17e2548f4572ec7b9797ef116b8" prot="public" virt="non-virtual"><scope>uipc::core::Object::Geometries</scope><name>create</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1_1_geometries_1a5e74c1167b4f02886656f134b83ddf3a" prot="public" virt="non-virtual"><scope>uipc::core::Object::Geometries</scope><name>create</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1_1_geometries_1ab0a12ffbde91095bfceb45444000a25a" prot="private" virt="non-virtual"><scope>uipc::core::Object::Geometries</scope><name>Geometries</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1_1_geometries_1a2d1c3e161d4d26576526fa60fe5dbeb4" prot="public" virt="non-virtual"><scope>uipc::core::Object::Geometries</scope><name>ids</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1_1_geometries_1a95ff1749f27a2ce2e15a3aec3ceef8d1" prot="private" virt="non-virtual"><scope>uipc::core::Object::Geometries</scope><name>m_object</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1_1_geometries_1a0720b5f434e636e22a3ed34f847eec57" prot="private" virt="non-virtual"><scope>uipc::core::Object::Geometries</scope><name>Object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

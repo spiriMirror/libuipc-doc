@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1details_1_1_scoped_timer" kind="class" language="C++" prot="public">
+    <compoundname>uipc::details::ScopedTimer</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1details_1_1_scoped_timer_1a8efd1429f144382084c76fcbcc3742fc" prot="public" static="no">
+        <type>std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;</type>
+        <definition>using uipc::details::ScopedTimer::TimePoint =  std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;</definition>
+        <argsstring></argsstring>
+        <name>TimePoint</name>
+        <qualifiedname>uipc::details::ScopedTimer::TimePoint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="29" column="5" bodyfile="include/uipc/common/timer.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1details_1_1_scoped_timer_1a1ecc2be14a38d041f18d8112ed53315c" prot="public" static="no">
+        <type>std::chrono::duration&lt; double &gt;</type>
+        <definition>using uipc::details::ScopedTimer::Duration =  std::chrono::duration&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>Duration</name>
+        <qualifiedname>uipc::details::ScopedTimer::Duration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="30" column="5" bodyfile="include/uipc/common/timer.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1details_1_1_scoped_timer_1af0581aea48efa103500039d3e1b99c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class uipc::GlobalTimer</definition>
+        <argsstring></argsstring>
+        <name>uipc::GlobalTimer</name>
+        <qualifiedname>uipc::details::ScopedTimer::GlobalTimer</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1_global_timer" kindref="compound">uipc::GlobalTimer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="33" column="18" bodyfile="include/uipc/common/timer.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1details_1_1_scoped_timer_1ab581f17e3d60e0ef7c16d00d1fd55602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class uipc::Timer</definition>
+        <argsstring></argsstring>
+        <name>uipc::Timer</name>
+        <qualifiedname>uipc::details::ScopedTimer::Timer</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1_timer" kindref="compound">uipc::Timer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="34" column="18" bodyfile="include/uipc/common/timer.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1a4cb076f15fae13cd244a82a21ca14ee4" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string uipc::details::ScopedTimer::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>uipc::details::ScopedTimer::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="35" column="24" bodyfile="include/uipc/common/timer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1afbd87fd15e4b654fab988a31d6d6db8a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string uipc::details::ScopedTimer::full_name</definition>
+        <argsstring></argsstring>
+        <name>full_name</name>
+        <qualifiedname>uipc::details::ScopedTimer::full_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="36" column="24" bodyfile="include/uipc/common/timer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1aa78022abbb0256fa07be2287c6470fe9" prot="private" static="no" mutable="no">
+        <type>TimePoint</type>
+        <definition>TimePoint uipc::details::ScopedTimer::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <qualifiedname>uipc::details::ScopedTimer::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="37" column="24" bodyfile="include/uipc/common/timer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1ab02fdaa36f6b913f5f237f7a1fa40e44" prot="private" static="no" mutable="no">
+        <type>TimePoint</type>
+        <definition>TimePoint uipc::details::ScopedTimer::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <qualifiedname>uipc::details::ScopedTimer::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="38" column="24" bodyfile="include/uipc/common/timer.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1a6b47aaa0890e92168ee3014e7abdf1b4" prot="private" static="no" mutable="no">
+        <type>Duration</type>
+        <definition>Duration uipc::details::ScopedTimer::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <qualifiedname>uipc::details::ScopedTimer::duration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="39" column="24" bodyfile="include/uipc/common/timer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1afd66c64b35b2cf0f23517d7697d53c12" prot="private" static="no" mutable="no">
+        <type>list&lt; <ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">ScopedTimer</ref> * &gt;</type>
+        <definition>list&lt;ScopedTimer*&gt; uipc::details::ScopedTimer::children</definition>
+        <argsstring></argsstring>
+        <name>children</name>
+        <qualifiedname>uipc::details::ScopedTimer::children</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="40" column="10" bodyfile="include/uipc/common/timer.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1a5142862224adf52d28753c980c33ebc9" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1details_1_1_scoped_timer" kindref="compound">ScopedTimer</ref> *</type>
+        <definition>ScopedTimer* uipc::details::ScopedTimer::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>uipc::details::ScopedTimer::parent</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="41" column="23" bodyfile="include/uipc/common/timer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1details_1_1_scoped_timer_1ac48445e983862d533e277724d6285baf" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t uipc::details::ScopedTimer::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <qualifiedname>uipc::details::ScopedTimer::depth</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="42" column="24" bodyfile="include/uipc/common/timer.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1details_1_1_scoped_timer_1a2924ba39aa516d1c6e3bda5c03e5b119" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::details::ScopedTimer::ScopedTimer</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>ScopedTimer</name>
+        <qualifiedname>uipc::details::ScopedTimer::ScopedTimer</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="44" column="5" bodyfile="include/uipc/common/timer.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1details_1_1_scoped_timer_1aab4de15cad151147ce0824ba8cb38f8c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::details::ScopedTimer::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <qualifiedname>uipc::details::ScopedTimer::tick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="50" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1details_1_1_scoped_timer_1a94799ef05fecd01b887a1b2768416214" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::details::ScopedTimer::tock</definition>
+        <argsstring>()</argsstring>
+        <name>tock</name>
+        <qualifiedname>uipc::details::ScopedTimer::tock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="51" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1details_1_1_scoped_timer_1a6d890a4f923e692987e3e01421da4e12" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double uipc::details::ScopedTimer::elapsed</definition>
+        <argsstring>() const</argsstring>
+        <name>elapsed</name>
+        <qualifiedname>uipc::details::ScopedTimer::elapsed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="52" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1details_1_1_scoped_timer_1aa314e4af37bc8a078c8b1fbe0c74e077" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::details::ScopedTimer::traverse</definition>
+        <argsstring>(Json &amp;j)</argsstring>
+        <name>traverse</name>
+        <qualifiedname>uipc::details::ScopedTimer::traverse</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="53" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1details_1_1_scoped_timer_1a7ee5e6ac0fc192869624077f4c75b914" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::details::ScopedTimer::setup_full_name</definition>
+        <argsstring>()</argsstring>
+        <name>setup_full_name</name>
+        <qualifiedname>uipc::details::ScopedTimer::setup_full_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="54" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1details_1_1_scoped_timer_1a9ae4c6719f72f3b2d90db2724b95c49e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::details::ScopedTimer::~ScopedTimer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ScopedTimer</name>
+        <qualifiedname>uipc::details::ScopedTimer::~ScopedTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/timer.h" line="57" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/common/timer.h" line="26" column="1" bodyfile="include/uipc/common/timer.h" bodystart="27" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1afd66c64b35b2cf0f23517d7697d53c12" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>children</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1ac48445e983862d533e277724d6285baf" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>depth</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a1ecc2be14a38d041f18d8112ed53315c" prot="public" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>Duration</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a6b47aaa0890e92168ee3014e7abdf1b4" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>duration</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a6d890a4f923e692987e3e01421da4e12" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>elapsed</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1ab02fdaa36f6b913f5f237f7a1fa40e44" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>end</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1afbd87fd15e4b654fab988a31d6d6db8a" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>full_name</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a4cb076f15fae13cd244a82a21ca14ee4" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>name</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a5142862224adf52d28753c980c33ebc9" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>parent</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a2924ba39aa516d1c6e3bda5c03e5b119" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>ScopedTimer</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a7ee5e6ac0fc192869624077f4c75b914" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>setup_full_name</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1aa78022abbb0256fa07be2287c6470fe9" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>start</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1aab4de15cad151147ce0824ba8cb38f8c" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>tick</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a8efd1429f144382084c76fcbcc3742fc" prot="public" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>TimePoint</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a94799ef05fecd01b887a1b2768416214" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>tock</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1aa314e4af37bc8a078c8b1fbe0c74e077" prot="private" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>traverse</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1af0581aea48efa103500039d3e1b99c2d" prot="public" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>uipc::GlobalTimer</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1ab581f17e3d60e0ef7c16d00d1fd55602" prot="public" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>uipc::Timer</name></member>
+      <member refid="classuipc_1_1details_1_1_scoped_timer_1a9ae4c6719f72f3b2d90db2724b95c49e" prot="public" virt="non-virtual"><scope>uipc::details::ScopedTimer</scope><name>~ScopedTimer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
