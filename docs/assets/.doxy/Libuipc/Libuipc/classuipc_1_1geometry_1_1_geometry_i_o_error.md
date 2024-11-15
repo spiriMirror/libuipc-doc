@@ -4,7 +4,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md)
+[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**geometry**](namespaceuipc_1_1geometry.md) **>** [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md)
 
 
 
@@ -145,7 +145,7 @@ See [uipc::Exception](classuipc_1_1_exception.md)
 ### function Exception 
 
 ```C++
-GeometryIOError::Exception (
+uipc::geometry::GeometryIOError::Exception (
     const string & msg
 ) 
 ```

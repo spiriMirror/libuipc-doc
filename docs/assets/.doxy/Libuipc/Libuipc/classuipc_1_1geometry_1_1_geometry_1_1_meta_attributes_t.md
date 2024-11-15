@@ -54,9 +54,10 @@ _A wrapper class for the meta attributes of a geometries._
 
 | Type | Name |
 | ---: | :--- |
-|   | [**MetaAttributesT**](#function-metaattributest-24) (AutoAttributeCollection & attributes) <br> |
-|   | [**MetaAttributesT**](#function-metaattributest-34) (const [**MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) & o) = default<br> |
-|   | [**MetaAttributesT**](#function-metaattributest-44) ([**MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) && o) = default<br> |
+|   | [**MetaAttributesT**](#function-metaattributest-25) (AutoAttributeCollection & attributes) <br> |
+|   | [**MetaAttributesT**](#function-metaattributest-35) (const [**MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md)&lt; OtherIsConst &gt; & o) noexcept<br> |
+|   | [**MetaAttributesT**](#function-metaattributest-45) (const [**MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) & o) = default<br> |
+|   | [**MetaAttributesT**](#function-metaattributest-55) ([**MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) && o) = default<br> |
 |  void | [**copy\_from**](#function-copy_from) ([**MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md)&lt; true &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
 |  decltype(auto) | [**create**](#function-create) (std::string\_view name, const T & init\_value={}) <br>_Create an attribute with the given name._  |
 |  void | [**destroy**](#function-destroy) (std::string\_view name) <br> |
@@ -98,7 +99,7 @@ _A wrapper class for the meta attributes of a geometries._
 
 
 
-### function MetaAttributesT [2/4]
+### function MetaAttributesT [2/5]
 
 ```C++
 inline uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
@@ -113,7 +114,23 @@ inline uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
 
 
 
-### function MetaAttributesT [3/4]
+### function MetaAttributesT [3/5]
+
+```C++
+template<bool OtherIsConst>
+inline uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
+    const MetaAttributesT < OtherIsConst > & o
+) noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function MetaAttributesT [4/5]
 
 ```C++
 uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
@@ -128,7 +145,7 @@ uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
 
 
 
-### function MetaAttributesT [4/4]
+### function MetaAttributesT [5/5]
 
 ```C++
 uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (

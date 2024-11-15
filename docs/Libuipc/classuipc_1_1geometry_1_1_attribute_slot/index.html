@@ -643,7 +643,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -664,7 +664,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -702,32 +723,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1563,7 +1563,7 @@
                   
 
 
-<h1 id="class-uipcgeometryattributeslot">Class uipc::geometry::AttributeSlot</h1>
+<div><h1 id="class-uipcgeometryattributeslot">Class uipc::geometry::AttributeSlot</h1>
 <p><strong>template &lt;typename T&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1geometry/"><strong>geometry</strong></a> <strong>&gt;</strong> <a href="./"><strong>AttributeSlot</strong></a></p>
 <p><em>Template class to represent a geometries attribute slot of type T in a geometries attribute collection.</em> <a href="#detailed-description">More...</a></p>
@@ -1818,8 +1818,8 @@
 
 <h3 id="function-view-22">function view [2/2]</h3>
 <p><em>Get the const attribute values.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">view</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
-</span></code></pre></div></p>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">view</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+</span></code></pre></div>
 <p><strong>Returns:</strong></p>
 <p><code>span&lt;const T&gt;</code> </p>
 <hr>
@@ -1894,17 +1894,17 @@
 <h2 id="friends-documentation">Friends Documentation</h2>
 <h3 id="friend-view-12">friend view [1/2]</h3>
 <p><em>Get the non-const attribute values.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">view</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">AttributeSlot</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">slot</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p><strong>Returns:</strong></p>
 <p><code>span&lt;T&gt;</code> </p>
 <hr>
 
-<hr />
-<p>The documentation for this class was generated from the following file <code>include/uipc/geometry/attribute_slot.h</code></p>
+<hr>
+<p>The documentation for this class was generated from the following file <code>include/uipc/geometry/attribute_slot.h</code></p></div>
 
 
 

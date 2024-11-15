@@ -643,7 +643,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -664,7 +664,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -702,32 +723,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1821,7 +1821,7 @@
                   
 
 
-<h1 id="class-uipcgeometrysimplicialcomplexattributes">Class uipc::geometry::SimplicialComplexAttributes</h1>
+<div><h1 id="class-uipcgeometrysimplicialcomplexattributes">Class uipc::geometry::SimplicialComplexAttributes</h1>
 <p><strong>template &lt;bool IsConst, IndexT N&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1geometry/"><strong>geometry</strong></a> <strong>&gt;</strong> <a href="./"><strong>SimplicialComplexAttributes</strong></a></p>
 <h2 id="public-types">Public Types</h2>
@@ -1943,12 +1943,13 @@
 </table>
 <h2 id="public-types-documentation">Public Types Documentation</h2>
 <h3 id="typedef-autoattributecollection">typedef AutoAttributeCollection</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexAttributes</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IsConst</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">AutoAttributeCollection</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">conditional_t</span><span class="o">&lt;</span><span class="n">IsConst</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="p">,</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexAttributes</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IsConst</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">AutoAttributeCollection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">conditional_t</span><span class="o">&lt;</span><span class="n">IsConst</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="p">,</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="typedef-topovaluet">typedef TopoValueT</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexAttributes</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IsConst</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">TopoValueT</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">conditional_t</span><span class="o">&lt;</span><span class="n">IsScalar</span><span class="p">,</span><span class="w"> </span><span class="n">IndexT</span><span class="p">,</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">IndexT</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexAttributes</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IsConst</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&gt;::</span><span class="n">TopoValueT</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">conditional_t</span><span class="o">&lt;</span><span class="n">IsScalar</span><span class="p">,</span><span class="w"> </span><span class="n">IndexT</span><span class="p">,</span><span class="w"> </span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">IndexT</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;&gt;</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 <h2 id="public-static-attributes-documentation">Public Static Attributes Documentation</h2>
@@ -2082,8 +2083,8 @@
 
 <h3 id="function-topo-12">function topo [1/2]</h3>
 <p><em>Get the topology of the simplicial complex.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">AttributeSlot</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TopoValueT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexAttributes</span><span class="o">::</span><span class="n">topo</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</span></code></pre></div></p>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">AttributeSlot</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TopoValueT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexAttributes</span><span class="o">::</span><span class="n">topo</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</span></code></pre></div>
 <p><strong>Returns:</strong></p>
 <p>Topo </p>
 <hr>
@@ -2116,8 +2117,8 @@
 </span></code></pre></div>
 <hr>
 
-<hr />
-<p>The documentation for this class was generated from the following file <code>include/uipc/geometry/simplicial_complex_attributes.h</code></p>
+<hr>
+<p>The documentation for this class was generated from the following file <code>include/uipc/geometry/simplicial_complex_attributes.h</code></p></div>
 
 
 

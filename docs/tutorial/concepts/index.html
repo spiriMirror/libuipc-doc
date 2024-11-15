@@ -773,7 +773,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -794,7 +794,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -832,32 +853,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1732,9 +1732,9 @@
                   
 
 
-<h1 id="concepts">Concepts</h1>
+<div><h1 id="concepts">Concepts</h1>
 <p>Here is an illustration of almost all the concepts and their relationship in <code>libuipc</code>. It might look a little bit complicated, but don't worry, we will explain it step by step.</p>
-<p><img alt="concepts_img" src="../img/concepts.drawio.svg" /></p>
+<p><img alt="concepts_img" src="../img/concepts.drawio.svg"></p>
 <p>As we can see, there are 3 top-most concepts in <code>libuipc</code>, they are:</p>
 <ul>
 <li><code>Engine</code></li>
@@ -1776,7 +1776,7 @@
 </tr>
 </tbody>
 </table>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The interfaces of <code>Engine</code>, <code>World</code>, <code>Scene</code>, <code>Object</code> are defined in the <code>uipc::core</code> namespace.</p>
@@ -1792,7 +1792,7 @@
 </div>
 <p>Here is a simple example to create a scene:</p>
 <p>First, we declare a scene.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="p">;</span>
@@ -1806,7 +1806,7 @@
 </div>
 <p>Then, we need to create a constitution for the object. Here we use the <code>AffineBodyConstitution</code> as an example, <code>AffineBodyConstitution</code> is a simple constitution that can be used to approximate the behavior of a rigid body.</p>
 <p>We need to create a constitution for the object. Here we use the <code>AffineBodyConstitution</code> as an example, <code>AffineBodyConstitution</code> is a simple constitution that can be used to approximate the behavior of a rigid body.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">constitution_tabular</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">constitution_tabular</span><span class="p">();</span>
@@ -1861,12 +1861,12 @@
 </tr>
 </tbody>
 </table>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">contact_tabular</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">contact_tabular</span><span class="p">();</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">// create a contact element</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">wood_contact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contact_tabular</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;wood&quot;</span><span class="p">);</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">wood_contact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contact_tabular</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">"wood"</span><span class="p">);</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// create self-contact model</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">// friction coefficient is 0.5, restitution coefficient is 1.0 GPa</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">contact_tabular</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">wood_contact</span><span class="p">,</span><span class="w"> </span><span class="n">wood_contact</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="n">_GPa</span><span class="p">);</span>
@@ -1875,7 +1875,7 @@
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">contact_tabular</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">contact_tabular</span><span class="p">()</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># create a contact element</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">wood_contact</span> <span class="o">=</span> <span class="n">contact_tabular</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;wood&quot;</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">wood_contact</span> <span class="o">=</span> <span class="n">contact_tabular</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"wood"</span><span class="p">)</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># create self-contact model</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># friction coefficient is 0.5, restitution coefficient is 1.0 GPa</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">contact_tabular</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">wood_contact</span><span class="p">,</span> <span class="n">wood_contact</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">GPa</span><span class="p">)</span>
@@ -1884,19 +1884,19 @@
 </div>
 </div>
 <p>Now we can create a wooden cube object in the scene.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// read a cube mesh from file</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;cube.msh&quot;</span><span class="p">);</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"cube.msh"</span><span class="p">);</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">// apply the material and the contact model to the cube</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">abd_material</span><span class="p">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">);</span>
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">wood_contact</span><span class="p">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">);</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1">// create an object</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">auto</span><span class="w"> </span><span class="n">wooden_cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;wooden_cube&quot;</span><span class="p">);</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">auto</span><span class="w"> </span><span class="n">wooden_cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">"wooden_cube"</span><span class="p">);</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c1">// create a geometry for the object</span>
 </span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">wooden_cube</span><span class="o">-&gt;</span><span class="n">geometries</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">cube</span><span class="p">);</span>
@@ -1905,14 +1905,14 @@
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># read a cube mesh from file</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">io</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">SimplicialComplexIO</span><span class="p">()</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;cube.msh&quot;</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"cube.msh"</span><span class="p">)</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># apply the material and the contact model to the cube</span>
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">abd_material</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">wood_contact</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># create an object</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">wooden_cube</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;wooden_cube&quot;</span><span class="p">)</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">wooden_cube</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"wooden_cube"</span><span class="p">)</span>
 </span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
 </span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="c1"># create a geometry for the object</span>
 </span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="n">wooden_cube</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
@@ -1945,7 +1945,7 @@
 <p>Contact model is a set of coefficients and models that define the contact behavior of the object. The contact model is a pairwised relationship, which means the contact model between two objects is different from the contact model between another two objects.</p>
 <h3 id="contact-element">Contact Element</h3>
 <p>A contact element is one side of the pairwised contact model, which has no meaning itself. The contact element IDs of two collided objects are used to find the contact model coefficients between them.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">wood_contact</span><span class="p">.</span><span class="n">id</span><span class="p">();</span><span class="w"> </span><span class="c1">// 1</span>
@@ -1961,7 +1961,7 @@
 <p>[Discussion] Do we need to provide a <code>ContactModelUID</code> to identify the contact model? Because in GIPC we have new contact model based on an anisotropic constitutions.</p>
 <h2 id="animator">Animator</h2>
 <p>Animator contains a set of scripted animation that define the behavior of the object, such as the rotation, translation, per-vertex deformation and so on.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">animator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">animator</span><span class="p">();</span>
@@ -1974,7 +1974,7 @@
 </div>
 </div>
 <p>To create an animation, we need following codes:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">C++</label><label for="__tabbed_8_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">C++</label><label for="__tabbed_8_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">// create an animation</span>
@@ -2012,7 +2012,7 @@
 <li>If you use a <code>SoftPositionConstraint</code> on soft bodies, you can set the <code>is_constrained</code> attribute of the <code>vertices</code> to <code>1</code> to enable the constraint on certain vertices, and modify the <code>aim_position</code> attribute of the <code>vertices</code> to control the position of the vertices.</li>
 </ul>
 <p>There will be a lot of other constraints provided in the future, and the way you modify the animated geometries will be different, please refer to the document of those constraints for more details.</p>
-<p>A concrete tutorial of how to create an animation can be found here, <a href="../animation/">Animation Tutorial</a>.</p>
+<p>A concrete tutorial of how to create an animation can be found here, <a href="../animation/">Animation Tutorial</a>.</p></div>
 
 
 

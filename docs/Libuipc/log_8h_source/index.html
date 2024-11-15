@@ -643,7 +643,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -664,7 +664,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -702,32 +723,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1510,7 +1510,7 @@
                   
 
 
-<h1 id="file-logh">File log.h</h1>
+<div><h1 id="file-logh">File log.h</h1>
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_fe04c8fb910be76d82cd33e795163b9b/"><strong>common</strong></a> <strong>&gt;</strong> <a href="../log_8h/"><strong>log.h</strong></a></p>
 <p><a href="../log_8h/">Go to the documentation of this file</a></p>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#pragma once</span>
@@ -1521,7 +1521,7 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">#define UIPC_LOG_WITH_LOCATION(level, ...)                                     \</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cp">    {                                                                          \</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="cp">        ::uipc::string msg = ::fmt::format(__VA_ARGS__);                       \</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cp">        spdlog::log((level), &quot;{} {}({})&quot;, msg, __FILE__, __LINE__);            \</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cp">        spdlog::log((level), "{} {}({})", msg, __FILE__, __LINE__);            \</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="cp">    }</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="cp">#define UIPC_INFO_WITH_LOCATION(...)                                           \</span>
@@ -1540,12 +1540,12 @@
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="cp">        {                                                                                 \</span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="cp">            ::uipc::string msg = ::fmt::format(__VA_ARGS__);                              \</span>
 </span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="cp">            ::uipc::string assert_meg =                                                   \</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="cp">                ::fmt::format(&quot;Assertion &quot; #condition &quot; failed. {}&quot;, msg);                \</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="cp">            spdlog::log(spdlog::level::err, &quot;{} {}({})&quot;, assert_meg, __FILE__, __LINE__); \</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="cp">                ::fmt::format("Assertion " #condition " failed. {}", msg);                \</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="cp">            spdlog::log(spdlog::level::err, "{} {}({})", assert_meg, __FILE__, __LINE__); \</span>
 </span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="cp">            ::std::abort();                                                               \</span>
 </span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="cp">        }                                                                                 \</span>
 </span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="cp">    }</span>
-</span></code></pre></div>
+</span></code></pre></div></div>
 
 
 

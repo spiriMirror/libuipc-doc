@@ -659,7 +659,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -680,7 +680,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -718,32 +739,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1526,12 +1526,12 @@
                   
 
 
-<h1 id="implicit-geometry-uid">Implicit Geometry UID</h1>
+<div><h1 id="implicit-geometry-uid">Implicit Geometry UID</h1>
 <p>The Implicit Geometry UID is a unique identifier for an implicit geometry known by <code>libuipc</code>, which is a 64-bit unsigned integer.</p>
 <p>The official implicit geometry UID has a range of <span class="arithmatex">\([0, 2^{32}-1]\)</span>. The range <span class="arithmatex">\([2^{32}, 2^{64}-1]\)</span> is reserved for user-defined implicit geometries.</p>
 <p>Every official implicit geometry will be documented in this specification. A user-defined implicit geometry can apply for an official implicit geometry UID by submitting a pull request to the <code>libuipc</code> repository, After code review, the implicit geometry will be added to the official implicit geometry list.</p>
 <p>The related documentation of the implicit geometry will be added to the <a href="../implicit_geometries/">Implicit Geometries/</a> directory.</p>
-<p>When creating a implicit geometry, the <code>implicit_geometry_uid</code> attribute of the <code>meta</code> attribute of the geometry will be set to the implicit geometry UID. The backend will use this UID to determine the implicit geometry of the geometry, and try to find the related coefficients from the attributes of the geometry (in <code>meta</code> or <code>instances</code>).</p>
+<p>When creating a implicit geometry, the <code>implicit_geometry_uid</code> attribute of the <code>meta</code> attribute of the geometry will be set to the implicit geometry UID. The backend will use this UID to determine the implicit geometry of the geometry, and try to find the related coefficients from the attributes of the geometry (in <code>meta</code> or <code>instances</code>).</p></div>
 
 
 

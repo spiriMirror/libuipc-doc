@@ -707,7 +707,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -728,7 +728,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -766,32 +787,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1600,9 +1600,9 @@
                   
 
 
-<h1 id="animation">Animation</h1>
+<div><h1 id="animation">Animation</h1>
 <p>Prequsites: <a href="../geometry/">Geometry</a>, <a href="../concepts/">Concepts</a></p>
-<hr />
+<hr>
 <p>Simulation without interaction is boring! So comes the animation!</p>
 <p><code>Animation</code> in <code>libuipc</code> gives such a way to specify the translation, rotation, deformation and even anything of a geometry over time. </p>
 <p>An <code>Animation</code> can be a pre-designed offline animation, or a real-time input from user interaction.</p>
@@ -1611,25 +1611,25 @@
 <p>In this section, we will animate a cube rotating around its own x-axis, and so it can walk on the ground with the help of friction force.</p>
 <p>Here we assume you have already defined the <code>engine</code>, <code>world</code>, <code>scene</code> and loaded the cube geometry with the name <code>cube_mesh</code>. Of course, don't forget <code>label_surface</code> and <code>label_triangle_orient</code> for the cube mesh, which is necessary to tell <code>libuipc</code> where the surface is and to export correct oriented surface mesh.</p>
 <p>Though friction is default enabled in <code>libuipc</code>, it's good to know how to turn on/off the friction explicitly.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scene</span><span class="o">::</span><span class="n">default_config</span><span class="p">();</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">config</span><span class="p">[</span><span class="err">&#39;</span><span class="n">contact</span><span class="err">&#39;</span><span class="p">][</span><span class="err">&#39;</span><span class="n">friction</span><span class="err">&#39;</span><span class="p">][</span><span class="err">&#39;</span><span class="n">enable</span><span class="err">&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">config</span><span class="p">[</span><span class="err">'</span><span class="n">contact</span><span class="err">'</span><span class="p">][</span><span class="err">'</span><span class="n">friction</span><span class="err">'</span><span class="p">][</span><span class="err">'</span><span class="n">enable</span><span class="err">'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">...</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">auto</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">config</span> <span class="o">=</span> <span class="n">Scene</span><span class="o">.</span><span class="n">default_config</span><span class="p">()</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">config</span><span class="p">[</span><span class="s1">&#39;contact&#39;</span><span class="p">][</span><span class="s1">&#39;friction&#39;</span><span class="p">][</span><span class="s1">&#39;enable&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">config</span><span class="p">[</span><span class="s1">'contact'</span><span class="p">][</span><span class="s1">'friction'</span><span class="p">][</span><span class="s1">'enable'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Then we need to define the constitution and constraint for the cube.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">...</span>
@@ -1638,7 +1638,7 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">RotatingMotor</span><span class="w">          </span><span class="n">rm</span><span class="p">;</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">// create object</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;cube&quot;</span><span class="p">);</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">"cube"</span><span class="p">);</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">{</span>
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="c1">// apply the constitution and constraint</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">abd</span><span class="p">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube_mesh</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="n">_MPa</span><span class="p">);</span>
@@ -1660,7 +1660,7 @@
 </span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">    </span><span class="n">cube_object</span><span class="o">-&gt;</span><span class="n">geometries</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">cube_mesh</span><span class="p">);</span>
 </span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="p">}</span>
 </span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="k">auto</span><span class="w"> </span><span class="n">ground_obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;ground&quot;</span><span class="p">);</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="k">auto</span><span class="w"> </span><span class="n">ground_obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">"ground"</span><span class="p">);</span>
 </span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="p">{</span>
 </span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ground</span><span class="p">();</span>
 </span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="n">ground_obj</span><span class="o">-&gt;</span><span class="n">geometries</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">g</span><span class="p">);</span>
@@ -1674,7 +1674,7 @@
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">rm</span> <span class="o">=</span> <span class="n">RotatingMotor</span><span class="p">()</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># create object</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">cube_object</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;cube&quot;</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">cube_object</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"cube"</span><span class="p">)</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># apply the constitution and constraint</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">abd</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube_mesh</span><span class="p">,</span> <span class="mf">10.0</span> <span class="o">*</span> <span class="n">MPa</span><span class="p">)</span>
@@ -1693,7 +1693,7 @@
 </span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
 </span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="n">cube_object</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">cube_mesh</span><span class="p">)</span>
 </span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="n">ground_obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;ground&quot;</span><span class="p">)</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="n">ground_obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"ground"</span><span class="p">)</span>
 </span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="n">g</span> <span class="o">=</span> <span class="n">ground</span><span class="p">()</span>
 </span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="n">ground_obj</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
 </span></code></pre></div>
@@ -1706,7 +1706,7 @@
 <p>Finally, we create the ground.</p>
 <p>Ok, it's time to animate the cube!</p>
 <p><code>Animation</code> in <code>libuipc</code> is logically a script that define the behavior of the geometry over time. So it's intuitive to give a function to the <code>Animation</code> object, which will be called every frame.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">animator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">animator</span><span class="p">();</span>
@@ -1754,38 +1754,38 @@
 <p>When apply a constraint to a geometry, a builtin attribute called <code>is_constrained</code> will be created on the geometry, which tells some the element is controlled by the constraint. In this example, the element is one instance of the cube mesh (or rigorously, the <code>transform</code> of the cube mesh). We set the <code>is_constrained</code> of the first instance (the only one we have) to 1 to tell the <code>RotatingMotor</code> to control the cube.</p>
 <p>Finally, we call <code>RotatingMotor::animate()</code> to update the geometry according to axis and speed we set before. Note that, the axis and speed can be changed in the animation function, so the cube can rotate around different axis or with different speed at different time. By setting the <code>motor_rot_axis</code> and <code>motor_rot_vel</code> attributes of the <code>instance</code>.</p>
 <p>Now, run the simulation, you will see the cube rotating around its x-axis.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">world</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">SceneIO</span><span class="w"> </span><span class="n">sio</span><span class="p">{</span><span class="n">scene</span><span class="p">};</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;scene_surface{}.obj&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">"scene_surface{}.obj"</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">while</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">360</span><span class="p">)</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">{</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">world</span><span class="p">.</span><span class="n">advance</span><span class="p">();</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">world</span><span class="p">.</span><span class="n">retrieve</span><span class="p">();</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;scene_surface{}.obj&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">"scene_surface{}.obj"</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">world</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">sio</span> <span class="o">=</span> <span class="n">SceneIO</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj&quot;</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">"scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj"</span><span class="p">)</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">while</span> <span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">360</span><span class="p">:</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">world</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj&quot;</span><span class="p">)</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">"scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj"</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<p><img alt="Walking Cube" src="../img/walking_cube.png" /></p>
+<p><img alt="Walking Cube" src="../img/walking_cube.png"></p>
 <p>[TODO]: To use rendered results.</p>
 <p><code>Libuipc</code> also provide <code>LinearMotor</code> for you to control the translation of an affine body by specifying the translation axis and speed.</p>
 <p>When you ask the name of them:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">RotatingMotor</span><span class="w"> </span><span class="n">rm</span><span class="p">;</span><span class="w"> </span><span class="n">rm</span><span class="p">.</span><span class="n">name</span><span class="p">();</span><span class="w"> </span><span class="c1">// SoftTransformConstraint</span>
@@ -1806,12 +1806,12 @@
 <h2 id="periodically-pressed-tetrahedron">Periodically Pressed Tetrahedron</h2>
 <p>Say, you want to animate some part of a soft body and leave the other part free (obeying the physics). <code>Libuipc</code> provides a <code>SoftPositionConstraint</code> for this purpose. The usage of <code>SoftPositionConstraint</code> is similar to the constratints we have seen before, the only difference is that <code>SoftPositionConstraint</code> applying to a soft body's vertex position rather than an affine body's instance transformation.</p>
 <p>Here we assume you have already defined the <code>engine</code>, <code>world</code>, <code>scene</code>. In this example, we use the <code>StableNeoHookean</code> constitution to simulate the soft body.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">StableNeoHookean</span><span class="w"> </span><span class="n">snh</span><span class="p">;</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">SoftPositionConstraint</span><span class="w"> </span><span class="n">spc</span><span class="p">;</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">tet_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;tet_object&quot;</span><span class="p">);</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">tet_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">"tet_object"</span><span class="p">);</span>
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">{</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">Vector3</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">                          </span><span class="n">Vector3</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
@@ -1825,7 +1825,7 @@
 </span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="n">tet_object</span><span class="o">-&gt;</span><span class="n">geometries</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">tet</span><span class="p">);</span>
 </span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="p">}</span>
 </span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="k">auto</span><span class="w"> </span><span class="n">ground_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;ground&quot;</span><span class="p">);</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="k">auto</span><span class="w"> </span><span class="n">ground_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">"ground"</span><span class="p">);</span>
 </span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">{</span>
 </span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ground</span><span class="p">(</span><span class="mf">-0.5</span><span class="p">);</span>
 </span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="n">ground_object</span><span class="o">-&gt;</span><span class="n">geometries</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">g</span><span class="p">);</span>
@@ -1835,7 +1835,7 @@
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">snh</span> <span class="o">=</span> <span class="n">StableNeoHookean</span><span class="p">()</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">spc</span> <span class="o">=</span> <span class="n">SoftPositionConstraint</span><span class="p">()</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">tet_object</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;tet_object&quot;</span><span class="p">)</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">tet_object</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"tet_object"</span><span class="p">)</span>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">Vs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>      <span class="n">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>      <span class="n">Vector3</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span>
@@ -1847,7 +1847,7 @@
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="n">spc</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">tet</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># constraint strength ratio</span>
 </span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="n">tet_object</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">tet</span><span class="p">)</span>
 </span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
-</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">ground_object</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;ground&quot;</span><span class="p">)</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="n">ground_object</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"ground"</span><span class="p">)</span>
 </span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="n">g</span> <span class="o">=</span> <span class="n">ground</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
 </span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="n">ground_object</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
 </span></code></pre></div>
@@ -1855,7 +1855,7 @@
 </div>
 </div>
 <p>Nothing special here, we just create a tetrahedron and apply the <code>StableNeoHookean</code> constitution and <code>SoftPositionConstraint</code> to it as we did before, the ground height is set to -0.5. Now we try to animate the first vertex of the tetrahedron with a <code>sin</code> function.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">animator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">animator</span><span class="p">();</span>
@@ -1912,8 +1912,8 @@
 </div>
 </div>
 <p>Something new here is the <code>info.rest_geo_slots()</code>, which returns the slots of the rest geometry (initial geometry) in the object. We use the rest geometry to get the initial position of the vertex we want to animate. With the initial position and a periodic function, we can setup the <code>aim_position</code> of the vertex to animate it.</p>
-<p><img alt="periodically_pressed_tet" src="../img/periodically_pressed_tet.png" /></p>
-<p>[TODO]: To use rendered results.</p>
+<p><img alt="periodically_pressed_tet" src="../img/periodically_pressed_tet.png"></p>
+<p>[TODO]: To use rendered results.</p></div>
 
 
 

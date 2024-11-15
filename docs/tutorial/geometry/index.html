@@ -767,7 +767,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -788,7 +788,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -826,32 +847,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1720,7 +1720,7 @@
                   
 
 
-<h1 id="geometry">Geometry</h1>
+<div><h1 id="geometry">Geometry</h1>
 <p>In simulation programs, geometry is a fundamental concept to represent the shape of the object, or rigrously, the domain of the simulation. </p>
 <p>There are several kinds of geometry, such as point cloud, line mesh, triangle mesh, quad mesh, polygon mesh, tetrahedral mesh, hexahedral mesh and so on, these geometries are called explicit geometries, because we use a discrete set of vertices and primitives to represent the  There are also some implicit geometries, such as the Signed Distance Field (SDF), which is a scalar field that represents the distance from the point to the surface of the  It's inrealistic and inpractical to represent all the geometries in a single way, so we separate the geometries into several categories, and provide proper interfaces to access the relative information of the </p>
 <p>They are:</p>
@@ -1730,7 +1730,7 @@
 <li><a href="#implicit-geometry">Implicit Geometry</a>: A presentation of the implicit geometries, such as the Signed Distance Field (SDF).</li>
 </ul>
 <p>In this tutorial, we fill focus on the simplicial complex, which is the most common geometry in the simulation programs. And describe the geometry interface in the <code>libuipc</code> library. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>All geometry interfaces are defined in the <code>uipc/geometry</code> namespace.</p>
@@ -1784,7 +1784,7 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 <p>[TODO: add some rope figure here]</p>
 <p>The point cloud can be used to describe some 0D-codimensional objects, like a bunch of particles.</p>
 <p>[TODO: add some particle figure here]</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The simplest way to create a simplicial complex is to use the <code>tetmesh()</code>, <code>trimesh()</code>, <code>linemesh()</code>, and <code>pointcloud()</code> functions, which are shown below:</p>
@@ -1800,9 +1800,9 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 <p>Or, you want to read the meshes from a file, you can use <code>SimplicialComplexIO</code>.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">// .msh file</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">tetmesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;bunny.msh&quot;</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">tetmesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"bunny.msh"</span><span class="p">);</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// .obj file</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">auto</span><span class="w"> </span><span class="n">trimesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;cloth.obj&quot;</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">auto</span><span class="w"> </span><span class="n">trimesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"cloth.obj"</span><span class="p">);</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">// ... any other supported file format</span>
 </span></code></pre></div>
 </div>
@@ -1820,9 +1820,9 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 <p>Or, you want to read the meshes from a file, you can use <code>SimplicialComplexIO</code>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">io</span> <span class="o">=</span> <span class="n">SimplicialComplexIO</span><span class="p">()</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># .msh file</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">tetmesh</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;bunny.msh&#39;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">tetmesh</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">'bunny.msh'</span><span class="p">)</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># .obj file</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">trimesh</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;cloth.obj&#39;</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">trimesh</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">'cloth.obj'</span><span class="p">)</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># ... any other supported file format</span>
 </span></code></pre></div>
 </div>
@@ -1832,22 +1832,22 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 <p>In <code>libuipc</code>, the data access and memory ownership of the geometry are separated. You can notice such a design almost everywhere in the library.</p>
 <p>To access the geometry information, you need to create a <code>view</code> of the geometry, which is a lightweight object indicating the way we access the geometry, typically the read-only or read-write. </p>
 <p>For example, now we have a cube.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;cube.msh&quot;</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"cube.msh"</span><span class="p">);</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">io</span> <span class="o">=</span> <span class="n">SimplicialComplexIO</span><span class="p">()</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;cube.msh&#39;</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">'cube.msh'</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
 <p>To access the positions of the cube, we need to find the attribute of the positions.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The the atrribute <code>position</code> is of type <code>Vector3</code>.</p>
@@ -1865,22 +1865,22 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 </div>
 </div>
 <p>Note that, till now, we just get a handle of the attribute <code>position</code>. To access the data, we need to create a view of the attribute.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="o">-&gt;</span><span class="n">view</span><span class="p">();</span>
+<p></p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="o">-&gt;</span><span class="n">view</span><span class="p">();</span>
 </span></code></pre></div>
-The view of the <code>position</code> is a <code>span&lt;const Vector3&gt;</code> (we explicitly define it here, but you can use <code>auto</code>), which is a const view of the position data. You can not modify the data through the view.</p>
+The view of the <code>position</code> is a <code>span&lt;const Vector3&gt;</code> (we explicitly define it here, but you can use <code>auto</code>), which is a const view of the position data. You can not modify the data through the view.
 </div>
 <div class="tabbed-block">
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">view</span> <span class="o">=</span> <span class="n">pos</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<p></p><div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">view</span> <span class="o">=</span> <span class="n">pos</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
 </span></code></pre></div>
-The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is a const view of the position data. You can not modify the data through the view.</p>
+The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is a const view of the position data. You can not modify the data through the view.
 </div>
 </div>
 </div>
 <p>If you want to modify the position data, you can create a non-const view of the attribute.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">non_const_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">view</span><span class="p">(</span><span class="o">*</span><span class="n">pos</span><span class="p">);</span>
@@ -1894,7 +1894,7 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 </div>
 <p>You find that, it need more effort to create a non-const view of the attribute (calling the global function <code>view</code>) than creating a const view(calling the member function <code>view</code> of the attribute). This is because we want to make sure that the user is aware of the potential clone of the geometry when they modify the data. The non-const view assumes that you may modify the data, which may trigger a clone of the geometry according to <code>libuipc</code>'s <a href="#clone-on-write">Clone on Write</a> strategy.</p>
 <p>You may want to access the tetrahedra topology of the cube, which is similar to the positions.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">TA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cube</span><span class="p">.</span><span class="n">tetrahedra</span><span class="p">();</span>
@@ -1912,28 +1912,28 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 </div>
 <p>But because the topology is already there, we don't need to <code>find</code> anything. Also, if you just want to read the topology, it's better to use the const view.</p>
 <p>To create a new attribute, you can call the <code>create</code> function, with the attribute name and the default value.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">C++</label><label for="__tabbed_8_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">C++</label><label for="__tabbed_8_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VA</span><span class="p">.</span><span class="n">create</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="o">::</span><span class="n">Zero</span><span class="p">());</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VA</span><span class="p">.</span><span class="n">create</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"velocity"</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="o">::</span><span class="n">Zero</span><span class="p">());</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">vel</span> <span class="o">=</span> <span class="n">VA</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;velocity&quot;</span><span class="p">,</span> <span class="n">Vector3</span><span class="o">.</span><span class="n">Zero</span><span class="p">())</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">vel</span> <span class="o">=</span> <span class="n">VA</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"velocity"</span><span class="p">,</span> <span class="n">Vector3</span><span class="o">.</span><span class="n">Zero</span><span class="p">())</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Then we will have a new attribute named "velocity" with the default value, the size of the attribute is the same as the number of vertices.</p>
 <p>To remove an attribute, you can call the <code>destroy</code> function with the attribute name.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">C++</label><label for="__tabbed_9_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">C++</label><label for="__tabbed_9_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">VA</span><span class="p">.</span><span class="n">destroy</span><span class="p">(</span><span class="s">&quot;velocity&quot;</span><span class="p">);</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">VA</span><span class="p">.</span><span class="n">destroy</span><span class="p">(</span><span class="s">"velocity"</span><span class="p">);</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">VA</span><span class="o">.</span><span class="n">destroy</span><span class="p">(</span><span class="s2">&quot;velocity&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">VA</span><span class="o">.</span><span class="n">destroy</span><span class="p">(</span><span class="s2">"velocity"</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -1943,7 +1943,7 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 <p>Accessing the removed attribute slot will cause the program to crash.</p>
 </div>
 <p>If you are not sure whether the attribute slot is valid, you should check it by:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">C++</label><label for="__tabbed_10_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked id="__tabbed_10_1" name="__tabbed_10" type="radio"><input id="__tabbed_10_2" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">C++</label><label for="__tabbed_10_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">if</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
@@ -1963,7 +1963,7 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 <h2 id="clone-on-write">Clone on Write</h2>
 <p>Geometries in <code>libuipc</code> are implemented with the <code>Clone on Write</code> strategy. Any inital copy of a geometry is a shallow copy, which means, the data of the geometry is shared. Any creation of a non-const view of the geometry will trigger a minimal clone of the modified part of the </p>
 <p>A simple example is shown below:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">C++</label><label for="__tabbed_11_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked id="__tabbed_11_1" name="__tabbed_11" type="radio"><input id="__tabbed_11_2" name="__tabbed_11" type="radio"><div class="tabbed-labels"><label for="__tabbed_11_1">C++</label><label for="__tabbed_11_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tetmesh</span><span class="p">(</span><span class="n">Vs</span><span class="p">,</span><span class="n">Ts</span><span class="p">);</span>
@@ -1980,7 +1980,7 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 <p>Here, <code>bar</code> is just a <strong>special</strong> shallow copy of the <code>foo</code>.
 No matter <code>bar</code> or <code>foo</code> is modified, the related internal part of the data will be cloned.</p>
 <p>For example, we create a non-const view of the positions of the mesh <code>bar</code>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">C++</label><label for="__tabbed_12_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked id="__tabbed_12_1" name="__tabbed_12" type="radio"><input id="__tabbed_12_2" name="__tabbed_12" type="radio"><div class="tabbed-labels"><label for="__tabbed_12_1">C++</label><label for="__tabbed_12_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">VA</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">bar</span><span class="p">.</span><span class="n">vertices</span><span class="p">();</span>
@@ -2022,18 +2022,18 @@ No matter <code>bar</code> or <code>foo</code> is modified, the related internal
 <h2 id="instancing-and-meta-information">Instancing and Meta Information</h2>
 <p>In the field of rendering, <a href="https://learnopengl.com/Advanced-OpenGL/Instancing">instancing</a> is a common technique to render multiple instances of the same geometry with different transformations, which is very efficient to desribe the scene with many similar objects.</p>
 <p>To get the instance information of the geometry, you can call the <code>instances()</code> function of the geometry, almost the same as the <code>vertices()</code> and <code>tetrahedra()</code> functions.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">C++</label><label for="__tabbed_13_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked id="__tabbed_13_1" name="__tabbed_13" type="radio"><input id="__tabbed_13_2" name="__tabbed_13" type="radio"><div class="tabbed-labels"><label for="__tabbed_13_1">C++</label><label for="__tabbed_13_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;cube.msh&quot;</span><span class="p">);</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"cube.msh"</span><span class="p">);</span>
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">Is</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cube</span><span class="p">.</span><span class="n">instances</span><span class="p">();</span>
 </span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="n">Is</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// 1</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">io</span> <span class="o">=</span> <span class="n">SimplicialComplexIO</span><span class="p">()</span>
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;cube.msh&quot;</span><span class="p">)</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"cube.msh"</span><span class="p">)</span>
 </span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">Is</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">instances</span><span class="p">()</span>
 </span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="n">Is</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="c1"># 1</span>
 </span></code></pre></div>
@@ -2042,7 +2042,7 @@ No matter <code>bar</code> or <code>foo</code> is modified, the related internal
 </div>
 <p>A geometry is initally a single instance, so the size of <code>Is</code> is excatly 1.</p>
 <p>To create instances, you just resize it.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">C++</label><label for="__tabbed_14_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked id="__tabbed_14_1" name="__tabbed_14" type="radio"><input id="__tabbed_14_2" name="__tabbed_14" type="radio"><div class="tabbed-labels"><label for="__tabbed_14_1">C++</label><label for="__tabbed_14_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">Is</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
@@ -2058,7 +2058,7 @@ No matter <code>bar</code> or <code>foo</code> is modified, the related internal
 </div>
 <p>Now, you have 5 instances of the cube.</p>
 <p>You may ask for the transformation of the instances, the answer is the same as the positions and the tetrahedra.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">C++</label><label for="__tabbed_15_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked id="__tabbed_15_1" name="__tabbed_15" type="radio"><input id="__tabbed_15_2" name="__tabbed_15" type="radio"><div class="tabbed-labels"><label for="__tabbed_15_1">C++</label><label for="__tabbed_15_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">trans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Is</span><span class="p">.</span><span class="n">find</span><span class="o">&lt;</span><span class="n">Matrix4x4</span><span class="o">&gt;</span><span class="p">(</span><span class="n">builtin</span><span class="o">::</span><span class="n">transform</span><span class="p">);</span>
@@ -2075,7 +2075,7 @@ No matter <code>bar</code> or <code>foo</code> is modified, the related internal
 </div>
 </div>
 <p>There are some short-cut you can take to access some common attributes of the geometry, such as the positions, the transforms, etc.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">C++</label><label for="__tabbed_16_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked id="__tabbed_16_1" name="__tabbed_16" type="radio"><input id="__tabbed_16_2" name="__tabbed_16" type="radio"><div class="tabbed-labels"><label for="__tabbed_16_1">C++</label><label for="__tabbed_16_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">short_cut_trans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Is</span><span class="p">.</span><span class="n">transforms</span><span class="p">();</span>
@@ -2091,21 +2091,21 @@ No matter <code>bar</code> or <code>foo</code> is modified, the related internal
 </div>
 <p>The naming convention of the short-cut is the plural form of the attribute name, which is more readable and more intuitive.</p>
 <p>Destroying the short-cut is not allowed, if you do so, <code>libuipc</code> will throw an exception.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">C++</label><label for="__tabbed_17_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked id="__tabbed_17_1" name="__tabbed_17" type="radio"><input id="__tabbed_17_2" name="__tabbed_17" type="radio"><div class="tabbed-labels"><label for="__tabbed_17_1">C++</label><label for="__tabbed_17_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">Is</span><span class="p">.</span><span class="n">destroy</span><span class="p">(</span><span class="s">&quot;transform&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// throw AttributeDontAllowDestroy</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">Is</span><span class="p">.</span><span class="n">destroy</span><span class="p">(</span><span class="s">"transform"</span><span class="p">);</span><span class="w"> </span><span class="c1">// throw AttributeDontAllowDestroy</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">Is</span><span class="o">.</span><span class="n">destroy</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">)</span> <span class="c1"># raise AttributeDontAllowDestroy</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">Is</span><span class="o">.</span><span class="n">destroy</span><span class="p">(</span><span class="s2">"transform"</span><span class="p">)</span> <span class="c1"># raise AttributeDontAllowDestroy</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
 <p>Meta is used to store the root information of the geometry with a fixed size of 1. For example, constituitive model and contact model information will be stored in the meta information according to the specification of the <code>libuipc</code>. Of course, you can create and access any meta information you need.</p>
 <p>To get the meta information of the geometry, you call the <code>meta()</code> function of the </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">C++</label><label for="__tabbed_18_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked id="__tabbed_18_1" name="__tabbed_18" type="radio"><input id="__tabbed_18_2" name="__tabbed_18" type="radio"><div class="tabbed-labels"><label for="__tabbed_18_1">C++</label><label for="__tabbed_18_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">meta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cube</span><span class="p">.</span><span class="n">meta</span><span class="p">();</span>
@@ -2120,14 +2120,14 @@ No matter <code>bar</code> or <code>foo</code> is modified, the related internal
 <p>The way to access the meta information is the same as all the other attributes.
 The only difference is that the meta information always has a size of 1, you can create attributes, but you can not resize it. The the meta describes the root information of the </p>
 <p>For example, you can create a meta attribute to store the name of the </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">C++</label><label for="__tabbed_19_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked id="__tabbed_19_1" name="__tabbed_19" type="radio"><input id="__tabbed_19_2" name="__tabbed_19" type="radio"><div class="tabbed-labels"><label for="__tabbed_19_1">C++</label><label for="__tabbed_19_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">meta</span><span class="p">.</span><span class="n">create</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;some cubes&quot;</span><span class="p">);</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">meta</span><span class="p">.</span><span class="n">create</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span><span class="w"> </span><span class="s">"some cubes"</span><span class="p">);</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">name</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;some cubes&quot;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">name</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="s2">"some cubes"</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -2135,28 +2135,28 @@ The only difference is that the meta information always has a size of 1, you can
 <h3 id="spreadsheets">Spreadsheets</h3>
 <p><code>Libuipc</code> provides a handy way to visualize the geometry information, which is called <code>spreadsheets</code> (the same idea as the <code>Geometry Spreadsheet</code> in the <code>Houdini</code> software).</p>
 <p>All the attributes of the geometry can be described as serveral tables, which are called <code>spreadsheets</code>. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">C++</label><label for="__tabbed_20_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked id="__tabbed_20_1" name="__tabbed_20" type="radio"><input id="__tabbed_20_2" name="__tabbed_20" type="radio"><div class="tabbed-labels"><label for="__tabbed_20_1">C++</label><label for="__tabbed_20_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>To use the <code>spreadsheets</code>, you need to include the header file <code>#include &lt;uipc/geometry/utils/spreadsheet_io.h&gt;</code>.</p>
-<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
-</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;cube.msh&quot;</span><span class="p">);</span>
+<p></p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"cube.msh"</span><span class="p">);</span>
 </span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="n">SpreadSheetIO</span><span class="w"> </span><span class="n">sio</span><span class="p">;</span>
 </span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="c1">// dump to csv</span>
-</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_csv</span><span class="p">(</span><span class="s">&quot;spreadsheet&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_csv</span><span class="p">(</span><span class="s">"spreadsheet"</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
 </span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a><span class="c1">// dump to json</span>
-</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_json</span><span class="p">(</span><span class="s">&quot;spreadsheet&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
+</span><span id="__span-42-7"><a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_json</span><span class="p">(</span><span class="s">"spreadsheet"</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
 </span></code></pre></div>
-See also the <a href="../../Libuipc/classuipc_1_1geometry_1_1_spread_sheet_i_o/">SimplicialComplexIO</a>.</p>
+See also the <a href="../../Libuipc/classuipc_1_1geometry_1_1_spread_sheet_i_o/">SimplicialComplexIO</a>.
 </div>
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">io</span> <span class="o">=</span> <span class="n">SimplicialComplexIO</span><span class="p">()</span>
-</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="n">mesh</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;cube.msh&quot;</span><span class="p">)</span>
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="n">mesh</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"cube.msh"</span><span class="p">)</span>
 </span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="n">sio</span> <span class="o">=</span> <span class="n">SpreadSheetIO</span><span class="p">()</span>
 </span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="c1"># dump to csv</span>
-</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_csv</span><span class="p">(</span><span class="s2">&quot;spreadsheet&quot;</span><span class="p">,</span> <span class="n">mesh</span><span class="p">)</span>
+</span><span id="__span-43-5"><a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_csv</span><span class="p">(</span><span class="s2">"spreadsheet"</span><span class="p">,</span> <span class="n">mesh</span><span class="p">)</span>
 </span><span id="__span-43-6"><a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a><span class="c1"># dump to json</span>
-</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_json</span><span class="p">(</span><span class="s2">&quot;spreadsheet&quot;</span><span class="p">,</span> <span class="n">mesh</span><span class="p">)</span>
+</span><span id="__span-43-7"><a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_json</span><span class="p">(</span><span class="s2">"spreadsheet"</span><span class="p">,</span> <span class="n">mesh</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -2172,8 +2172,8 @@ See also the <a href="../../Libuipc/classuipc_1_1geometry_1_1_spread_sheet_i_o/"
 </thead>
 <tbody>
 <tr>
-<td><img alt="" src="../img/spreadsheet_csv.png" /></td>
-<td><img alt="" src="../img/spreadsheet_json.png" /></td>
+<td><img alt="" src="../img/spreadsheet_csv.png"></td>
+<td><img alt="" src="../img/spreadsheet_json.png"></td>
 </tr>
 <tr>
 <td><a href="https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer">Excel Viewer</a></td>
@@ -2185,7 +2185,7 @@ See also the <a href="../../Libuipc/classuipc_1_1geometry_1_1_spread_sheet_i_o/"
 <h2 id="quad-mesh">Quad Mesh</h2>
 <p>[TODO]</p>
 <h2 id="implicit-geometry">Implicit Geometry</h2>
-<p>[TODO]</p>
+<p>[TODO]</p></div>
 
 
 

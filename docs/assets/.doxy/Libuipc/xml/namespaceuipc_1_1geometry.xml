@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="namespaceuipc_1_1geometry" kind="namespace" language="C++">
     <compoundname>uipc::geometry</compoundname>
     <innerclass refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" prot="public">uipc::geometry::AbstractSimplicialComplex</innerclass>
@@ -14,7 +14,7 @@
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_attribute_error" prot="public">uipc::geometry::GeometryAttributeError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_collection" prot="public">uipc::geometry::GeometryCollection</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_friend" prot="public">uipc::geometry::GeometryFriend</innerclass>
-    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="private">uipc::geometry::GeometryIOError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="public">uipc::geometry::GeometryIOError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot" prot="public">uipc::geometry::GeometrySlot</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t" prot="public">uipc::geometry::GeometrySlotT</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4" prot="public">uipc::geometry::GeometrySlotT&lt; ImplicitGeometry &gt;</innerclass>
@@ -65,9 +65,9 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="implicit__geometry__slot_8h_1a528c8d69e846369da7e96980516e40fb" prot="public" static="no">
+      <memberdef kind="typedef" id="implicit__geometry__slot_8h_1a80c0caad420d550eca383471efeddb07" prot="public" static="no">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref> &gt;</type>
-        <definition>using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT&lt;ImplicitGeometry&gt;</definition>
+        <definition>using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT&lt;ImplicitGeometry&gt;</definition>
         <argsstring></argsstring>
         <name>ImplicitGeometrySlot</name>
         <qualifiedname>uipc::geometry::ImplicitGeometrySlot</qualifiedname>
@@ -79,9 +79,9 @@
         </inbodydescription>
         <location file="include/uipc/geometry/implicit_geometry_slot.h" line="26" column="1" bodyfile="include/uipc/geometry/implicit_geometry_slot.h" bodystart="26" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="simplicial__complex__slot_8h_1a691c92538dea87476928ae3fb9d6ad1d" prot="public" static="no">
+      <memberdef kind="typedef" id="simplicial__complex__slot_8h_1ac71c3aa8bc6cb8f8df305d94339246e6" prot="public" static="no">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
-        <definition>using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT&lt;SimplicialComplex&gt;</definition>
+        <definition>using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT&lt;SimplicialComplex&gt;</definition>
         <argsstring></argsstring>
         <name>SimplicialComplexSlot</name>
         <qualifiedname>uipc::geometry::SimplicialComplexSlot</qualifiedname>
@@ -95,6 +95,28 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
+      <memberdef kind="function" id="apply__region_8h_1ab0207d614bc7e6a944dc5722b5051299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API vector&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
+        <definition>UIPC_GEOMETRY_API vector&lt; SimplicialComplex &gt; uipc::geometry::apply_region</definition>
+        <argsstring>(const SimplicialComplex &amp;complex)</argsstring>
+        <name>apply_region</name>
+        <qualifiedname>uipc::geometry::apply_region</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>complex</declname>
+        </param>
+        <briefdescription>
+<para>Take apart the simplicial complex by regions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>vector&lt;SimplicialComplex&gt; The simplicial complexes by regions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/apply_region.h" line="11" column="26" declfile="include/uipc/geometry/utils/apply_region.h" declline="11" declcolumn="26"/>
+      </memberdef>
       <memberdef kind="function" id="apply__transform_8h_1a438613fb33e8483d363b89d097ec0d65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API vector&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
         <definition>UIPC_GEOMETRY_API vector&lt; SimplicialComplex &gt; uipc::geometry::apply_transform</definition>
@@ -665,6 +687,33 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/uipc/geometry/utils/mesh_partition.h" line="15" column="24" declfile="include/uipc/geometry/utils/mesh_partition.h" declline="15" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="tetrahedralize_8h_1aebe236e16bb17bf5eb9f4585ba9f4b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetrahedralize</definition>
+        <argsstring>(const SimplicialComplex &amp;sc, const Json &amp;options=Json::object())</argsstring>
+        <name>tetrahedralize</name>
+        <qualifiedname>uipc::geometry::tetrahedralize</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>options</declname>
+          <defval>Json::object()</defval>
+        </param>
+        <briefdescription>
+<para>Tetrahedralize a 2D simplicial complex (trimesh). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> The simplicial complexes by regions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/tetrahedralize.h" line="11" column="37" declfile="include/uipc/geometry/utils/tetrahedralize.h" declline="11" declcolumn="37"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

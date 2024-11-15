@@ -8,6 +8,7 @@
 * **Allocator** ([**uipc**](namespaceuipc.md))
 * **AbstractSimplicialComplex** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **AffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **apply\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **apply\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -149,6 +150,7 @@
 * **test\_gltf** ([**uipc**](namespaceuipc.md))
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 

@@ -649,7 +649,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -670,7 +670,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -708,32 +729,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1542,11 +1542,11 @@
                   
 
 
-<h1 id="tutorial">Tutorial</h1>
+<div><h1 id="tutorial">Tutorial</h1>
 <p>Hey there! Welcome to the tutorial section of the Libuipc documentation. This section is designed to help you get started with Libuipc and understand the basics of the library. If you are new to Libuipc, this is the best place to start.</p>
 <h2 id="hello-libuipc">Hello Libuipc</h2>
 <p>This is a simple example to get you started with <code>libuipc</code>. In this example, we will create a simple simulation using Libuipc.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>First, we include the <code>uipc.h</code> header file, which includes most the necessary headers for the <code>libuipc</code> library. Then, we use the namespace to make the code more readable:</p>
@@ -1580,7 +1580,7 @@
 <p>Then we create an instance of the <code>Engine</code> class, which is the main class of the <code>libuipc</code> simulation engine. We pass the <code>"cuda"</code> string to the constructor to specify the backend engine to use. </p>
 <p><code>Engine</code> is the heart of the simulation, which drives the <code>World</code> evolution. </p>
 <p><code>Scene</code> is a <strong>snapshot</strong> of the simulation at a certain time, and contains all information we needed to drive the simulation.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/uipc.h&gt;</span>
@@ -1588,21 +1588,21 @@
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">{</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">...</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">&quot;cuda&quot;</span><span class="p">};</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">"cuda"</span><span class="p">};</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">World</span><span class="w">  </span><span class="n">world</span><span class="p">{</span><span class="n">engine</span><span class="p">};</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Scene</span><span class="o">::</span><span class="n">default_config</span><span class="p">();</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="n">config</span><span class="p">[</span><span class="s">&quot;dt&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="n">_s</span><span class="p">;</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">config</span><span class="p">[</span><span class="s">&quot;gravity&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="n">config</span><span class="p">[</span><span class="s">"dt"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="n">_s</span><span class="p">;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">config</span><span class="p">[</span><span class="s">"gravity"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">-9.8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="p">{</span><span class="n">config</span><span class="p">};</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">engine</span> <span class="o">=</span> <span class="n">Engine</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">engine</span> <span class="o">=</span> <span class="n">Engine</span><span class="p">(</span><span class="s1">'cuda'</span><span class="p">)</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">world</span> <span class="o">=</span> <span class="n">World</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">config</span> <span class="o">=</span> <span class="n">Scene</span><span class="o">.</span><span class="n">default_config</span><span class="p">()</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">config</span><span class="p">[</span><span class="s1">&#39;dt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.01</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">config</span><span class="p">[</span><span class="s1">&#39;gravity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.8</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]]</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">config</span><span class="p">[</span><span class="s1">'dt'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.01</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">config</span><span class="p">[</span><span class="s1">'gravity'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">9.8</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]]</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
@@ -1620,7 +1620,7 @@
 <p>Contact model is a set of rules that govern the interaction between two objects when they collide.</p>
 </blockquote>
 <p>Before that, we should first add the <code>AffineBodyConstitution</code> to the <code>Scene</code>, and configure the contact model. <code>Libuipc</code> supports flexible configuration of the contact model, any pair of colliding objects can have their own contact model. For simplicity, in this example, we will use the default contact model for all the objects:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/uipc.h&gt;</span>
@@ -1661,7 +1661,7 @@
 <p>As you can see, we set the defualt contact model to have a friction ratio of <span class="arithmatex">\(0.5\)</span> and a contact resistance of <span class="arithmatex">\(1.0GPa\)</span>, which is common in the real world. And after specifying the contact model, we create a <code>default_element</code> in order to apply the default contact model to the mesh in the later steps.</p>
 <p>It's time to create the mesh! </p>
 <p>In this example, we will just manually create a regular tetrahedron (<code>base_mesh</code>), and apply a <code>AffineBodyConstitution</code> with a stiffness(hardness) of <span class="arithmatex">\(100MPa\)</span> to the <code>base_mesh</code>, which may be a hard-rubber-like material in the real world. Then we apply the default contact model to the <code>base_mesh</code>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
@@ -1725,7 +1725,7 @@
 <p>Keep in mind that, only we call <code>label_surface</code> on the mesh, will the engine consider the surface of the mesh for contact.</p>
 <p>And <code>label_triangle_orient</code> is used to label the orientation of the triangles in the mesh, which is necessary for exporting the correct surface mesh. It doesn't affect the simulation itself.</p>
 <p>Using the <code>base_mesh</code>, we can easily copy the setup to create two tetrahedra, <code>mesh1</code> and <code>mesh2</code>, and modify them as we like:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
@@ -1776,7 +1776,7 @@
 <p>For <code>mesh1</code>, we move it up for <span class="arithmatex">\(1m\)</span> along the y-axis. And for <code>mesh2</code>, we set the first instance to be fixed.</p>
 <p>In this section, we won't go into the details of the manipulation of the mesh (exactly, the geometry), we will cover it in the <a href="geometry/">Geometry</a>. Now, just think the code above is the <code>Libuipc</code>'s way to modify the geometry.</p>
 <p>In <code>libuipc</code>, <code>Scene</code> contains some objects consisting of geometries. In this example, we create 2 objects, <code>object1</code> and <code>object2</code>, each with a mesh:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
@@ -1785,12 +1785,12 @@
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="p">...</span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="c1">// create objects</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">object1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;upper_tet&quot;</span><span class="p">);</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">object1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">"upper_tet"</span><span class="p">);</span>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">            </span><span class="n">object1</span><span class="o">-&gt;</span><span class="n">geometries</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">mesh1</span><span class="p">);</span>
 </span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">object2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;lower_tet&quot;</span><span class="p">);</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">object2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">objects</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="s">"lower_tet"</span><span class="p">);</span>
 </span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">            </span><span class="n">object2</span><span class="o">-&gt;</span><span class="n">geometries</span><span class="p">().</span><span class="n">create</span><span class="p">(</span><span class="n">mesh2</span><span class="p">);</span>
 </span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">        </span><span class="p">}</span>
@@ -1803,10 +1803,10 @@
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">Scene</span> <span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">...</span>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># create objects</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">object1</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;upper_tet&quot;</span><span class="p">)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">object1</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"upper_tet"</span><span class="p">)</span>
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="n">object1</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">mesh1</span><span class="p">)</span>
 </span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">object2</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;lower_tet&quot;</span><span class="p">)</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">object2</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"lower_tet"</span><span class="p">)</span>
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">object2</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">mesh2</span><span class="p">)</span>
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="o">...</span>
 </span></code></pre></div>
@@ -1815,7 +1815,7 @@
 </div>
 <p>From the <strong>API</strong>, we know that an object can have multiple geometries. It's sensible, because in the real world, an object can have multiple parts. E.g., a cloth can have multiple patches, a car can have multiple parts, etc. Object is a concept grouping the geometries together to make up a nameable entity, which is pretty intuitive for the user to build the world. But in this example, we just use one geometry for each object, for simplicity.</p>
 <p>Now, we have setup the initial state of the <code>Scene</code>, we can pass it to the <code>World</code> for later simulation:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
@@ -1829,13 +1829,13 @@
 </span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="n">world</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
 </span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
 </span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="n">SceneIO</span><span class="w"> </span><span class="n">sio</span><span class="p">{</span><span class="n">scene</span><span class="p">};</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;scene_surface{}.obj&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">"scene_surface{}.obj"</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
 </span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
 </span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">        </span><span class="n">world</span><span class="p">.</span><span class="n">advance</span><span class="p">();</span>
 </span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">        </span><span class="n">world</span><span class="p">.</span><span class="n">retrieve</span><span class="p">();</span>
-</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">        </span><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;scene_surface{}.obj&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">        </span><span class="n">sio</span><span class="p">.</span><span class="n">write_surface</span><span class="p">(</span><span class="n">fmt</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">"scene_surface{}.obj"</span><span class="p">,</span><span class="w"> </span><span class="n">world</span><span class="p">.</span><span class="n">frame</span><span class="p">()));</span>
 </span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -1850,19 +1850,19 @@
 </span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">world</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
 </span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
 </span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">sio</span> <span class="o">=</span> <span class="n">SceneIO</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj&quot;</span><span class="p">)</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">"scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj"</span><span class="p">)</span>
 </span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
 </span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="k">while</span> <span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
 </span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
 </span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="n">world</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
-</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj&quot;</span><span class="p">)</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="n">sio</span><span class="o">.</span><span class="n">write_surface</span><span class="p">(</span><span class="sa">f</span><span class="s2">"scene_surface</span><span class="si">{</span><span class="n">world</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="si">}</span><span class="s2">.obj"</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
 <p>To evolve the simulation, we call the <code>advance</code> method of the <code>World</code> to advance the simulation by one time step. Then we call the <code>sync</code> method to synchronize the <code>World</code>, (basically, it's a barrier to make sure the <code>World</code> is ready for the next time step). Finally, we call the <code>retrieve</code> method to retrieve (download) the simulation data from the <code>World</code>.</p>
 <p>The easiest way to consume the simulation is to export the surface mesh of the <code>Scene</code> at each time step. Here we use the <code>SceneIO</code> class to export the surface of all the meshes to the <code>.obj</code> file.</p>
-<p><img alt="falling tet" src="img/falling_tet.png" />
+<p><img alt="falling tet" src="img/falling_tet.png">
 [TODO] add the rendered falling tetrahedron gif later</p>
 <p>It's not the only way to consume the simulation data. Because the interest of the user may vary: some may want to visualize the simulation in some GUI software, some may want to analyze the simulation data in some post-processing software, some may want to do some machine learning on the simulation data, etc. It's up to you to decide what kind of data to get from the evolution of the <code>World</code>.</p>
 <h2 id="next-steps">Next Steps</h2>
@@ -1872,7 +1872,7 @@
 <li>[ <a href="concepts/">Concepts</a> ] How can I understand the basic concepts in <code>libuipc</code>? </li>
 <li>[ <a href="animation/">Animation</a> ] How can I script my own animation in <code>libuipc</code>?</li>
 </ol>
-<p>It's recommended to read the above topics in order, as they are the basic concepts of <code>libuipc</code>.</p>
+<p>It's recommended to read the above topics in order, as they are the basic concepts of <code>libuipc</code>.</p></div>
 
 
 

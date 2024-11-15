@@ -54,9 +54,10 @@ _A wrapper class for the instance attributes of a geometries._
 
 | Type | Name |
 | ---: | :--- |
-|   | [**InstanceAttributesT**](#function-instanceattributest-24) (AutoAttributeCollection & attributes) <br> |
-|   | [**InstanceAttributesT**](#function-instanceattributest-34) (const [**InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) & o) = default<br> |
-|   | [**InstanceAttributesT**](#function-instanceattributest-44) ([**InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) && o) = default<br> |
+|   | [**InstanceAttributesT**](#function-instanceattributest-25) (AutoAttributeCollection & attributes) <br> |
+|   | [**InstanceAttributesT**](#function-instanceattributest-35) (const [**InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md)&lt; OtherIsConst &gt; & o) noexcept<br> |
+|   | [**InstanceAttributesT**](#function-instanceattributest-45) (const [**InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) & o) = default<br> |
+|   | [**InstanceAttributesT**](#function-instanceattributest-55) ([**InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) && o) = default<br> |
 |  void | [**clear**](#function-clear) () <br> |
 |  void | [**copy\_from**](#function-copy_from) ([**InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md)&lt; true &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
 |  decltype(auto) | [**create**](#function-create) (std::string\_view name, const T & init\_value={}) <br>_Create an attribute with the given name._  |
@@ -102,7 +103,7 @@ _A wrapper class for the instance attributes of a geometries._
 
 
 
-### function InstanceAttributesT [2/4]
+### function InstanceAttributesT [2/5]
 
 ```C++
 inline uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
@@ -117,7 +118,23 @@ inline uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
 
 
 
-### function InstanceAttributesT [3/4]
+### function InstanceAttributesT [3/5]
+
+```C++
+template<bool OtherIsConst>
+inline uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
+    const InstanceAttributesT < OtherIsConst > & o
+) noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function InstanceAttributesT [4/5]
 
 ```C++
 uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
@@ -132,7 +149,7 @@ uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
 
 
 
-### function InstanceAttributesT [4/4]
+### function InstanceAttributesT [5/5]
 
 ```C++
 uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (

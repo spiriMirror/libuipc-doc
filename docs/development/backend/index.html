@@ -647,7 +647,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -668,7 +668,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -706,32 +727,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1750,11 +1750,11 @@
                   
 
 
-<h1 id="backend">Backend</h1>
+<div><h1 id="backend">Backend</h1>
 <p><code>Libuipc</code> has frontend and backend components. The frontend part is used to create the scene, objects, and geometries, and the backend part is used to simulate the physics of the scene.</p>
 <p>A <code>libuipc</code> backend is a independent module that will be dynamically loaded and linked by the frontend. Typically througth the <code>engine::Engine</code> class.
 The frontend user utilizes the backend functionalities through <code>World</code> interface.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">&quot;BACKEND_NAME&quot;</span><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">"BACKEND_NAME"</span><span class="p">};</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">world</span><span class="o">::</span><span class="n">World</span><span class="w"> </span><span class="n">world</span><span class="p">{</span><span class="n">engine</span><span class="p">};</span>
 </span></code></pre></div>
 <h2 id="create-your-own-backend">Create Your Own Backend</h2>
@@ -1763,7 +1763,7 @@ The frontend user utilizes the backend functionalities through <code>World</code
 <p>In the <code>my_backend/</code> folder, you need to create a <code>CMakeLists.txt</code> file to define the build rules for the backend.</p>
 <div class="language-cmake highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># my_backend/CMakeLists.txt</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">uipc_add_backend</span><span class="p">(</span><span class="s">none</span><span class="p">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">SOURCES</span><span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="w"> </span><span class="s2">&quot;*.h&quot;</span><span class="w"> </span><span class="s2">&quot;details/*.inl&quot;</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">SOURCES</span><span class="w"> </span><span class="s2">"*.cpp"</span><span class="w"> </span><span class="s2">"*.h"</span><span class="w"> </span><span class="s2">"details/*.inl"</span><span class="p">)</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">target_sources</span><span class="p">(</span><span class="s">none</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="o">${</span><span class="nv">SOURCES</span><span class="o">}</span><span class="p">)</span>
 </span></code></pre></div>
 <p>The backend <code>none</code> is a good example for creating a new backend.</p>
@@ -1878,7 +1878,7 @@ The frontend user utilizes the backend functionalities through <code>World</code
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="n">another_systems</span><span class="p">.</span><span class="n">register_system</span><span class="p">(</span><span class="n">another_system_ptr</span><span class="p">);</span>
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="k">if</span><span class="p">(...)</span><span class="w"> </span><span class="c1">// if some bad condition happened</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">SimSystemException</span><span class="p">(</span><span class="s">&quot;This system is invalid&quot;</span><span class="p">);</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">SimSystemException</span><span class="p">(</span><span class="s">"This system is invalid"</span><span class="p">);</span>
 </span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">}</span>
 </span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -2037,7 +2037,7 @@ The frontend user utilizes the backend functionalities through <code>World</code
 </span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Of course, you should let the engine require the global system and dispatch the subsystems in the lifecycle functions.</p>
-<p>Such global-subsystem pattern can be recursively used. A subsystem can also have its own subsystems.</p>
+<p>Such global-subsystem pattern can be recursively used. A subsystem can also have its own subsystems.</p></div>
 
 
 

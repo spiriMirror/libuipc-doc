@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::Geometry::MetaAttributesT</compoundname>
     <includes refid="geometry_2geometry_8h" local="no">geometry.h</includes>
@@ -11,9 +11,10 @@
       </param>
     </templateparamlist>
     <sectiondef kind="private-type">
-      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a6e78e39b6d23ab0537925ce41f4b24ed" prot="private" static="no">
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a5c18d8be901eaf492189576000826040" prot="private" static="no">
         <type>std::conditional_t&lt; IsConst, const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>, <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &gt;</type>
-        <definition>using uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt;::AutoAttributeCollection =  std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
+        <definition>using uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt;::AutoAttributeCollection = 
+            std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
         <argsstring></argsstring>
         <name>AutoAttributeCollection</name>
         <qualifiedname>uipc::geometry::Geometry::MetaAttributesT::AutoAttributeCollection</qualifiedname>
@@ -23,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="65" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="66" bodyend="-1"/>
+        <location file="include/uipc/geometry/geometry.h" line="65" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="65" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
@@ -42,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="271" column="25" bodyfile="include/uipc/geometry/geometry.h" bodystart="63" bodyend="-1"/>
+        <location file="include/uipc/geometry/geometry.h" line="286" column="25" bodyfile="include/uipc/geometry/geometry.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a3f4c2e276b7538d13bf4eabb76c2a384" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -104,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="131" column="33" bodyfile="include/uipc/geometry/geometry.h" bodystart="131" bodyend="-1"/>
+        <location file="include/uipc/geometry/geometry.h" line="138" column="33" bodyfile="include/uipc/geometry/geometry.h" bodystart="138" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -126,6 +127,32 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="75" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="75" bodyend="78"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a86e8f7fb628ab8883216d0ac1ec6f5f7" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>bool</type>
+            <declname>OtherIsConst</declname>
+            <defname>OtherIsConst</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt;::MetaAttributesT</definition>
+        <argsstring>(const MetaAttributesT&lt; OtherIsConst &gt; &amp;o) noexcept</argsstring>
+        <name>MetaAttributesT</name>
+        <qualifiedname>uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t" kindref="compound">MetaAttributesT</ref>&lt; OtherIsConst &gt; &amp;</type>
+          <declname>o</declname>
+        </param>
+    <requiresclause>(IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry.h" line="81" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="81" bodyend="85"/>
+      </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a6d5d87a35f14586b5e41311f8ae9eee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt;::MetaAttributesT</definition>
@@ -142,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="80" column="9"/>
+        <location file="include/uipc/geometry/geometry.h" line="87" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1acee7f66e6f02dee0c7df45bf46e9296b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -160,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="81" column="9"/>
+        <location file="include/uipc/geometry/geometry.h" line="88" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a64b521501819af7d75042d1bd001909c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t" kindref="compound">MetaAttributesT</ref> &amp;</type>
@@ -178,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="82" column="25"/>
+        <location file="include/uipc/geometry/geometry.h" line="89" column="25"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1aad0ff9e3396e100161978b4f22871afd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t" kindref="compound">MetaAttributesT</ref> &amp;</type>
@@ -196,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="83" column="25"/>
+        <location file="include/uipc/geometry/geometry.h" line="90" column="25"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a79f1520726ffb2716738e616efcb9b5d" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
         <templateparamlist>
@@ -220,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="89" column="15" bodyfile="include/uipc/geometry/geometry.h" bodystart="89" bodyend="92"/>
+        <location file="include/uipc/geometry/geometry.h" line="96" column="15" bodyfile="include/uipc/geometry/geometry.h" bodystart="96" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1ad34166b95fd426932dbf4a367d9c2bc3" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
         <templateparamlist>
@@ -249,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="98" column="18" bodyfile="include/uipc/geometry/geometry.h" bodystart="98" bodyend="101"/>
+        <location file="include/uipc/geometry/geometry.h" line="105" column="18" bodyfile="include/uipc/geometry/geometry.h" bodystart="105" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a6d1f7069fbacd70ffdd532887a1348f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -277,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="104" column="18" bodyfile="include/uipc/geometry/geometry.h" bodystart="104" bodyend="108"/>
+        <location file="include/uipc/geometry/geometry.h" line="111" column="18" bodyfile="include/uipc/geometry/geometry.h" bodystart="111" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1af0af9b3c1251a0ab49c0f9b1c9492933" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
         <type>void</type>
@@ -299,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="113" column="14" bodyfile="include/uipc/geometry/geometry.h" bodystart="113" bodyend="117"/>
+        <location file="include/uipc/geometry/geometry.h" line="120" column="14" bodyfile="include/uipc/geometry/geometry.h" bodystart="120" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1adcec3ffc19337322f77b58318b9cce9f" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
         <type>void</type>
@@ -333,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="119" column="14" bodyfile="include/uipc/geometry/geometry.h" bodystart="119" bodyend="126"/>
+        <location file="include/uipc/geometry/geometry.h" line="126" column="14" bodyfile="include/uipc/geometry/geometry.h" bodystart="126" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a2db4650bfc4eb80b5352686d2692c2ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
@@ -347,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="128" column="14"/>
+        <location file="include/uipc/geometry/geometry.h" line="135" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -355,10 +382,10 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/geometry/geometry.h" line="61" column="5" bodyfile="include/uipc/geometry/geometry.h" bodystart="62" bodyend="132"/>
+    <location file="include/uipc/geometry/geometry.h" line="61" column="5" bodyfile="include/uipc/geometry/geometry.h" bodystart="62" bodyend="139"/>
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1abd621cd374772a67fae8b860ddfca14c" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>AttributeFriend</name></member>
-      <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a6e78e39b6d23ab0537925ce41f4b24ed" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>AutoAttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a5c18d8be901eaf492189576000826040" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>AutoAttributeCollection</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1adcec3ffc19337322f77b58318b9cce9f" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>copy_from</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1ad34166b95fd426932dbf4a367d9c2bc3" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>create</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1af0af9b3c1251a0ab49c0f9b1c9492933" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>destroy</name></member>
@@ -367,6 +394,7 @@
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1ab9214cd7d0c04db701ff74c899bcbcf1" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>m_attributes</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a3f4c2e276b7538d13bf4eabb76c2a384" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>MetaAttributesT</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a7c443ea8fd614ddc6c734e1a0a825823" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>MetaAttributesT</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a86e8f7fb628ab8883216d0ac1ec6f5f7" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>MetaAttributesT</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a6d5d87a35f14586b5e41311f8ae9eee5" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>MetaAttributesT</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1acee7f66e6f02dee0c7df45bf46e9296b" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>MetaAttributesT</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a64b521501819af7d75042d1bd001909c" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::MetaAttributesT</scope><name>operator=</name></member>

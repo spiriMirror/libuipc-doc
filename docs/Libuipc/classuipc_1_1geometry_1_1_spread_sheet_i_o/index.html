@@ -643,7 +643,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -664,7 +664,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -702,32 +723,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1527,7 +1527,7 @@
                   
 
 
-<h1 id="class-uipcgeometryspreadsheetio">Class uipc::geometry::SpreadSheetIO</h1>
+<div><h1 id="class-uipcgeometryspreadsheetio">Class uipc::geometry::SpreadSheetIO</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1geometry/"><strong>geometry</strong></a> <strong>&gt;</strong> <a href="./"><strong>SpreadSheetIO</strong></a></p>
 <p><em>A class for writing geometry spreadsheet.</em> <a href="#detailed-description">More...</a></p>
 <ul>
@@ -1566,17 +1566,17 @@
 </table>
 <h1 id="detailed-description">Detailed Description</h1>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;cube.msh&quot;</span><span class="p">);</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"cube.msh"</span><span class="p">);</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">SpreadSheetIO</span><span class="w"> </span><span class="n">sio</span><span class="p">;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// dump to csv</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_csv</span><span class="p">(</span><span class="s">&quot;spreadsheet&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_csv</span><span class="p">(</span><span class="s">"spreadsheet"</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// dump to json</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_json</span><span class="p">(</span><span class="s">&quot;spreadsheet&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">sio</span><span class="p">.</span><span class="n">write_json</span><span class="p">(</span><span class="s">"spreadsheet"</span><span class="p">,</span><span class="w"> </span><span class="n">mesh</span><span class="p">);</span>
 </span></code></pre></div>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-spreadsheetio">function SpreadSheetIO</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SpreadSheetIO</span><span class="o">::</span><span class="n">SpreadSheetIO</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">output_folder</span><span class="o">=</span><span class="s">&quot;./&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">output_folder</span><span class="o">=</span><span class="s">"./"</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
@@ -1611,8 +1611,8 @@
 </span></code></pre></div>
 <hr>
 
-<hr />
-<p>The documentation for this class was generated from the following file <code>include/uipc/io/spread_sheet_io.h</code></p>
+<hr>
+<p>The documentation for this class was generated from the following file <code>include/uipc/io/spread_sheet_io.h</code></p></div>
 
 
 

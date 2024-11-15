@@ -41,6 +41,7 @@
 | class | [**GeometryAttributeError**](classuipc_1_1geometry_1_1_geometry_attribute_error.md) <br> |
 | class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
+| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
 | class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md) &lt;&gt;<br> |
@@ -88,6 +89,7 @@
 
 | Type | Name |
 | ---: | :--- |
+|  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_region**](#function-apply_region) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Take apart the simplicial complex by regions._  |
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_mass**](#function-compute_vertex_mass) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R, Float mass\_density) <br> |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & src) <br>_Extract the surface of a tetrahedral mesh._  |
@@ -106,6 +108,7 @@
 |  void UIPC\_GEOMETRY\_API | [**mesh\_partition**](#function-mesh_partition) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, SizeT part\_max\_size) <br>_partition the simplicial complex_  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetrahedralize**](#function-tetrahedralize) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const Json & options=Json::object()) <br>_Tetrahedralize a 2D simplicial complex (trimesh)._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br>_Create a simplicial complex from a triangle mesh._  |
 
 
@@ -160,7 +163,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -173,7 +176,7 @@ using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeome
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
 ```
 
 
@@ -182,6 +185,33 @@ using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialCo
 <hr>
 ## Public Functions Documentation
 
+
+
+
+### function apply\_region 
+
+_Take apart the simplicial complex by regions._ 
+```C++
+UIPC_GEOMETRY_API vector< SimplicialComplex > uipc::geometry::apply_region (
+    const SimplicialComplex & complex
+) 
+```
+
+
+
+
+
+**Returns:**
+
+vector&lt;SimplicialComplex&gt; The simplicial complexes by regions. 
+
+
+
+
+
+        
+
+<hr>
 
 
 
@@ -704,6 +734,34 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetmesh (
 
 * `Vs` The vertex positions of the tetrahedral mesh 
 * `Ts` The tetrahedra of the tetrahedral mesh 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function tetrahedralize 
+
+_Tetrahedralize a 2D simplicial complex (trimesh)._ 
+```C++
+UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetrahedralize (
+    const SimplicialComplex & sc,
+    const Json & options=Json::object()
+) 
+```
+
+
+
+
+
+**Returns:**
+
+[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) The simplicial complexes by regions. 
+
 
 
 

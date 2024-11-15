@@ -643,7 +643,7 @@
         
   
   <span class="md-ellipsis">
-    Arap
+    ARAP
   </span>
   
 
@@ -664,7 +664,28 @@
         
   
   <span class="md-ellipsis">
-    Hookean spring
+    Hookean Spring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
   </span>
   
 
@@ -702,32 +723,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/shell_neo_hookean/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Shell neo hookean
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stable neo hookean
+    Stable Neo Hookean
   </span>
   
 
@@ -1527,7 +1527,7 @@
                   
 
 
-<h1 id="class-uipcgeometryattributecollection">Class uipc::geometry::AttributeCollection</h1>
+<div><h1 id="class-uipcgeometryattributecollection">Class uipc::geometry::AttributeCollection</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1geometry/"><strong>geometry</strong></a> <strong>&gt;</strong> <a href="./"><strong>AttributeCollection</strong></a></p>
 <p><em>A collection of geometries attributes.</em> <a href="#detailed-description">More...</a></p>
 <ul>
@@ -1661,21 +1661,21 @@
 
 <h3 id="function-clear">function clear</h3>
 <p><em>clear the underlying attribute values of all attribute slots, the attribute slots will not be destroyed.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">clear</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</span></code></pre></div></p>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">clear</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</span></code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This method may generate data clones. </p>
 <hr>
 
 <h3 id="function-copy_from">function copy_from</h3>
 <p><em>copy_from the underlying attribute values of all attribute slots.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">copy_from</span><span class="w"> </span><span class="p">(</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">copy_from</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">,</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCopy</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">copy</span><span class="p">,</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">include_names</span><span class="o">=</span><span class="p">{},</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">exclude_names</span><span class="o">=</span><span class="p">{}</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>O</code> A New2Old mapping. O[i] = j means the i-th element in the new order has the value of the j-th element in the old order. </li>
@@ -1686,13 +1686,13 @@
 
 <h3 id="function-create">function create</h3>
 <p><em>Create a new attribute slot of type T with a given name.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeSlot</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">create</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">default_value</span><span class="o">=</span><span class="p">{},</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">allow_destroy</span><span class="o">=</span><span class="nb">true</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p><strong>Template parameters:</strong></p>
 <ul>
 <li><code>T</code> The type of the attribute values. </li>
@@ -1707,10 +1707,10 @@
 
 <h3 id="function-destroy">function destroy</h3>
 <p><em>Remove the attribute slot with the given name.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">destroy</span><span class="w"> </span><span class="p">(</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">destroy</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p>The underlying attribute will not be destroyed if it is shared by other attribute slots.</p>
 <p>@danger Accessing the removed attribute slot will cause undefined behavior. It's user's responsibility to ensure that the removed attribute slot is not accessed. </p>
 <p><strong>Parameters:</strong></p>
@@ -1721,10 +1721,10 @@
 
 <h3 id="function-find-14">function find [1/4]</h3>
 <p><em>Find the attribute slot with the given name.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttributeSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">find</span><span class="w"> </span><span class="p">(</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttributeSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">find</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>name</code> The name of the attribute slot. </li>
@@ -1779,10 +1779,10 @@
 
 <h3 id="function-reorder">function reorder</h3>
 <p><em>Reorder the underlying attribute values of all attribute slots.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">reorder</span><span class="w"> </span><span class="p">(</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">reorder</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SizeT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">O</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>O</code> A New2Old mapping. O[i] = j means the i-th element in the new order has the value of the j-th element in the old order.</li>
@@ -1793,32 +1793,32 @@
 
 <h3 id="function-reserve">function reserve</h3>
 <p><em>Reserve memory for all attribute slots.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">reserve</span><span class="w"> </span><span class="p">(</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">reserve</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">N</span>
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This method generates no data clone. But the memory of the underlying attribute values may be reallocated. </p>
 <hr>
 
 <h3 id="function-resize">function resize</h3>
 <p><em>Resize all attribute slots to the given size.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">resize</span><span class="w"> </span><span class="p">(</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">resize</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">N</span>
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p><strong>Note:</strong></p>
 <p>This method may generate data clones. </p>
 <hr>
 
 <h3 id="function-share-12">function share [1/2]</h3>
 <p><em>Share the underlying attribute of the given slot with a new name.</em> 
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttributeSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">share</span><span class="w"> </span><span class="p">(</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttributeSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="o">::</span><span class="n">share</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">IAttributeSlot</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">slot</span><span class="p">,</span>
 </span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">allow_destroy</span><span class="o">=</span><span class="nb">true</span>
 </span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div></p>
+</span></code></pre></div>
 <p>The slot may be from another geometries attribute collection or just current geometries attribute collection. </p>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -1860,8 +1860,8 @@
 </span></code></pre></div>
 <hr>
 
-<hr />
-<p>The documentation for this class was generated from the following file <code>include/uipc/geometry/attribute_collection.h</code></p>
+<hr>
+<p>The documentation for this class was generated from the following file <code>include/uipc/geometry/attribute_collection.h</code></p></div>
 
 
 
