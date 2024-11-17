@@ -118,8 +118,7 @@
 ### typedef AutoAttributeCollection 
 
 ```C++
-using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCollection = 
-        std::conditional_t<IsConst, const AttributeCollection, AttributeCollection>;
+using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCollection =  std::conditional_t<IsConst, const AttributeCollection, AttributeCollection>;
 ```
 
 
@@ -132,7 +131,7 @@ using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCo
 ### typedef TopoValueT 
 
 ```C++
-using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  std::conditional_t<IsScalar, IndexT, Vector<IndexT, N + 1>>;
+using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  std::conditional_t<IsScalar, IndexT, Vector<IndexT, N + 1> >;
 ```
 
 

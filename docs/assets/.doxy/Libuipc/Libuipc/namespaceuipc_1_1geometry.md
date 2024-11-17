@@ -41,7 +41,6 @@
 | class | [**GeometryAttributeError**](classuipc_1_1geometry_1_1_geometry_attribute_error.md) <br> |
 | class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
-| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
 | class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md) &lt;&gt;<br> |
@@ -163,7 +162,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -176,7 +175,7 @@ using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
 ```
 
 

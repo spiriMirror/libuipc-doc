@@ -63,6 +63,7 @@ _A class for reading and writing simplicial complex._
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**read\_msh**](#function-read_msh) (std::string\_view file\_name) <br>_Read a tetmesh from a .msh file._  |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**read\_obj**](#function-read_obj) (std::string\_view file\_name) <br>_Read a trimesh, linemesh or particles from a .obj file._  |
 |  void | [**write**](#function-write) (std::string\_view file\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br> |
+|  void | [**write\_msh**](#function-write_msh) (std::string\_view file\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Write a simplicial complex to .msh file._  |
 |  void | [**write\_obj**](#function-write_obj) (std::string\_view file\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Write a simplicial complex to .obj file._  |
 
 
@@ -313,6 +314,35 @@ void uipc::geometry::SimplicialComplexIO::write (
 
 
 
+
+<hr>
+
+
+
+### function write\_msh 
+
+_Write a simplicial complex to .msh file._ 
+```C++
+void uipc::geometry::SimplicialComplexIO::write_msh (
+    std::string_view file_name,
+    const SimplicialComplex & sc
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `file_name` The file to write 
+* `sc` The simplicial complex to write 
+
+
+
+
+        
 
 <hr>
 

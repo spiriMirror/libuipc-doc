@@ -42,9 +42,6 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::geometry::Geometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_01_4.md) &lt;&gt;<br> |
-| struct | [**formatter&lt; uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_3_01_is_const_01_4_01_4.md) &lt;IsConst&gt;<br> |
-| struct | [**formatter&lt; uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_3_01_is_const_01_4_01_4.md) &lt;IsConst&gt;<br> |
 | class | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) <br>_A base geometries class that contains the instance attributes and the meta attributes._  |
 | class | [**InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) &lt;IsConst&gt;<br>_A wrapper class for the instance attributes of a geometries._  |
 | class | [**MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) &lt;IsConst&gt;<br>_A wrapper class for the meta attributes of a geometries._  |

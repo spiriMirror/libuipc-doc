@@ -1622,6 +1622,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-write_msh" class="md-nav__link">
+    <span class="md-ellipsis">
+      function write_msh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-write_obj" class="md-nav__link">
     <span class="md-ellipsis">
       function write_obj
@@ -1708,6 +1717,10 @@
 <tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-write"><strong>write</strong></a> (std::string_view file_name, const <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> &amp; sc) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-write_msh"><strong>write_msh</strong></a> (std::string_view file_name, const <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> &amp; sc) <br><em>Write a simplicial complex to .msh file.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -1813,12 +1826,26 @@
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-write_obj">function write_obj</h3>
-<p><em>Write a simplicial complex to .obj file.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexIO</span><span class="o">::</span><span class="n">write_obj</span><span class="w"> </span><span class="p">(</span>
+<h3 id="function-write_msh">function write_msh</h3>
+<p><em>Write a simplicial complex to .msh file.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexIO</span><span class="o">::</span><span class="n">write_msh</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">file_name</span><span class="p">,</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>file_name</code> The file to write </li>
+<li><code>sc</code> The simplicial complex to write </li>
+</ul>
+<hr>
+
+<h3 id="function-write_obj">function write_obj</h3>
+<p><em>Write a simplicial complex to .obj file.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexIO</span><span class="o">::</span><span class="n">write_obj</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">file_name</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
