@@ -1564,6 +1564,7 @@
 
 <div><h1 id="tutorial">Tutorial</h1>
 <p>Hey there! Welcome to the tutorial section of the Libuipc documentation. This section is designed to help you get started with Libuipc and understand the basics of the library. If you are new to Libuipc, this is the best place to start.</p>
+<p>Most of the codes can be found in <a href="https://github.com/spiriMirror/libuipc-samples">libuipc-samples</a>.</p>
 <h2 id="hello-libuipc">Hello Libuipc</h2>
 <p>This is a simple example to get you started with <code>libuipc</code>. In this example, we will create a simple simulation using Libuipc.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
@@ -1585,7 +1586,7 @@
 </div>
 <div class="tabbed-block">
 <p>First, we import pyuipc, and alias some of the modules to make the code more readable:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">pyuipc</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">pyuipc_loader</span> <span class="kn">import</span> <span class="n">pyuipc</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">pyuipc</span> <span class="kn">import</span> <span class="n">Vector3</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">pyuipc.geometry</span> <span class="kn">import</span> <span class="o">*</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span> <span class="nn">pyuipc.core</span> <span class="kn">import</span> <span class="n">Engine</span><span class="p">,</span> <span class="n">World</span><span class="p">,</span> <span class="n">Scene</span><span class="p">,</span> <span class="n">SceneIO</span>
@@ -1663,7 +1664,7 @@
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">pyuipc</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">pyuipc_loader</span> <span class="kn">import</span> <span class="n">pyuipc</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">pyuipc.constitution</span> <span class="kn">import</span> <span class="n">AffineBodyConstitution</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="o">...</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
@@ -1757,12 +1758,12 @@
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">mesh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base_mesh</span><span class="p">;</span>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">            </span><span class="c1">// move the mesh1 up for 1 unit</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">            </span><span class="c1">// move the mesh1 up for 1.5 unit</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">            </span><span class="k">auto</span><span class="w"> </span><span class="n">pos_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">view</span><span class="p">(</span><span class="n">mesh1</span><span class="p">.</span><span class="n">positions</span><span class="p">());</span>
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">ranges</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">pos_view</span><span class="p">,</span>
 </span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">                                </span><span class="n">pos_view</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span>
 </span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">                                </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Vector3</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">                                </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vector3</span><span class="o">::</span><span class="n">UnitY</span><span class="p">();</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">                                </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Vector3</span><span class="o">::</span><span class="n">UnitY</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
 </span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
 </span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">        </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">mesh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base_mesh</span><span class="p">;</span>
@@ -1782,8 +1783,8 @@
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="o">...</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">mesh1</span> <span class="o">=</span> <span class="n">base_mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">pos_view</span> <span class="o">=</span> <span class="n">view</span><span class="p">(</span><span class="n">mesh1</span><span class="o">.</span><span class="n">positions</span><span class="p">())</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># move the mesh up for 1 unit</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">pos_view</span> <span class="o">+=</span> <span class="n">Vector3</span><span class="o">.</span><span class="n">UnitY</span><span class="p">()</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># move the mesh up for 1.5 unit</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">pos_view</span> <span class="o">+=</span> <span class="n">Vector3</span><span class="o">.</span><span class="n">UnitY</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.5</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">mesh2</span> <span class="o">=</span> <span class="n">base_mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">is_fixed</span> <span class="o">=</span> <span class="n">mesh2</span><span class="o">.</span><span class="n">instances</span><span class="p">()</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">builtin</span><span class="o">.</span><span class="n">is_fixed</span><span class="p">)</span>
@@ -1882,9 +1883,23 @@
 </div>
 <p>To evolve the simulation, we call the <code>advance</code> method of the <code>World</code> to advance the simulation by one time step. Then we call the <code>sync</code> method to synchronize the <code>World</code>, (basically, it's a barrier to make sure the <code>World</code> is ready for the next time step). Finally, we call the <code>retrieve</code> method to retrieve (download) the simulation data from the <code>World</code>.</p>
 <p>The easiest way to consume the simulation is to export the surface mesh of the <code>Scene</code> at each time step. Here we use the <code>SceneIO</code> class to export the surface of all the meshes to the <code>.obj</code> file.</p>
-<p><img alt="falling tet" src="img/falling_tet.png">
-[TODO] add the rendered falling tetrahedron gif later</p>
+<div align="center">
+<video style="width:75%" muted="" controls="" alt="type:video">
+   <source src="./media/falling_tet.mp4" type="video/mp4">
+</source></video>
+</div>
+
 <p>It's not the only way to consume the simulation data. Because the interest of the user may vary: some may want to visualize the simulation in some GUI software, some may want to analyze the simulation data in some post-processing software, some may want to do some machine learning on the simulation data, etc. It's up to you to decide what kind of data to get from the evolution of the <code>World</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">C++</label><label for="__tabbed_8_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>source: [TODO]</p>
+</div>
+<div class="tabbed-block">
+<p>source: <a href="https://github.com/spiriMirror/libuipc-samples/blob/main/python/1_hello_libuipc/main.py">hello_libuipc</a></p>
+</div>
+</div>
+</div>
 <h2 id="next-steps">Next Steps</h2>
 <p>Now you may be interested in the following topics:</p>
 <ol>

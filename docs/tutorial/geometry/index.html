@@ -434,15 +434,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quad-mesh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quad Mesh
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#implicit-geometry" class="md-nav__link">
     <span class="md-ellipsis">
       Implicit Geometry
@@ -1708,15 +1699,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quad-mesh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quad Mesh
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#implicit-geometry" class="md-nav__link">
     <span class="md-ellipsis">
       Implicit Geometry
@@ -1742,14 +1724,13 @@
 
 <div><h1 id="geometry">Geometry</h1>
 <p>In simulation programs, geometry is a fundamental concept to represent the shape of the object, or rigrously, the domain of the simulation. </p>
-<p>There are several kinds of geometry, such as point cloud, line mesh, triangle mesh, quad mesh, polygon mesh, tetrahedral mesh, hexahedral mesh and so on, these geometries are called explicit geometries, because we use a discrete set of vertices and primitives to represent the  There are also some implicit geometries, such as the Signed Distance Field (SDF), which is a scalar field that represents the distance from the point to the surface of the  It's inrealistic and inpractical to represent all the geometries in a single way, so we separate the geometries into several categories, and provide proper interfaces to access the relative information of the </p>
+<p>There are several kinds of geometry, such as point cloud, line mesh, triangle mesh, quad mesh, polygon mesh, tetrahedral mesh, hexahedral mesh and so on, these geometries are called explicit geometries, because we use a discrete set of vertices and primitives to represent the  There are also some implicit geometries, such as the Signed Distance Field (SDF), which is a scalar field that represents the distance from the point to the surface of the  It's inrealistic and inpractical to represent all the geometries in a single way, so we separate the geometries into several categories, and provide proper interfaces to access the relative information.</p>
 <p>They are:</p>
 <ul>
 <li><a href="#simplicial-complex">Simplicial Complex</a>: A unified representation of the explicit geometries, whose primitives are simplices, such as point, line, triangle, tetrahedron, etc. Some examples are point cloud, line mesh, triangle mesh, tetrahedral mesh, etc.</li>
-<li><a href="#quad-mesh">Quad Mesh</a>: A 2D mesh whose primitives are quadrilaterals, which is commonly used in the simulation of cloth.</li>
 <li><a href="#implicit-geometry">Implicit Geometry</a>: A presentation of the implicit geometries, such as the Signed Distance Field (SDF).</li>
 </ul>
-<p>In this tutorial, we fill focus on the simplicial complex, which is the most common geometry in the simulation programs. And describe the geometry interface in the <code>libuipc</code> library. </p>
+<p>In this tutorial, we will focus on the simplicial complex, which is the most common geometry in the simulation programs. And describe the geometry interface in the <code>libuipc</code> library. </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2192,8 +2173,8 @@ See also the <a href="../../Libuipc/classuipc_1_1geometry_1_1_spread_sheet_i_o/"
 </thead>
 <tbody>
 <tr>
-<td><img alt="" src="../img/spreadsheet_csv.png"></td>
-<td><img alt="" src="../img/spreadsheet_json.png"></td>
+<td><img alt="" src="../media/spreadsheet_csv.png"></td>
+<td><img alt="" src="../media/spreadsheet_json.png"></td>
 </tr>
 <tr>
 <td><a href="https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer">Excel Viewer</a></td>
@@ -2202,8 +2183,6 @@ See also the <a href="../../Libuipc/classuipc_1_1geometry_1_1_spread_sheet_i_o/"
 </tbody>
 </table>
 <p>It's a very convenient way to check the geometry information. If you are interested in some geometry operations, you can write the results to the spreadsheets and check them with the viewer.</p>
-<h2 id="quad-mesh">Quad Mesh</h2>
-<p>[TODO]</p>
 <h2 id="implicit-geometry">Implicit Geometry</h2>
 <p>[TODO]</p></div>
 

@@ -6,7 +6,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**formatter&lt; uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_3_01_is_const_01_4_01_4.md)
+[**ClassList**](annotated.md) **>** [**fmt**](namespacefmt.md) **>** [**formatter&lt; uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_3_01_is_const_01_4_01_4.md)
 
 
 
@@ -91,7 +91,7 @@ Inherits the following classes: formatter< string_view >
 ### function format 
 
 ```C++
-inline auto formatter< uipc::geometry::Geometry::MetaAttributesT< IsConst > >::format (
+inline auto fmt::formatter< uipc::geometry::Geometry::MetaAttributesT< IsConst > >::format (
     const uipc::geometry::Geometry::MetaAttributesT < IsConst > & attr,
     format_context & ctx
 ) 
