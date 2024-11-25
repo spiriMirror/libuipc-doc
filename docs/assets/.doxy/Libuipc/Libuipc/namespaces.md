@@ -17,6 +17,7 @@ Here is a list of all namespaces with brief descriptions:
     * **namespace** [**details**](namespaceuipc_1_1details.md)     
     * **namespace** [**diff\_sim**](namespaceuipc_1_1diff__sim.md)     
     * **namespace** [**geometry**](namespaceuipc_1_1geometry.md)     
+        * **namespace** [**affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md)     
     * **namespace** [**gui**](namespaceuipc_1_1gui.md)     
     * **namespace** [**pmr**](namespaceuipc_1_1pmr.md) 
 

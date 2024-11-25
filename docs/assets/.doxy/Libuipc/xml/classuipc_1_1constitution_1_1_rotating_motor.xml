@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1constitution_1_1_rotating_motor" kind="class" language="C++" prot="public" final="yes">
     <compoundname>uipc::constitution::RotatingMotor</compoundname>
     <basecompoundref refid="classuipc_1_1constitution_1_1_constraint" prot="public" virt="non-virtual">uipc::constitution::Constraint</basecompoundref>
@@ -55,10 +55,10 @@
         </inbodydescription>
         <location file="include/uipc/constitution/soft_transform_constraint.h" line="40" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1_rotating_motor_1a97589d1f10bb85b53141fe6086a4ef5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1_rotating_motor_1a235dc6b55c435da3c5e573b9ac72aeba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::constitution::RotatingMotor::apply_to</definition>
-        <argsstring>(geometry::SimplicialComplex &amp;sc, Float strength_ratio=100.0, Vector3 motor_rot_axis=Vector3::UnitX(), Float motor_rot_vel=2 *std::numbers::pi) const</argsstring>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float strength_ratio=100.0, const Vector3 &amp;motor_rot_axis=Vector3::UnitX(), Float motor_rot_vel=2 *std::numbers::pi) const</argsstring>
         <name>apply_to</name>
         <qualifiedname>uipc::constitution::RotatingMotor::apply_to</qualifiedname>
         <param>
@@ -71,7 +71,7 @@
           <defval>100.0</defval>
         </param>
         <param>
-          <type>Vector3</type>
+          <type>const Vector3 &amp;</type>
           <declname>motor_rot_axis</declname>
           <defval>Vector3::UnitX()</defval>
         </param>
@@ -187,7 +187,7 @@
     <location file="include/uipc/constitution/soft_transform_constraint.h" line="35" column="1" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="36" bodyend="56"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1_rotating_motor_1a56818ae0377997bf51a342da38cc43b9" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>animate</name></member>
-      <member refid="classuipc_1_1constitution_1_1_rotating_motor_1a97589d1f10bb85b53141fe6086a4ef5d" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1_rotating_motor_1a235dc6b55c435da3c5e573b9ac72aeba" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1_constraint_1aa0aef5d1f018ab6427223f181821ee22" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::Constraint::"><scope>uipc::constitution::RotatingMotor</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1_rotating_motor_1a787fcf793ca73a29f90f2a3f20a3e7f4" prot="private" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>Base</name></member>
       <member refid="classuipc_1_1constitution_1_1_constraint_1ad1c93564e93d05c9ecd0330cfcacbe46" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>Constraint</name></member>

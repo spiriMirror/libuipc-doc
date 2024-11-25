@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceuipc_1_1geometry_1_1affine__body" kind="namespace" language="C++">
+    <compoundname>uipc::geometry::affine_body</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="compute__body__force_8h_1ad9461f8d0d720c9b7e21ba32ddc219e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Vector12</type>
+        <definition>UIPC_GEOMETRY_API Vector12 uipc::geometry::affine_body::compute_body_force</definition>
+        <argsstring>(const SimplicialComplex &amp;sc, const Vector3 &amp;body_force_density)</argsstring>
+        <name>compute_body_force</name>
+        <qualifiedname>uipc::geometry::affine_body::compute_body_force</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>body_force_density</declname>
+        </param>
+        <briefdescription>
+<para>Compute the body force of an affine body. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body_force_density</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The body force density in N/m^3. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body_force</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The body force </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/affine_body/compute_body_force.h" line="15" column="28" declfile="include/uipc/geometry/utils/affine_body/compute_body_force.h" declline="15" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="compute__dyadic__mass_8h_1a6a37eab2820f68aab66a17b0c63ea7ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API void</type>
+        <definition>UIPC_GEOMETRY_API void uipc::geometry::affine_body::compute_dyadic_mass</definition>
+        <argsstring>(const SimplicialComplex &amp;sc, Float rho, Float &amp;m, Vector3 &amp;m_x_bar, Matrix3x3 &amp;m_x_bar_x_bar)</argsstring>
+        <name>compute_dyadic_mass</name>
+        <qualifiedname>uipc::geometry::affine_body::compute_dyadic_mass</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>rho</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>m_x_bar</declname>
+        </param>
+        <param>
+          <type>Matrix3x3 &amp;</type>
+          <declname>m_x_bar_x_bar</declname>
+        </param>
+        <briefdescription>
+<para>Compute the dyadic mass of a simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Integrate the mass density over the simplicial complex to compute the dyadic mass.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total mass.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">m_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total mass times the center of mass.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">m_x_bar_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total mass times the center of mass times the center of mass transpose. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h" line="23" column="24" declfile="include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h" declline="23" declcolumn="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/geometry/utils/affine_body/compute_body_force.h" line="6" column="1"/>
+  </compounddef>
+</doxygen>

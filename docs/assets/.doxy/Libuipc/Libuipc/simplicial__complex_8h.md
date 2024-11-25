@@ -39,7 +39,6 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::geometry::SimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4.md) &lt;&gt;<br> |
 | class | [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) <br>_A simplicial complex is a collection of simplices._  |
 
 

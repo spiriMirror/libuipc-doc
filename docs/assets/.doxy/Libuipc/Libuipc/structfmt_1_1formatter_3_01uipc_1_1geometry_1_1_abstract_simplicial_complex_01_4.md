@@ -6,7 +6,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**fmt**](namespacefmt.md) **>** [**formatter&lt; uipc::geometry::AbstractSimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_abstract_simplicial_complex_01_4.md)
+[**ClassList**](annotated.md) **>** [**formatter&lt; uipc::geometry::AbstractSimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_abstract_simplicial_complex_01_4.md)
 
 
 
@@ -91,7 +91,7 @@ Inherits the following classes: formatter< string_view >
 ### function format 
 
 ```C++
-appender fmt::formatter< uipc::geometry::AbstractSimplicialComplex >::format (
+appender formatter< uipc::geometry::AbstractSimplicialComplex >::format (
     const uipc::geometry::AbstractSimplicialComplex & c,
     format_context & ctx
 ) const

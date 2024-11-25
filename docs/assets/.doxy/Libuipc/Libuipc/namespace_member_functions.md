@@ -12,7 +12,10 @@
 ## c
 
 * **config** ([**uipc**](namespaceuipc.md))
-* **compute\_vertex\_mass** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_instance\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_vertex\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
+* **compute\_dyadic\_mass** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 
 
 ## d
@@ -50,6 +53,7 @@
 ## i
 
 * **init** ([**uipc**](namespaceuipc.md))
+* **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
 ## l

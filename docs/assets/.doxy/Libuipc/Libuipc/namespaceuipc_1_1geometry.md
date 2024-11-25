@@ -23,6 +23,11 @@
 
 
 
+## Namespaces
+
+| Type | Name |
+| ---: | :--- |
+| namespace | [**affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md) <br> |
 
 
 ## Classes
@@ -41,7 +46,6 @@
 | class | [**GeometryAttributeError**](classuipc_1_1geometry_1_1_geometry_attribute_error.md) <br> |
 | class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
-| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
 | class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md) &lt;&gt;<br> |
@@ -91,13 +95,15 @@
 | ---: | :--- |
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_region**](#function-apply_region) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Take apart the simplicial complex by regions._  |
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
-|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_mass**](#function-compute_vertex_mass) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R, Float mass\_density) <br> |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_instance\_volume**](#function-compute_instance_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Compute the volume of an instance in the simplicial complex._ [_**Attribute**_](classuipc_1_1geometry_1_1_attribute.md) __`volume` _&lt;Float&gt; will be created in the instance vertices._ |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_volume**](#function-compute_vertex_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br> |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & src) <br>_Extract the surface of a tetrahedral mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Extract the surface of a list of tetrahedral meshes and merge them into one._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**facet\_closure**](#function-facet_closure) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Generate the closure from a collection of facet simplices, who only have the top dimension simplices._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**flip\_inward\_triangles**](#function-flip_inward_triangles) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Flip the orientation of the triangles in the simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**ground**](#function-ground) (Float height=0.0, const Vector3 & N=Vector3::UnitY()) <br>_Create a gound plane._  |
 |  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**halfplane**](#function-halfplane) (const Vector3 & P=Vector3::Zero(), const Vector3 & N=Vector3::UnitY()) <br>_Create a half-plane._  |
+|  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Check if a trimesh is closed._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_region**](#function-label_region) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the regions of a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_surface**](#function-label_surface) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Label the surface of a simplicial complex._  |
@@ -163,7 +169,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -176,7 +182,7 @@ using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
 ```
 
 
@@ -245,12 +251,48 @@ vector&lt;SimplicialComplex&gt; the transformed simplicial complexes.
 
 
 
-### function compute\_vertex\_mass 
+### function compute\_instance\_volume 
+
+_Compute the volume of an instance in the simplicial complex._ [_**Attribute**_](classuipc_1_1geometry_1_1_attribute.md) __`volume` _&lt;Float&gt; will be created in the instance vertices._
+```C++
+UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_instance_volume (
+    SimplicialComplex & R
+) 
+```
+
+
+
+Only tetmesh and closed trimesh are supported.
+
+
+
+
+**Parameters:**
+
+
+* `R` The simplicial complex. 
+
+
+
+**Returns:**
+
+The attribute slot of the instance volume. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function compute\_vertex\_volume 
 
 ```C++
-UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_vertex_mass (
-    SimplicialComplex & R,
-    Float mass_density
+UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_vertex_volume (
+    SimplicialComplex & R
 ) 
 ```
 
@@ -428,6 +470,43 @@ UIPC_GEOMETRY_API ImplicitGeometry uipc::geometry::halfplane (
 
 
 * `height` The height of the ground plane 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function is\_trimesh\_closed 
+
+_Check if a trimesh is closed._ 
+```C++
+UIPC_GEOMETRY_API bool uipc::geometry::is_trimesh_closed (
+    const SimplicialComplex & R
+) 
+```
+
+
+
+Only 2D [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) is supported.
+
+
+
+
+**Parameters:**
+
+
+* `R` the simplicial complex to be checked. 
+
+
+
+**Returns:**
+
+true if the trimesh is closed, false otherwise. 
+
 
 
 

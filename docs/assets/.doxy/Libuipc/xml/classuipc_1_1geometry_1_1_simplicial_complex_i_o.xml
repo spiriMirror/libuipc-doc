@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::SimplicialComplexIO</compoundname>
     <includes refid="simplicial__complex__io_8h" local="no">simplicial_complex_io.h</includes>
@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/simplicial_complex_io.h" line="70" column="15" bodyfile="include/uipc/io/simplicial_complex_io.h" bodystart="70" bodyend="-1"/>
+        <location file="include/uipc/io/simplicial_complex_io.h" line="85" column="15" bodyfile="include/uipc/io/simplicial_complex_io.h" bodystart="85" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -232,6 +232,37 @@
         </inbodydescription>
         <location file="include/uipc/io/simplicial_complex_io.h" line="48" column="24"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a2244b15a24c0d4ccc95956c8d6246abe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>SimplicialComplex uipc::geometry::SimplicialComplexIO::read_ply</definition>
+        <argsstring>(std::string_view file_name)</argsstring>
+        <name>read_ply</name>
+        <qualifiedname>uipc::geometry::SimplicialComplexIO::read_ply</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+<para>Read a trimesh, linemesh or particles from a .ply file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/simplicial_complex_io.h" line="57" column="24"/>
+      </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a634c8ecd7dfdf338c25c63bcfaa887ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::geometry::SimplicialComplexIO::write</definition>
@@ -247,12 +278,31 @@
           <declname>sc</declname>
         </param>
         <briefdescription>
+<para>Write a simplicial complex to a file, the file type is determined by the file extension. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/simplicial_complex_io.h" line="51" column="10"/>
+        <location file="include/uipc/io/simplicial_complex_io.h" line="66" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a704549f1be3d43662bd0234123cde7c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -293,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/simplicial_complex_io.h" line="59" column="10"/>
+        <location file="include/uipc/io/simplicial_complex_io.h" line="74" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1aa3310db8436bdeda211425fee689481f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -334,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/simplicial_complex_io.h" line="67" column="10"/>
+        <location file="include/uipc/io/simplicial_complex_io.h" line="82" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -354,7 +404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/simplicial_complex_io.h" line="71" column="15"/>
+        <location file="include/uipc/io/simplicial_complex_io.h" line="86" column="15"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -362,7 +412,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/io/simplicial_complex_io.h" line="11" column="1" bodyfile="include/uipc/io/simplicial_complex_io.h" bodystart="12" bodyend="72"/>
+    <location file="include/uipc/io/simplicial_complex_io.h" line="11" column="1" bodyfile="include/uipc/io/simplicial_complex_io.h" bodystart="12" bodyend="87"/>
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a62c70c5aa2a400866a3385ee5fe2cd11" prot="private" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>apply_pre_transform</name></member>
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a165a2e611b97ad8d65539c80b4ab7e04" prot="private" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>m_pre_transform</name></member>
@@ -371,6 +421,7 @@
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1aadbc6c519f6365475b079fb9e71d5cc8" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>read</name></member>
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a5d9dbb8f3f9d53ac328e9c21cab75e30" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>read_msh</name></member>
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a900204cda1620685cf01b4ab39d823af" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>read_obj</name></member>
+      <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a2244b15a24c0d4ccc95956c8d6246abe" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>read_ply</name></member>
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a1ec82c29a2ed69c11dfef9a6671c933f" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>SimplicialComplexIO</name></member>
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1ab86991da5d4ca0b8fcbee100360ef116" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>SimplicialComplexIO</name></member>
       <member refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1a2b805efe9aaa71e1ffa2bb2288609503" prot="public" virt="non-virtual"><scope>uipc::geometry::SimplicialComplexIO</scope><name>SimplicialComplexIO</name></member>

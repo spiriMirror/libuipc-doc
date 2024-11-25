@@ -93,7 +93,7 @@ Inherits the following classes: [uipc::constitution::Constraint](classuipc_1_1co
 | Type | Name |
 | ---: | :--- |
 |   | [**RotatingMotor**](#function-rotatingmotor) (const Json & config=default\_config()) noexcept<br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float strength\_ratio=100.0, Vector3 motor\_rot\_axis=Vector3::UnitX(), Float motor\_rot\_vel=2 \*std::numbers::pi) const<br> |
+|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float strength\_ratio=100.0, const Vector3 & motor\_rot\_axis=Vector3::UnitX(), Float motor\_rot\_vel=2 \*std::numbers::pi) const<br> |
 
 
 ## Public Functions inherited from uipc::constitution::Constraint
@@ -248,7 +248,7 @@ uipc::constitution::RotatingMotor::RotatingMotor (
 void uipc::constitution::RotatingMotor::apply_to (
     geometry::SimplicialComplex & sc,
     Float strength_ratio=100.0,
-    Vector3 motor_rot_axis=Vector3::UnitX(),
+    const Vector3 & motor_rot_axis=Vector3::UnitX(),
     Float motor_rot_vel=2 *std::numbers::pi
 ) const
 ```

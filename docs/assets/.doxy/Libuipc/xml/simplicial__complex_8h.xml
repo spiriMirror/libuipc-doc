@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="simplicial__complex_8h" kind="file" language="C++">
     <compoundname>simplicial_complex.h</compoundname>
     <includes refid="geometry_2geometry_8h" local="no">uipc/geometry/geometry.h</includes>
@@ -13,13 +13,17 @@
     <includedby refid="soft__transform__constraint_8h" local="no">include/uipc/constitution/soft_transform_constraint.h</includedby>
     <includedby refid="core_8h" local="no">include/uipc/core.h</includedby>
     <includedby refid="simplicial__complex__slot_8h" local="no">include/uipc/geometry/simplicial_complex_slot.h</includedby>
+    <includedby refid="compute__body__force_8h" local="no">include/uipc/geometry/utils/affine_body/compute_body_force.h</includedby>
+    <includedby refid="compute__dyadic__mass_8h" local="no">include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h</includedby>
     <includedby refid="apply__region_8h" local="no">include/uipc/geometry/utils/apply_region.h</includedby>
     <includedby refid="apply__transform_8h" local="no">include/uipc/geometry/utils/apply_transform.h</includedby>
     <includedby refid="closure_8h" local="no">include/uipc/geometry/utils/closure.h</includedby>
-    <includedby refid="compute__vertex__mass_8h" local="no">include/uipc/geometry/utils/compute_vertex_mass.h</includedby>
+    <includedby refid="compute__instance__volume_8h" local="no">include/uipc/geometry/utils/compute_instance_volume.h</includedby>
+    <includedby refid="compute__vertex__volume_8h" local="no">include/uipc/geometry/utils/compute_vertex_volume.h</includedby>
     <includedby refid="extract__surface_8h" local="no">include/uipc/geometry/utils/extract_surface.h</includedby>
     <includedby refid="factory_8h" local="no">include/uipc/geometry/utils/factory.h</includedby>
     <includedby refid="flip__inward__triangles_8h" local="no">include/uipc/geometry/utils/flip_inward_triangles.h</includedby>
+    <includedby refid="is__trimesh__closed_8h" local="no">include/uipc/geometry/utils/is_trimesh_closed.h</includedby>
     <includedby refid="label__connected__vertices_8h" local="no">include/uipc/geometry/utils/label_connected_vertices.h</includedby>
     <includedby refid="label__region_8h" local="no">include/uipc/geometry/utils/label_region.h</includedby>
     <includedby refid="label__surface_8h" local="no">include/uipc/geometry/utils/label_surface.h</includedby>
@@ -395,7 +399,7 @@
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="23">
         <label>include/uipc/geometry.h</label>
         <link refid="geometry_8h_source"/>
         <childnode refid="17" relation="include">
@@ -422,9 +426,9 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
@@ -450,9 +454,17 @@
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
         <childnode refid="38" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
         </childnode>
       </node>
       <node id="18">
@@ -461,120 +473,138 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="22">
         <label>include/uipc/geometry/utils.h</label>
         <link refid="utils_8h_source"/>
-        <childnode refid="21" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="19">
+        <label>include/uipc/geometry/utils/affine_body/compute_body_force.h</label>
+        <link refid="compute__body__force_8h_source"/>
+      </node>
+      <node id="20">
+        <label>include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h</label>
+        <link refid="compute__dyadic__mass_8h_source"/>
+      </node>
+      <node id="21">
         <label>include/uipc/geometry/utils/apply_region.h</label>
         <link refid="apply__region_8h_source"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-      </node>
-      <node id="22">
-        <label>include/uipc/geometry/utils/apply_transform.h</label>
-        <link refid="apply__transform_8h_source"/>
-        <childnode refid="20" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>include/uipc/geometry/utils/closure.h</label>
-        <link refid="closure_8h_source"/>
-        <childnode refid="20" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="24">
-        <label>include/uipc/geometry/utils/compute_vertex_mass.h</label>
-        <link refid="compute__vertex__mass_8h_source"/>
+        <label>include/uipc/geometry/utils/apply_transform.h</label>
+        <link refid="apply__transform_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
       </node>
       <node id="25">
-        <label>include/uipc/geometry/utils/extract_surface.h</label>
-        <link refid="extract__surface_8h_source"/>
-        <childnode refid="20" relation="include">
+        <label>include/uipc/geometry/utils/closure.h</label>
+        <link refid="closure_8h_source"/>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="26">
-        <label>include/uipc/geometry/utils/factory.h</label>
-        <link refid="factory_8h_source"/>
-        <childnode refid="20" relation="include">
+        <label>include/uipc/geometry/utils/compute_instance_volume.h</label>
+        <link refid="compute__instance__volume_8h_source"/>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="27">
-        <label>include/uipc/geometry/utils/flip_inward_triangles.h</label>
-        <link refid="flip__inward__triangles_8h_source"/>
-        <childnode refid="20" relation="include">
-        </childnode>
+        <label>include/uipc/geometry/utils/compute_vertex_volume.h</label>
+        <link refid="compute__vertex__volume_8h_source"/>
       </node>
       <node id="28">
-        <label>include/uipc/geometry/utils/label_connected_vertices.h</label>
-        <link refid="label__connected__vertices_8h_source"/>
-        <childnode refid="20" relation="include">
+        <label>include/uipc/geometry/utils/extract_surface.h</label>
+        <link refid="extract__surface_8h_source"/>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="29">
-        <label>include/uipc/geometry/utils/label_region.h</label>
-        <link refid="label__region_8h_source"/>
-        <childnode refid="20" relation="include">
+        <label>include/uipc/geometry/utils/factory.h</label>
+        <link refid="factory_8h_source"/>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="30">
-        <label>include/uipc/geometry/utils/label_surface.h</label>
-        <link refid="label__surface_8h_source"/>
-        <childnode refid="20" relation="include">
+        <label>include/uipc/geometry/utils/flip_inward_triangles.h</label>
+        <link refid="flip__inward__triangles_8h_source"/>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="31">
-        <label>include/uipc/geometry/utils/label_triangle_orient.h</label>
-        <link refid="label__triangle__orient_8h_source"/>
-        <childnode refid="20" relation="include">
-        </childnode>
+        <label>include/uipc/geometry/utils/is_trimesh_closed.h</label>
+        <link refid="is__trimesh__closed_8h_source"/>
       </node>
       <node id="32">
-        <label>include/uipc/geometry/utils/merge.h</label>
-        <link refid="merge_8h_source"/>
-        <childnode refid="20" relation="include">
+        <label>include/uipc/geometry/utils/label_connected_vertices.h</label>
+        <link refid="label__connected__vertices_8h_source"/>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="33">
-        <label>include/uipc/geometry/utils/mesh_partition.h</label>
-        <link refid="mesh__partition_8h_source"/>
+        <label>include/uipc/geometry/utils/label_region.h</label>
+        <link refid="label__region_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
       </node>
       <node id="34">
-        <label>include/uipc/geometry/utils/tetrahedralize.h</label>
-        <link refid="tetrahedralize_8h_source"/>
-        <childnode refid="20" relation="include">
+        <label>include/uipc/geometry/utils/label_surface.h</label>
+        <link refid="label__surface_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>include/uipc/geometry/utils/label_triangle_orient.h</label>
+        <link refid="label__triangle__orient_8h_source"/>
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="36">
+        <label>include/uipc/geometry/utils/merge.h</label>
+        <link refid="merge_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>include/uipc/geometry/utils/mesh_partition.h</label>
+        <link refid="mesh__partition_8h_source"/>
+      </node>
+      <node id="38">
+        <label>include/uipc/geometry/utils/tetrahedralize.h</label>
+        <link refid="tetrahedralize_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
         <label>include/uipc/io.h</label>
         <link refid="io_8h_source"/>
         <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="41">
         <label>include/uipc/io/gltf_io.h</label>
         <link refid="gltf__io_8h_source"/>
       </node>
-      <node id="35">
+      <node id="39">
         <label>include/uipc/io/scene_io.h</label>
         <link refid="scene__io_8h_source"/>
-        <childnode refid="36" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="38">
+      <node id="42">
         <label>include/uipc/io/simplicial_complex_io.h</label>
         <link refid="simplicial__complex__io_8h_source"/>
-        <childnode refid="36" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
       </node>
-      <node id="39">
+      <node id="43">
         <label>include/uipc/io/spread_sheet_io.h</label>
         <link refid="spread__sheet__io_8h_source"/>
-        <childnode refid="36" relation="include">
+        <childnode refid="40" relation="include">
         </childnode>
       </node>
       <node id="17">
@@ -583,7 +613,7 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex" prot="public">uipc::geometry::SimplicialComplex</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4" prot="public">fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4" prot="private">fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1geometry">uipc::geometry</innernamespace>
     <innernamespace refid="namespacefmt">fmt</innernamespace>
@@ -610,14 +640,14 @@
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_geometry_friend" kindref="compound">GeometryFriend</ref>;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="35" refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" kindref="member">VertexAttributes</ref><sp/><sp/>=<sp/>SimplicialComplexAttributes&lt;false,<sp/>0&gt;;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CVertexAttributes<sp/>=<sp/>SimplicialComplexAttributes&lt;true,<sp/>0&gt;;</highlight></codeline>
-<codeline lineno="42" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0fcdacbdce2bf6b750a4aa7931f583c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0fcdacbdce2bf6b750a4aa7931f583c4" kindref="member">EdgeAttributes</ref><sp/><sp/>=<sp/>SimplicialComplexAttributes&lt;false,<sp/>1&gt;;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CEdgeAttributes<sp/>=<sp/>SimplicialComplexAttributes&lt;true,<sp/>1&gt;;</highlight></codeline>
-<codeline lineno="49" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3b113a40d6caa90c6a19df7ff11163c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3b113a40d6caa90c6a19df7ff11163c8" kindref="member">TriangleAttributes</ref><sp/><sp/>=<sp/>SimplicialComplexAttributes&lt;false,<sp/>2&gt;;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CTriangleAttributes<sp/>=<sp/>SimplicialComplexAttributes&lt;true,<sp/>2&gt;;</highlight></codeline>
-<codeline lineno="56" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" kindref="member">TetrahedronAttributes</ref><sp/><sp/>=<sp/>SimplicialComplexAttributes&lt;false,<sp/>3&gt;;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CTetrahedronAttributes<sp/>=<sp/>SimplicialComplexAttributes&lt;true,<sp/>3&gt;;</highlight></codeline>
+<codeline lineno="35" refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" kindref="member">VertexAttributes</ref><sp/><sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;false, 0&gt;</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CVertexAttributes<sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;true, 0&gt;</ref>;</highlight></codeline>
+<codeline lineno="42" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0fcdacbdce2bf6b750a4aa7931f583c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0fcdacbdce2bf6b750a4aa7931f583c4" kindref="member">EdgeAttributes</ref><sp/><sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;false, 1&gt;</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CEdgeAttributes<sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;true, 1&gt;</ref>;</highlight></codeline>
+<codeline lineno="49" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3b113a40d6caa90c6a19df7ff11163c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3b113a40d6caa90c6a19df7ff11163c8" kindref="member">TriangleAttributes</ref><sp/><sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;false, 2&gt;</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CTriangleAttributes<sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;true, 2&gt;</ref>;</highlight></codeline>
+<codeline lineno="56" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" kindref="member">TetrahedronAttributes</ref><sp/><sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;false, 3&gt;</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CTetrahedronAttributes<sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;true, 3&gt;</ref>;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>();</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
@@ -629,10 +659,10 @@
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>operator=(<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;&amp;<sp/>o)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a24795c8b6af9e178c79cc12afb2a2040" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>AttributeSlot&lt;Matrix4x4&gt;&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a24795c8b6af9e178c79cc12afb2a2040" kindref="member">transforms</ref>();</highlight></codeline>
-<codeline lineno="80" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a65433918644d61ce535d8172d30253e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>AttributeSlot&lt;Matrix4x4&gt;&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a65433918644d61ce535d8172d30253e4" kindref="member">transforms</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a24795c8b6af9e178c79cc12afb2a2040" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot&lt;Matrix4x4&gt;</ref>&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a24795c8b6af9e178c79cc12afb2a2040" kindref="member">transforms</ref>();</highlight></codeline>
+<codeline lineno="80" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a65433918644d61ce535d8172d30253e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot&lt;Matrix4x4&gt;</ref>&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a65433918644d61ce535d8172d30253e4" kindref="member">transforms</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ac2bebf6e8fb15b51b2ddf8694d5a2076" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>AttributeSlot&lt;Vector3&gt;&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ac2bebf6e8fb15b51b2ddf8694d5a2076" kindref="member">positions</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="87" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ac2bebf6e8fb15b51b2ddf8694d5a2076" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot&lt;Vector3&gt;</ref>&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ac2bebf6e8fb15b51b2ddf8694d5a2076" kindref="member">positions</ref>()<sp/>noexcept;</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="94" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3e1631f15a7ff02d7ebd5375336dd447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt;Vector3&gt;&amp;<sp/>positions()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
@@ -670,7 +700,7 @@
 <codeline lineno="154"><highlight class="normal">namespace<sp/>fmt</highlight></codeline>
 <codeline lineno="155"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
-<codeline lineno="157" refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>formatter&lt;uipc::geometry::SimplicialComplex&gt;<sp/>:<sp/>formatter&lt;string_view&gt;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>formatter&lt;uipc::<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref>&gt;<sp/>:<sp/>formatter&lt;string_view&gt;</highlight></codeline>
 <codeline lineno="158"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>appender<sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">uipc::geometry::SimplicialComplex</ref>&amp;<sp/>c,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="160"><highlight class="normal">};</highlight></codeline>

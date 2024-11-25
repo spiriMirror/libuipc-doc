@@ -212,7 +212,7 @@
 ### typedef Allocator 
 
 ```C++
-using uipc::Allocator =  std::pmr::polymorphic_allocator<T>;
+using uipc::Allocator = typedef std::pmr::polymorphic_allocator<T>;
 ```
 
 
@@ -225,7 +225,7 @@ using uipc::Allocator =  std::pmr::polymorphic_allocator<T>;
 ### typedef Float 
 
 ```C++
-using uipc::Float =  double;
+using uipc::Float = typedef double;
 ```
 
 
@@ -238,7 +238,7 @@ using uipc::Float =  double;
 ### typedef I32 
 
 ```C++
-using uipc::I32 =  int32_t;
+using uipc::I32 = typedef int32_t;
 ```
 
 
@@ -251,7 +251,7 @@ using uipc::I32 =  int32_t;
 ### typedef I64 
 
 ```C++
-using uipc::I64 =  int64_t;
+using uipc::I64 = typedef int64_t;
 ```
 
 
@@ -264,7 +264,7 @@ using uipc::I64 =  int64_t;
 ### typedef IndexT 
 
 ```C++
-using uipc::IndexT =  int32_t;
+using uipc::IndexT = typedef int32_t;
 ```
 
 
@@ -277,7 +277,7 @@ using uipc::IndexT =  int32_t;
 ### typedef Json 
 
 ```C++
-using uipc::Json =  nlohmann::json;
+using uipc::Json = typedef nlohmann::json;
 ```
 
 
@@ -290,7 +290,7 @@ using uipc::Json =  nlohmann::json;
 ### typedef Matrix12x12 
 
 ```C++
-using uipc::Matrix12x12 =  Matrix<Float, 12, 12>;
+using uipc::Matrix12x12 = typedef Matrix<Float, 12, 12>;
 ```
 
 
@@ -303,7 +303,7 @@ using uipc::Matrix12x12 =  Matrix<Float, 12, 12>;
 ### typedef Matrix2x2 
 
 ```C++
-using uipc::Matrix2x2 =  Matrix<Float, 2, 2>;
+using uipc::Matrix2x2 = typedef Matrix<Float, 2, 2>;
 ```
 
 
@@ -316,7 +316,7 @@ using uipc::Matrix2x2 =  Matrix<Float, 2, 2>;
 ### typedef Matrix3x3 
 
 ```C++
-using uipc::Matrix3x3 =  Matrix<Float, 3, 3>;
+using uipc::Matrix3x3 = typedef Matrix<Float, 3, 3>;
 ```
 
 
@@ -329,7 +329,7 @@ using uipc::Matrix3x3 =  Matrix<Float, 3, 3>;
 ### typedef Matrix4x4 
 
 ```C++
-using uipc::Matrix4x4 =  Matrix<Float, 4, 4>;
+using uipc::Matrix4x4 = typedef Matrix<Float, 4, 4>;
 ```
 
 
@@ -342,7 +342,7 @@ using uipc::Matrix4x4 =  Matrix<Float, 4, 4>;
 ### typedef Matrix6x6 
 
 ```C++
-using uipc::Matrix6x6 =  Matrix<Float, 6, 6>;
+using uipc::Matrix6x6 = typedef Matrix<Float, 6, 6>;
 ```
 
 
@@ -355,7 +355,7 @@ using uipc::Matrix6x6 =  Matrix<Float, 6, 6>;
 ### typedef Matrix9x9 
 
 ```C++
-using uipc::Matrix9x9 =  Matrix<Float, 9, 9>;
+using uipc::Matrix9x9 = typedef Matrix<Float, 9, 9>;
 ```
 
 
@@ -368,7 +368,7 @@ using uipc::Matrix9x9 =  Matrix<Float, 9, 9>;
 ### typedef S 
 
 ```C++
-using uipc::S =  std::shared_ptr<T>;
+using uipc::S = typedef std::shared_ptr<T>;
 ```
 
 
@@ -381,7 +381,7 @@ using uipc::S =  std::shared_ptr<T>;
 ### typedef SizeT 
 
 ```C++
-using uipc::SizeT =  std::size_t;
+using uipc::SizeT = typedef std::size_t;
 ```
 
 
@@ -394,7 +394,7 @@ using uipc::SizeT =  std::size_t;
 ### typedef Transform 
 
 ```C++
-using uipc::Transform =  Eigen::Transform<Float, 3, Eigen::Affine>;
+using uipc::Transform = typedef Eigen::Transform<Float, 3, Eigen::Affine>;
 ```
 
 
@@ -407,7 +407,7 @@ using uipc::Transform =  Eigen::Transform<Float, 3, Eigen::Affine>;
 ### typedef Translation 
 
 ```C++
-using uipc::Translation =  Eigen::Translation<Float, 3>;
+using uipc::Translation = typedef Eigen::Translation<Float, 3>;
 ```
 
 
@@ -420,7 +420,7 @@ using uipc::Translation =  Eigen::Translation<Float, 3>;
 ### typedef U 
 
 ```C++
-using uipc::U =  std::unique_ptr<T, PmrDeleter<T>>;
+using uipc::U = typedef std::unique_ptr<T, PmrDeleter<T> >;
 ```
 
 
@@ -433,7 +433,7 @@ using uipc::U =  std::unique_ptr<T, PmrDeleter<T>>;
 ### typedef U32 
 
 ```C++
-using uipc::U32 =  uint32_t;
+using uipc::U32 = typedef uint32_t;
 ```
 
 
@@ -446,7 +446,7 @@ using uipc::U32 =  uint32_t;
 ### typedef U64 
 
 ```C++
-using uipc::U64 =  uint64_t;
+using uipc::U64 = typedef uint64_t;
 ```
 
 
@@ -459,7 +459,7 @@ using uipc::U64 =  uint64_t;
 ### typedef Vector12 
 
 ```C++
-using uipc::Vector12 =  Vector<Float, 12>;
+using uipc::Vector12 = typedef Vector<Float, 12>;
 ```
 
 
@@ -472,7 +472,7 @@ using uipc::Vector12 =  Vector<Float, 12>;
 ### typedef Vector2 
 
 ```C++
-using uipc::Vector2 =  Vector<Float, 2>;
+using uipc::Vector2 = typedef Vector<Float, 2>;
 ```
 
 
@@ -485,7 +485,7 @@ using uipc::Vector2 =  Vector<Float, 2>;
 ### typedef Vector2i 
 
 ```C++
-using uipc::Vector2i =  Vector<IndexT, 2>;
+using uipc::Vector2i = typedef Vector<IndexT, 2>;
 ```
 
 
@@ -498,7 +498,7 @@ using uipc::Vector2i =  Vector<IndexT, 2>;
 ### typedef Vector3 
 
 ```C++
-using uipc::Vector3 =  Vector<Float, 3>;
+using uipc::Vector3 = typedef Vector<Float, 3>;
 ```
 
 
@@ -511,7 +511,7 @@ using uipc::Vector3 =  Vector<Float, 3>;
 ### typedef Vector3i 
 
 ```C++
-using uipc::Vector3i =  Vector<IndexT, 3>;
+using uipc::Vector3i = typedef Vector<IndexT, 3>;
 ```
 
 
@@ -524,7 +524,7 @@ using uipc::Vector3i =  Vector<IndexT, 3>;
 ### typedef Vector4 
 
 ```C++
-using uipc::Vector4 =  Vector<Float, 4>;
+using uipc::Vector4 = typedef Vector<Float, 4>;
 ```
 
 
@@ -537,7 +537,7 @@ using uipc::Vector4 =  Vector<Float, 4>;
 ### typedef Vector4i 
 
 ```C++
-using uipc::Vector4i =  Vector<IndexT, 4>;
+using uipc::Vector4i = typedef Vector<IndexT, 4>;
 ```
 
 
@@ -550,7 +550,7 @@ using uipc::Vector4i =  Vector<IndexT, 4>;
 ### typedef Vector6 
 
 ```C++
-using uipc::Vector6 =  Vector<Float, 6>;
+using uipc::Vector6 = typedef Vector<Float, 6>;
 ```
 
 
@@ -563,7 +563,7 @@ using uipc::Vector6 =  Vector<Float, 6>;
 ### typedef Vector9 
 
 ```C++
-using uipc::Vector9 =  Vector<Float, 9>;
+using uipc::Vector9 = typedef Vector<Float, 9>;
 ```
 
 
@@ -576,7 +576,7 @@ using uipc::Vector9 =  Vector<Float, 9>;
 ### typedef VectorX 
 
 ```C++
-using uipc::VectorX =  Eigen::VectorX<Float>;
+using uipc::VectorX = typedef Eigen::VectorX<Float>;
 ```
 
 
@@ -589,7 +589,7 @@ using uipc::VectorX =  Eigen::VectorX<Float>;
 ### typedef VectorXi 
 
 ```C++
-using uipc::VectorXi =  Eigen::VectorX<IndexT>;
+using uipc::VectorXi = typedef Eigen::VectorX<IndexT>;
 ```
 
 
@@ -602,7 +602,7 @@ using uipc::VectorXi =  Eigen::VectorX<IndexT>;
 ### typedef VectorXi64 
 
 ```C++
-using uipc::VectorXi64 =  Eigen::VectorX<I64>;
+using uipc::VectorXi64 = typedef Eigen::VectorX<I64>;
 ```
 
 
@@ -615,7 +615,7 @@ using uipc::VectorXi64 =  Eigen::VectorX<I64>;
 ### typedef VectorXu 
 
 ```C++
-using uipc::VectorXu =  Eigen::VectorX<U32>;
+using uipc::VectorXu = typedef Eigen::VectorX<U32>;
 ```
 
 
@@ -628,7 +628,7 @@ using uipc::VectorXu =  Eigen::VectorX<U32>;
 ### typedef VectorXu64 
 
 ```C++
-using uipc::VectorXu64 =  Eigen::VectorX<U64>;
+using uipc::VectorXu64 = typedef Eigen::VectorX<U64>;
 ```
 
 
@@ -641,7 +641,7 @@ using uipc::VectorXu64 =  Eigen::VectorX<U64>;
 ### typedef W 
 
 ```C++
-using uipc::W =  std::weak_ptr<T>;
+using uipc::W = typedef std::weak_ptr<T>;
 ```
 
 
@@ -654,7 +654,7 @@ using uipc::W =  std::weak_ptr<T>;
 ### typedef propagate\_const\_t 
 
 ```C++
-using uipc::propagate_const_t =  typename propagate_const<T, DstT>::type;
+using uipc::propagate_const_t = typedef typename propagate_const<T, DstT>::type;
 ```
 
 
@@ -667,7 +667,7 @@ using uipc::propagate_const_t =  typename propagate_const<T, DstT>::type;
 ### typedef signature\_t 
 
 ```C++
-using uipc::signature_t =  typename signature<Sig>::type;
+using uipc::signature_t = typedef typename signature<Sig>::type;
 ```
 
 
@@ -680,7 +680,7 @@ using uipc::signature_t =  typename signature<Sig>::type;
 ### typedef stack 
 
 ```C++
-using uipc::stack =  std::stack<T, std::pmr::deque<T>>;
+using uipc::stack = typedef std::stack<T, std::pmr::deque<T> >;
 ```
 
 

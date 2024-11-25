@@ -22,6 +22,7 @@
 #include <uipc/geometry/utils/label_region.h>
 #include <uipc/geometry/utils/apply_region.h>
 #include <uipc/geometry/utils/tetrahedralize.h>
+#include <uipc/geometry/utils/compute_instance_volume.h>
 ```
 
 

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="utils_8h" kind="file" language="C++">
     <compoundname>utils.h</compoundname>
     <includes refid="factory_8h" local="no">uipc/geometry/utils/factory.h</includes>
@@ -15,6 +15,7 @@
     <includes refid="label__region_8h" local="no">uipc/geometry/utils/label_region.h</includes>
     <includes refid="apply__region_8h" local="no">uipc/geometry/utils/apply_region.h</includes>
     <includes refid="tetrahedralize_8h" local="no">uipc/geometry/utils/tetrahedralize.h</includes>
+    <includes refid="compute__instance__volume_8h" local="no">uipc/geometry/utils/compute_instance_volume.h</includes>
     <includedby refid="geometry_8h" local="no">include/uipc/geometry.h</includedby>
     <incdepgraph>
       <node id="22">
@@ -292,6 +293,8 @@
         </childnode>
         <childnode refid="57" relation="include">
         </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
       </node>
       <node id="56">
         <label>uipc/geometry/utils/apply_region.h</label>
@@ -308,6 +311,12 @@
       <node id="47">
         <label>uipc/geometry/utils/closure.h</label>
         <link refid="closure_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>uipc/geometry/utils/compute_instance_volume.h</label>
+        <link refid="compute__instance__volume_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
@@ -471,6 +480,7 @@
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/label_region.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/apply_region.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/tetrahedralize.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/compute_instance_volume.h&gt;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/geometry/utils.h"/>
   </compounddef>
