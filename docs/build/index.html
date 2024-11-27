@@ -2074,8 +2074,8 @@
 <p>The following are <strong>libuipc</strong>'s 3rd-party dependencies. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-</div>
 <p>Normally, you don't need to install the following dependencies manually.</p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2218,10 +2218,11 @@ The simplest way to let CMake detect Vcpkg is to set the system environment vari
 <div class="tabbed-block">
 <h2 id="install-vcpkg_1">Install Vcpkg</h2>
 <p>If you haven't installed Vcpkg, you can clone the repository with the following command:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/microsoft/vcpkg.git
+<p></p><div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/microsoft/vcpkg.git
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>vcpkg
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>./bootstrap-vcpkg.sh
 </span></code></pre></div>
+The simplest way to let CMake detect Vcpkg is to set the system environment variable <code>CMAKE_TOOLCHAIN_FILE</code> to <code>(YOUR_VCPKG_PARENT_FOLDER)/vcpkg/scripts/buildsystems/vcpkg.cmake</code>
 <p>We recommend using conda environments to build the project on Linux. See the <a href="#Conda">Conda</a> section for more details. If you don't want to use conda, then go on with the following steps.</p>
 <h2 id="build-libuipc_1">Build Libuipc</h2>
 <p>You can use the following commands to build the project.</p>
