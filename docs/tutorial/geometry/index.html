@@ -1744,11 +1744,12 @@
 
 <div><h1 id="geometry">Geometry</h1>
 <p>In simulation programs, geometry is a fundamental concept to represent the shape of the object, or rigrously, the domain of the simulation. </p>
-<p>There are several kinds of geometry, such as point cloud, line mesh, triangle mesh, quad mesh, polygon mesh, tetrahedral mesh, hexahedral mesh and so on, these geometries are called explicit geometries, because we use a discrete set of vertices and primitives to represent the  There are also some implicit geometries, such as the Signed Distance Field (SDF), which is a scalar field that represents the distance from the point to the surface of the  It's inrealistic and inpractical to represent all the geometries in a single way, so we separate the geometries into several categories, and provide proper interfaces to access the relative information.</p>
+<p>There are several kinds of geometry, such as point cloud, line mesh, triangle mesh, quad mesh, polygon mesh, tetrahedral mesh, hexahedral mesh and so on, these geometries are called <strong>explicit geometries</strong>, because we use a discrete set of vertices and primitives to represent them. There are also some <strong>implicit geometries</strong>, such as the Signed Distance Field (SDF), which is a scalar field that represents the distance from the point to the surface of the geometry. It's inrealistic and inpractical to represent all the geometries in a single way, so we separate the geometries into several categories, and provide proper interfaces to access the relative information.</p>
 <p>They are:</p>
 <ul>
 <li><a href="#simplicial-complex">Simplicial Complex</a>: A unified representation of the explicit geometries, whose primitives are simplices, such as point, line, triangle, tetrahedron, etc. Some examples are point cloud, line mesh, triangle mesh, tetrahedral mesh, etc.</li>
 <li><a href="#implicit-geometry">Implicit Geometry</a>: A presentation of the implicit geometries, such as the Signed Distance Field (SDF).</li>
+<li>...</li>
 </ul>
 <p>In this tutorial, we will focus on the simplicial complex, which is the most common geometry in the simulation programs. And describe the geometry interface in the <code>libuipc</code> library. </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
@@ -1772,14 +1773,14 @@
 \text{Geometry} = \text{Topology} + \text{Attributes}
 \]</div>
 <p>Topologies describe how a geometry is connected, and attributes who have the same dimension as the topology carry the information of the geometry.</p>
-<p>For example, to represent a 2D surface in a triangle mesh (like famous <code>.obj</code> format), we store the positions of the vertices and the triangles that connect the vertices, as shown below:</p>
+<p>For example, to represent a 2D surface in a triangle mesh (like the famous <code>.obj</code> format), we store the positions of the vertices and the triangles that connect the vertices, as shown below:</p>
 <div class="arithmatex">\[
 V = \{ 0,1,...,N-1 \},
 \]</div>
 <p>where <span class="arithmatex">\(V\)</span> is the set of vertices, and <span class="arithmatex">\(N\)</span> is the number of vertices.</p>
 <p>We may store the positions of the vertices with the same count as the vertices:</p>
 <div class="arithmatex">\[
-P = \{ \mathbf{x}_i\mid i \in V \},
+P = \{ \mathbf{x}_i\mid i \in V \}, \mathbf{x}_i \in \mathbb{R}^3.
 \]</div>
 <p>To represent the triangle, we may store the indices of the vertices that form the triangle:</p>
 <div class="arithmatex">\[
@@ -1794,17 +1795,15 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 |P| = |V|, |A| = |F|,
 \]</div>
 <p>where <span class="arithmatex">\(|\bullet|\)</span> tells the element count of the set.</p>
-<p>With the same basic idea, we use a more general and well-defined way to represent such kind of geometry in the <code>libuipc</code> library, called <a href="https://brickisland.net/DDGSpring2022/course-description/">Simplicial Complex</a>, which is widely used in the diserete differential </p>
+<p>With the same basic idea, we use a more general and well-defined way to represent such kind of geometry in the <code>libuipc</code> library, called <a href="https://brickisland.net/DDGSpring2022/course-description/">Simplicial Complex</a>, which is widely used in the diserete differential geometry.</p>
 <h2 id="simplicial-complex">Simplicial Complex</h2>
-<p>In <code>libuipc</code>, a <code>Simplicial Complex</code> is a general representation of an explicit mesh. In <span class="arithmatex">\(\mathbb{R}^3\)</span>, a simplicial complex can be a tetrahedral mesh, a triangle mesh, a line mesh, or a point cloud, which have a dimension of 3, 2, 1, or 0, respectively.</p>
-<p>The tetrahedral mesh can be used to describe solid objects, like a bus, boxes ...</p>
-<p>[TODO: add some solid object figure]</p>
-<p>The triangle mesh can be used to describe some 2D-codimensional objects, like a cloth with a thin thickness.</p>
-<p>[TODO: add some cloth figure]</p>
-<p>The line mesh can be used to describe some 1D-codimensional objects, like a rope, a curve, or a wire.</p>
-<p>[TODO: add some rope figure here]</p>
-<p>The point cloud can be used to describe some 0D-codimensional objects, like a bunch of particles.</p>
-<p>[TODO: add some particle figure here]</p>
+<p>In <code>libuipc</code>, a <code>Simplicial Complex</code> is a general representation of an explicit mesh. In <span class="arithmatex">\(\mathbb{R}^3\)</span>, a simplicial complex can be a tetrahedral mesh, a triangle mesh, a line mesh, or a point cloud, which have a dimension of <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(1\)</span>, or <span class="arithmatex">\(0\)</span>, respectively.</p>
+<ul>
+<li>The tetrahedral mesh can be used to describe solid objects.</li>
+<li>The triangle mesh can be used to describe some 2D-codimensional objects, like a cloth with a thin thickness or the surface of a solid object.</li>
+<li>The line mesh can be used to describe some 1D-codimensional objects, like a rope, a curve, or a wire.</li>
+<li>The point cloud can be used to describe some 0D-codimensional objects, like a bunch of particles.</li>
+</ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1889,12 +1888,12 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p></p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="o">-&gt;</span><span class="n">view</span><span class="p">();</span>
+<p></p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">const_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="o">-&gt;</span><span class="n">view</span><span class="p">();</span>
 </span></code></pre></div>
 The view of the <code>position</code> is a <code>span&lt;const Vector3&gt;</code> (we explicitly define it here, but you can use <code>auto</code>), which is a const view of the position data. You can not modify the data through the view.
 </div>
 <div class="tabbed-block">
-<p></p><div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">view</span> <span class="o">=</span> <span class="n">pos</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<p></p><div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">const_view</span> <span class="o">=</span> <span class="n">pos</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
 </span></code></pre></div>
 The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is a const view of the position data. You can not modify the data through the view.
 </div>
@@ -1913,7 +1912,7 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 </div>
 </div>
 </div>
-<p>You find that, it need more effort to create a non-const view of the attribute (calling the global function <code>view</code>) than creating a const view(calling the member function <code>view</code> of the attribute). This is because we want to make sure that the user is aware of the potential clone of the geometry when they modify the data. The non-const view assumes that you may modify the data, which may trigger a clone of the geometry according to <code>libuipc</code>'s <a href="#clone-on-write">Clone on Write</a> strategy.</p>
+<p>You find that, it need more effort to create a non-const view of the attribute (calling the global function <code>view</code>) than creating a const view(calling the member function <code>view</code> of the attribute). This is because we want to make sure that the user is aware of the potential clone of the geometry when they modify the data. The non-const view assumes that you will modify the data later, which may trigger a clone of the geometry according to <code>libuipc</code>'s <a href="#clone-on-write">Clone on Write</a> strategy.</p>
 <p>You may want to access the tetrahedra topology of the cube, which is similar to the positions.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label></div>
 <div class="tabbed-content">
@@ -1982,7 +1981,7 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 </div>
 <p>Ok, now you have a basic idea of how to access the geometry information. Let's move on to the next section. I think it's high time to show the so called <code>Clone on Write</code> strategy.</p>
 <h2 id="clone-on-write">Clone on Write</h2>
-<p>Geometries in <code>libuipc</code> are implemented with the <code>Clone on Write</code> strategy. Any inital copy of a geometry is a shallow copy, which means, the data of the geometry is shared. Any creation of a non-const view of the geometry will trigger a minimal clone of the modified part of the </p>
+<p>Geometries in <code>libuipc</code> are implemented with the <code>Clone on Write</code> strategy. Any inital copy of a geometry is a shallow copy, which means, the data of the geometry is shared. Any creation of a non-const view of the geometry will trigger a minimal clone of the modified part of the geometry.</p>
 <p>A simple example is shown below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked id="__tabbed_11_1" name="__tabbed_11" type="radio"><input id="__tabbed_11_2" name="__tabbed_11" type="radio"><div class="tabbed-labels"><label for="__tabbed_11_1">C++</label><label for="__tabbed_11_2">Python</label></div>
 <div class="tabbed-content">
@@ -1998,8 +1997,7 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 </div>
 </div>
 </div>
-<p>Here, <code>bar</code> is just a <strong>special</strong> shallow copy of the <code>foo</code>.
-No matter <code>bar</code> or <code>foo</code> is modified, the related internal part of the data will be cloned.</p>
+<p>Here, <code>bar</code> is just a <strong>special</strong> shallow copy of the <code>foo</code>. No matter <code>bar</code> or <code>foo</code> is modified, the related internal part of the data will be cloned.</p>
 <p>For example, we create a non-const view of the positions of the mesh <code>bar</code>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked id="__tabbed_12_1" name="__tabbed_12" type="radio"><input id="__tabbed_12_2" name="__tabbed_12" type="radio"><div class="tabbed-labels"><label for="__tabbed_12_1">C++</label><label for="__tabbed_12_2">Python</label></div>
 <div class="tabbed-content">
@@ -2031,7 +2029,7 @@ No matter <code>bar</code> or <code>foo</code> is modified, the related internal
 </div>
 </div>
 </div>
-<p>Such a design minimizes the geometry memory usage.</p>
+<p>Such a design minimizes the geometry memory usage and offloads users' concern about the geometry copy cost.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Be careful when you create a view of a geometry, Always use a const view if you don't want to modify the data to gain higher performance.</p>
@@ -2204,7 +2202,11 @@ See also the <a href="../../Libuipc/classuipc_1_1geometry_1_1_spread_sheet_i_o/"
 </table>
 <p>It's a very convenient way to check the geometry information. If you are interested in some geometry operations, you can write the results to the spreadsheets and check them with the viewer.</p>
 <h2 id="implicit-geometry">Implicit Geometry</h2>
-<p>[TODO]</p></div>
+<p>Implicit geometry is a kind of geometry that is represented using certain equations. There is no general data structure for such kind of geometry. In <code>libuipc</code>, we asign a unique id to each kind of implicit geometry.</p>
+<p>For example, the <code>HalfPlane</code> in <code>libuipc</code> has an UID of <code>1</code>, which is represented by a point <span class="arithmatex">\(\mathbf{P}\)</span> and a normal vector <span class="arithmatex">\(\mathbf{N}\)</span>.</p>
+<p>The way to access/modify the implicit geometry is the same as the explicit geometry. While the basic attributes may vary according to the geometry type.</p>
+<p>For example, the <code>HalfPlane</code> places the <span class="arithmatex">\(\mathbf{P}\)</span> and <span class="arithmatex">\(\mathbf{N}\)</span> in the <code>instances</code> with the attribute name <code>P</code> and <code>N</code> respectively.</p>
+<p>Later, there may be more implicit geometries in the <code>libuipc</code>, such as the <code>Sphere</code>, <code>Cylinder</code>, etc.</p></div>
 
 
 
