@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="utils_8h" kind="file" language="C++">
     <compoundname>utils.h</compoundname>
     <includes refid="factory_8h" local="no">uipc/geometry/utils/factory.h</includes>
@@ -16,6 +16,7 @@
     <includes refid="apply__region_8h" local="no">uipc/geometry/utils/apply_region.h</includes>
     <includes refid="tetrahedralize_8h" local="no">uipc/geometry/utils/tetrahedralize.h</includes>
     <includes refid="compute__instance__volume_8h" local="no">uipc/geometry/utils/compute_instance_volume.h</includes>
+    <includes refid="optimal__transform_8h" local="no">uipc/geometry/utils/optimal_transform.h</includes>
     <includedby refid="geometry_8h" local="no">include/uipc/geometry.h</includedby>
     <incdepgraph>
       <node id="22">
@@ -70,8 +71,6 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
@@ -295,6 +294,8 @@
         </childnode>
         <childnode refid="58" relation="include">
         </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
       </node>
       <node id="56">
         <label>uipc/geometry/utils/apply_region.h</label>
@@ -369,6 +370,14 @@
       <node id="52">
         <label>uipc/geometry/utils/merge.h</label>
         <link refid="merge_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>uipc/geometry/utils/optimal_transform.h</label>
+        <link refid="optimal__transform_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
@@ -481,6 +490,7 @@
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/apply_region.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/tetrahedralize.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/compute_instance_volume.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/optimal_transform.h&gt;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/geometry/utils.h"/>
   </compounddef>

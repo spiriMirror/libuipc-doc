@@ -53,13 +53,15 @@
 | ---: | :--- |
 |   | [**ContactTabular**](#function-contacttabular-12) () noexcept<br> |
 |   | [**ContactTabular**](#function-contacttabular-22) (const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) &) = delete<br> |
-|  std::span&lt; const [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) &gt; | [**contact\_models**](#function-contact_models) () noexcept const<br> |
+|  [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) | [**at**](#function-at) (SizeT i, SizeT j) const<br> |
+|  ContactModelCollection | [**contact\_models**](#function-contact_models-12) () noexcept<br> |
+|  CContactModelCollection | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & | [**create**](#function-create) (std::string\_view name="") noexcept<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & | [**default\_element**](#function-default_element) () noexcept<br> |
-|  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, const Json & config=default\_config()) noexcept<br> |
-|  const [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) & | [**default\_model**](#function-default_model-22) () noexcept const<br> |
+|  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) noexcept<br> |
+|  [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) | [**default\_model**](#function-default_model-22) () noexcept const<br> |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
-|  void | [**insert**](#function-insert) (const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & L, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & R, Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
+|  IndexT | [**insert**](#function-insert) (const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & L, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & R, Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
 |  [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & | [**operator=**](#function-operator) (const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) &) = delete<br> |
 |   | [**~ContactTabular**](#function-contacttabular) () noexcept<br> |
 
@@ -128,10 +130,39 @@ uipc::core::ContactTabular::ContactTabular (
 
 
 
-### function contact\_models 
+### function at 
 
 ```C++
-std::span< const ContactModel > uipc::core::ContactTabular::contact_models () noexcept const
+ContactModel uipc::core::ContactTabular::at (
+    SizeT i,
+    SizeT j
+) const
+```
+
+
+
+
+<hr>
+
+
+
+### function contact\_models [1/2]
+
+```C++
+ContactModelCollection uipc::core::ContactTabular::contact_models () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function contact\_models [2/2]
+
+```C++
+CContactModelCollection uipc::core::ContactTabular::contact_models () noexcept const
 ```
 
 
@@ -175,6 +206,7 @@ ContactElement & uipc::core::ContactTabular::default_element () noexcept
 void uipc::core::ContactTabular::default_model (
     Float friction_rate,
     Float resistance,
+    bool enable=true,
     const Json & config=default_config()
 ) noexcept
 ```
@@ -189,7 +221,7 @@ void uipc::core::ContactTabular::default_model (
 ### function default\_model [2/2]
 
 ```C++
-const ContactModel & uipc::core::ContactTabular::default_model () noexcept const
+ContactModel uipc::core::ContactTabular::default_model () noexcept const
 ```
 
 
@@ -215,7 +247,7 @@ SizeT uipc::core::ContactTabular::element_count () noexcept const
 ### function insert 
 
 ```C++
-void uipc::core::ContactTabular::insert (
+IndexT uipc::core::ContactTabular::insert (
     const ContactElement & L,
     const ContactElement & R,
     Float friction_rate,
@@ -283,6 +315,21 @@ static Json uipc::core::ContactTabular::default_config () noexcept
 void uipc::core::ContactTabular::to_json (
     Json & j,
     const ContactTabular & ct
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### friend ContactTabularVisitor 
+
+```C++
+class uipc::core::ContactTabular::ContactTabularVisitor (
+    uipc::backend::ContactTabularVisitor
 ) 
 ```
 

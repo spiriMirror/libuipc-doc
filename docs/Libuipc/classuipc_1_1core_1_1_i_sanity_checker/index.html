@@ -1572,6 +1572,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#function-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      function build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-check" class="md-nav__link">
     <span class="md-ellipsis">
       function check
@@ -1584,6 +1593,15 @@
   <a href="#function-id" class="md-nav__link">
     <span class="md-ellipsis">
       function id
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      function name
     </span>
   </a>
   
@@ -1631,6 +1649,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-get_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      function get_name
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1653,7 +1680,6 @@
 
 <div><h1 id="class-uipccoreisanitychecker">Class uipc::core::ISanityChecker</h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1core/"><strong>core</strong></a> <strong>&gt;</strong> <a href="./"><strong>ISanityChecker</strong></a></p>
-<p>Inherited by the following classes: <a href="../classuipc_1_1core_1_1_sanity_checker/">uipc::core::SanityChecker</a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -1664,12 +1690,20 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-build"><strong>build</strong></a> () <br></td>
+</tr>
+<tr>
 <td style="text-align: right;">SanityCheckResult</td>
-<td style="text-align: left;"><a href="#function-check"><strong>check</strong></a> () noexcept<br></td>
+<td style="text-align: left;"><a href="#function-check"><strong>check</strong></a> (<a href="../classuipc_1_1core_1_1_sanity_check_message/"><strong>SanityCheckMessage</strong></a> &amp; msg) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">U64</td>
 <td style="text-align: left;"><a href="#function-id"><strong>id</strong></a> () noexcept const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">std::string</td>
+<td style="text-align: left;"><a href="#function-name"><strong>name</strong></a> () noexcept const<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
@@ -1688,42 +1722,65 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual SanityCheckResult</td>
-<td style="text-align: left;"><a href="#function-do_check"><strong>do_check</strong></a> () noexcept = 0<br></td>
+<td style="text-align: left;"><a href="#function-do_check"><strong>do_check</strong></a> (<a href="../classuipc_1_1core_1_1_sanity_check_message/"><strong>SanityCheckMessage</strong></a> &amp; msg) = 0<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual U64</td>
 <td style="text-align: left;"><a href="#function-get_id"><strong>get_id</strong></a> () noexcept const = 0<br></td>
 </tr>
+<tr>
+<td style="text-align: right;">virtual std::string</td>
+<td style="text-align: left;"><a href="#function-get_name"><strong>get_name</strong></a> () noexcept const = 0<br></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-build">function build</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">build</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-check">function check</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SanityCheckResult</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">check</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">SanityCheckResult</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">check</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">SanityCheckMessage</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-id">function id</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">U64</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">id</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">U64</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">id</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-name">function name</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-isanitychecker">function ~ISanityChecker</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::~</span><span class="n">ISanityChecker</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::~</span><span class="n">ISanityChecker</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
 </span></code></pre></div>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
 <h3 id="function-do_check">function do_check</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">SanityCheckResult</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">do_check</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">SanityCheckResult</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">do_check</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">SanityCheckMessage</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-get_id">function get_id</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">U64</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">get_id</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">U64</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">get_id</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-get_name">function get_name</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityChecker</span><span class="o">::</span><span class="n">get_name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <hr>
-<p>The documentation for this class was generated from the following file <code>include/uipc/sanity_check/i_sanity_checker.h</code></p></div>
+<p>The documentation for this class was generated from the following file <code>include/uipc/core/i_sanity_checker.h</code></p></div>
 
 
 

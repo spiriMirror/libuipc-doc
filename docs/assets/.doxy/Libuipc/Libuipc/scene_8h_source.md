@@ -15,6 +15,7 @@
 #include <uipc/core/object_collection.h>
 #include <uipc/core/animator.h>
 #include <uipc/core/diff_sim.h>
+#include <uipc/core/sanity_checker.h>
 
 namespace uipc::backend
 {
@@ -24,7 +25,7 @@ class WorldVisitor;
 
 namespace uipc::core
 {
-class UIPC_CORE_API Scene
+class UIPC_CORE_API Scene final
 {
     friend class backend::SceneVisitor;
     friend class World;
@@ -47,6 +48,7 @@ class UIPC_CORE_API Scene
         S<Object> find(IndexT id) && noexcept;
         void      destroy(IndexT id) &&;
         SizeT     size() const noexcept;
+        SizeT     created_count() const noexcept;
 
       private:
         Objects(Scene& scene) noexcept;
@@ -60,6 +62,7 @@ class UIPC_CORE_API Scene
       public:
         S<const Object> find(IndexT id) && noexcept;
         SizeT           size() const noexcept;
+        SizeT           created_count() const noexcept;
 
       private:
         CObjects(const Scene& scene) noexcept;
@@ -110,9 +113,13 @@ class UIPC_CORE_API Scene
     DiffSim&       diff_sim();
     const DiffSim& diff_sim() const;
 
+    SanityChecker&       sanity_checker();
+    const SanityChecker& sanity_checker() const;
+
   private:
     class Impl;
     U<Impl> m_impl;
+    friend class SanityChecker;
 
     void init(backend::WorldVisitor& world);  // only be called by World.
 
@@ -125,6 +132,7 @@ class UIPC_CORE_API Scene
     World& world() noexcept;
     Float  dt() const noexcept;
     bool   is_started() const noexcept;
+    bool   is_pending() const noexcept;
 };
 }  // namespace uipc::core
 ```

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespaceuipc_1_1geometry" kind="namespace" language="C++">
     <compoundname>uipc::geometry</compoundname>
     <innerclass refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" prot="public">uipc::geometry::AbstractSimplicialComplex</innerclass>
@@ -10,11 +10,12 @@
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_i_o" prot="public">uipc::geometry::AttributeIO</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_i_o_error" prot="public">uipc::geometry::AttributeIOError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_slot" prot="public">uipc::geometry::AttributeSlot</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_b_v_h" prot="public">uipc::geometry::BVH</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry" prot="public">uipc::geometry::Geometry</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_attribute_error" prot="public">uipc::geometry::GeometryAttributeError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_collection" prot="public">uipc::geometry::GeometryCollection</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_friend" prot="public">uipc::geometry::GeometryFriend</innerclass>
-    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="public">uipc::geometry::GeometryIOError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="private">uipc::geometry::GeometryIOError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot" prot="public">uipc::geometry::GeometrySlot</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t" prot="public">uipc::geometry::GeometrySlotT</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4" prot="public">uipc::geometry::GeometrySlotT&lt; ImplicitGeometry &gt;</innerclass>
@@ -24,6 +25,7 @@
     <innerclass refid="classuipc_1_1geometry_1_1_i_geometry" prot="public">uipc::geometry::IGeometry</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_i_geometry_collection" prot="public">uipc::geometry::IGeometryCollection</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_implicit_geometry" prot="public">uipc::geometry::ImplicitGeometry</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_octree" prot="public">uipc::geometry::Octree</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_simplex_utils" prot="public">uipc::geometry::SimplexUtils</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex" prot="public">uipc::geometry::SimplicialComplex</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" prot="public">uipc::geometry::SimplicialComplexAttributes</innerclass>
@@ -66,9 +68,9 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="implicit__geometry__slot_8h_1a80c0caad420d550eca383471efeddb07" prot="public" static="no">
+      <memberdef kind="typedef" id="implicit__geometry__slot_8h_1a528c8d69e846369da7e96980516e40fb" prot="public" static="no">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref> &gt;</type>
-        <definition>using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT&lt;ImplicitGeometry&gt;</definition>
+        <definition>using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT&lt;ImplicitGeometry&gt;</definition>
         <argsstring></argsstring>
         <name>ImplicitGeometrySlot</name>
         <qualifiedname>uipc::geometry::ImplicitGeometrySlot</qualifiedname>
@@ -80,9 +82,9 @@
         </inbodydescription>
         <location file="include/uipc/geometry/implicit_geometry_slot.h" line="26" column="1" bodyfile="include/uipc/geometry/implicit_geometry_slot.h" bodystart="26" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="simplicial__complex__slot_8h_1ac71c3aa8bc6cb8f8df305d94339246e6" prot="public" static="no">
+      <memberdef kind="typedef" id="simplicial__complex__slot_8h_1a691c92538dea87476928ae3fb9d6ad1d" prot="public" static="no">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
-        <definition>using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT&lt;SimplicialComplex&gt;</definition>
+        <definition>using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT&lt;SimplicialComplex&gt;</definition>
         <argsstring></argsstring>
         <name>SimplicialComplexSlot</name>
         <qualifiedname>uipc::geometry::SimplicialComplexSlot</qualifiedname>
@@ -210,6 +212,180 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/uipc/geometry/utils/compute_vertex_volume.h" line="6" column="21" declfile="include/uipc/geometry/utils/compute_vertex_volume.h" declline="6" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="distance_8h_1a6c59867fbc48ff60c99606079600ef4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Float UIPC_GEOMETRY_API</type>
+        <definition>Float UIPC_GEOMETRY_API uipc::geometry::halfplane_vertex_signed_distance</definition>
+        <argsstring>(const Vector3 &amp;P, const Vector3 &amp;N, const Vector3 &amp;V, Float V_thickness=0.0)</argsstring>
+        <name>halfplane_vertex_signed_distance</name>
+        <qualifiedname>uipc::geometry::halfplane_vertex_signed_distance</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>V</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>V_thickness</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Compute the distance between a half-plane (P, N) and a vertex V (with thickness V_thickness). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>P</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Origin point of the half-plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Normal vector of the half-plane. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Vertex point. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V_thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The thickness of the vertex. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/distance.h" line="15" column="25" declfile="include/uipc/geometry/utils/distance.h" declline="15" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="distance_8h_1ad0580b21fe57355ce749ba41c58b97a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Float UIPC_GEOMETRY_API</type>
+        <definition>Float UIPC_GEOMETRY_API uipc::geometry::point_point_squared_distance</definition>
+        <argsstring>(const Vector3 &amp;P0, const Vector3 &amp;P1)</argsstring>
+        <name>point_point_squared_distance</name>
+        <qualifiedname>uipc::geometry::point_point_squared_distance</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>P0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>P1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/distance.h" line="20" column="25" declfile="include/uipc/geometry/utils/distance.h" declline="20" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="distance_8h_1a6f6fdff814c7ecd9decbe5a825370206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Float UIPC_GEOMETRY_API</type>
+        <definition>Float UIPC_GEOMETRY_API uipc::geometry::point_edge_squared_distance</definition>
+        <argsstring>(const Vector3 &amp;P, const Vector3 &amp;E0, const Vector3 &amp;E1)</argsstring>
+        <name>point_edge_squared_distance</name>
+        <qualifiedname>uipc::geometry::point_edge_squared_distance</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>E0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>E1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/distance.h" line="22" column="25" declfile="include/uipc/geometry/utils/distance.h" declline="22" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="distance_8h_1a1e3212117f97c56eac4d320dda8369ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Float UIPC_GEOMETRY_API</type>
+        <definition>Float UIPC_GEOMETRY_API uipc::geometry::point_triangle_squared_distance</definition>
+        <argsstring>(const Vector3 &amp;P, const Vector3 &amp;T0, const Vector3 &amp;T1, const Vector3 &amp;T2)</argsstring>
+        <name>point_triangle_squared_distance</name>
+        <qualifiedname>uipc::geometry::point_triangle_squared_distance</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T1</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/distance.h" line="26" column="25" declfile="include/uipc/geometry/utils/distance.h" declline="26" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="distance_8h_1aaf2304f7ab802f8662de9f815e534d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Float UIPC_GEOMETRY_API</type>
+        <definition>Float UIPC_GEOMETRY_API uipc::geometry::edge_edge_squared_distance</definition>
+        <argsstring>(const Vector3 &amp;Ea0, const Vector3 &amp;Ea1, const Vector3 &amp;Eb0, const Vector3 &amp;Eb1)</argsstring>
+        <name>edge_edge_squared_distance</name>
+        <qualifiedname>uipc::geometry::edge_edge_squared_distance</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>Ea0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>Ea1</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>Eb0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>Eb1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/distance.h" line="31" column="25" declfile="include/uipc/geometry/utils/distance.h" declline="31" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="extract__surface_8h_1a80eecfbd8a333d6f4f91c380d17ea176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
@@ -525,6 +701,126 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/flip_inward_triangles.h" line="14" column="38" declfile="include/uipc/geometry/utils/flip_inward_triangles.h" declline="14" declcolumn="38"/>
       </memberdef>
+      <memberdef kind="function" id="intersection_8h_1a34870b858ccc85f3d3931fa0cb091a4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API bool</type>
+        <definition>UIPC_GEOMETRY_API bool uipc::geometry::tri_edge_intersect</definition>
+        <argsstring>(const Vector3 &amp;T0, const Vector3 &amp;T1, const Vector3 &amp;T2, const Vector3 &amp;E0, const Vector3 &amp;E1, bool &amp;coplanar, Vector3 &amp;uvw_in_tri, Vector2 &amp;uv_in_edge)</argsstring>
+        <name>tri_edge_intersect</name>
+        <qualifiedname>uipc::geometry::tri_edge_intersect</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T1</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T2</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>E0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>E1</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>coplanar</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>uvw_in_tri</declname>
+        </param>
+        <param>
+          <type>Vector2 &amp;</type>
+          <declname>uv_in_edge</declname>
+        </param>
+        <briefdescription>
+<para>Check if a triangle and an edge intersect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>T0, T1, T2 the vertices of the triangle E0, E1 the vertices of the edge</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">uvw_in_tri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the barycentric coordinates of the intersection point in the triangle. Even if the function return false, the barycentric coordinates are still calculated correctly.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">uv_in_edge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the barycentric coordinates of the intersection point in the edge. Even if the function return false, the barycentric coordinates are still calculated correctly.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the triangle and the edge intersect </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/intersection.h" line="22" column="24" declfile="include/uipc/geometry/utils/intersection.h" declline="22" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="intersection_8h_1a0493664e50f0cbe87c0502d8f9690259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API bool</type>
+        <definition>UIPC_GEOMETRY_API bool uipc::geometry::is_point_in_tet</definition>
+        <argsstring>(const Vector3 &amp;T0, const Vector3 &amp;T1, const Vector3 &amp;T2, const Vector3 &amp;T3, const Vector3 &amp;P, Vector4 &amp;tuvw_in_tet)</argsstring>
+        <name>is_point_in_tet</name>
+        <qualifiedname>uipc::geometry::is_point_in_tet</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T0</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T1</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T2</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>T3</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>P</declname>
+        </param>
+        <param>
+          <type>Vector4 &amp;</type>
+          <declname>tuvw_in_tet</declname>
+        </param>
+        <briefdescription>
+<para>Check if a point is in a tetrahedron. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>T0, T1, T2, T3 the vertices of the tetrahedron P is the point</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">tuvw_in_tet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the barycentric coordinates of the intersection point in the tet. Even if the function return false, the barycentric coordinates are still calculated correctly.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the point is in the tetrahedron </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/intersection.h" line="43" column="24" declfile="include/uipc/geometry/utils/intersection.h" declline="43" declcolumn="24"/>
+      </memberdef>
       <memberdef kind="function" id="is__trimesh__closed_8h_1a35e2794cc41a45fdf3bddcc36e9d15cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API bool</type>
         <definition>UIPC_GEOMETRY_API bool uipc::geometry::is_trimesh_closed</definition>
@@ -748,6 +1044,92 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/uipc/geometry/utils/mesh_partition.h" line="15" column="24" declfile="include/uipc/geometry/utils/mesh_partition.h" declline="15" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="optimal__transform_8h_1a977a754d89cd0d7b7f9190c35d737e5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Matrix4x4</type>
+        <definition>UIPC_GEOMETRY_API Matrix4x4 uipc::geometry::optimal_transform</definition>
+        <argsstring>(span&lt; const Vector3 &gt; S, span&lt; const Vector3 &gt; D)</argsstring>
+        <name>optimal_transform</name>
+        <qualifiedname>uipc::geometry::optimal_transform</qualifiedname>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+<para>Find out the optimal transformation matrix that maps the source points to the destination points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source points. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination points. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/optimal_transform.h" line="14" column="29" declfile="include/uipc/geometry/utils/optimal_transform.h" declline="14" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="optimal__transform_8h_1ab9433bc37e2338ebeebe22e763cbe32c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Matrix4x4</type>
+        <definition>UIPC_GEOMETRY_API Matrix4x4 uipc::geometry::optimal_transform</definition>
+        <argsstring>(const SimplicialComplex &amp;S, const SimplicialComplex &amp;D)</argsstring>
+        <name>optimal_transform</name>
+        <qualifiedname>uipc::geometry::optimal_transform</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>D</declname>
+        </param>
+        <briefdescription>
+<para>Find out the optimal transformation matrix that maps the source simplicial complex to the destination simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>S</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source simplicial complex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination simplicial complex. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/optimal_transform.h" line="23" column="29" declfile="include/uipc/geometry/utils/optimal_transform.h" declline="23" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="tetrahedralize_8h_1aebe236e16bb17bf5eb9f4585ba9f4b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>

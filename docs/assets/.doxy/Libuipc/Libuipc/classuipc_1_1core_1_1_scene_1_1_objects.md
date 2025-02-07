@@ -52,6 +52,7 @@
 | Type | Name |
 | ---: | :--- |
 |  S&lt; [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**create**](#function-create) (std::string\_view name="") <br> |
+|  SizeT | [**created\_count**](#function-created_count) () noexcept const<br> |
 |  void | [**destroy**](#function-destroy) (IndexT id) <br> |
 |  S&lt; [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**find**](#function-find) (IndexT id) noexcept<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
@@ -94,6 +95,19 @@
 S< Object > uipc::core::Scene::Objects::create (
     std::string_view name=""
 ) 
+```
+
+
+
+
+<hr>
+
+
+
+### function created\_count 
+
+```C++
+SizeT uipc::core::Scene::Objects::created_count () noexcept const
 ```
 
 

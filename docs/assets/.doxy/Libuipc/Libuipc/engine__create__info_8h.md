@@ -11,6 +11,8 @@
 
 
 * `#include <string_view>`
+* `#include <uipc/common/dllexport.h>`
+* `#include <uipc/common/json.h>`
 
 
 

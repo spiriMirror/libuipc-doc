@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="object_8h" kind="file" language="C++">
     <compoundname>object.h</compoundname>
     <includes local="no">string_view</includes>
@@ -56,8 +56,6 @@
         <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
@@ -396,12 +394,12 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="15">
         <label>include/uipc/core/object_collection.h</label>
         <link refid="object__collection_8h_source"/>
         <childnode refid="10" relation="include">
@@ -413,8 +411,6 @@
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="11">
@@ -440,10 +436,6 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-      </node>
-      <node id="15">
-        <label>include/uipc/sanity_check/sanity_checker.h</label>
-        <link refid="sanity__checker_8h_source"/>
       </node>
       <node id="6">
         <label>include/uipc/uipc.h</label>
@@ -496,7 +488,7 @@
 <codeline lineno="30"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">NonConstGeometryT<sp/>=<sp/>std::remove_const_t&lt;GeometryT&gt;;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">AutoGeometrySlot<sp/>=</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>propagate_const&lt;GeometryT,<sp/>geometry::GeometrySlotT&lt;NonConstGeometryT&gt;&gt;::type;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structuipc_1_1propagate__const" kindref="compound">propagate_const&lt;GeometryT, geometry::GeometrySlotT&lt;NonConstGeometryT&gt;</ref>&gt;::type;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;AutoGeometrySlot&gt;<sp/>geometry;</highlight></codeline>
@@ -532,11 +524,11 @@
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;std::derived_from&lt;geometry::Geometry&gt;<sp/>GeometryT&gt;</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(!std::is_abstract_v&lt;GeometryT&gt;)</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ObjectGeometrySlots&lt;GeometryT&gt;<sp/>create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GeometryT&amp;<sp/>geometry)<sp/>&amp;&amp;;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_object_geometry_slots" kindref="compound">ObjectGeometrySlots&lt;GeometryT&gt;</ref><sp/>create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GeometryT&amp;<sp/>geometry)<sp/>&amp;&amp;;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;std::derived_from&lt;geometry::Geometry&gt;<sp/>GeometryT&gt;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal">(!std::is_abstract_v&lt;GeometryT&gt;)</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ObjectGeometrySlots&lt;GeometryT&gt;<sp/>create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GeometryT&amp;<sp/>geometry,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_object_geometry_slots" kindref="compound">ObjectGeometrySlots&lt;GeometryT&gt;</ref><sp/>create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GeometryT&amp;<sp/>geometry,</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GeometryT&amp;<sp/>rest_geometry)<sp/>&amp;&amp;;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;const<sp/>IndexT&gt;<sp/>ids()<sp/>&amp;&amp;<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
@@ -581,11 +573,12 @@
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>geometry_collection()<sp/>noexcept;</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>rest_geometry_collection()<sp/>noexcept;</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene_started()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="119"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene_pending()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;details/object.inl&quot;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;details/object.inl&quot;</highlight></codeline>
     </programlisting>
     <location file="include/uipc/core/object.h"/>
   </compounddef>

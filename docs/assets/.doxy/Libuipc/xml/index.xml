@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
   <compound refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" kind="class"><name>uipc::geometry::AbstractSimplicialComplex</name>
     <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a3458344cad0902dff48b1014ff353ba1" kind="typedef"><name>VertexAttributes</name></member>
     <member refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex_1a5b230e18181109838f6d9c3c35b847b1" kind="typedef"><name>CVertexAttributes</name></member>
@@ -92,7 +92,7 @@
     <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a2ceb9ce7d9d7c59d3f0847e493143a56" kind="typedef"><name>Base</name></member>
     <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a0864df59a83d7c9a1170c0d14c47515b" kind="variable"><name>m_config</name></member>
     <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a51481f547d83e3af80d674daa0a4e6fc" kind="function"><name>ARAP</name></member>
-    <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a1a8b671dd90450e17539bc1b70c71182" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a2e4e1d8ea6f176fc1eb3116813e7cd92" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1a8f9e0b5cf4dd1e33458b3f2865e1b5d6" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1_a_r_a_p_1aa38d637a1b8828f9e349e9cf5ddfffdf" kind="function"><name>get_uid</name></member>
   </compound>
@@ -227,6 +227,15 @@
     <member refid="classuipc_1_1backend_1_1_buffer_view_1a3ce02a2b794aab5402c22f96248ca47b" kind="function"><name>operator bool</name></member>
     <member refid="classuipc_1_1backend_1_1_buffer_view_1a57eb5b73ab0fbfc0c5346dc4ce6c5525" kind="function"><name>subview</name></member>
   </compound>
+  <compound refid="classuipc_1_1geometry_1_1_b_v_h" kind="class"><name>uipc::geometry::BVH</name>
+    <member refid="classuipc_1_1geometry_1_1_b_v_h_1ac0bd03c4658ee2fb40470784dcf03326" kind="typedef"><name>AABB</name></member>
+    <member refid="classuipc_1_1geometry_1_1_b_v_h_1ad1a10436bacc0741636a96e633d246fd" kind="variable"><name>m_impl</name></member>
+    <member refid="classuipc_1_1geometry_1_1_b_v_h_1a9ab4572044dc420bab62c7837715ebc0" kind="function"><name>BVH</name></member>
+    <member refid="classuipc_1_1geometry_1_1_b_v_h_1a8176c9196abb5220d2ed465c8273192c" kind="function"><name>~BVH</name></member>
+    <member refid="classuipc_1_1geometry_1_1_b_v_h_1ac1006634816fc7716c37cca207727ca0" kind="function"><name>build</name></member>
+    <member refid="classuipc_1_1geometry_1_1_b_v_h_1a9e49e28d33d18f55e0ee28670dca22fe" kind="function"><name>clear</name></member>
+    <member refid="classuipc_1_1geometry_1_1_b_v_h_1ae5686d7cc9b0aad50f35303f498d927a" kind="function"><name>query</name></member>
+  </compound>
   <compound refid="classuipc_1_1core_1_1_object_1_1_c_geometries" kind="class"><name>uipc::core::Object::CGeometries</name>
     <member refid="classuipc_1_1core_1_1_object_1_1_c_geometries_1a0720b5f434e636e22a3ed34f847eec57" kind="friend"><name>Object</name></member>
     <member refid="classuipc_1_1core_1_1_object_1_1_c_geometries_1acfd09b9715f5dd913bd39f204388609c" kind="variable"><name>m_object</name></member>
@@ -244,6 +253,7 @@
     <member refid="classuipc_1_1core_1_1_scene_1_1_c_objects_1a1cb124d0473f0657d71a655d71866db8" kind="variable"><name>m_scene</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1_1_c_objects_1a752e7028a500da152e390f58c342588a" kind="function"><name>find</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1_1_c_objects_1a0e2d803cb41fa8cf9238c84efd971e08" kind="function"><name>size</name></member>
+    <member refid="classuipc_1_1core_1_1_scene_1_1_c_objects_1adc437304ff204225b835de4f25c0a624" kind="function"><name>created_count</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1_1_c_objects_1aafabb70918c2e61f7874276315954ed4" kind="function"><name>CObjects</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_constitution_tabular" kind="class"><name>uipc::core::ConstitutionTabular</name>
@@ -293,7 +303,7 @@
     <member refid="classuipc_1_1core_1_1_contact_model_1a3c94a89ebeb11d0eb108721f11491941" kind="variable"><name>m_config</name></member>
     <member refid="classuipc_1_1core_1_1_contact_model_1ad3c5fa9f296395863b30b67a0422027c" kind="function"><name>ContactModel</name></member>
     <member refid="classuipc_1_1core_1_1_contact_model_1a544d46e46afef0700970cc963219bb61" kind="function"><name>ContactModel</name></member>
-    <member refid="classuipc_1_1core_1_1_contact_model_1ac8f4687b15cd3040ff01d6361a824014" kind="function"><name>ids</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_1a8efca20d6de850438c07cc84d02620d1" kind="function"><name>topo</name></member>
     <member refid="classuipc_1_1core_1_1_contact_model_1a42664e7038b5353eca55fcf50428d463" kind="function"><name>friction_rate</name></member>
     <member refid="classuipc_1_1core_1_1_contact_model_1a41e7cdc5f52dca1d4e0164332d4b2c87" kind="function"><name>resistance</name></member>
     <member refid="classuipc_1_1core_1_1_contact_model_1a15516f95da10edf821d06c254997b4d0" kind="function"><name>is_enabled</name></member>
@@ -301,24 +311,41 @@
     <member refid="classuipc_1_1core_1_1_contact_model_1ad40c79589db1996a4e6c6ee75989d148" kind="friend"><name>to_json</name></member>
     <member refid="classuipc_1_1core_1_1_contact_model_1a484b880632bf3bbc84c7d888230cae63" kind="friend"><name>from_json</name></member>
   </compound>
+  <compound refid="classuipc_1_1core_1_1_contact_model_collection_t" kind="class"><name>uipc::core::ContactModelCollectionT</name>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1abda450951af935aff3425118b10f9fa3" kind="typedef"><name>AutoAttributeCollection</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a68b5869978e2f2f5fdaa8cbd1f2b5251" kind="friend"><name>geometry::AttributeFriend</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1ac70d311c6963058cef6157d9a49989f5" kind="friend"><name>ContactTabular</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a1c55d442a7690739f81d751201330fdd" kind="variable"><name>m_attributes</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a2359d2bb8fe0396df4fd00c826219387" kind="function"><name>ContactModelCollectionT</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a34408793ae2f03728c09a195c2599526" kind="function"><name>create</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1add3a0ab4847a3b93d7dd8a45b9916b6b" kind="function"><name>find</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a1d764b111f88946edaa761a824532644" kind="function"><name>find</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a3f7403de2e302ad616df474f76ab0a90" kind="function"><name>to_json</name></member>
+  </compound>
   <compound refid="classuipc_1_1core_1_1_contact_tabular" kind="class"><name>uipc::core::ContactTabular</name>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1ac99e0c3c89a524fe911bb99b78784f64" kind="friend"><name>uipc::backend::ContactTabularVisitor</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1ac07b94b43766c79cd43b6938f953687a" kind="friend"><name>to_json</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1a28e9c50415134c5433d9140802e40aad" kind="variable"><name>m_impl</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1aad2541c67acc71c0c2dca0575a5adaf4" kind="function"><name>ContactTabular</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1a12410dde80a9fa22644716ccd47f5b1e" kind="function"><name>~ContactTabular</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1a76621f50a912a040ca2d111d35c02783" kind="function"><name>ContactTabular</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1ad9446d5bae6d0dc74506c784920943e5" kind="function"><name>operator=</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1afbdaf98398918e63fd442f75df064260" kind="function"><name>create</name></member>
-    <member refid="classuipc_1_1core_1_1_contact_tabular_1a111cbda007c2f53ab3a9e8f78e7c1d2f" kind="function"><name>insert</name></member>
-    <member refid="classuipc_1_1core_1_1_contact_tabular_1a74805076f90708e1df1aaad7c69dc457" kind="function"><name>default_model</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1a452ba1b385d0fde3f7065d9680712d81" kind="function"><name>insert</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1a628516a6ea08170a8b9d3a9224cf4b09" kind="function"><name>at</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1a1931132de81d877303797ae7fc4b9567" kind="function"><name>default_model</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1ac82a3c312d29f5dfcc2fec71244f6375" kind="function"><name>default_element</name></member>
-    <member refid="classuipc_1_1core_1_1_contact_tabular_1addbbcc03d2e49cb11ef4645b63eaa5ee" kind="function"><name>default_model</name></member>
-    <member refid="classuipc_1_1core_1_1_contact_tabular_1a07083ef0feee4f1dc67a9e1cfdafcd2f" kind="function"><name>contact_models</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1a071645e5d31c012dbde6a9978f422c65" kind="function"><name>default_model</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1a8fad077d3e0895531c86447e983636ef" kind="function"><name>element_count</name></member>
-    <member refid="classuipc_1_1core_1_1_contact_tabular_1ac07b94b43766c79cd43b6938f953687a" kind="friend"><name>to_json</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1a9d148f5599f9a1420e026390fbeb7964" kind="function"><name>contact_models</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1a1dff3b267e11f46d5e28396bbbcce253" kind="function"><name>contact_models</name></member>
     <member refid="classuipc_1_1core_1_1_contact_tabular_1acbcaf91f990b9a10a20a37975b9f224b" kind="function"><name>default_config</name></member>
+    <member refid="classuipc_1_1core_1_1_contact_tabular_1a5ffc167cfd0ab538373dcf7cb8e8e63d" kind="function"><name>internal_contact_models</name></member>
   </compound>
-  <compound refid="classuipc_1_1core_1_1_sanity_checker_auto_register_1_1_creators" kind="class"><name>uipc::core::SanityCheckerAutoRegister::Creators</name>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_auto_register_1_1_creators_1aecd3bf72430cf1dc55aa43429628c85e" kind="variable"><name>entries</name></member>
+  <compound refid="classuipc_1_1backend_1_1_contact_tabular_visitor" kind="class"><name>uipc::backend::ContactTabularVisitor</name>
+    <member refid="classuipc_1_1backend_1_1_contact_tabular_visitor_1a7f09bef64480a26b87c3611493026f07" kind="variable"><name>m_contact_tabular</name></member>
+    <member refid="classuipc_1_1backend_1_1_contact_tabular_visitor_1a999d8e09219941fc344276b3cc78db4c" kind="function"><name>ContactTabularVisitor</name></member>
+    <member refid="classuipc_1_1backend_1_1_contact_tabular_visitor_1a77d4923f631b8cfcf1cec647d588568f" kind="function"><name>contact_models</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_diff_sim" kind="class"><name>uipc::core::DiffSim</name>
     <member refid="classuipc_1_1core_1_1_diff_sim_1a032858ae1fe02d2d1170981c2af2d67c" kind="friend"><name>Scene</name></member>
@@ -400,6 +427,7 @@
   </compound>
   <compound refid="classuipc_1_1backend_1_1_engine_create_info" kind="class"><name>uipc::backend::EngineCreateInfo</name>
     <member refid="classuipc_1_1backend_1_1_engine_create_info_1a306593e1489bcfaab36417d251ba46f3" kind="variable"><name>workspace</name></member>
+    <member refid="classuipc_1_1backend_1_1_engine_create_info_1ac40a77dcfe4bb5706faac199e84aec6b" kind="variable"><name>config</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_engine_exception" kind="class"><name>uipc::core::EngineException</name>
     <member refid="classuipc_1_1core_1_1_engine_exception_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
@@ -763,7 +791,7 @@
     <member refid="classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_collection_1a2bd5d5a944ac913d57c8b03e069cc1c5" kind="function"><name>ImplicitGeometryUIDCollection</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t" kind="class"><name>uipc::geometry::Geometry::InstanceAttributesT</name>
-    <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a1f2e4c824fc59679810366504b917eaf" kind="typedef"><name>AutoAttributeCollection</name></member>
+    <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a18a58820f3ba24db3dd4d48d9c4f8fdc" kind="typedef"><name>AutoAttributeCollection</name></member>
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a420e9ff26054c6eb4f451b4743268211" kind="friend"><name>fmt::formatter&lt; InstanceAttributesT&lt; IsConst &gt; &gt;</name></member>
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1ac10ad3a6f0a314e1d02cc9fb387d9ec1" kind="friend"><name>InstanceAttributesT</name></member>
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1abd621cd374772a67fae8b860ddfca14c" kind="friend"><name>AttributeFriend</name></member>
@@ -801,10 +829,18 @@
   </compound>
   <compound refid="classuipc_1_1core_1_1_i_sanity_checker" kind="class"><name>uipc::core::ISanityChecker</name>
     <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a75fcb119c1d11d87cb46afd16459cb7a" kind="function"><name>~ISanityChecker</name></member>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a6e59f7da9c769bad83fd6eff0a9fd169" kind="function"><name>build</name></member>
     <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a75d05725f947e2853a4d9d486aa73f82" kind="function"><name>id</name></member>
-    <member refid="classuipc_1_1core_1_1_i_sanity_checker_1aba4bb9f00a1b7fe755011cda62ce0aa7" kind="function"><name>check</name></member>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a183f9fc55ecae76db46bd4ff0f7dc1fd" kind="function"><name>check</name></member>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_1ab82fecc1e424933f1b1a7b4be8b45488" kind="function"><name>name</name></member>
     <member refid="classuipc_1_1core_1_1_i_sanity_checker_1acb98dce232226d023ed94742a6b06a0d" kind="function"><name>get_id</name></member>
-    <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a976b7fe045cd89d29b045aee78cc9a0d" kind="function"><name>do_check</name></member>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a3d99dae60bd8a762deb44277564daaa7" kind="function"><name>get_name</name></member>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a6c9e6a7fde74722824b4a275220b2fa6" kind="function"><name>do_check</name></member>
+  </compound>
+  <compound refid="classuipc_1_1core_1_1_i_sanity_checker_collection" kind="class"><name>uipc::core::ISanityCheckerCollection</name>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_collection_1ae877ae3f74adaf1a96f535ab70b2245d" kind="function"><name>~ISanityCheckerCollection</name></member>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_collection_1aaf18f35589da5ef306f65de29332801b" kind="function"><name>build</name></member>
+    <member refid="classuipc_1_1core_1_1_i_sanity_checker_collection_1aa7b0393e71314c87391d5d39d7c575ec" kind="function"><name>check</name></member>
   </compound>
   <compound refid="classuipc_1_1_json_i_o_error" kind="class"><name>uipc::JsonIOError</name>
     <member refid="classuipc_1_1_json_i_o_error_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
@@ -840,7 +876,7 @@
     <member refid="structuipc_1_1_global_timer_1_1_merge_result_1abb40babb504aa55b8e0b561545a864ab" kind="variable"><name>depth</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t" kind="class"><name>uipc::geometry::Geometry::MetaAttributesT</name>
-    <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a5c18d8be901eaf492189576000826040" kind="typedef"><name>AutoAttributeCollection</name></member>
+    <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a6e78e39b6d23ab0537925ce41f4b24ed" kind="typedef"><name>AutoAttributeCollection</name></member>
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a2f0b42774a40743ee3c1f6c976c77404" kind="friend"><name>fmt::formatter&lt; MetaAttributesT&lt; IsConst &gt; &gt;</name></member>
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1a3f4c2e276b7538d13bf4eabb76c2a384" kind="friend"><name>MetaAttributesT</name></member>
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_1abd621cd374772a67fae8b860ddfca14c" kind="friend"><name>AttributeFriend</name></member>
@@ -886,6 +922,7 @@
     <member refid="classuipc_1_1core_1_1_object_1a47143f67918f81c3df0a61b21830067b" kind="function"><name>geometry_collection</name></member>
     <member refid="classuipc_1_1core_1_1_object_1ae9139decffc59214d01601e7e1d849c8" kind="function"><name>rest_geometry_collection</name></member>
     <member refid="classuipc_1_1core_1_1_object_1a98adc7dd2a365c088497dcdf7bc44e98" kind="function"><name>scene_started</name></member>
+    <member refid="classuipc_1_1core_1_1_object_1ab2b5050a88708b336d465bf21e75ebea" kind="function"><name>scene_pending</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_object_collection" kind="class"><name>uipc::core::ObjectCollection</name>
     <member refid="classuipc_1_1core_1_1_object_collection_1a032858ae1fe02d2d1170981c2af2d67c" kind="friend"><name>Scene</name></member>
@@ -902,7 +939,7 @@
   </compound>
   <compound refid="classuipc_1_1core_1_1_object_geometry_slots" kind="class"><name>uipc::core::ObjectGeometrySlots</name>
     <member refid="classuipc_1_1core_1_1_object_geometry_slots_1a33a9041b37327bae4fbd32c0d6443c8a" kind="typedef"><name>NonConstGeometryT</name></member>
-    <member refid="classuipc_1_1core_1_1_object_geometry_slots_1adb6e15ae6c9b7b66d849971e564fc791" kind="typedef"><name>AutoGeometrySlot</name></member>
+    <member refid="classuipc_1_1core_1_1_object_geometry_slots_1a3c69161e9e302225cd8e780b94965ba7" kind="typedef"><name>AutoGeometrySlot</name></member>
     <member refid="classuipc_1_1core_1_1_object_geometry_slots_1a2200aec599cd8c7d9df343d19e5b2045" kind="variable"><name>geometry</name></member>
     <member refid="classuipc_1_1core_1_1_object_geometry_slots_1a87d4bd102de0c54f18f7dede5fa763eb" kind="variable"><name>rest_geometry</name></member>
   </compound>
@@ -921,7 +958,18 @@
     <member refid="classuipc_1_1core_1_1_scene_1_1_objects_1afe5adfdfa4d54270ebb76884b42cf6c2" kind="function"><name>find</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1_1_objects_1a455589f1fa7394b299bceaf61ca5e368" kind="function"><name>destroy</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1_1_objects_1a741665e2f435892c220a2b17bdffc71f" kind="function"><name>size</name></member>
+    <member refid="classuipc_1_1core_1_1_scene_1_1_objects_1ace36665d86dc02bed13621cad171746c" kind="function"><name>created_count</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1_1_objects_1a16f29cf87158f9c1c6bfc8f0d3ee6322" kind="function"><name>Objects</name></member>
+  </compound>
+  <compound refid="classuipc_1_1geometry_1_1_octree" kind="class"><name>uipc::geometry::Octree</name>
+    <member refid="classuipc_1_1geometry_1_1_octree_1a3eecfdac8d72caddd6189258760b98cd" kind="typedef"><name>AABB</name></member>
+    <member refid="classuipc_1_1geometry_1_1_octree_1afc8e4d4da3dc9374a85db526fe9f4b9c" kind="variable"><name>m_impl</name></member>
+    <member refid="classuipc_1_1geometry_1_1_octree_1a7b48ed40041389bd6cb4c44c30f8362f" kind="function"><name>Octree</name></member>
+    <member refid="classuipc_1_1geometry_1_1_octree_1a9bde6b3d6663d9b21d3bbd7046f35a47" kind="function"><name>~Octree</name></member>
+    <member refid="classuipc_1_1geometry_1_1_octree_1a496b2cc35a4974888a3879ae6fca4730" kind="function"><name>build</name></member>
+    <member refid="classuipc_1_1geometry_1_1_octree_1a6bf785b0b7814329eb832c9440d9f90b" kind="function"><name>clear</name></member>
+    <member refid="classuipc_1_1geometry_1_1_octree_1ab5cf081202a8d8fdf300dd657333f02b" kind="function"><name>query</name></member>
+    <member refid="classuipc_1_1geometry_1_1_octree_1a62d61b77b5a5c8ad5f8702cdd9a31fea" kind="function"><name>detect</name></member>
   </compound>
   <compound refid="classuipc_1_1diff__sim_1_1_parameter_collection" kind="class"><name>uipc::diff_sim::ParameterCollection</name>
     <member refid="classuipc_1_1diff__sim_1_1_parameter_collection_1aeb812bb976088290203943abdb925f87" kind="friend"><name>uipc::core::DiffSim</name></member>
@@ -966,30 +1014,57 @@
     <member refid="classuipc_1_1constitution_1_1_rotating_motor_1a4d6941100708d7a806a036b5d744ff8b" kind="function"><name>get_uid</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_sanity_checker" kind="class"><name>uipc::core::SanityChecker</name>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1afa4b69c2afc1258b83e4a25cc1456401" kind="variable"><name>m_errors</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1a1d5bfbad7fca0e30f0373dc66929c8c6" kind="variable"><name>m_warns</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1a51c3100144ea6b37a4992a0bd6e7b6ce" kind="variable"><name>m_infos</name></member>
     <member refid="classuipc_1_1core_1_1_sanity_checker_1a0156bfdd7e1042d7e67ff39fb8e0db07" kind="variable"><name>m_scene</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_1aaecc4882565c09a6694aa313a5653378" kind="function"><name>SanityChecker</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_1ad059ad7476ecb29ef5c5501e96785fe2" kind="function"><name>get_id</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_1a91cdfff3c76c5648e527b6682b827777" kind="function"><name>do_check</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_1a8c7879b1c21b1e978d7b2b8bf0150060" kind="function"><name>do_check</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1a4414c502f9c9db2ca339f91a1ade1b61" kind="function"><name>SanityChecker</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1ae3833d3cb42bee0251c1adfc17645407" kind="function"><name>~SanityChecker</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1a48205dd62be9cbc86e9bce15ab0b78ff" kind="function"><name>check</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1a31eba484d078eb8dadb21405c28ff2e2" kind="function"><name>report</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1a567862d3f0ce7accd9970ba5a9f99747" kind="function"><name>errors</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1a5ad7fac5e2862ca1f3befa1ba4e4169e" kind="function"><name>warns</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1aa7d11937b1c86a799ebf9be796137ede" kind="function"><name>infos</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_1afcdabce5624d848a0e491d66edd6234d" kind="function"><name>clear</name></member>
   </compound>
-  <compound refid="classuipc_1_1core_1_1_sanity_checker_auto_register" kind="class"><name>uipc::core::SanityCheckerAutoRegister</name>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_auto_register_1a2a69471828f21a953a02b882bed0d23b" kind="typedef"><name>Creator</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_auto_register_1a032858ae1fe02d2d1170981c2af2d67c" kind="friend"><name>Scene</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_auto_register_1aad835fcb1276745cf350a7419241cc1f" kind="friend"><name>SanityCheckerCollection</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_auto_register_1a759c4ac87e9e72601ea0265809bc25b8" kind="function"><name>SanityCheckerAutoRegister</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_auto_register_1afaf6198e3a72672e792e02b276ad9317" kind="function"><name>creators</name></member>
+  <compound refid="classuipc_1_1core_1_1_sanity_checker_collection_create_info" kind="class"><name>uipc::core::SanityCheckerCollectionCreateInfo</name>
+    <member refid="classuipc_1_1core_1_1_sanity_checker_collection_create_info_1abc5f7e962f21fc04eeb7b1ff8381330a" kind="variable"><name>workspace</name></member>
   </compound>
-  <compound refid="classuipc_1_1core_1_1_sanity_checker_collection" kind="class"><name>uipc::core::SanityCheckerCollection</name>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_collection_1aa1d749b5cdf453267a15034d9d5e3bb4" kind="variable"><name>entries</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_collection_1a725ce3391ce8633bce09f8783dbc2ba1" kind="function"><name>SanityCheckerCollection</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_collection_1aa50d152efa7eaaa6cb9998ff63aa42a4" kind="function"><name>init</name></member>
-    <member refid="classuipc_1_1core_1_1_sanity_checker_collection_1a5d50ba8d04a45635cbdc8e3cac4fd72b" kind="function"><name>check</name></member>
+  <compound refid="classuipc_1_1core_1_1_sanity_check_message" kind="class"><name>uipc::core::SanityCheckMessage</name>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1ada20e93c2bde7bd3541eb5e86cde7848" kind="friend"><name>backend::SanityCheckMessageVisitor</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1ad84ede8a32830a7951f4436facbfe3cb" kind="variable"><name>m_id</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1a199dcf32693caad3434b5c9eabe8c69c" kind="variable"><name>m_name</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1a914a0552a5ae805e55917587db3a8095" kind="variable"><name>m_result</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1addb336e74b2c60ce0cf14d7f0a7a3c27" kind="variable"><name>m_message</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1a912e8b095cd669e418b91f3eb37d80df" kind="variable"><name>m_geometries</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1ab2eb1e1970dabed434d0d13ddce2a5d3" kind="function"><name>SanityCheckMessage</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1ac4f0d073408aa1d7451ed07aa149c601" kind="function"><name>id</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1a299278b44a962e10a5015c7640ebda48" kind="function"><name>name</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1ad218804d59576e090c1b003a6bfd7c14" kind="function"><name>result</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1a4b9e952584a0167eb4cd0289cd024a86" kind="function"><name>message</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1a3200e9307dda4a40eac5dd1824ccb4bb" kind="function"><name>geometries</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_1af4a56365e47da137380a5bfb2723df6a" kind="function"><name>is_empty</name></member>
+  </compound>
+  <compound refid="classuipc_1_1core_1_1_sanity_check_message_collection" kind="class"><name>uipc::core::SanityCheckMessageCollection</name>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_collection_1a1cfb634a70c91f0a3386935b44a53149" kind="variable"><name>m_messages</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_collection_1a9e6396dae32f06d7c487f19896a2a749" kind="function"><name>SanityCheckMessageCollection</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_collection_1a81fee318d12bf6ee90daa6c799feee5d" kind="function"><name>messages</name></member>
+    <member refid="classuipc_1_1core_1_1_sanity_check_message_collection_1a2685cb07518c711824516fd37d8ef358" kind="function"><name>messages</name></member>
+  </compound>
+  <compound refid="classuipc_1_1backend_1_1_sanity_check_message_visitor" kind="class"><name>uipc::backend::SanityCheckMessageVisitor</name>
+    <member refid="classuipc_1_1backend_1_1_sanity_check_message_visitor_1abe5c4ae864bebba3fff80c8e4c56b6d8" kind="variable"><name>m_msg</name></member>
+    <member refid="classuipc_1_1backend_1_1_sanity_check_message_visitor_1a81541b74bb0de66e18d3cc20749eb553" kind="function"><name>SanityCheckMessageVisitor</name></member>
+    <member refid="classuipc_1_1backend_1_1_sanity_check_message_visitor_1ae0c334ca9344bb4c083a0cbe7e5b9235" kind="function"><name>id</name></member>
+    <member refid="classuipc_1_1backend_1_1_sanity_check_message_visitor_1a27518aedd8cbf46e8029a8cb5278c93d" kind="function"><name>name</name></member>
+    <member refid="classuipc_1_1backend_1_1_sanity_check_message_visitor_1a68758303ccf170e9272549c87b284964" kind="function"><name>result</name></member>
+    <member refid="classuipc_1_1backend_1_1_sanity_check_message_visitor_1af4420fea7cd029e15ab245de4c0dd209" kind="function"><name>message</name></member>
+    <member refid="classuipc_1_1backend_1_1_sanity_check_message_visitor_1aba818c2edbc7b960a80fb29df38f667b" kind="function"><name>geometries</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_scene" kind="class"><name>uipc::core::Scene</name>
     <member refid="classuipc_1_1core_1_1_scene_1a82e06600245526c1cafd2dc5709718e3" kind="friend"><name>backend::SceneVisitor</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1a7b4bcdf992c21ae83363f25df05b1d25" kind="friend"><name>World</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1a0720b5f434e636e22a3ed34f847eec57" kind="friend"><name>Object</name></member>
-    <member refid="classuipc_1_1core_1_1_scene_1a3ab013edf643de6fbc1bea086a06b968" kind="friend"><name>SanityChecker</name></member>
+    <member refid="classuipc_1_1core_1_1_scene_1a670158ea7733888f125b836dcb2fbecb" kind="friend"><name>SanityChecker</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1af47625f50036c466946f960db7320bcf" kind="friend"><name>Animation</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1aafe729d6ba669e2227d07131467d214a" kind="variable"><name>m_impl</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1a8e12b9093a1d0030f8b4c32c571857e4" kind="function"><name>Scene</name></member>
@@ -1007,6 +1082,8 @@
     <member refid="classuipc_1_1core_1_1_scene_1a8b04cdf670cc526387f549bc151bf91f" kind="function"><name>animator</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1a89e3fbd243c278fdf2f2b90c3faf739c" kind="function"><name>diff_sim</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1ad81248ee53c29638cf91b9a577d6ddb9" kind="function"><name>diff_sim</name></member>
+    <member refid="classuipc_1_1core_1_1_scene_1a31c3e32f21f247861987ce3aa7de7c60" kind="function"><name>sanity_checker</name></member>
+    <member refid="classuipc_1_1core_1_1_scene_1ad32d2bd7505868ffbfdab449cf95f384" kind="function"><name>sanity_checker</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1ae491fea3f421dc710f86e596dd0dd146" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1a4f7a79a581aff49a5ccef0ee6bc244ce" kind="function"><name>init</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1a8fc506afaaf8b0350bf75414a18437c4" kind="function"><name>begin_pending</name></member>
@@ -1016,6 +1093,7 @@
     <member refid="classuipc_1_1core_1_1_scene_1a0a000b72ca251b8fd7610dc1e3ac614e" kind="function"><name>world</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1adf1df7292de64d84fee9cbfb854ee46f" kind="function"><name>dt</name></member>
     <member refid="classuipc_1_1core_1_1_scene_1a2ad9495c27adc3a48d7dbc7a3867fd68" kind="function"><name>is_started</name></member>
+    <member refid="classuipc_1_1core_1_1_scene_1afaa89380e04974841ee09ef7b14da278" kind="function"><name>is_pending</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_scene_i_o" kind="class"><name>uipc::core::SceneIO</name>
     <member refid="classuipc_1_1core_1_1_scene_i_o_1afbcb62a24b4fbc0a00430bd10ab480ba" kind="variable"><name>m_scene</name></member>
@@ -1034,6 +1112,7 @@
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9dfd7729426cbdda153409e5e9e3a1c3" kind="function"><name>SceneVisitor</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9dc8ab605db9652fc502e7e1066a3fbc" kind="function"><name>begin_pending</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9f2ac311e7ba7b2bf297cac64313c35c" kind="function"><name>solve_pending</name></member>
+    <member refid="classuipc_1_1backend_1_1_scene_visitor_1a4a297c76ad7d20acc43bc95ab17b9912" kind="function"><name>is_pending</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1adaa277b4e01a22ad5bab7baf757b9c42" kind="function"><name>geometries</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a3d51ad6c47d19714e7b473d46ff40364" kind="function"><name>find_geometry</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a20278863946fba5edd8ae0cf5d864f41" kind="function"><name>pending_geometries</name></member>
@@ -1043,7 +1122,9 @@
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a1b280827156e456738e8833b7ade970e" kind="function"><name>pending_destroy_ids</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1afd9d892624d9b46e0ec6e1c5b1aecc37" kind="function"><name>info</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1ad9cdffe532622dad3f16f7e7da8d53d5" kind="function"><name>constitution_tabular</name></member>
+    <member refid="classuipc_1_1backend_1_1_scene_visitor_1a7053ce9c42c1be75e54c5d3f3fcd4802" kind="function"><name>constitution_tabular</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1afcc978b5e10b007b7264dc4bb2c2a283" kind="function"><name>contact_tabular</name></member>
+    <member refid="classuipc_1_1backend_1_1_scene_visitor_1a01cc05f573cc71a8bed2b6b542ea9351" kind="function"><name>contact_tabular</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a789a44270450f07cfce661f30aac87ae" kind="function"><name>diff_sim</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a84a3d89dd040954dfd6bf69cba461e65" kind="function"><name>diff_sim</name></member>
   </compound>
@@ -1138,8 +1219,8 @@
     <member refid="classuipc_1_1geometry_1_1_simplicial_complex_1a465e6ffb5ee6f2961f02b70a6fcb1c52" kind="function"><name>do_collect_attribute_collections</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kind="class"><name>uipc::geometry::SimplicialComplexAttributes</name>
-    <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a21440f11d5abdb70ef9297101fcaef5d" kind="typedef"><name>AutoAttributeCollection</name></member>
-    <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a9e000098579682010c06e900e11c0670" kind="typedef"><name>TopoValueT</name></member>
+    <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1a0ee464c5fb068c4ef171a7ae2c588d2f" kind="typedef"><name>AutoAttributeCollection</name></member>
+    <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1aa0460ab1ca25d8cb3e6be6a13bb8af5a" kind="typedef"><name>TopoValueT</name></member>
     <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1af8cb79237c847ca6baaa45ff91498795" kind="friend"><name>fmt::formatter&lt; SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;</name></member>
     <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1abd621cd374772a67fae8b860ddfca14c" kind="friend"><name>AttributeFriend</name></member>
     <member refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes_1adbbc2841ec16785f0189885fc840ebb3" kind="friend"><name>SimplicialComplexAttributes</name></member>
@@ -1218,10 +1299,10 @@
   <compound refid="classuipc_1_1geometry_1_1_spread_sheet_i_o" kind="class"><name>uipc::geometry::SpreadSheetIO</name>
     <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1ab0c4edbdc00ca4cbc0429fef163017b4" kind="variable"><name>m_output_folder</name></member>
     <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a2ec229852406425945a7a53f32bda3c5" kind="function"><name>SpreadSheetIO</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1addd20797f6c7c60b647e8bd93c66a8a4" kind="function"><name>write_json</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1ab4cac7db4778492ec0628c040dfa8443" kind="function"><name>write_json</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a77c90427b71db23d6cd82eb86dc8ddbf" kind="function"><name>write_csv</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a6b293f597c9fc26cbbc885853fcb6071" kind="function"><name>write_csv</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1ab03c49433ff69caa6710e7a7bb4a235c" kind="function"><name>write_json</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1ab01d8f2f9ba14b75de435cdd9bd4cbf4" kind="function"><name>write_json</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a73e62b274d417c9d5d0c6941e2aa6785" kind="function"><name>write_csv</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a7a00d893dd502bb0c54b226d754dd9ea" kind="function"><name>write_csv</name></member>
   </compound>
   <compound refid="classuipc_1_1constitution_1_1_stable_neo_hookean" kind="class"><name>uipc::constitution::StableNeoHookean</name>
     <member refid="classuipc_1_1constitution_1_1_stable_neo_hookean_1a688ad9d9358e60bb68a089ac85cb2dd7" kind="typedef"><name>Base</name></member>
@@ -1291,6 +1372,7 @@
   </compound>
   <compound refid="classuipc_1_1core_1_1_world" kind="class"><name>uipc::core::World</name>
     <member refid="classuipc_1_1core_1_1_world_1a72a514c41be451fe6c3654f89011cb6c" kind="friend"><name>backend::WorldVisitor</name></member>
+    <member refid="classuipc_1_1core_1_1_world_1a3ab013edf643de6fbc1bea086a06b968" kind="friend"><name>SanityChecker</name></member>
     <member refid="classuipc_1_1core_1_1_world_1a0b621936c513f1176aac9746f0d06674" kind="variable"><name>m_scene</name></member>
     <member refid="classuipc_1_1core_1_1_world_1aa102c67066b7aa8e2f7504716c5141fb" kind="variable"><name>m_engine</name></member>
     <member refid="classuipc_1_1core_1_1_world_1aaa89736245fa0e684d85aa24b80c383a" kind="variable"><name>m_valid</name></member>
@@ -1302,6 +1384,7 @@
     <member refid="classuipc_1_1core_1_1_world_1a7ed0f76af4dda57e8dd3092f86563c12" kind="function"><name>backward</name></member>
     <member refid="classuipc_1_1core_1_1_world_1a2dcb15804a6a16e5868c5568dd6914e7" kind="function"><name>dump</name></member>
     <member refid="classuipc_1_1core_1_1_world_1a2c50428dd9994020c17c810f1db8936c" kind="function"><name>recover</name></member>
+    <member refid="classuipc_1_1core_1_1_world_1adafea93153fcac393128a24bc3ebb1f2" kind="function"><name>is_valid</name></member>
     <member refid="classuipc_1_1core_1_1_world_1a33ccdaa57e6554436a144df10c348d4c" kind="function"><name>frame</name></member>
     <member refid="classuipc_1_1core_1_1_world_1a62f35356c0dd3d7235f00a5c6177ede6" kind="function"><name>sanity_check</name></member>
   </compound>
@@ -1319,43 +1402,43 @@
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="namespaceuipc" kind="namespace"><name>uipc</name>
-    <member refid="allocator_8h_1a806b61b73e18cb7ae69c3caf257a0af4" kind="typedef"><name>Allocator</name></member>
-    <member refid="json_8h_1a93cd19604d0595619c966e8c4f306aea" kind="typedef"><name>Json</name></member>
-    <member refid="smart__pointer_8h_1a50c8331c06ef86a9ac9f44215c33f1cc" kind="typedef"><name>U</name></member>
-    <member refid="smart__pointer_8h_1a5744445dc1587f825109dd9a4f1109a7" kind="typedef"><name>S</name></member>
-    <member refid="smart__pointer_8h_1a550eb8ce0102889d4c7f5aca6a65631e" kind="typedef"><name>W</name></member>
-    <member refid="stack_8h_1aaf016753d64060e8c621fd28b962e0a1" kind="typedef"><name>stack</name></member>
-    <member refid="common_2type__define_8h_1a47b06ab20d0d6f91f9b3b196d422976e" kind="typedef"><name>Float</name></member>
-    <member refid="common_2type__define_8h_1a1447119d14980356d5dbe18761c5fc96" kind="typedef"><name>IndexT</name></member>
-    <member refid="common_2type__define_8h_1ab5bfbf8312987e1c26a7cbf991ff858d" kind="typedef"><name>SizeT</name></member>
-    <member refid="common_2type__define_8h_1a32d1b5e6e6d383d1cf395c4e0f3b9d8f" kind="typedef"><name>I32</name></member>
-    <member refid="common_2type__define_8h_1a8ad8c59aec0bb728b48ccdd0e4a7941d" kind="typedef"><name>I64</name></member>
-    <member refid="common_2type__define_8h_1ad91fbc584ef5d994faa686eec46efcd5" kind="typedef"><name>U32</name></member>
-    <member refid="common_2type__define_8h_1a5294c0dde3376ca799ddbd758c637c39" kind="typedef"><name>U64</name></member>
-    <member refid="common_2type__define_8h_1a398b0d8e7eaabef8df2b6d2f9ea52e77" kind="typedef"><name>Vector2</name></member>
-    <member refid="common_2type__define_8h_1a0423c601fb052ad2f051051a2666877f" kind="typedef"><name>Vector3</name></member>
-    <member refid="common_2type__define_8h_1a67db01947c8b3776a18ff9f377d44296" kind="typedef"><name>Vector4</name></member>
-    <member refid="common_2type__define_8h_1a5df4266c8ab4a6a58b2d5a4cfd7ae680" kind="typedef"><name>Vector2i</name></member>
-    <member refid="common_2type__define_8h_1a8ef510fbfdc4e095ab8b7dcd9890cca7" kind="typedef"><name>Vector3i</name></member>
-    <member refid="common_2type__define_8h_1aceff4b63bee9f811dec3879377dc4f02" kind="typedef"><name>Vector4i</name></member>
-    <member refid="common_2type__define_8h_1a71ea146401ffad530e9816f283d5528f" kind="typedef"><name>Vector6</name></member>
-    <member refid="common_2type__define_8h_1a315fcc246bc645bb98a0fdd85630ee9c" kind="typedef"><name>Vector9</name></member>
-    <member refid="common_2type__define_8h_1ad6eb9ab2aa2a9405bddc066eae97f787" kind="typedef"><name>Vector12</name></member>
-    <member refid="common_2type__define_8h_1a19d018766f47b42dffe698cfb0fb2f35" kind="typedef"><name>Matrix2x2</name></member>
-    <member refid="common_2type__define_8h_1ad28c02f87918584a6844885a56ee3118" kind="typedef"><name>Matrix3x3</name></member>
-    <member refid="common_2type__define_8h_1ae74d4481b54213b4507bb379c80d1d9f" kind="typedef"><name>Matrix4x4</name></member>
-    <member refid="common_2type__define_8h_1a4c36d6d66a5985281264d200e0bc0a47" kind="typedef"><name>Matrix6x6</name></member>
-    <member refid="common_2type__define_8h_1a8c8a6cb409de87c5a855e5bde9df979b" kind="typedef"><name>Matrix9x9</name></member>
-    <member refid="common_2type__define_8h_1a71ff20abb2f39501461b4a47cd43f410" kind="typedef"><name>Matrix12x12</name></member>
-    <member refid="common_2type__define_8h_1a32b89302db77feb0541487c15f9e9188" kind="typedef"><name>Transform</name></member>
-    <member refid="common_2type__define_8h_1aa1e1cf6d1e47a1359a189077d1773747" kind="typedef"><name>Translation</name></member>
-    <member refid="common_2type__define_8h_1a73462c1b47058bfebae5bcab4f6b8cd0" kind="typedef"><name>VectorX</name></member>
-    <member refid="common_2type__define_8h_1a99c9824968f0254809b795bf4cd00efc" kind="typedef"><name>VectorXi</name></member>
-    <member refid="common_2type__define_8h_1aebb0885a7294c2056f0006e72e6b93ee" kind="typedef"><name>VectorXi64</name></member>
-    <member refid="common_2type__define_8h_1a56b4aba92187554d9b3c94362a594a00" kind="typedef"><name>VectorXu</name></member>
-    <member refid="common_2type__define_8h_1a84f63550f12c062068583914a8aaedbd" kind="typedef"><name>VectorXu64</name></member>
-    <member refid="type__traits_8h_1aa386252fe1b9ca302caf10b56b5cbef2" kind="typedef"><name>propagate_const_t</name></member>
-    <member refid="type__traits_8h_1a2aae4c9bc8d4404c55de28dd1b8315b2" kind="typedef"><name>signature_t</name></member>
+    <member refid="allocator_8h_1ac9be4f2eac29bb0cd6b305c53f210ecd" kind="typedef"><name>Allocator</name></member>
+    <member refid="json_8h_1af0e87bd336ef43a56df46dceb25a7aca" kind="typedef"><name>Json</name></member>
+    <member refid="smart__pointer_8h_1a5b4e26f974ef71ef1ebdf8eadda647c2" kind="typedef"><name>U</name></member>
+    <member refid="smart__pointer_8h_1a32a1460d4f04c02e49f968b6ea93cca9" kind="typedef"><name>S</name></member>
+    <member refid="smart__pointer_8h_1a6c2c7b849aea7912830aee8ee6bfac35" kind="typedef"><name>W</name></member>
+    <member refid="stack_8h_1af5b36dfea4feec72524671c83148d26a" kind="typedef"><name>stack</name></member>
+    <member refid="common_2type__define_8h_1a041ac1bfdc02405d78b944b71943a156" kind="typedef"><name>Float</name></member>
+    <member refid="common_2type__define_8h_1a2c7134a7a9194fa6522b448f3fe5fdeb" kind="typedef"><name>IndexT</name></member>
+    <member refid="common_2type__define_8h_1a936b3bc96b88d24de6e9881ce996083d" kind="typedef"><name>SizeT</name></member>
+    <member refid="common_2type__define_8h_1a6fc02c496af97d82a7e20a51deed642b" kind="typedef"><name>I32</name></member>
+    <member refid="common_2type__define_8h_1a1445c6b9b972e536f3b18edce07f8077" kind="typedef"><name>I64</name></member>
+    <member refid="common_2type__define_8h_1a18c1e31e7e2794d7c4b5d2dd244d2ea4" kind="typedef"><name>U32</name></member>
+    <member refid="common_2type__define_8h_1a9f18b97bdcad2c2a96138d7ea59111ef" kind="typedef"><name>U64</name></member>
+    <member refid="common_2type__define_8h_1ad98f4f0aa5762e722589355b9c5cf7b5" kind="typedef"><name>Vector2</name></member>
+    <member refid="common_2type__define_8h_1adf7c62056f5b805b4ffd8d069c639b1e" kind="typedef"><name>Vector3</name></member>
+    <member refid="common_2type__define_8h_1ac6fe7fc5f981f493b4c46036c306a68c" kind="typedef"><name>Vector4</name></member>
+    <member refid="common_2type__define_8h_1a7202d75dd587750f7414790fe2d652ec" kind="typedef"><name>Vector2i</name></member>
+    <member refid="common_2type__define_8h_1a55256c0ec66bf5d69aade0f79b8874c7" kind="typedef"><name>Vector3i</name></member>
+    <member refid="common_2type__define_8h_1ad2c7ce12de7f413d7061ad1c33b517d3" kind="typedef"><name>Vector4i</name></member>
+    <member refid="common_2type__define_8h_1a4dfc8a15a812b3cd1b016c4791742be3" kind="typedef"><name>Vector6</name></member>
+    <member refid="common_2type__define_8h_1afa101db4f6dd14bb9622957a5e1d42a6" kind="typedef"><name>Vector9</name></member>
+    <member refid="common_2type__define_8h_1a79503abe4eed710e624448ff3c9c99d0" kind="typedef"><name>Vector12</name></member>
+    <member refid="common_2type__define_8h_1a8fa86c8d3ad13a80734acb8fdd8e061a" kind="typedef"><name>Matrix2x2</name></member>
+    <member refid="common_2type__define_8h_1ab490126d74acdcc71c7171c4b897c982" kind="typedef"><name>Matrix3x3</name></member>
+    <member refid="common_2type__define_8h_1afae818f3965d22576ab64d517bc34d5d" kind="typedef"><name>Matrix4x4</name></member>
+    <member refid="common_2type__define_8h_1abd949591d3da266a3e6c12815fe72d82" kind="typedef"><name>Matrix6x6</name></member>
+    <member refid="common_2type__define_8h_1a1b784961a120b2ee334b951bd5ee1147" kind="typedef"><name>Matrix9x9</name></member>
+    <member refid="common_2type__define_8h_1aded81f058c6296ad63aaf97ce2358496" kind="typedef"><name>Matrix12x12</name></member>
+    <member refid="common_2type__define_8h_1aa0746a4c20eb4f3df3de40f9afa58722" kind="typedef"><name>Transform</name></member>
+    <member refid="common_2type__define_8h_1a5f2640bf7a9d2a68b56d4b47838e6aaa" kind="typedef"><name>Translation</name></member>
+    <member refid="common_2type__define_8h_1a11a1a033d576410ff1fb3fef67196b67" kind="typedef"><name>VectorX</name></member>
+    <member refid="common_2type__define_8h_1a0a96889e0583cf6201bd3e3b2764efe5" kind="typedef"><name>VectorXi</name></member>
+    <member refid="common_2type__define_8h_1acb8003c4c50d4d6a05a13ac02532d37c" kind="typedef"><name>VectorXi64</name></member>
+    <member refid="common_2type__define_8h_1afe849e5e56df267070b188ef0c9ab21b" kind="typedef"><name>VectorXu</name></member>
+    <member refid="common_2type__define_8h_1ad3d7ed2864655ed23811b21045393671" kind="typedef"><name>VectorXu64</name></member>
+    <member refid="type__traits_8h_1a16a20bc760afdf91c1452e58b4b77d49" kind="typedef"><name>propagate_const_t</name></member>
+    <member refid="type__traits_8h_1a3a65d6e3ce75b13ebca387866dd9fd68" kind="typedef"><name>signature_t</name></member>
     <member refid="config_8h_1a909d9bca4c79c05d3ea39d63fa96adb2" kind="variable"><name>RUNTIME_CHECK</name></member>
     <member refid="type__traits_8h_1a66f926eba5f289bf4064a3f7169da694" kind="variable"><name>is_matrix_v</name></member>
     <member refid="run__length__encode_8h_1a84e9dce28fc0e024fb6b01763d46a08e" kind="function"><name>run_length_encode</name></member>
@@ -1399,10 +1482,10 @@
     <member refid="unit_8h_1a861e98a8df18dccd4a225a581452f6f7" kind="function"><name>operator&quot;&quot;_MPa</name></member>
     <member refid="unit_8h_1ac6416e601174ab6caf1ade44ae75e434" kind="function"><name>operator&quot;&quot;_GPa</name></member>
     <member refid="unit_8h_1a22eab1324a5f982dc202c24b1572d47e" kind="function"><name>operator&quot;&quot;_N</name></member>
-    <member refid="gltf__io_8h_1a3b8fd088958f45a4cd8b9b3857ab5666" kind="function"><name>test_gltf</name></member>
+    <member refid="gltf__io_8h_1a5608f63804439813f29c34fb770f17ff" kind="function"><name>test_gltf</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1backend" kind="namespace"><name>uipc::backend</name>
-    <member refid="backend_2type__define_8h_1a565d5d58edf13af4cd412dce322315d4" kind="typedef"><name>HandleT</name></member>
+    <member refid="backend_2type__define_8h_1a5a5d6110d2873058971ffe4a90c7367b" kind="typedef"><name>HandleT</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1builtin" kind="namespace"><name>uipc::builtin</name>
     <member refid="constitution__type_8h_1a0230fb7c2299ffa4fe662603ebe98745" kind="variable"><name>AffineBody</name></member>
@@ -1426,14 +1509,13 @@
     <member refid="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667a505a83f220c02df2f85c3810cd9ceb38" kind="enumvalue"><name>Success</name></member>
     <member refid="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667a0eaadb4fcb48a0a0ed7bc9868be9fbaa" kind="enumvalue"><name>Warning</name></member>
     <member refid="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667a902b0d55fddef6f8d651fe1035b7d4bd" kind="enumvalue"><name>Error</name></member>
+    <member refid="contact__model__collection_8h_1a6916c70d03579830ab507fad464d0c75" kind="typedef"><name>ContactModelCollection</name></member>
+    <member refid="contact__model__collection_8h_1aea227fbac33bca1e9515dca224524fe3" kind="typedef"><name>CContactModelCollection</name></member>
     <member refid="contact__element_8h_1a7602785be3f9d015d583cf8b02e335a7" kind="function"><name>to_json</name></member>
     <member refid="contact__element_8h_1a4f843662793df62c096c01babd049c9d" kind="function"><name>from_json</name></member>
     <member refid="contact__model_8h_1aedef044135cab1a2600278e260c1c956" kind="function"><name>to_json</name></member>
     <member refid="contact__model_8h_1a9a4eef4caab0ef9da47a18158a408194" kind="function"><name>from_json</name></member>
     <member refid="contact__tabular_8h_1abcd24d07abd7e67d377543c23fa79538" kind="function"><name>to_json</name></member>
-  </compound>
-  <compound refid="namespaceuipc_1_1core_1_1detail" kind="namespace"><name>uipc::core::detail</name>
-    <member refid="sanity__checker__auto__register_8h_1a6d3739d0ae0fc8e811f05d4551c58265" kind="function"><name>register_sanity_checker_creator</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1details" kind="namespace"><name>uipc::details</name>
   </compound>
@@ -1445,13 +1527,18 @@
     <member refid="geometry__slot_8h_1a7326710289cfb2869320543ddf4c17aea960b44c579bc2f6818d2daaf9e4c16f0" kind="enumvalue"><name>Normal</name></member>
     <member refid="geometry__slot_8h_1a7326710289cfb2869320543ddf4c17aead7cc7901e0c996dc2b7da0ba6e80334b" kind="enumvalue"><name>PendingCreate</name></member>
     <member refid="geometry__slot_8h_1a7326710289cfb2869320543ddf4c17aea3cfd62ce77ecbc29a810a2c9c8beba2f" kind="enumvalue"><name>PendingDestroy</name></member>
-    <member refid="implicit__geometry__slot_8h_1a80c0caad420d550eca383471efeddb07" kind="typedef"><name>ImplicitGeometrySlot</name></member>
-    <member refid="simplicial__complex__slot_8h_1ac71c3aa8bc6cb8f8df305d94339246e6" kind="typedef"><name>SimplicialComplexSlot</name></member>
+    <member refid="implicit__geometry__slot_8h_1a528c8d69e846369da7e96980516e40fb" kind="typedef"><name>ImplicitGeometrySlot</name></member>
+    <member refid="simplicial__complex__slot_8h_1a691c92538dea87476928ae3fb9d6ad1d" kind="typedef"><name>SimplicialComplexSlot</name></member>
     <member refid="apply__region_8h_1ab0207d614bc7e6a944dc5722b5051299" kind="function"><name>apply_region</name></member>
     <member refid="apply__transform_8h_1a438613fb33e8483d363b89d097ec0d65" kind="function"><name>apply_transform</name></member>
     <member refid="closure_8h_1a7b4fec03c6527d1d65cc4a5d2fa17877" kind="function"><name>facet_closure</name></member>
     <member refid="compute__instance__volume_8h_1a964ae1c7d721bb7fcd3d333d8a7d52db" kind="function"><name>compute_instance_volume</name></member>
     <member refid="compute__vertex__volume_8h_1a6013e421d0113faf1e74929dc3d5fa97" kind="function"><name>compute_vertex_volume</name></member>
+    <member refid="distance_8h_1a6c59867fbc48ff60c99606079600ef4f" kind="function"><name>halfplane_vertex_signed_distance</name></member>
+    <member refid="distance_8h_1ad0580b21fe57355ce749ba41c58b97a0" kind="function"><name>point_point_squared_distance</name></member>
+    <member refid="distance_8h_1a6f6fdff814c7ecd9decbe5a825370206" kind="function"><name>point_edge_squared_distance</name></member>
+    <member refid="distance_8h_1a1e3212117f97c56eac4d320dda8369ab" kind="function"><name>point_triangle_squared_distance</name></member>
+    <member refid="distance_8h_1aaf2304f7ab802f8662de9f815e534d28" kind="function"><name>edge_edge_squared_distance</name></member>
     <member refid="extract__surface_8h_1a80eecfbd8a333d6f4f91c380d17ea176" kind="function"><name>extract_surface</name></member>
     <member refid="extract__surface_8h_1abf3aa83c105b784f90f152231214efae" kind="function"><name>extract_surface</name></member>
     <member refid="factory_8h_1a1045d44981bffaf213f391ab5087a39b" kind="function"><name>tetmesh</name></member>
@@ -1461,6 +1548,8 @@
     <member refid="factory_8h_1aca9de12b39baedb25dcf7fe2e9fab5d1" kind="function"><name>halfplane</name></member>
     <member refid="factory_8h_1ad40a1598b9d7e853a483a020db95fa1a" kind="function"><name>ground</name></member>
     <member refid="flip__inward__triangles_8h_1a4c137afa7682ee35af954d95720ce3c2" kind="function"><name>flip_inward_triangles</name></member>
+    <member refid="intersection_8h_1a34870b858ccc85f3d3931fa0cb091a4f" kind="function"><name>tri_edge_intersect</name></member>
+    <member refid="intersection_8h_1a0493664e50f0cbe87c0502d8f9690259" kind="function"><name>is_point_in_tet</name></member>
     <member refid="is__trimesh__closed_8h_1a35e2794cc41a45fdf3bddcc36e9d15cc" kind="function"><name>is_trimesh_closed</name></member>
     <member refid="label__connected__vertices_8h_1abfd3492665c6eb9b36a372d92cf95bc9" kind="function"><name>label_connected_vertices</name></member>
     <member refid="label__region_8h_1ab5d93eaee5668468c042a8615b5766fd" kind="function"><name>label_region</name></member>
@@ -1469,6 +1558,8 @@
     <member refid="merge_8h_1ad04964c94afc06ffe31352d831f55c47" kind="function"><name>merge</name></member>
     <member refid="merge_8h_1a487ce745624dd48be0dcd065623c9e1c" kind="function"><name>merge</name></member>
     <member refid="mesh__partition_8h_1afe9f2b596027938b803bdd99e524565e" kind="function"><name>mesh_partition</name></member>
+    <member refid="optimal__transform_8h_1a977a754d89cd0d7b7f9190c35d737e5e" kind="function"><name>optimal_transform</name></member>
+    <member refid="optimal__transform_8h_1ab9433bc37e2338ebeebe22e763cbe32c" kind="function"><name>optimal_transform</name></member>
     <member refid="tetrahedralize_8h_1aebe236e16bb17bf5eb9f4585ba9f4b5c" kind="function"><name>tetrahedralize</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1geometry_1_1affine__body" kind="namespace"><name>uipc::geometry::affine_body</name>
@@ -1504,9 +1595,13 @@
   </compound>
   <compound refid="animator__visitor_8h" kind="file"><name>animator_visitor.h</name>
   </compound>
+  <compound refid="contact__tabular__visitor_8h" kind="file"><name>contact_tabular_visitor.h</name>
+  </compound>
   <compound refid="diff__sim__visitor_8h" kind="file"><name>diff_sim_visitor.h</name>
   </compound>
   <compound refid="geometry__visitor_8h" kind="file"><name>geometry_visitor.h</name>
+  </compound>
+  <compound refid="sanity__check__message__visitor_8h" kind="file"><name>sanity_check_message_visitor.h</name>
   </compound>
   <compound refid="scene__visitor_8h" kind="file"><name>scene_visitor.h</name>
   </compound>
@@ -1662,6 +1757,8 @@
   </compound>
   <compound refid="contact__model_8h" kind="file"><name>contact_model.h</name>
   </compound>
+  <compound refid="contact__model__collection_8h" kind="file"><name>contact_model_collection.h</name>
+  </compound>
   <compound refid="contact__tabular_8h" kind="file"><name>contact_tabular.h</name>
   </compound>
   <compound refid="diff__sim_8h" kind="file"><name>diff_sim.h</name>
@@ -1672,9 +1769,13 @@
   </compound>
   <compound refid="i__engine_8h" kind="file"><name>i_engine.h</name>
   </compound>
+  <compound refid="i__sanity__checker_8h" kind="file"><name>i_sanity_checker.h</name>
+  </compound>
   <compound refid="object_8h" kind="file"><name>object.h</name>
   </compound>
   <compound refid="object__collection_8h" kind="file"><name>object_collection.h</name>
+  </compound>
+  <compound refid="sanity__checker_8h" kind="file"><name>sanity_checker.h</name>
   </compound>
   <compound refid="scene_8h" kind="file"><name>scene.h</name>
   </compound>
@@ -1728,17 +1829,23 @@
   </compound>
   <compound refid="apply__transform_8h" kind="file"><name>apply_transform.h</name>
   </compound>
+  <compound refid="bvh_8h" kind="file"><name>bvh.h</name>
+  </compound>
   <compound refid="closure_8h" kind="file"><name>closure.h</name>
   </compound>
   <compound refid="compute__instance__volume_8h" kind="file"><name>compute_instance_volume.h</name>
   </compound>
   <compound refid="compute__vertex__volume_8h" kind="file"><name>compute_vertex_volume.h</name>
   </compound>
+  <compound refid="distance_8h" kind="file"><name>distance.h</name>
+  </compound>
   <compound refid="extract__surface_8h" kind="file"><name>extract_surface.h</name>
   </compound>
   <compound refid="factory_8h" kind="file"><name>factory.h</name>
   </compound>
   <compound refid="flip__inward__triangles_8h" kind="file"><name>flip_inward_triangles.h</name>
+  </compound>
+  <compound refid="intersection_8h" kind="file"><name>intersection.h</name>
   </compound>
   <compound refid="is__trimesh__closed_8h" kind="file"><name>is_trimesh_closed.h</name>
   </compound>
@@ -1753,6 +1860,10 @@
   <compound refid="merge_8h" kind="file"><name>merge.h</name>
   </compound>
   <compound refid="mesh__partition_8h" kind="file"><name>mesh_partition.h</name>
+  </compound>
+  <compound refid="octree_8h" kind="file"><name>octree.h</name>
+  </compound>
+  <compound refid="optimal__transform_8h" kind="file"><name>optimal_transform.h</name>
   </compound>
   <compound refid="simplex__utils_8h" kind="file"><name>simplex_utils.h</name>
   </compound>
@@ -1769,15 +1880,6 @@
   <compound refid="simplicial__complex__io_8h" kind="file"><name>simplicial_complex_io.h</name>
   </compound>
   <compound refid="spread__sheet__io_8h" kind="file"><name>spread_sheet_io.h</name>
-  </compound>
-  <compound refid="i__sanity__checker_8h" kind="file"><name>i_sanity_checker.h</name>
-  </compound>
-  <compound refid="sanity__checker_8h" kind="file"><name>sanity_checker.h</name>
-    <member refid="sanity__checker_8h_1a2a2aaa7b017174895a4586f313349f34" kind="define"><name>REGISTER_SANITY_CHECKER</name></member>
-  </compound>
-  <compound refid="sanity__checker__auto__register_8h" kind="file"><name>sanity_checker_auto_register.h</name>
-  </compound>
-  <compound refid="sanity__checker__collection_8h" kind="file"><name>sanity_checker_collection.h</name>
   </compound>
   <compound refid="platform__handle_8h" kind="file"><name>platform_handle.h</name>
   </compound>
@@ -1806,8 +1908,6 @@
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>
   <compound refid="dir_852854ea57a318f61c10cfed1155dbd7" kind="dir"><name>include/uipc/io</name>
-  </compound>
-  <compound refid="dir_bc94a01fec317e710a764ca285cf9c79" kind="dir"><name>include/uipc/sanity_check</name>
   </compound>
   <compound refid="dir_9f30510905f1286cc334e7ecdb1aceca" kind="dir"><name>include/uipc</name>
   </compound>

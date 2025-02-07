@@ -42,11 +42,11 @@
 | class | [**AttributeIO**](classuipc_1_1geometry_1_1_attribute_i_o.md) <br> |
 | class | [**AttributeIOError**](classuipc_1_1geometry_1_1_attribute_i_o_error.md) <br> |
 | class | [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute slot of type T in a geometries attribute collection._  |
+| class | [**BVH**](classuipc_1_1geometry_1_1_b_v_h.md) <br> |
 | class | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) <br>_A base geometries class that contains the instance attributes and the meta attributes._  |
 | class | [**GeometryAttributeError**](classuipc_1_1geometry_1_1_geometry_attribute_error.md) <br> |
 | class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
-| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
 | class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md) &lt;&gt;<br> |
@@ -56,6 +56,7 @@
 | class | [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) <br>_An abstract class for geometries._  |
 | class | [**IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md) <br> |
 | class | [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) <br> |
+| class | [**Octree**](classuipc_1_1geometry_1_1_octree.md) <br> |
 | class | [**SimplexUtils**](classuipc_1_1geometry_1_1_simplex_utils.md) <br> |
 | class | [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) <br>_A simplicial complex is a collection of simplices._  |
 | class | [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) &lt;IsConst, N&gt;<br> |
@@ -98,12 +99,15 @@
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_instance\_volume**](#function-compute_instance_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Compute the volume of an instance in the simplicial complex._ [_**Attribute**_](classuipc_1_1geometry_1_1_attribute.md) __`volume` _&lt;Float&gt; will be created in the instance vertices._ |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_volume**](#function-compute_vertex_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br> |
+|  Float UIPC\_GEOMETRY\_API | [**edge\_edge\_squared\_distance**](#function-edge_edge_squared_distance) (const Vector3 & Ea0, const Vector3 & Ea1, const Vector3 & Eb0, const Vector3 & Eb1) <br> |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & src) <br>_Extract the surface of a tetrahedral mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Extract the surface of a list of tetrahedral meshes and merge them into one._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**facet\_closure**](#function-facet_closure) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Generate the closure from a collection of facet simplices, who only have the top dimension simplices._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**flip\_inward\_triangles**](#function-flip_inward_triangles) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Flip the orientation of the triangles in the simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**ground**](#function-ground) (Float height=0.0, const Vector3 & N=Vector3::UnitY()) <br>_Create a gound plane._  |
 |  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**halfplane**](#function-halfplane) (const Vector3 & P=Vector3::Zero(), const Vector3 & N=Vector3::UnitY()) <br>_Create a half-plane._  |
+|  Float UIPC\_GEOMETRY\_API | [**halfplane\_vertex\_signed\_distance**](#function-halfplane_vertex_signed_distance) (const Vector3 & P, const Vector3 & N, const Vector3 & V, Float V\_thickness=0.0) <br>_Compute the distance between a half-plane (P, N) and a vertex V (with thickness V\_thickness)._  |
+|  UIPC\_GEOMETRY\_API bool | [**is\_point\_in\_tet**](#function-is_point_in_tet) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & T3, const Vector3 & P, Vector4 & tuvw\_in\_tet) <br>_Check if a point is in a tetrahedron._  |
 |  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Check if a trimesh is closed._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_region**](#function-label_region) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the regions of a simplicial complex._  |
@@ -113,9 +117,15 @@
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Merge a list of simplicial complexes into one simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (std::initializer\_list&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; && complexes) <br> |
 |  void UIPC\_GEOMETRY\_API | [**mesh\_partition**](#function-mesh_partition) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, SizeT part\_max\_size) <br>_partition the simplicial complex_  |
+|  UIPC\_GEOMETRY\_API Matrix4x4 | [**optimal\_transform**](#function-optimal_transform) (span&lt; const Vector3 &gt; S, span&lt; const Vector3 &gt; D) <br>_Find out the optimal transformation matrix that maps the source points to the destination points._  |
+|  UIPC\_GEOMETRY\_API Matrix4x4 | [**optimal\_transform**](#function-optimal_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & S, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & D) <br>_Find out the optimal transformation matrix that maps the source simplicial complex to the destination simplicial complex._  |
+|  Float UIPC\_GEOMETRY\_API | [**point\_edge\_squared\_distance**](#function-point_edge_squared_distance) (const Vector3 & P, const Vector3 & E0, const Vector3 & E1) <br> |
+|  Float UIPC\_GEOMETRY\_API | [**point\_point\_squared\_distance**](#function-point_point_squared_distance) (const Vector3 & P0, const Vector3 & P1) <br> |
+|  Float UIPC\_GEOMETRY\_API | [**point\_triangle\_squared\_distance**](#function-point_triangle_squared_distance) (const Vector3 & P, const Vector3 & T0, const Vector3 & T1, const Vector3 & T2) <br> |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetrahedralize**](#function-tetrahedralize) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const Json & options=Json::object()) <br>_Tetrahedralize a 2D simplicial complex (trimesh)._  |
+|  UIPC\_GEOMETRY\_API bool | [**tri\_edge\_intersect**](#function-tri_edge_intersect) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & E0, const Vector3 & E1, bool & coplanar, Vector3 & uvw\_in\_tri, Vector2 & uv\_in\_edge) <br>_Check if a triangle and an edge intersect._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br>_Create a simplicial complex from a triangle mesh._  |
 
 
@@ -170,7 +180,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -183,7 +193,7 @@ using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
 ```
 
 
@@ -294,6 +304,24 @@ The attribute slot of the instance volume.
 ```C++
 UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_vertex_volume (
     SimplicialComplex & R
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function edge\_edge\_squared\_distance 
+
+```C++
+Float UIPC_GEOMETRY_API uipc::geometry::edge_edge_squared_distance (
+    const Vector3 & Ea0,
+    const Vector3 & Ea1,
+    const Vector3 & Eb0,
+    const Vector3 & Eb1
 ) 
 ```
 
@@ -471,6 +499,81 @@ UIPC_GEOMETRY_API ImplicitGeometry uipc::geometry::halfplane (
 
 
 * `height` The height of the ground plane 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function halfplane\_vertex\_signed\_distance 
+
+_Compute the distance between a half-plane (P, N) and a vertex V (with thickness V\_thickness)._ 
+```C++
+Float UIPC_GEOMETRY_API uipc::geometry::halfplane_vertex_signed_distance (
+    const Vector3 & P,
+    const Vector3 & N,
+    const Vector3 & V,
+    Float V_thickness=0.0
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `P` The Origin point of the half-plane. 
+* `N` The Normal vector of the half-plane. 
+* `V` The Vertex point. 
+* `V_thickness` The thickness of the vertex. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function is\_point\_in\_tet 
+
+_Check if a point is in a tetrahedron._ 
+```C++
+UIPC_GEOMETRY_API bool uipc::geometry::is_point_in_tet (
+    const Vector3 & T0,
+    const Vector3 & T1,
+    const Vector3 & T2,
+    const Vector3 & T3,
+    const Vector3 & P,
+    Vector4 & tuvw_in_tet
+) 
+```
+
+
+
+T0, T1, T2, T3 the vertices of the tetrahedron P is the point
+
+
+
+
+**Parameters:**
+
+
+* `tuvw_in_tet` the barycentric coordinates of the intersection point in the tet. Even if the function return false, the barycentric coordinates are still calculated correctly.
+
+
+
+**Returns:**
+
+true if the point is in the tetrahedron 
+
 
 
 
@@ -761,6 +864,129 @@ create a `mesh_part` &lt;IndexT&gt; attribute on the simplicial complex' vertice
 
 
 
+### function optimal\_transform 
+
+_Find out the optimal transformation matrix that maps the source points to the destination points._ 
+```C++
+UIPC_GEOMETRY_API Matrix4x4 uipc::geometry::optimal_transform (
+    span< const Vector3 > S,
+    span< const Vector3 > D
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `S` The source points. 
+* `D` The destination points. 
+
+
+
+**Returns:**
+
+
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function optimal\_transform 
+
+_Find out the optimal transformation matrix that maps the source simplicial complex to the destination simplicial complex._ 
+```C++
+UIPC_GEOMETRY_API Matrix4x4 uipc::geometry::optimal_transform (
+    const SimplicialComplex & S,
+    const SimplicialComplex & D
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `S` The source simplicial complex. 
+* `D` The destination simplicial complex. 
+
+
+
+**Returns:**
+
+
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function point\_edge\_squared\_distance 
+
+```C++
+Float UIPC_GEOMETRY_API uipc::geometry::point_edge_squared_distance (
+    const Vector3 & P,
+    const Vector3 & E0,
+    const Vector3 & E1
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function point\_point\_squared\_distance 
+
+```C++
+Float UIPC_GEOMETRY_API uipc::geometry::point_point_squared_distance (
+    const Vector3 & P0,
+    const Vector3 & P1
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function point\_triangle\_squared\_distance 
+
+```C++
+Float UIPC_GEOMETRY_API uipc::geometry::point_triangle_squared_distance (
+    const Vector3 & P,
+    const Vector3 & T0,
+    const Vector3 & T1,
+    const Vector3 & T2
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function pointcloud 
 
 _Create a simplicial complex from a point cloud._ 
@@ -841,6 +1067,51 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetrahedralize (
 **Returns:**
 
 [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) The simplicial complexes by regions. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function tri\_edge\_intersect 
+
+_Check if a triangle and an edge intersect._ 
+```C++
+UIPC_GEOMETRY_API bool uipc::geometry::tri_edge_intersect (
+    const Vector3 & T0,
+    const Vector3 & T1,
+    const Vector3 & T2,
+    const Vector3 & E0,
+    const Vector3 & E1,
+    bool & coplanar,
+    Vector3 & uvw_in_tri,
+    Vector2 & uv_in_edge
+) 
+```
+
+
+
+T0, T1, T2 the vertices of the triangle E0, E1 the vertices of the edge
+
+
+
+
+**Parameters:**
+
+
+* `uvw_in_tri` the barycentric coordinates of the intersection point in the triangle. Even if the function return false, the barycentric coordinates are still calculated correctly.
+* `uv_in_edge` the barycentric coordinates of the intersection point in the edge. Even if the function return false, the barycentric coordinates are still calculated correctly.
+
+
+
+**Returns:**
+
+true if the triangle and the edge intersect 
 
 
 

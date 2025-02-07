@@ -51,6 +51,7 @@
 
 | Type | Name |
 | ---: | :--- |
+|  SizeT | [**created\_count**](#function-created_count) () noexcept const<br> |
 |  S&lt; const [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**find**](#function-find) (IndexT id) noexcept<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
 
@@ -83,6 +84,19 @@
 
 ## Public Functions Documentation
 
+
+
+
+### function created\_count 
+
+```C++
+SizeT uipc::core::Scene::CObjects::created_count () noexcept const
+```
+
+
+
+
+<hr>
 
 
 

@@ -16,6 +16,7 @@
 * `#include <uipc/core/object_collection.h>`
 * `#include <uipc/core/animator.h>`
 * `#include <uipc/core/diff_sim.h>`
+* `#include <uipc/core/sanity_checker.h>`
 
 
 

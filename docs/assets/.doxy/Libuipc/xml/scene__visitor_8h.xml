@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="scene__visitor_8h" kind="file" language="C++">
     <compoundname>scene_visitor.h</compoundname>
     <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
@@ -28,12 +28,12 @@
         <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="61">
+      <node id="62">
         <label>uipc/backend/visitors/diff_sim_visitor.h</label>
         <link refid="diff__sim__visitor_8h_source"/>
-        <childnode refid="62" relation="include">
-        </childnode>
         <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -53,7 +53,7 @@
         </childnode>
         <childnode refid="58" relation="include">
         </childnode>
-        <childnode refid="61" relation="include">
+        <childnode refid="62" relation="include">
         </childnode>
       </node>
       <node id="57">
@@ -116,8 +116,6 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -242,6 +240,12 @@
         <childnode refid="26" relation="include">
         </childnode>
       </node>
+      <node id="61">
+        <label>uipc/core/contact_model_collection.h</label>
+        <link refid="contact__model__collection_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
       <node id="58">
         <label>uipc/core/contact_tabular.h</label>
         <link refid="contact__tabular_8h_source"/>
@@ -252,6 +256,8 @@
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -274,7 +280,7 @@
         <childnode refid="49" relation="include">
         </childnode>
       </node>
-      <node id="62">
+      <node id="63">
         <label>uipc/diff_sim/parameter_collection.h</label>
         <link refid="parameter__collection_8h_source"/>
         <childnode refid="16" relation="include">
@@ -290,7 +296,7 @@
         <childnode refid="34" relation="include">
         </childnode>
       </node>
-      <node id="63">
+      <node id="64">
         <label>uipc/diff_sim/sparse_coo_view.h</label>
         <link refid="sparse__coo__view_8h_source"/>
         <childnode refid="16" relation="include">
@@ -299,7 +305,7 @@
         </childnode>
         <childnode refid="28" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="65" relation="include">
         </childnode>
       </node>
       <node id="22">
@@ -427,7 +433,7 @@
       <node id="3">
         <label>Eigen/Core</label>
       </node>
-      <node id="64">
+      <node id="65">
         <label>Eigen/Sparse</label>
       </node>
       <node id="25">
@@ -570,29 +576,33 @@
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_scene_visitor" kindref="compound">SceneVisitor</ref>(<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/>scene)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>begin_pending()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>solve_pending()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;geometry::GeometrySlot&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>find_geometry(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>pending_geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>rest_geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;geometry::GeometrySlot&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>find_rest_geometry(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>pending_rest_geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;IndexT&gt;<sp/>pending_destroy_ids()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json&amp;<sp/><sp/>info()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_constitution_tabular" kindref="compound">core::ConstitutionTabular</ref>&amp;<sp/>constitution_tabular()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_contact_tabular" kindref="compound">core::ContactTabular</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/>contact_tabular()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref>&amp;<sp/>diff_sim()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff_sim()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/><sp/><sp/>m_scene;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref><sp/>m_diff_sim;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_pending()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;geometry::GeometrySlot&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>find_geometry(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>pending_geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>rest_geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;geometry::GeometrySlot&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>find_rest_geometry(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>pending_rest_geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;IndexT&gt;<sp/>pending_destroy_ids()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json&amp;<sp/><sp/>info()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_constitution_tabular" kindref="compound">core::ConstitutionTabular</ref>&amp;<sp/>constitution_tabular()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_constitution_tabular" kindref="compound">core::ConstitutionTabular</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>constitution_tabular()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_contact_tabular" kindref="compound">core::ContactTabular</ref>&amp;<sp/>contact_tabular()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_contact_tabular" kindref="compound">core::ContactTabular</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>contact_tabular()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref>&amp;<sp/>diff_sim()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff_sim()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/><sp/><sp/>m_scene;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref><sp/>m_diff_sim;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/backend/visitors/scene_visitor.h"/>
   </compounddef>

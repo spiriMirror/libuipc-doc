@@ -2,48 +2,42 @@
 
 # File sanity\_checker.h
 
-[**File List**](files.md) **>** [**include**](dir_d44c64559bbebec7f509842c48db8b23.md) **>** [**uipc**](dir_9f30510905f1286cc334e7ecdb1aceca.md) **>** [**sanity\_check**](dir_bc94a01fec317e710a764ca285cf9c79.md) **>** [**sanity\_checker.h**](sanity__checker_8h.md)
+[**File List**](files.md) **>** [**core**](dir_eca9d1283f7cad9ff89c5ab44937d4d9.md) **>** [**sanity\_checker.h**](sanity__checker_8h.md)
 
 [Go to the documentation of this file](sanity__checker_8h.md)
 
 
 ```C++
 #pragma once
-#include <uipc/common/macro.h>
-#include <uipc/sanity_check/i_sanity_checker.h>
-#include <uipc/sanity_check/sanity_checker_auto_register.h>
-#include <uipc/core/scene.h>
-
-namespace uipc::backend
-{
-class SceneVisitor;
-}
+#include <uipc/core/i_sanity_checker.h>
 
 namespace uipc::core
 {
-class UIPC_CORE_API SanityChecker : public ISanityChecker
+class Scene;
+
+class UIPC_CORE_API SanityChecker final
 {
   public:
-    explicit SanityChecker(Scene& s) noexcept;
+    SanityChecker(Scene& scene);
+    ~SanityChecker();
 
-    virtual U64               get_id() const noexcept = 0;
-    virtual SanityCheckResult do_check() noexcept;
+    SanityCheckResult check(std::string_view workspace);
+    void              report();
 
-  protected:
-    virtual SanityCheckResult do_check(backend::SceneVisitor& scene) noexcept = 0;
+    const unordered_map<U64, S<SanityCheckMessage>>& errors() const;
+    const unordered_map<U64, S<SanityCheckMessage>>& warns() const;
+    const unordered_map<U64, S<SanityCheckMessage>>& infos() const;
+
+    void clear();
+
+  private:
+    core::SanityCheckMessageCollection m_errors;
+    core::SanityCheckMessageCollection m_warns;
+    core::SanityCheckMessageCollection m_infos;
 
     Scene& m_scene;
 };
 }  // namespace uipc::core
-
-#define REGISTER_SANITY_CHECKER(SanityChecker)                                                       \
-    namespace auto_register                                                                          \
-    {                                                                                                \
-        static ::uipc::core::SanityCheckerAutoRegister UIPC_NAME_WITH_ID(SanityCheckerAutoRegister){ \
-            ::uipc::core::detail::register_sanity_checker_creator<SanityChecker>()};                 \
-    }
-
-// End of file
 ```
 
 

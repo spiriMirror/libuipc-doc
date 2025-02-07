@@ -13,7 +13,6 @@ Here is a list of all namespaces with brief descriptions:
         * **namespace** [**details**](namespaceuipc_1_1builtin_1_1details.md)     
     * **namespace** [**constitution**](namespaceuipc_1_1constitution.md)     
     * **namespace** [**core**](namespaceuipc_1_1core.md)     
-        * **namespace** [**detail**](namespaceuipc_1_1core_1_1detail.md)     
     * **namespace** [**details**](namespaceuipc_1_1details.md)     
     * **namespace** [**diff\_sim**](namespaceuipc_1_1diff__sim.md)     
     * **namespace** [**geometry**](namespaceuipc_1_1geometry.md)     

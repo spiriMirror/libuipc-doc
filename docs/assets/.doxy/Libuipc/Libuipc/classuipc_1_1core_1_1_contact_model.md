@@ -55,9 +55,9 @@
 |   | [**ContactModel**](#function-contactmodel-22) (const Vector2i & ids, Float friction\_rate, Float resistance, bool enable, const Json & config) <br> |
 |  const Json & | [**config**](#function-config) () const<br> |
 |  Float | [**friction\_rate**](#function-friction_rate) () const<br> |
-|  const Vector2i & | [**ids**](#function-ids) () const<br> |
 |  bool | [**is\_enabled**](#function-is_enabled) () const<br> |
 |  Float | [**resistance**](#function-resistance) () const<br> |
+|  const Vector2i & | [**topo**](#function-topo) () const<br> |
 
 
 
@@ -149,19 +149,6 @@ Float uipc::core::ContactModel::friction_rate () const
 
 
 
-### function ids 
-
-```C++
-const Vector2i & uipc::core::ContactModel::ids () const
-```
-
-
-
-
-<hr>
-
-
-
 ### function is\_enabled 
 
 ```C++
@@ -179,6 +166,19 @@ bool uipc::core::ContactModel::is_enabled () const
 
 ```C++
 Float uipc::core::ContactModel::resistance () const
+```
+
+
+
+
+<hr>
+
+
+
+### function topo 
+
+```C++
+const Vector2i & uipc::core::ContactModel::topo () const
 ```
 
 

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="bvh_8h" kind="file" language="C++">
+    <compoundname>bvh.h</compoundname>
+    <includes refid="dllexport_8h" local="no">uipc/common/dllexport.h</includes>
+    <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
+    <includes refid="span_8h" local="no">uipc/common/span.h</includes>
+    <includes refid="smart__pointer_8h" local="no">uipc/common/smart_pointer.h</includes>
+    <includes local="no">Eigen/Geometry</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>uipc/common/allocator.h</label>
+        <link refid="allocator_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc/common/dllexport.h</label>
+        <link refid="dllexport_8h_source"/>
+      </node>
+      <node id="7">
+        <label>uipc/common/smart_pointer.h</label>
+        <link refid="smart__pointer_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc/common/span.h</label>
+        <link refid="span_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc/common/type_define.h</label>
+        <link refid="common_2type__define_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/geometry/utils/bvh.h</label>
+        <link refid="bvh_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Eigen/Core</label>
+      </node>
+      <node id="12">
+        <label>Eigen/Geometry</label>
+      </node>
+      <node id="11">
+        <label>details/smart_pointer.inl</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="9">
+        <label>memory_resource</label>
+      </node>
+      <node id="6">
+        <label>span</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classuipc_1_1geometry_1_1_b_v_h" prot="public">uipc::geometry::BVH</innerclass>
+    <innernamespace refid="namespaceuipc">uipc</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1geometry">uipc::geometry</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/dllexport.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/type_define.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/span.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/smart_pointer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Eigen/Geometry&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="classuipc_1_1geometry_1_1_b_v_h" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_GEOMETRY_API<sp/><ref refid="classuipc_1_1geometry_1_1_b_v_h" kindref="compound">BVH</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">AABB<sp/>=<sp/>Eigen::AlignedBox&lt;Float,<sp/>3&gt;;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_b_v_h" kindref="compound">BVH</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_b_v_h" kindref="compound">~BVH</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classuipc_1_1geometry_1_1_b_v_h_1ac1006634816fc7716c37cca207727ca0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_b_v_h_1ac1006634816fc7716c37cca207727ca0" kindref="member">build</ref>(span&lt;const<sp/>AABB&gt;<sp/>aabbs);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classuipc_1_1geometry_1_1_b_v_h_1a9e49e28d33d18f55e0ee28670dca22fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_b_v_h_1a9e49e28d33d18f55e0ee28670dca22fe" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classuipc_1_1geometry_1_1_b_v_h_1ae5686d7cc9b0aad50f35303f498d927a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_b_v_h_1ae5686d7cc9b0aad50f35303f498d927a" kindref="member">query</ref>(span&lt;const<sp/>AABB&gt;<sp/>aabbs,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(IndexT,<sp/>IndexT)&gt;&amp;&amp;<sp/>QF)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Impl;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>U&lt;Impl&gt;<sp/>m_impl;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight></codeline>
+    </programlisting>
+    <location file="include/uipc/geometry/utils/bvh.h"/>
+  </compounddef>
+</doxygen>

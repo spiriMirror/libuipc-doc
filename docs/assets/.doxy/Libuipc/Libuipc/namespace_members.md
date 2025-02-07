@@ -16,6 +16,8 @@
 
 * **config** ([**uipc**](namespaceuipc.md))
 * **Constraint** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **CContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
+* **ContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **compute\_instance\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_vertex\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
@@ -33,6 +35,7 @@
 * **EG\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EG\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EP\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* **edge\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **extract\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -56,6 +59,7 @@
 
 * **HandleT** ([**uipc::backend**](namespaceuipc_1_1backend.md))
 * **halfplane** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **halfplane\_vertex\_signed\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
 ## i
@@ -67,6 +71,7 @@
 * **is\_matrix\_v** ([**uipc**](namespaceuipc.md))
 * **ImplicitGeometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **ImplicitGeometrySlot** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **is\_point\_in\_tet** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -118,11 +123,15 @@
 * **operator""\_mm** ([**uipc**](namespaceuipc.md))
 * **operator""\_ms** ([**uipc**](namespaceuipc.md))
 * **operator""\_s** ([**uipc**](namespaceuipc.md))
+* **optimal\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
 ## p
 
 * **propagate\_const\_t** ([**uipc**](namespaceuipc.md))
+* **point\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **point\_point\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **point\_triangle\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **pointcloud** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -132,7 +141,6 @@
 * **RUNTIME\_CHECK** ([**uipc**](namespaceuipc.md))
 * **readable\_type\_name** ([**uipc**](namespaceuipc.md))
 * **run\_length\_encode** ([**uipc**](namespaceuipc.md))
-* **register\_sanity\_checker\_creator** ([**uipc::core::detail**](namespaceuipc_1_1core_1_1detail.md))
 
 
 ## s
@@ -155,6 +163,7 @@
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 

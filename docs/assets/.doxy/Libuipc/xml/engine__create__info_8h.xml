@@ -1,14 +1,33 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="engine__create__info_8h" kind="file" language="C++">
     <compoundname>engine_create_info.h</compoundname>
     <includes local="no">string_view</includes>
+    <includes refid="dllexport_8h" local="no">uipc/common/dllexport.h</includes>
+    <includes refid="json_8h" local="no">uipc/common/json.h</includes>
     <incdepgraph>
       <node id="1">
         <label>include/uipc/backend/engine_create_info.h</label>
         <link refid="engine__create__info_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc/common/dllexport.h</label>
+        <link refid="dllexport_8h_source"/>
+      </node>
+      <node id="4">
+        <label>uipc/common/json.h</label>
+        <link refid="json_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>nlohmann/json.hpp</label>
       </node>
       <node id="2">
         <label>string_view</label>
@@ -29,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/backend/engine_create_info.h" line="13" column="1" bodyfile="include/uipc/backend/engine_create_info.h" bodystart="13" bodyend="-1"/>
+        <location file="include/uipc/backend/engine_create_info.h" line="15" column="1" bodyfile="include/uipc/backend/engine_create_info.h" bodystart="15" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -39,17 +58,19 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::backend</highlight></codeline>
-<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="6" refid="classuipc_1_1backend_1_1_engine_create_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1backend_1_1_engine_create_info" kindref="compound">EngineCreateInfo</ref></highlight></codeline>
-<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string_view<sp/>workspace;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1backend_1_1_engine_create_info" kindref="compound">EngineCreateInfo</ref><sp/>=<sp/><ref refid="classuipc_1_1backend_1_1_engine_create_info" kindref="compound">uipc::backend::EngineCreateInfo</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/dllexport.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/json.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::backend</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="classuipc_1_1backend_1_1_engine_create_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1backend_1_1_engine_create_info" kindref="compound">EngineCreateInfo</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string_view<sp/>workspace;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>Json<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1backend_1_1_engine_create_info" kindref="compound">EngineCreateInfo</ref><sp/>=<sp/><ref refid="classuipc_1_1backend_1_1_engine_create_info" kindref="compound">uipc::backend::EngineCreateInfo</ref>;</highlight></codeline>
     </programlisting>
     <location file="include/uipc/backend/engine_create_info.h"/>
   </compounddef>

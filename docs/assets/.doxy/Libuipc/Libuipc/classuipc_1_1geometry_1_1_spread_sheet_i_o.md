@@ -53,10 +53,10 @@ _A class for writing geometry spreadsheet._ [More...](#detailed-description)
 | Type | Name |
 | ---: | :--- |
 |   | [**SpreadSheetIO**](#function-spreadsheetio) (std::string\_view output\_folder="./") <br> |
-|  void | [**write\_csv**](#function-write_csv-12) (std::string\_view geo\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & simplicial\_complex) const<br> |
-|  void | [**write\_csv**](#function-write_csv-22) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & simplicial\_complex) const<br> |
-|  void | [**write\_json**](#function-write_json-12) (std::string\_view geo\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & simplicial\_complex) const<br> |
-|  void | [**write\_json**](#function-write_json-22) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & simplicial\_complex) const<br> |
+|  void | [**write\_csv**](#function-write_csv-12) (std::string\_view geo\_name, const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & simplicial\_complex) const<br> |
+|  void | [**write\_csv**](#function-write_csv-22) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & simplicial\_complex) const<br> |
+|  void | [**write\_json**](#function-write_json-12) (std::string\_view geo\_name, const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & simplicial\_complex) const<br> |
+|  void | [**write\_json**](#function-write_json-22) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & simplicial\_complex) const<br> |
 
 
 
@@ -127,7 +127,7 @@ uipc::geometry::SpreadSheetIO::SpreadSheetIO (
 ```C++
 void uipc::geometry::SpreadSheetIO::write_csv (
     std::string_view geo_name,
-    const SimplicialComplex & simplicial_complex
+    const Geometry & simplicial_complex
 ) const
 ```
 
@@ -142,7 +142,7 @@ void uipc::geometry::SpreadSheetIO::write_csv (
 
 ```C++
 void uipc::geometry::SpreadSheetIO::write_csv (
-    const SimplicialComplex & simplicial_complex
+    const Geometry & simplicial_complex
 ) const
 ```
 
@@ -158,7 +158,7 @@ void uipc::geometry::SpreadSheetIO::write_csv (
 ```C++
 void uipc::geometry::SpreadSheetIO::write_json (
     std::string_view geo_name,
-    const SimplicialComplex & simplicial_complex
+    const Geometry & simplicial_complex
 ) const
 ```
 
@@ -173,7 +173,7 @@ void uipc::geometry::SpreadSheetIO::write_json (
 
 ```C++
 void uipc::geometry::SpreadSheetIO::write_json (
-    const SimplicialComplex & simplicial_complex
+    const Geometry & simplicial_complex
 ) const
 ```
 

@@ -11,7 +11,6 @@
 #pragma once
 #include <uipc/common/string.h>
 #include <uipc/common/dllexport.h>
-#include <string>
 #include <exception>
 
 namespace uipc

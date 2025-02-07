@@ -21,7 +21,7 @@ class UIPC_CORE_API ContactModel
     ContactModel() noexcept;
     ContactModel(const Vector2i& ids, Float friction_rate, Float resistance, bool enable, const Json& config);
 
-    const Vector2i& ids() const;
+    const Vector2i& topo() const;
     Float           friction_rate() const;
     Float           resistance() const;
     bool            is_enabled() const;

@@ -10,7 +10,7 @@
 
 
 
-* `#include <uipc/geometry/simplicial_complex.h>`
+* `#include <uipc/geometry/geometry.h>`
 
 
 

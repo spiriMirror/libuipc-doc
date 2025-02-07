@@ -214,7 +214,7 @@ void uipc::geometry::AttributeCollection::copy_from (
 **Parameters:**
 
 
-* `O` A New2Old mapping. O[i] = j means the i-th element in the new order has the value of the j-th element in the old order. 
+* `copy` The copy strategy. 
 * `include_names` The names of the attribute slots to be copied. If it is empty, all attribute slots will be copied. 
 * `exclude_names` The names of the attribute slots not to be copied, the exclude\_names has higher priority than include\_names. 
 

@@ -93,7 +93,7 @@ Inherits the following classes: [uipc::constitution::FiniteElementConstitution](
 | Type | Name |
 | ---: | :--- |
 |   | [**ARAP**](#function-arap) (const Json & config=default\_config()) noexcept<br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float kappa, Float mass\_density=1e3) const<br> |
+|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float kappa=1.0\_MPa, Float mass\_density=1e3) const<br> |
 
 
 
@@ -238,7 +238,7 @@ uipc::constitution::ARAP::ARAP (
 ```C++
 void uipc::constitution::ARAP::apply_to (
     geometry::SimplicialComplex & sc,
-    Float kappa,
+    Float kappa=1.0_MPa,
     Float mass_density=1e3
 ) const
 ```

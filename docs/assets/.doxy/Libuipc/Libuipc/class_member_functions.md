@@ -14,6 +14,7 @@
 * **animate** ([**uipc::constitution::LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md), [**uipc::constitution::RotatingMotor**](classuipc_1_1constitution_1_1_rotating_motor.md))
 * **Animation** ([**uipc::core::Animation**](classuipc_1_1core_1_1_animation.md))
 * **Animator** ([**uipc::core::Animator**](classuipc_1_1core_1_1_animator.md))
+* **at** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
 * **advance** ([**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::core::World**](classuipc_1_1core_1_1_world.md))
 * **AbstractSimplicialComplex** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md))
 * **Attribute** ([**uipc::geometry::Attribute**](classuipc_1_1geometry_1_1_attribute.md))
@@ -35,33 +36,37 @@
 * **begin\_pending** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **backend\_name** ([**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md))
 * **backward** ([**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::core::World**](classuipc_1_1core_1_1_world.md))
+* **build** ([**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::ISanityCheckerCollection**](classuipc_1_1core_1_1_i_sanity_checker_collection.md), [**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md), [**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
 * **broadcast** ([**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md))
-* **build** ([**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md))
+* **BVH** ([**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md))
 * **backend\_view** ([**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md))
 
 
 ## c
 
-* **clear** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md), [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
+* **clear** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md), [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md), [**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **current** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **ContactTabularVisitor** ([**uipc::backend::ContactTabularVisitor**](classuipc_1_1backend_1_1_contact_tabular_visitor.md))
+* **contact\_models** ([**uipc::backend::ContactTabularVisitor**](classuipc_1_1backend_1_1_contact_tabular_visitor.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
 * **collect\_attribute\_collections** ([**uipc::backend::GeometryVisitor**](classuipc_1_1backend_1_1_geometry_visitor.md), [**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md))
 * **constitution\_tabular** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **contact\_tabular** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **ConstitutionUIDAutoRegister** ([**uipc::builtin::ConstitutionUIDAutoRegister**](classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register.md))
-* **creators** ([**uipc::builtin::ConstitutionUIDAutoRegister**](classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register.md), [**uipc::builtin::ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md), [**uipc::core::SanityCheckerAutoRegister**](classuipc_1_1core_1_1_sanity_checker_auto_register.md))
+* **creators** ([**uipc::builtin::ConstitutionUIDAutoRegister**](classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register.md), [**uipc::builtin::ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md))
 * **ConstitutionUIDCollection** ([**uipc::builtin::ConstitutionUIDCollection**](classuipc_1_1builtin_1_1_constitution_u_i_d_collection.md))
-* **create** ([**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::Object::Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md), [**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
+* **create** ([**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md), [**uipc::core::ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::Object::Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md), [**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **create\_material** ([**uipc::constitution::AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md))
 * **Constraint** ([**uipc::constitution::Constraint**](classuipc_1_1constitution_1_1_constraint.md))
 * **ConstitutionTabular** ([**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md))
 * **ContactElement** ([**uipc::core::ContactElement**](classuipc_1_1core_1_1_contact_element.md))
 * **ContactModel** ([**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md))
 * **config** ([**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md))
+* **ContactModelCollectionT** ([**uipc::core::ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md))
 * **ContactTabular** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
-* **contact\_models** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
-* **check** ([**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::SanityCheckerCollection**](classuipc_1_1core_1_1_sanity_checker_collection.md))
+* **check** ([**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::ISanityCheckerCollection**](classuipc_1_1core_1_1_i_sanity_checker_collection.md), [**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
 * **CGeometries** ([**uipc::core::Object::CGeometries**](classuipc_1_1core_1_1_object_1_1_c_geometries.md), [**uipc::core::Scene::CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md))
 * **CObjects** ([**uipc::core::Scene::CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md))
+* **created\_count** ([**uipc::core::Scene::CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md), [**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md))
 * **connect** ([**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md))
 * **col\_indices** ([**uipc::diff\_sim::SparseCOOView**](classuipc_1_1diff__sim_1_1_sparse_c_o_o_view.md))
 * **copy\_from** ([**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
@@ -93,7 +98,7 @@
 * **do\_retrieve** ([**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md))
 * **do\_sync** ([**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md))
 * **do\_to\_json** ([**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::Attribute**](classuipc_1_1geometry_1_1_attribute.md), [**uipc::geometry::AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md), [**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md), [**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
-* **do\_check** ([**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
+* **do\_check** ([**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md))
 * **destroy** ([**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md), [**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **dim** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **do\_clear** ([**uipc::geometry::Attribute**](classuipc_1_1geometry_1_1_attribute.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md))
@@ -105,6 +110,7 @@
 * **do\_resize** ([**uipc::geometry::Attribute**](classuipc_1_1geometry_1_1_attribute.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md))
 * **do\_make\_owned** ([**uipc::geometry::AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md))
 * **do\_collect\_attribute\_collections** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md), [**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **detect** ([**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
 
 
 ## e
@@ -124,16 +130,17 @@
 * **error** ([**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
 * **EngineStatusCollection** ([**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md))
 * **emplace** ([**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md))
+* **errors** ([**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
 * **edges** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 
 
 ## f
 
-* **format** ([**fmt::formatter&lt; uipc::geometry::AbstractSimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_abstract_simplicial_complex_01_4.md), [**fmt::formatter&lt; uipc::geometry::AttributeCollection &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_attribute_collection_01_4.md), [**fmt::formatter&lt; uipc::geometry::Geometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_01_4.md), [**fmt::formatter&lt; uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_3_01_is_const_01_4_01_4.md), [**fmt::formatter&lt; uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_3_01_is_const_01_4_01_4.md), [**fmt::formatter&lt; uipc::geometry::ImplicitGeometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_implicit_geometry_01_4.md), [**fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4.md), [**fmt::formatter&lt; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_attributes_3_01_is_const_00_01_n_01_4_01_4.md))
+* **format** ([**fmt::formatter&lt; uipc::geometry::AttributeCollection &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_attribute_collection_01_4.md), [**fmt::formatter&lt; uipc::geometry::ImplicitGeometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_implicit_geometry_01_4.md), [**fmt::formatter&lt; uipc::geometry::AbstractSimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_abstract_simplicial_complex_01_4.md), [**fmt::formatter&lt; uipc::geometry::Geometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_01_4.md), [**fmt::formatter&lt; uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_3_01_is_const_01_4_01_4.md), [**fmt::formatter&lt; uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t_3_01_is_const_01_4_01_4.md), [**fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4.md), [**fmt::formatter&lt; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_attributes_3_01_is_const_00_01_n_01_4_01_4.md))
 * **from\_json** ([**nlohmann::adl\_serializer&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structnlohmann_1_1adl__serializer_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_761cd29d85d72c4c15331d22893c1439.md))
 * **find\_geometry** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md))
 * **find\_rest\_geometry** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md))
-* **find** ([**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md), [**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md), [**uipc::core::Scene::CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md), [**uipc::core::Scene::CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md), [**uipc::core::Scene::Geometries**](classuipc_1_1core_1_1_scene_1_1_geometries.md), [**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
+* **find** ([**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md), [**uipc::core::ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md), [**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md), [**uipc::core::Scene::CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md), [**uipc::core::Scene::CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md), [**uipc::core::Scene::Geometries**](classuipc_1_1core_1_1_scene_1_1_geometries.md), [**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **fixed\_vertices\_changing** ([**uipc::core::Animation::UpdateHint**](classuipc_1_1core_1_1_animation_1_1_update_hint.md))
 * **frame** ([**uipc::core::Animation::UpdateInfo**](classuipc_1_1core_1_1_animation_1_1_update_info.md), [**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::core::World**](classuipc_1_1core_1_1_world.md))
 * **friction\_rate** ([**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md))
@@ -144,13 +151,13 @@
 
 * **GlobalTimer** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **GeometryVisitor** ([**uipc::backend::GeometryVisitor**](classuipc_1_1backend_1_1_geometry_visitor.md))
-* **geometries** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Object**](classuipc_1_1core_1_1_object.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
+* **geometries** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md), [**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Object**](classuipc_1_1core_1_1_object.md), [**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **get\_uid** ([**uipc::constitution::ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md), [**uipc::constitution::AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md), [**uipc::constitution::Constraint**](classuipc_1_1constitution_1_1_constraint.md), [**uipc::constitution::DiscreteShellBending**](classuipc_1_1constitution_1_1_discrete_shell_bending.md), [**uipc::constitution::Empty**](classuipc_1_1constitution_1_1_empty.md), [**uipc::constitution::FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1_finite_element_extra_constitution.md), [**uipc::constitution::HookeanSpring**](classuipc_1_1constitution_1_1_hookean_spring.md), [**uipc::constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md), [**uipc::constitution::KirchhoffRodBending**](classuipc_1_1constitution_1_1_kirchhoff_rod_bending.md), [**uipc::constitution::LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md), [**uipc::constitution::NeoHookeanShell**](classuipc_1_1constitution_1_1_neo_hookean_shell.md), [**uipc::constitution::Particle**](classuipc_1_1constitution_1_1_particle.md), [**uipc::constitution::RotatingMotor**](classuipc_1_1constitution_1_1_rotating_motor.md), [**uipc::constitution::SoftPositionConstraint**](classuipc_1_1constitution_1_1_soft_position_constraint.md), [**uipc::constitution::SoftTransformConstraint**](classuipc_1_1constitution_1_1_soft_transform_constraint.md), [**uipc::constitution::StableNeoHookean**](classuipc_1_1constitution_1_1_stable_neo_hookean.md))
 * **geo\_slots** ([**uipc::core::Animation::UpdateInfo**](classuipc_1_1core_1_1_animation_1_1_update_info.md))
 * **get\_frame** ([**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md))
 * **get\_status** ([**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md))
-* **get\_id** ([**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::Object**](classuipc_1_1core_1_1_object.md), [**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
-* **get\_name** ([**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::core::Object**](classuipc_1_1core_1_1_object.md), [**uipc::geometry::AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md))
+* **get\_id** ([**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::Object**](classuipc_1_1core_1_1_object.md))
+* **get\_name** ([**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::Object**](classuipc_1_1core_1_1_object.md), [**uipc::geometry::AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md))
 * **geometry\_collection** ([**uipc::core::Object**](classuipc_1_1core_1_1_object.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **Geometries** ([**uipc::core::Object::Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md), [**uipc::core::Scene::Geometries**](classuipc_1_1core_1_1_scene_1_1_geometries.md))
 * **get\_type** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md), [**uipc::geometry::ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
@@ -181,18 +188,23 @@
 
 ## i
 
-* **init** ([**uipc::backend::AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md), [**uipc::core::Animation**](classuipc_1_1core_1_1_animation.md), [**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md), [**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::core::SanityCheckerCollection**](classuipc_1_1core_1_1_sanity_checker_collection.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md), [**uipc::core::World**](classuipc_1_1core_1_1_world.md))
+* **init** ([**uipc::backend::AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md), [**uipc::core::Animation**](classuipc_1_1core_1_1_animation.md), [**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md), [**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md), [**uipc::core::World**](classuipc_1_1core_1_1_world.md))
+* **id** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md), [**uipc::core::ContactElement**](classuipc_1_1core_1_1_contact_element.md), [**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md), [**uipc::geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md))
 * **info** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
+* **is\_pending** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **instance** ([**uipc::builtin::ConstitutionUIDCollection**](classuipc_1_1builtin_1_1_constitution_u_i_d_collection.md), [**uipc::builtin::ImplicitGeometryUIDCollection**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_collection.md))
 * **ImplicitGeometryUIDAutoRegister** ([**uipc::builtin::ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md))
 * **ImplicitGeometryUIDCollection** ([**uipc::builtin::ImplicitGeometryUIDCollection**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_collection.md))
 * **is\_official\_builtin\_uid** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md))
 * **is\_user\_defined\_uid** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md))
 * **insert** ([**uipc::core::Animator**](classuipc_1_1core_1_1_animator.md), [**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
-* **id** ([**uipc::core::ContactElement**](classuipc_1_1core_1_1_contact_element.md), [**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md))
-* **ids** ([**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md), [**uipc::core::Object::CGeometries**](classuipc_1_1core_1_1_object_1_1_c_geometries.md), [**uipc::core::Object::Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md))
 * **is\_enabled** ([**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md))
+* **internal\_contact\_models** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
+* **ids** ([**uipc::core::Object::CGeometries**](classuipc_1_1core_1_1_object_1_1_c_geometries.md), [**uipc::core::Object::Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md))
+* **is\_empty** ([**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md))
+* **infos** ([**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
 * **is\_started** ([**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
+* **is\_valid** ([**uipc::core::World**](classuipc_1_1core_1_1_world.md))
 * **instances** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md))
 * **InstanceAttributesT** ([**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md))
 * **IAttribute** ([**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md))
@@ -225,7 +237,9 @@
 * **max\_depth** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **max\_full\_name\_length** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **merge\_timers** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **message** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md), [**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md))
 * **mu** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md))
+* **messages** ([**uipc::core::SanityCheckMessageCollection**](classuipc_1_1core_1_1_sanity_check_message_collection.md))
 * **meta** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md))
 * **MetaAttributesT** ([**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md))
 * **make\_owned** ([**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md))
@@ -235,7 +249,7 @@
 
 * **need\_backend\_broadcast** ([**uipc::backend::DiffSimVisitor**](classuipc_1_1backend_1_1_diff_sim_visitor.md), [**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md))
 * **need\_backend\_clear** ([**uipc::backend::DiffSimVisitor**](classuipc_1_1backend_1_1_diff_sim_visitor.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md))
-* **name** ([**uipc::constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md), [**uipc::core::ContactElement**](classuipc_1_1core_1_1_contact_element.md), [**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md), [**uipc::geometry::ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md))
+* **name** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md), [**uipc::constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md), [**uipc::core::ContactElement**](classuipc_1_1core_1_1_contact_element.md), [**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md), [**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md), [**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md), [**uipc::geometry::ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md))
 * **NeoHookeanShell** ([**uipc::constitution::NeoHookeanShell**](classuipc_1_1constitution_1_1_neo_hookean_shell.md))
 * **next\_id** ([**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md), [**uipc::geometry::IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md))
 * **names** ([**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md))
@@ -252,6 +266,7 @@
 * **ObjectCollection** ([**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md))
 * **objects** ([**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **Objects** ([**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md))
+* **Octree** ([**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
 * **outward\_tri\_from\_tet** ([**uipc::geometry::SimplexUtils**](classuipc_1_1geometry_1_1_simplex_utils.md))
 
 
@@ -278,11 +293,17 @@
 * **positions** ([**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 
 
+## q
+
+* **query** ([**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
+
+
 ## r
 
 * **report\_as\_json** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md), [**uipc::Timer**](classuipc_1_1_timer.md))
 * **report\_merged\_as\_json** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
-* **report** ([**uipc::Timer**](classuipc_1_1_timer.md))
+* **report** ([**uipc::Timer**](classuipc_1_1_timer.md), [**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
+* **result** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md), [**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md))
 * **rest\_geometries** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md))
 * **RotatingMotor** ([**uipc::constitution::RotatingMotor**](classuipc_1_1constitution_1_1_rotating_motor.md))
 * **rest\_geo\_slots** ([**uipc::core::Animation::UpdateInfo**](classuipc_1_1core_1_1_animation_1_1_update_info.md))
@@ -310,6 +331,7 @@
 * **size** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md), [**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md), [**uipc::core::Scene::CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md), [**uipc::core::Scene::Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md), [**uipc::geometry::IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **size\_in\_bytes** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md))
 * **subview** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md))
+* **SanityCheckMessageVisitor** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md))
 * **SceneVisitor** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md))
 * **solve\_pending** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md))
 * **scene** ([**uipc::backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md))
@@ -317,11 +339,13 @@
 * **SoftTransformConstraint** ([**uipc::constitution::SoftTransformConstraint**](classuipc_1_1constitution_1_1_soft_transform_constraint.md))
 * **StableNeoHookean** ([**uipc::constitution::StableNeoHookean**](classuipc_1_1constitution_1_1_stable_neo_hookean.md))
 * **status** ([**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md))
+* **scene\_pending** ([**uipc::core::Object**](classuipc_1_1core_1_1_object.md))
 * **scene\_started** ([**uipc::core::Object**](classuipc_1_1core_1_1_object.md))
+* **SanityCheckMessage** ([**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md))
+* **SanityCheckMessageCollection** ([**uipc::core::SanityCheckMessageCollection**](classuipc_1_1core_1_1_sanity_check_message_collection.md))
 * **SanityChecker** ([**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
-* **SanityCheckerAutoRegister** ([**uipc::core::SanityCheckerAutoRegister**](classuipc_1_1core_1_1_sanity_checker_auto_register.md))
-* **SanityCheckerCollection** ([**uipc::core::SanityCheckerCollection**](classuipc_1_1core_1_1_sanity_checker_collection.md))
 * **Scene** ([**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
+* **sanity\_checker** ([**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **SceneIO** ([**uipc::core::SceneIO**](classuipc_1_1core_1_1_scene_i_o.md))
 * **simplicial\_surface** ([**uipc::core::SceneIO**](classuipc_1_1core_1_1_scene_i_o.md))
 * **sanity\_check** ([**uipc::core::World**](classuipc_1_1core_1_1_world.md))
@@ -339,10 +363,11 @@
 
 ## t
 
-* **to\_json** ([**nlohmann::adl\_serializer&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structnlohmann_1_1adl__serializer_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_761cd29d85d72c4c15331d22893c1439.md), [**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md), [**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md), [**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md), [**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
+* **to\_json** ([**nlohmann::adl\_serializer&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structnlohmann_1_1adl__serializer_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_761cd29d85d72c4c15331d22893c1439.md), [**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md), [**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md), [**uipc::core::ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md), [**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md), [**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **Timer** ([**uipc::Timer**](classuipc_1_1_timer.md))
 * **type** ([**uipc::constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md), [**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md), [**uipc::geometry::AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md), [**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md))
 * **types** ([**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md))
+* **topo** ([**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **tick** ([**uipc::details::ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md))
 * **tock** ([**uipc::details::ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md))
 * **traverse** ([**uipc::details::ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md))
@@ -352,7 +377,6 @@
 * **triangles** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **type\_name** ([**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md))
 * **transforms** ([**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
-* **topo** ([**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 
 
 ## u
@@ -379,6 +403,7 @@
 * **world** ([**uipc::backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **workspace** ([**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md))
 * **warning** ([**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
+* **warns** ([**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
 * **write\_surface** ([**uipc::core::SceneIO**](classuipc_1_1core_1_1_scene_i_o.md))
 * **write\_surface\_obj** ([**uipc::core::SceneIO**](classuipc_1_1core_1_1_scene_i_o.md))
 * **World** ([**uipc::core::World**](classuipc_1_1core_1_1_world.md))
@@ -412,16 +437,20 @@
 * **~IObject** ([**uipc::core::IObject**](classuipc_1_1core_1_1_i_object.md))
 * **~IObjectCollection** ([**uipc::core::IObjectCollection**](classuipc_1_1core_1_1_i_object_collection.md))
 * **~ISanityChecker** ([**uipc::core::ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md))
+* **~ISanityCheckerCollection** ([**uipc::core::ISanityCheckerCollection**](classuipc_1_1core_1_1_i_sanity_checker_collection.md))
 * **~Object** ([**uipc::core::Object**](classuipc_1_1core_1_1_object.md))
+* **~SanityChecker** ([**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
 * **~Scene** ([**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **~ScopedTimer** ([**uipc::details::ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md))
 * **~ParameterCollection** ([**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md))
 * **~AttributeIO** ([**uipc::geometry::AttributeIO**](classuipc_1_1geometry_1_1_attribute_i_o.md))
+* **~BVH** ([**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md))
 * **~GeometrySlot** ([**uipc::geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md))
 * **~IAttribute** ([**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md))
 * **~IAttributeSlot** ([**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md))
 * **~IGeometry** ([**uipc::geometry::IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md))
 * **~IGeometryCollection** ([**uipc::geometry::IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md))
+* **~Octree** ([**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
 
 
 ## _

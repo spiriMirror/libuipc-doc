@@ -35,6 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
+|  Json | [**config**](#variable-config)  <br> |
 |  std::string\_view | [**workspace**](#variable-workspace)  <br> |
 
 
@@ -82,6 +83,19 @@
 
 ## Public Attributes Documentation
 
+
+
+
+### variable config 
+
+```C++
+Json uipc::backend::EngineCreateInfo::config;
+```
+
+
+
+
+<hr>
 
 
 

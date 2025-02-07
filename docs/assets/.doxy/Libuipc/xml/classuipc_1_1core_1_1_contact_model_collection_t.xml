@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_contact_model_collection_t" kind="class" language="C++" prot="public">
+    <compoundname>uipc::core::ContactModelCollectionT</compoundname>
+    <templateparamlist>
+      <param>
+        <type>bool</type>
+        <declname>IsConst</declname>
+        <defname>IsConst</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1core_1_1_contact_model_collection_t_1abda450951af935aff3425118b10f9fa3" prot="private" static="no">
+        <type>std::conditional_t&lt; IsConst, const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">geometry::AttributeCollection</ref>, <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">geometry::AttributeCollection</ref> &gt;</type>
+        <definition>using uipc::core::ContactModelCollectionT&lt; IsConst &gt;::AutoAttributeCollection =  std::conditional_t&lt;IsConst, const geometry::AttributeCollection, geometry::AttributeCollection&gt;</definition>
+        <argsstring></argsstring>
+        <name>AutoAttributeCollection</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::AutoAttributeCollection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="21" column="5" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_contact_model_collection_t_1a68b5869978e2f2f5fdaa8cbd1f2b5251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>class</type>
+        <definition>friend class geometry::AttributeFriend</definition>
+        <argsstring></argsstring>
+        <name>geometry::AttributeFriend</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::AttributeFriend</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_attribute_friend" kindref="compound">geometry::AttributeFriend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="18" column="18" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_contact_model_collection_t_1ac70d311c6963058cef6157d9a49989f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class ContactTabular</definition>
+        <argsstring></argsstring>
+        <name>ContactTabular</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::ContactTabular</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_contact_tabular" kindref="compound">ContactTabular</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="20" column="18" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_contact_model_collection_t_1a1c55d442a7690739f81d751201330fdd" prot="private" static="no" mutable="no">
+        <type>AutoAttributeCollection &amp;</type>
+        <definition>AutoAttributeCollection&amp; uipc::core::ContactModelCollectionT&lt; IsConst &gt;::m_attributes</definition>
+        <argsstring></argsstring>
+        <name>m_attributes</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::m_attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="49" column="29" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_collection_t_1a2359d2bb8fe0396df4fd00c826219387" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::ContactModelCollectionT&lt; IsConst &gt;::ContactModelCollectionT</definition>
+        <argsstring>(AutoAttributeCollection &amp;attributes)</argsstring>
+        <name>ContactModelCollectionT</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::ContactModelCollectionT</qualifiedname>
+        <param>
+          <type>AutoAttributeCollection &amp;</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="25" column="5" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="25" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_collection_t_1a34408793ae2f03728c09a195c2599526" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto uipc::core::ContactModelCollectionT&lt; IsConst &gt;::create</definition>
+        <argsstring>(std::string_view name, const T &amp;default_value={}, bool allow_destroy=true)</argsstring>
+        <name>create</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::create</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+          <defval>true</defval>
+        </param>
+    <requiresclause>(!IsConst)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="32" column="10" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_collection_t_1add3a0ab4847a3b93d7dd8a45b9916b6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto uipc::core::ContactModelCollectionT&lt; IsConst &gt;::find</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="39" column="10" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_collection_t_1a1d764b111f88946edaa761a824532644" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto uipc::core::ContactModelCollectionT&lt; IsConst &gt;::find</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="44" column="10" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_model_collection_t_1a3f7403de2e302ad616df474f76ab0a90" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto uipc::core::ContactModelCollectionT&lt; IsConst &gt;::to_json</definition>
+        <argsstring>() const</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::ContactModelCollectionT::to_json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/contact_model_collection.h" line="46" column="10" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/contact_model_collection.h" line="15" column="1" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="16" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1abda450951af935aff3425118b10f9fa3" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>AutoAttributeCollection</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a2359d2bb8fe0396df4fd00c826219387" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>ContactModelCollectionT</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1ac70d311c6963058cef6157d9a49989f5" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>ContactTabular</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a34408793ae2f03728c09a195c2599526" prot="public" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>create</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1add3a0ab4847a3b93d7dd8a45b9916b6b" prot="public" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>find</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a1d764b111f88946edaa761a824532644" prot="public" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>find</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a68b5869978e2f2f5fdaa8cbd1f2b5251" prot="public" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>geometry::AttributeFriend</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a1c55d442a7690739f81d751201330fdd" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>m_attributes</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a3f7403de2e302ad616df474f76ab0a90" prot="public" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>to_json</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

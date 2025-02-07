@@ -73,6 +73,8 @@
 |  const Json & | [**info**](#function-info) () noexcept const<br> |
 |  [**Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md) | [**objects**](#function-objects-12) () noexcept<br> |
 |  [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) | [**objects**](#function-objects-22) () noexcept const<br> |
+|  [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
+|  const [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
 |   | [**~Scene**](#function-scene) () <br> |
 
 
@@ -287,6 +289,32 @@ Objects uipc::core::Scene::objects () noexcept
 
 ```C++
 CObjects uipc::core::Scene::objects () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function sanity\_checker [1/2]
+
+```C++
+SanityChecker & uipc::core::Scene::sanity_checker () 
+```
+
+
+
+
+<hr>
+
+
+
+### function sanity\_checker [2/2]
+
+```C++
+const SanityChecker & uipc::core::Scene::sanity_checker () const
 ```
 
 

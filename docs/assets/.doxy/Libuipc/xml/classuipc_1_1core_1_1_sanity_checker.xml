@@ -1,10 +1,51 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
-  <compounddef id="classuipc_1_1core_1_1_sanity_checker" kind="class" language="C++" prot="public" abstract="yes">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_sanity_checker" kind="class" language="C++" prot="public" final="yes">
     <compoundname>uipc::core::SanityChecker</compoundname>
-    <basecompoundref refid="classuipc_1_1core_1_1_i_sanity_checker" prot="public" virt="non-virtual">uipc::core::ISanityChecker</basecompoundref>
-    <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classuipc_1_1core_1_1_sanity_checker_1a0156bfdd7e1042d7e67ff39fb8e0db07" prot="protected" static="no" mutable="no">
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_sanity_checker_1afa4b69c2afc1258b83e4a25cc1456401" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref></type>
+        <definition>core::SanityCheckMessageCollection uipc::core::SanityChecker::m_errors</definition>
+        <argsstring></argsstring>
+        <name>m_errors</name>
+        <qualifiedname>uipc::core::SanityChecker::m_errors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="24" column="40" bodyfile="include/uipc/core/sanity_checker.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_sanity_checker_1a1d5bfbad7fca0e30f0373dc66929c8c6" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref></type>
+        <definition>core::SanityCheckMessageCollection uipc::core::SanityChecker::m_warns</definition>
+        <argsstring></argsstring>
+        <name>m_warns</name>
+        <qualifiedname>uipc::core::SanityChecker::m_warns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="25" column="40" bodyfile="include/uipc/core/sanity_checker.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_sanity_checker_1a51c3100144ea6b37a4992a0bd6e7b6ce" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref></type>
+        <definition>core::SanityCheckMessageCollection uipc::core::SanityChecker::m_infos</definition>
+        <argsstring></argsstring>
+        <name>m_infos</name>
+        <qualifiedname>uipc::core::SanityChecker::m_infos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="26" column="40" bodyfile="include/uipc/core/sanity_checker.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_sanity_checker_1a0156bfdd7e1042d7e67ff39fb8e0db07" prot="private" static="no" mutable="no">
         <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
         <definition>Scene&amp; uipc::core::SanityChecker::m_scene</definition>
         <argsstring></argsstring>
@@ -16,68 +57,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/sanity_check/sanity_checker.h" line="25" column="11" bodyfile="include/uipc/sanity_check/sanity_checker.h" bodystart="25" bodyend="-1"/>
+        <location file="include/uipc/core/sanity_checker.h" line="28" column="11" bodyfile="include/uipc/core/sanity_checker.h" bodystart="28" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1aaecc4882565c09a6694aa313a5653378" prot="public" static="no" const="no" explicit="yes" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a4414c502f9c9db2ca339f91a1ade1b61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>uipc::core::SanityChecker::SanityChecker</definition>
-        <argsstring>(Scene &amp;s) noexcept</argsstring>
+        <argsstring>(Scene &amp;scene)</argsstring>
         <name>SanityChecker</name>
         <qualifiedname>uipc::core::SanityChecker::SanityChecker</qualifiedname>
         <param>
           <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
-          <declname>s</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/sanity_check/sanity_checker.h" line="17" column="14"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1ad059ad7476ecb29ef5c5501e96785fe2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
-        <type>U64</type>
-        <definition>virtual U64 uipc::core::SanityChecker::get_id</definition>
-        <argsstring>() const noexcept=0</argsstring>
-        <name>get_id</name>
-        <qualifiedname>uipc::core::SanityChecker::get_id</qualifiedname>
-        <reimplements refid="classuipc_1_1core_1_1_i_sanity_checker_1acb98dce232226d023ed94742a6b06a0d">get_id</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/sanity_check/sanity_checker.h" line="19" column="31"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a91cdfff3c76c5648e527b6682b827777" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
-        <type>SanityCheckResult</type>
-        <definition>virtual SanityCheckResult uipc::core::SanityChecker::do_check</definition>
-        <argsstring>() noexcept</argsstring>
-        <name>do_check</name>
-        <qualifiedname>uipc::core::SanityChecker::do_check</qualifiedname>
-        <reimplements refid="classuipc_1_1core_1_1_i_sanity_checker_1a976b7fe045cd89d29b045aee78cc9a0d">do_check</reimplements>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/sanity_check/sanity_checker.h" line="20" column="31"/>
-      </memberdef>
-    </sectiondef>
-    <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a8c7879b1c21b1e978d7b2b8bf0150060" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
-        <type>SanityCheckResult</type>
-        <definition>virtual SanityCheckResult uipc::core::SanityChecker::do_check</definition>
-        <argsstring>(backend::SceneVisitor &amp;scene) noexcept=0</argsstring>
-        <name>do_check</name>
-        <qualifiedname>uipc::core::SanityChecker::do_check</qualifiedname>
-        <param>
-          <type><ref refid="classuipc_1_1backend_1_1_scene_visitor" kindref="compound">backend::SceneVisitor</ref> &amp;</type>
           <declname>scene</declname>
         </param>
         <briefdescription>
@@ -86,54 +77,129 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/sanity_check/sanity_checker.h" line="23" column="31"/>
+        <location file="include/uipc/core/sanity_checker.h" line="11" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1ae3833d3cb42bee0251c1adfc17645407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::SanityChecker::~SanityChecker</definition>
+        <argsstring>()</argsstring>
+        <name>~SanityChecker</name>
+        <qualifiedname>uipc::core::SanityChecker::~SanityChecker</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a48205dd62be9cbc86e9bce15ab0b78ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SanityCheckResult</type>
+        <definition>SanityCheckResult uipc::core::SanityChecker::check</definition>
+        <argsstring>(std::string_view workspace)</argsstring>
+        <name>check</name>
+        <qualifiedname>uipc::core::SanityChecker::check</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>workspace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="14" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a31eba484d078eb8dadb21405c28ff2e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::SanityChecker::report</definition>
+        <argsstring>()</argsstring>
+        <name>report</name>
+        <qualifiedname>uipc::core::SanityChecker::report</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="15" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a567862d3f0ce7accd9970ba5a9f99747" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const unordered_map&lt; U64, S&lt; <ref refid="classuipc_1_1core_1_1_sanity_check_message" kindref="compound">SanityCheckMessage</ref> &gt; &gt; &amp;</type>
+        <definition>const unordered_map&lt; U64, S&lt; SanityCheckMessage &gt; &gt; &amp; uipc::core::SanityChecker::errors</definition>
+        <argsstring>() const</argsstring>
+        <name>errors</name>
+        <qualifiedname>uipc::core::SanityChecker::errors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="17" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1a5ad7fac5e2862ca1f3befa1ba4e4169e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const unordered_map&lt; U64, S&lt; <ref refid="classuipc_1_1core_1_1_sanity_check_message" kindref="compound">SanityCheckMessage</ref> &gt; &gt; &amp;</type>
+        <definition>const unordered_map&lt; U64, S&lt; SanityCheckMessage &gt; &gt; &amp; uipc::core::SanityChecker::warns</definition>
+        <argsstring>() const</argsstring>
+        <name>warns</name>
+        <qualifiedname>uipc::core::SanityChecker::warns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="18" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1aa7d11937b1c86a799ebf9be796137ede" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const unordered_map&lt; U64, S&lt; <ref refid="classuipc_1_1core_1_1_sanity_check_message" kindref="compound">SanityCheckMessage</ref> &gt; &gt; &amp;</type>
+        <definition>const unordered_map&lt; U64, S&lt; SanityCheckMessage &gt; &gt; &amp; uipc::core::SanityChecker::infos</definition>
+        <argsstring>() const</argsstring>
+        <name>infos</name>
+        <qualifiedname>uipc::core::SanityChecker::infos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="19" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_sanity_checker_1afcdabce5624d848a0e491d66edd6234d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::SanityChecker::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>uipc::core::SanityChecker::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/sanity_checker.h" line="21" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="2">
-        <label>uipc::core::ISanityChecker</label>
-        <link refid="classuipc_1_1core_1_1_i_sanity_checker"/>
-      </node>
-      <node id="1">
-        <label>uipc::core::SanityChecker</label>
-        <link refid="classuipc_1_1core_1_1_sanity_checker"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="2">
-        <label>uipc::core::ISanityChecker</label>
-        <link refid="classuipc_1_1core_1_1_i_sanity_checker"/>
-      </node>
-      <node id="1">
-        <label>uipc::core::SanityChecker</label>
-        <link refid="classuipc_1_1core_1_1_sanity_checker"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-        <childnode refid="3" relation="usage">
-          <edgelabel>m_scene</edgelabel>
-        </childnode>
-      </node>
-      <node id="3">
-        <label>uipc::core::Scene</label>
-        <link refid="classuipc_1_1core_1_1_scene"/>
-      </node>
-    </collaborationgraph>
-    <location file="include/uipc/sanity_check/sanity_checker.h" line="14" column="1" bodyfile="include/uipc/sanity_check/sanity_checker.h" bodystart="15" bodyend="26"/>
+    <location file="include/uipc/core/sanity_checker.h" line="8" column="1" bodyfile="include/uipc/core/sanity_checker.h" bodystart="9" bodyend="29"/>
     <listofallmembers>
-      <member refid="classuipc_1_1core_1_1_i_sanity_checker_1aba4bb9f00a1b7fe755011cda62ce0aa7" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>check</name></member>
-      <member refid="classuipc_1_1core_1_1_sanity_checker_1a91cdfff3c76c5648e527b6682b827777" prot="public" virt="virtual"><scope>uipc::core::SanityChecker</scope><name>do_check</name></member>
-      <member refid="classuipc_1_1core_1_1_sanity_checker_1a8c7879b1c21b1e978d7b2b8bf0150060" prot="protected" virt="pure-virtual"><scope>uipc::core::SanityChecker</scope><name>do_check</name></member>
-      <member refid="classuipc_1_1core_1_1_sanity_checker_1ad059ad7476ecb29ef5c5501e96785fe2" prot="public" virt="pure-virtual"><scope>uipc::core::SanityChecker</scope><name>get_id</name></member>
-      <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a75d05725f947e2853a4d9d486aa73f82" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>id</name></member>
-      <member refid="classuipc_1_1core_1_1_sanity_checker_1a0156bfdd7e1042d7e67ff39fb8e0db07" prot="protected" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>m_scene</name></member>
-      <member refid="classuipc_1_1core_1_1_sanity_checker_1aaecc4882565c09a6694aa313a5653378" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>SanityChecker</name></member>
-      <member refid="classuipc_1_1core_1_1_i_sanity_checker_1a75fcb119c1d11d87cb46afd16459cb7a" prot="public" virt="virtual"><scope>uipc::core::SanityChecker</scope><name>~ISanityChecker</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a48205dd62be9cbc86e9bce15ab0b78ff" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>check</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1afcdabce5624d848a0e491d66edd6234d" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>clear</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a567862d3f0ce7accd9970ba5a9f99747" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>errors</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1aa7d11937b1c86a799ebf9be796137ede" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>infos</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1afa4b69c2afc1258b83e4a25cc1456401" prot="private" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>m_errors</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a51c3100144ea6b37a4992a0bd6e7b6ce" prot="private" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>m_infos</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a0156bfdd7e1042d7e67ff39fb8e0db07" prot="private" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>m_scene</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a1d5bfbad7fca0e30f0373dc66929c8c6" prot="private" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>m_warns</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a31eba484d078eb8dadb21405c28ff2e2" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>report</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a4414c502f9c9db2ca339f91a1ade1b61" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>SanityChecker</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1a5ad7fac5e2862ca1f3befa1ba4e4169e" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>warns</name></member>
+      <member refid="classuipc_1_1core_1_1_sanity_checker_1ae3833d3cb42bee0251c1adfc17645407" prot="public" virt="non-virtual"><scope>uipc::core::SanityChecker</scope><name>~SanityChecker</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

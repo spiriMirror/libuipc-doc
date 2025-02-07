@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::Geometry::InstanceAttributesT</compoundname>
     <includes refid="geometry_2geometry_8h" local="no">geometry.h</includes>
@@ -11,10 +11,9 @@
       </param>
     </templateparamlist>
     <sectiondef kind="private-type">
-      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a1f2e4c824fc59679810366504b917eaf" prot="private" static="no">
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a18a58820f3ba24db3dd4d48d9c4f8fdc" prot="private" static="no">
         <type>std::conditional_t&lt; IsConst, const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>, <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &gt;</type>
-        <definition>using uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt;::AutoAttributeCollection = 
-            std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
+        <definition>using uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt;::AutoAttributeCollection =  std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
         <argsstring></argsstring>
         <name>AutoAttributeCollection</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::AutoAttributeCollection</qualifiedname>
@@ -24,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="158" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="158" bodyend="-1"/>
+        <location file="include/uipc/geometry/geometry.h" line="158" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="159" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
@@ -464,7 +463,7 @@
     <location file="include/uipc/geometry/geometry.h" line="148" column="5" bodyfile="include/uipc/geometry/geometry.h" bodystart="149" bodyend="243"/>
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1abd621cd374772a67fae8b860ddfca14c" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>AttributeFriend</name></member>
-      <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a1f2e4c824fc59679810366504b917eaf" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>AutoAttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a18a58820f3ba24db3dd4d48d9c4f8fdc" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>AutoAttributeCollection</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1ab7b24bcb573e8b711ff4a1c9a0842df5" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>clear</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1ae74b2e36e0d8bdafde745023c97b14e2" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>copy_from</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1a7214a2b8c23f825af43e6e238f169dc3" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>create</name></member>

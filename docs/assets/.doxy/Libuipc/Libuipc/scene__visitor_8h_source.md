@@ -31,6 +31,7 @@ class UIPC_CORE_API SceneVisitor
     SceneVisitor(core::Scene& scene) noexcept;
     void begin_pending() noexcept;
     void solve_pending() noexcept;
+    bool is_pending() const noexcept;
 
     span<S<geometry::GeometrySlot>> geometries() const noexcept;
     S<geometry::GeometrySlot>       find_geometry(IndexT id) noexcept;
@@ -44,7 +45,10 @@ class UIPC_CORE_API SceneVisitor
     const Json&  info() const noexcept;
 
     const core::ConstitutionTabular& constitution_tabular() const noexcept;
-    const core::ContactTabular&      contact_tabular() const noexcept;
+    core::ConstitutionTabular&       constitution_tabular() noexcept;
+
+    const core::ContactTabular& contact_tabular() const noexcept;
+    core::ContactTabular&       contact_tabular() noexcept;
 
     const DiffSimVisitor& diff_sim() const noexcept;
     DiffSimVisitor&       diff_sim() noexcept;

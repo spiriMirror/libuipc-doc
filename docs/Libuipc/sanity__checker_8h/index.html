@@ -1561,39 +1561,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#macros" class="md-nav__link">
-    <span class="md-ellipsis">
-      Macros
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#macro-definition-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Macro Definition Documentation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Macro Definition Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-register_sanity_checker" class="md-nav__link">
-    <span class="md-ellipsis">
-      define REGISTER_SANITY_CHECKER
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1610,13 +1577,10 @@
 
 
 <div><h1 id="file-sanity_checkerh">File sanity_checker.h</h1>
-<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_d44c64559bbebec7f509842c48db8b23/"><strong>include</strong></a> <strong>&gt;</strong> <a href="../dir_9f30510905f1286cc334e7ecdb1aceca/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../dir_bc94a01fec317e710a764ca285cf9c79/"><strong>sanity_check</strong></a> <strong>&gt;</strong> <a href="./"><strong>sanity_checker.h</strong></a></p>
+<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_eca9d1283f7cad9ff89c5ab44937d4d9/"><strong>core</strong></a> <strong>&gt;</strong> <a href="./"><strong>sanity_checker.h</strong></a></p>
 <p><a href="../sanity__checker_8h_source/">Go to the source code of this file</a></p>
 <ul>
-<li><code>#include &lt;uipc/common/macro.h&gt;</code></li>
-<li><code>#include &lt;uipc/sanity_check/i_sanity_checker.h&gt;</code></li>
-<li><code>#include &lt;uipc/sanity_check/sanity_checker_auto_register.h&gt;</code></li>
-<li><code>#include &lt;uipc/core/scene.h&gt;</code></li>
+<li><code>#include &lt;uipc/core/i_sanity_checker.h&gt;</code></li>
 </ul>
 <h2 id="namespaces">Namespaces</h2>
 <table>
@@ -1630,10 +1594,6 @@
 <tr>
 <td style="text-align: right;">namespace</td>
 <td style="text-align: left;"><a href="../namespaceuipc/"><strong>uipc</strong></a> <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">namespace</td>
-<td style="text-align: left;"><a href="../namespaceuipc_1_1backend/"><strong>backend</strong></a> <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">namespace</td>
@@ -1656,35 +1616,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="macros">Macros</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">define</td>
-<td style="text-align: left;"><a href="./#define-register_sanity_checker"><strong>REGISTER_SANITY_CHECKER</strong></a> (SanityChecker) <br></td>
-</tr>
-</tbody>
-</table>
-<h2 id="macro-definition-documentation">Macro Definition Documentation</h2>
-<h3 id="define-register_sanity_checker">define REGISTER_SANITY_CHECKER</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define REGISTER_SANITY_CHECKER (</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">SanityChecker</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">auto_register</span><span class="w">                                                                          </span>\
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span><span class="w">                                                                                                </span>\
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="o">::</span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">SanityCheckerAutoRegister</span><span class="w"> </span><span class="nf">UIPC_NAME_WITH_ID</span><span class="p">(</span><span class="n">SanityCheckerAutoRegister</span><span class="p">){</span><span class="w"> </span>\
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="o">::</span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">detail</span><span class="o">::</span><span class="n">register_sanity_checker_creator</span><span class="o">&lt;</span><span class="n">SanityChecker</span><span class="o">&gt;</span><span class="p">()};</span><span class="w">                 </span>\
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
-</span></code></pre></div>
 <hr>
-
-<hr>
-<p>The documentation for this class was generated from the following file <code>include/uipc/sanity_check/sanity_checker.h</code></p></div>
+<p>The documentation for this class was generated from the following file <code>include/uipc/core/sanity_checker.h</code></p></div>
 
 
 

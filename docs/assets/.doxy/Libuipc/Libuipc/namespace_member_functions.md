@@ -29,6 +29,7 @@
 * **EG\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EG\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EP\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* **edge\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **extract\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -48,11 +49,13 @@
 ## h
 
 * **halfplane** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **halfplane\_vertex\_signed\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
 ## i
 
 * **init** ([**uipc**](namespaceuipc.md))
+* **is\_point\_in\_tet** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -93,10 +96,14 @@
 * **operator""\_mm** ([**uipc**](namespaceuipc.md))
 * **operator""\_ms** ([**uipc**](namespaceuipc.md))
 * **operator""\_s** ([**uipc**](namespaceuipc.md))
+* **optimal\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
 ## p
 
+* **point\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **point\_point\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **point\_triangle\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **pointcloud** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -105,7 +112,6 @@
 * **READABLE\_TYPE\_NAME\_AS\_ALIAS** ([**uipc**](namespaceuipc.md))
 * **readable\_type\_name** ([**uipc**](namespaceuipc.md))
 * **run\_length\_encode** ([**uipc**](namespaceuipc.md))
-* **register\_sanity\_checker\_creator** ([**uipc::core::detail**](namespaceuipc_1_1core_1_1detail.md))
 
 
 ## s
@@ -119,6 +125,7 @@
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 

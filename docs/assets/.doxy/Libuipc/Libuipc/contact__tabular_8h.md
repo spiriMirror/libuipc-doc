@@ -14,6 +14,7 @@
 * `#include <uipc/core/contact_model.h>`
 * `#include <uipc/common/json.h>`
 * `#include <uipc/common/span.h>`
+* `#include <uipc/core/contact_model_collection.h>`
 
 
 
@@ -32,6 +33,7 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**uipc**](namespaceuipc.md) <br> |
+| namespace | [**backend**](namespaceuipc_1_1backend.md) <br> |
 | namespace | [**core**](namespaceuipc_1_1core.md) <br> |
 
 

@@ -57,6 +57,7 @@
 |  bool | [**dump**](#function-dump) () <br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
 |  void | [**init**](#function-init) ([**Scene**](classuipc_1_1core_1_1_scene.md) & s) <br> |
+|  bool | [**is\_valid**](#function-is_valid) () const<br> |
 |  bool | [**recover**](#function-recover) (SizeT aim\_frame=~0ull) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
 |  void | [**sync**](#function-sync) () <br> |
@@ -166,6 +167,19 @@ SizeT uipc::core::World::frame () const
 void uipc::core::World::init (
     Scene & s
 ) 
+```
+
+
+
+
+<hr>
+
+
+
+### function is\_valid 
+
+```C++
+bool uipc::core::World::is_valid () const
 ```
 
 

@@ -10,7 +10,6 @@
 * **REGISTER\_IMPLICIT\_GEOMETRY\_UIDS** ([**implicit\_geometry\_uid\_auto\_register.h**](implicit__geometry__uid__auto__register_8h.md))
 * **REGISTER\_IMPLICIT\_GEOMETRY\_UIDS\_INTERNAL** ([**implicit\_geometry\_uid\_auto\_register.h**](implicit__geometry__uid__auto__register_8h.md))
 * **READABLE\_TYPE\_NAME\_AS\_ALIAS** ([**readable\_type\_name.h**](readable__type__name_8h.md))
-* **REGISTER\_SANITY\_CHECKER** ([**sanity\_checker.h**](sanity__checker_8h.md))
 
 
 ## u

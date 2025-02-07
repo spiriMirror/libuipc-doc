@@ -1590,9 +1590,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-contact_models" class="md-nav__link">
+  <a href="#function-at" class="md-nav__link">
     <span class="md-ellipsis">
-      function contact_models
+      function at
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-contact_models-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      function contact_models [1/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-contact_models-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      function contact_models [2/2]
     </span>
   </a>
   
@@ -1718,6 +1736,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#friend-contacttabularvisitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      friend ContactTabularVisitor
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1758,8 +1785,16 @@
 <td style="text-align: left;"><a href="#function-contacttabular-22"><strong>ContactTabular</strong></a> (const <a href="./"><strong>ContactTabular</strong></a> &amp;) = delete<br></td>
 </tr>
 <tr>
-<td style="text-align: right;">std::span&lt; const <a href="../classuipc_1_1core_1_1_contact_model/"><strong>ContactModel</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-contact_models"><strong>contact_models</strong></a> () noexcept const<br></td>
+<td style="text-align: right;"><a href="../classuipc_1_1core_1_1_contact_model/"><strong>ContactModel</strong></a></td>
+<td style="text-align: left;"><a href="#function-at"><strong>at</strong></a> (SizeT i, SizeT j) const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">ContactModelCollection</td>
+<td style="text-align: left;"><a href="#function-contact_models-12"><strong>contact_models</strong></a> () noexcept<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">CContactModelCollection</td>
+<td style="text-align: left;"><a href="#function-contact_models-22"><strong>contact_models</strong></a> () noexcept const<br></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../classuipc_1_1core_1_1_contact_element/"><strong>ContactElement</strong></a> &amp;</td>
@@ -1771,10 +1806,10 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-default_model-12"><strong>default_model</strong></a> (Float friction_rate, Float resistance, const Json &amp; config=default_config()) noexcept<br></td>
+<td style="text-align: left;"><a href="#function-default_model-12"><strong>default_model</strong></a> (Float friction_rate, Float resistance, bool enable=true, const Json &amp; config=default_config()) noexcept<br></td>
 </tr>
 <tr>
-<td style="text-align: right;">const <a href="../classuipc_1_1core_1_1_contact_model/"><strong>ContactModel</strong></a> &amp;</td>
+<td style="text-align: right;"><a href="../classuipc_1_1core_1_1_contact_model/"><strong>ContactModel</strong></a></td>
 <td style="text-align: left;"><a href="#function-default_model-22"><strong>default_model</strong></a> () noexcept const<br></td>
 </tr>
 <tr>
@@ -1782,7 +1817,7 @@
 <td style="text-align: left;"><a href="#function-element_count"><strong>element_count</strong></a> () noexcept const<br></td>
 </tr>
 <tr>
-<td style="text-align: right;">void</td>
+<td style="text-align: right;">IndexT</td>
 <td style="text-align: left;"><a href="#function-insert"><strong>insert</strong></a> (const <a href="../classuipc_1_1core_1_1_contact_element/"><strong>ContactElement</strong></a> &amp; L, const <a href="../classuipc_1_1core_1_1_contact_element/"><strong>ContactElement</strong></a> &amp; R, Float friction_rate, Float resistance, bool enable=true, const Json &amp; config=default_config()) <br></td>
 </tr>
 <tr>
@@ -1823,76 +1858,97 @@
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-contact_models">function contact_models</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">std</span><span class="o">::</span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ContactModel</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">contact_models</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<h3 id="function-at">function at</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ContactModel</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">at</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">i</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">j</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-contact_models-12">function contact_models [1/2]</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ContactModelCollection</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">contact_models</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-contact_models-22">function contact_models [2/2]</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">CContactModelCollection</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">contact_models</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-create">function create</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">create</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">""</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">create</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s">""</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-default_element">function default_element</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_element</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_element</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-default_model-12">function default_model [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_model</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">friction_rate</span><span class="p">,</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">resistance</span><span class="p">,</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="o">=</span><span class="n">default_config</span><span class="p">()</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_model</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">friction_rate</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">resistance</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="o">=</span><span class="n">default_config</span><span class="p">()</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-default_model-22">function default_model [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="n">ContactModel</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_model</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ContactModel</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_model</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-element_count">function element_count</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">element_count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">element_count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-insert">function insert</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">insert</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">L</span><span class="p">,</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">R</span><span class="p">,</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">friction_rate</span><span class="p">,</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">resistance</span><span class="p">,</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="o">=</span><span class="n">default_config</span><span class="p">()</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">IndexT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">insert</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">L</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactElement</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">R</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">friction_rate</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">resistance</span><span class="p">,</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="o">=</span><span class="n">default_config</span><span class="p">()</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-operator">function operator=</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">ContactTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactTabular</span><span class="w"> </span><span class="o">&amp;</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">ContactTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactTabular</span><span class="w"> </span><span class="o">&amp;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-contacttabular">function ~ContactTabular</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::~</span><span class="n">ContactTabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::~</span><span class="n">ContactTabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-default_config">function default_config</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 <h2 id="friends-documentation">Friends Documentation</h2>
 <h3 id="friend-to_json">friend to_json</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span><span class="p">,</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ct</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span><span class="p">,</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">ct</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="friend-contacttabularvisitor">friend ContactTabularVisitor</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">ContactTabularVisitor</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">ContactTabularVisitor</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 

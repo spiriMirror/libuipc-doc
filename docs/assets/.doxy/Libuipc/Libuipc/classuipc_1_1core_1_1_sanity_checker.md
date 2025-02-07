@@ -13,27 +13,6 @@
 
 
 
-Inherits the following classes: [uipc::core::ISanityChecker](classuipc_1_1core_1_1_i_sanity_checker.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -72,39 +51,14 @@ Inherits the following classes: [uipc::core::ISanityChecker](classuipc_1_1core_1
 
 | Type | Name |
 | ---: | :--- |
-|   | [**SanityChecker**](#function-sanitychecker) ([**Scene**](classuipc_1_1core_1_1_scene.md) & s) noexcept<br> |
-| virtual SanityCheckResult | [**do\_check**](#function-do_check-12) () noexcept<br> |
-| virtual U64 | [**get\_id**](#function-get_id) () noexcept const = 0<br> |
-
-
-## Public Functions inherited from uipc::core::ISanityChecker
-
-See [uipc::core::ISanityChecker](classuipc_1_1core_1_1_i_sanity_checker.md)
-
-| Type | Name |
-| ---: | :--- |
-|  SanityCheckResult | [**check**](classuipc_1_1core_1_1_i_sanity_checker.md#function-check) () noexcept<br> |
-|  U64 | [**id**](classuipc_1_1core_1_1_i_sanity_checker.md#function-id) () noexcept const<br> |
-| virtual  | [**~ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md#function-isanitychecker) () = default<br> |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Protected Attributes
-
-| Type | Name |
-| ---: | :--- |
-|  [**Scene**](classuipc_1_1core_1_1_scene.md) & | [**m\_scene**](#variable-m_scene)  <br> |
+|   | [**SanityChecker**](#function-sanitychecker) ([**Scene**](classuipc_1_1core_1_1_scene.md) & scene) <br> |
+|  SanityCheckResult | [**check**](#function-check) (std::string\_view workspace) <br> |
+|  void | [**clear**](#function-clear) () <br> |
+|  const unordered\_map&lt; U64, S&lt; [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) &gt; &gt; & | [**errors**](#function-errors) () const<br> |
+|  const unordered\_map&lt; U64, S&lt; [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) &gt; &gt; & | [**infos**](#function-infos) () const<br> |
+|  void | [**report**](#function-report) () <br> |
+|  const unordered\_map&lt; U64, S&lt; [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) &gt; &gt; & | [**warns**](#function-warns) () const<br> |
+|   | [**~SanityChecker**](#function-sanitychecker) () <br> |
 
 
 
@@ -127,31 +81,6 @@ See [uipc::core::ISanityChecker](classuipc_1_1core_1_1_i_sanity_checker.md)
 
 
 
-
-
-
-
-
-
-
-
-
-
-## Protected Functions
-
-| Type | Name |
-| ---: | :--- |
-| virtual SanityCheckResult | [**do\_check**](#function-do_check-22) ([**backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & scene) noexcept = 0<br> |
-
-
-## Protected Functions inherited from uipc::core::ISanityChecker
-
-See [uipc::core::ISanityChecker](classuipc_1_1core_1_1_i_sanity_checker.md)
-
-| Type | Name |
-| ---: | :--- |
-| virtual SanityCheckResult | [**do\_check**](classuipc_1_1core_1_1_i_sanity_checker.md#function-do_check) () noexcept = 0<br> |
-| virtual U64 | [**get\_id**](classuipc_1_1core_1_1_i_sanity_checker.md#function-get_id) () noexcept const = 0<br> |
 
 
 
@@ -166,9 +95,9 @@ See [uipc::core::ISanityChecker](classuipc_1_1core_1_1_i_sanity_checker.md)
 ### function SanityChecker 
 
 ```C++
-explicit uipc::core::SanityChecker::SanityChecker (
-    Scene & s
-) noexcept
+uipc::core::SanityChecker::SanityChecker (
+    Scene & scene
+) 
 ```
 
 
@@ -178,59 +107,90 @@ explicit uipc::core::SanityChecker::SanityChecker (
 
 
 
-### function do\_check [1/2]
+### function check 
 
 ```C++
-virtual SanityCheckResult uipc::core::SanityChecker::do_check () noexcept
-```
-
-
-
-Implements [*uipc::core::ISanityChecker::do\_check*](classuipc_1_1core_1_1_i_sanity_checker.md#function-do_check)
-
-
-<hr>
-
-
-
-### function get\_id 
-
-```C++
-virtual U64 uipc::core::SanityChecker::get_id () noexcept const = 0
-```
-
-
-
-Implements [*uipc::core::ISanityChecker::get\_id*](classuipc_1_1core_1_1_i_sanity_checker.md#function-get_id)
-
-
-<hr>
-## Protected Attributes Documentation
-
-
-
-
-### variable m\_scene 
-
-```C++
-Scene& uipc::core::SanityChecker::m_scene;
+SanityCheckResult uipc::core::SanityChecker::check (
+    std::string_view workspace
+) 
 ```
 
 
 
 
 <hr>
-## Protected Functions Documentation
 
 
 
-
-### function do\_check [2/2]
+### function clear 
 
 ```C++
-virtual SanityCheckResult uipc::core::SanityChecker::do_check (
-    backend::SceneVisitor & scene
-) noexcept = 0
+void uipc::core::SanityChecker::clear () 
+```
+
+
+
+
+<hr>
+
+
+
+### function errors 
+
+```C++
+const unordered_map< U64, S< SanityCheckMessage > > & uipc::core::SanityChecker::errors () const
+```
+
+
+
+
+<hr>
+
+
+
+### function infos 
+
+```C++
+const unordered_map< U64, S< SanityCheckMessage > > & uipc::core::SanityChecker::infos () const
+```
+
+
+
+
+<hr>
+
+
+
+### function report 
+
+```C++
+void uipc::core::SanityChecker::report () 
+```
+
+
+
+
+<hr>
+
+
+
+### function warns 
+
+```C++
+const unordered_map< U64, S< SanityCheckMessage > > & uipc::core::SanityChecker::warns () const
+```
+
+
+
+
+<hr>
+
+
+
+### function ~SanityChecker 
+
+```C++
+uipc::core::SanityChecker::~SanityChecker () 
 ```
 
 
@@ -239,5 +199,5 @@ virtual SanityCheckResult uipc::core::SanityChecker::do_check (
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `include/uipc/sanity_check/sanity_checker.h`
+The documentation for this class was generated from the following file `include/uipc/core/sanity_checker.h`
 

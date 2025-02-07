@@ -1,63 +1,350 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="i__sanity__checker_8h" kind="file" language="C++">
     <compoundname>i_sanity_checker.h</compoundname>
-    <includes refid="dllexport_8h" local="no">uipc/common/dllexport.h</includes>
     <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
-    <includedby refid="sanity__checker_8h" local="no">include/uipc/sanity_check/sanity_checker.h</includedby>
-    <includedby refid="sanity__checker__auto__register_8h" local="no">include/uipc/sanity_check/sanity_checker_auto_register.h</includedby>
-    <includedby refid="sanity__checker__collection_8h" local="no">include/uipc/sanity_check/sanity_checker_collection.h</includedby>
+    <includes refid="dllexport_8h" local="no">uipc/common/dllexport.h</includes>
+    <includes refid="span_8h" local="no">uipc/common/span.h</includes>
+    <includes refid="smart__pointer_8h" local="no">uipc/common/smart_pointer.h</includes>
+    <includes refid="unordered__map_8h" local="no">uipc/common/unordered_map.h</includes>
+    <includes refid="geometry_2geometry_8h" local="no">uipc/geometry/geometry.h</includes>
+    <includedby refid="sanity__check__message__visitor_8h" local="no">include/uipc/backend/visitors/sanity_check_message_visitor.h</includedby>
+    <includedby refid="sanity__checker_8h" local="no">include/uipc/core/sanity_checker.h</includedby>
     <incdepgraph>
-      <node id="2">
+      <node id="22">
+        <label>uipc/backend/buffer_view.h</label>
+        <link refid="buffer__view_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>uipc/backend/type_define.h</label>
+        <link refid="backend_2type__define_8h_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>uipc/common/allocator.h</label>
+        <link refid="allocator_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>uipc/common/buffer_info.h</label>
+        <link refid="buffer__info_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
         <label>uipc/common/dllexport.h</label>
         <link refid="dllexport_8h_source"/>
       </node>
-      <node id="3">
-        <label>uipc/common/type_define.h</label>
-        <link refid="common_2type__define_8h_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>include/uipc/sanity_check/i_sanity_checker.h</label>
-        <link refid="i__sanity__checker_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>Eigen/Core</label>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
-      <node id="1">
-        <label>include/uipc/sanity_check/i_sanity_checker.h</label>
-        <link refid="i__sanity__checker_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
+      <node id="19">
+        <label>uipc/common/exception.h</label>
+        <link refid="exception_8h_source"/>
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>uipc/common/json.h</label>
+        <link refid="json_8h_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>uipc/common/smart_pointer.h</label>
+        <link refid="smart__pointer_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc/common/span.h</label>
+        <link refid="span_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>uipc/common/string.h</label>
+        <link refid="string_8h_source"/>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>include/uipc/sanity_check/sanity_checker.h</label>
-        <link refid="sanity__checker_8h_source"/>
+        <label>uipc/common/type_define.h</label>
+        <link refid="common_2type__define_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>uipc/common/unordered_map.h</label>
+        <link refid="unordered__map_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>uipc/common/vector.h</label>
+        <link refid="vector_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/core/i_sanity_checker.h</label>
+        <link refid="i__sanity__checker_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>uipc/geometry/attribute.h</label>
+        <link refid="attribute_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>uipc/geometry/attribute_collection.h</label>
+        <link refid="attribute__collection_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>uipc/geometry/attribute_copy.h</label>
+        <link refid="attribute__copy_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>uipc/geometry/attribute_friend.h</label>
+        <link refid="attribute__friend_8h_source"/>
+      </node>
+      <node id="33">
+        <label>uipc/geometry/attribute_slot.h</label>
+        <link refid="attribute__slot_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>uipc/geometry/geometry.h</label>
+        <link refid="geometry_2geometry_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>uipc/geometry/geometry_friend.h</label>
+        <link refid="geometry__friend_8h_source"/>
       </node>
       <node id="3">
-        <label>include/uipc/sanity_check/sanity_checker_auto_register.h</label>
-        <link refid="sanity__checker__auto__register_8h_source"/>
+        <label>Eigen/Core</label>
+      </node>
+      <node id="24">
+        <label>cinttypes</label>
+      </node>
+      <node id="32">
+        <label>details/attribute.inl</label>
+      </node>
+      <node id="36">
+        <label>details/attribute_collection.inl</label>
+      </node>
+      <node id="30">
+        <label>details/attribute_copy.inl</label>
+      </node>
+      <node id="35">
+        <label>details/attribute_slot.inl</label>
+      </node>
+      <node id="39">
+        <label>details/geometry.inl</label>
+      </node>
+      <node id="11">
+        <label>details/smart_pointer.inl</label>
+      </node>
+      <node id="20">
+        <label>exception</label>
+      </node>
+      <node id="34">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="9">
+        <label>memory_resource</label>
+      </node>
+      <node id="26">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="6">
+        <label>span</label>
+      </node>
+      <node id="18">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>string_view</label>
+      </node>
+      <node id="13">
+        <label>unordered_map</label>
+      </node>
+      <node id="28">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/uipc/backend/visitors/sanity_check_message_visitor.h</label>
+        <link refid="sanity__check__message__visitor_8h_source"/>
+      </node>
+      <node id="6">
+        <label>include/uipc/core.h</label>
+        <link refid="core_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/uipc/core/i_sanity_checker.h</label>
+        <link refid="i__sanity__checker_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/uipc/core/sanity_checker.h</label>
+        <link refid="sanity__checker_8h_source"/>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>include/uipc/sanity_check/sanity_checker_collection.h</label>
-        <link refid="sanity__checker__collection_8h_source"/>
+        <label>include/uipc/core/scene.h</label>
+        <link refid="scene_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/uipc/core/world.h</label>
+        <link refid="world_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/uipc/io.h</label>
+        <link refid="io_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/uipc/io/gltf_io.h</label>
+        <link refid="gltf__io_8h_source"/>
+      </node>
+      <node id="8">
+        <label>include/uipc/io/scene_io.h</label>
+        <link refid="scene__io_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/uipc/uipc.h</label>
+        <link refid="uipc_8h_source"/>
       </node>
     </invincdepgraph>
+    <innerclass refid="classuipc_1_1core_1_1_sanity_check_message" prot="public">uipc::core::SanityCheckMessage</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_sanity_check_message_collection" prot="public">uipc::core::SanityCheckMessageCollection</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_i_sanity_checker" prot="public">uipc::core::ISanityChecker</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_sanity_checker_collection_create_info" prot="public">uipc::core::SanityCheckerCollectionCreateInfo</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_i_sanity_checker_collection" prot="public">uipc::core::ISanityCheckerCollection</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1backend">uipc::backend</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -65,33 +352,91 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/dllexport.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/type_define.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scene;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/type_define.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/dllexport.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/span.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/smart_pointer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/unordered_map.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/geometry.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>SanityCheckResult<sp/>:<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::backend</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>Success<sp/>=<sp/>0,</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>Warning<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>Error<sp/><sp/><sp/>=<sp/>2</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="classuipc_1_1core_1_1_i_sanity_checker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1_i_sanity_checker" kindref="compound">ISanityChecker</ref></highlight></codeline>
-<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_i_sanity_checker" kindref="compound">~ISanityChecker</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>U64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityCheckResult<sp/>check()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>U64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_id()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>SanityCheckResult<sp/>do_check()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="27"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SanityCheckMessageVisitor;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scene;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>SanityCheckResult<sp/>:<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>Success<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Warning<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>Error<sp/><sp/><sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classuipc_1_1core_1_1_sanity_check_message" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message" kindref="compound">SanityCheckMessage</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message" kindref="compound">SanityCheckMessage</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>U64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string_view<sp/><sp/>name()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityCheckResult<sp/>result()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string_view<sp/><sp/>message()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;std::string,<sp/>S&lt;geometry::Geometry&gt;&gt;&amp;<sp/>geometries()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_empty()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1backend_1_1_sanity_check_message_visitor" kindref="compound">backend::SanityCheckMessageVisitor</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>U64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_name;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityCheckResult<sp/>m_result<sp/>=<sp/>SanityCheckResult::Success;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_message;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_map&lt;std::string,<sp/>S&lt;geometry::Geometry&gt;&gt;<sp/>m_geometries;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classuipc_1_1core_1_1_sanity_check_message_collection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">SanityCheckMessageCollection</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">SanityCheckMessageCollection</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>messages()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_messages;<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>messages()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_messages;<sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>unordered_map&lt;U64,<sp/>S&lt;SanityCheckMessage&gt;&gt;<sp/>m_messages;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classuipc_1_1core_1_1_i_sanity_checker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1_i_sanity_checker" kindref="compound">ISanityChecker</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_i_sanity_checker" kindref="compound">~ISanityChecker</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>build();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>U64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityCheckResult<sp/>check(<ref refid="classuipc_1_1core_1_1_sanity_check_message" kindref="compound">SanityCheckMessage</ref>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><sp/><sp/><sp/><sp/><sp/><sp/>name()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>U64<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_id()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_name()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>SanityCheckResult<sp/>do_check(<ref refid="classuipc_1_1core_1_1_sanity_check_message" kindref="compound">SanityCheckMessage</ref>&amp;<sp/>msg)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classuipc_1_1core_1_1_sanity_checker_collection_create_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1_sanity_checker_collection_create_info" kindref="compound">SanityCheckerCollectionCreateInfo</ref></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string_view<sp/>workspace;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classuipc_1_1core_1_1_i_sanity_checker_collection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1_i_sanity_checker_collection" kindref="compound">ISanityCheckerCollection</ref></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_i_sanity_checker_collection" kindref="compound">~ISanityCheckerCollection</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>build(<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/>s)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>SanityCheckResult<sp/>check(<ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">SanityCheckMessageCollection</ref>&amp;<sp/>msg)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="include/uipc/sanity_check/i_sanity_checker.h"/>
+    <location file="include/uipc/core/i_sanity_checker.h"/>
   </compounddef>
 </doxygen>
