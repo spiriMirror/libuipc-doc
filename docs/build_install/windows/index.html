@@ -1737,13 +1737,13 @@ On Windows it's hard to compile with MSVC/NVCC in conda environment, so we build
 <p></p><div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cmake<span class="w"> </span>-S<span class="w"> </span>../libuipc<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DUIPC_PYTHON_EXECUTABLE_PATH<span class="o">=</span>&lt;PYTHON_EXE_IN_CONDA_ENV&gt;
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>-j8
 </span></code></pre></div>
-For example, the <python_exe_in_conda_env> may be  <code>C:\Users\&lt;UserName&gt;\anaconda3\envs\uipc_env\python.exe</code>
+For example, the <code>&lt;PYTHON_EXE_IN_CONDA_ENV&gt;</code> may be  <code>C:\Users\&lt;UserName&gt;\anaconda3\envs\uipc_env\python.exe</code>
 <h2 id="check-installation">Check Installation</h2>
 <p>You can run the <code>uipc_info.py</code> to check if the <code>Pyuipc</code> is installed correctly.</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc/python
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>python<span class="w"> </span>uipc_info.py
 </span></code></pre></div>
-<p>More samples are at <a href="https://github.com/spiriMirror/libuipc-samples">Pyuipc Samples</a>.</p></python_exe_in_conda_env></div>
+<p>More samples are at <a href="https://github.com/spiriMirror/libuipc-samples">Pyuipc Samples</a>.</p></div>
 
 
 
