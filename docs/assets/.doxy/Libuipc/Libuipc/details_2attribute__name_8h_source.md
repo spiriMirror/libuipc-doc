@@ -56,6 +56,10 @@ UIPC_BUILTIN_ATTRIBUTE(thickness);
 UIPC_BUILTIN_ATTRIBUTE(backend_fem_vertex_offset);
 
 UIPC_BUILTIN_ATTRIBUTE(backend_abd_body_offset);
+
+UIPC_BUILTIN_ATTRIBUTE(dof_offset);
+
+UIPC_BUILTIN_ATTRIBUTE(dof_count);
 #endif
 ```
 

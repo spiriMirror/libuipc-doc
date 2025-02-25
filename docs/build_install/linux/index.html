@@ -1562,6 +1562,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#clone-libuipc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone Libuipc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conda-environment" class="md-nav__link">
     <span class="md-ellipsis">
       Conda Environment
@@ -1651,13 +1660,13 @@
 </tr>
 <tr>
 <td><a href="https://www.python.org/downloads/">Python</a></td>
-<td>&gt;=3.10</td>
+<td>&gt;=3.11</td>
 <td>build system</td>
 <td>system install</td>
 </tr>
 <tr>
 <td><a href="https://developer.nvidia.com/cuda-downloads">Cuda</a></td>
-<td>&gt;=12.2</td>
+<td>&gt;=12.4</td>
 <td>GPU programming</td>
 <td>system install</td>
 </tr>
@@ -1676,22 +1685,20 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>./bootstrap-vcpkg.sh
 </span></code></pre></div>
 The simplest way to let CMake detect Vcpkg is to set the system environment variable <code>CMAKE_TOOLCHAIN_FILE</code> to <code>(YOUR_VCPKG_PARENT_FOLDER)/vcpkg/scripts/buildsystems/vcpkg.cmake</code>
+<h2 id="clone-libuipc">Clone Libuipc</h2>
+<p>Clone the repository with the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spiriMirror/libuipc.git
+</span></code></pre></div>
 <h2 id="conda-environment">Conda Environment</h2>
 <p>We <strong>recommend</strong> using conda environments to build the project on Linux.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>uipc_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>uipc_env
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">cmake</span><span class="o">=</span><span class="m">3</span>.26
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>conda<span class="w"> </span>install<span class="w"> </span>nvidia/label/cuda-12.4.0::cuda-toolkit
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>conda/env.yaml
 </span></code></pre></div>
-<p>Cuda-12.4.0 requires driver version &gt;= 550.54.14 (https://docs.nvidia.com/deploy/cuda-compatibility/index.html#use-the-right-compat-package), check your nvidia driver version with the following command</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nvidia-smi
+<p>Cuda-12.4.0 requires driver version &gt;= 550.54.14 (https://docs.nvidia.com/deploy/cuda-compatibility/index.html#use-the-right-compat-package), check your nvidia driver version with the following command.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>nvidia-smi
 </span></code></pre></div>
 <h2 id="other-environment">Other Environment</h2>
-<p>If you don't want to use conda, you can manually install <code>CMake 3.26</code>, <code>GCC 11.4</code>, <code>Cuda 12.4</code> and <code>Python &gt;=3.10</code> with your favorite package manager.</p>
+<p>If you don't want to use conda, you can manually install <code>CMake 3.26</code>, <code>GCC 11.4</code>, <code>Cuda 12.4</code> and <code>Python &gt;=3.11</code> with your favorite package manager.</p>
 <h2 id="build-libuipc">Build Libuipc</h2>
-<p>Clone the repository with the following command:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spiriMirror/libuipc.git
-</span></code></pre></div>
 <p>Build the project with the following commands.</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..<span class="p">;</span><span class="w"> </span>mkdir<span class="w"> </span>CMakeBuild<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>CMakeBuild
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cmake<span class="w"> </span>-S<span class="w"> </span>../libuipc<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>
