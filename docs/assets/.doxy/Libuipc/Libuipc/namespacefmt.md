@@ -82,5 +82,5 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `include/uipc/geometry/abstract_simplicial_complex.h`
+The documentation for this class was generated from the following file `include/uipc/core/animation.h`
 

@@ -264,16 +264,100 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../build_install/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../build_install/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Build & Install
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Build & Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build_install/windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build_install/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1665,21 +1749,31 @@
 </span><span id="__span-0-110"><a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Impl</span><span class="p">;</span>
 </span><span id="__span-0-111"><a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a><span class="w">    </span><span class="n">U</span><span class="o">&lt;</span><span class="n">Impl</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_impl</span><span class="p">;</span>
 </span><span id="__span-0-112"><a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a><span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SanityChecker</span><span class="p">;</span>
-</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>
-</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">world</span><span class="p">);</span><span class="w">  </span><span class="c1">// only be called by World.</span>
-</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>
-</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">begin_pending</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">solve_pending</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>
-</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometryCollection</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">geometry_collection</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometryCollection</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">rest_geometry_collection</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>
-</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a><span class="w">    </span><span class="n">World</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">world</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a><span class="w">    </span><span class="n">Float</span><span class="w">  </span><span class="nf">dt</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a><span class="w">    </span><span class="kt">bool</span><span class="w">   </span><span class="nf">is_started</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a><span class="w">    </span><span class="kt">bool</span><span class="w">   </span><span class="nf">is_pending</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
-</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a><span class="p">};</span>
-</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace uipc::core</span>
+</span><span id="__span-0-113"><a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a><span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">fmt</span><span class="o">::</span><span class="n">formatter</span><span class="o">&lt;</span><span class="n">Scene</span><span class="o">&gt;</span><span class="p">;</span>
+</span><span id="__span-0-114"><a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>
+</span><span id="__span-0-115"><a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">world</span><span class="p">);</span><span class="w">  </span><span class="c1">// only be called by World.</span>
+</span><span id="__span-0-116"><a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>
+</span><span id="__span-0-117"><a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">begin_pending</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-118"><a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">solve_pending</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-119"><a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>
+</span><span id="__span-0-120"><a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometryCollection</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">geometry_collection</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-121"><a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometryCollection</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">rest_geometry_collection</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-122"><a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>
+</span><span id="__span-0-123"><a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a><span class="w">    </span><span class="n">World</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">world</span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-124"><a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a><span class="w">    </span><span class="n">Float</span><span class="w">  </span><span class="nf">dt</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-125"><a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a><span class="w">    </span><span class="kt">bool</span><span class="w">   </span><span class="nf">is_started</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-126"><a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a><span class="w">    </span><span class="kt">bool</span><span class="w">   </span><span class="nf">is_pending</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-127"><a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a><span class="p">};</span>
+</span><span id="__span-0-128"><a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace uipc::core</span>
+</span><span id="__span-0-129"><a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>
+</span><span id="__span-0-130"><a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">fmt</span>
+</span><span id="__span-0-131"><a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a><span class="p">{</span>
+</span><span id="__span-0-132"><a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;&gt;</span>
+</span><span id="__span-0-133"><a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a><span class="k">struct</span><span class="w"> </span><span class="nc">UIPC_CORE_API</span><span class="w"> </span><span class="n">formatter</span><span class="o">&lt;</span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Scene</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">formatter</span><span class="o">&lt;</span><span class="n">string_view</span><span class="o">&gt;</span>
+</span><span id="__span-0-134"><a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a><span class="p">{</span>
+</span><span id="__span-0-135"><a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a><span class="w">    </span><span class="n">appender</span><span class="w"> </span><span class="nf">format</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Scene</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">format_context</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+</span><span id="__span-0-136"><a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a><span class="p">};</span>
+</span><span id="__span-0-137"><a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace fmt</span>
 </span></code></pre></div></div>
 
 

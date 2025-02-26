@@ -406,9 +406,11 @@
     <innerclass refid="classuipc_1_1core_1_1_animation" prot="public">uipc::core::Animation</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_animation_1_1_update_hint" prot="public">uipc::core::Animation::UpdateHint</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_animation_1_1_update_info" prot="public">uipc::core::Animation::UpdateInfo</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1core_1_1_animation_01_4" prot="private">fmt::formatter&lt; uipc::core::Animation &gt;</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1backend">uipc::backend</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
+    <innernamespace refid="namespacefmt">fmt</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -464,19 +466,29 @@
 <codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1core_1_1_animator" kindref="compound">Animator</ref>;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1backend_1_1_animator_visitor" kindref="compound">backend::AnimatorVisitor</ref>;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_animation" kindref="compound">Animation</ref>(<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/>scene,<sp/><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>ActionOnUpdate&amp;&amp;<sp/>on_update)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_object<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_scene<sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>ActionOnUpdate<sp/>m_on_update;</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vector&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>m_temp_geo_slots;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vector&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>m_temp_rest_geo_slots;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="classuipc_1_1core_1_1_animation" kindref="compound">Animation</ref>&gt;;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_animation" kindref="compound">Animation</ref>(<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/>scene,<sp/><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref>&amp;<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">,<sp/>ActionOnUpdate&amp;&amp;<sp/>on_update)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_object<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_scene<sp/><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>ActionOnUpdate<sp/>m_on_update;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vector&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>m_temp_geo_slots;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>vector&lt;S&lt;geometry::GeometrySlot&gt;&gt;<sp/>m_temp_rest_geo_slots;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">fmt</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>formatter&lt;uipc::<ref refid="classuipc_1_1core_1_1_animation" kindref="compound">core::Animation</ref>&gt;<sp/>:<sp/>formatter&lt;string_view&gt;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>appender<sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_animation" kindref="compound">uipc::core::Animation</ref>&amp;<sp/>c,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>fmt</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/core/animation.h"/>
   </compounddef>

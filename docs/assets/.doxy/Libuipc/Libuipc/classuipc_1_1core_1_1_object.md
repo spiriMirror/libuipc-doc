@@ -314,6 +314,23 @@ virtual std::string_view uipc::core::Object::get_name () noexcept override const
 Implements [*uipc::core::IObject::get\_name*](classuipc_1_1core_1_1_i_object.md#function-get_name)
 
 
+<hr>## Friends Documentation
+
+
+
+
+
+### friend formatter&lt; Object &gt; 
+
+```C++
+struct uipc::core::Object::formatter< Object > (
+    fmt::formatter< Object >
+) 
+```
+
+
+
+
 <hr>
 
 ------------------------------

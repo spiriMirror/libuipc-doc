@@ -449,8 +449,10 @@
     <innerclass refid="classuipc_1_1core_1_1_object" prot="public">uipc::core::Object</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_object_1_1_geometries" prot="public">uipc::core::Object::Geometries</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_object_1_1_c_geometries" prot="public">uipc::core::Object::CGeometries</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1core_1_1_object_01_4" prot="private">fmt::formatter&lt; uipc::core::Object &gt;</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
+    <innernamespace refid="namespacefmt">fmt</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -566,19 +568,29 @@
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>IndexT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_id()<sp/>const<sp/>noexcept<sp/>override;</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/>private:</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_scene;</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>IndexT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_id;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_name;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;IndexT&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_geometry_ids;</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>geometry_collection()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>rest_geometry_collection()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene_started()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene_pending()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="120"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;details/object.inl&quot;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>struct<sp/>fmt::formatter&lt;<ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref>&gt;;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_scene;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>IndexT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_id;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_name;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;IndexT&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_geometry_ids;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>geometry_collection()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>rest_geometry_collection()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene_started()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene_pending()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">namespace<sp/>fmt</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>formatter&lt;uipc::<ref refid="classuipc_1_1core_1_1_object" kindref="compound">core::Object</ref>&gt;<sp/>:<sp/>formatter&lt;string_view&gt;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>appender<sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_object" kindref="compound">uipc::core::Object</ref>&amp;<sp/>c,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>fmt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;details/object.inl&quot;</highlight></codeline>
     </programlisting>
     <location file="include/uipc/core/object.h"/>
   </compounddef>

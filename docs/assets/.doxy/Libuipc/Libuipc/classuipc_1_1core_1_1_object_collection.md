@@ -258,6 +258,23 @@ SizeT uipc::core::ObjectCollection::size () noexcept const
 
 
 
+<hr>## Friends Documentation
+
+
+
+
+
+### friend formatter&lt; ObjectCollection &gt; 
+
+```C++
+struct uipc::core::ObjectCollection::formatter< ObjectCollection > (
+    fmt::formatter< ObjectCollection >
+) 
+```
+
+
+
+
 <hr>
 
 ------------------------------

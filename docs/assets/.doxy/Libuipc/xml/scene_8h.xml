@@ -614,9 +614,11 @@
     <innerclass refid="classuipc_1_1core_1_1_scene_1_1_c_objects" prot="public">uipc::core::Scene::CObjects</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_scene_1_1_geometries" prot="public">uipc::core::Scene::Geometries</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_scene_1_1_c_geometries" prot="public">uipc::core::Scene::CGeometries</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1core_1_1_scene_01_4" prot="private">fmt::formatter&lt; uipc::core::Scene &gt;</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1backend">uipc::backend</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
+    <innernamespace refid="namespacefmt">fmt</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -734,21 +736,31 @@
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>Impl;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>U&lt;Impl&gt;<sp/>m_impl;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>class<sp/><ref refid="classuipc_1_1core_1_1_sanity_checker" kindref="compound">SanityChecker</ref>;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(backend::WorldVisitor&amp;<sp/>world);<sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>be<sp/>called<sp/>by<sp/>World.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>begin_pending()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>solve_pending()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>geometry_collection()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>rest_geometry_collection()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_world" kindref="compound">World</ref>&amp;<sp/>world()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/><sp/>dt()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/>is_started()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/>is_pending()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="127"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>struct<sp/>fmt::formatter&lt;<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&gt;;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(backend::WorldVisitor&amp;<sp/>world);<sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>be<sp/>called<sp/>by<sp/>World.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>begin_pending()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>solve_pending()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>geometry_collection()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::GeometryCollection&amp;<sp/>rest_geometry_collection()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_world" kindref="compound">World</ref>&amp;<sp/>world()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/><sp/>dt()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/>is_started()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/>is_pending()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">namespace<sp/>fmt</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>formatter&lt;uipc::<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&gt;<sp/>:<sp/>formatter&lt;string_view&gt;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>appender<sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">uipc::core::Scene</ref>&amp;<sp/>c,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>fmt</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/core/scene.h"/>
   </compounddef>

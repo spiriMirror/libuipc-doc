@@ -367,6 +367,21 @@ class uipc::core::Scene::SceneVisitor (
 
 <hr>
 
+
+
+### friend formatter&lt; Scene &gt; 
+
+```C++
+struct uipc::core::Scene::formatter< Scene > (
+    fmt::formatter< Scene >
+) 
+```
+
+
+
+
+<hr>
+
 ------------------------------
 The documentation for this class was generated from the following file `include/uipc/core/scene.h`
 

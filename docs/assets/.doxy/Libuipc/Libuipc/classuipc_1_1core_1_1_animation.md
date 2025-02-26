@@ -119,6 +119,21 @@ class uipc::core::Animation::AnimatorVisitor (
 
 <hr>
 
+
+
+### friend formatter&lt; Animation &gt; 
+
+```C++
+struct uipc::core::Animation::formatter< Animation > (
+    fmt::formatter< Animation >
+) 
+```
+
+
+
+
+<hr>
+
 ------------------------------
 The documentation for this class was generated from the following file `include/uipc/core/animation.h`
 

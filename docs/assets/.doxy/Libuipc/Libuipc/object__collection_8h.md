@@ -30,6 +30,7 @@
 
 | Type | Name |
 | ---: | :--- |
+| namespace | [**fmt**](namespacefmt.md) <br> |
 | namespace | [**uipc**](namespaceuipc.md) <br> |
 | namespace | [**core**](namespaceuipc_1_1core.md) <br> |
 
