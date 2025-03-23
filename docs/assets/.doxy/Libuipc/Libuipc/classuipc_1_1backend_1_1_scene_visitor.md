@@ -67,6 +67,7 @@
 |  span&lt; IndexT &gt; | [**pending\_destroy\_ids**](#function-pending_destroy_ids) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_geometries**](#function-pending_geometries) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_rest\_geometries**](#function-pending_rest_geometries) () noexcept const<br> |
+|  [**core::Scene**](classuipc_1_1core_1_1_scene.md) & | [**ref**](#function-ref) () noexcept<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**rest\_geometries**](#function-rest_geometries) () noexcept const<br> |
 |  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
 
@@ -307,6 +308,19 @@ span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::pending_geometr
 
 ```C++
 span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::pending_rest_geometries () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function ref 
+
+```C++
+core::Scene & uipc::backend::SceneVisitor::ref () noexcept
 ```
 
 

@@ -53,6 +53,7 @@
 | ---: | :--- |
 |   | [**Engine**](#function-engine) (std::string\_view backend\_name, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
 |  std::string\_view | [**backend\_name**](#function-backend_name) () noexcept const<br> |
+|  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () <br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) & | [**status**](#function-status) () <br> |
 |  Json | [**to\_json**](#function-to_json) () const<br> |
 |  std::string\_view | [**workspace**](#function-workspace) () noexcept const<br> |
@@ -116,6 +117,19 @@ uipc::core::Engine::Engine (
 
 ```C++
 std::string_view uipc::core::Engine::backend_name () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function features 
+
+```C++
+const FeatureCollection & uipc::core::Engine::features () 
 ```
 
 

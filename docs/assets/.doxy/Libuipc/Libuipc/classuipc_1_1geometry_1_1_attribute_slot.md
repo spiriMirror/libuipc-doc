@@ -193,7 +193,7 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1_i_attribute_slot.
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 
@@ -458,5 +458,5 @@ span< U > uipc::geometry::AttributeSlot::view (
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `include/uipc/geometry/attribute_slot.h`
+The documentation for this class was generated from the following file `include/uipc/geometry/attribute.h`
 

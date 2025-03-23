@@ -164,6 +164,7 @@ uipc::geometry::IAttributeSlot::IAttributeSlot (
 
 ### function allow\_destroy 
 
+_Check if the underlying attribute is allowed to be destroyed._ 
 ```C++
 bool uipc::geometry::IAttributeSlot::allow_destroy () noexcept const
 ```
@@ -209,6 +210,7 @@ false, if the underlying attribute is owned, only this geometries reference to t
 
 ### function name 
 
+_Get the name of the attribute slot._ 
 ```C++
 std::string_view uipc::geometry::IAttributeSlot::name () noexcept const
 ```
@@ -293,6 +295,7 @@ Json uipc::geometry::IAttributeSlot::to_json () const
 
 ### function type\_name 
 
+_Get the type name of data stored in the attribute slot._ 
 ```C++
 std::string_view uipc::geometry::IAttributeSlot::type_name () noexcept const
 ```

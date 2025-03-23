@@ -54,8 +54,9 @@
 |  void | [**advance**](#function-advance) () <br> |
 |  void | [**backward**](#function-backward) () <br> |
 |  bool | [**dump**](#function-dump) () <br> |
+|  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
-|  void | [**init**](#function-init) ([**backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) v) <br> |
+|  void | [**init**](#function-init) (backend::WorldVisitor v) <br> |
 |  bool | [**recover**](#function-recover) (SizeT dst\_frame) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) & | [**status**](#function-status) () <br> |
@@ -93,11 +94,12 @@
 | virtual void | [**do\_advance**](#function-do_advance) () = 0<br> |
 | virtual void | [**do\_backward**](#function-do_backward) () = 0<br> |
 | virtual bool | [**do\_dump**](#function-do_dump) () <br> |
-| virtual void | [**do\_init**](#function-do_init) ([**backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) v) = 0<br> |
+| virtual void | [**do\_init**](#function-do_init) (backend::WorldVisitor v) = 0<br> |
 | virtual bool | [**do\_recover**](#function-do_recover) (SizeT dst\_frame) <br> |
 | virtual void | [**do\_retrieve**](#function-do_retrieve) () = 0<br> |
 | virtual void | [**do\_sync**](#function-do_sync) () = 0<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json) () const<br> |
+| virtual const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**get\_features**](#function-get_features) () const = 0<br> |
 | virtual SizeT | [**get\_frame**](#function-get_frame) () const = 0<br> |
 | virtual [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) & | [**get\_status**](#function-get_status) () = 0<br> |
 
@@ -139,6 +141,19 @@ void uipc::core::IEngine::backward ()
 
 ```C++
 bool uipc::core::IEngine::dump () 
+```
+
+
+
+
+<hr>
+
+
+
+### function features 
+
+```C++
+const FeatureCollection & uipc::core::IEngine::features () const
 ```
 
 
@@ -357,6 +372,19 @@ virtual void uipc::core::IEngine::do_sync () = 0
 
 ```C++
 virtual Json uipc::core::IEngine::do_to_json () const
+```
+
+
+
+
+<hr>
+
+
+
+### function get\_features 
+
+```C++
+virtual const FeatureCollection & uipc::core::IEngine::get_features () const = 0
 ```
 
 

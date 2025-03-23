@@ -92,10 +92,10 @@ Inherited by the following classes: [uipc::geometry::AbstractSimplicialComplex](
 |   | [**Geometry**](#function-geometry-23) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = default<br> |
 |   | [**Geometry**](#function-geometry-33) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = default<br> |
 |  T \* | [**as**](#function-as) () <br> |
-|  InstanceAttributes | [**instances**](#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
-|  CInstanceAttributes | [**instances**](#function-instances-22) () const<br> |
-|  MetaAttributes | [**meta**](#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
-|  CMetaAttributes | [**meta**](#function-meta-22) () const<br> |
+|  [**InstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
+|  [**CInstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](#function-instances-22) () const<br> |
+|  [**MetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
+|  [**CMetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](#function-meta-22) () const<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](#function-operator) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = delete<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](#function-operator_1) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = delete<br> |
 

@@ -5,6 +5,7 @@
 
 ## a
 
+* **as\_eigen** ([**uipc**](namespaceuipc.md), [**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))
 * **apply\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **apply\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
@@ -127,6 +128,11 @@
 * **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+
+
+## u
+
+* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v

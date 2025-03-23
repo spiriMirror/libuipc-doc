@@ -51,8 +51,10 @@
 
 | Type | Name |
 | ---: | :--- |
+|  Eigen::Map&lt; const Eigen::Matrix&lt; Float, Eigen::Dynamic, 1 &gt; &gt; | [**as\_eigen**](#function-as_eigen-22) () const<br> |
 |  void | [**broadcast**](#function-broadcast) () <br>_Broadcast the parameter collection to corresponding geometry attributes._  |
 |  void | [**resize**](#function-resize) (SizeT N, Float default\_value=0.0f) <br> |
+|  SizeT | [**size**](#function-size) () const<br> |
 |  span&lt; const Float &gt; | [**view**](#function-view-22) () const<br> |
 |   | [**~ParameterCollection**](#function-parametercollection) () <br> |
 
@@ -88,8 +90,22 @@
 
 
 
+### function as\_eigen [2/2]
+
+```C++
+Eigen::Map< const Eigen::Matrix< Float, Eigen::Dynamic, 1 > > uipc::diff_sim::ParameterCollection::as_eigen () const
+```
+
+
+
+
+<hr>
+
+
+
 ### function broadcast 
 
+_Broadcast the parameter collection to corresponding geometry attributes._ 
 ```C++
 void uipc::diff_sim::ParameterCollection::broadcast () 
 ```
@@ -108,6 +124,19 @@ void uipc::diff_sim::ParameterCollection::resize (
     SizeT N,
     Float default_value=0.0f
 ) 
+```
+
+
+
+
+<hr>
+
+
+
+### function size 
+
+```C++
+SizeT uipc::diff_sim::ParameterCollection::size () const
 ```
 
 

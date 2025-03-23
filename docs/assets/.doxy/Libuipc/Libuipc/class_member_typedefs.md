@@ -20,10 +20,10 @@
 ## c
 
 * **Creator** ([**uipc::builtin::ConstitutionUIDAutoRegister**](classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register.md), [**uipc::builtin::ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md))
-* **CEdgeAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
-* **CTetrahedronAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
-* **CTriangleAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
-* **CVertexAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **CEdgeAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **CTetrahedronAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **CTriangleAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **CVertexAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **CInstanceAttributes** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md))
 * **CMetaAttributes** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md))
 
@@ -36,7 +36,7 @@
 
 ## e
 
-* **EdgeAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **EdgeAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 
 
 ## i
@@ -62,15 +62,15 @@
 ## t
 
 * **TimePoint** ([**uipc::details::ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md))
-* **TetrahedronAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
-* **TriangleAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **TetrahedronAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **TriangleAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **TopoValueT** ([**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
-* **type** ([**uipc::propagate\_const**](structuipc_1_1propagate__const.md), [**uipc::signature&lt; R(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_args_8_8_8_08_4.md))
+* **type** ([**uipc::propagate\_const**](structuipc_1_1propagate__const.md))
 
 
 ## v
 
-* **VertexAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **VertexAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **value\_type** ([**uipc::geometry::Attribute**](classuipc_1_1geometry_1_1_attribute.md), [**uipc::geometry::AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md))
 
 

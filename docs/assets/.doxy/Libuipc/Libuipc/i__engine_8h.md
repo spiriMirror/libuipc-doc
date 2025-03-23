@@ -13,6 +13,7 @@
 * `#include <uipc/common/dllexport.h>`
 * `#include <uipc/backend/visitors/world_visitor.h>`
 * `#include <uipc/core/engine_status.h>`
+* `#include <uipc/core/feature_collection.h>`
 
 
 

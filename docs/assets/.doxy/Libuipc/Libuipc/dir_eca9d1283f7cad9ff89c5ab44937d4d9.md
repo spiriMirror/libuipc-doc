@@ -31,6 +31,8 @@
 | file | [**diff\_sim.h**](diff__sim_8h.md) <br> |
 | file | [**engine.h**](engine_8h.md) <br> |
 | file | [**engine\_status.h**](engine__status_8h.md) <br> |
+| file | [**feature.h**](feature_8h.md) <br> |
+| file | [**feature\_collection.h**](feature__collection_8h.md) <br> |
 | file | [**i\_engine.h**](i__engine_8h.md) <br> |
 | file | [**i\_sanity\_checker.h**](i__sanity__checker_8h.md) <br> |
 | file | [**object.h**](object_8h.md) <br> |

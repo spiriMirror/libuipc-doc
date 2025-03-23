@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_feature_collection" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::core::FeatureCollection</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_feature_collection_1ad0f85f61c1e12ba5367fece135d4966e" prot="private" static="no" mutable="no">
+        <type>unordered_map&lt; string, S&lt; <ref refid="classuipc_1_1core_1_1_i_feature" kindref="compound">IFeature</ref> &gt; &gt;</type>
+        <definition>unordered_map&lt;string, S&lt;IFeature&gt; &gt; uipc::core::FeatureCollection::m_features</definition>
+        <argsstring></argsstring>
+        <name>m_features</name>
+        <qualifiedname>uipc::core::FeatureCollection::m_features</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature_collection.h" line="32" column="19" bodyfile="include/uipc/core/feature_collection.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_feature_collection_1acc5fd598f0a089fcab390d6d8f1fb4c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual uipc::core::FeatureCollection::~FeatureCollection</definition>
+        <argsstring>()=default</argsstring>
+        <name>~FeatureCollection</name>
+        <qualifiedname>uipc::core::FeatureCollection::~FeatureCollection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature_collection.h" line="12" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_feature_collection_1a6e80665d09d543b57177782b5ae553fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1core_1_1_i_feature" kindref="compound">IFeature</ref> &gt;</type>
+        <definition>S&lt; IFeature &gt; uipc::core::FeatureCollection::find</definition>
+        <argsstring>(std::string_view name) const</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::core::FeatureCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature_collection.h" line="13" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_feature_collection_1ab2b388c867dc6f555415dd252dbb8d22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::derived_from&lt; <ref refid="classuipc_1_1core_1_1_i_feature" kindref="compound">IFeature</ref> &gt;</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>S&lt; T &gt;</type>
+        <definition>S&lt; T &gt; uipc::core::FeatureCollection::find</definition>
+        <argsstring>(std::string_view name=T::FeatureName) const</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::core::FeatureCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+          <defval>T::FeatureName</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature_collection.h" line="16" column="7" bodyfile="include/uipc/core/feature_collection.h" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_feature_collection_1ad10b8f91692c83fbc721109ae45b8810" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::FeatureCollection::insert</definition>
+        <argsstring>(std::string_view name, S&lt; IFeature &gt; feature)</argsstring>
+        <name>insert</name>
+        <qualifiedname>uipc::core::FeatureCollection::insert</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1core_1_1_i_feature" kindref="compound">IFeature</ref> &gt;</type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature_collection.h" line="21" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_feature_collection_1a61e16778ae79e703d413c33b266a2c43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::derived_from&lt; <ref refid="classuipc_1_1core_1_1_i_feature" kindref="compound">IFeature</ref> &gt;</type>
+            <declname>T</declname>
+            <defname>T</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void uipc::core::FeatureCollection::insert</definition>
+        <argsstring>(S&lt; T &gt; feature)</argsstring>
+        <name>insert</name>
+        <qualifiedname>uipc::core::FeatureCollection::insert</qualifiedname>
+        <param>
+          <type>S&lt; T &gt;</type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature_collection.h" line="24" column="10" bodyfile="include/uipc/core/feature_collection.h" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_feature_collection_1ad75669b858d22e12dafd7dbe6713dfc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::core::FeatureCollection::to_json</definition>
+        <argsstring>() const</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::FeatureCollection::to_json</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature_collection.h" line="29" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/feature_collection.h" line="9" column="1" bodyfile="include/uipc/core/feature_collection.h" bodystart="10" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_feature_collection_1a6e80665d09d543b57177782b5ae553fa" prot="public" virt="non-virtual"><scope>uipc::core::FeatureCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1core_1_1_feature_collection_1ab2b388c867dc6f555415dd252dbb8d22" prot="public" virt="non-virtual"><scope>uipc::core::FeatureCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1core_1_1_feature_collection_1ad10b8f91692c83fbc721109ae45b8810" prot="public" virt="non-virtual"><scope>uipc::core::FeatureCollection</scope><name>insert</name></member>
+      <member refid="classuipc_1_1core_1_1_feature_collection_1a61e16778ae79e703d413c33b266a2c43" prot="public" virt="non-virtual"><scope>uipc::core::FeatureCollection</scope><name>insert</name></member>
+      <member refid="classuipc_1_1core_1_1_feature_collection_1ad0f85f61c1e12ba5367fece135d4966e" prot="private" virt="non-virtual"><scope>uipc::core::FeatureCollection</scope><name>m_features</name></member>
+      <member refid="classuipc_1_1core_1_1_feature_collection_1ad75669b858d22e12dafd7dbe6713dfc3" prot="public" virt="non-virtual"><scope>uipc::core::FeatureCollection</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1core_1_1_feature_collection_1acc5fd598f0a089fcab390d6d8f1fb4c6" prot="public" virt="virtual"><scope>uipc::core::FeatureCollection</scope><name>~FeatureCollection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

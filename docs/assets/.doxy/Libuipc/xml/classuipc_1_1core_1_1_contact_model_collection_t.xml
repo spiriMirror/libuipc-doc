@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_contact_model_collection_t" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::ContactModelCollectionT</compoundname>
     <templateparamlist>
@@ -10,9 +10,10 @@
       </param>
     </templateparamlist>
     <sectiondef kind="private-type">
-      <memberdef kind="typedef" id="classuipc_1_1core_1_1_contact_model_collection_t_1abda450951af935aff3425118b10f9fa3" prot="private" static="no">
+      <memberdef kind="typedef" id="classuipc_1_1core_1_1_contact_model_collection_t_1a5a9b421bd8bc8cf4046e31b5f0af71dc" prot="private" static="no">
         <type>std::conditional_t&lt; IsConst, const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">geometry::AttributeCollection</ref>, <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">geometry::AttributeCollection</ref> &gt;</type>
-        <definition>using uipc::core::ContactModelCollectionT&lt; IsConst &gt;::AutoAttributeCollection =  std::conditional_t&lt;IsConst, const geometry::AttributeCollection, geometry::AttributeCollection&gt;</definition>
+        <definition>using uipc::core::ContactModelCollectionT&lt; IsConst &gt;::AutoAttributeCollection = 
+        std::conditional_t&lt;IsConst, const geometry::AttributeCollection, geometry::AttributeCollection&gt;</definition>
         <argsstring></argsstring>
         <name>AutoAttributeCollection</name>
         <qualifiedname>uipc::core::ContactModelCollectionT::AutoAttributeCollection</qualifiedname>
@@ -22,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_model_collection.h" line="21" column="5" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="22" bodyend="-1"/>
+        <location file="include/uipc/core/contact_model_collection.h" line="21" column="5" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="21" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
@@ -199,7 +200,7 @@
     </detaileddescription>
     <location file="include/uipc/core/contact_model_collection.h" line="15" column="1" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="16" bodyend="50"/>
     <listofallmembers>
-      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1abda450951af935aff3425118b10f9fa3" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>AutoAttributeCollection</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a5a9b421bd8bc8cf4046e31b5f0af71dc" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>AutoAttributeCollection</name></member>
       <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a2359d2bb8fe0396df4fd00c826219387" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>ContactModelCollectionT</name></member>
       <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1ac70d311c6963058cef6157d9a49989f5" prot="private" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>ContactTabular</name></member>
       <member refid="classuipc_1_1core_1_1_contact_model_collection_t_1a34408793ae2f03728c09a195c2599526" prot="public" virt="non-virtual"><scope>uipc::core::ContactModelCollectionT</scope><name>create</name></member>

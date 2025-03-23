@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="attribute__io_8h" kind="file" language="C++">
     <compoundname>attribute_io.h</compoundname>
     <includes refid="dllexport_8h" local="no">uipc/common/dllexport.h</includes>
@@ -222,13 +222,13 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="classuipc_1_1geometry_1_1_attribute_i_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_IO_API<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_i_o" kindref="compound">AttributeIO</ref><sp/>final</highlight></codeline>
+<codeline lineno="8" refid="classuipc_1_1geometry_1_1_attribute_i_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_IO_API<sp/>AttributeIO<sp/>final</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Interface;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_i_o" kindref="compound">AttributeIO</ref>(std::string_view<sp/>file);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_i_o" kindref="compound">~AttributeIO</ref>()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>AttributeIO(std::string_view<sp/>file);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>~AttributeIO()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read(std::string_view<sp/>name,<sp/><ref refid="classuipc_1_1geometry_1_1_i_attribute_slot" kindref="compound">IAttributeSlot</ref>&amp;<sp/>slot);</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
@@ -236,7 +236,7 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>U&lt;Interface&gt;<sp/>m_impl;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="classuipc_1_1geometry_1_1_attribute_i_o_error" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_IO_API<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_i_o_error" kindref="compound">AttributeIOError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1_exception" kindref="compound">Exception</ref></highlight></codeline>
+<codeline lineno="22" refid="classuipc_1_1geometry_1_1_attribute_i_o_error" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_IO_API<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_i_o_error" kindref="compound">AttributeIOError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Exception</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Exception::Exception;</highlight></codeline>

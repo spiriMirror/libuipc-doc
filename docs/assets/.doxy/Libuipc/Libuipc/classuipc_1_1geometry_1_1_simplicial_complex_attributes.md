@@ -45,7 +45,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr bool | [**IsScalar**](#variable-isscalar)   = = (N == 0)<br> |
+|  bool | [**IsScalar**](#variable-isscalar)   = = (N == 0)<br> |
 
 
 
@@ -118,7 +118,8 @@
 ### typedef AutoAttributeCollection 
 
 ```C++
-using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCollection =  std::conditional_t<IsConst, const AttributeCollection, AttributeCollection>;
+using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCollection = 
+        std::conditional_t<IsConst, const AttributeCollection, AttributeCollection>;
 ```
 
 
@@ -131,7 +132,7 @@ using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCo
 ### typedef TopoValueT 
 
 ```C++
-using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  std::conditional_t<IsScalar, IndexT, Vector<IndexT, N + 1> >;
+using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  std::conditional_t<IsScalar, IndexT, Vector<IndexT, N + 1>>;
 ```
 
 
@@ -146,7 +147,7 @@ using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  s
 ### variable IsScalar 
 
 ```C++
-constexpr bool uipc::geometry::SimplicialComplexAttributes< IsConst, N >::IsScalar;
+bool uipc::geometry::SimplicialComplexAttributes< IsConst, N >::IsScalar;
 ```
 
 
@@ -206,7 +207,6 @@ inline uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes 
 
 ### function clear 
 
-
 ```C++
 inline void uipc::geometry::SimplicialComplexAttributes::clear () 
 ```
@@ -263,7 +263,6 @@ inline decltype(auto) uipc::geometry::SimplicialComplexAttributes::create (
 
 ### function destroy 
 
-
 ```C++
 inline void uipc::geometry::SimplicialComplexAttributes::destroy (
     std::string_view name
@@ -286,6 +285,7 @@ inline void uipc::geometry::SimplicialComplexAttributes::destroy (
 
 ### function find [1/2]
 
+_Find an attribute by type and name, if the attribute does not exist, return nullptr._ 
 ```C++
 template<typename T>
 inline decltype(auto) uipc::geometry::SimplicialComplexAttributes::find (
@@ -302,6 +302,7 @@ inline decltype(auto) uipc::geometry::SimplicialComplexAttributes::find (
 
 ### function find [2/2]
 
+_Find an attribute by type and name, if the attribute does not exist, return nullptr._ 
 ```C++
 template<typename T>
 inline decltype(auto) uipc::geometry::SimplicialComplexAttributes::find (
@@ -348,7 +349,6 @@ SimplicialComplexAttributes & uipc::geometry::SimplicialComplexAttributes::opera
 
 ### function reserve 
 
-
 ```C++
 inline void uipc::geometry::SimplicialComplexAttributes::reserve (
     SizeT size
@@ -370,7 +370,6 @@ inline void uipc::geometry::SimplicialComplexAttributes::reserve (
 
 
 ### function resize 
-
 
 ```C++
 inline void uipc::geometry::SimplicialComplexAttributes::resize (
@@ -411,7 +410,6 @@ inline decltype(auto) uipc::geometry::SimplicialComplexAttributes::share (
 
 
 ### function size 
-
 
 ```C++
 inline SizeT uipc::geometry::SimplicialComplexAttributes::size () noexcept const

@@ -121,6 +121,7 @@ uipc::geometry::IAttribute::IAttribute () = default
 
 ### function size 
 
+_Get the size of the attribute._ 
 ```C++
 SizeT uipc::geometry::IAttribute::size () noexcept const
 ```

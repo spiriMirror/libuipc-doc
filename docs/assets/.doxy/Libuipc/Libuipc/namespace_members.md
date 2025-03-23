@@ -6,6 +6,7 @@
 ## a
 
 * **Allocator** ([**uipc**](namespaceuipc.md))
+* **as\_eigen** ([**uipc**](namespaceuipc.md), [**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))
 * **AbstractSimplicialComplex** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **AffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **apply\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -172,6 +173,7 @@
 * **U** ([**uipc**](namespaceuipc.md))
 * **U32** ([**uipc**](namespaceuipc.md))
 * **U64** ([**uipc**](namespaceuipc.md))
+* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v

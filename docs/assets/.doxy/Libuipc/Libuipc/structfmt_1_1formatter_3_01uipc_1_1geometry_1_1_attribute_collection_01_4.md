@@ -54,7 +54,7 @@ Inherits the following classes: formatter< std::string_view >
 
 | Type | Name |
 | ---: | :--- |
-|  appender | [**format**](#function-format) (const [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & collection, format\_context & ctx) <br> |
+|  appender | [**format**](#function-format) (const [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & collection, format\_context & ctx) const<br> |
 
 
 
@@ -94,7 +94,7 @@ Inherits the following classes: formatter< std::string_view >
 appender fmt::formatter< uipc::geometry::AttributeCollection >::format (
     const uipc::geometry::AttributeCollection & collection,
     format_context & ctx
-) 
+) const
 ```
 
 

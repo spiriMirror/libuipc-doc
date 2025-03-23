@@ -6,7 +6,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**formatter&lt; uipc::geometry::Geometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_01_4.md)
+[**ClassList**](annotated.md) **>** [**fmt**](namespacefmt.md) **>** [**formatter&lt; uipc::geometry::Geometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_geometry_01_4.md)
 
 
 
@@ -54,7 +54,7 @@ Inherits the following classes: formatter< string_view >
 
 | Type | Name |
 | ---: | :--- |
-|  appender | [**format**](#function-format) (const [**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geo, format\_context & ctx) <br> |
+|  appender | [**format**](#function-format) (const [**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geo, format\_context & ctx) const<br> |
 
 
 
@@ -91,10 +91,10 @@ Inherits the following classes: formatter< string_view >
 ### function format 
 
 ```C++
-appender formatter< uipc::geometry::Geometry >::format (
+appender fmt::formatter< uipc::geometry::Geometry >::format (
     const uipc::geometry::Geometry & geo,
     format_context & ctx
-) 
+) const
 ```
 
 

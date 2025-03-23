@@ -54,8 +54,8 @@
 |   | [**ContactTabular**](#function-contacttabular-12) () noexcept<br> |
 |   | [**ContactTabular**](#function-contacttabular-22) (const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) &) = delete<br> |
 |  [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) | [**at**](#function-at) (SizeT i, SizeT j) const<br> |
-|  ContactModelCollection | [**contact\_models**](#function-contact_models-12) () noexcept<br> |
-|  CContactModelCollection | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
+|  [**ContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**contact\_models**](#function-contact_models-12) () noexcept<br> |
+|  [**CContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & | [**create**](#function-create) (std::string\_view name="") noexcept<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & | [**default\_element**](#function-default_element) () noexcept<br> |
 |  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) noexcept<br> |

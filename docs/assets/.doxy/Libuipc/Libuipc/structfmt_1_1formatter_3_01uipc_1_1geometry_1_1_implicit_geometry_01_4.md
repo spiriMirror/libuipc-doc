@@ -54,7 +54,7 @@ Inherits the following classes: formatter< std::string_view >
 
 | Type | Name |
 | ---: | :--- |
-|  auto | [**format**](#function-format) (const [**uipc::geometry::ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) & geometry, format\_context & ctx) <br> |
+|  appender | [**format**](#function-format) (const [**uipc::geometry::ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) & geometry, format\_context & ctx) const<br> |
 
 
 
@@ -91,10 +91,10 @@ Inherits the following classes: formatter< std::string_view >
 ### function format 
 
 ```C++
-inline auto fmt::formatter< uipc::geometry::ImplicitGeometry >::format (
+appender fmt::formatter< uipc::geometry::ImplicitGeometry >::format (
     const uipc::geometry::ImplicitGeometry & geometry,
     format_context & ctx
-) 
+) const
 ```
 
 

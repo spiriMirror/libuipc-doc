@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="scene__visitor_8h" kind="file" language="C++">
     <compoundname>scene_visitor.h</compoundname>
     <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
@@ -10,7 +10,6 @@
     <includes refid="constitution__tabular_8h" local="no">uipc/core/constitution_tabular.h</includes>
     <includes refid="contact__tabular_8h" local="no">uipc/core/contact_tabular.h</includes>
     <includes refid="diff__sim__visitor_8h" local="no">uipc/backend/visitors/diff_sim_visitor.h</includes>
-    <includedby refid="world__visitor_8h" local="no">include/uipc/backend/visitors/world_visitor.h</includedby>
     <incdepgraph>
       <node id="23">
         <label>uipc/backend/buffer_view.h</label>
@@ -506,44 +505,6 @@
         <label>vector</label>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="1">
-        <label>include/uipc/backend/visitors/scene_visitor.h</label>
-        <link refid="scene__visitor_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>include/uipc/backend/visitors/world_visitor.h</label>
-        <link refid="world__visitor_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>include/uipc/core.h</label>
-        <link refid="core_8h_source"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>include/uipc/core/engine.h</label>
-        <link refid="engine_8h_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>include/uipc/core/i_engine.h</label>
-        <link refid="i__engine_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>include/uipc/uipc.h</label>
-        <link refid="uipc_8h_source"/>
-      </node>
-    </invincdepgraph>
     <innerclass refid="classuipc_1_1backend_1_1_scene_visitor" prot="public">uipc::backend::SceneVisitor</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
@@ -565,15 +526,15 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core</highlight></codeline>
 <codeline lineno="12"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scene;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::backend</highlight></codeline>
 <codeline lineno="17"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="18" refid="classuipc_1_1backend_1_1_scene_visitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1backend_1_1_scene_visitor" kindref="compound">SceneVisitor</ref></highlight></codeline>
+<codeline lineno="18" refid="classuipc_1_1backend_1_1_scene_visitor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>SceneVisitor</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_scene_visitor" kindref="compound">SceneVisitor</ref>(<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/>scene)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>SceneVisitor(<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/>scene)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>begin_pending()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>solve_pending()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_pending()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
@@ -598,11 +559,13 @@
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref>&amp;<sp/>diff_sim()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff_sim()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/><sp/><sp/>m_scene;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref><sp/>m_diff_sim;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/>ref()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref>&amp;<sp/><sp/><sp/>m_scene;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref><sp/>m_diff_sim;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/backend/visitors/scene_visitor.h"/>
   </compounddef>

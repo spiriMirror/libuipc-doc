@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_scene" kind="class" language="C++" prot="public" final="yes">
     <compoundname>uipc::core::Scene</compoundname>
     <innerclass refid="classuipc_1_1core_1_1_scene_1_1_c_geometries" prot="public">uipc::core::Scene::CGeometries</innerclass>
@@ -395,7 +395,7 @@
         <name>init</name>
         <qualifiedname>uipc::core::Scene::init</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1backend_1_1_world_visitor" kindref="compound">backend::WorldVisitor</ref> &amp;</type>
+          <type>backend::WorldVisitor &amp;</type>
           <declname>world</declname>
         </param>
         <briefdescription>
@@ -504,6 +504,20 @@
         </inbodydescription>
         <location file="include/uipc/core/scene.h" line="125" column="12"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_1a1ce085d0f6f3030d82ff2aec77bc1ad7" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_diff_sim" kindref="compound">DiffSim</ref> &amp;</type>
+        <definition>DiffSim &amp; uipc::core::Scene::_diff_sim</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>_diff_sim</name>
+        <qualifiedname>uipc::core::Scene::_diff_sim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="127" column="13"/>
+      </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_scene_1afaa89380e04974841ee09ef7b14da278" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool uipc::core::Scene::is_pending</definition>
@@ -516,15 +530,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="126" column="12"/>
+        <location file="include/uipc/core/scene.h" line="128" column="12"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/scene.h" line="18" column="1" bodyfile="include/uipc/core/scene.h" bodystart="19" bodyend="127"/>
+    <location file="include/uipc/core/scene.h" line="18" column="1" bodyfile="include/uipc/core/scene.h" bodystart="19" bodyend="129"/>
     <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_scene_1a1ce085d0f6f3030d82ff2aec77bc1ad7" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>_diff_sim</name></member>
       <member refid="classuipc_1_1core_1_1_scene_1af47625f50036c466946f960db7320bcf" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Animation</name></member>
       <member refid="classuipc_1_1core_1_1_scene_1abe5d010f4c2a7c3844a040cba662ae09" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>animator</name></member>
       <member refid="classuipc_1_1core_1_1_scene_1a8b04cdf670cc526387f549bc151bf91f" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>animator</name></member>

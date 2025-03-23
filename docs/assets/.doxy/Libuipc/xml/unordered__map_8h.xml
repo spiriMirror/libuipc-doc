@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="unordered__map_8h" kind="file" language="C++">
     <compoundname>unordered_map.h</compoundname>
     <includes local="no">memory_resource</includes>
@@ -8,6 +8,7 @@
     <includedby refid="uid__register_8h" local="no">include/uipc/builtin/uid_register.h</includedby>
     <includedby refid="timer_8h" local="no">include/uipc/common/timer.h</includedby>
     <includedby refid="animator_8h" local="no">include/uipc/core/animator.h</includedby>
+    <includedby refid="feature__collection_8h" local="no">include/uipc/core/feature_collection.h</includedby>
     <includedby refid="i__sanity__checker_8h" local="no">include/uipc/core/i_sanity_checker.h</includedby>
     <includedby refid="object_8h" local="no">include/uipc/core/object.h</includedby>
     <includedby refid="object__collection_8h" local="no">include/uipc/core/object_collection.h</includedby>
@@ -44,48 +45,38 @@
       <node id="2">
         <label>include/uipc/backend/visitors/scene_visitor.h</label>
         <link refid="scene__visitor_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
-      <node id="3">
-        <label>include/uipc/backend/visitors/world_visitor.h</label>
-        <link refid="world__visitor_8h_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
+      <node id="4">
         <label>include/uipc/builtin/constitution_uid_auto_register.h</label>
         <link refid="constitution__uid__auto__register_8h_source"/>
       </node>
-      <node id="10">
+      <node id="5">
         <label>include/uipc/builtin/constitution_uid_collection.h</label>
         <link refid="constitution__uid__collection_8h_source"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="29">
         <label>include/uipc/builtin/implicit_geometry_uid_auto_register.h</label>
         <link refid="implicit__geometry__uid__auto__register_8h_source"/>
       </node>
-      <node id="33">
+      <node id="30">
         <label>include/uipc/builtin/implicit_geometry_uid_collection.h</label>
         <link refid="implicit__geometry__uid__collection_8h_source"/>
       </node>
-      <node id="8">
+      <node id="3">
         <label>include/uipc/builtin/uid_register.h</label>
         <link refid="uid__register_8h_source"/>
-        <childnode refid="9" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="34">
+      <node id="31">
         <label>include/uipc/common/timer.h</label>
         <link refid="timer_8h_source"/>
       </node>
@@ -94,11 +85,13 @@
         <link refid="unordered__map_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
@@ -109,120 +102,120 @@
         <childnode refid="42" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="7">
         <label>include/uipc/constitution/affine_body_constitution.h</label>
         <link refid="affine__body__constitution_8h_source"/>
       </node>
-      <node id="17">
+      <node id="12">
         <label>include/uipc/constitution/arap.h</label>
         <link refid="arap_8h_source"/>
       </node>
-      <node id="11">
+      <node id="6">
         <label>include/uipc/constitution/constitution.h</label>
         <link refid="constitution_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/uipc/constitution/constraint.h</label>
+        <link refid="constraint_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>include/uipc/constitution/discrete_shell_bending.h</label>
+        <link refid="discrete__shell__bending_8h_source"/>
+      </node>
+      <node id="13">
+        <label>include/uipc/constitution/empty.h</label>
+        <link refid="empty_8h_source"/>
+      </node>
+      <node id="11">
+        <label>include/uipc/constitution/finite_element_constitution.h</label>
+        <link refid="finite__element__constitution_8h_source"/>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>include/uipc/constitution/constraint.h</label>
-        <link refid="constraint_8h_source"/>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-      </node>
-      <node id="24">
-        <label>include/uipc/constitution/discrete_shell_bending.h</label>
-        <link refid="discrete__shell__bending_8h_source"/>
-      </node>
-      <node id="18">
-        <label>include/uipc/constitution/empty.h</label>
-        <link refid="empty_8h_source"/>
-      </node>
-      <node id="16">
-        <label>include/uipc/constitution/finite_element_constitution.h</label>
-        <link refid="finite__element__constitution_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
+      </node>
+      <node id="18">
+        <label>include/uipc/constitution/finite_element_extra_constitution.h</label>
+        <link refid="finite__element__extra__constitution_8h_source"/>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
       </node>
-      <node id="23">
-        <label>include/uipc/constitution/finite_element_extra_constitution.h</label>
-        <link refid="finite__element__extra__constitution_8h_source"/>
-        <childnode refid="24" relation="include">
-        </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
+      <node id="14">
         <label>include/uipc/constitution/hookean_spring.h</label>
         <link refid="hookean__spring_8h_source"/>
       </node>
-      <node id="25">
+      <node id="20">
         <label>include/uipc/constitution/kirchhoff_rod_bending.h</label>
         <link refid="kirchhoff__rod__bending_8h_source"/>
       </node>
-      <node id="20">
+      <node id="15">
         <label>include/uipc/constitution/neo_hookean_shell.h</label>
         <link refid="neo__hookean__shell_8h_source"/>
       </node>
-      <node id="21">
+      <node id="16">
         <label>include/uipc/constitution/particle.h</label>
         <link refid="particle_8h_source"/>
       </node>
-      <node id="14">
+      <node id="9">
         <label>include/uipc/constitution/soft_position_constraint.h</label>
         <link refid="soft__position__constraint_8h_source"/>
       </node>
-      <node id="15">
+      <node id="10">
         <label>include/uipc/constitution/soft_transform_constraint.h</label>
         <link refid="soft__transform__constraint_8h_source"/>
       </node>
-      <node id="22">
+      <node id="17">
         <label>include/uipc/constitution/stable_neo_hookean.h</label>
         <link refid="stable__neo__hookean_8h_source"/>
       </node>
-      <node id="5">
+      <node id="24">
         <label>include/uipc/core.h</label>
         <link refid="core_8h_source"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="40">
         <label>include/uipc/core/animation.h</label>
         <link refid="animation_8h_source"/>
-        <childnode refid="35" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
       </node>
-      <node id="35">
+      <node id="32">
         <label>include/uipc/core/animator.h</label>
         <link refid="animator_8h_source"/>
-        <childnode refid="27" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="26">
+      <node id="21">
         <label>include/uipc/core/constitution_tabular.h</label>
         <link refid="constitution__tabular_8h_source"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="48">
@@ -242,19 +235,27 @@
         <link refid="contact__tabular_8h_source"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="35">
         <label>include/uipc/core/engine.h</label>
         <link refid="engine_8h_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="33">
+        <label>include/uipc/core/feature_collection.h</label>
+        <link refid="feature__collection_8h_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
         <label>include/uipc/core/i_engine.h</label>
         <link refid="i__engine_8h_source"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="35" relation="include">
         </childnode>
       </node>
       <node id="36">
@@ -272,43 +273,43 @@
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
-        <childnode refid="35" relation="include">
+        <childnode refid="32" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="41">
         <label>include/uipc/core/object_collection.h</label>
         <link refid="object__collection_8h_source"/>
-        <childnode refid="27" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="38">
         <label>include/uipc/core/sanity_checker.h</label>
         <link refid="sanity__checker_8h_source"/>
-        <childnode refid="27" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="27">
+      <node id="22">
         <label>include/uipc/core/scene.h</label>
         <link refid="scene_8h_source"/>
-        <childnode refid="28" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
-      <node id="28">
+      <node id="23">
         <label>include/uipc/core/world.h</label>
         <link refid="world_8h_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="56">
         <label>include/uipc/geometry.h</label>
         <link refid="geometry_8h_source"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
       <node id="49">
@@ -334,7 +335,7 @@
       <node id="47">
         <label>include/uipc/geometry/geometry.h</label>
         <link refid="geometry_2geometry_8h_source"/>
-        <childnode refid="11" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="48" relation="include">
         </childnode>
@@ -376,7 +377,7 @@
       <node id="77">
         <label>include/uipc/geometry/implicit_geometry.h</label>
         <link refid="implicit__geometry_8h_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="76" relation="include">
         </childnode>
@@ -386,25 +387,25 @@
       <node id="76">
         <label>include/uipc/geometry/implicit_geometry_slot.h</label>
         <link refid="implicit__geometry__slot_8h_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="50">
         <label>include/uipc/geometry/simplicial_complex.h</label>
         <link refid="simplicial__complex_8h_source"/>
-        <childnode refid="12" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="51" relation="include">
         </childnode>
@@ -446,7 +447,7 @@
         </childnode>
         <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="29" relation="include">
+        <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="73" relation="include">
         </childnode>
@@ -462,7 +463,7 @@
       <node id="51">
         <label>include/uipc/geometry/simplicial_complex_slot.h</label>
         <link refid="simplicial__complex__slot_8h_source"/>
-        <childnode refid="5" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
       <node id="55">
@@ -575,37 +576,37 @@
         <childnode refid="55" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="27">
         <label>include/uipc/io.h</label>
         <link refid="io_8h_source"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
       </node>
-      <node id="31">
+      <node id="28">
         <label>include/uipc/io/gltf_io.h</label>
         <link refid="gltf__io_8h_source"/>
       </node>
-      <node id="29">
+      <node id="26">
         <label>include/uipc/io/scene_io.h</label>
         <link refid="scene__io_8h_source"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
-        <childnode refid="31" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
       </node>
       <node id="73">
         <label>include/uipc/io/simplicial_complex_io.h</label>
         <link refid="simplicial__complex__io_8h_source"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
       <node id="78">
         <label>include/uipc/io/spread_sheet_io.h</label>
         <link refid="spread__sheet__io_8h_source"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="6">
+      <node id="25">
         <label>include/uipc/uipc.h</label>
         <link refid="uipc_8h_source"/>
       </node>

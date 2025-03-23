@@ -41,7 +41,10 @@
 | class | [**EngineException**](classuipc_1_1core_1_1_engine_exception.md) <br> |
 | class | [**EngineStatus**](classuipc_1_1core_1_1_engine_status.md) <br> |
 | class | [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) <br> |
+| class | [**Feature**](classuipc_1_1core_1_1_feature.md) <br> |
+| class | [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) <br> |
 | class | [**IEngine**](classuipc_1_1core_1_1_i_engine.md) <br> |
+| class | [**IFeature**](classuipc_1_1core_1_1_i_feature.md) <br> |
 | class | [**IObject**](classuipc_1_1core_1_1_i_object.md) <br> |
 | class | [**IObjectCollection**](classuipc_1_1core_1_1_i_object_collection.md) <br> |
 | class | [**ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md) <br> |
@@ -49,8 +52,8 @@
 | class | [**Object**](classuipc_1_1core_1_1_object.md) <br> |
 | class | [**ObjectCollection**](classuipc_1_1core_1_1_object_collection.md) <br> |
 | class | [**ObjectGeometrySlots**](classuipc_1_1core_1_1_object_geometry_slots.md) &lt;GeometryT&gt;<br> |
-| class | [**ObjectGeometrySlots&lt; const geometry::Geometry &gt;**](classuipc_1_1core_1_1_object_geometry_slots_3_01const_01geometry_1_1_geometry_01_4.md) &lt;&gt;<br> |
-| class | [**ObjectGeometrySlots&lt; geometry::Geometry &gt;**](classuipc_1_1core_1_1_object_geometry_slots_3_01geometry_1_1_geometry_01_4.md) &lt;&gt;<br> |
+| class | [**ObjectGeometrySlots**](classuipc_1_1core_1_1_object_geometry_slots.md) &lt;GeometryT&gt;<br> |
+| class | [**ObjectGeometrySlots**](classuipc_1_1core_1_1_object_geometry_slots.md) &lt;GeometryT&gt;<br> |
 | class | [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) <br> |
 | class | [**SanityCheckMessageCollection**](classuipc_1_1core_1_1_sanity_check_message_collection.md) <br> |
 | class | [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) <br> |
@@ -133,7 +136,7 @@
 ### typedef CContactModelCollection 
 
 ```C++
-using uipc::core::CContactModelCollection = typedef ContactModelCollectionT<true>;
+using uipc::core::CContactModelCollection =  ContactModelCollectionT<true>;
 ```
 
 
@@ -146,7 +149,7 @@ using uipc::core::CContactModelCollection = typedef ContactModelCollectionT<true
 ### typedef ContactModelCollection 
 
 ```C++
-using uipc::core::ContactModelCollection = typedef ContactModelCollectionT<false>;
+using uipc::core::ContactModelCollection =  ContactModelCollectionT<false>;
 ```
 
 

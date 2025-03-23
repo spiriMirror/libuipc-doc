@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
   <compounddef id="classuipc_1_1backend_1_1_scene_visitor" kind="class" language="C++" prot="public">
     <compoundname>uipc::backend::SceneVisitor</compoundname>
     <sectiondef kind="private-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/backend/visitors/scene_visitor.h" line="47" column="19" bodyfile="include/uipc/backend/visitors/scene_visitor.h" bodystart="47" bodyend="-1"/>
+        <location file="include/uipc/backend/visitors/scene_visitor.h" line="49" column="19" bodyfile="include/uipc/backend/visitors/scene_visitor.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1backend_1_1_scene_visitor_1ac257092cc185e244c0bc42b748e99bf5" prot="private" static="no" mutable="no">
         <type><ref refid="classuipc_1_1backend_1_1_diff_sim_visitor" kindref="compound">DiffSimVisitor</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/backend/visitors/scene_visitor.h" line="48" column="20" bodyfile="include/uipc/backend/visitors/scene_visitor.h" bodystart="48" bodyend="-1"/>
+        <location file="include/uipc/backend/visitors/scene_visitor.h" line="50" column="20" bodyfile="include/uipc/backend/visitors/scene_visitor.h" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -297,12 +297,26 @@
         </inbodydescription>
         <location file="include/uipc/backend/visitors/scene_visitor.h" line="44" column="26"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1backend_1_1_scene_visitor_1a83c5ae8bed3cf9747c2dd20eb8e8bf08" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">core::Scene</ref> &amp;</type>
+        <definition>core::Scene &amp; uipc::backend::SceneVisitor::ref</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>ref</name>
+        <qualifiedname>uipc::backend::SceneVisitor::ref</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/backend/visitors/scene_visitor.h" line="46" column="17"/>
+      </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/backend/visitors/scene_visitor.h" line="18" column="1" bodyfile="include/uipc/backend/visitors/scene_visitor.h" bodystart="19" bodyend="49"/>
+    <location file="include/uipc/backend/visitors/scene_visitor.h" line="18" column="1" bodyfile="include/uipc/backend/visitors/scene_visitor.h" bodystart="19" bodyend="51"/>
     <listofallmembers>
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9dc8ab605db9652fc502e7e1066a3fbc" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>begin_pending</name></member>
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1ad9cdffe532622dad3f16f7e7da8d53d5" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>constitution_tabular</name></member>
@@ -321,6 +335,7 @@
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1a1b280827156e456738e8833b7ade970e" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>pending_destroy_ids</name></member>
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1a20278863946fba5edd8ae0cf5d864f41" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>pending_geometries</name></member>
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1ae311e18cfdc21fa003388d94df9be9c8" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>pending_rest_geometries</name></member>
+      <member refid="classuipc_1_1backend_1_1_scene_visitor_1a83c5ae8bed3cf9747c2dd20eb8e8bf08" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>ref</name></member>
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1a3b9b3c3d6c3538f07852a5ce82170033" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>rest_geometries</name></member>
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9dfd7729426cbdda153409e5e9e3a1c3" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>SceneVisitor</name></member>
       <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9f2ac311e7ba7b2bf297cac64313c35c" prot="public" virt="non-virtual"><scope>uipc::backend::SceneVisitor</scope><name>solve_pending</name></member>

@@ -6,7 +6,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**formatter&lt; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_attributes_3_01_is_const_00_01_n_01_4_01_4.md)
+[**ClassList**](annotated.md) **>** [**fmt**](namespacefmt.md) **>** [**formatter&lt; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_attributes_3_01_is_const_00_01_n_01_4_01_4.md)
 
 
 
@@ -54,7 +54,7 @@ Inherits the following classes: formatter< std::string_view >
 
 | Type | Name |
 | ---: | :--- |
-|  appender | [**format**](#function-format) (const [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md)&lt; IsConst, N &gt; & attributes, format\_context & ctx) <br> |
+|  appender | [**format**](#function-format) (const [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md)&lt; IsConst, N &gt; & attributes, format\_context & ctx) const<br> |
 
 
 
@@ -91,10 +91,10 @@ Inherits the following classes: formatter< std::string_view >
 ### function format 
 
 ```C++
-inline appender formatter< uipc::geometry::SimplicialComplexAttributes< IsConst, N > >::format (
+inline appender fmt::formatter< uipc::geometry::SimplicialComplexAttributes< IsConst, N > >::format (
     const uipc::geometry::SimplicialComplexAttributes < IsConst, N > & attributes,
     format_context & ctx
-) 
+) const
 ```
 
 

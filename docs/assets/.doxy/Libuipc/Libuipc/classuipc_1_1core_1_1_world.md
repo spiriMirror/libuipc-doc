@@ -55,6 +55,7 @@
 |  void | [**advance**](#function-advance) () <br> |
 |  void | [**backward**](#function-backward) () <br> |
 |  bool | [**dump**](#function-dump) () <br> |
+|  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
 |  void | [**init**](#function-init) ([**Scene**](classuipc_1_1core_1_1_scene.md) & s) <br> |
 |  bool | [**is\_valid**](#function-is_valid) () const<br> |
@@ -139,6 +140,19 @@ void uipc::core::World::backward ()
 
 ```C++
 bool uipc::core::World::dump () 
+```
+
+
+
+
+<hr>
+
+
+
+### function features 
+
+```C++
+const FeatureCollection & uipc::core::World::features () const
 ```
 
 

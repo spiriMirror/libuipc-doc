@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+  <compounddef id="classuipc_1_1diff__sim_1_1_adjoint_method_feature" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::diff_sim::AdjointMethodFeature</compoundname>
+    <basecompoundref refid="classuipc_1_1core_1_1_feature" prot="public" virt="non-virtual">uipc::core::Feature</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a8b05d40346b3dcc00cb7aa9b014e256d" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::string_view</type>
+        <definition>std::string_view uipc::diff_sim::AdjointMethodFeature::FeatureName</definition>
+        <argsstring></argsstring>
+        <name>FeatureName</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::FeatureName</qualifiedname>
+        <initializer>= &quot;diff_sim/adjoint_method&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="22" column="39" bodyfile="include/uipc/diff_sim/adjoint_method_feature.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a83632e05c1ab8f5d6f98449c86017465" prot="private" static="no" mutable="no">
+        <type>S&lt; <ref refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_overrider" kindref="compound">AdjointMethodFeatureOverrider</ref> &gt;</type>
+        <definition>S&lt;AdjointMethodFeatureOverrider&gt; uipc::diff_sim::AdjointMethodFeature::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::m_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="54" column="7" bodyfile="include/uipc/diff_sim/adjoint_method_feature.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1af28e5f5437ac986ea4b219ab02315091" prot="private" static="no" mutable="no">
+        <type>SizeT</type>
+        <definition>SizeT uipc::diff_sim::AdjointMethodFeature::last_calling_frame</definition>
+        <argsstring></argsstring>
+        <name>last_calling_frame</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::last_calling_frame</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="55" column="38" bodyfile="include/uipc/diff_sim/adjoint_method_feature.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a6ed0208c1b635d39371731f0c0263bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::diff_sim::AdjointMethodFeature::AdjointMethodFeature</definition>
+        <argsstring>(S&lt; AdjointMethodFeatureOverrider &gt; overrider)</argsstring>
+        <name>AdjointMethodFeature</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::AdjointMethodFeature</qualifiedname>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_overrider" kindref="compound">AdjointMethodFeatureOverrider</ref> &gt;</type>
+          <declname>overrider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a109584048eb2049fb739c5fea6eb9d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::diff_sim::AdjointMethodFeature::select_dofs</definition>
+        <argsstring>(SizeT frame, backend::BufferView in_SDI)</argsstring>
+        <name>select_dofs</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::select_dofs</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">backend::BufferView</ref></type>
+          <declname>in_SDI</declname>
+        </param>
+        <briefdescription>
+<para>Selects the degrees of freedom from the given indices for the given frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>in_SDI</computeroutput> is frame-local, this function should be called for each frame to select the degrees of freedom.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in_SDI:BufferView&lt;IndexT&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The indices of the degrees of freedom to select. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="33" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a2d03637c3054e3ff38c3e3111cd8481f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::diff_sim::AdjointMethodFeature::receive_dofs</definition>
+        <argsstring>(backend::BufferView out_Dofs)</argsstring>
+        <name>receive_dofs</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::receive_dofs</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">backend::BufferView</ref></type>
+          <declname>out_Dofs</declname>
+        </param>
+        <briefdescription>
+<para>Receives the selected degrees of freedom for all frames. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function should be called after all frames have been processed to receive the selected degrees of freedom.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">out_dofs:BufferView&lt;Float&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The selected degrees of freedom. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="42" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1acaf102d70109b4b2e59e84455f428f64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::diff_sim::AdjointMethodFeature::compute_dLdP</definition>
+        <argsstring>(backend::BufferView out_dLdP, backend::BufferView in_dLdX)</argsstring>
+        <name>compute_dLdP</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::compute_dLdP</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">backend::BufferView</ref></type>
+          <declname>out_dLdP</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">backend::BufferView</ref></type>
+          <declname>in_dLdX</declname>
+        </param>
+        <briefdescription>
+<para>Computes the gradient of the loss with respect to the parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">out_dLdP:BufferView&lt;Float&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gradient of the loss with respect to the parameters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">in_dLdX:BufferView&lt;Float&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gradient of the loss with respect to the degrees of freedom. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="50" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1ab9721f36f966e5768e862afaa71ccb97" prot="private" static="no" const="yes" explicit="no" inline="no" final="yes" virt="virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::diff_sim::AdjointMethodFeature::get_name</definition>
+        <argsstring>() const final override</argsstring>
+        <name>get_name</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeature::get_name</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1_i_feature_1a26b576454fc69d237ca8fe89cbce541e">get_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="53" column="38"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1_feature"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1_i_feature"/>
+      </node>
+      <node id="1">
+        <label>uipc::diff_sim::AdjointMethodFeature</label>
+        <link refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1_feature"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1_i_feature"/>
+      </node>
+      <node id="1">
+        <label>uipc::diff_sim::AdjointMethodFeature</label>
+        <link refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="17" column="1" bodyfile="include/uipc/diff_sim/adjoint_method_feature.h" bodystart="18" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a6ed0208c1b635d39371731f0c0263bfd" prot="public" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>AdjointMethodFeature</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1acaf102d70109b4b2e59e84455f428f64" prot="public" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>compute_dLdP</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a8b05d40346b3dcc00cb7aa9b014e256d" prot="public" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>FeatureName</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1ab9721f36f966e5768e862afaa71ccb97" prot="private" virt="virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>get_name</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1af28e5f5437ac986ea4b219ab02315091" prot="private" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>last_calling_frame</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a83632e05c1ab8f5d6f98449c86017465" prot="private" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>m_impl</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1acc3fc7569d0e68fa66ff1d77e9170775" prot="public" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>name</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a2d03637c3054e3ff38c3e3111cd8481f" prot="public" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>receive_dofs</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1a109584048eb2049fb739c5fea6eb9d78" prot="public" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>select_dofs</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1ab0df15502507d511d2182c9a3a6435ba" prot="public" virt="non-virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>type_name</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1a9e377e68ea6ab0fcfbc2a2e19c9060bd" prot="public" virt="virtual"><scope>uipc::diff_sim::AdjointMethodFeature</scope><name>~IFeature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

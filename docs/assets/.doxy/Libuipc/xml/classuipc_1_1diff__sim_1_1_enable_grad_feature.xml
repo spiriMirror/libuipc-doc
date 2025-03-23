@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+  <compounddef id="classuipc_1_1diff__sim_1_1_enable_grad_feature" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::diff_sim::EnableGradFeature</compoundname>
+    <basecompoundref refid="classuipc_1_1core_1_1_feature" prot="public" virt="non-virtual">uipc::core::Feature</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classuipc_1_1diff__sim_1_1_enable_grad_feature_1aa152602c834d3410a0bed2c0f9e51279" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::string_view</type>
+        <definition>std::string_view uipc::diff_sim::EnableGradFeature::FeatureName</definition>
+        <argsstring></argsstring>
+        <name>FeatureName</name>
+        <qualifiedname>uipc::diff_sim::EnableGradFeature::FeatureName</qualifiedname>
+        <initializer>= &quot;diff_sim/enable_grad&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/enable_grad_feature.h" line="18" column="39" bodyfile="include/uipc/diff_sim/enable_grad_feature.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1diff__sim_1_1_enable_grad_feature_1af6508a9bc7e8bf902c98803c3d27dda4" prot="private" static="no" mutable="no">
+        <type>S&lt; <ref refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_overrider" kindref="compound">EnableGradFeatureOverrider</ref> &gt;</type>
+        <definition>S&lt;EnableGradFeatureOverrider&gt; uipc::diff_sim::EnableGradFeature::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <qualifiedname>uipc::diff_sim::EnableGradFeature::m_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/enable_grad_feature.h" line="40" column="7" bodyfile="include/uipc/diff_sim/enable_grad_feature.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_enable_grad_feature_1afee50e59a8b67a926869a466b00921ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::diff_sim::EnableGradFeature::EnableGradFeature</definition>
+        <argsstring>(S&lt; EnableGradFeatureOverrider &gt; overrider)</argsstring>
+        <name>EnableGradFeature</name>
+        <qualifiedname>uipc::diff_sim::EnableGradFeature::EnableGradFeature</qualifiedname>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_overrider" kindref="compound">EnableGradFeatureOverrider</ref> &gt;</type>
+          <declname>overrider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/enable_grad_feature.h" line="20" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_enable_grad_feature_1aae08eef016a26b14052344a2295953fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::diff_sim::EnableGradFeature::no_grad</definition>
+        <argsstring>()</argsstring>
+        <name>no_grad</name>
+        <qualifiedname>uipc::diff_sim::EnableGradFeature::no_grad</qualifiedname>
+        <briefdescription>
+<para>With DiffSim on, turn off parameter gradient computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/enable_grad_feature.h" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_enable_grad_feature_1ab4856d0d52870699f4a99f9c004f8520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::diff_sim::EnableGradFeature::with_grad</definition>
+        <argsstring>()</argsstring>
+        <name>with_grad</name>
+        <qualifiedname>uipc::diff_sim::EnableGradFeature::with_grad</qualifiedname>
+        <briefdescription>
+<para>With DiffSim on, turn on parameter gradient computation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/enable_grad_feature.h" line="30" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_enable_grad_feature_1a7c1f1b8b855f17e39a14cfda78ebdcdb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool uipc::diff_sim::EnableGradFeature::is_grad_enabled</definition>
+        <argsstring>() const</argsstring>
+        <name>is_grad_enabled</name>
+        <qualifiedname>uipc::diff_sim::EnableGradFeature::is_grad_enabled</qualifiedname>
+        <briefdescription>
+<para>Check if parameter gradient computation is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if parameter gradient computation is enabled. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/enable_grad_feature.h" line="36" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1_enable_grad_feature_1a8a1c20b72f45b70a7953628b8ff946e4" prot="private" static="no" const="yes" explicit="no" inline="no" final="yes" virt="virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::diff_sim::EnableGradFeature::get_name</definition>
+        <argsstring>() const override final</argsstring>
+        <name>get_name</name>
+        <qualifiedname>uipc::diff_sim::EnableGradFeature::get_name</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1_i_feature_1a26b576454fc69d237ca8fe89cbce541e">get_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/enable_grad_feature.h" line="39" column="35"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1_feature"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1_i_feature"/>
+      </node>
+      <node id="1">
+        <label>uipc::diff_sim::EnableGradFeature</label>
+        <link refid="classuipc_1_1diff__sim_1_1_enable_grad_feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1_feature"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1_i_feature"/>
+      </node>
+      <node id="1">
+        <label>uipc::diff_sim::EnableGradFeature</label>
+        <link refid="classuipc_1_1diff__sim_1_1_enable_grad_feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/diff_sim/enable_grad_feature.h" line="15" column="1" bodyfile="include/uipc/diff_sim/enable_grad_feature.h" bodystart="16" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1afee50e59a8b67a926869a466b00921ca" prot="public" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>EnableGradFeature</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1aa152602c834d3410a0bed2c0f9e51279" prot="public" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>FeatureName</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1a8a1c20b72f45b70a7953628b8ff946e4" prot="private" virt="virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>get_name</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1a7c1f1b8b855f17e39a14cfda78ebdcdb" prot="public" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>is_grad_enabled</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1af6508a9bc7e8bf902c98803c3d27dda4" prot="private" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>m_impl</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1acc3fc7569d0e68fa66ff1d77e9170775" prot="public" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>name</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1aae08eef016a26b14052344a2295953fa" prot="public" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>no_grad</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1ab0df15502507d511d2182c9a3a6435ba" prot="public" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>type_name</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1ab4856d0d52870699f4a99f9c004f8520" prot="public" virt="non-virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>with_grad</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1a9e377e68ea6ab0fcfbc2a2e19c9060bd" prot="public" virt="virtual"><scope>uipc::diff_sim::EnableGradFeature</scope><name>~IFeature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
