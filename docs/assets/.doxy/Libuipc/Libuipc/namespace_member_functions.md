@@ -130,11 +130,6 @@
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
-## u
-
-* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
-
-
 ## v
 
 * **view** ([**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))

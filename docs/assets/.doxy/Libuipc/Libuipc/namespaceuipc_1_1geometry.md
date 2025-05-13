@@ -37,21 +37,25 @@
 | class | [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md) <br>_Represents an abstract simplicial complex, containing vertices, edges, triangles, and tetrahedra._  |
 | class | [**Attribute**](classuipc_1_1geometry_1_1_attribute.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute of type T._  |
 | class | [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) <br>_A collection of geometries attributes._  |
+| class | [**AttributeCollectionFactory**](classuipc_1_1geometry_1_1_attribute_collection_factory.md) <br> |
 | class | [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) <br> |
+| class | [**AttributeFactory**](classuipc_1_1geometry_1_1_attribute_factory.md) <br> |
 | class | [**AttributeFriend**](classuipc_1_1geometry_1_1_attribute_friend.md) &lt;typename T&gt;<br> |
 | class | [**AttributeIO**](classuipc_1_1geometry_1_1_attribute_i_o.md) <br> |
 | class | [**AttributeIOError**](classuipc_1_1geometry_1_1_attribute_i_o_error.md) <br> |
 | class | [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute slot of type T in a geometries attribute collection._  |
 | class | [**BVH**](classuipc_1_1geometry_1_1_b_v_h.md) <br> |
 | class | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) <br>_A base geometries class that contains the instance attributes and the meta attributes._  |
+| class | [**GeometryAtlas**](classuipc_1_1geometry_1_1_geometry_atlas.md) <br> |
 | class | [**GeometryAttributeError**](classuipc_1_1geometry_1_1_geometry_attribute_error.md) <br> |
 | class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
+| class | [**GeometryFactory**](classuipc_1_1geometry_1_1_geometry_factory.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
-| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
-| class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
-| class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
+| class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md) &lt;&gt;<br> |
+| class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md) &lt;&gt;<br> |
+| class | [**GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &lt;&gt;<br> |
 | class | [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) <br>_An abstract class to represent a geometries attribute._  |
 | class | [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) <br>_An abstract class to represent a geometries attribute slot in a geometries attribute collection._  |
 | class | [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) <br>_An abstract class for geometries._  |
@@ -181,7 +185,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -194,7 +198,7 @@ using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
 ```
 
 

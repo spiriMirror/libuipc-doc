@@ -56,7 +56,7 @@
 |  bool | [**dump**](#function-dump) () <br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
-|  void | [**init**](#function-init) (backend::WorldVisitor v) <br> |
+|  void | [**init**](#function-init) ([**backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) v) <br> |
 |  bool | [**recover**](#function-recover) (SizeT dst\_frame) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) & | [**status**](#function-status) () <br> |
@@ -94,7 +94,7 @@
 | virtual void | [**do\_advance**](#function-do_advance) () = 0<br> |
 | virtual void | [**do\_backward**](#function-do_backward) () = 0<br> |
 | virtual bool | [**do\_dump**](#function-do_dump) () <br> |
-| virtual void | [**do\_init**](#function-do_init) (backend::WorldVisitor v) = 0<br> |
+| virtual void | [**do\_init**](#function-do_init) ([**backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) v) = 0<br> |
 | virtual bool | [**do\_recover**](#function-do_recover) (SizeT dst\_frame) <br> |
 | virtual void | [**do\_retrieve**](#function-do_retrieve) () = 0<br> |
 | virtual void | [**do\_sync**](#function-do_sync) () = 0<br> |

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1_geometry_factory" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::GeometryFactory</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_geometry_factory_1a3244acb33b38de913badacac44007983" prot="private" static="no" mutable="no">
+        <type>U&lt; Impl &gt;</type>
+        <definition>U&lt;Impl&gt; uipc::geometry::GeometryFactory::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <qualifiedname>uipc::geometry::GeometryFactory::m_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_factory.h" line="24" column="7" bodyfile="include/uipc/geometry/geometry_factory.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_factory_1a888b0b98a54994b4041ebc73fb8fce42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::GeometryFactory::GeometryFactory</definition>
+        <argsstring>()</argsstring>
+        <name>GeometryFactory</name>
+        <qualifiedname>uipc::geometry::GeometryFactory::GeometryFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_factory.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_factory_1a9a36828044972d822580f3a5a5ae0035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::GeometryFactory::~GeometryFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~GeometryFactory</name>
+        <qualifiedname>uipc::geometry::GeometryFactory::~GeometryFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_factory.h" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_factory_1aa1b79b3ba8f99e59ddfc4cbc40e7af4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &gt; &gt;</type>
+        <definition>vector&lt; S&lt; Geometry &gt; &gt; uipc::geometry::GeometryFactory::from_json</definition>
+        <argsstring>(const Json &amp;j, span&lt; S&lt; IAttributeSlot &gt; &gt; attributes)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::geometry::GeometryFactory::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1_i_attribute_slot" kindref="compound">IAttributeSlot</ref> &gt; &gt;</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_factory.h" line="15" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_factory_1ab2ec4fc804d6b74d5e1e886f1f39fc2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::geometry::GeometryFactory::to_json</definition>
+        <argsstring>(span&lt; Geometry * &gt; geos, unordered_map&lt; IAttribute *, IndexT &gt; attr_to_index)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::geometry::GeometryFactory::to_json</qualifiedname>
+        <param>
+          <type>span&lt; <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> * &gt;</type>
+          <declname>geos</declname>
+        </param>
+        <param>
+          <type>unordered_map&lt; <ref refid="classuipc_1_1geometry_1_1_i_attribute" kindref="compound">IAttribute</ref> *, IndexT &gt;</type>
+          <declname>attr_to_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_factory.h" line="18" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_factory_1a65a2d1ab8c979fa3de98dd0b6c77c2fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &gt;</type>
+        <definition>S&lt; GeometrySlot &gt; uipc::geometry::GeometryFactory::create_slot</definition>
+        <argsstring>(IndexT id, const Geometry &amp;geometry)</argsstring>
+        <name>create_slot</name>
+        <qualifiedname>uipc::geometry::GeometryFactory::create_slot</qualifiedname>
+        <param>
+          <type>IndexT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_factory.h" line="21" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/geometry/geometry_factory.h" line="7" column="1" bodyfile="include/uipc/geometry/geometry_factory.h" bodystart="8" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1_geometry_factory_1a65a2d1ab8c979fa3de98dd0b6c77c2fb" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryFactory</scope><name>create_slot</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_factory_1aa1b79b3ba8f99e59ddfc4cbc40e7af4e" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryFactory</scope><name>from_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_factory_1a888b0b98a54994b4041ebc73fb8fce42" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryFactory</scope><name>GeometryFactory</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_factory_1a3244acb33b38de913badacac44007983" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryFactory</scope><name>m_impl</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_factory_1ab2ec4fc804d6b74d5e1e886f1f39fc2d" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryFactory</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_factory_1a9a36828044972d822580f3a5a5ae0035" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryFactory</scope><name>~GeometryFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

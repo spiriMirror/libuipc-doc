@@ -11,17 +11,18 @@
 // Don't put #pragma once here, this file may be included multiple times.
 
 /*****************************************************************/ 
-
 #ifdef UIPC_BUILTIN_ATTRIBUTE
 UIPC_BUILTIN_ATTRIBUTE(topo);
+
 UIPC_BUILTIN_ATTRIBUTE(position);
+
+UIPC_BUILTIN_ATTRIBUTE(velocity);
 
 UIPC_BUILTIN_ATTRIBUTE(aim_position);
 
 UIPC_BUILTIN_ATTRIBUTE(transform);
 
 UIPC_BUILTIN_ATTRIBUTE(aim_transform);
-
 
 UIPC_BUILTIN_ATTRIBUTE(contact_element_id);
 

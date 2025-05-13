@@ -51,9 +51,6 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**diff\_sim::SparseCOOView**](classuipc_1_1diff__sim_1_1_sparse_c_o_o_view.md) | [**H**](#function-h-22) () const<br> |
-|  void | [**clear**](#function-clear) () <br> |
-|  [**diff\_sim::SparseCOOView**](classuipc_1_1diff__sim_1_1_sparse_c_o_o_view.md) | [**pGpP**](#function-pgpp-22) () const<br> |
 |  [**diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md) & | [**parameters**](#function-parameters-12) () <br> |
 |  const [**diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md) & | [**parameters**](#function-parameters-22) () const<br> |
 |   | [**~DiffSim**](#function-diffsim) () <br> |
@@ -87,45 +84,6 @@
 
 ## Public Functions Documentation
 
-
-
-
-### function H [2/2]
-
-```C++
-diff_sim::SparseCOOView uipc::core::DiffSim::H () const
-```
-
-
-
-
-<hr>
-
-
-
-### function clear 
-
-```C++
-void uipc::core::DiffSim::clear () 
-```
-
-
-
-
-<hr>
-
-
-
-### function pGpP [2/2]
-
-```C++
-diff_sim::SparseCOOView uipc::core::DiffSim::pGpP () const
-```
-
-
-
-
-<hr>
 
 
 

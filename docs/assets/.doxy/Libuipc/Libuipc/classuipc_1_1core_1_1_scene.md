@@ -62,6 +62,7 @@
 |   | [**Scene**](#function-scene) (const Json & config=default\_config()) <br> |
 |  [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-12) () <br> |
 |  const [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-22) () const<br> |
+|  const Json & | [**config**](#function-config) () noexcept const<br> |
 |  [**ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-12) () noexcept<br> |
 |  const [**ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-22) () noexcept const<br> |
 |  [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & | [**contact\_tabular**](#function-contact_tabular-12) () noexcept<br> |
@@ -117,7 +118,7 @@
 ### function Scene 
 
 ```C++
-uipc::core::Scene::Scene (
+explicit uipc::core::Scene::Scene (
     const Json & config=default_config()
 ) 
 ```
@@ -146,6 +147,19 @@ Animator & uipc::core::Scene::animator ()
 
 ```C++
 const Animator & uipc::core::Scene::animator () const
+```
+
+
+
+
+<hr>
+
+
+
+### function config 
+
+```C++
+const Json & uipc::core::Scene::config () noexcept const
 ```
 
 

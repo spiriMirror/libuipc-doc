@@ -50,7 +50,7 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1_feat
 
 | Type | Name |
 | ---: | :--- |
-|  std::string\_view | [**FeatureName**](#variable-featurename)   = = "diff\_sim/adjoint\_method"<br> |
+|  constexpr std::string\_view | [**FeatureName**](#variable-featurename)   = = "diff\_sim/adjoint\_method"<br> |
 
 
 
@@ -210,7 +210,7 @@ See [uipc::core::IFeature](classuipc_1_1core_1_1_i_feature.md)
 ### variable FeatureName 
 
 ```C++
-std::string_view uipc::diff_sim::AdjointMethodFeature::FeatureName;
+constexpr std::string_view uipc::diff_sim::AdjointMethodFeature::FeatureName;
 ```
 
 

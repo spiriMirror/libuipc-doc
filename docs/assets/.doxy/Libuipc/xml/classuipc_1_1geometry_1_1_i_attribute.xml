@@ -1,10 +1,32 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1_i_attribute" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>uipc::geometry::IAttribute</compoundname>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1_attribute" prot="public" virt="non-virtual">uipc::geometry::Attribute&lt; T &gt;</derivedcompoundref>
     <includes refid="attribute_8h" local="no">attribute.h</includes>
     <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_i_attribute_1abd621cd374772a67fae8b860ddfca14c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>class</type>
+        <definition>friend class AttributeFriend</definition>
+        <argsstring></argsstring>
+        <name>AttributeFriend</name>
+        <qualifiedname>uipc::geometry::IAttribute::AttributeFriend</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_attribute_friend" kindref="compound">AttributeFriend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute.h" line="21" column="18" bodyfile="include/uipc/geometry/attribute.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="friend" id="classuipc_1_1geometry_1_1_i_attribute_1aa6924f7d92fd6f1c36eb4f15bceb336d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>class</type>
         <definition>friend class AttributeCollection</definition>
@@ -20,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="34" column="18" bodyfile="include/uipc/geometry/attribute.h" bodystart="34" bodyend="-1"/>
+        <location file="include/uipc/geometry/attribute.h" line="43" column="18" bodyfile="include/uipc/geometry/attribute.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="classuipc_1_1geometry_1_1_i_attribute_1aa8c399c60326fe4579f443cbaac113b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>class</type>
@@ -37,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="35" column="18" bodyfile="include/uipc/geometry/attribute.h" bodystart="35" bodyend="-1"/>
+        <location file="include/uipc/geometry/attribute.h" line="44" column="18" bodyfile="include/uipc/geometry/attribute.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="classuipc_1_1geometry_1_1_i_attribute_1a071ce465226d6ceb4c88b721607dc13a" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">backend::BufferView</ref></type>
@@ -55,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="44" column="32"/>
+        <location file="include/uipc/geometry/attribute.h" line="54" column="32"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -71,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="21" column="5"/>
+        <location file="include/uipc/geometry/attribute.h" line="24" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a086fcd1c3b9395f8cc1747c4724ae3ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -85,9 +107,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="22" column="13"/>
+        <location file="include/uipc/geometry/attribute.h" line="25" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ab46f1f01551144af3ef5714e0669cf14" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ab46f1f01551144af3ef5714e0669cf14" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
         <definition>SizeT uipc::geometry::IAttribute::size</definition>
         <argsstring>() const noexcept</argsstring>
@@ -100,9 +122,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="27" column="12"/>
+        <location file="include/uipc/geometry/attribute.h" line="30" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a082de0f7755edc46b08afcbb5454dfa9" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a082de0f7755edc46b08afcbb5454dfa9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::IAttribute::to_json</definition>
         <argsstring>(SizeT i) const noexcept</argsstring>
@@ -118,9 +140,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="29" column="11"/>
+        <location file="include/uipc/geometry/attribute.h" line="32" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1aaa0fcb020ce3ef32e0cb3cdce8b76348" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1aaa0fcb020ce3ef32e0cb3cdce8b76348" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::IAttribute::to_json</definition>
         <argsstring>() const noexcept</argsstring>
@@ -132,7 +154,40 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="31" column="11"/>
+        <location file="include/uipc/geometry/attribute.h" line="34" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a6f9f1aafaedb5bf4b01909e29f47c778" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::IAttribute::from_json</definition>
+        <argsstring>(const Json &amp;j) noexcept</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::geometry::IAttribute::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute.h" line="36" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a8cead22cebc85814e2882bd9dcca4417" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string_view</type>
+        <definition>std::string_view uipc::geometry::IAttribute::type_name</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>type_name</name>
+        <qualifiedname>uipc::geometry::IAttribute::type_name</qualifiedname>
+        <briefdescription>
+<para>Get the type name of data stored in the attribute slot. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute.h" line="40" column="23"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -152,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="36" column="19"/>
+        <location file="include/uipc/geometry/attribute.h" line="46" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a058458fc8c7818b00bb61d16c6a0e755" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -170,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="37" column="19"/>
+        <location file="include/uipc/geometry/attribute.h" line="47" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ac6444381b6b67b38afb3b6f070d57848" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1_i_attribute" kindref="compound">IAttribute</ref> &gt;</type>
@@ -184,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="38" column="7"/>
+        <location file="include/uipc/geometry/attribute.h" line="48" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ae4d2e102d3fab1878be2eb9fe64ba7ce" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1_i_attribute" kindref="compound">IAttribute</ref> &gt;</type>
@@ -198,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="39" column="7"/>
+        <location file="include/uipc/geometry/attribute.h" line="49" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a3005b5984c7f95306f6e9c866d744058" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="40" column="19"/>
+        <location file="include/uipc/geometry/attribute.h" line="50" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1aa5d61143d5f79fe561c590b46c813e27" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -230,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="41" column="19"/>
+        <location file="include/uipc/geometry/attribute.h" line="51" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a8e6890a68e00734e47f50a2a688ac7d5" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -252,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="42" column="10"/>
+        <location file="include/uipc/geometry/attribute.h" line="52" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -268,7 +323,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="47" column="33"/>
+        <location file="include/uipc/geometry/attribute.h" line="57" column="33"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a606e5c2b98ae966d968c9a1dcfbeeca2" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>SizeT</type>
@@ -283,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="48" column="33"/>
+        <location file="include/uipc/geometry/attribute.h" line="58" column="33"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a79c81f64731a7868b8e765f76bb9a40b" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
         <type><ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">backend::BufferView</ref></type>
@@ -298,7 +353,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="49" column="33"/>
+        <location file="include/uipc/geometry/attribute.h" line="59" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ade4d069fe4ca7df74997bce1de133a74" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::geometry::IAttribute::get_type_name</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>get_type_name</name>
+        <qualifiedname>uipc::geometry::IAttribute::get_type_name</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_attribute_1a959cadbc4f424d55f446ccd88feff473">get_type_name</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute.h" line="60" column="33"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ac510552cfe93723cd3e8fa572c8a6e34" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -317,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="51" column="27"/>
+        <location file="include/uipc/geometry/attribute.h" line="62" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1aa411b466174b707c422028d589b788ae" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -332,7 +402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="52" column="27"/>
+        <location file="include/uipc/geometry/attribute.h" line="63" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a32ab5184867d21bb4071b2bb8316d419" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -351,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="53" column="27"/>
+        <location file="include/uipc/geometry/attribute.h" line="64" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a0947e512dd6ea551d11ec0928ecf4e71" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1_i_attribute" kindref="compound">IAttribute</ref> &gt;</type>
@@ -366,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="54" column="15"/>
+        <location file="include/uipc/geometry/attribute.h" line="65" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a75988befdb7b0105b440941d895abc23" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1_i_attribute" kindref="compound">IAttribute</ref> &gt;</type>
@@ -381,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="55" column="15"/>
+        <location file="include/uipc/geometry/attribute.h" line="66" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1acdab29d1bc7d38d2a25e85116d197490" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
         <type>void</type>
@@ -400,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="56" column="27"/>
+        <location file="include/uipc/geometry/attribute.h" line="67" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1afbf9321179dc72d4774d498deedf3dbe" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
         <type>void</type>
@@ -423,7 +493,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="58" column="18"/>
+        <location file="include/uipc/geometry/attribute.h" line="68" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ab39b0d7b80aa0c616bff22ad3eaa9d97" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::geometry::IAttribute::do_from_json</definition>
+        <argsstring>(const Json &amp;j) noexcept=0</argsstring>
+        <name>do_from_json</name>
+        <qualifiedname>uipc::geometry::IAttribute::do_from_json</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_attribute_1a519c20b1f26503458c0a3f1d15373b1f">do_from_json</reimplementedby>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute.h" line="70" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1a7222028504181d7d02c67a57f136b0ee" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
         <type>Json</type>
@@ -442,7 +531,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/attribute.h" line="60" column="18"/>
+        <location file="include/uipc/geometry/attribute.h" line="71" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_1ad989778846b8ee2fbfbae85dce8b9822" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>Json</type>
+        <definition>virtual Json uipc::geometry::IAttribute::do_to_json</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>do_to_json</name>
+        <qualifiedname>uipc::geometry::IAttribute::do_to_json</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_attribute_1a8dab503e9f71890d1b3145664e5b3ec0">do_to_json</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute.h" line="72" column="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -462,9 +566,10 @@
         <link refid="classuipc_1_1geometry_1_1_i_attribute"/>
       </node>
     </inheritancegraph>
-    <location file="include/uipc/geometry/attribute.h" line="18" column="1" bodyfile="include/uipc/geometry/attribute.h" bodystart="19" bodyend="61"/>
+    <location file="include/uipc/geometry/attribute.h" line="18" column="1" bodyfile="include/uipc/geometry/attribute.h" bodystart="19" bodyend="73"/>
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1aa6924f7d92fd6f1c36eb4f15bceb336d" prot="private" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>AttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_1abd621cd374772a67fae8b860ddfca14c" prot="private" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>AttributeFriend</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a071ce465226d6ceb4c88b721607dc13a" prot="private" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>backend_view</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a29c311d4ec85e7e414f6ee8c197a1865" prot="protected" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>backend_view</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a3005b5984c7f95306f6e9c866d744058" prot="private" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>clear</name></member>
@@ -475,12 +580,16 @@
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a0947e512dd6ea551d11ec0928ecf4e71" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_clone</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a75988befdb7b0105b440941d895abc23" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_clone_empty</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1afbf9321179dc72d4774d498deedf3dbe" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_copy_from</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_1ab39b0d7b80aa0c616bff22ad3eaa9d97" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_from_json</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1acdab29d1bc7d38d2a25e85116d197490" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_reorder</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a32ab5184867d21bb4071b2bb8316d419" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_reserve</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1ac510552cfe93723cd3e8fa572c8a6e34" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_resize</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a7222028504181d7d02c67a57f136b0ee" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_1ad989778846b8ee2fbfbae85dce8b9822" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>do_to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_1a6f9f1aafaedb5bf4b01909e29f47c778" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>from_json</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a79c81f64731a7868b8e765f76bb9a40b" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>get_backend_view</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a606e5c2b98ae966d968c9a1dcfbeeca2" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>get_size</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_1ade4d069fe4ca7df74997bce1de133a74" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttribute</scope><name>get_type_name</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a8d6bf5d526a918744afe7084153ce49a" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>IAttribute</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1aa8c399c60326fe4579f443cbaac113b5" prot="private" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>IAttributeSlot</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1aa5d61143d5f79fe561c590b46c813e27" prot="private" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>reorder</name></member>
@@ -489,6 +598,7 @@
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1ab46f1f01551144af3ef5714e0669cf14" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>size</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a082de0f7755edc46b08afcbb5454dfa9" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>to_json</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1aaa0fcb020ce3ef32e0cb3cdce8b76348" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_1a8cead22cebc85814e2882bd9dcca4417" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttribute</scope><name>type_name</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_1a086fcd1c3b9395f8cc1747c4724ae3ea" prot="public" virt="virtual"><scope>uipc::geometry::IAttribute</scope><name>~IAttribute</name></member>
     </listofallmembers>
   </compounddef>

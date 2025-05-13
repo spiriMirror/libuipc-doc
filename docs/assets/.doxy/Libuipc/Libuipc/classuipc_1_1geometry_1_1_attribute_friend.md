@@ -79,5 +79,5 @@
 
 
 ------------------------------
-The documentation for this class was generated from the following file `include/uipc/core/contact_model_collection.h`
+The documentation for this class was generated from the following file `include/uipc/geometry/attribute_friend.h`
 

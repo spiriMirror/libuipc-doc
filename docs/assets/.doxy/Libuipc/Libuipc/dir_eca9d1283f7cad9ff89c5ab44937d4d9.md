@@ -39,6 +39,7 @@
 | file | [**object\_collection.h**](object__collection_8h.md) <br> |
 | file | [**sanity\_checker.h**](sanity__checker_8h.md) <br> |
 | file | [**scene.h**](scene_8h.md) <br> |
+| file | [**scene\_factory.h**](scene__factory_8h.md) <br> |
 | file | [**world.h**](world_8h.md) <br> |
 
 

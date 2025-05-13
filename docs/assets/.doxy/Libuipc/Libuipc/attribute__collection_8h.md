@@ -17,6 +17,7 @@
 * `#include <uipc/geometry/attribute.h>`
 * `#include <uipc/geometry/attribute_slot.h>`
 * `#include <uipc/geometry/attribute_copy.h>`
+* `#include <uipc/geometry/attribute_friend.h>`
 * `#include "details/attribute_collection.inl"`
 
 

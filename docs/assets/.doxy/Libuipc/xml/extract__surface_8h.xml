@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="extract__surface_8h" kind="file" language="C++">
     <compoundname>extract_surface.h</compoundname>
     <includes refid="simplicial__complex_8h" local="no">uipc/geometry/simplicial_complex.h</includes>
@@ -154,6 +154,8 @@
         </childnode>
         <childnode refid="37" relation="include">
         </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
       </node>
       <node id="30">
         <label>uipc/geometry/attribute_copy.h</label>
@@ -167,7 +169,7 @@
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="38">
+      <node id="37">
         <label>uipc/geometry/attribute_friend.h</label>
         <link refid="attribute__friend_8h_source"/>
       </node>
@@ -196,7 +198,7 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
@@ -226,7 +228,7 @@
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -244,7 +246,7 @@
       <node id="33">
         <label>details/attribute.inl</label>
       </node>
-      <node id="37">
+      <node id="38">
         <label>details/attribute_collection.inl</label>
       </node>
       <node id="31">
@@ -326,9 +328,9 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">UIPC_GEOMETRY_API<sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref><sp/>extract_surface(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">UIPC_GEOMETRY_API<sp/>[[nodiscard]]<sp/>SimplicialComplex<sp/>extract_surface(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SimplicialComplex&amp;<sp/>src);</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal">UIPC_GEOMETRY_API<sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref><sp/>extract_surface(span&lt;const<sp/>SimplicialComplex*&gt;<sp/>complexes);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">UIPC_GEOMETRY_API<sp/>[[nodiscard]]<sp/>SimplicialComplex<sp/>extract_surface(span&lt;const<sp/>SimplicialComplex*&gt;<sp/>complexes);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/geometry/utils/extract_surface.h"/>

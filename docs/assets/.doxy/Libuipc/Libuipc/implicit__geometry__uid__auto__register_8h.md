@@ -102,7 +102,6 @@
 
 ### define REGISTER\_IMPLICIT\_GEOMETRY\_UIDS 
 
-_Register ImplicitGeometryUIDs._ 
 ```C++
 #define REGISTER_IMPLICIT_GEOMETRY_UIDS (
     ...

@@ -53,6 +53,7 @@ Inherited by the following classes: [uipc::geometry::Geometry](classuipc_1_1geom
 
 | Type | Name |
 | ---: | :--- |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**clone**](#function-clone) () const<br> |
 |  Json | [**to\_json**](#function-to_json) () const<br> |
 |  std::string\_view | [**type**](#function-type) () noexcept const<br>_Get the type of the geometries, check the type to downcast the geometries to a specific type._  |
 | virtual  | [**~IGeometry**](#function-igeometry) () = default<br> |
@@ -84,6 +85,8 @@ Inherited by the following classes: [uipc::geometry::Geometry](classuipc_1_1geom
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_build\_from\_attribute\_collections**](#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept = 0<br> |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](#function-do_clone) () const = 0<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) = 0<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json) () const = 0<br> |
 | virtual std::string\_view | [**get\_type**](#function-get_type) () noexcept const = 0<br> |
@@ -93,6 +96,19 @@ Inherited by the following classes: [uipc::geometry::Geometry](classuipc_1_1geom
 
 ## Public Functions Documentation
 
+
+
+
+### function clone 
+
+```C++
+virtual S< IGeometry > uipc::geometry::IGeometry::clone () const
+```
+
+
+
+
+<hr>
 
 
 
@@ -146,6 +162,35 @@ virtual uipc::geometry::IGeometry::~IGeometry () = default
 <hr>
 ## Protected Functions Documentation
 
+
+
+
+### function do\_build\_from\_attribute\_collections 
+
+```C++
+virtual void uipc::geometry::IGeometry::do_build_from_attribute_collections (
+    span< std::string > names,
+    span< AttributeCollection * > collections
+) noexcept = 0
+```
+
+
+
+
+<hr>
+
+
+
+### function do\_clone 
+
+```C++
+virtual S< IGeometry > uipc::geometry::IGeometry::do_clone () const = 0
+```
+
+
+
+
+<hr>
 
 
 

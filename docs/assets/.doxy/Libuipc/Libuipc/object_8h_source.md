@@ -67,6 +67,8 @@ class UIPC_CORE_API Object : public IObject
 {
     friend class Scene;
     friend class Animation;
+    friend class ObjectCollection;
+    friend class SceneFactory;
 
   public:
     class UIPC_CORE_API Geometries
@@ -82,6 +84,7 @@ class UIPC_CORE_API Object : public IObject
             requires(!std::is_abstract_v<GeometryT>)
         ObjectGeometrySlots<GeometryT> create(const GeometryT& geometry,
                                               const GeometryT& rest_geometry) &&;
+
 
         span<const IndexT> ids() && noexcept;
 
@@ -103,6 +106,7 @@ class UIPC_CORE_API Object : public IObject
     };
 
     Object(Scene& scene, IndexT id, std::string_view name = "") noexcept;
+    Object() noexcept;
     Object(Object&&) = default;
     ~Object();
 
@@ -120,7 +124,7 @@ class UIPC_CORE_API Object : public IObject
   private:
     friend struct fmt::formatter<Object>;
 
-    Scene&                        m_scene;
+    Scene*                        m_scene = nullptr;
     IndexT                        m_id;
     string                        m_name;
     vector<IndexT>                m_geometry_ids;
@@ -128,7 +132,15 @@ class UIPC_CORE_API Object : public IObject
     geometry::GeometryCollection& rest_geometry_collection() noexcept;
     bool                          scene_started() const noexcept;
     bool                          scene_pending() const noexcept;
+
+    void scene(Scene& scene) noexcept;
+
+    friend void to_json(Json& j, const Object& object) noexcept;
+    friend void from_json(const Json& j, Object& object) noexcept;
 };
+
+void to_json(Json& j, const Object& object) noexcept;
+void from_json(const Json& j, Object& object) noexcept;
 }  // namespace uipc::core
 
 namespace fmt

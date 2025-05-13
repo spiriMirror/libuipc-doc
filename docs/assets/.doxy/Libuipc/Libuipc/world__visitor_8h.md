@@ -10,6 +10,8 @@
 
 
 
+* `#include <uipc/backend/visitors/scene_visitor.h>`
+* `#include <uipc/backend/visitors/animator_visitor.h>`
 
 
 
@@ -23,8 +25,20 @@
 
 
 
+## Namespaces
+
+| Type | Name |
+| ---: | :--- |
+| namespace | [**uipc**](namespaceuipc.md) <br> |
+| namespace | [**backend**](namespaceuipc_1_1backend.md) <br> |
+| namespace | [**core**](namespaceuipc_1_1core.md) <br> |
 
 
+## Classes
+
+| Type | Name |
+| ---: | :--- |
+| class | [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) <br> |
 
 
 

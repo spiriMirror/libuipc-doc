@@ -95,12 +95,19 @@ See [uipc::geometry::IAttribute](classuipc_1_1geometry_1_1_i_attribute.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md#function-iattribute) () = default<br> |
+|  void | [**from\_json**](classuipc_1_1geometry_1_1_i_attribute.md#function-from_json) (const Json & j) noexcept<br> |
 |  SizeT | [**size**](classuipc_1_1geometry_1_1_i_attribute.md#function-size) () noexcept const<br>_Get the size of the attribute._  |
 |  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_attribute.md#function-to_json-12) (SizeT i) noexcept const<br> |
 |  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_attribute.md#function-to_json-22) () noexcept const<br> |
+|  std::string\_view | [**type\_name**](classuipc_1_1geometry_1_1_i_attribute.md#function-type_name) () noexcept const<br>_Get the type name of data stored in the attribute slot._  |
 | virtual  | [**~IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md#function-iattribute) () = default<br> |
 
 
+## Public Static Functions
+
+| Type | Name |
+| ---: | :--- |
+|  std::string | [**type**](#function-type) () noexcept<br> |
 
 
 
@@ -153,12 +160,15 @@ See [uipc::geometry::IAttribute](classuipc_1_1geometry_1_1_i_attribute.md)
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) &gt; | [**do\_clone\_empty**](#function-do_clone_empty) () override const<br> |
 | virtual void | [**do\_copy\_from**](#function-do_copy_from) (const [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) & copy) noexcept override<br> |
+| virtual void | [**do\_from\_json**](#function-do_from_json) (const Json & j) noexcept override<br> |
 | virtual void | [**do\_reorder**](#function-do_reorder) (span&lt; const SizeT &gt; O) noexcept override<br> |
 | virtual void | [**do\_reserve**](#function-do_reserve) (SizeT N) override<br> |
 | virtual void | [**do\_resize**](#function-do_resize) (SizeT N) override<br> |
-| virtual Json | [**do\_to\_json**](#function-do_to_json) (SizeT i) noexcept override const<br> |
+| virtual Json | [**do\_to\_json**](#function-do_to_json-12) (SizeT i) noexcept override const<br> |
+| virtual Json | [**do\_to\_json**](#function-do_to_json-22) () noexcept override const<br> |
 | virtual [**backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md) | [**get\_backend\_view**](#function-get_backend_view) () noexcept override const<br> |
 | virtual SizeT | [**get\_size**](#function-get_size) () override const<br> |
+| virtual std::string\_view | [**get\_type\_name**](#function-get_type_name) () noexcept override const<br> |
 
 
 ## Protected Functions inherited from uipc::geometry::IAttribute
@@ -172,19 +182,22 @@ See [uipc::geometry::IAttribute](classuipc_1_1geometry_1_1_i_attribute.md)
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_clone) () const = 0<br> |
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) &gt; | [**do\_clone\_empty**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_clone_empty) () const = 0<br> |
 | virtual void | [**do\_copy\_from**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_copy_from) (const [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) & copy) noexcept = 0<br> |
+| virtual void | [**do\_from\_json**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_from_json) (const Json & j) noexcept = 0<br> |
 | virtual void | [**do\_reorder**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_reorder) (span&lt; const SizeT &gt; O) noexcept = 0<br> |
 | virtual void | [**do\_reserve**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_reserve) (SizeT N) = 0<br> |
 | virtual void | [**do\_resize**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_resize) (SizeT N) = 0<br> |
-| virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_to_json) (SizeT i) noexcept const = 0<br> |
+| virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_to_json-12) (SizeT i) noexcept const = 0<br> |
+| virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_i_attribute.md#function-do_to_json-22) () noexcept const = 0<br> |
 | virtual [**backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md) | [**get\_backend\_view**](classuipc_1_1geometry_1_1_i_attribute.md#function-get_backend_view) () noexcept const = 0<br> |
 | virtual SizeT | [**get\_size**](classuipc_1_1geometry_1_1_i_attribute.md#function-get_size) () const = 0<br> |
+| virtual std::string\_view | [**get\_type\_name**](classuipc_1_1geometry_1_1_i_attribute.md#function-get_type_name) () noexcept const = 0<br> |
 
 
 
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 
@@ -303,6 +316,21 @@ span< const T > uipc::geometry::Attribute::view () noexcept const
 
 
 <hr>
+## Public Static Functions Documentation
+
+
+
+
+### function type 
+
+```C++
+static std::string uipc::geometry::Attribute::type () noexcept
+```
+
+
+
+
+<hr>
 ## Protected Functions Documentation
 
 
@@ -371,6 +399,23 @@ Implements [*uipc::geometry::IAttribute::do\_copy\_from*](classuipc_1_1geometry_
 
 
 
+### function do\_from\_json 
+
+```C++
+virtual void uipc::geometry::Attribute::do_from_json (
+    const Json & j
+) noexcept override
+```
+
+
+
+Implements [*uipc::geometry::IAttribute::do\_from\_json*](classuipc_1_1geometry_1_1_i_attribute.md#function-do_from_json)
+
+
+<hr>
+
+
+
 ### function do\_reorder 
 
 ```C++
@@ -422,7 +467,7 @@ Implements [*uipc::geometry::IAttribute::do\_resize*](classuipc_1_1geometry_1_1_
 
 
 
-### function do\_to\_json 
+### function do\_to\_json [1/2]
 
 ```C++
 virtual Json uipc::geometry::Attribute::do_to_json (
@@ -432,7 +477,22 @@ virtual Json uipc::geometry::Attribute::do_to_json (
 
 
 
-Implements [*uipc::geometry::IAttribute::do\_to\_json*](classuipc_1_1geometry_1_1_i_attribute.md#function-do_to_json)
+Implements [*uipc::geometry::IAttribute::do\_to\_json*](classuipc_1_1geometry_1_1_i_attribute.md#function-do_to_json-12)
+
+
+<hr>
+
+
+
+### function do\_to\_json [2/2]
+
+```C++
+virtual Json uipc::geometry::Attribute::do_to_json () noexcept override const
+```
+
+
+
+Implements [*uipc::geometry::IAttribute::do\_to\_json*](classuipc_1_1geometry_1_1_i_attribute.md#function-do_to_json-22)
 
 
 <hr>
@@ -463,6 +523,21 @@ virtual SizeT uipc::geometry::Attribute::get_size () override const
 
 
 Implements [*uipc::geometry::IAttribute::get\_size*](classuipc_1_1geometry_1_1_i_attribute.md#function-get_size)
+
+
+<hr>
+
+
+
+### function get\_type\_name 
+
+```C++
+virtual std::string_view uipc::geometry::Attribute::get_type_name () noexcept override const
+```
+
+
+
+Implements [*uipc::geometry::IAttribute::get\_type\_name*](classuipc_1_1geometry_1_1_i_attribute.md#function-get_type_name)
 
 
 <hr>## Friends Documentation

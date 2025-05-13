@@ -58,7 +58,6 @@ class UIPC_CORE_API IAttributeSlot
     [[nodiscard]] SizeT         use_count() const;
     [[nodiscard]] virtual SizeT get_use_count() const = 0;
 
-    [[nodiscard]] virtual std::string_view  get_type_name() const noexcept = 0;
     [[nodiscard]] virtual S<IAttributeSlot> clone(std::string_view name,
                                                   bool allow_destroy) const;
     [[nodiscard]] virtual S<IAttributeSlot> do_clone(std::string_view name,
@@ -73,9 +72,6 @@ class UIPC_CORE_API IAttributeSlot
     [[nodiscard]] virtual const IAttribute& attribute() const noexcept;
     [[nodiscard]] virtual const IAttribute& get_attribute() const noexcept = 0;
     [[nodiscard]] virtual Json              do_to_json(SizeT i) const      = 0;
-
-    // [[nodiscard]] const BufferInfo& buffer_info() const;
-    // [[nodiscard]] virtual const BufferInfo& get_buffer_info() const noexcept = 0;
 };
 
 template <typename T>
@@ -94,7 +90,6 @@ class AttributeSlot final : public IAttributeSlot
     friend class AttributeCollection;
     // [[nodiscard]] virtual const BufferInfo& get_buffer_info() const noexcept override;
 
-    [[nodiscard]] virtual std::string_view get_type_name() const noexcept override;
     [[nodiscard]] virtual std::string_view get_name() const noexcept override;
     [[nodiscard]] virtual bool get_allow_destroy() const noexcept override;
 

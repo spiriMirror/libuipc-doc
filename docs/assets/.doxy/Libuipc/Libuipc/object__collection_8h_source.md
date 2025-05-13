@@ -23,14 +23,17 @@ class UIPC_CORE_API IObjectCollection
 class UIPC_CORE_API ObjectCollection : public IObjectCollection
 {
     friend class Scene;
+    friend class SceneFactory;
     friend struct fmt::formatter<ObjectCollection>;
 
   public:
     ObjectCollection() = default;
     S<Object> emplace(Object&& object);
 
-    S<Object>       find(IndexT id) noexcept;
-    S<const Object> find(IndexT id) const noexcept;
+    S<Object>               find(IndexT id) noexcept;
+    S<const Object>         find(IndexT id) const noexcept;
+    vector<S<Object>>       find(std::string_view name) noexcept;
+    vector<S<const Object>> find(std::string_view name) const noexcept;
 
     void destroy(IndexT id) noexcept;
 
@@ -39,8 +42,13 @@ class UIPC_CORE_API ObjectCollection : public IObjectCollection
     IndexT next_id() const noexcept;
 
   private:
-    IndexT                           m_next_id = 0;
+    mutable IndexT                   m_next_id = 0;
     unordered_map<IndexT, S<Object>> m_objects;
+
+    unordered_map<IndexT, S<Object>>&       objects();
+    const unordered_map<IndexT, S<Object>>& objects() const;
+
+    void build_from(span<S<Object>> objects) noexcept;
 };
 }  // namespace uipc::core
 

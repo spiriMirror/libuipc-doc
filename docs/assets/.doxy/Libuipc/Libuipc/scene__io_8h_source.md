@@ -22,8 +22,13 @@ class UIPC_IO_API SceneIO
 
     void write_surface(std::string_view filename);
 
-    geometry::SimplicialComplex simplicial_surface() const;
-    geometry::SimplicialComplex simplicial_surface(IndexT dim) const;
+    geometry::SimplicialComplex simplicial_surface(IndexT dim = -1) const;
+
+    static S<Scene> load(std::string_view filename);
+
+    static void save(const Scene& scene, std::string_view filename);
+
+    void save(std::string_view filename) const;
 
   private:
     Scene& m_scene;

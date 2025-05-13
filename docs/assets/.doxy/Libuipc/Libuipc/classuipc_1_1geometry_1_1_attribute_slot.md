@@ -161,7 +161,6 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1_i_attribute_slot.
 | virtual [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & | [**get\_attribute**](#function-get_attribute-12) () noexcept override<br> |
 | virtual const [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & | [**get\_attribute**](#function-get_attribute-22) () noexcept override const<br> |
 | virtual std::string\_view | [**get\_name**](#function-get_name) () noexcept override const<br> |
-| virtual std::string\_view | [**get\_type\_name**](#function-get_type_name) () noexcept override const<br> |
 | virtual SizeT | [**get\_use\_count**](#function-get_use_count) () noexcept override const<br> |
 
 
@@ -183,7 +182,6 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1_i_attribute_slot.
 | virtual [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & | [**get\_attribute**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-get_attribute-12) () noexcept = 0<br> |
 | virtual const [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & | [**get\_attribute**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-get_attribute-22) () noexcept const = 0<br> |
 | virtual std::string\_view | [**get\_name**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-get_name) () noexcept const = 0<br> |
-| virtual std::string\_view | [**get\_type\_name**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-get_type_name) () noexcept const = 0<br> |
 | virtual SizeT | [**get\_use\_count**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-get_use_count) () const = 0<br> |
 |  void | [**make\_owned**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-make_owned) () <br> |
 |  SizeT | [**use\_count**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-use_count) () const<br> |
@@ -193,7 +191,7 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1_i_attribute_slot.
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 
@@ -399,21 +397,6 @@ Implements [*uipc::geometry::IAttributeSlot::get\_name*](classuipc_1_1geometry_1
 
 
 
-### function get\_type\_name 
-
-```C++
-virtual std::string_view uipc::geometry::AttributeSlot::get_type_name () noexcept override const
-```
-
-
-
-Implements [*uipc::geometry::IAttributeSlot::get\_type\_name*](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-get_type_name)
-
-
-<hr>
-
-
-
 ### function get\_use\_count 
 
 ```C++
@@ -458,5 +441,5 @@ span< U > uipc::geometry::AttributeSlot::view (
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `include/uipc/geometry/attribute.h`
+The documentation for this class was generated from the following file `include/uipc/geometry/attribute_slot.h`
 

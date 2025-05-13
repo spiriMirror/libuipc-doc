@@ -75,7 +75,7 @@ _This file records all the built-in attribute names in the libuipc specification
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 Programmers can define their own UIPC\_BUILTIN\_ATTRIBUTE macro outside this file, and include this file to get the built-in attribute names.

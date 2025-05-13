@@ -44,14 +44,13 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::core::Object &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_object_01_4.md) &lt;&gt;<br> |
 | class | [**IObject**](classuipc_1_1core_1_1_i_object.md) <br> |
 | class | [**Object**](classuipc_1_1core_1_1_object.md) <br> |
 | class | [**CGeometries**](classuipc_1_1core_1_1_object_1_1_c_geometries.md) <br> |
 | class | [**Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md) <br> |
 | class | [**ObjectGeometrySlots**](classuipc_1_1core_1_1_object_geometry_slots.md) &lt;GeometryT&gt;<br> |
-| class | [**ObjectGeometrySlots**](classuipc_1_1core_1_1_object_geometry_slots.md) &lt;GeometryT&gt;<br> |
-| class | [**ObjectGeometrySlots**](classuipc_1_1core_1_1_object_geometry_slots.md) &lt;GeometryT&gt;<br> |
+| class | [**ObjectGeometrySlots&lt; const geometry::Geometry &gt;**](classuipc_1_1core_1_1_object_geometry_slots_3_01const_01geometry_1_1_geometry_01_4.md) &lt;&gt;<br> |
+| class | [**ObjectGeometrySlots&lt; geometry::Geometry &gt;**](classuipc_1_1core_1_1_object_geometry_slots_3_01geometry_1_1_geometry_01_4.md) &lt;&gt;<br> |
 
 
 

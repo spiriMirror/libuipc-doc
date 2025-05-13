@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespaceuipc_1_1core" kind="namespace" language="C++">
     <compoundname>uipc::core</compoundname>
     <innerclass refid="classuipc_1_1core_1_1_animation" prot="public">uipc::core::Animation</innerclass>
@@ -25,13 +25,14 @@
     <innerclass refid="classuipc_1_1core_1_1_object" prot="public">uipc::core::Object</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_object_collection" prot="public">uipc::core::ObjectCollection</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots" prot="public">uipc::core::ObjectGeometrySlots</innerclass>
-    <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots" prot="public">uipc::core::ObjectGeometrySlots&lt; const geometry::Geometry &gt;</innerclass>
-    <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots" prot="public">uipc::core::ObjectGeometrySlots&lt; geometry::Geometry &gt;</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots_3_01const_01geometry_1_1_geometry_01_4" prot="public">uipc::core::ObjectGeometrySlots&lt; const geometry::Geometry &gt;</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_object_geometry_slots_3_01geometry_1_1_geometry_01_4" prot="public">uipc::core::ObjectGeometrySlots&lt; geometry::Geometry &gt;</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_sanity_checker" prot="public">uipc::core::SanityChecker</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_sanity_checker_collection_create_info" prot="public">uipc::core::SanityCheckerCollectionCreateInfo</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_sanity_check_message" prot="public">uipc::core::SanityCheckMessage</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_sanity_check_message_collection" prot="public">uipc::core::SanityCheckMessageCollection</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_scene" prot="public">uipc::core::Scene</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_scene_factory" prot="public">uipc::core::SceneFactory</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_scene_i_o" prot="public">uipc::core::SceneIO</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_scene_i_o_error" prot="public">uipc::core::SceneIOError</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_world" prot="public">uipc::core::World</innerclass>
@@ -74,9 +75,9 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="contact__model__collection_8h_1a0f1af00fd48c91f94e27ef83e571ec54" prot="public" static="no">
+      <memberdef kind="typedef" id="contact__model__collection_8h_1a6916c70d03579830ab507fad464d0c75" prot="public" static="no">
         <type><ref refid="classuipc_1_1core_1_1_contact_model_collection_t" kindref="compound">ContactModelCollectionT</ref>&lt; false &gt;</type>
-        <definition>using uipc::core::ContactModelCollection =  ContactModelCollectionT&lt;false&gt;</definition>
+        <definition>using uipc::core::ContactModelCollection = typedef ContactModelCollectionT&lt;false&gt;</definition>
         <argsstring></argsstring>
         <name>ContactModelCollection</name>
         <qualifiedname>uipc::core::ContactModelCollection</qualifiedname>
@@ -88,9 +89,9 @@
         </inbodydescription>
         <location file="include/uipc/core/contact_model_collection.h" line="52" column="1" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="52" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="contact__model__collection_8h_1a8f0402fd976df0933f503d5bf85819d4" prot="public" static="no">
+      <memberdef kind="typedef" id="contact__model__collection_8h_1aea227fbac33bca1e9515dca224524fe3" prot="public" static="no">
         <type><ref refid="classuipc_1_1core_1_1_contact_model_collection_t" kindref="compound">ContactModelCollectionT</ref>&lt; true &gt;</type>
-        <definition>using uipc::core::CContactModelCollection =  ContactModelCollectionT&lt;true&gt;</definition>
+        <definition>using uipc::core::CContactModelCollection = typedef ContactModelCollectionT&lt;true&gt;</definition>
         <argsstring></argsstring>
         <name>CContactModelCollection</name>
         <qualifiedname>uipc::core::CContactModelCollection</qualifiedname>
@@ -124,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_element.h" line="26" column="6" declfile="include/uipc/core/contact_element.h" declline="26" declcolumn="6"/>
+        <location file="include/uipc/core/contact_element.h" line="32" column="6" declfile="include/uipc/core/contact_element.h" declline="32" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="contact__element_8h_1a4f843662793df62c096c01babd049c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -146,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_element.h" line="27" column="6" declfile="include/uipc/core/contact_element.h" declline="27" declcolumn="6"/>
+        <location file="include/uipc/core/contact_element.h" line="33" column="6" declfile="include/uipc/core/contact_element.h" declline="33" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="contact__model_8h_1aedef044135cab1a2600278e260c1c956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,7 +213,51 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="61" column="6" declfile="include/uipc/core/contact_tabular.h" declline="61" declcolumn="6"/>
+        <location file="include/uipc/core/contact_tabular.h" line="64" column="6" declfile="include/uipc/core/contact_tabular.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="object_8h_1a3bc464555dc8c232ee92ce78c21b4225" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::to_json</definition>
+        <argsstring>(Json &amp;j, const Object &amp;object) noexcept</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="132" column="6" declfile="include/uipc/core/object.h" declline="132" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="object_8h_1a0a5b3f7cafdfb9b619e90372e8bd151e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::from_json</definition>
+        <argsstring>(const Json &amp;j, Object &amp;object) noexcept</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::core::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object.h" line="133" column="6" declfile="include/uipc/core/object.h" declline="133" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

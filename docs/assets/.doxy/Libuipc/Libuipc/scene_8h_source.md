@@ -32,9 +32,10 @@ class UIPC_CORE_API Scene final
     friend class Object;
     friend class SanityChecker;
     friend class Animation;
+    friend class SceneFactory;
 
   public:
-    Scene(const Json& config = default_config());
+    explicit Scene(const Json& config = default_config());
     ~Scene();
 
     static Json default_config() noexcept;
@@ -44,11 +45,12 @@ class UIPC_CORE_API Scene final
         friend class Scene;
 
       public:
-        S<Object> create(std::string_view name = "") &&;
-        S<Object> find(IndexT id) && noexcept;
-        void      destroy(IndexT id) &&;
-        SizeT     size() const noexcept;
-        SizeT     created_count() const noexcept;
+        S<Object>         create(std::string_view name = "") &&;
+        S<Object>         find(IndexT id) && noexcept;
+        vector<S<Object>> find(std::string_view name) && noexcept;
+        void              destroy(IndexT id) &&;
+        SizeT             size() const noexcept;
+        SizeT             created_count() const noexcept;
 
       private:
         Objects(Scene& scene) noexcept;
@@ -60,9 +62,10 @@ class UIPC_CORE_API Scene final
         friend class Scene;
 
       public:
-        S<const Object> find(IndexT id) && noexcept;
-        SizeT           size() const noexcept;
-        SizeT           created_count() const noexcept;
+        S<const Object>         find(IndexT id) && noexcept;
+        vector<S<const Object>> find(std::string_view name) && noexcept;
+        SizeT                   size() const noexcept;
+        SizeT                   created_count() const noexcept;
 
       private:
         CObjects(const Scene& scene) noexcept;
@@ -92,6 +95,8 @@ class UIPC_CORE_API Scene final
         CGeometries(const Scene& scene) noexcept;
         const Scene& m_scene;
     };
+
+    const Json& config() const noexcept;
 
     ContactTabular&       contact_tabular() noexcept;
     const ContactTabular& contact_tabular() const noexcept;
@@ -127,15 +132,16 @@ class UIPC_CORE_API Scene final
     void begin_pending() noexcept;
     void solve_pending() noexcept;
 
-    geometry::GeometryCollection& geometry_collection() noexcept;
-    geometry::GeometryCollection& rest_geometry_collection() noexcept;
+    geometry::GeometryCollection& geometry_collection() const noexcept;
+    geometry::GeometryCollection& rest_geometry_collection() const noexcept;
+    ObjectCollection&             object_collection() const noexcept;
 
     World& world() noexcept;
     Float  dt() const noexcept;
     bool   is_started() const noexcept;
 
-    DiffSim& _diff_sim() noexcept; // only called by SceneVisitor
-    bool   is_pending() const noexcept;
+    DiffSim& _diff_sim() noexcept;  // only called by SceneVisitor
+    bool     is_pending() const noexcept;
 };
 }  // namespace uipc::core
 

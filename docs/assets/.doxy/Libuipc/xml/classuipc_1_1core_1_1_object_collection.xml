@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_object_collection" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::ObjectCollection</compoundname>
     <basecompoundref refid="classuipc_1_1core_1_1_i_object_collection" prot="public" virt="non-virtual">uipc::core::IObjectCollection</basecompoundref>
@@ -21,6 +21,23 @@
         </inbodydescription>
         <location file="include/uipc/core/object_collection.h" line="15" column="18" bodyfile="include/uipc/core/object_collection.h" bodystart="15" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_collection_1aace72bb27f976f9bf22d4ef1f887c0a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class SceneFactory</definition>
+        <argsstring></argsstring>
+        <name>SceneFactory</name>
+        <qualifiedname>uipc::core::ObjectCollection::SceneFactory</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_scene_factory" kindref="compound">SceneFactory</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object_collection.h" line="16" column="18" bodyfile="include/uipc/core/object_collection.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="friend" id="classuipc_1_1core_1_1_object_collection_1a0a31668cf853ea3f169b4af25da950d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>struct</type>
         <definition>friend struct fmt::formatter&lt; ObjectCollection &gt;</definition>
@@ -36,11 +53,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="15" column="18" bodyfile="include/uipc/core/object_collection.h" bodystart="16" bodyend="-1"/>
+        <location file="include/uipc/core/object_collection.h" line="16" column="18" bodyfile="include/uipc/core/object_collection.h" bodystart="17" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classuipc_1_1core_1_1_object_collection_1a3b612c0278960cacbe60546862e9e313" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_object_collection_1a3b612c0278960cacbe60546862e9e313" prot="private" static="no" mutable="yes">
         <type>IndexT</type>
         <definition>IndexT uipc::core::ObjectCollection::m_next_id</definition>
         <argsstring></argsstring>
@@ -53,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="32" column="38" bodyfile="include/uipc/core/object_collection.h" bodystart="32" bodyend="-1"/>
+        <location file="include/uipc/core/object_collection.h" line="35" column="38" bodyfile="include/uipc/core/object_collection.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1core_1_1_object_collection_1ab89197675ae837e02becc87838ecf4ec" prot="private" static="no" mutable="no">
         <type>unordered_map&lt; IndexT, S&lt; <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt; &gt;</type>
@@ -67,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="33" column="19" bodyfile="include/uipc/core/object_collection.h" bodystart="33" bodyend="-1"/>
+        <location file="include/uipc/core/object_collection.h" line="36" column="19" bodyfile="include/uipc/core/object_collection.h" bodystart="36" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -83,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="19" column="5"/>
+        <location file="include/uipc/core/object_collection.h" line="20" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a268bcb5e93eaf3fcbc03db7ac231420c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt;</type>
@@ -101,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="20" column="7"/>
+        <location file="include/uipc/core/object_collection.h" line="21" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a5139c9d013892350a24eb5ad816beb57" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>S&lt; <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt;</type>
@@ -119,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="22" column="13"/>
+        <location file="include/uipc/core/object_collection.h" line="23" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1aeb50fdeddf4431a857fdefeeaf5163f3" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>S&lt; const <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt;</type>
@@ -137,7 +154,43 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="23" column="7"/>
+        <location file="include/uipc/core/object_collection.h" line="24" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a7f29880148fd63119f6a71c744a840fb" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>vector&lt; S&lt; <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt; &gt;</type>
+        <definition>vector&lt; S&lt; Object &gt; &gt; uipc::core::ObjectCollection::find</definition>
+        <argsstring>(std::string_view name) noexcept</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::core::ObjectCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object_collection.h" line="25" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a18f2e654b2cb35e67007de56305144d5" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>vector&lt; S&lt; const <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt; &gt;</type>
+        <definition>vector&lt; S&lt; const Object &gt; &gt; uipc::core::ObjectCollection::find</definition>
+        <argsstring>(std::string_view name) const noexcept</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::core::ObjectCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object_collection.h" line="26" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a550cc1033936054c3197d4833a9e1a73" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -155,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="25" column="10"/>
+        <location file="include/uipc/core/object_collection.h" line="28" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a1b0feb9afb544e6e09f0d2836bd15688" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -173,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="27" column="12"/>
+        <location file="include/uipc/core/object_collection.h" line="30" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a2a3312f59210301d9c683686e0ce48b2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
@@ -187,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="28" column="12"/>
+        <location file="include/uipc/core/object_collection.h" line="31" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1ab69f72c3fbb141bfbab513595c928879" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>IndexT</type>
@@ -201,7 +254,55 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/object_collection.h" line="29" column="12"/>
+        <location file="include/uipc/core/object_collection.h" line="32" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a87bb77e3f715d5cf017c59c9f939f19c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unordered_map&lt; IndexT, S&lt; <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt; &gt; &amp;</type>
+        <definition>unordered_map&lt; IndexT, S&lt; Object &gt; &gt; &amp; uipc::core::ObjectCollection::objects</definition>
+        <argsstring>()</argsstring>
+        <name>objects</name>
+        <qualifiedname>uipc::core::ObjectCollection::objects</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object_collection.h" line="38" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a3fa1c543d4732ca3fdedc0a4dd2b2652" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const unordered_map&lt; IndexT, S&lt; <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt; &gt; &amp;</type>
+        <definition>const unordered_map&lt; IndexT, S&lt; Object &gt; &gt; &amp; uipc::core::ObjectCollection::objects</definition>
+        <argsstring>() const</argsstring>
+        <name>objects</name>
+        <qualifiedname>uipc::core::ObjectCollection::objects</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object_collection.h" line="39" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_collection_1a8b5bf762c0d218b79a83770f415a6361" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::ObjectCollection::build_from</definition>
+        <argsstring>(span&lt; S&lt; Object &gt; &gt; objects) noexcept</argsstring>
+        <name>build_from</name>
+        <qualifiedname>uipc::core::ObjectCollection::build_from</qualifiedname>
+        <param>
+          <type>span&lt; S&lt; <ref refid="classuipc_1_1core_1_1_object" kindref="compound">Object</ref> &gt; &gt;</type>
+          <declname>objects</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/object_collection.h" line="41" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -232,19 +333,25 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/core/object_collection.h" line="13" column="1" bodyfile="include/uipc/core/object_collection.h" bodystart="14" bodyend="34"/>
+    <location file="include/uipc/core/object_collection.h" line="13" column="1" bodyfile="include/uipc/core/object_collection.h" bodystart="14" bodyend="42"/>
     <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_object_collection_1a8b5bf762c0d218b79a83770f415a6361" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>build_from</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a550cc1033936054c3197d4833a9e1a73" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>destroy</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a268bcb5e93eaf3fcbc03db7ac231420c" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>emplace</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a5139c9d013892350a24eb5ad816beb57" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>find</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1aeb50fdeddf4431a857fdefeeaf5163f3" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1core_1_1_object_collection_1a7f29880148fd63119f6a71c744a840fb" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1core_1_1_object_collection_1a18f2e654b2cb35e67007de56305144d5" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>find</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a0a31668cf853ea3f169b4af25da950d8" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>fmt::formatter&lt; ObjectCollection &gt;</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a3b612c0278960cacbe60546862e9e313" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>m_next_id</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1ab89197675ae837e02becc87838ecf4ec" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>m_objects</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1ab69f72c3fbb141bfbab513595c928879" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>next_id</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a563680d1a914d4eb285efd4174540dc7" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>ObjectCollection</name></member>
+      <member refid="classuipc_1_1core_1_1_object_collection_1a87bb77e3f715d5cf017c59c9f939f19c" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>objects</name></member>
+      <member refid="classuipc_1_1core_1_1_object_collection_1a3fa1c543d4732ca3fdedc0a4dd2b2652" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>objects</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a1b0feb9afb544e6e09f0d2836bd15688" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>reserve</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>Scene</name></member>
+      <member refid="classuipc_1_1core_1_1_object_collection_1aace72bb27f976f9bf22d4ef1f887c0a6" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>SceneFactory</name></member>
       <member refid="classuipc_1_1core_1_1_object_collection_1a2a3312f59210301d9c683686e0ce48b2" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>size</name></member>
       <member refid="classuipc_1_1core_1_1_i_object_collection_1a70df0d5abd4daa7949041c001b22e44f" prot="public" virt="virtual"><scope>uipc::core::ObjectCollection</scope><name>~IObjectCollection</name></member>
     </listofallmembers>

@@ -65,7 +65,7 @@
 * **TetrahedronAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **TriangleAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **TopoValueT** ([**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
-* **type** ([**uipc::propagate\_const**](structuipc_1_1propagate__const.md))
+* **type** ([**uipc::propagate\_const**](structuipc_1_1propagate__const.md), [**uipc::signature&lt; R(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_args_8_8_8_08_4.md))
 
 
 ## v

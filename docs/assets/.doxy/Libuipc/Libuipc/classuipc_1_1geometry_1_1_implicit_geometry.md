@@ -116,11 +116,12 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 |   | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md#function-geometry-13) () <br> |
 |   | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md#function-geometry-23) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = default<br> |
 |   | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md#function-geometry-33) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = default<br> |
-|  T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as) () <br> |
-|  [**InstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
-|  [**CInstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-22) () const<br> |
-|  [**MetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
-|  [**CMetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-22) () const<br> |
+|  T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as-12) () <br> |
+|  const T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as-22) () const<br> |
+|  InstanceAttributes | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
+|  CInstanceAttributes | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-22) () const<br> |
+|  MetaAttributes | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
+|  CMetaAttributes | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-22) () const<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1_geometry.md#function-operator) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = delete<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1_geometry.md#function-operator_1) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = delete<br> |
 
@@ -131,6 +132,7 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**clone**](classuipc_1_1geometry_1_1_i_geometry.md#function-clone) () const<br> |
 |  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_geometry.md#function-to_json) () const<br> |
 |  std::string\_view | [**type**](classuipc_1_1geometry_1_1_i_geometry.md#function-type) () noexcept const<br>_Get the type of the geometries, check the type to downcast the geometries to a specific type._  |
 | virtual  | [**~IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md#function-igeometry) () = default<br> |
@@ -214,6 +216,7 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
 | virtual std::string\_view | [**get\_type**](#function-get_type) () noexcept override const<br> |
 
 
@@ -223,8 +226,11 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_build\_from\_attribute\_collections**](classuipc_1_1geometry_1_1_geometry.md#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept override<br> |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1_geometry.md#function-do_clone) () override const<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1_geometry.md#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override<br> |
 | virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_geometry.md#function-do_to_json) () override const<br> |
+| virtual std::string\_view | [**get\_type**](classuipc_1_1geometry_1_1_geometry.md#function-get_type) () noexcept override const<br> |
 
 
 ## Protected Functions inherited from uipc::geometry::IGeometry
@@ -233,6 +239,8 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_build\_from\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept = 0<br> |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_clone) () const = 0<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) = 0<br> |
 | virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_to_json) () const = 0<br> |
 | virtual std::string\_view | [**get\_type**](classuipc_1_1geometry_1_1_i_geometry.md#function-get_type) () noexcept const = 0<br> |
@@ -290,6 +298,21 @@ const builtin::UIDInfo & uipc::geometry::ImplicitGeometry::uid_info () noexcept 
 
 
 
+### function do\_clone 
+
+```C++
+virtual S< IGeometry > uipc::geometry::ImplicitGeometry::do_clone () override const
+```
+
+
+
+Implements [*uipc::geometry::Geometry::do\_clone*](classuipc_1_1geometry_1_1_geometry.md#function-do_clone)
+
+
+<hr>
+
+
+
 ### function get\_type 
 
 ```C++
@@ -298,7 +321,7 @@ virtual std::string_view uipc::geometry::ImplicitGeometry::get_type () noexcept 
 
 
 
-Implements [*uipc::geometry::IGeometry::get\_type*](classuipc_1_1geometry_1_1_i_geometry.md#function-get_type)
+Implements [*uipc::geometry::Geometry::get\_type*](classuipc_1_1geometry_1_1_geometry.md#function-get_type)
 
 
 <hr>

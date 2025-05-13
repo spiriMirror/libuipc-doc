@@ -19,6 +19,11 @@
 * **FiniteElement** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
+## g
+
+* **Geometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+
+
 ## i
 
 * **is\_matrix\_v** ([**uipc**](namespaceuipc.md))
@@ -33,6 +38,12 @@
 ## s
 
 * **SimplicialComplex** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+
+
+## _
+
+* **\_\_data\_\_** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **\_\_meta\_\_** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 

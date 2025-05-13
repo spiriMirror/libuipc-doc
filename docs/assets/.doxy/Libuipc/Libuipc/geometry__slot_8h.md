@@ -32,6 +32,7 @@
 | ---: | :--- |
 | namespace | [**std**](namespacestd.md) <br> |
 | namespace | [**uipc**](namespaceuipc.md) <br> |
+| namespace | [**core**](namespaceuipc_1_1core.md) <br> |
 | namespace | [**geometry**](namespaceuipc_1_1geometry.md) <br> |
 
 
@@ -40,6 +41,7 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
+| class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md) &lt;&gt;<br> |
 
 
 

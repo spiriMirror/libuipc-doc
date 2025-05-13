@@ -38,6 +38,7 @@
 | class | [**GeometryVisitor**](classuipc_1_1backend_1_1_geometry_visitor.md) <br> |
 | class | [**SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md) <br> |
 | class | [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) <br> |
+| class | [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) <br> |
 
 
 ## Public Types
@@ -101,7 +102,7 @@
 ### typedef HandleT 
 
 ```C++
-using uipc::backend::HandleT =  std::uint64_t;
+using uipc::backend::HandleT = typedef std::uint64_t;
 ```
 
 

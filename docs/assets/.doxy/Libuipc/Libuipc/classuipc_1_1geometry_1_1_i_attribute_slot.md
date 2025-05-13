@@ -106,7 +106,6 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 | virtual [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & | [**get\_attribute**](#function-get_attribute-12) () noexcept = 0<br> |
 | virtual const [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) & | [**get\_attribute**](#function-get_attribute-22) () noexcept const = 0<br> |
 | virtual std::string\_view | [**get\_name**](#function-get_name) () noexcept const = 0<br> |
-| virtual std::string\_view | [**get\_type\_name**](#function-get_type_name) () noexcept const = 0<br> |
 | virtual SizeT | [**get\_use\_count**](#function-get_use_count) () const = 0<br> |
 |  void | [**make\_owned**](#function-make_owned) () <br> |
 |  SizeT | [**use\_count**](#function-use_count) () const<br> |
@@ -164,7 +163,6 @@ uipc::geometry::IAttributeSlot::IAttributeSlot (
 
 ### function allow\_destroy 
 
-_Check if the underlying attribute is allowed to be destroyed._ 
 ```C++
 bool uipc::geometry::IAttributeSlot::allow_destroy () noexcept const
 ```
@@ -210,7 +208,6 @@ false, if the underlying attribute is owned, only this geometries reference to t
 
 ### function name 
 
-_Get the name of the attribute slot._ 
 ```C++
 std::string_view uipc::geometry::IAttributeSlot::name () noexcept const
 ```
@@ -295,7 +292,6 @@ Json uipc::geometry::IAttributeSlot::to_json () const
 
 ### function type\_name 
 
-_Get the type name of data stored in the attribute slot._ 
 ```C++
 std::string_view uipc::geometry::IAttributeSlot::type_name () noexcept const
 ```
@@ -483,19 +479,6 @@ virtual const IAttribute & uipc::geometry::IAttributeSlot::get_attribute () noex
 
 ```C++
 virtual std::string_view uipc::geometry::IAttributeSlot::get_name () noexcept const = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function get\_type\_name 
-
-```C++
-virtual std::string_view uipc::geometry::IAttributeSlot::get_type_name () noexcept const = 0
 ```
 
 

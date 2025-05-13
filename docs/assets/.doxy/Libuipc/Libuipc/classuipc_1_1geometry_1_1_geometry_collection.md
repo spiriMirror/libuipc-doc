@@ -424,6 +424,23 @@ virtual SizeT uipc::geometry::GeometryCollection::get_size () noexcept override 
 Implements [*uipc::geometry::IGeometryCollection::get\_size*](classuipc_1_1geometry_1_1_i_geometry_collection.md#function-get_size)
 
 
+<hr>## Friends Documentation
+
+
+
+
+
+### friend SceneFactory 
+
+```C++
+class uipc::geometry::GeometryCollection::SceneFactory (
+    core::SceneFactory
+) 
+```
+
+
+
+
 <hr>
 
 ------------------------------

@@ -33,7 +33,7 @@ class UIPC_CORE_API ContactTabular final
     ContactTabular(const ContactTabular&)            = delete;
     ContactTabular& operator=(const ContactTabular&) = delete;
 
-    ContactElement& create(std::string_view name = "") noexcept;
+    ContactElement create(std::string_view name = "") noexcept;
 
     IndexT insert(const ContactElement& L,
                   const ContactElement& R,
@@ -49,8 +49,8 @@ class UIPC_CORE_API ContactTabular final
                        bool        enable = true,
                        const Json& config = default_config()) noexcept;
 
-    ContactElement& default_element() noexcept;
-    ContactModel    default_model() const noexcept;
+    ContactElement default_element() noexcept;
+    ContactModel   default_model() const noexcept;
 
 
     friend void to_json(Json& j, const ContactTabular& ct);
@@ -64,8 +64,11 @@ class UIPC_CORE_API ContactTabular final
 
   private:
     class Impl;
-    U<Impl>                        m_impl;
-    geometry::AttributeCollection& internal_contact_models() noexcept;
+    U<Impl> m_impl;
+    friend class SceneFactory;
+    geometry::AttributeCollection& internal_contact_models() const noexcept;
+    span<ContactElement>           contact_elements() const noexcept;
+    void build_from(const geometry::AttributeCollection& ac, span<ContactElement> ce);
 };
 
 void to_json(Json& j, const ContactTabular& ct);

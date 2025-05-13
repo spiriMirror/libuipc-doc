@@ -120,19 +120,19 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 |   | [**SimplicialComplex**](#function-simplicialcomplex-33) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) && o) = default<br> |
 |  IndexT | [**dim**](#function-dim) () noexcept const<br>_Get the dimension of the simplicial complex._  |
 |  [**EdgeAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-edgeattributes) | [**edges**](#function-edges-12) () noexcept<br>_A wrapper of the edges and its attributes of the simplicial complex._  |
-|  [**CEdgeAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**edges**](#function-edges-22) () noexcept const<br> |
+|  CEdgeAttributes | [**edges**](#function-edges-22) () noexcept const<br> |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & | [**operator=**](#function-operator) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & o) = delete<br> |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & | [**operator=**](#function-operator_1) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) && o) = delete<br> |
 |  [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Vector3 &gt; & | [**positions**](#function-positions-12) () noexcept<br>_Get the positions of the vertices._  |
 |  const [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Vector3 &gt; & | [**positions**](#function-positions-22) () noexcept const<br>_A short cut to get the positions of the vertices._  |
 |  [**TetrahedronAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-tetrahedronattributes) | [**tetrahedra**](#function-tetrahedra-12) () noexcept<br>_A wrapper of the tetrahedra and its attributes of the simplicial complex._  |
-|  [**CTetrahedronAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**tetrahedra**](#function-tetrahedra-22) () noexcept const<br> |
+|  CTetrahedronAttributes | [**tetrahedra**](#function-tetrahedra-22) () noexcept const<br> |
 |  [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Matrix4x4 &gt; & | [**transforms**](#function-transforms-12) () <br>_A short-cut to get the non-const transforms attribute slot._  |
 |  const [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Matrix4x4 &gt; & | [**transforms**](#function-transforms-22) () const<br>_A short-cut to get the const transforms attribute slot._  |
 |  [**TriangleAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-triangleattributes) | [**triangles**](#function-triangles-12) () noexcept<br>_A wrapper of the triangles and its attributes of the simplicial complex._  |
-|  [**CTriangleAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**triangles**](#function-triangles-22) () noexcept const<br> |
+|  CTriangleAttributes | [**triangles**](#function-triangles-22) () noexcept const<br> |
 |  [**VertexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-vertexattributes) | [**vertices**](#function-vertices-12) () noexcept<br>_A wrapper of the vertices and its attributes of the simplicial complex._  |
-|  [**CVertexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**vertices**](#function-vertices-22) () noexcept const<br> |
+|  CVertexAttributes | [**vertices**](#function-vertices-22) () noexcept const<br> |
 
 
 ## Public Functions inherited from uipc::geometry::Geometry
@@ -144,11 +144,12 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 |   | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md#function-geometry-13) () <br> |
 |   | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md#function-geometry-23) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = default<br> |
 |   | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md#function-geometry-33) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = default<br> |
-|  T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as) () <br> |
-|  [**InstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
-|  [**CInstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-22) () const<br> |
-|  [**MetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
-|  [**CMetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-22) () const<br> |
+|  T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as-12) () <br> |
+|  const T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as-22) () const<br> |
+|  InstanceAttributes | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
+|  CInstanceAttributes | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-22) () const<br> |
+|  MetaAttributes | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
+|  CMetaAttributes | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-22) () const<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1_geometry.md#function-operator) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = delete<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1_geometry.md#function-operator_1) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = delete<br> |
 
@@ -159,6 +160,7 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**clone**](classuipc_1_1geometry_1_1_i_geometry.md#function-clone) () const<br> |
 |  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_geometry.md#function-to_json) () const<br> |
 |  std::string\_view | [**type**](classuipc_1_1geometry_1_1_i_geometry.md#function-type) () noexcept const<br>_Get the type of the geometries, check the type to downcast the geometries to a specific type._  |
 | virtual  | [**~IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md#function-igeometry) () = default<br> |
@@ -242,6 +244,8 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_build\_from\_attribute\_collections**](#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept override<br> |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json) () override const<br> |
 | virtual std::string\_view | [**get\_type**](#function-get_type) () noexcept override const<br> |
@@ -253,8 +257,11 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_build\_from\_attribute\_collections**](classuipc_1_1geometry_1_1_geometry.md#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept override<br> |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1_geometry.md#function-do_clone) () override const<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1_geometry.md#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override<br> |
 | virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_geometry.md#function-do_to_json) () override const<br> |
+| virtual std::string\_view | [**get\_type**](classuipc_1_1geometry_1_1_geometry.md#function-get_type) () noexcept override const<br> |
 
 
 ## Protected Functions inherited from uipc::geometry::IGeometry
@@ -263,6 +270,8 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_build\_from\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept = 0<br> |
+| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_clone) () const = 0<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) = 0<br> |
 | virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_to_json) () const = 0<br> |
 | virtual std::string\_view | [**get\_type**](classuipc_1_1geometry_1_1_i_geometry.md#function-get_type) () noexcept const = 0<br> |
@@ -274,7 +283,7 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 In $\mathbb{R}^3$, a simplicial complex is defined as follows: $$ K = (V, E, F, T), $$ where $V$ is the set of vertices, $E$ is the set of edges, $F$ is the set of triangles, and $T$ is the set of tetrahedra.
@@ -514,7 +523,7 @@ EdgeAttributes uipc::geometry::SimplicialComplex::edges () noexcept
 
 **Returns:**
 
-[**EdgeAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-edgeattributes) 
+EdgeAttributes 
 
 
 
@@ -632,7 +641,7 @@ TetrahedronAttributes uipc::geometry::SimplicialComplex::tetrahedra () noexcept
 
 **Returns:**
 
-[**TetrahedronAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-tetrahedronattributes) 
+TetrahedronAttributes 
 
 
 
@@ -720,7 +729,7 @@ TriangleAttributes uipc::geometry::SimplicialComplex::triangles () noexcept
 
 **Returns:**
 
-[**TriangleAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-triangleattributes) 
+TriangleAttributes 
 
 
 
@@ -785,6 +794,39 @@ CVertexAttributes uipc::geometry::SimplicialComplex::vertices () noexcept const
 
 
 
+### function do\_build\_from\_attribute\_collections 
+
+```C++
+virtual void uipc::geometry::SimplicialComplex::do_build_from_attribute_collections (
+    span< std::string > names,
+    span< AttributeCollection * > collections
+) noexcept override
+```
+
+
+
+Implements [*uipc::geometry::Geometry::do\_build\_from\_attribute\_collections*](classuipc_1_1geometry_1_1_geometry.md#function-do_build_from_attribute_collections)
+
+
+<hr>
+
+
+
+### function do\_clone 
+
+```C++
+virtual S< IGeometry > uipc::geometry::SimplicialComplex::do_clone () override const
+```
+
+
+
+Implements [*uipc::geometry::Geometry::do\_clone*](classuipc_1_1geometry_1_1_geometry.md#function-do_clone)
+
+
+<hr>
+
+
+
 ### function do\_collect\_attribute\_collections 
 
 ```C++
@@ -826,7 +868,7 @@ virtual std::string_view uipc::geometry::SimplicialComplex::get_type () noexcept
 
 
 
-Implements [*uipc::geometry::IGeometry::get\_type*](classuipc_1_1geometry_1_1_i_geometry.md#function-get_type)
+Implements [*uipc::geometry::Geometry::get\_type*](classuipc_1_1geometry_1_1_geometry.md#function-get_type)
 
 
 <hr>## Friends Documentation

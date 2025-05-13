@@ -51,6 +51,7 @@
 
 ## g
 
+* **Geometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **GeometrySlotState** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **ground** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **glfw\_native\_window\_handle** ([**uipc::gui**](namespaceuipc_1_1gui.md))
@@ -173,7 +174,6 @@
 * **U** ([**uipc**](namespaceuipc.md))
 * **U32** ([**uipc**](namespaceuipc.md))
 * **U64** ([**uipc**](namespaceuipc.md))
-* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v
@@ -198,6 +198,12 @@
 ## w
 
 * **W** ([**uipc**](namespaceuipc.md))
+
+
+## _
+
+* **\_\_data\_\_** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **\_\_meta\_\_** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 

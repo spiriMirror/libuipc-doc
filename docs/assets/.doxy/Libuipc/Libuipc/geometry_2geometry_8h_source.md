@@ -30,15 +30,27 @@ class UIPC_CORE_API IGeometry
     virtual ~IGeometry() = default;
     [[nodiscard]] Json to_json() const;
 
+    /*
+    * @brief Clone the underlying geometry, this is used to create a new geometry with the same type and attributes.
+    */
+    [[nodiscard]] virtual S<IGeometry> clone() const;
+
   protected:
     [[nodiscard]] virtual std::string_view get_type() const noexcept = 0;
     virtual Json                           do_to_json() const        = 0;
     virtual void do_collect_attribute_collections(vector<std::string>& names,
                                                   vector<AttributeCollection*>& collections) = 0;
+    virtual void do_build_from_attribute_collections(
+        span<std::string> names, span<AttributeCollection*> collections) noexcept = 0;
+    virtual S<IGeometry> do_clone() const = 0;
 
   private:
     void collect_attribute_collections(vector<std::string>& names,
                                        vector<AttributeCollection*>& collections);
+
+
+    void build_from_attribute_collections(span<std::string> names,
+                                          span<AttributeCollection*> collections) noexcept;
 };
 
 class UIPC_CORE_API Geometry : public IGeometry
@@ -154,16 +166,12 @@ class UIPC_CORE_API Geometry : public IGeometry
         InstanceAttributesT& operator=(const InstanceAttributesT& o) = default;
         InstanceAttributesT& operator=(InstanceAttributesT&& o)      = default;
 
-        void resize(size_t size) &&
-            requires(!IsConst);
-        void reserve(size_t size) &&
-            requires(!IsConst);
-        void clear() &&
-            requires(!IsConst);
+        void resize(size_t size) && requires(!IsConst);
+        void reserve(size_t size) && requires(!IsConst);
+        void clear() && requires(!IsConst);
         [[nodiscard]] SizeT size() &&;
 
-        void destroy(std::string_view name) &&
-            requires(!IsConst);
+        void destroy(std::string_view name) && requires(!IsConst);
 
         template <typename T>
         [[nodiscard]] auto find(std::string_view name) &&
@@ -224,10 +232,18 @@ class UIPC_CORE_API Geometry : public IGeometry
     template <std::derived_from<Geometry> T>
     [[nodiscard]] T* as();
 
+    template <std::derived_from<Geometry> T>
+    [[nodiscard]] const T* as() const;
+
   protected:
     virtual Json do_to_json() const override;
     virtual void do_collect_attribute_collections(vector<std::string>& names,
                                                   vector<AttributeCollection*>& collections) override;
+    virtual void do_build_from_attribute_collections(span<std::string> names,
+                                                     span<AttributeCollection*> collections) noexcept override;
+    virtual S<IGeometry> do_clone() const override;
+
+    virtual std::string_view get_type() const noexcept override;
 
     AttributeCollection m_intances;
     AttributeCollection m_meta;

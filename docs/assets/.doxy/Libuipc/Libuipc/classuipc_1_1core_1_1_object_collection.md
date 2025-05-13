@@ -75,8 +75,10 @@ Inherits the following classes: [uipc::core::IObjectCollection](classuipc_1_1cor
 |   | [**ObjectCollection**](#function-objectcollection) () = default<br> |
 |  void | [**destroy**](#function-destroy) (IndexT id) noexcept<br> |
 |  S&lt; [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**emplace**](#function-emplace) ([**Object**](classuipc_1_1core_1_1_object.md) && object) <br> |
-|  S&lt; [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**find**](#function-find-12) (IndexT id) noexcept<br> |
-|  S&lt; const [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**find**](#function-find-22) (IndexT id) noexcept const<br> |
+|  S&lt; [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**find**](#function-find-14) (IndexT id) noexcept<br> |
+|  S&lt; const [**Object**](classuipc_1_1core_1_1_object.md) &gt; | [**find**](#function-find-24) (IndexT id) noexcept const<br> |
+|  vector&lt; S&lt; [**Object**](classuipc_1_1core_1_1_object.md) &gt; &gt; | [**find**](#function-find-34) (std::string\_view name) noexcept<br> |
+|  vector&lt; S&lt; const [**Object**](classuipc_1_1core_1_1_object.md) &gt; &gt; | [**find**](#function-find-44) (std::string\_view name) noexcept const<br> |
 |  IndexT | [**next\_id**](#function-next_id) () noexcept const<br> |
 |  void | [**reserve**](#function-reserve) (SizeT size) noexcept<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
@@ -191,7 +193,7 @@ S< Object > uipc::core::ObjectCollection::emplace (
 
 
 
-### function find [1/2]
+### function find [1/4]
 
 ```C++
 S< Object > uipc::core::ObjectCollection::find (
@@ -206,11 +208,41 @@ S< Object > uipc::core::ObjectCollection::find (
 
 
 
-### function find [2/2]
+### function find [2/4]
 
 ```C++
 S< const Object > uipc::core::ObjectCollection::find (
     IndexT id
+) noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function find [3/4]
+
+```C++
+vector< S< Object > > uipc::core::ObjectCollection::find (
+    std::string_view name
+) noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function find [4/4]
+
+```C++
+vector< S< const Object > > uipc::core::ObjectCollection::find (
+    std::string_view name
 ) noexcept const
 ```
 

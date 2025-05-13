@@ -50,17 +50,17 @@
 | struct | [**PmrDeleter**](structuipc_1_1_pmr_deleter.md) &lt;typename T&gt;<br> |
 | class | [**Timer**](classuipc_1_1_timer.md) <br> |
 | class | [**is\_matrix**](classuipc_1_1is__matrix.md) &lt;typename MatrixT&gt;<br> |
-| class | [**is\_matrix**](classuipc_1_1is__matrix.md) &lt;typename MatrixT&gt;<br> |
+| class | [**is\_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](classuipc_1_1is__matrix_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_options_00209f23989f4c2eaf53edf139526fd2cf.md) &lt;typename Scalar, Rows, Cols, Options, MaxRows, MaxCols&gt;<br> |
 | struct | [**propagate\_const**](structuipc_1_1propagate__const.md) &lt;typename T, typename DstT&gt;<br> |
 | struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
-| struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
+| struct | [**signature&lt; R(&)(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_6_08_07_args_8_8_8_08_4.md) &lt;typename R, Args&gt;<br> |
+| struct | [**signature&lt; R(\*)(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_5_08_07_args_8_8_8_08_4.md) &lt;typename R, Args&gt;<br> |
+| struct | [**signature&lt; R(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_args_8_8_8_08_4.md) &lt;typename R, Args&gt;<br> |
+| struct | [**signature&lt; R(C::\*)(Args...) && &gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01_6_6_01_4.md) &lt;typename R, typename C, Args&gt;<br> |
+| struct | [**signature&lt; R(C::\*)(Args...) const &gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01_4.md) &lt;typename R, typename C, Args&gt;<br> |
+| struct | [**signature&lt; R(C::\*)(Args...) const volatile &gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_4.md) &lt;typename R, typename C, Args&gt;<br> |
+| struct | [**signature&lt; R(C::\*)(Args...) volatile &gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_4.md) &lt;typename R, typename C, Args&gt;<br> |
+| struct | [**signature&lt; R(C::\*)(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.md) &lt;typename R, typename C, Args&gt;<br> |
 
 
 ## Public Types
@@ -112,8 +112,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  bool | [**RUNTIME\_CHECK**](#variable-runtime_check)   = = false<br> |
-|  bool | [**is\_matrix\_v**](#variable-is_matrix_v)   = = [**is\_matrix**](classuipc_1_1is__matrix.md)&lt;MatrixT&gt;::value<br> |
+|  constexpr bool | [**RUNTIME\_CHECK**](#variable-runtime_check)   = = false<br> |
+|  constexpr bool | [**is\_matrix\_v**](#variable-is_matrix_v)   = = [**is\_matrix**](classuipc_1_1is__matrix.md)&lt;MatrixT&gt;::value<br> |
 
 
 
@@ -162,16 +162,16 @@
 |  UIPC\_CORE\_API void | [**init**](#function-init) (const Json & config) <br> |
 |  S&lt; T &gt; | [**make\_shared**](#function-make_shared) (Args &&... args) <br> |
 |  U&lt; T &gt; | [**make\_unique**](#function-make_unique) (Args &&... args) <br> |
-|  long double | [**operator""\_GPa**](#function-operator""_gpa) (long double value) <br>_Pascal literal operator (GPa)_  |
-|  long double | [**operator""\_MPa**](#function-operator""_mpa) (long double value) <br>_Pascal literal operator (MPa)_  |
-|  long double | [**operator""\_N**](#function-operator""_n) (long double value) <br>_Newton literal operator._  |
-|  long double | [**operator""\_Pa**](#function-operator""_pa) (long double value) <br>_Pascal literal operator._  |
-|  long double | [**operator""\_kPa**](#function-operator""_kpa) (long double value) <br>_Pascal literal operator (kPa)_  |
-|  long double | [**operator""\_km**](#function-operator""_km) (long double value) <br>_Meter literal operator (km)_  |
-|  long double | [**operator""\_m**](#function-operator""_m) (long double value) <br>_Meter literal operator._  |
-|  long double | [**operator""\_mm**](#function-operator""_mm) (long double value) <br>_Meter literal operator (mm)_  |
-|  long double | [**operator""\_ms**](#function-operator""_ms) (long double value) <br>_Second literal operator (ms)_  |
-|  long double | [**operator""\_s**](#function-operator""_s) (long double value) <br>_Second literal operator._  |
+|  constexpr long double | [**operator""\_GPa**](#function-operator""_gpa) (long double value) <br>_Pascal literal operator (GPa)_  |
+|  constexpr long double | [**operator""\_MPa**](#function-operator""_mpa) (long double value) <br>_Pascal literal operator (MPa)_  |
+|  constexpr long double | [**operator""\_N**](#function-operator""_n) (long double value) <br>_Newton literal operator._  |
+|  constexpr long double | [**operator""\_Pa**](#function-operator""_pa) (long double value) <br>_Pascal literal operator._  |
+|  constexpr long double | [**operator""\_kPa**](#function-operator""_kpa) (long double value) <br>_Pascal literal operator (kPa)_  |
+|  constexpr long double | [**operator""\_km**](#function-operator""_km) (long double value) <br>_Meter literal operator (km)_  |
+|  constexpr long double | [**operator""\_m**](#function-operator""_m) (long double value) <br>_Meter literal operator._  |
+|  constexpr long double | [**operator""\_mm**](#function-operator""_mm) (long double value) <br>_Meter literal operator (mm)_  |
+|  constexpr long double | [**operator""\_ms**](#function-operator""_ms) (long double value) <br>_Second literal operator (ms)_  |
+|  constexpr long double | [**operator""\_s**](#function-operator""_s) (long double value) <br>_Second literal operator._  |
 |  std::string | [**readable\_type\_name**](#function-readable_type_name) () noexcept<br> |
 |  std::size\_t | [**run\_length\_encode**](#function-run_length_encode) (InputIt in\_first, InputIt in\_last, OutputIt out\_unique, OutputCountIt out\_counts, Pred && pred) <br>_Run-length encode the input range, the input range must be sorted._  |
 |  auto | [**run\_length\_encode**](#function-run_length_encode) (InputIt in\_first, InputIt in\_last, OutputIt out\_unique, OutputCountIt out\_counts) <br> |
@@ -213,7 +213,7 @@
 ### typedef Allocator 
 
 ```C++
-using uipc::Allocator =  std::pmr::polymorphic_allocator<T>;
+using uipc::Allocator = typedef std::pmr::polymorphic_allocator<T>;
 ```
 
 
@@ -226,7 +226,7 @@ using uipc::Allocator =  std::pmr::polymorphic_allocator<T>;
 ### typedef Float 
 
 ```C++
-using uipc::Float =  double;
+using uipc::Float = typedef double;
 ```
 
 
@@ -239,7 +239,7 @@ using uipc::Float =  double;
 ### typedef I32 
 
 ```C++
-using uipc::I32 =  int32_t;
+using uipc::I32 = typedef int32_t;
 ```
 
 
@@ -252,7 +252,7 @@ using uipc::I32 =  int32_t;
 ### typedef I64 
 
 ```C++
-using uipc::I64 =  int64_t;
+using uipc::I64 = typedef int64_t;
 ```
 
 
@@ -265,7 +265,7 @@ using uipc::I64 =  int64_t;
 ### typedef IndexT 
 
 ```C++
-using uipc::IndexT =  int32_t;
+using uipc::IndexT = typedef int32_t;
 ```
 
 
@@ -278,7 +278,7 @@ using uipc::IndexT =  int32_t;
 ### typedef Json 
 
 ```C++
-using uipc::Json =  nlohmann::json;
+using uipc::Json = typedef nlohmann::json;
 ```
 
 
@@ -291,7 +291,7 @@ using uipc::Json =  nlohmann::json;
 ### typedef Matrix12x12 
 
 ```C++
-using uipc::Matrix12x12 =  Matrix<Float, 12, 12>;
+using uipc::Matrix12x12 = typedef Matrix<Float, 12, 12>;
 ```
 
 
@@ -304,7 +304,7 @@ using uipc::Matrix12x12 =  Matrix<Float, 12, 12>;
 ### typedef Matrix2x2 
 
 ```C++
-using uipc::Matrix2x2 =  Matrix<Float, 2, 2>;
+using uipc::Matrix2x2 = typedef Matrix<Float, 2, 2>;
 ```
 
 
@@ -317,7 +317,7 @@ using uipc::Matrix2x2 =  Matrix<Float, 2, 2>;
 ### typedef Matrix3x3 
 
 ```C++
-using uipc::Matrix3x3 =  Matrix<Float, 3, 3>;
+using uipc::Matrix3x3 = typedef Matrix<Float, 3, 3>;
 ```
 
 
@@ -330,7 +330,7 @@ using uipc::Matrix3x3 =  Matrix<Float, 3, 3>;
 ### typedef Matrix4x4 
 
 ```C++
-using uipc::Matrix4x4 =  Matrix<Float, 4, 4>;
+using uipc::Matrix4x4 = typedef Matrix<Float, 4, 4>;
 ```
 
 
@@ -343,7 +343,7 @@ using uipc::Matrix4x4 =  Matrix<Float, 4, 4>;
 ### typedef Matrix6x6 
 
 ```C++
-using uipc::Matrix6x6 =  Matrix<Float, 6, 6>;
+using uipc::Matrix6x6 = typedef Matrix<Float, 6, 6>;
 ```
 
 
@@ -356,7 +356,7 @@ using uipc::Matrix6x6 =  Matrix<Float, 6, 6>;
 ### typedef Matrix9x9 
 
 ```C++
-using uipc::Matrix9x9 =  Matrix<Float, 9, 9>;
+using uipc::Matrix9x9 = typedef Matrix<Float, 9, 9>;
 ```
 
 
@@ -369,7 +369,7 @@ using uipc::Matrix9x9 =  Matrix<Float, 9, 9>;
 ### typedef S 
 
 ```C++
-using uipc::S =  std::shared_ptr<T>;
+using uipc::S = typedef std::shared_ptr<T>;
 ```
 
 
@@ -382,7 +382,7 @@ using uipc::S =  std::shared_ptr<T>;
 ### typedef SizeT 
 
 ```C++
-using uipc::SizeT =  std::size_t;
+using uipc::SizeT = typedef std::size_t;
 ```
 
 
@@ -395,7 +395,7 @@ using uipc::SizeT =  std::size_t;
 ### typedef Transform 
 
 ```C++
-using uipc::Transform =  Eigen::Transform<Float, 3, Eigen::Affine>;
+using uipc::Transform = typedef Eigen::Transform<Float, 3, Eigen::Affine>;
 ```
 
 
@@ -408,7 +408,7 @@ using uipc::Transform =  Eigen::Transform<Float, 3, Eigen::Affine>;
 ### typedef Translation 
 
 ```C++
-using uipc::Translation =  Eigen::Translation<Float, 3>;
+using uipc::Translation = typedef Eigen::Translation<Float, 3>;
 ```
 
 
@@ -421,7 +421,7 @@ using uipc::Translation =  Eigen::Translation<Float, 3>;
 ### typedef U 
 
 ```C++
-using uipc::U =  std::unique_ptr<T, PmrDeleter<T>>;
+using uipc::U = typedef std::unique_ptr<T, PmrDeleter<T> >;
 ```
 
 
@@ -434,7 +434,7 @@ using uipc::U =  std::unique_ptr<T, PmrDeleter<T>>;
 ### typedef U32 
 
 ```C++
-using uipc::U32 =  uint32_t;
+using uipc::U32 = typedef uint32_t;
 ```
 
 
@@ -447,7 +447,7 @@ using uipc::U32 =  uint32_t;
 ### typedef U64 
 
 ```C++
-using uipc::U64 =  uint64_t;
+using uipc::U64 = typedef uint64_t;
 ```
 
 
@@ -460,7 +460,7 @@ using uipc::U64 =  uint64_t;
 ### typedef Vector12 
 
 ```C++
-using uipc::Vector12 =  Vector<Float, 12>;
+using uipc::Vector12 = typedef Vector<Float, 12>;
 ```
 
 
@@ -473,7 +473,7 @@ using uipc::Vector12 =  Vector<Float, 12>;
 ### typedef Vector2 
 
 ```C++
-using uipc::Vector2 =  Vector<Float, 2>;
+using uipc::Vector2 = typedef Vector<Float, 2>;
 ```
 
 
@@ -486,7 +486,7 @@ using uipc::Vector2 =  Vector<Float, 2>;
 ### typedef Vector2i 
 
 ```C++
-using uipc::Vector2i =  Vector<IndexT, 2>;
+using uipc::Vector2i = typedef Vector<IndexT, 2>;
 ```
 
 
@@ -499,7 +499,7 @@ using uipc::Vector2i =  Vector<IndexT, 2>;
 ### typedef Vector3 
 
 ```C++
-using uipc::Vector3 =  Vector<Float, 3>;
+using uipc::Vector3 = typedef Vector<Float, 3>;
 ```
 
 
@@ -512,7 +512,7 @@ using uipc::Vector3 =  Vector<Float, 3>;
 ### typedef Vector3i 
 
 ```C++
-using uipc::Vector3i =  Vector<IndexT, 3>;
+using uipc::Vector3i = typedef Vector<IndexT, 3>;
 ```
 
 
@@ -525,7 +525,7 @@ using uipc::Vector3i =  Vector<IndexT, 3>;
 ### typedef Vector4 
 
 ```C++
-using uipc::Vector4 =  Vector<Float, 4>;
+using uipc::Vector4 = typedef Vector<Float, 4>;
 ```
 
 
@@ -538,7 +538,7 @@ using uipc::Vector4 =  Vector<Float, 4>;
 ### typedef Vector4i 
 
 ```C++
-using uipc::Vector4i =  Vector<IndexT, 4>;
+using uipc::Vector4i = typedef Vector<IndexT, 4>;
 ```
 
 
@@ -551,7 +551,7 @@ using uipc::Vector4i =  Vector<IndexT, 4>;
 ### typedef Vector6 
 
 ```C++
-using uipc::Vector6 =  Vector<Float, 6>;
+using uipc::Vector6 = typedef Vector<Float, 6>;
 ```
 
 
@@ -564,7 +564,7 @@ using uipc::Vector6 =  Vector<Float, 6>;
 ### typedef Vector9 
 
 ```C++
-using uipc::Vector9 =  Vector<Float, 9>;
+using uipc::Vector9 = typedef Vector<Float, 9>;
 ```
 
 
@@ -577,7 +577,7 @@ using uipc::Vector9 =  Vector<Float, 9>;
 ### typedef VectorX 
 
 ```C++
-using uipc::VectorX =  Eigen::VectorX<Float>;
+using uipc::VectorX = typedef Eigen::VectorX<Float>;
 ```
 
 
@@ -590,7 +590,7 @@ using uipc::VectorX =  Eigen::VectorX<Float>;
 ### typedef VectorXi 
 
 ```C++
-using uipc::VectorXi =  Eigen::VectorX<IndexT>;
+using uipc::VectorXi = typedef Eigen::VectorX<IndexT>;
 ```
 
 
@@ -603,7 +603,7 @@ using uipc::VectorXi =  Eigen::VectorX<IndexT>;
 ### typedef VectorXi64 
 
 ```C++
-using uipc::VectorXi64 =  Eigen::VectorX<I64>;
+using uipc::VectorXi64 = typedef Eigen::VectorX<I64>;
 ```
 
 
@@ -616,7 +616,7 @@ using uipc::VectorXi64 =  Eigen::VectorX<I64>;
 ### typedef VectorXu 
 
 ```C++
-using uipc::VectorXu =  Eigen::VectorX<U32>;
+using uipc::VectorXu = typedef Eigen::VectorX<U32>;
 ```
 
 
@@ -629,7 +629,7 @@ using uipc::VectorXu =  Eigen::VectorX<U32>;
 ### typedef VectorXu64 
 
 ```C++
-using uipc::VectorXu64 =  Eigen::VectorX<U64>;
+using uipc::VectorXu64 = typedef Eigen::VectorX<U64>;
 ```
 
 
@@ -642,7 +642,7 @@ using uipc::VectorXu64 =  Eigen::VectorX<U64>;
 ### typedef W 
 
 ```C++
-using uipc::W =  std::weak_ptr<T>;
+using uipc::W = typedef std::weak_ptr<T>;
 ```
 
 
@@ -655,7 +655,7 @@ using uipc::W =  std::weak_ptr<T>;
 ### typedef propagate\_const\_t 
 
 ```C++
-using uipc::propagate_const_t =  typename propagate_const<T, DstT>::type;
+using uipc::propagate_const_t = typedef typename propagate_const<T, DstT>::type;
 ```
 
 
@@ -668,7 +668,7 @@ using uipc::propagate_const_t =  typename propagate_const<T, DstT>::type;
 ### typedef signature\_t 
 
 ```C++
-using uipc::signature_t =  typename signature<Sig>::type;
+using uipc::signature_t = typedef typename signature<Sig>::type;
 ```
 
 
@@ -681,7 +681,7 @@ using uipc::signature_t =  typename signature<Sig>::type;
 ### typedef stack 
 
 ```C++
-using uipc::stack =  std::stack<T, std::pmr::deque<T>>;
+using uipc::stack = typedef std::stack<T, std::pmr::deque<T> >;
 ```
 
 
@@ -696,7 +696,7 @@ using uipc::stack =  std::stack<T, std::pmr::deque<T>>;
 ### variable RUNTIME\_CHECK 
 
 ```C++
-bool uipc::RUNTIME_CHECK;
+constexpr bool uipc::RUNTIME_CHECK;
 ```
 
 
@@ -709,7 +709,7 @@ bool uipc::RUNTIME_CHECK;
 ### variable is\_matrix\_v 
 
 ```C++
-bool uipc::is_matrix_v;
+constexpr bool uipc::is_matrix_v;
 ```
 
 
@@ -1151,9 +1151,8 @@ U< T > uipc::make_unique (
 
 ### function operator""\_GPa 
 
-_Pascal literal operator (GPa)_ 
 ```C++
-long double uipc::operator""_GPa (
+constexpr long double uipc::operator""_GPa (
     long double value
 ) 
 ```
@@ -1167,9 +1166,8 @@ long double uipc::operator""_GPa (
 
 ### function operator""\_MPa 
 
-_Pascal literal operator (MPa)_ 
 ```C++
-long double uipc::operator""_MPa (
+constexpr long double uipc::operator""_MPa (
     long double value
 ) 
 ```
@@ -1185,7 +1183,7 @@ long double uipc::operator""_MPa (
 
 _Newton literal operator._ 
 ```C++
-long double uipc::operator""_N (
+constexpr long double uipc::operator""_N (
     long double value
 ) 
 ```
@@ -1209,7 +1207,7 @@ auto force = 1.0_N;
 
 _Pascal literal operator._ 
 ```C++
-long double uipc::operator""_Pa (
+constexpr long double uipc::operator""_Pa (
     long double value
 ) 
 ```
@@ -1231,9 +1229,8 @@ auto pressure = 1.0_Pa;
 
 ### function operator""\_kPa 
 
-_Pascal literal operator (kPa)_ 
 ```C++
-long double uipc::operator""_kPa (
+constexpr long double uipc::operator""_kPa (
     long double value
 ) 
 ```
@@ -1247,9 +1244,8 @@ long double uipc::operator""_kPa (
 
 ### function operator""\_km 
 
-_Meter literal operator (km)_ 
 ```C++
-long double uipc::operator""_km (
+constexpr long double uipc::operator""_km (
     long double value
 ) 
 ```
@@ -1265,7 +1261,7 @@ long double uipc::operator""_km (
 
 _Meter literal operator._ 
 ```C++
-long double uipc::operator""_m (
+constexpr long double uipc::operator""_m (
     long double value
 ) 
 ```
@@ -1287,9 +1283,8 @@ auto length = 1.0_m;
 
 ### function operator""\_mm 
 
-_Meter literal operator (mm)_ 
 ```C++
-long double uipc::operator""_mm (
+constexpr long double uipc::operator""_mm (
     long double value
 ) 
 ```
@@ -1303,9 +1298,8 @@ long double uipc::operator""_mm (
 
 ### function operator""\_ms 
 
-_Second literal operator (ms)_ 
 ```C++
-long double uipc::operator""_ms (
+constexpr long double uipc::operator""_ms (
     long double value
 ) 
 ```
@@ -1321,7 +1315,7 @@ long double uipc::operator""_ms (
 
 _Second literal operator._ 
 ```C++
-long double uipc::operator""_s (
+constexpr long double uipc::operator""_s (
     long double value
 ) 
 ```

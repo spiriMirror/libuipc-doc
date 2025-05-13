@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_scene_i_o" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::SceneIO</compoundname>
     <sectiondef kind="private-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="19" column="11" bodyfile="include/uipc/io/scene_io.h" bodystart="19" bodyend="-1"/>
+        <location file="include/uipc/io/scene_io.h" line="68" column="11" bodyfile="include/uipc/io/scene_io.h" bodystart="68" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -48,44 +48,173 @@
           <declname>filename</declname>
         </param>
         <briefdescription>
+<para>Write the surface of the scene to a file. Supported formats: </para>
         </briefdescription>
         <detaileddescription>
+<para><itemizedlist>
+<listitem><para>.obj </para>
+</listitem></itemizedlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="13" column="10"/>
+        <location file="include/uipc/io/scene_io.h" line="18" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a4fd6d3158cb8a7b9331647f9e04aa305" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1ad879a63749b9908348d09a395a4d94fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref></type>
         <definition>geometry::SimplicialComplex uipc::core::SceneIO::simplicial_surface</definition>
-        <argsstring>() const</argsstring>
-        <name>simplicial_surface</name>
-        <qualifiedname>uipc::core::SceneIO::simplicial_surface</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="15" column="33"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a35c8281ee14b12d06b5506f5a6f527b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref></type>
-        <definition>geometry::SimplicialComplex uipc::core::SceneIO::simplicial_surface</definition>
-        <argsstring>(IndexT dim) const</argsstring>
+        <argsstring>(IndexT dim=-1) const</argsstring>
         <name>simplicial_surface</name>
         <qualifiedname>uipc::core::SceneIO::simplicial_surface</qualifiedname>
         <param>
           <type>IndexT</type>
           <declname>dim</declname>
+          <defval>-1</defval>
         </param>
         <briefdescription>
+<para>Get the surface of the scene in the form of a simplicial complex allow to specify the dimension of the surface. </para>
         </briefdescription>
         <detaileddescription>
+<para><itemizedlist>
+<listitem><para>0: point cloud</para>
+</listitem><listitem><para>1: line mesh</para>
+</listitem><listitem><para>2: triangle mesh</para>
+</listitem><listitem><para>-1: all dimensions <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+</listitem></itemizedlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="16" column="33"/>
+        <location file="include/uipc/io/scene_io.h" line="30" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a2fbe56693aac409915e17f87104abeaa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::SceneIO::save</definition>
+        <argsstring>(std::string_view filename) const</argsstring>
+        <name>save</name>
+        <qualifiedname>uipc::core::SceneIO::save</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Save the scene to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported formats:<itemizedlist>
+<listitem><para>.json</para>
+</listitem><listitem><para>.bson</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="65" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1aa64325bcb9915c136532d6ca3689f90b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
+        <definition>static S&lt; Scene &gt; uipc::core::SceneIO::load</definition>
+        <argsstring>(std::string_view filename)</argsstring>
+        <name>load</name>
+        <qualifiedname>uipc::core::SceneIO::load</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Load a scene from a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported formats:<itemizedlist>
+<listitem><para>.json</para>
+</listitem><listitem><para>.bson</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="42" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1aed401fd405073abc51448df5a9332681" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::core::SceneIO::save</definition>
+        <argsstring>(const Scene &amp;scene, std::string_view filename)</argsstring>
+        <name>save</name>
+        <qualifiedname>uipc::core::SceneIO::save</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Save the scene to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported formats:<itemizedlist>
+<listitem><para>.json</para>
+</listitem><listitem><para>.bson</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="54" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -105,19 +234,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="20" column="12"/>
+        <location file="include/uipc/io/scene_io.h" line="69" column="12"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/io/scene_io.h" line="8" column="1" bodyfile="include/uipc/io/scene_io.h" bodystart="9" bodyend="21"/>
+    <location file="include/uipc/io/scene_io.h" line="8" column="1" bodyfile="include/uipc/io/scene_io.h" bodystart="9" bodyend="70"/>
     <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1aa64325bcb9915c136532d6ca3689f90b" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>load</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1afbcb62a24b4fbc0a00430bd10ab480ba" prot="private" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>m_scene</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1aed401fd405073abc51448df5a9332681" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>save</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1a2fbe56693aac409915e17f87104abeaa" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>save</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1a03e210001b1a4bd6ef6b2073ff4f0a91" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>SceneIO</name></member>
-      <member refid="classuipc_1_1core_1_1_scene_i_o_1a4fd6d3158cb8a7b9331647f9e04aa305" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>simplicial_surface</name></member>
-      <member refid="classuipc_1_1core_1_1_scene_i_o_1a35c8281ee14b12d06b5506f5a6f527b6" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>simplicial_surface</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1ad879a63749b9908348d09a395a4d94fe" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>simplicial_surface</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1a0a716d58dc007c9ea0da5eb5a2448a3c" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>write_surface</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1a03dc37f08371ae98eb31d936b8a6f470" prot="private" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>write_surface_obj</name></member>
     </listofallmembers>

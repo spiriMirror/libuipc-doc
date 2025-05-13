@@ -78,9 +78,10 @@ Inherits the following classes: [uipc::core::IObject](classuipc_1_1core_1_1_i_ob
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Object**](#function-object-13) ([**Scene**](classuipc_1_1core_1_1_scene.md) & scene, IndexT id, std::string\_view name="") noexcept<br> |
-|   | [**Object**](#function-object-23) ([**Object**](classuipc_1_1core_1_1_object.md) &&) = default<br> |
-|   | [**Object**](#function-object-33) (const [**Object**](classuipc_1_1core_1_1_object.md) &) = delete<br> |
+|   | [**Object**](#function-object-14) ([**Scene**](classuipc_1_1core_1_1_scene.md) & scene, IndexT id, std::string\_view name="") noexcept<br> |
+|   | [**Object**](#function-object-24) () noexcept<br> |
+|   | [**Object**](#function-object-34) ([**Object**](classuipc_1_1core_1_1_object.md) &&) = default<br> |
+|   | [**Object**](#function-object-44) (const [**Object**](classuipc_1_1core_1_1_object.md) &) = delete<br> |
 |  [**Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md) | [**geometries**](#function-geometries-12) () noexcept<br> |
 |  [**CGeometries**](classuipc_1_1core_1_1_object_1_1_c_geometries.md) | [**geometries**](#function-geometries-22) () noexcept const<br> |
 |  [**Object**](classuipc_1_1core_1_1_object.md) & | [**operator=**](#function-operator) (const [**Object**](classuipc_1_1core_1_1_object.md) &) = delete<br> |
@@ -170,7 +171,7 @@ See [uipc::core::IObject](classuipc_1_1core_1_1_i_object.md)
 
 
 
-### function Object [1/3]
+### function Object [1/4]
 
 ```C++
 uipc::core::Object::Object (
@@ -187,7 +188,20 @@ uipc::core::Object::Object (
 
 
 
-### function Object [2/3]
+### function Object [2/4]
+
+```C++
+uipc::core::Object::Object () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function Object [3/4]
 
 ```C++
 uipc::core::Object::Object (
@@ -202,7 +216,7 @@ uipc::core::Object::Object (
 
 
 
-### function Object [3/3]
+### function Object [4/4]
 
 ```C++
 uipc::core::Object::Object (
