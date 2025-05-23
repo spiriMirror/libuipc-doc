@@ -39,6 +39,7 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**GeometryAtlas**](classuipc_1_1geometry_1_1_geometry_atlas.md) <br> |
+| class | [**GeometryAtlasCommit**](classuipc_1_1geometry_1_1_geometry_atlas_commit.md) <br> |
 
 
 

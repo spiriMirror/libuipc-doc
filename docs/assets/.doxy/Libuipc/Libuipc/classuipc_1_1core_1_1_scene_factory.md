@@ -52,8 +52,11 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**SceneFactory**](#function-scenefactory) () <br> |
-|  S&lt; [**Scene**](classuipc_1_1core_1_1_scene.md) &gt; | [**from\_json**](#function-from_json) (const Json & j) <br> |
-|  Json | [**to\_json**](#function-to_json) (const [**Scene**](classuipc_1_1core_1_1_scene.md) & scene) <br> |
+|  [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) | [**commit\_from\_json**](#function-commit_from_json) (const Json & json) <br> |
+|  Json | [**commit\_to\_json**](#function-commit_to_json) (const [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) & scene) <br> |
+|  [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) | [**from\_json**](#function-from_json) (const Json & j) <br> |
+|  [**Scene**](classuipc_1_1core_1_1_scene.md) | [**from\_snapshot**](#function-from_snapshot) (const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & snapshot) <br> |
+|  Json | [**to\_json**](#function-to_json) (const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & scene) <br> |
 |   | [**~SceneFactory**](#function-scenefactory) () <br> |
 
 
@@ -101,11 +104,56 @@ uipc::core::SceneFactory::SceneFactory ()
 
 
 
+### function commit\_from\_json 
+
+```C++
+SceneSnapshotCommit uipc::core::SceneFactory::commit_from_json (
+    const Json & json
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function commit\_to\_json 
+
+```C++
+Json uipc::core::SceneFactory::commit_to_json (
+    const SceneSnapshotCommit & scene
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function from\_json 
 
 ```C++
-S< Scene > uipc::core::SceneFactory::from_json (
+SceneSnapshot uipc::core::SceneFactory::from_json (
     const Json & j
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function from\_snapshot 
+
+```C++
+Scene uipc::core::SceneFactory::from_snapshot (
+    const SceneSnapshot & snapshot
 ) 
 ```
 
@@ -120,7 +168,7 @@ S< Scene > uipc::core::SceneFactory::from_json (
 
 ```C++
 Json uipc::core::SceneFactory::to_json (
-    const Scene & scene
+    const SceneSnapshot & scene
 ) 
 ```
 

@@ -24,11 +24,23 @@ class UIPC_IO_API SceneIO
 
     geometry::SimplicialComplex simplicial_surface(IndexT dim = -1) const;
 
-    static S<Scene> load(std::string_view filename);
+    static Scene load(std::string_view filename);
 
     static void save(const Scene& scene, std::string_view filename);
 
     void save(std::string_view filename) const;
+
+    void commit(const SceneSnapshot& reference, std::string_view filename);
+
+    void update(std::string_view filename);
+
+    Json to_json() const;
+
+    static Scene from_json(const Json& json);
+
+    Json commit_to_json(const SceneSnapshot& reference) const;
+
+    void update_from_json(const Json& json);
 
   private:
     Scene& m_scene;

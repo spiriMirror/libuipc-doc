@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="geometry__atlas_8h" kind="file" language="C++">
     <compoundname>geometry_atlas.h</compoundname>
     <includes refid="geometry_2geometry_8h" local="no">uipc/geometry/geometry.h</includes>
@@ -57,12 +57,12 @@
         <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="45">
         <label>uipc/common/set.h</label>
         <link refid="set_8h_source"/>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="44" relation="include">
+        <childnode refid="46" relation="include">
         </childnode>
       </node>
       <node id="13">
@@ -154,9 +154,15 @@
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
         <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>uipc/geometry/attribute_collection_commit.h</label>
+        <link refid="attribute__collection__commit_8h_source"/>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="29">
@@ -171,7 +177,7 @@
         <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="37">
         <label>uipc/geometry/attribute_friend.h</label>
         <link refid="attribute__friend_8h_source"/>
       </node>
@@ -192,6 +198,8 @@
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>uipc/geometry/geometry.h</label>
@@ -200,11 +208,13 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -212,30 +222,30 @@
         <link refid="geometry__atlas_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="41">
-        <label>uipc/geometry/geometry_collection.h</label>
-        <link refid="geometry__collection_8h_source"/>
         <childnode refid="42" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="40" relation="include">
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
+      </node>
+      <node id="43">
+        <label>uipc/geometry/geometry_collection.h</label>
+        <link refid="geometry__collection_8h_source"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
         <childnode refid="45" relation="include">
         </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
       </node>
-      <node id="38">
+      <node id="39">
         <label>uipc/geometry/geometry_friend.h</label>
         <link refid="geometry__friend_8h_source"/>
       </node>
-      <node id="40">
+      <node id="42">
         <label>uipc/geometry/geometry_slot.h</label>
         <link refid="geometry__slot_8h_source"/>
         <childnode refid="21" relation="include">
@@ -248,28 +258,31 @@
       <node id="22">
         <label>Eigen/Core</label>
       </node>
+      <node id="35">
+        <label>chrono</label>
+      </node>
       <node id="20">
         <label>cinttypes</label>
       </node>
-      <node id="42">
+      <node id="44">
         <label>concepts</label>
       </node>
       <node id="32">
         <label>details/attribute.inl</label>
       </node>
-      <node id="37">
+      <node id="38">
         <label>details/attribute_collection.inl</label>
       </node>
       <node id="30">
         <label>details/attribute_copy.inl</label>
       </node>
-      <node id="35">
+      <node id="36">
         <label>details/attribute_slot.inl</label>
       </node>
-      <node id="39">
+      <node id="41">
         <label>details/geometry.inl</label>
       </node>
-      <node id="45">
+      <node id="47">
         <label>details/geometry_collection.inl</label>
       </node>
       <node id="16">
@@ -290,7 +303,7 @@
       <node id="24">
         <label>nlohmann/json.hpp</label>
       </node>
-      <node id="44">
+      <node id="46">
         <label>set</label>
       </node>
       <node id="26">
@@ -328,6 +341,7 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_atlas" prot="public">uipc::geometry::GeometryAtlas</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_atlas_commit" prot="public">uipc::geometry::GeometryAtlasCommit</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1geometry">uipc::geometry</innernamespace>
     <briefdescription>
@@ -342,36 +356,60 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="classuipc_1_1geometry_1_1_geometry_atlas" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas" kindref="compound">GeometryAtlas</ref></highlight></codeline>
+<codeline lineno="8" refid="classuipc_1_1geometry_1_1_geometry_atlas" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>GeometryAtlas</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Impl;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas" kindref="compound">GeometryAtlas</ref>();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas" kindref="compound">~GeometryAtlas</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>GeometryAtlas();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>~GeometryAtlas();</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a708e877364fd60b2fd65edeb670c87c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IndexT<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1a708e877364fd60b2fd65edeb670c87c6" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref>&amp;<sp/>geo);</highlight></codeline>
+<codeline lineno="19" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1ac20ec6b8f3c5503cfbdace0594cc89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IndexT<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1ac20ec6b8f3c5503cfbdace0594cc89" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref>&amp;<sp/>geo,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>evolving_only<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a9bd28cb83cc9ad7105dddcb0b5d792e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref>*<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1a9bd28cb83cc9ad7105dddcb0b5d792e8" kindref="member">find</ref>(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1797b252d98aa04247c20bca6b3aedae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;const<sp/>GeometrySlot&gt;<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1797b252d98aa04247c20bca6b3aedae" kindref="member">find</ref>(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>SizeT<sp/>geometry_count()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="classuipc_1_1geometry_1_1_geometry_atlas_1acb86f9dc7dd896f12d32ad028fe01576" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>create(std::string_view<sp/>name,<sp/>const<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>&amp;<sp/>ac);</highlight></codeline>
+<codeline lineno="33" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a55de98ba9ada88f97c38bf46934b9d2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1ac20ec6b8f3c5503cfbdace0594cc89" kindref="member">create</ref>(std::string_view<sp/>name,<sp/>const<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>&amp;<sp/>ac,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>evolving_only<sp/>=<sp/>false);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="classuipc_1_1geometry_1_1_geometry_atlas_1aff8e3b720932403dc38f479a26ce87fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>*<sp/>find(std::string_view<sp/>name)<sp/>const;</highlight></codeline>
+<codeline lineno="40" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a34452fb3b2bd7f60054405ad57fb626b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;const<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>&gt;<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1797b252d98aa04247c20bca6b3aedae" kindref="member">find</ref>(std::string_view<sp/>name)<sp/>const;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>SizeT<sp/>attribute_collection_count()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;<sp/>attribute_collection_names()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="classuipc_1_1geometry_1_1_geometry_atlas_1ada5955f300995047f53d158949b0dc68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Json<sp/>to_json()<sp/>const;</highlight></codeline>
+<codeline lineno="49" refid="classuipc_1_1geometry_1_1_geometry_atlas_1ada5955f300995047f53d158949b0dc68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Json<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1ada5955f300995047f53d158949b0dc68" kindref="member">to_json</ref>()<sp/>const;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a30ad2bf899c1d1ae957bddfbdfc88d2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>from_json(const<sp/>Json&amp;<sp/>j);</highlight></codeline>
+<codeline lineno="57" refid="classuipc_1_1geometry_1_1_geometry_atlas_1a30ad2bf899c1d1ae957bddfbdfc88d2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_atlas_1a30ad2bf899c1d1ae957bddfbdfc88d2f" kindref="member">from_json</ref>(const<sp/>Json&amp;<sp/>j);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/>private:</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>U&lt;Impl&gt;<sp/>m_impl;</highlight></codeline>
 <codeline lineno="61"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="62"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classuipc_1_1geometry_1_1_geometry_atlas_commit" refkind="compound"><highlight class="normal">class<sp/>UIPC_CORE_API<sp/>GeometryAtlasCommit</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Impl;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>GeometryAtlasCommit();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>~GeometryAtlasCommit();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>IndexT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_commit" kindref="compound">GeometryCommit</ref>&amp;<sp/>geo_commit);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;const<sp/>GeometryCommit&gt;<sp/>find(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>create(std::string_view<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection_commit" kindref="compound">AttributeCollectionCommit</ref>&amp;<sp/>ac_commit);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;const<sp/>AttributeCollectionCommit&gt;<sp/>find(std::string_view<sp/>name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;std::string&gt;<sp/>attribute_collection_names()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>SizeT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribute_collection_count()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>SizeT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry_count()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>Json<sp/>to_json()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>from_json(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json&amp;<sp/>j);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>U&lt;Impl&gt;<sp/>m_impl;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/geometry/geometry_atlas.h"/>
   </compounddef>

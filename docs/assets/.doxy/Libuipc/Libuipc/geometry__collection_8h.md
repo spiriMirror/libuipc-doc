@@ -34,6 +34,7 @@
 | ---: | :--- |
 | namespace | [**uipc**](namespaceuipc.md) <br> |
 | namespace | [**core**](namespaceuipc_1_1core.md) <br> |
+| namespace | [**internal**](namespaceuipc_1_1core_1_1internal.md) <br> |
 | namespace | [**geometry**](namespaceuipc_1_1geometry.md) <br> |
 
 

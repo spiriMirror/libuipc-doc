@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="simplicial__complex__slot_8h" kind="file" language="C++">
     <compoundname>simplicial_complex_slot.h</compoundname>
     <includes refid="geometry__slot_8h" local="no">uipc/geometry/geometry_slot.h</includes>
@@ -103,10 +103,10 @@
         <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="42">
+      <node id="44">
         <label>uipc/geometry/abstract_simplicial_complex.h</label>
         <link refid="abstract__simplicial__complex_8h_source"/>
-        <childnode refid="43" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -154,9 +154,15 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
         <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>uipc/geometry/attribute_collection_commit.h</label>
+        <link refid="attribute__collection__commit_8h_source"/>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="30">
@@ -171,7 +177,7 @@
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="38">
         <label>uipc/geometry/attribute_friend.h</label>
         <link refid="attribute__friend_8h_source"/>
       </node>
@@ -192,6 +198,8 @@
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
       </node>
       <node id="10">
         <label>uipc/geometry/geometry.h</label>
@@ -200,14 +208,16 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
       </node>
-      <node id="39">
+      <node id="40">
         <label>uipc/geometry/geometry_friend.h</label>
         <link refid="geometry__friend_8h_source"/>
       </node>
@@ -221,17 +231,17 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="43">
         <label>uipc/geometry/simplicial_complex.h</label>
         <link refid="simplicial__complex_8h_source"/>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="42" relation="include">
+        <childnode refid="44" relation="include">
         </childnode>
-        <childnode refid="43" relation="include">
+        <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="43">
+      <node id="45">
         <label>uipc/geometry/simplicial_complex_attributes.h</label>
         <link refid="simplicial__complex__attributes_8h_source"/>
         <childnode refid="34" relation="include">
@@ -240,7 +250,7 @@
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -248,11 +258,14 @@
         <link refid="simplicial__complex__slot_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
       </node>
       <node id="4">
         <label>Eigen/Core</label>
+      </node>
+      <node id="36">
+        <label>chrono</label>
       </node>
       <node id="23">
         <label>cinttypes</label>
@@ -260,16 +273,16 @@
       <node id="33">
         <label>details/attribute.inl</label>
       </node>
-      <node id="38">
+      <node id="39">
         <label>details/attribute_collection.inl</label>
       </node>
       <node id="31">
         <label>details/attribute_copy.inl</label>
       </node>
-      <node id="36">
+      <node id="37">
         <label>details/attribute_slot.inl</label>
       </node>
-      <node id="40">
+      <node id="42">
         <label>details/geometry.inl</label>
       </node>
       <node id="9">
@@ -347,32 +360,32 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="5"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
-<codeline lineno="7" refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt;<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&gt;<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt;<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&gt;<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>simplicial_complex)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>GeometrySlotT(IndexT<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SimplicialComplex&amp;<sp/>simplicial_complex)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>(<ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&amp;<sp/>operator=(<ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>GeometrySlotT(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GeometrySlotT&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>GeometrySlotT(GeometrySlotT&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>GeometrySlotT&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GeometrySlotT&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>GeometrySlotT&amp;<sp/>operator=(GeometrySlotT&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>geometry()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplex&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>geometry()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/>SimplicialComplex&amp;<sp/>geometry()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_geometry()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref>&amp;<sp/>get_geometry()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>S&lt;GeometrySlot&gt;<sp/>do_clone()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>protected:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>Geometry&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_geometry()<sp/>noexcept<sp/>override;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>const<sp/>Geometry&amp;<sp/>get_geometry()<sp/>const<sp/>noexcept<sp/>override;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>S&lt;GeometrySlot&gt;<sp/>do_clone()<sp/>const<sp/>override;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref><sp/>m_simplicial_complex;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>private:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplex<sp/>m_simplicial_complex;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4" kindref="compound">SimplicialComplexSlot</ref><sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT&lt;SimplicialComplex&gt;</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">using<sp/>SimplicialComplexSlot<sp/>=<sp/>GeometrySlotT&lt;SimplicialComplex&gt;;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">std</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">namespace<sp/>std</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">std::shared_ptr&lt;uipc::geometry::SimplicialComplexSlot&gt;;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">}</highlight></codeline>

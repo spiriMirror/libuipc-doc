@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1_geometry_collection_commit" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::GeometryCollectionCommit</compoundname>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1a639aef3f5d0d27a72053343b0e09b5f3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class GeometryFactory</definition>
+        <argsstring></argsstring>
+        <name>GeometryFactory</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::GeometryFactory</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_factory" kindref="compound">GeometryFactory</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="9" column="18" bodyfile="include/uipc/geometry/geometry_collection_commit.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1a0a3b289931338fdb5c57042e8f080fe1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_geometry_collection_commit" kindref="compound">GeometryCollectionCommit</ref></type>
+        <definition>UIPC_CORE_API GeometryCollectionCommit operator-</definition>
+        <argsstring>(const GeometryCollection &amp;dst, const GeometryCollection &amp;src)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="11" column="51"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1a2b5cebe57b34f6a3070e1d1e5eac9f97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+        <definition>UIPC_CORE_API GeometryCollection &amp; operator+=</definition>
+        <argsstring>(GeometryCollection &amp;dst, const GeometryCollectionCommit &amp;inc)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection_commit" kindref="compound">GeometryCollectionCommit</ref> &amp;</type>
+          <declname>inc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="13" column="45"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1a0e3bb81a8a5ca9865691b2c41afcd2c4" prot="private" static="no" mutable="no">
+        <type>IndexT</type>
+        <definition>IndexT uipc::geometry::GeometryCollectionCommit::m_next_id</definition>
+        <argsstring></argsstring>
+        <name>m_next_id</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::m_next_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="23" column="12" bodyfile="include/uipc/geometry/geometry_collection_commit.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1a87a743f1c15c9d2c7c3ede3d4bb690ac" prot="private" static="no" mutable="no">
+        <type>unordered_map&lt; IndexT, <ref refid="classuipc_1_1geometry_1_1_geometry_commit" kindref="compound">GeometryCommit</ref> &gt;</type>
+        <definition>unordered_map&lt;IndexT, GeometryCommit&gt; uipc::geometry::GeometryCollectionCommit::m_diff_geometries</definition>
+        <argsstring></argsstring>
+        <name>m_diff_geometries</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::m_diff_geometries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="25" column="19" bodyfile="include/uipc/geometry/geometry_collection_commit.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1a914639a393d92ea234c02d6c8273ac59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::GeometryCollectionCommit::GeometryCollectionCommit</definition>
+        <argsstring>()=default</argsstring>
+        <name>GeometryCollectionCommit</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::GeometryCollectionCommit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="17" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1a638900f1e5e525f970e765ddfb9497bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::GeometryCollectionCommit::GeometryCollectionCommit</definition>
+        <argsstring>(const GeometryCollection &amp;dst, const GeometryCollection &amp;src)</argsstring>
+        <name>GeometryCollectionCommit</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::GeometryCollectionCommit</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="18" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_collection_commit_1aca43a477884757221550844db35ec96a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::geometry::GeometryCollectionCommit::update_from</definition>
+        <argsstring>(GeometryCollection &amp;base, const GeometryCollectionCommit &amp;inc)</argsstring>
+        <name>update_from</name>
+        <qualifiedname>uipc::geometry::GeometryCollectionCommit::update_from</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection_commit" kindref="compound">GeometryCollectionCommit</ref> &amp;</type>
+          <declname>inc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="21" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/geometry/geometry_collection_commit.h" line="7" column="1" bodyfile="include/uipc/geometry/geometry_collection_commit.h" bodystart="8" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1a914639a393d92ea234c02d6c8273ac59" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>GeometryCollectionCommit</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1a638900f1e5e525f970e765ddfb9497bc" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>GeometryCollectionCommit</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1a639aef3f5d0d27a72053343b0e09b5f3" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>GeometryFactory</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1a87a743f1c15c9d2c7c3ede3d4bb690ac" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>m_diff_geometries</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1a0e3bb81a8a5ca9865691b2c41afcd2c4" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>m_next_id</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1a2b5cebe57b34f6a3070e1d1e5eac9f97" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>operator+=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1a0a3b289931338fdb5c57042e8f080fe1" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>operator-</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_collection_commit_1aca43a477884757221550844db35ec96a" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollectionCommit</scope><name>update_from</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

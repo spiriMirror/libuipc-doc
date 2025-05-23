@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="sanity__checker_8h" kind="file" language="C++">
     <compoundname>sanity_checker.h</compoundname>
     <includes refid="i__sanity__checker_8h" local="no">uipc/core/i_sanity_checker.h</includes>
+    <includedby refid="internal_2scene_8h" local="no">include/uipc/core/internal/scene.h</includedby>
     <includedby refid="scene_8h" local="no">include/uipc/core/scene.h</includedby>
     <incdepgraph>
       <node id="23">
@@ -166,9 +167,15 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
         <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>uipc/geometry/attribute_collection_commit.h</label>
+        <link refid="attribute__collection__commit_8h_source"/>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="30">
@@ -183,7 +190,7 @@
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="37">
+      <node id="38">
         <label>uipc/geometry/attribute_friend.h</label>
         <link refid="attribute__friend_8h_source"/>
       </node>
@@ -204,6 +211,8 @@
         </childnode>
         <childnode refid="36" relation="include">
         </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
       </node>
       <node id="15">
         <label>uipc/geometry/geometry.h</label>
@@ -212,19 +221,24 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="38" relation="include">
         </childnode>
         <childnode refid="40" relation="include">
         </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
       </node>
-      <node id="39">
+      <node id="40">
         <label>uipc/geometry/geometry_friend.h</label>
         <link refid="geometry__friend_8h_source"/>
       </node>
       <node id="4">
         <label>Eigen/Core</label>
+      </node>
+      <node id="36">
+        <label>chrono</label>
       </node>
       <node id="25">
         <label>cinttypes</label>
@@ -232,16 +246,16 @@
       <node id="33">
         <label>details/attribute.inl</label>
       </node>
-      <node id="38">
+      <node id="39">
         <label>details/attribute_collection.inl</label>
       </node>
       <node id="31">
         <label>details/attribute_copy.inl</label>
       </node>
-      <node id="36">
+      <node id="37">
         <label>details/attribute_slot.inl</label>
       </node>
-      <node id="40">
+      <node id="42">
         <label>details/geometry.inl</label>
       </node>
       <node id="12">
@@ -285,48 +299,76 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>include/uipc/core/internal/scene.h</label>
+        <link refid="internal_2scene_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/uipc/core/internal/world.h</label>
+        <link refid="internal_2world_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>include/uipc/core/sanity_checker.h</label>
         <link refid="sanity__checker_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
-      <node id="2">
+      <node id="4">
         <label>include/uipc/core/scene.h</label>
         <link refid="scene_8h_source"/>
-        <childnode refid="3" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/uipc/core/scene_factory.h</label>
+        <link refid="scene__factory_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/uipc/core/scene_snapshot.h</label>
+        <link refid="scene__snapshot_8h_source"/>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>include/uipc/core/scene_factory.h</label>
-        <link refid="scene__factory_8h_source"/>
-      </node>
-      <node id="4">
+      <node id="9">
         <label>include/uipc/core/world.h</label>
         <link refid="world_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="11">
         <label>include/uipc/io.h</label>
         <link refid="io_8h_source"/>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="9">
+      <node id="12">
         <label>include/uipc/io/gltf_io.h</label>
         <link refid="gltf__io_8h_source"/>
       </node>
-      <node id="7">
+      <node id="10">
         <label>include/uipc/io/scene_io.h</label>
         <link refid="scene__io_8h_source"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="6">
@@ -337,6 +379,7 @@
     <innerclass refid="classuipc_1_1core_1_1_sanity_checker" prot="public">uipc::core::SanityChecker</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
+    <innernamespace refid="namespaceuipc_1_1core_1_1internal">uipc::core::internal</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -345,33 +388,38 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/core/i_sanity_checker.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core::internal</highlight></codeline>
 <codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scene;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="classuipc_1_1core_1_1_sanity_checker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1_sanity_checker" kindref="compound">SanityChecker</ref><sp/>final</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_checker" kindref="compound">SanityChecker</ref>(<ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/>scene);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_checker" kindref="compound">~SanityChecker</ref>();</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityCheckResult<sp/>check(std::string_view<sp/>workspace);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report();</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;U64,<sp/>S&lt;SanityCheckMessage&gt;&gt;&amp;<sp/>errors()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;U64,<sp/>S&lt;SanityCheckMessage&gt;&gt;&amp;<sp/>warns()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;U64,<sp/>S&lt;SanityCheckMessage&gt;&gt;&amp;<sp/>infos()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_errors;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_warns;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_infos;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1core_1_1internal_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classuipc_1_1core_1_1_sanity_checker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>SanityChecker<sp/>final</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityChecker(<ref refid="classuipc_1_1core_1_1internal_1_1_scene" kindref="compound">internal::Scene</ref>&amp;<sp/>scene);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>~SanityChecker();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityCheckResult<sp/>check(std::string_view<sp/>workspace);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;U64,<sp/>S&lt;SanityCheckMessage&gt;&gt;&amp;<sp/>errors()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;U64,<sp/>S&lt;SanityCheckMessage&gt;&gt;&amp;<sp/>warns()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>unordered_map&lt;U64,<sp/>S&lt;SanityCheckMessage&gt;&gt;&amp;<sp/>infos()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>&amp;<sp/>m_scene;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="30"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_errors;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_warns;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_infos;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1internal_1_1_scene" kindref="compound">internal::Scene</ref>&amp;<sp/>m_scene;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/core/sanity_checker.h"/>
   </compounddef>

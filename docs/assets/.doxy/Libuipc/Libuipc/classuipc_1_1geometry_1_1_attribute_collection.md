@@ -74,6 +74,7 @@ _A collection of geometries attributes._ [More...](#detailed-description)
 |  S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; T &gt; &gt; | [**share**](#function-share-22) (std::string\_view name, const [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; T &gt; & slot, bool allow\_destroy=true) <br>_Template version of share._  |
 |  SizeT | [**size**](#function-size) () const<br>_Get the size of the attribute slots._  |
 |  Json | [**to\_json**](#function-to_json) () const<br>_Get the json representation of the attribute collection._  |
+|  void | [**update\_from**](#function-update_from) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & commit) <br>_Update the attribute collection from_ [_**AttributeCollectionCommit**_](classuipc_1_1geometry_1_1_attribute_collection_commit.md) _._ |
 
 
 
@@ -102,7 +103,7 @@ _A collection of geometries attributes._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 All geometries attributes in the collection always have the same size. 
@@ -159,6 +160,7 @@ uipc::geometry::AttributeCollection::AttributeCollection (
 
 ### function attribute\_count 
 
+_Get the number of attribute slots._ 
 ```C++
 SizeT uipc::geometry::AttributeCollection::attribute_count () const
 ```
@@ -344,6 +346,7 @@ nullptr if the attribute slot with the given name does not exist.
 
 ### function find [2/4]
 
+_const version of find._ 
 ```C++
 S< const IAttributeSlot > uipc::geometry::AttributeCollection::find (
     std::string_view name
@@ -359,6 +362,7 @@ S< const IAttributeSlot > uipc::geometry::AttributeCollection::find (
 
 ### function find [3/4]
 
+_Template version of find._ 
 ```C++
 template<typename T>
 S< AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
@@ -375,6 +379,7 @@ S< AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
 
 ### function find [4/4]
 
+_Template const version of find._ 
 ```C++
 template<typename T>
 S< const AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
@@ -391,6 +396,7 @@ S< const AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
 
 ### function names 
 
+_Get the names of all attribute slots._ 
 ```C++
 vector< string > uipc::geometry::AttributeCollection::names () const
 ```
@@ -566,6 +572,7 @@ The new created attribute slot.
 
 ### function share [2/2]
 
+_Template version of share._ 
 ```C++
 template<typename T>
 S< AttributeSlot < T > > uipc::geometry::AttributeCollection::share (
@@ -584,6 +591,7 @@ S< AttributeSlot < T > > uipc::geometry::AttributeCollection::share (
 
 ### function size 
 
+_Get the size of the attribute slots._ 
 ```C++
 SizeT uipc::geometry::AttributeCollection::size () const
 ```
@@ -597,12 +605,40 @@ SizeT uipc::geometry::AttributeCollection::size () const
 
 ### function to\_json 
 
+_Get the json representation of the attribute collection._ 
 ```C++
 Json uipc::geometry::AttributeCollection::to_json () const
 ```
 
 
 
+
+<hr>
+
+
+
+### function update\_from 
+
+_Update the attribute collection from_ [_**AttributeCollectionCommit**_](classuipc_1_1geometry_1_1_attribute_collection_commit.md) _._
+```C++
+void uipc::geometry::AttributeCollection::update_from (
+    const AttributeCollectionCommit & commit
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `commit` 
+
+
+
+
+        
 
 <hr>## Friends Documentation
 

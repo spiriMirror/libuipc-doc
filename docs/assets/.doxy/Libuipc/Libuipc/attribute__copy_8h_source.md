@@ -41,6 +41,8 @@ class UIPC_CORE_API AttributeCopy
 
     static AttributeCopy pair(span<const std::pair<SizeT, SizeT>> pairs) noexcept;
 
+    static AttributeCopy same_dim() noexcept;
+
   private:
     CopyType m_type = CopyType::None;
 

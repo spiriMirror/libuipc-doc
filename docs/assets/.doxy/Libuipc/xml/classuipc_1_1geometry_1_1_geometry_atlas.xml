@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1_geometry_atlas" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::GeometryAtlas</compoundname>
     <sectiondef kind="private-attrib">
@@ -47,15 +47,20 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry_atlas.h" line="14" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1a708e877364fd60b2fd65edeb670c87c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1a1ac20ec6b8f3c5503cfbdace0594cc89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>IndexT</type>
         <definition>IndexT uipc::geometry::GeometryAtlas::create</definition>
-        <argsstring>(const Geometry &amp;geo)</argsstring>
+        <argsstring>(const Geometry &amp;geo, bool evolving_only=false)</argsstring>
         <name>create</name>
         <qualifiedname>uipc::geometry::GeometryAtlas::create</qualifiedname>
         <param>
           <type>const <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
           <declname>geo</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>evolving_only</declname>
+          <defval>false</defval>
         </param>
         <briefdescription>
 <para>Create a geometry in the atlas. </para>
@@ -66,9 +71,9 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry_atlas.h" line="19" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1a9bd28cb83cc9ad7105dddcb0b5d792e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> *</type>
-        <definition>const GeometrySlot * uipc::geometry::GeometryAtlas::find</definition>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1a1797b252d98aa04247c20bca6b3aedae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1_geometry_slot" kindref="compound">GeometrySlot</ref> &gt;</type>
+        <definition>S&lt; const GeometrySlot &gt; uipc::geometry::GeometryAtlas::find</definition>
         <argsstring>(IndexT id) const</argsstring>
         <name>find</name>
         <qualifiedname>uipc::geometry::GeometryAtlas::find</qualifiedname>
@@ -84,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="26" column="24"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="26" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1aab81cf8bf8792ba4d130577c47b2e9f2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
@@ -100,10 +105,10 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry_atlas.h" line="28" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1acb86f9dc7dd896f12d32ad028fe01576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1a55de98ba9ada88f97c38bf46934b9d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::geometry::GeometryAtlas::create</definition>
-        <argsstring>(std::string_view name, const AttributeCollection &amp;ac)</argsstring>
+        <argsstring>(std::string_view name, const AttributeCollection &amp;ac, bool evolving_only=false)</argsstring>
         <name>create</name>
         <qualifiedname>uipc::geometry::GeometryAtlas::create</qualifiedname>
         <param>
@@ -114,6 +119,11 @@
           <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &amp;</type>
           <declname>ac</declname>
         </param>
+        <param>
+          <type>bool</type>
+          <declname>evolving_only</declname>
+          <defval>false</defval>
+        </param>
         <briefdescription>
 <para>Create a named <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> in the atlas. </para>
         </briefdescription>
@@ -123,9 +133,9 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry_atlas.h" line="33" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1aff8e3b720932403dc38f479a26ce87fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> *</type>
-        <definition>const AttributeCollection * uipc::geometry::GeometryAtlas::find</definition>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1a34452fb3b2bd7f60054405ad57fb626b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &gt;</type>
+        <definition>S&lt; const AttributeCollection &gt; uipc::geometry::GeometryAtlas::find</definition>
         <argsstring>(std::string_view name) const</argsstring>
         <name>find</name>
         <qualifiedname>uipc::geometry::GeometryAtlas::find</qualifiedname>
@@ -141,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="40" column="31"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="40" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1_geometry_atlas_1a636e52c38570c97ef496a140e47337e0" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
@@ -232,10 +242,10 @@
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a636e52c38570c97ef496a140e47337e0" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>attribute_collection_count</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a661f4f338d39acb780fac10c5d23765d" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>attribute_collection_names</name></member>
-      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a708e877364fd60b2fd65edeb670c87c6" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>create</name></member>
-      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1acb86f9dc7dd896f12d32ad028fe01576" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>create</name></member>
-      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a9bd28cb83cc9ad7105dddcb0b5d792e8" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>find</name></member>
-      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1aff8e3b720932403dc38f479a26ce87fc" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1ac20ec6b8f3c5503cfbdace0594cc89" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>create</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a55de98ba9ada88f97c38bf46934b9d2c" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>create</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a1797b252d98aa04247c20bca6b3aedae" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a34452fb3b2bd7f60054405ad57fb626b" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>find</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1a30ad2bf899c1d1ae957bddfbdfc88d2f" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>from_json</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1aab81cf8bf8792ba4d130577c47b2e9f2" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>geometry_count</name></member>
       <member refid="classuipc_1_1geometry_1_1_geometry_atlas_1ac43991792dad57ab0389be65a0a38641" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>GeometryAtlas</name></member>

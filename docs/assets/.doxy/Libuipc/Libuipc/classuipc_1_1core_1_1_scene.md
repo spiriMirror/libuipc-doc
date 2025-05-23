@@ -59,7 +59,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Scene**](#function-scene) (const Json & config=default\_config()) <br> |
+|   | [**Scene**](#function-scene-14) (const Json & config=default\_config()) <br> |
+|   | [**Scene**](#function-scene-24) (const [**Scene**](classuipc_1_1core_1_1_scene.md) &) = delete<br> |
+|   | [**Scene**](#function-scene-34) ([**Scene**](classuipc_1_1core_1_1_scene.md) &&) = default<br> |
 |  [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-12) () <br> |
 |  const [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-22) () const<br> |
 |  const Json & | [**config**](#function-config) () noexcept const<br> |
@@ -76,6 +78,7 @@
 |  [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) | [**objects**](#function-objects-22) () noexcept const<br> |
 |  [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
 |  const [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
+|  void | [**update\_from**](#function-update_from) (const [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) & snapshot) <br> |
 |   | [**~Scene**](#function-scene) () <br> |
 
 
@@ -115,12 +118,42 @@
 
 
 
-### function Scene 
+### function Scene [1/4]
 
 ```C++
 explicit uipc::core::Scene::Scene (
     const Json & config=default_config()
 ) 
+```
+
+
+
+
+<hr>
+
+
+
+### function Scene [2/4]
+
+```C++
+uipc::core::Scene::Scene (
+    const Scene &
+) = delete
+```
+
+
+
+
+<hr>
+
+
+
+### function Scene [3/4]
+
+```C++
+uipc::core::Scene::Scene (
+    Scene &&
+) = default
 ```
 
 
@@ -338,6 +371,21 @@ const SanityChecker & uipc::core::Scene::sanity_checker () const
 
 
 
+### function update\_from 
+
+```C++
+void uipc::core::Scene::update_from (
+    const SceneSnapshotCommit & snapshot
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function ~Scene 
 
 ```C++
@@ -388,6 +436,21 @@ class uipc::core::Scene::SceneVisitor (
 ```C++
 struct uipc::core::Scene::formatter< Scene > (
     fmt::formatter< Scene >
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### friend SanityChecker 
+
+```C++
+class uipc::core::Scene::SanityChecker (
+    sanity_check::SanityChecker
 ) 
 ```
 

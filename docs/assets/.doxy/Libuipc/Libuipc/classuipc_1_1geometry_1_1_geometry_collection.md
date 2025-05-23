@@ -72,14 +72,19 @@ Inherits the following classes: [uipc::geometry::IGeometryCollection](classuipc_
 
 | Type | Name |
 | ---: | :--- |
-|   | [**GeometryCollection**](#function-geometrycollection) () = default<br> |
+|   | [**GeometryCollection**](#function-geometrycollection-13) () = default<br> |
+|   | [**GeometryCollection**](#function-geometrycollection-23) (const [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) &) <br> |
+|   | [**GeometryCollection**](#function-geometrycollection-33) ([**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) &&) noexcept<br> |
 |  void | [**destroy**](#function-destroy) (IndexT id) noexcept<br> |
-|  S&lt; [**geometry::GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; GeometryT &gt; &gt; | [**emplace**](#function-emplace) (const GeometryT & geometry) <br> |
+|  S&lt; [**geometry::GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; GeometryT &gt; &gt; | [**emplace**](#function-emplace-12) (const GeometryT & geometry) <br> |
+|  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**emplace**](#function-emplace-22) (const [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geometry) <br> |
 |  S&lt; [**geometry::GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; GeometryT &gt; &gt; | [**find**](#function-find-14) (IndexT id) noexcept<br> |
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find**](#function-find-24) (IndexT id) noexcept<br> |
 |  S&lt; const [**geometry::GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; GeometryT &gt; &gt; | [**find**](#function-find-34) (IndexT id) noexcept const<br> |
 |  S&lt; const [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find**](#function-find-44) (IndexT id) noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**geometry\_slots**](#function-geometry_slots) () noexcept const<br> |
+|  [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & | [**operator=**](#function-operator) (const [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) &) = delete<br> |
+|  [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & | [**operator=**](#function-operator_1) ([**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) &&) = default<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_create\_slots**](#function-pending_create_slots) () noexcept const<br> |
 |  void | [**pending\_destroy**](#function-pending_destroy) (IndexT id) noexcept<br> |
 |  span&lt; IndexT &gt; | [**pending\_destroy\_ids**](#function-pending_destroy_ids) () noexcept const<br> |
@@ -175,10 +180,40 @@ See [uipc::geometry::IGeometryCollection](classuipc_1_1geometry_1_1_i_geometry_c
 
 
 
-### function GeometryCollection 
+### function GeometryCollection [1/3]
 
 ```C++
 uipc::geometry::GeometryCollection::GeometryCollection () = default
+```
+
+
+
+
+<hr>
+
+
+
+### function GeometryCollection [2/3]
+
+```C++
+uipc::geometry::GeometryCollection::GeometryCollection (
+    const GeometryCollection &
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function GeometryCollection [3/3]
+
+```C++
+uipc::geometry::GeometryCollection::GeometryCollection (
+    GeometryCollection &&
+) noexcept
 ```
 
 
@@ -203,12 +238,27 @@ void uipc::geometry::GeometryCollection::destroy (
 
 
 
-### function emplace 
+### function emplace [1/2]
 
 ```C++
 template<std::derived_from< geometry::Geometry > GeometryT>
 S< geometry::GeometrySlotT < GeometryT > > uipc::geometry::GeometryCollection::emplace (
     const GeometryT & geometry
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function emplace [2/2]
+
+```C++
+S< geometry::GeometrySlot > uipc::geometry::GeometryCollection::emplace (
+    const geometry::Geometry & geometry
 ) 
 ```
 
@@ -285,6 +335,36 @@ S< const geometry::GeometrySlot > uipc::geometry::GeometryCollection::find (
 
 ```C++
 span< S< geometry::GeometrySlot > > uipc::geometry::GeometryCollection::geometry_slots () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function operator= 
+
+```C++
+GeometryCollection & uipc::geometry::GeometryCollection::operator= (
+    const GeometryCollection &
+) = delete
+```
+
+
+
+
+<hr>
+
+
+
+### function operator= 
+
+```C++
+GeometryCollection & uipc::geometry::GeometryCollection::operator= (
+    GeometryCollection &&
+) = default
 ```
 
 
@@ -435,6 +515,21 @@ Implements [*uipc::geometry::IGeometryCollection::get\_size*](classuipc_1_1geome
 ```C++
 class uipc::geometry::GeometryCollection::SceneFactory (
     core::SceneFactory
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### friend Scene 
+
+```C++
+class uipc::geometry::GeometryCollection::Scene (
+    core::internal::Scene
 ) 
 ```
 

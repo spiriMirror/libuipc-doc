@@ -65,6 +65,7 @@
 
 * **Transform** ([**uipc**](namespaceuipc.md))
 * **Translation** ([**uipc**](namespaceuipc.md))
+* **TimePoint** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
 ## u

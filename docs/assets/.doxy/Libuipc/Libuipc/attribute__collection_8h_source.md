@@ -20,12 +20,15 @@
 
 namespace uipc::geometry
 {
+class AttributeCollectionCommit;
 class UIPC_CORE_API AttributeCollection
 {
     template <typename T>
     friend class AttributeFriend;
 
     friend struct fmt::formatter<AttributeCollection>;
+
+    friend class AttributeCollectionCommit;
 
   public:
     AttributeCollection() = default;
@@ -74,18 +77,21 @@ class UIPC_CORE_API AttributeCollection
     void clear();
     void reserve(SizeT N);
 
-    vector<string> names() const;
+    [[nodiscard]] vector<string> names() const;
 
-    SizeT attribute_count() const;
+    [[nodiscard]] SizeT attribute_count() const;
 
-    Json to_json() const;
+    [[nodiscard]] Json to_json() const;
+
+
+    void update_from(const AttributeCollectionCommit& commit);
 
   private:
     SizeT                                    m_size = 0;
     unordered_map<string, S<IAttributeSlot>> m_attributes;
 };
 
-class UIPC_CORE_API GeometryAttributeError : public Exception
+class UIPC_CORE_API AttributeCollectionError : public Exception
 {
   public:
     using Exception::Exception;

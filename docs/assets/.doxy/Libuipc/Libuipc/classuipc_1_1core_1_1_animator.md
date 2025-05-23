@@ -241,6 +241,21 @@ struct uipc::core::Animator::formatter< Animator > (
 
 <hr>
 
+
+
+### friend Scene 
+
+```C++
+class uipc::core::Animator::Scene (
+    internal::Scene
+) 
+```
+
+
+
+
+<hr>
+
 ------------------------------
 The documentation for this class was generated from the following file `include/uipc/core/animator.h`
 

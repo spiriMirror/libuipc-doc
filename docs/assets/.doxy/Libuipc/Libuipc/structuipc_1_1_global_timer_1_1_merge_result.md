@@ -36,9 +36,9 @@
 | Type | Name |
 | ---: | :--- |
 |  std::list&lt; MergeResult \* &gt; | [**children**](#variable-children)  <br> |
-|  size\_t | [**count**](#variable-count)   = = 0<br> |
-|  size\_t | [**depth**](#variable-depth)   = = 0<br> |
-|  double | [**duration**](#variable-duration)   = = 0.0<br> |
+|  size\_t | [**count**](#variable-count)   = `0`<br> |
+|  size\_t | [**depth**](#variable-depth)   = `0`<br> |
+|  double | [**duration**](#variable-duration)   = `0.0`<br> |
 |  string | [**name**](#variable-name)  <br> |
 |  string | [**parent\_full\_name**](#variable-parent_full_name)  <br> |
 |  string | [**parent\_name**](#variable-parent_name)  <br> |

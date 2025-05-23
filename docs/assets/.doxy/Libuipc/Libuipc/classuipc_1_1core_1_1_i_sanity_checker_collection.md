@@ -51,7 +51,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**build**](#function-build) ([**Scene**](classuipc_1_1core_1_1_scene.md) & s) = 0<br> |
+| virtual void | [**build**](#function-build) ([**core::internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) & s) = 0<br> |
 | virtual SanityCheckResult | [**check**](#function-check) ([**SanityCheckMessageCollection**](classuipc_1_1core_1_1_sanity_check_message_collection.md) & msg) const = 0<br> |
 | virtual  | [**~ISanityCheckerCollection**](#function-isanitycheckercollection) () = default<br> |
 
@@ -91,7 +91,7 @@
 
 ```C++
 virtual void uipc::core::ISanityCheckerCollection::build (
-    Scene & s
+    core::internal::Scene & s
 ) = 0
 ```
 

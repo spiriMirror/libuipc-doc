@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  std::pmr::memory\_resource \* | [**memory\_resource**](#variable-memory_resource)   = = nullptr<br> |
+|  std::pmr::memory\_resource \* | [**memory\_resource**](#variable-memory_resource)   = `nullptr`<br> |
 |  std::string\_view | [**module\_name**](#variable-module_name)  <br> |
 
 

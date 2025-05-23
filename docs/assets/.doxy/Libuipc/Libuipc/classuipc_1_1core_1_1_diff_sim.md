@@ -141,6 +141,21 @@ class uipc::core::DiffSim::DiffSimVisitor (
 
 <hr>
 
+
+
+### friend Scene 
+
+```C++
+class uipc::core::DiffSim::Scene (
+    internal::Scene
+) 
+```
+
+
+
+
+<hr>
+
 ------------------------------
 The documentation for this class was generated from the following file `include/uipc/core/diff_sim.h`
 

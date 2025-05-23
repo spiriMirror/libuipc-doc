@@ -16,6 +16,7 @@
 * `#include <uipc/common/exception.h>`
 * `#include <uipc/backend/buffer_view.h>`
 * `#include <uipc/common/buffer_info.h>`
+* `#include <chrono>`
 * `#include "details/attribute_slot.inl"`
 
 

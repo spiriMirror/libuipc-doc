@@ -12,6 +12,8 @@
 
 * `#include <uipc/geometry/geometry.h>`
 * `#include <uipc/geometry/geometry_slot.h>`
+* `#include <uipc/geometry/geometry_commit.h>`
+* `#include <uipc/geometry/shared_attribute_context.h>`
 
 
 

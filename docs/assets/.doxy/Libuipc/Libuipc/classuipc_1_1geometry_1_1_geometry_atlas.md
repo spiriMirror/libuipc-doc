@@ -54,10 +54,10 @@
 |   | [**GeometryAtlas**](#function-geometryatlas) () <br> |
 |  SizeT | [**attribute\_collection\_count**](#function-attribute_collection_count) () noexcept const<br> |
 |  vector&lt; std::string &gt; | [**attribute\_collection\_names**](#function-attribute_collection_names) () noexcept const<br> |
-|  IndexT | [**create**](#function-create-12) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geo) <br>_Create a geometry in the atlas._  |
-|  void | [**create**](#function-create-22) (std::string\_view name, const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & ac) <br>_Create a named_ [_**AttributeCollection**_](classuipc_1_1geometry_1_1_attribute_collection.md) _in the atlas._ |
-|  const [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) \* | [**find**](#function-find-12) (IndexT id) const<br>_Find the geometry slot by id._  |
-|  const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* | [**find**](#function-find-22) (std::string\_view name) const<br>_Find the_ [_**AttributeCollection**_](classuipc_1_1geometry_1_1_attribute_collection.md) _by name._ |
+|  IndexT | [**create**](#function-create-12) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geo, bool evolving\_only=false) <br>_Create a geometry in the atlas._  |
+|  void | [**create**](#function-create-22) (std::string\_view name, const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & ac, bool evolving\_only=false) <br>_Create a named_ [_**AttributeCollection**_](classuipc_1_1geometry_1_1_attribute_collection.md) _in the atlas._ |
+|  S&lt; const [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find**](#function-find-12) (IndexT id) const<br>_Find the geometry slot by id._  |
+|  S&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**find**](#function-find-22) (std::string\_view name) const<br>_Find the_ [_**AttributeCollection**_](classuipc_1_1geometry_1_1_attribute_collection.md) _by name._ |
 |  void | [**from\_json**](#function-from_json) (const Json & j) <br>_Create geometry atlas from json._  |
 |  SizeT | [**geometry\_count**](#function-geometry_count) () noexcept const<br> |
 |  Json | [**to\_json**](#function-to_json) () const<br>_Create json representation of the geometry atlas._  |
@@ -136,9 +136,11 @@ vector< std::string > uipc::geometry::GeometryAtlas::attribute_collection_names 
 
 ### function create [1/2]
 
+_Create a geometry in the atlas._ 
 ```C++
 IndexT uipc::geometry::GeometryAtlas::create (
-    const Geometry & geo
+    const Geometry & geo,
+    bool evolving_only=false
 ) 
 ```
 
@@ -151,10 +153,12 @@ IndexT uipc::geometry::GeometryAtlas::create (
 
 ### function create [2/2]
 
+_Create a named_ [_**AttributeCollection**_](classuipc_1_1geometry_1_1_attribute_collection.md) _in the atlas._
 ```C++
 void uipc::geometry::GeometryAtlas::create (
     std::string_view name,
-    const AttributeCollection & ac
+    const AttributeCollection & ac,
+    bool evolving_only=false
 ) 
 ```
 
@@ -169,7 +173,7 @@ void uipc::geometry::GeometryAtlas::create (
 
 _Find the geometry slot by id._ 
 ```C++
-const GeometrySlot * uipc::geometry::GeometryAtlas::find (
+S< const GeometrySlot > uipc::geometry::GeometryAtlas::find (
     IndexT id
 ) const
 ```
@@ -189,7 +193,7 @@ Only return const version, not allow to modify the geometry.
 
 _Find the_ [_**AttributeCollection**_](classuipc_1_1geometry_1_1_attribute_collection.md) _by name._
 ```C++
-const AttributeCollection * uipc::geometry::GeometryAtlas::find (
+S< const AttributeCollection > uipc::geometry::GeometryAtlas::find (
     std::string_view name
 ) const
 ```
@@ -248,6 +252,7 @@ SizeT uipc::geometry::GeometryAtlas::geometry_count () noexcept const
 
 ### function to\_json 
 
+_Create json representation of the geometry atlas._ 
 ```C++
 Json uipc::geometry::GeometryAtlas::to_json () const
 ```

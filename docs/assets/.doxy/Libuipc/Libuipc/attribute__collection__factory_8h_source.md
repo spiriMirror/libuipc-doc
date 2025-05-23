@@ -10,9 +10,13 @@
 ```C++
 #pragma once
 #include <uipc/geometry/attribute_collection.h>
+#include <uipc/geometry/attribute_collection_commit.h>
+#include <uipc/geometry/shared_attribute_context.h>
 
 namespace uipc::geometry
 {
+
+
 class UIPC_CORE_API AttributeCollectionFactory
 {
     class Impl;
@@ -22,10 +26,18 @@ class UIPC_CORE_API AttributeCollectionFactory
     ~AttributeCollectionFactory();
 
     [[nodiscard]] S<AttributeCollection> from_json(const Json& j,
-                                                   span<S<IAttributeSlot>> attributes);
+                                                   DeserialSharedAttributeContext& ctx);
 
-    [[nodiscard]] Json to_json(const AttributeCollection* acs,
-                               unordered_map<IAttribute*, IndexT> attr_to_index);
+    [[nodiscard]] Json to_json(const AttributeCollection&    ac,
+                               SerialSharedAttributeContext& ctx);
+
+    [[nodiscard]] Json commit_to_json(const AttributeCollectionCommit& acc,
+                                      SerialSharedAttributeContext&    ctx);
+
+    [[nodiscard]] S<AttributeCollectionCommit> commit_from_json(const Json& j,
+                                                                DeserialSharedAttributeContext& ctx);
+    [[nodiscard]] AttributeCollectionCommit diff(const AttributeCollection& current,
+                                                 const AttributeCollection& reference);
 
   private:
     U<Impl> m_impl;

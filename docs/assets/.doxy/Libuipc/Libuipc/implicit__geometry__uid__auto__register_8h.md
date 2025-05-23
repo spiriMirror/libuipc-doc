@@ -91,8 +91,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| define  | [**REGISTER\_IMPLICIT\_GEOMETRY\_UIDS**](implicit__geometry__uid__auto__register_8h.md#define-register_implicit_geometry_uids) (...)     REGISTER\_IMPLICIT\_GEOMETRY\_UIDS\_INTERNAL(\_\_COUNTER\_\_)<br>_Register ImplicitGeometryUIDs._  |
-| define  | [**REGISTER\_IMPLICIT\_GEOMETRY\_UIDS\_INTERNAL**](implicit__geometry__uid__auto__register_8h.md#define-register_implicit_geometry_uids_internal) (counter) <br> |
+| define  | [**REGISTER\_IMPLICIT\_GEOMETRY\_UIDS**](implicit__geometry__uid__auto__register_8h.md#define-register_implicit_geometry_uids) (...) `REGISTER\_IMPLICIT\_GEOMETRY\_UIDS\_INTERNAL(\_\_COUNTER\_\_)`<br>_Register ImplicitGeometryUIDs._  |
+| define  | [**REGISTER\_IMPLICIT\_GEOMETRY\_UIDS\_INTERNAL**](implicit__geometry__uid__auto__register_8h.md#define-register_implicit_geometry_uids_internal) (counter) `/* multi line expression */`<br> |
 
 ## Macro Definition Documentation
 
@@ -102,10 +102,11 @@
 
 ### define REGISTER\_IMPLICIT\_GEOMETRY\_UIDS 
 
+_Register ImplicitGeometryUIDs._ 
 ```C++
 #define REGISTER_IMPLICIT_GEOMETRY_UIDS (
     ...
-) REGISTER_IMPLICIT_GEOMETRY_UIDS_INTERNAL(__COUNTER__)
+) `REGISTER_IMPLICIT_GEOMETRY_UIDS_INTERNAL(__COUNTER__)`
 ```
 
 
@@ -120,13 +121,7 @@
 ```C++
 #define REGISTER_IMPLICIT_GEOMETRY_UIDS_INTERNAL (
     counter
-) namespace auto_register                                                                               \
-    {                                                                                                     \
-        static ::uipc::list< ::uipc::builtin::UIDInfo > ImplicitGeometryUIDAutoRegisterFunction##counter(); \
-        static ::uipc::builtin::ImplicitGeometryUIDAutoRegister ImplicitGeometryUIDAutoRegister##counter{ \
-            ImplicitGeometryUIDAutoRegisterFunction##counter};                                            \
-    }                                                                                                     \
-    static ::uipc::list< ::uipc::builtin::UIDInfo > auto_register::ImplicitGeometryUIDAutoRegisterFunction##counter()
+) `/* multi line expression */`
 ```
 
 

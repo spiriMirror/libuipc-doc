@@ -10,7 +10,6 @@
 
 
 
-* `#include <uipc/backend/visitors/world_visitor.h>`
 * `#include <uipc/core/feature.h>`
 * `#include <uipc/backend/buffer_view.h>`
 

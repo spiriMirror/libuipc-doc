@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_engine" kind="class" language="C++" prot="public" final="yes">
     <compoundname>uipc::core::Engine</compoundname>
     <sectiondef kind="friend">
@@ -18,23 +18,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="32" column="18" bodyfile="include/uipc/core/engine.h" bodystart="32" bodyend="-1"/>
+        <location file="include/uipc/core/engine.h" line="41" column="18" bodyfile="include/uipc/core/engine.h" bodystart="41" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classuipc_1_1core_1_1_engine_1a326b2bdd091631ea2eeb01eb2764d701" prot="private" static="no" mutable="no">
-        <type>U&lt; Impl &gt;</type>
-        <definition>U&lt;Impl&gt; uipc::core::Engine::m_impl</definition>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_engine_1a81cf15c4dac065fe77c385b8376b7241" prot="private" static="no" mutable="no">
+        <type>S&lt; <ref refid="classuipc_1_1core_1_1internal_1_1_engine" kindref="compound">internal::Engine</ref> &gt;</type>
+        <definition>S&lt;internal::Engine&gt; uipc::core::Engine::m_internal</definition>
         <argsstring></argsstring>
-        <name>m_impl</name>
-        <qualifiedname>uipc::core::Engine::m_impl</qualifiedname>
+        <name>m_internal</name>
+        <qualifiedname>uipc::core::Engine::m_internal</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="43" column="7" bodyfile="include/uipc/core/engine.h" bodystart="43" bodyend="-1"/>
+        <location file="include/uipc/core/engine.h" line="42" column="7" bodyfile="include/uipc/core/engine.h" bodystart="42" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="17" column="5"/>
+        <location file="include/uipc/core/engine.h" line="21" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a777d6f6a69f66606917f91bd3e969b04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -78,7 +78,75 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="20" column="5"/>
+        <location file="include/uipc/core/engine.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1adfb76848de5ecc9614ee9f9aebd6c023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Engine::Engine</definition>
+        <argsstring>(const Engine &amp;)=delete</argsstring>
+        <name>Engine</name>
+        <qualifiedname>uipc::core::Engine::Engine</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_engine" kindref="compound">Engine</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/engine.h" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1af8e11993e7cada16b65c3a0205330556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_engine" kindref="compound">Engine</ref> &amp;</type>
+        <definition>Engine &amp; uipc::core::Engine::operator=</definition>
+        <argsstring>(const Engine &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::core::Engine::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_engine" kindref="compound">Engine</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/engine.h" line="28" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a7e41a556a602c2646249611ebe7b0de5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Engine::Engine</definition>
+        <argsstring>(Engine &amp;&amp;) noexcept=default</argsstring>
+        <name>Engine</name>
+        <qualifiedname>uipc::core::Engine::Engine</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_engine" kindref="compound">Engine</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/engine.h" line="30" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1aaf77384fb7a2f7bab8b7682c12da37b0" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_engine" kindref="compound">Engine</ref> &amp;</type>
+        <definition>Engine &amp; uipc::core::Engine::operator=</definition>
+        <argsstring>(Engine &amp;&amp;) noexcept=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::core::Engine::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_engine" kindref="compound">Engine</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/engine.h" line="31" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a499737b0512f0a3d528b1fcc05bfee6b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string_view</type>
@@ -92,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="22" column="30"/>
+        <location file="include/uipc/core/engine.h" line="33" column="30"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a2a6a952b97ffbf568b85f36d45f2b006" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string_view</type>
@@ -106,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="23" column="30"/>
+        <location file="include/uipc/core/engine.h" line="34" column="30"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a4098c69683fccdd318c166883a675905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_engine_status_collection" kindref="compound">EngineStatusCollection</ref> &amp;</type>
@@ -120,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="24" column="29"/>
+        <location file="include/uipc/core/engine.h" line="35" column="29"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1aa6e63ed1ec83f26c33704cf32f2b512e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classuipc_1_1core_1_1_feature_collection" kindref="compound">FeatureCollection</ref> &amp;</type>
@@ -134,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="25" column="29"/>
+        <location file="include/uipc/core/engine.h" line="36" column="29"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a469bccbbe3401bb7864b9ba6a79b4715" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
@@ -148,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="27" column="10"/>
+        <location file="include/uipc/core/engine.h" line="37" column="30"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -164,151 +232,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="29" column="17"/>
-      </memberdef>
-    </sectiondef>
-    <sectiondef kind="private-func">
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a0ce2c693e3a728f0a6c507efa260d415" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::Engine::init</definition>
-        <argsstring>(backend::WorldVisitor v)</argsstring>
-        <name>init</name>
-        <qualifiedname>uipc::core::Engine::init</qualifiedname>
-        <param>
-          <type><ref refid="classuipc_1_1backend_1_1_world_visitor" kindref="compound">backend::WorldVisitor</ref></type>
-          <declname>v</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="34" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a63c5eb943367dc9b3df31215547a1935" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::Engine::advance</definition>
-        <argsstring>()</argsstring>
-        <name>advance</name>
-        <qualifiedname>uipc::core::Engine::advance</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="35" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1af1fcd709fe279547c2aa22abc902732d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::Engine::backward</definition>
-        <argsstring>()</argsstring>
-        <name>backward</name>
-        <qualifiedname>uipc::core::Engine::backward</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="36" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a8b1a532c5bfaebb6d57211a9da59a18c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::Engine::sync</definition>
-        <argsstring>()</argsstring>
-        <name>sync</name>
-        <qualifiedname>uipc::core::Engine::sync</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="37" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a92443f978bcb43e2fc1bf1093e28a069" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::Engine::retrieve</definition>
-        <argsstring>()</argsstring>
-        <name>retrieve</name>
-        <qualifiedname>uipc::core::Engine::retrieve</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="38" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1ac1a91ac69023dffc653d8a3eab0dbc38" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool uipc::core::Engine::dump</definition>
-        <argsstring>()</argsstring>
-        <name>dump</name>
-        <qualifiedname>uipc::core::Engine::dump</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="39" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1a90cd92e82cb03f85dabdfe5e3266309d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool uipc::core::Engine::recover</definition>
-        <argsstring>(SizeT dst_frame)</argsstring>
-        <name>recover</name>
-        <qualifiedname>uipc::core::Engine::recover</qualifiedname>
-        <param>
-          <type>SizeT</type>
-          <declname>dst_frame</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="40" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_engine_1ac483abcd51a312827df41dd082cad8a7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>SizeT</type>
-        <definition>SizeT uipc::core::Engine::frame</definition>
-        <argsstring>() const</argsstring>
-        <name>frame</name>
-        <qualifiedname>uipc::core::Engine::frame</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/engine.h" line="41" column="11"/>
+        <location file="include/uipc/core/engine.h" line="38" column="30"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/engine.h" line="12" column="1" bodyfile="include/uipc/core/engine.h" bodystart="13" bodyend="44"/>
+    <location file="include/uipc/core/engine.h" line="18" column="1" bodyfile="include/uipc/core/engine.h" bodystart="19" bodyend="43"/>
     <listofallmembers>
-      <member refid="classuipc_1_1core_1_1_engine_1a63c5eb943367dc9b3df31215547a1935" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>advance</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1a499737b0512f0a3d528b1fcc05bfee6b" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>backend_name</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1af1fcd709fe279547c2aa22abc902732d" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>backward</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1a23128981ddb4c82a2dd022a78bd62011" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>default_config</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1ac1a91ac69023dffc653d8a3eab0dbc38" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>dump</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1a4291f342704ca432695801b48ae1b4cc" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>Engine</name></member>
+      <member refid="classuipc_1_1core_1_1_engine_1adfb76848de5ecc9614ee9f9aebd6c023" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>Engine</name></member>
+      <member refid="classuipc_1_1core_1_1_engine_1a7e41a556a602c2646249611ebe7b0de5" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>Engine</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1aa6e63ed1ec83f26c33704cf32f2b512e" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>features</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1ac483abcd51a312827df41dd082cad8a7" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>frame</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1a0ce2c693e3a728f0a6c507efa260d415" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>init</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1a326b2bdd091631ea2eeb01eb2764d701" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>m_impl</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1a90cd92e82cb03f85dabdfe5e3266309d" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>recover</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1a92443f978bcb43e2fc1bf1093e28a069" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>retrieve</name></member>
+      <member refid="classuipc_1_1core_1_1_engine_1a81cf15c4dac065fe77c385b8376b7241" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>m_internal</name></member>
+      <member refid="classuipc_1_1core_1_1_engine_1af8e11993e7cada16b65c3a0205330556" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1core_1_1_engine_1aaf77384fb7a2f7bab8b7682c12da37b0" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>operator=</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1a4098c69683fccdd318c166883a675905" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>status</name></member>
-      <member refid="classuipc_1_1core_1_1_engine_1a8b1a532c5bfaebb6d57211a9da59a18c" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>sync</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1a469bccbbe3401bb7864b9ba6a79b4715" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>to_json</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1a2a6a952b97ffbf568b85f36d45f2b006" prot="public" virt="non-virtual"><scope>uipc::core::Engine</scope><name>workspace</name></member>
       <member refid="classuipc_1_1core_1_1_engine_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" virt="non-virtual"><scope>uipc::core::Engine</scope><name>World</name></member>

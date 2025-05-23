@@ -1,13 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classuipc_1_1_exception" kind="class" language="C++" prot="public">
     <compoundname>uipc::Exception</compoundname>
     <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
     <derivedcompoundref refid="classuipc_1_1_json_i_o_error" prot="public" virt="non-virtual">uipc::JsonIOError</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1core_1_1_engine_exception" prot="public" virt="non-virtual">uipc::core::EngineException</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1core_1_1_scene_i_o_error" prot="public" virt="non-virtual">uipc::core::SceneIOError</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1geometry_1_1_attribute_collection_error" prot="public" virt="non-virtual">uipc::geometry::AttributeCollectionError</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1_attribute_i_o_error" prot="public" virt="non-virtual">uipc::geometry::AttributeIOError</derivedcompoundref>
-    <derivedcompoundref refid="classuipc_1_1geometry_1_1_geometry_attribute_error" prot="public" virt="non-virtual">uipc::geometry::GeometryAttributeError</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="public" virt="non-virtual">uipc::geometry::GeometryIOError</derivedcompoundref>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classuipc_1_1_exception_1a9b12b9c6ae8ba86f354dd14b896c5a86" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -91,14 +92,20 @@
         </childnode>
       </node>
       <node id="6">
+        <label>uipc::geometry::AttributeCollectionError</label>
+        <link refid="classuipc_1_1geometry_1_1_attribute_collection_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
         <label>uipc::geometry::AttributeIOError</label>
         <link refid="classuipc_1_1geometry_1_1_attribute_i_o_error"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
-        <label>uipc::geometry::GeometryAttributeError</label>
-        <link refid="classuipc_1_1geometry_1_1_geometry_attribute_error"/>
+      <node id="8">
+        <label>uipc::geometry::GeometryIOError</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry_i_o_error"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="implicit__geometry_8h" kind="file" language="C++">
     <compoundname>implicit_geometry.h</compoundname>
     <includes refid="geometry_2geometry_8h" local="no">uipc/geometry/geometry.h</includes>
@@ -24,7 +24,7 @@
         <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="40">
+      <node id="42">
         <label>uipc/builtin/uid_info.h</label>
         <link refid="uid__info_8h_source"/>
         <childnode refid="11" relation="include">
@@ -159,9 +159,15 @@
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
         <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>uipc/geometry/attribute_collection_commit.h</label>
+        <link refid="attribute__collection__commit_8h_source"/>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="29">
@@ -176,7 +182,7 @@
         <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="37">
         <label>uipc/geometry/attribute_friend.h</label>
         <link refid="attribute__friend_8h_source"/>
       </node>
@@ -197,6 +203,8 @@
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>uipc/geometry/geometry.h</label>
@@ -205,14 +213,16 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
       </node>
-      <node id="38">
+      <node id="39">
         <label>uipc/geometry/geometry_friend.h</label>
         <link refid="geometry__friend_8h_source"/>
       </node>
@@ -221,11 +231,14 @@
         <link refid="implicit__geometry_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
       </node>
       <node id="22">
         <label>Eigen/Core</label>
+      </node>
+      <node id="35">
+        <label>chrono</label>
       </node>
       <node id="20">
         <label>cinttypes</label>
@@ -233,16 +246,16 @@
       <node id="32">
         <label>details/attribute.inl</label>
       </node>
-      <node id="37">
+      <node id="38">
         <label>details/attribute_collection.inl</label>
       </node>
       <node id="30">
         <label>details/attribute_copy.inl</label>
       </node>
-      <node id="35">
+      <node id="36">
         <label>details/attribute_slot.inl</label>
       </node>
-      <node id="39">
+      <node id="41">
         <label>details/geometry.inl</label>
       </node>
       <node id="16">
@@ -328,7 +341,7 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classuipc_1_1geometry_1_1_implicit_geometry" prot="public">uipc::geometry::ImplicitGeometry</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_implicit_geometry_01_4" prot="protected">fmt::formatter&lt; uipc::geometry::ImplicitGeometry &gt;</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_implicit_geometry_01_4" prot="public">fmt::formatter&lt; uipc::geometry::ImplicitGeometry &gt;</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1geometry">uipc::geometry</innernamespace>
     <innernamespace refid="namespacefmt">fmt</innernamespace>
@@ -342,10 +355,10 @@
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/builtin/uid_info.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="6" refid="classuipc_1_1geometry_1_1_implicit_geometry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref></highlight></codeline>
+<codeline lineno="6" refid="classuipc_1_1geometry_1_1_implicit_geometry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>ImplicitGeometry<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Geometry</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>ImplicitGeometry();</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structuipc_1_1builtin_1_1_u_i_d_info" kindref="compound">builtin::UIDInfo</ref>&amp;<sp/>uid_info()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string_view<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>

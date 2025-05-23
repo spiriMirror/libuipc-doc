@@ -49,8 +49,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr U64 | [**OfficialBuiltinUIDStart**](#variable-officialbuiltinuidstart)   = = 0<br> |
-|  constexpr U64 | [**UserDefinedUIDStart**](#variable-userdefineduidstart)   = = 1ull &lt;&lt; 32<br> |
+|  U64 | [**OfficialBuiltinUIDStart**](#variable-officialbuiltinuidstart)   = `0`<br> |
+|  U64 | [**UserDefinedUIDStart**](#variable-userdefineduidstart)   = `1ull &lt;&lt; 32`<br> |
 
 
 
@@ -214,7 +214,7 @@ string uipc::builtin::UIDInfo::website;
 ### variable OfficialBuiltinUIDStart 
 
 ```C++
-constexpr U64 uipc::builtin::UIDInfo::OfficialBuiltinUIDStart;
+U64 uipc::builtin::UIDInfo::OfficialBuiltinUIDStart;
 ```
 
 
@@ -227,7 +227,7 @@ constexpr U64 uipc::builtin::UIDInfo::OfficialBuiltinUIDStart;
 ### variable UserDefinedUIDStart 
 
 ```C++
-constexpr U64 uipc::builtin::UIDInfo::UserDefinedUIDStart;
+U64 uipc::builtin::UIDInfo::UserDefinedUIDStart;
 ```
 
 

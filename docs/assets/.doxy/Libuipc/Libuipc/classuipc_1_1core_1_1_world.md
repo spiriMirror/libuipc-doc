@@ -51,7 +51,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**World**](#function-world) ([**Engine**](classuipc_1_1core_1_1_engine.md) & e) noexcept<br> |
+|   | [**World**](#function-world-14) ([**Engine**](classuipc_1_1core_1_1_engine.md) & e) noexcept<br> |
+|   | [**World**](#function-world-24) (const [**World**](classuipc_1_1core_1_1_world.md) &) = delete<br> |
+|   | [**World**](#function-world-34) ([**World**](classuipc_1_1core_1_1_world.md) &&) = default<br> |
 |  void | [**advance**](#function-advance) () <br> |
 |  void | [**backward**](#function-backward) () <br> |
 |  bool | [**dump**](#function-dump) () <br> |
@@ -59,9 +61,12 @@
 |  SizeT | [**frame**](#function-frame) () const<br> |
 |  void | [**init**](#function-init) ([**Scene**](classuipc_1_1core_1_1_scene.md) & s) <br> |
 |  bool | [**is\_valid**](#function-is_valid) () const<br> |
+|  [**World**](classuipc_1_1core_1_1_world.md) & | [**operator=**](#function-operator) (const [**World**](classuipc_1_1core_1_1_world.md) &) = delete<br> |
+|  [**World**](classuipc_1_1core_1_1_world.md) & | [**operator=**](#function-operator_1) ([**World**](classuipc_1_1core_1_1_world.md) &&) = default<br> |
 |  bool | [**recover**](#function-recover) (SizeT aim\_frame=~0ull) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
 |  void | [**sync**](#function-sync) () <br> |
+|   | [**~World**](#function-world) () <br> |
 
 
 
@@ -95,12 +100,42 @@
 
 
 
-### function World 
+### function World [1/4]
 
 ```C++
 uipc::core::World::World (
     Engine & e
 ) noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function World [2/4]
+
+```C++
+uipc::core::World::World (
+    const World &
+) = delete
+```
+
+
+
+
+<hr>
+
+
+
+### function World [3/4]
+
+```C++
+uipc::core::World::World (
+    World &&
+) = default
 ```
 
 
@@ -203,6 +238,36 @@ bool uipc::core::World::is_valid () const
 
 
 
+### function operator= 
+
+```C++
+World & uipc::core::World::operator= (
+    const World &
+) = delete
+```
+
+
+
+
+<hr>
+
+
+
+### function operator= 
+
+```C++
+World & uipc::core::World::operator= (
+    World &&
+) = default
+```
+
+
+
+
+<hr>
+
+
+
 ### function recover 
 
 ```C++
@@ -235,6 +300,19 @@ void uipc::core::World::retrieve ()
 
 ```C++
 void uipc::core::World::sync () 
+```
+
+
+
+
+<hr>
+
+
+
+### function ~World 
+
+```C++
+uipc::core::World::~World () 
 ```
 
 

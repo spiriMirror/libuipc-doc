@@ -51,9 +51,13 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Engine**](#function-engine) (std::string\_view backend\_name, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
+|   | [**Engine**](#function-engine-13) (std::string\_view backend\_name, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
+|   | [**Engine**](#function-engine-23) (const [**Engine**](classuipc_1_1core_1_1_engine.md) &) = delete<br> |
+|   | [**Engine**](#function-engine-33) ([**Engine**](classuipc_1_1core_1_1_engine.md) &&) noexcept<br> |
 |  std::string\_view | [**backend\_name**](#function-backend_name) () noexcept const<br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () <br> |
+|  [**Engine**](classuipc_1_1core_1_1_engine.md) & | [**operator=**](#function-operator) (const [**Engine**](classuipc_1_1core_1_1_engine.md) &) = delete<br> |
+|  [**Engine**](classuipc_1_1core_1_1_engine.md) & | [**operator=**](#function-operator_1) ([**Engine**](classuipc_1_1core_1_1_engine.md) &&) noexcept<br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) & | [**status**](#function-status) () <br> |
 |  Json | [**to\_json**](#function-to_json) () const<br> |
 |  std::string\_view | [**workspace**](#function-workspace) () noexcept const<br> |
@@ -96,7 +100,7 @@
 
 
 
-### function Engine 
+### function Engine [1/3]
 
 ```C++
 uipc::core::Engine::Engine (
@@ -104,6 +108,36 @@ uipc::core::Engine::Engine (
     std::string_view workspace="./",
     const Json & config=default_config()
 ) 
+```
+
+
+
+
+<hr>
+
+
+
+### function Engine [2/3]
+
+```C++
+uipc::core::Engine::Engine (
+    const Engine &
+) = delete
+```
+
+
+
+
+<hr>
+
+
+
+### function Engine [3/3]
+
+```C++
+uipc::core::Engine::Engine (
+    Engine &&
+) noexcept
 ```
 
 
@@ -130,6 +164,36 @@ std::string_view uipc::core::Engine::backend_name () noexcept const
 
 ```C++
 const FeatureCollection & uipc::core::Engine::features () 
+```
+
+
+
+
+<hr>
+
+
+
+### function operator= 
+
+```C++
+Engine & uipc::core::Engine::operator= (
+    const Engine &
+) = delete
+```
+
+
+
+
+<hr>
+
+
+
+### function operator= 
+
+```C++
+Engine & uipc::core::Engine::operator= (
+    Engine &&
+) noexcept
 ```
 
 

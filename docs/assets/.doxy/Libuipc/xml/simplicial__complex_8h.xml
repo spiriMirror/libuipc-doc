@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="simplicial__complex_8h" kind="file" language="C++">
     <compoundname>simplicial_complex.h</compoundname>
     <includes refid="geometry_2geometry_8h" local="no">uipc/geometry/geometry.h</includes>
@@ -131,10 +131,10 @@
         <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="40">
+      <node id="42">
         <label>uipc/geometry/abstract_simplicial_complex.h</label>
         <link refid="abstract__simplicial__complex_8h_source"/>
-        <childnode refid="41" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
@@ -182,9 +182,15 @@
         </childnode>
         <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
         <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>uipc/geometry/attribute_collection_commit.h</label>
+        <link refid="attribute__collection__commit_8h_source"/>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="29">
@@ -199,7 +205,7 @@
         <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="36">
+      <node id="37">
         <label>uipc/geometry/attribute_friend.h</label>
         <link refid="attribute__friend_8h_source"/>
       </node>
@@ -220,6 +226,8 @@
         </childnode>
         <childnode refid="35" relation="include">
         </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>uipc/geometry/geometry.h</label>
@@ -228,14 +236,16 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
         <childnode refid="39" relation="include">
         </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
       </node>
-      <node id="38">
+      <node id="39">
         <label>uipc/geometry/geometry_friend.h</label>
         <link refid="geometry__friend_8h_source"/>
       </node>
@@ -244,12 +254,12 @@
         <link refid="simplicial__complex_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="40" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
-        <childnode refid="41" relation="include">
+        <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="41">
+      <node id="43">
         <label>uipc/geometry/simplicial_complex_attributes.h</label>
         <link refid="simplicial__complex__attributes_8h_source"/>
         <childnode refid="33" relation="include">
@@ -258,11 +268,14 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="37" relation="include">
         </childnode>
       </node>
       <node id="22">
         <label>Eigen/Core</label>
+      </node>
+      <node id="35">
+        <label>chrono</label>
       </node>
       <node id="20">
         <label>cinttypes</label>
@@ -270,16 +283,16 @@
       <node id="32">
         <label>details/attribute.inl</label>
       </node>
-      <node id="37">
+      <node id="38">
         <label>details/attribute_collection.inl</label>
       </node>
       <node id="30">
         <label>details/attribute_copy.inl</label>
       </node>
-      <node id="35">
+      <node id="36">
         <label>details/attribute_slot.inl</label>
       </node>
-      <node id="39">
+      <node id="41">
         <label>details/geometry.inl</label>
       </node>
       <node id="16">
@@ -538,6 +551,8 @@
       <node id="31">
         <label>include/uipc/geometry/utils/is_trimesh_closed.h</label>
         <link refid="is__trimesh__closed_8h_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
       </node>
       <node id="32">
         <label>include/uipc/geometry/utils/label_connected_vertices.h</label>
@@ -615,7 +630,7 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex" prot="public">uipc::geometry::SimplicialComplex</innerclass>
-    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4" prot="private">fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;</innerclass>
+    <innerclass refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4" prot="public">fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1geometry">uipc::geometry</innernamespace>
     <innernamespace refid="namespacefmt">fmt</innernamespace>
@@ -631,15 +646,15 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="19" refid="classuipc_1_1geometry_1_1_simplicial_complex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref></highlight></codeline>
+<codeline lineno="19" refid="classuipc_1_1geometry_1_1_simplicial_complex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>SimplicialComplex<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Geometry</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&gt;;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">fmt::formatter&lt;SimplicialComplex&gt;;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_attribute_friend" kindref="compound">AttributeFriend</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AttributeFriend;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_geometry_friend" kindref="compound">GeometryFriend</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">GeometryFriend;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="35" refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" kindref="member">VertexAttributes</ref><sp/><sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;false, 0&gt;</ref>;</highlight></codeline>
@@ -651,14 +666,14 @@
 <codeline lineno="56" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" kindref="member">TetrahedronAttributes</ref><sp/><sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;false, 3&gt;</ref>;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">CTetrahedronAttributes<sp/>=<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" kindref="compound">SimplicialComplexAttributes&lt;true, 3&gt;</ref>;</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplex();</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>o)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>(<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;&amp;<sp/>o)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplex(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SimplicialComplex&amp;<sp/>o);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplex(SimplicialComplex&amp;&amp;<sp/>o)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>o)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;<sp/>operator=(<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref>&amp;&amp;<sp/>o)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplex&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SimplicialComplex&amp;<sp/>o)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplex&amp;<sp/>operator=(SimplicialComplex&amp;&amp;<sp/>o)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="74" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a24795c8b6af9e178c79cc12afb2a2040" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot&lt;Matrix4x4&gt;</ref>&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a24795c8b6af9e178c79cc12afb2a2040" kindref="member">transforms</ref>();</highlight></codeline>
@@ -666,50 +681,47 @@
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="87" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ac2bebf6e8fb15b51b2ddf8694d5a2076" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot&lt;Vector3&gt;</ref>&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ac2bebf6e8fb15b51b2ddf8694d5a2076" kindref="member">positions</ref>()<sp/>noexcept;</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3e1631f15a7ff02d7ebd5375336dd447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt;Vector3&gt;&amp;<sp/>positions()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="94" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3e1631f15a7ff02d7ebd5375336dd447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="classuipc_1_1geometry_1_1_attribute_slot" kindref="compound">AttributeSlot</ref>&lt;Vector3&gt;&amp;<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ac2bebf6e8fb15b51b2ddf8694d5a2076" kindref="member">positions</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a9bc9026f9d5c1655d5d25663fe279b25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" kindref="member">VertexAttributes</ref><sp/><sp/>vertices()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CVertexAttributes<sp/>vertices()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="101" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a9bc9026f9d5c1655d5d25663fe279b25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1af74a17ef752718e76e85b14700fef944" kindref="member">VertexAttributes</ref><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a9bc9026f9d5c1655d5d25663fe279b25" kindref="member">vertices</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CVertexAttributes<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a9bc9026f9d5c1655d5d25663fe279b25" kindref="member">vertices</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0439ddfcd5e81971901ec69037f5f3ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0fcdacbdce2bf6b750a4aa7931f583c4" kindref="member">EdgeAttributes</ref><sp/><sp/>edges()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CEdgeAttributes<sp/>edges()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="109" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0439ddfcd5e81971901ec69037f5f3ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0fcdacbdce2bf6b750a4aa7931f583c4" kindref="member">EdgeAttributes</ref><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0439ddfcd5e81971901ec69037f5f3ad" kindref="member">edges</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CEdgeAttributes<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a0439ddfcd5e81971901ec69037f5f3ad" kindref="member">edges</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a319b4aabd85c2dd4c658ea672abc1a93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3b113a40d6caa90c6a19df7ff11163c8" kindref="member">TriangleAttributes</ref><sp/><sp/>triangles()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CTriangleAttributes<sp/>triangles()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="125" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ab51e13e2d3654af4439edee401e18ebf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" kindref="member">TetrahedronAttributes</ref><sp/><sp/>tetrahedra()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CTetrahedronAttributes<sp/>tetrahedra()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="118" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a319b4aabd85c2dd4c658ea672abc1a93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a3b113a40d6caa90c6a19df7ff11163c8" kindref="member">TriangleAttributes</ref><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a319b4aabd85c2dd4c658ea672abc1a93" kindref="member">triangles</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CTriangleAttributes<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a319b4aabd85c2dd4c658ea672abc1a93" kindref="member">triangles</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="125" refid="classuipc_1_1geometry_1_1_simplicial_complex_1ab51e13e2d3654af4439edee401e18ebf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ae33e94b27c0d5e7289a82e4390a77e67" kindref="member">TetrahedronAttributes</ref><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ab51e13e2d3654af4439edee401e18ebf" kindref="member">tetrahedra</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>CTetrahedronAttributes<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1ab51e13e2d3654af4439edee401e18ebf" kindref="member">tetrahedra</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a1a0b1160de8e4915ba11e5714620b8d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>IndexT<sp/>dim()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="135" refid="classuipc_1_1geometry_1_1_simplicial_complex_1a1a0b1160de8e4915ba11e5714620b8d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>IndexT<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_1a1a0b1160de8e4915ba11e5714620b8d7" kindref="member">dim</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/>protected:</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>std::string_view<sp/><sp/><sp/>get_type()<sp/>const<sp/>noexcept<sp/>override;</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>Json<sp/>do_to_json()<sp/>const<sp/>override;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>do_collect_attribute_collections(vector&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;&amp;<sp/>names,</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;<ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>*&gt;&amp;<sp/>collections)<sp/>override;</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>do_build_from_attribute_collections(span&lt;std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&gt;<sp/>names,</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;<ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>*&gt;<sp/>collections)<sp/>noexcept<sp/>override;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>S&lt;<ref refid="classuipc_1_1geometry_1_1_i_geometry" kindref="compound">IGeometry</ref>&gt;<sp/>do_clone()<sp/>const<sp/>override;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/>private:</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref><sp/>m_vertex_attributes;</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref><sp/>m_edge_attributes;</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref><sp/>m_triangle_attributes;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref><sp/>m_tetrahedron_attributes;</highlight></codeline>
-<codeline lineno="152"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="153"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//formatter</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal">namespace<sp/>fmt</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>std::string_view<sp/>get_type()<sp/>const<sp/>noexcept<sp/>override;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>S&lt;<ref refid="classuipc_1_1geometry_1_1_i_geometry" kindref="compound">IGeometry</ref>&gt;<sp/>do_clone()<sp/>const<sp/>override;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>private:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>shortcut<sp/>to<sp/>the<sp/>attribute<sp/>collections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;<ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>&gt;<sp/>m_vertex_attributes;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;<ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>&gt;<sp/>m_edge_attributes;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;<ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>&gt;<sp/>m_triangle_attributes;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>S&lt;<ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref>&gt;<sp/>m_tetrahedron_attributes;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//formatter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">namespace<sp/>fmt</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="157" refid="structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_simplicial_complex_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>formatter&lt;uipc::geometry::SimplicialComplex&gt;<sp/>:<sp/>formatter&lt;string_view&gt;</highlight></codeline>
 <codeline lineno="158"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>formatter&lt;uipc::<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref>&gt;<sp/>:<sp/>formatter&lt;string_view&gt;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>appender<sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">uipc::geometry::SimplicialComplex</ref>&amp;<sp/>c,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="163"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="164"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>fmt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>appender<sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">uipc::geometry::SimplicialComplex</ref>&amp;<sp/>c,<sp/>format_context&amp;<sp/>ctx)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>fmt</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/geometry/simplicial_complex.h"/>
   </compounddef>

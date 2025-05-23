@@ -11,6 +11,8 @@
 
 
 * `#include <uipc/geometry/attribute_collection.h>`
+* `#include <uipc/geometry/attribute_collection_commit.h>`
+* `#include <uipc/geometry/shared_attribute_context.h>`
 
 
 

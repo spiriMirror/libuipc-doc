@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_scene_factory" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::SceneFactory</compoundname>
     <sectiondef kind="private-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_factory.h" line="18" column="7" bodyfile="include/uipc/core/scene_factory.h" bodystart="18" bodyend="-1"/>
+        <location file="include/uipc/core/scene_factory.h" line="24" column="7" bodyfile="include/uipc/core/scene_factory.h" bodystart="24" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_factory.h" line="11" column="5"/>
+        <location file="include/uipc/core/scene_factory.h" line="14" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1a5830e6ccad688085ac6ec59a94db2491" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -45,11 +45,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_factory.h" line="12" column="5"/>
+        <location file="include/uipc/core/scene_factory.h" line="15" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1ab576a22e8a5c90b5bc47c76313bac6cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
-        <definition>S&lt; Scene &gt; uipc::core::SceneFactory::from_json</definition>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1ab4a455bbdedad1333a4c2af5d52a1549" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref></type>
+        <definition>Scene uipc::core::SceneFactory::from_snapshot</definition>
+        <argsstring>(const SceneSnapshot &amp;snapshot)</argsstring>
+        <name>from_snapshot</name>
+        <qualifiedname>uipc::core::SceneFactory::from_snapshot</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_scene_snapshot" kindref="compound">SceneSnapshot</ref> &amp;</type>
+          <declname>snapshot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene_factory.h" line="17" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1ac2157df71ae3994d4bfbabeb48d6e229" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_scene_snapshot" kindref="compound">SceneSnapshot</ref></type>
+        <definition>SceneSnapshot uipc::core::SceneFactory::from_json</definition>
         <argsstring>(const Json &amp;j)</argsstring>
         <name>from_json</name>
         <qualifiedname>uipc::core::SceneFactory::from_json</qualifiedname>
@@ -63,16 +81,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_factory.h" line="14" column="8"/>
+        <location file="include/uipc/core/scene_factory.h" line="18" column="20"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1ae657dabc4d8206a68ebfb508260e4944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1a77408214d757cf9e04152ff6f8e7d70e" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::core::SceneFactory::to_json</definition>
-        <argsstring>(const Scene &amp;scene)</argsstring>
+        <argsstring>(const SceneSnapshot &amp;scene)</argsstring>
         <name>to_json</name>
         <qualifiedname>uipc::core::SceneFactory::to_json</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &amp;</type>
+          <type>const <ref refid="classuipc_1_1core_1_1_scene_snapshot" kindref="compound">SceneSnapshot</ref> &amp;</type>
           <declname>scene</declname>
         </param>
         <briefdescription>
@@ -81,19 +99,58 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_factory.h" line="15" column="15"/>
+        <location file="include/uipc/core/scene_factory.h" line="19" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1a6f41053a23ac7852a87b0a6b75ddffba" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_scene_snapshot_commit" kindref="compound">SceneSnapshotCommit</ref></type>
+        <definition>SceneSnapshotCommit uipc::core::SceneFactory::commit_from_json</definition>
+        <argsstring>(const Json &amp;json)</argsstring>
+        <name>commit_from_json</name>
+        <qualifiedname>uipc::core::SceneFactory::commit_from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene_factory.h" line="20" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_factory_1ad377fb594142c3616712e736ad93d6cc" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::core::SceneFactory::commit_to_json</definition>
+        <argsstring>(const SceneSnapshotCommit &amp;scene)</argsstring>
+        <name>commit_to_json</name>
+        <qualifiedname>uipc::core::SceneFactory::commit_to_json</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_scene_snapshot_commit" kindref="compound">SceneSnapshotCommit</ref> &amp;</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene_factory.h" line="21" column="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/scene_factory.h" line="6" column="1" bodyfile="include/uipc/core/scene_factory.h" bodystart="7" bodyend="19"/>
+    <location file="include/uipc/core/scene_factory.h" line="8" column="1" bodyfile="include/uipc/core/scene_factory.h" bodystart="9" bodyend="25"/>
     <listofallmembers>
-      <member refid="classuipc_1_1core_1_1_scene_factory_1ab576a22e8a5c90b5bc47c76313bac6cb" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>from_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_factory_1a6f41053a23ac7852a87b0a6b75ddffba" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>commit_from_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_factory_1ad377fb594142c3616712e736ad93d6cc" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>commit_to_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_factory_1ac2157df71ae3994d4bfbabeb48d6e229" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>from_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_factory_1ab4a455bbdedad1333a4c2af5d52a1549" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>from_snapshot</name></member>
       <member refid="classuipc_1_1core_1_1_scene_factory_1a3435eef00839de0d759f5a1713992b46" prot="private" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>m_impl</name></member>
       <member refid="classuipc_1_1core_1_1_scene_factory_1a072da80c714ae3e3ee8b24fad1e1a764" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>SceneFactory</name></member>
-      <member refid="classuipc_1_1core_1_1_scene_factory_1ae657dabc4d8206a68ebfb508260e4944" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_factory_1a77408214d757cf9e04152ff6f8e7d70e" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>to_json</name></member>
       <member refid="classuipc_1_1core_1_1_scene_factory_1a5830e6ccad688085ac6ec59a94db2491" prot="public" virt="non-virtual"><scope>uipc::core::SceneFactory</scope><name>~SceneFactory</name></member>
     </listofallmembers>
   </compounddef>

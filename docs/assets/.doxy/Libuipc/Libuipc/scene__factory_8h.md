@@ -11,6 +11,8 @@
 
 
 * `#include <uipc/core/scene.h>`
+* `#include <uipc/core/scene_snapshot.h>`
+* `#include <uipc/geometry/attribute_collection_factory.h>`
 
 
 

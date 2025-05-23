@@ -89,14 +89,14 @@ Inherited by the following classes: [uipc::geometry::AbstractSimplicialComplex](
 | Type | Name |
 | ---: | :--- |
 |   | [**Geometry**](#function-geometry-13) () <br> |
-|   | [**Geometry**](#function-geometry-23) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = default<br> |
+|   | [**Geometry**](#function-geometry-23) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) <br> |
 |   | [**Geometry**](#function-geometry-33) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = default<br> |
 |  T \* | [**as**](#function-as-12) () <br> |
 |  const T \* | [**as**](#function-as-22) () const<br> |
-|  InstanceAttributes | [**instances**](#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
-|  CInstanceAttributes | [**instances**](#function-instances-22) () const<br> |
-|  MetaAttributes | [**meta**](#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
-|  CMetaAttributes | [**meta**](#function-meta-22) () const<br> |
+|  [**InstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
+|  [**CInstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](#function-instances-22) () const<br> |
+|  [**MetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
+|  [**CMetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](#function-meta-22) () const<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](#function-operator) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = delete<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](#function-operator_1) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = delete<br> |
 
@@ -107,9 +107,10 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**clone**](classuipc_1_1geometry_1_1_i_geometry.md#function-clone) () const<br> |
+|  S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**clone**](classuipc_1_1geometry_1_1_i_geometry.md#function-clone) () const<br> |
 |  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_geometry.md#function-to_json) () const<br> |
 |  std::string\_view | [**type**](classuipc_1_1geometry_1_1_i_geometry.md#function-type) () noexcept const<br>_Get the type of the geometries, check the type to downcast the geometries to a specific type._  |
+|  void | [**update\_from**](classuipc_1_1geometry_1_1_i_geometry.md#function-update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & commit) <br> |
 | virtual  | [**~IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md#function-igeometry) () = default<br> |
 
 
@@ -125,12 +126,6 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 
 
-## Protected Attributes
-
-| Type | Name |
-| ---: | :--- |
-|  [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) | [**m\_intances**](#variable-m_intances)  <br> |
-|  [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) | [**m\_meta**](#variable-m_meta)  <br> |
 
 
 
@@ -167,10 +162,15 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**do\_build\_from\_attribute\_collections**](#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept override<br> |
+|  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**create**](#function-create) (std::string\_view name) <br> |
+| virtual void | [**do\_build\_from\_attribute\_collections**](#function-do_build_from_attribute_collections) (span&lt; const std::string &gt; names, span&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) override<br> |
 | virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
-| virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override<br> |
+| virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections-12) (vector&lt; std::string &gt; & names, vector&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override const<br> |
+| virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections-22) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json) () override const<br> |
+| virtual void | [**do\_update\_from**](#function-do_update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & commit) override<br> |
+|  S&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**find**](#function-find-12) (std::string\_view name) const<br> |
+|  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**find**](#function-find-22) (std::string\_view name) <br> |
 | virtual std::string\_view | [**get\_type**](#function-get_type) () noexcept override const<br> |
 
 
@@ -180,10 +180,12 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**do\_build\_from\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_build_from_attribute_collections) (span&lt; std::string &gt; names, span&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) noexcept = 0<br> |
+| virtual void | [**do\_build\_from\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_build_from_attribute_collections) (span&lt; const std::string &gt; names, span&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) = 0<br> |
 | virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_clone) () const = 0<br> |
-| virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) = 0<br> |
+| virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections-12) (vector&lt; std::string &gt; & names, vector&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) const = 0<br> |
+| virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections-22) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) = 0<br> |
 | virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_to_json) () const = 0<br> |
+| virtual void | [**do\_update\_from**](classuipc_1_1geometry_1_1_i_geometry.md#function-do_update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & commit) = 0<br> |
 | virtual std::string\_view | [**get\_type**](classuipc_1_1geometry_1_1_i_geometry.md#function-get_type) () noexcept const = 0<br> |
 
 
@@ -268,7 +270,7 @@ uipc::geometry::Geometry::Geometry ()
 ```C++
 uipc::geometry::Geometry::Geometry (
     const Geometry & o
-) = default
+) 
 ```
 
 
@@ -424,36 +426,23 @@ Geometry & uipc::geometry::Geometry::operator= (
 
 
 <hr>
-## Protected Attributes Documentation
-
-
-
-
-### variable m\_intances 
-
-```C++
-AttributeCollection uipc::geometry::Geometry::m_intances;
-```
-
-
-
-
-<hr>
-
-
-
-### variable m\_meta 
-
-```C++
-AttributeCollection uipc::geometry::Geometry::m_meta;
-```
-
-
-
-
-<hr>
 ## Protected Functions Documentation
 
+
+
+
+### function create 
+
+```C++
+S< AttributeCollection > uipc::geometry::Geometry::create (
+    std::string_view name
+) 
+```
+
+
+
+
+<hr>
 
 
 
@@ -461,9 +450,9 @@ AttributeCollection uipc::geometry::Geometry::m_meta;
 
 ```C++
 virtual void uipc::geometry::Geometry::do_build_from_attribute_collections (
-    span< std::string > names,
-    span< AttributeCollection * > collections
-) noexcept override
+    span< const std::string > names,
+    span< const AttributeCollection * > collections
+) override
 ```
 
 
@@ -490,7 +479,25 @@ Implements [*uipc::geometry::IGeometry::do\_clone*](classuipc_1_1geometry_1_1_i_
 
 
 
-### function do\_collect\_attribute\_collections 
+### function do\_collect\_attribute\_collections [1/2]
+
+```C++
+virtual void uipc::geometry::Geometry::do_collect_attribute_collections (
+    vector< std::string > & names,
+    vector< const AttributeCollection * > & collections
+) override const
+```
+
+
+
+Implements [*uipc::geometry::IGeometry::do\_collect\_attribute\_collections*](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections-12)
+
+
+<hr>
+
+
+
+### function do\_collect\_attribute\_collections [2/2]
 
 ```C++
 virtual void uipc::geometry::Geometry::do_collect_attribute_collections (
@@ -501,7 +508,7 @@ virtual void uipc::geometry::Geometry::do_collect_attribute_collections (
 
 
 
-Implements [*uipc::geometry::IGeometry::do\_collect\_attribute\_collections*](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections)
+Implements [*uipc::geometry::IGeometry::do\_collect\_attribute\_collections*](classuipc_1_1geometry_1_1_i_geometry.md#function-do_collect_attribute_collections-22)
 
 
 <hr>
@@ -517,6 +524,53 @@ virtual Json uipc::geometry::Geometry::do_to_json () override const
 
 
 Implements [*uipc::geometry::IGeometry::do\_to\_json*](classuipc_1_1geometry_1_1_i_geometry.md#function-do_to_json)
+
+
+<hr>
+
+
+
+### function do\_update\_from 
+
+```C++
+virtual void uipc::geometry::Geometry::do_update_from (
+    const GeometryCommit & commit
+) override
+```
+
+
+
+Implements [*uipc::geometry::IGeometry::do\_update\_from*](classuipc_1_1geometry_1_1_i_geometry.md#function-do_update_from)
+
+
+<hr>
+
+
+
+### function find [1/2]
+
+```C++
+S< const AttributeCollection > uipc::geometry::Geometry::find (
+    std::string_view name
+) const
+```
+
+
+
+
+<hr>
+
+
+
+### function find [2/2]
+
+```C++
+S< AttributeCollection > uipc::geometry::Geometry::find (
+    std::string_view name
+) 
+```
+
+
 
 
 <hr>

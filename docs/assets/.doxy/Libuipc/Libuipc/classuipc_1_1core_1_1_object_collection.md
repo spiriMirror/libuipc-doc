@@ -309,6 +309,21 @@ struct uipc::core::ObjectCollection::formatter< ObjectCollection > (
 
 <hr>
 
+
+
+### friend Scene 
+
+```C++
+class uipc::core::ObjectCollection::Scene (
+    internal::Scene
+) 
+```
+
+
+
+
+<hr>
+
 ------------------------------
 The documentation for this class was generated from the following file `include/uipc/core/object_collection.h`
 

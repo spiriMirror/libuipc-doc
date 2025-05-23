@@ -78,7 +78,7 @@ Inherits the following classes: [uipc::core::IObject](classuipc_1_1core_1_1_i_ob
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Object**](#function-object-14) ([**Scene**](classuipc_1_1core_1_1_scene.md) & scene, IndexT id, std::string\_view name="") noexcept<br> |
+|   | [**Object**](#function-object-14) ([**internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) & scene, IndexT id, std::string\_view name="") noexcept<br> |
 |   | [**Object**](#function-object-24) () noexcept<br> |
 |   | [**Object**](#function-object-34) ([**Object**](classuipc_1_1core_1_1_object.md) &&) = default<br> |
 |   | [**Object**](#function-object-44) (const [**Object**](classuipc_1_1core_1_1_object.md) &) = delete<br> |
@@ -175,7 +175,7 @@ See [uipc::core::IObject](classuipc_1_1core_1_1_i_object.md)
 
 ```C++
 uipc::core::Object::Object (
-    Scene & scene,
+    internal::Scene & scene,
     IndexT id,
     std::string_view name=""
 ) noexcept

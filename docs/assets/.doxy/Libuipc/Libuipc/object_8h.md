@@ -38,12 +38,14 @@
 | namespace | [**fmt**](namespacefmt.md) <br> |
 | namespace | [**uipc**](namespaceuipc.md) <br> |
 | namespace | [**core**](namespaceuipc_1_1core.md) <br> |
+| namespace | [**internal**](namespaceuipc_1_1core_1_1internal.md) <br> |
 
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
+| struct | [**formatter&lt; uipc::core::Object &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_object_01_4.md) &lt;&gt;<br> |
 | class | [**IObject**](classuipc_1_1core_1_1_i_object.md) <br> |
 | class | [**Object**](classuipc_1_1core_1_1_object.md) <br> |
 | class | [**CGeometries**](classuipc_1_1core_1_1_object_1_1_c_geometries.md) <br> |

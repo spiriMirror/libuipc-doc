@@ -36,6 +36,7 @@
 * **EG\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EG\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EP\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* **Engine** ([**uipc::core::internal**](namespaceuipc_1_1core_1_1internal.md))
 * **edge\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **extract\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
@@ -125,6 +126,8 @@
 * **operator""\_mm** ([**uipc**](namespaceuipc.md))
 * **operator""\_ms** ([**uipc**](namespaceuipc.md))
 * **operator""\_s** ([**uipc**](namespaceuipc.md))
+* **operator-** ([**uipc::core**](namespaceuipc_1_1core.md), [**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **operator+=** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **optimal\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -163,6 +166,7 @@
 * **Translation** ([**uipc**](namespaceuipc.md))
 * **test\_gltf** ([**uipc**](namespaceuipc.md))
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
+* **TimePoint** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -174,6 +178,7 @@
 * **U** ([**uipc**](namespaceuipc.md))
 * **U32** ([**uipc**](namespaceuipc.md))
 * **U64** ([**uipc**](namespaceuipc.md))
+* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v

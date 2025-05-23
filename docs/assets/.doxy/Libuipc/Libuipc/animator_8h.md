@@ -35,12 +35,14 @@
 | namespace | [**uipc**](namespaceuipc.md) <br> |
 | namespace | [**backend**](namespaceuipc_1_1backend.md) <br> |
 | namespace | [**core**](namespaceuipc_1_1core.md) <br> |
+| namespace | [**internal**](namespaceuipc_1_1core_1_1internal.md) <br> |
 
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
+| struct | [**formatter&lt; uipc::core::Animator &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_animator_01_4.md) &lt;&gt;<br> |
 | class | [**Animator**](classuipc_1_1core_1_1_animator.md) <br> |
 
 

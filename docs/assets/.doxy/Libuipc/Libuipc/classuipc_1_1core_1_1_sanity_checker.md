@@ -51,7 +51,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**SanityChecker**](#function-sanitychecker) ([**Scene**](classuipc_1_1core_1_1_scene.md) & scene) <br> |
+|   | [**SanityChecker**](#function-sanitychecker) ([**internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) & scene) <br> |
 |  SanityCheckResult | [**check**](#function-check) (std::string\_view workspace) <br> |
 |  void | [**clear**](#function-clear) () <br> |
 |  const unordered\_map&lt; U64, S&lt; [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) &gt; &gt; & | [**errors**](#function-errors) () const<br> |
@@ -96,7 +96,7 @@
 
 ```C++
 uipc::core::SanityChecker::SanityChecker (
-    Scene & scene
+    internal::Scene & scene
 ) 
 ```
 

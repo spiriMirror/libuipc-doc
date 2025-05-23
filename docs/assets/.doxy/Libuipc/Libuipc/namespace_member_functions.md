@@ -97,6 +97,8 @@
 * **operator""\_mm** ([**uipc**](namespaceuipc.md))
 * **operator""\_ms** ([**uipc**](namespaceuipc.md))
 * **operator""\_s** ([**uipc**](namespaceuipc.md))
+* **operator-** ([**uipc::core**](namespaceuipc_1_1core.md), [**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **operator+=** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **optimal\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
@@ -128,6 +130,11 @@
 * **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+
+
+## u
+
+* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v

@@ -6,7 +6,7 @@
 
 
 
-[**ClassList**](annotated.md) **>** [**formatter&lt; uipc::core::Object &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_object_01_4.md)
+[**ClassList**](annotated.md) **>** [**fmt**](namespacefmt.md) **>** [**formatter&lt; uipc::core::Object &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_object_01_4.md)
 
 
 
@@ -91,7 +91,7 @@ Inherits the following classes: formatter< string_view >
 ### function format 
 
 ```C++
-appender formatter< uipc::core::Object >::format (
+appender fmt::formatter< uipc::core::Object >::format (
     const uipc::core::Object & c,
     format_context & ctx
 ) const

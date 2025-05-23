@@ -37,6 +37,8 @@
 | class | [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md) <br>_Represents an abstract simplicial complex, containing vertices, edges, triangles, and tetrahedra._  |
 | class | [**Attribute**](classuipc_1_1geometry_1_1_attribute.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute of type T._  |
 | class | [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) <br>_A collection of geometries attributes._  |
+| class | [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) <br> |
+| class | [**AttributeCollectionError**](classuipc_1_1geometry_1_1_attribute_collection_error.md) <br> |
 | class | [**AttributeCollectionFactory**](classuipc_1_1geometry_1_1_attribute_collection_factory.md) <br> |
 | class | [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) <br> |
 | class | [**AttributeFactory**](classuipc_1_1geometry_1_1_attribute_factory.md) <br> |
@@ -45,23 +47,26 @@
 | class | [**AttributeIOError**](classuipc_1_1geometry_1_1_attribute_i_o_error.md) <br> |
 | class | [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute slot of type T in a geometries attribute collection._  |
 | class | [**BVH**](classuipc_1_1geometry_1_1_b_v_h.md) <br> |
+| class | [**DeserialSharedAttributeContext**](classuipc_1_1geometry_1_1_deserial_shared_attribute_context.md) <br> |
 | class | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) <br>_A base geometries class that contains the instance attributes and the meta attributes._  |
 | class | [**GeometryAtlas**](classuipc_1_1geometry_1_1_geometry_atlas.md) <br> |
-| class | [**GeometryAttributeError**](classuipc_1_1geometry_1_1_geometry_attribute_error.md) <br> |
+| class | [**GeometryAtlasCommit**](classuipc_1_1geometry_1_1_geometry_atlas_commit.md) <br> |
 | class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
+| class | [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1_geometry_collection_commit.md) <br> |
+| class | [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) <br> |
 | class | [**GeometryFactory**](classuipc_1_1geometry_1_1_geometry_factory.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
+| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
 | class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md) &lt;&gt;<br> |
-| class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md) &lt;&gt;<br> |
-| class | [**GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &lt;&gt;<br> |
 | class | [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) <br>_An abstract class to represent a geometries attribute._  |
 | class | [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) <br>_An abstract class to represent a geometries attribute slot in a geometries attribute collection._  |
 | class | [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) <br>_An abstract class for geometries._  |
 | class | [**IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md) <br> |
 | class | [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) <br> |
 | class | [**Octree**](classuipc_1_1geometry_1_1_octree.md) <br> |
+| class | [**SerialSharedAttributeContext**](classuipc_1_1geometry_1_1_serial_shared_attribute_context.md) <br> |
 | class | [**SimplexUtils**](classuipc_1_1geometry_1_1_simplex_utils.md) <br> |
 | class | [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) <br>_A simplicial complex is a collection of simplices._  |
 | class | [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) &lt;IsConst, N&gt;<br> |
@@ -76,6 +81,7 @@
 | enum  | [**GeometrySlotState**](#enum-geometryslotstate)  <br> |
 | typedef [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) &gt; | [**ImplicitGeometrySlot**](#typedef-implicitgeometryslot)  <br> |
 | typedef [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**SimplicialComplexSlot**](#typedef-simplicialcomplexslot)  <br> |
+| typedef std::chrono::time\_point&lt; std::chrono::high\_resolution\_clock &gt; | [**TimePoint**](#typedef-timepoint)  <br> |
 
 
 
@@ -122,6 +128,12 @@
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Merge a list of simplicial complexes into one simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (std::initializer\_list&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; && complexes) <br> |
 |  void UIPC\_GEOMETRY\_API | [**mesh\_partition**](#function-mesh_partition) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, SizeT part\_max\_size) <br>_partition the simplicial complex_  |
+|  UIPC\_CORE\_API [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & | [**operator+=**](#function-operator) ([**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & dst, const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & inc) <br> |
+|  UIPC\_CORE\_API [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & | [**operator+=**](#function-operator_1) ([**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & dst, const [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1_geometry_collection_commit.md) & inc) <br> |
+|  UIPC\_CORE\_API [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator+=**](#function-operator_2) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & base, const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & inc) <br> |
+|  UIPC\_CORE\_API [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) | [**operator-**](#function-operator_3) (const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & dst, const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & src) <br> |
+|  UIPC\_CORE\_API [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1_geometry_collection_commit.md) | [**operator-**](#function-operator_4) (const [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & dst, const [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & src) <br> |
+|  UIPC\_CORE\_API [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) | [**operator-**](#function-operator_5) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & dst, const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & src) <br> |
 |  UIPC\_GEOMETRY\_API Matrix4x4 | [**optimal\_transform**](#function-optimal_transform) (span&lt; const Vector3 &gt; S, span&lt; const Vector3 &gt; D) <br>_Find out the optimal transformation matrix that maps the source points to the destination points._  |
 |  UIPC\_GEOMETRY\_API Matrix4x4 | [**optimal\_transform**](#function-optimal_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & S, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & D) <br>_Find out the optimal transformation matrix that maps the source simplicial complex to the destination simplicial complex._  |
 |  Float UIPC\_GEOMETRY\_API | [**point\_edge\_squared\_distance**](#function-point_edge_squared_distance) (const Vector3 & P, const Vector3 & E0, const Vector3 & E1) <br> |
@@ -185,7 +197,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -198,7 +210,20 @@ using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeome
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef TimePoint 
+
+```C++
+using uipc::geometry::TimePoint =  std::chrono::time_point<std::chrono::high_resolution_clock>;
 ```
 
 
@@ -864,6 +889,102 @@ create a `mesh_part` &lt;IndexT&gt; attribute on the simplicial complex' vertice
 
 
         
+
+<hr>
+
+
+
+### function operator+= 
+
+```C++
+UIPC_CORE_API AttributeCollection & uipc::geometry::operator+= (
+    AttributeCollection & dst,
+    const AttributeCollectionCommit & inc
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function operator+= 
+
+```C++
+UIPC_CORE_API GeometryCollection & uipc::geometry::operator+= (
+    GeometryCollection & dst,
+    const GeometryCollectionCommit & inc
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function operator+= 
+
+```C++
+UIPC_CORE_API Geometry & uipc::geometry::operator+= (
+    Geometry & base,
+    const GeometryCommit & inc
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function operator- 
+
+```C++
+UIPC_CORE_API AttributeCollectionCommit uipc::geometry::operator- (
+    const AttributeCollection & dst,
+    const AttributeCollection & src
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function operator- 
+
+```C++
+UIPC_CORE_API GeometryCollectionCommit uipc::geometry::operator- (
+    const GeometryCollection & dst,
+    const GeometryCollection & src
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function operator- 
+
+```C++
+UIPC_CORE_API GeometryCommit uipc::geometry::operator- (
+    const Geometry & dst,
+    const Geometry & src
+) 
+```
+
+
+
 
 <hr>
 

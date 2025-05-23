@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="namespaceuipc_1_1geometry" kind="namespace" language="C++">
     <compoundname>uipc::geometry</compoundname>
     <innerclass refid="classuipc_1_1geometry_1_1_abstract_simplicial_complex" prot="public">uipc::geometry::AbstractSimplicialComplex</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute" prot="public">uipc::geometry::Attribute</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_collection" prot="public">uipc::geometry::AttributeCollection</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_collection_commit" prot="public">uipc::geometry::AttributeCollectionCommit</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_attribute_collection_error" prot="public">uipc::geometry::AttributeCollectionError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_collection_factory" prot="public">uipc::geometry::AttributeCollectionFactory</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_copy" prot="public">uipc::geometry::AttributeCopy</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_factory" prot="public">uipc::geometry::AttributeFactory</innerclass>
@@ -13,13 +15,16 @@
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_i_o_error" prot="public">uipc::geometry::AttributeIOError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_attribute_slot" prot="public">uipc::geometry::AttributeSlot</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_b_v_h" prot="public">uipc::geometry::BVH</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_deserial_shared_attribute_context" prot="public">uipc::geometry::DeserialSharedAttributeContext</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry" prot="public">uipc::geometry::Geometry</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_atlas" prot="public">uipc::geometry::GeometryAtlas</innerclass>
-    <innerclass refid="classuipc_1_1geometry_1_1_geometry_attribute_error" prot="public">uipc::geometry::GeometryAttributeError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_atlas_commit" prot="public">uipc::geometry::GeometryAtlasCommit</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_collection" prot="public">uipc::geometry::GeometryCollection</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_collection_commit" prot="public">uipc::geometry::GeometryCollectionCommit</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_commit" prot="public">uipc::geometry::GeometryCommit</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_factory" prot="public">uipc::geometry::GeometryFactory</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_friend" prot="public">uipc::geometry::GeometryFriend</innerclass>
-    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="private">uipc::geometry::GeometryIOError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="public">uipc::geometry::GeometryIOError</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot" prot="public">uipc::geometry::GeometrySlot</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t" prot="public">uipc::geometry::GeometrySlotT</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4" prot="public">uipc::geometry::GeometrySlotT&lt; Geometry &gt;</innerclass>
@@ -31,6 +36,7 @@
     <innerclass refid="classuipc_1_1geometry_1_1_i_geometry_collection" prot="public">uipc::geometry::IGeometryCollection</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_implicit_geometry" prot="public">uipc::geometry::ImplicitGeometry</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_octree" prot="public">uipc::geometry::Octree</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_serial_shared_attribute_context" prot="public">uipc::geometry::SerialSharedAttributeContext</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_simplex_utils" prot="public">uipc::geometry::SimplexUtils</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex" prot="public">uipc::geometry::SimplicialComplex</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex_attributes" prot="public">uipc::geometry::SimplicialComplexAttributes</innerclass>
@@ -73,9 +79,23 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="implicit__geometry__slot_8h_1a528c8d69e846369da7e96980516e40fb" prot="public" static="no">
+      <memberdef kind="typedef" id="attribute__slot_8h_1a9702e01d2497178f68d2320d43fca9f6" prot="public" static="no">
+        <type>std::chrono::time_point&lt; std::chrono::high_resolution_clock &gt;</type>
+        <definition>using uipc::geometry::TimePoint =  std::chrono::time_point&lt;std::chrono::high_resolution_clock&gt;</definition>
+        <argsstring></argsstring>
+        <name>TimePoint</name>
+        <qualifiedname>uipc::geometry::TimePoint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="11" column="1" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="implicit__geometry__slot_8h_1a80c0caad420d550eca383471efeddb07" prot="public" static="no">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref> &gt;</type>
-        <definition>using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT&lt;ImplicitGeometry&gt;</definition>
+        <definition>using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT&lt;ImplicitGeometry&gt;</definition>
         <argsstring></argsstring>
         <name>ImplicitGeometrySlot</name>
         <qualifiedname>uipc::geometry::ImplicitGeometrySlot</qualifiedname>
@@ -87,9 +107,9 @@
         </inbodydescription>
         <location file="include/uipc/geometry/implicit_geometry_slot.h" line="25" column="1" bodyfile="include/uipc/geometry/implicit_geometry_slot.h" bodystart="25" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="simplicial__complex__slot_8h_1a691c92538dea87476928ae3fb9d6ad1d" prot="public" static="no">
+      <memberdef kind="typedef" id="simplicial__complex__slot_8h_1ac71c3aa8bc6cb8f8df305d94339246e6" prot="public" static="no">
         <type><ref refid="classuipc_1_1geometry_1_1_geometry_slot_t" kindref="compound">GeometrySlotT</ref>&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
-        <definition>using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT&lt;SimplicialComplex&gt;</definition>
+        <definition>using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT&lt;SimplicialComplex&gt;</definition>
         <argsstring></argsstring>
         <name>SimplicialComplexSlot</name>
         <qualifiedname>uipc::geometry::SimplicialComplexSlot</qualifiedname>
@@ -103,6 +123,138 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
+      <memberdef kind="function" id="attribute__collection__commit_8h_1a4c8fc03db7ba3f8f7d1009a1b0eecd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_attribute_collection_commit" kindref="compound">AttributeCollectionCommit</ref></type>
+        <definition>UIPC_CORE_API AttributeCollectionCommit uipc::geometry::operator-</definition>
+        <argsstring>(const AttributeCollection &amp;dst, const AttributeCollection &amp;src)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>uipc::geometry::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_commit.h" line="38" column="41" declfile="include/uipc/geometry/attribute_collection_commit.h" declline="38" declcolumn="41"/>
+      </memberdef>
+      <memberdef kind="function" id="attribute__collection__commit_8h_1aee272e92206876b4ea5aa25e49844573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &amp;</type>
+        <definition>UIPC_CORE_API AttributeCollection &amp; uipc::geometry::operator+=</definition>
+        <argsstring>(AttributeCollection &amp;dst, const AttributeCollectionCommit &amp;inc)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>uipc::geometry::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_attribute_collection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_attribute_collection_commit" kindref="compound">AttributeCollectionCommit</ref> &amp;</type>
+          <declname>inc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_commit.h" line="41" column="35" declfile="include/uipc/geometry/attribute_collection_commit.h" declline="41" declcolumn="35"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry__collection__commit_8h_1adfef8ac2799933a95c8842581c1bb175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_geometry_collection_commit" kindref="compound">GeometryCollectionCommit</ref></type>
+        <definition>UIPC_CORE_API GeometryCollectionCommit uipc::geometry::operator-</definition>
+        <argsstring>(const GeometryCollection &amp;dst, const GeometryCollection &amp;src)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>uipc::geometry::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="28" column="40" declfile="include/uipc/geometry/geometry_collection_commit.h" declline="28" declcolumn="40"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry__collection__commit_8h_1accab2aae2bb585319f5d335230420bb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+        <definition>UIPC_CORE_API GeometryCollection &amp; uipc::geometry::operator+=</definition>
+        <argsstring>(GeometryCollection &amp;dst, const GeometryCollectionCommit &amp;inc)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>uipc::geometry::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry_collection" kindref="compound">GeometryCollection</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_collection_commit" kindref="compound">GeometryCollectionCommit</ref> &amp;</type>
+          <declname>inc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_collection_commit.h" line="30" column="39" declfile="include/uipc/geometry/geometry_collection_commit.h" declline="30" declcolumn="39"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry__commit_8h_1a0a72a51577ba297bd875c9766a05be2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_geometry_commit" kindref="compound">GeometryCommit</ref></type>
+        <definition>UIPC_CORE_API GeometryCommit uipc::geometry::operator-</definition>
+        <argsstring>(const Geometry &amp;dst, const Geometry &amp;src)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>uipc::geometry::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_commit.h" line="46" column="30" declfile="include/uipc/geometry/geometry_commit.h" declline="46" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="geometry__commit_8h_1ad0f1f637a28f503e076fc27c39dcc908" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API <ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <definition>UIPC_CORE_API Geometry &amp; uipc::geometry::operator+=</definition>
+        <argsstring>(Geometry &amp;base, const GeometryCommit &amp;inc)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>uipc::geometry::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_geometry_commit" kindref="compound">GeometryCommit</ref> &amp;</type>
+          <declname>inc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/geometry_commit.h" line="47" column="24" declfile="include/uipc/geometry/geometry_commit.h" declline="47" declcolumn="24"/>
+      </memberdef>
       <memberdef kind="function" id="apply__region_8h_1ab0207d614bc7e6a944dc5722b5051299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API vector&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
         <definition>UIPC_GEOMETRY_API vector&lt; SimplicialComplex &gt; uipc::geometry::apply_region</definition>
@@ -125,7 +277,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/apply_region.h" line="11" column="26" declfile="include/uipc/geometry/utils/apply_region.h" declline="11" declcolumn="26"/>
       </memberdef>
-      <memberdef kind="function" id="apply__transform_8h_1a438613fb33e8483d363b89d097ec0d65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="apply__transform_8h_1a438613fb33e8483d363b89d097ec0d65" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API vector&lt; <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &gt;</type>
         <definition>UIPC_GEOMETRY_API vector&lt; SimplicialComplex &gt; uipc::geometry::apply_transform</definition>
         <argsstring>(const SimplicialComplex &amp;complex)</argsstring>
@@ -148,7 +300,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/apply_transform.h" line="14" column="27" declfile="include/uipc/geometry/utils/apply_transform.h" declline="14" declcolumn="27"/>
       </memberdef>
-      <memberdef kind="function" id="closure_8h_1a7b4fec03c6527d1d65cc4a5d2fa17877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="closure_8h_1a7b4fec03c6527d1d65cc4a5d2fa17877" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::facet_closure</definition>
         <argsstring>(const SimplicialComplex &amp;complex)</argsstring>
@@ -392,7 +544,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/distance.h" line="31" column="25" declfile="include/uipc/geometry/utils/distance.h" declline="31" declcolumn="25"/>
       </memberdef>
-      <memberdef kind="function" id="extract__surface_8h_1a80eecfbd8a333d6f4f91c380d17ea176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="extract__surface_8h_1a80eecfbd8a333d6f4f91c380d17ea176" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::extract_surface</definition>
         <argsstring>(const SimplicialComplex &amp;src)</argsstring>
@@ -423,7 +575,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/extract_surface.h" line="12" column="38" declfile="include/uipc/geometry/utils/extract_surface.h" declline="12" declcolumn="38"/>
       </memberdef>
-      <memberdef kind="function" id="extract__surface_8h_1abf3aa83c105b784f90f152231214efae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="extract__surface_8h_1abf3aa83c105b784f90f152231214efae" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::extract_surface</definition>
         <argsstring>(span&lt; const SimplicialComplex * &gt; complexes)</argsstring>
@@ -455,7 +607,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/extract_surface.h" line="22" column="38" declfile="include/uipc/geometry/utils/extract_surface.h" declline="22" declcolumn="38"/>
       </memberdef>
-      <memberdef kind="function" id="factory_8h_1a1045d44981bffaf213f391ab5087a39b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="factory_8h_1a1045d44981bffaf213f391ab5087a39b" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetmesh</definition>
         <argsstring>(span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts)</argsstring>
@@ -496,7 +648,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/factory.h" line="14" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="14" declcolumn="38"/>
       </memberdef>
-      <memberdef kind="function" id="factory_8h_1a01f00693aa5d07f2c0dab9a64cf3fbfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="factory_8h_1a01f00693aa5d07f2c0dab9a64cf3fbfd" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::trimesh</definition>
         <argsstring>(span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs)</argsstring>
@@ -539,7 +691,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/factory.h" line="23" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="23" declcolumn="38"/>
       </memberdef>
-      <memberdef kind="function" id="factory_8h_1a6eb70e35d6972620da3da8d876869323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="factory_8h_1a6eb70e35d6972620da3da8d876869323" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::linemesh</definition>
         <argsstring>(span&lt; const Vector3 &gt; Vs, span&lt; const Vector2i &gt; Es)</argsstring>
@@ -582,7 +734,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/factory.h" line="32" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="32" declcolumn="38"/>
       </memberdef>
-      <memberdef kind="function" id="factory_8h_1aa2e9088bf9d2b778426f5a7ebae010f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="factory_8h_1aa2e9088bf9d2b778426f5a7ebae010f3" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::pointcloud</definition>
         <argsstring>(span&lt; const Vector3 &gt; Vs)</argsstring>
@@ -613,7 +765,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/factory.h" line="40" column="38" declfile="include/uipc/geometry/utils/factory.h" declline="40" declcolumn="38"/>
       </memberdef>
-      <memberdef kind="function" id="factory_8h_1aca9de12b39baedb25dcf7fe2e9fab5d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="factory_8h_1aca9de12b39baedb25dcf7fe2e9fab5d1" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref></type>
         <definition>UIPC_GEOMETRY_API ImplicitGeometry uipc::geometry::halfplane</definition>
         <argsstring>(const Vector3 &amp;P=Vector3::Zero(), const Vector3 &amp;N=Vector3::UnitY())</argsstring>
@@ -648,7 +800,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/factory.h" line="48" column="37" declfile="include/uipc/geometry/utils/factory.h" declline="48" declcolumn="37"/>
       </memberdef>
-      <memberdef kind="function" id="factory_8h_1ad40a1598b9d7e853a483a020db95fa1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="factory_8h_1ad40a1598b9d7e853a483a020db95fa1a" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_implicit_geometry" kindref="compound">ImplicitGeometry</ref></type>
         <definition>UIPC_GEOMETRY_API ImplicitGeometry uipc::geometry::ground</definition>
         <argsstring>(Float height=0.0, const Vector3 &amp;N=Vector3::UnitY())</argsstring>
@@ -683,7 +835,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/factory.h" line="56" column="37" declfile="include/uipc/geometry/utils/factory.h" declline="56" declcolumn="37"/>
       </memberdef>
-      <memberdef kind="function" id="flip__inward__triangles_8h_1a4c137afa7682ee35af954d95720ce3c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="flip__inward__triangles_8h_1a4c137afa7682ee35af954d95720ce3c2" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::flip_inward_triangles</definition>
         <argsstring>(const SimplicialComplex &amp;sc)</argsstring>
@@ -967,7 +1119,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/label_triangle_orient.h" line="16" column="21" declfile="include/uipc/geometry/utils/label_triangle_orient.h" declline="16" declcolumn="21"/>
       </memberdef>
-      <memberdef kind="function" id="merge_8h_1ad04964c94afc06ffe31352d831f55c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="merge_8h_1ad04964c94afc06ffe31352d831f55c47" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::merge</definition>
         <argsstring>(span&lt; const SimplicialComplex * &gt; complexes)</argsstring>
@@ -990,7 +1142,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/merge.h" line="13" column="38" declfile="include/uipc/geometry/utils/merge.h" declline="13" declcolumn="38"/>
       </memberdef>
-      <memberdef kind="function" id="merge_8h_1a487ce745624dd48be0dcd065623c9e1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="merge_8h_1a487ce745624dd48be0dcd065623c9e1c" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::merge</definition>
         <argsstring>(std::initializer_list&lt; const SimplicialComplex * &gt; &amp;&amp;complexes)</argsstring>

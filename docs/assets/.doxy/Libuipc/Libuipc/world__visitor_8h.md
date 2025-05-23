@@ -32,6 +32,7 @@
 | namespace | [**uipc**](namespaceuipc.md) <br> |
 | namespace | [**backend**](namespaceuipc_1_1backend.md) <br> |
 | namespace | [**core**](namespaceuipc_1_1core.md) <br> |
+| namespace | [**internal**](namespaceuipc_1_1core_1_1internal.md) <br> |
 
 
 ## Classes

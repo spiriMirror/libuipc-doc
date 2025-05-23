@@ -15,6 +15,11 @@
 #include <uipc/common/span.h>
 #include <uipc/core/contact_model_collection.h>
 
+namespace uipc::core::internal
+{
+class Scene;
+}
+
 namespace uipc::backend
 {
 class ContactTabularVisitor;
@@ -25,6 +30,9 @@ namespace uipc::core
 class UIPC_CORE_API ContactTabular final
 {
     friend class uipc::backend::ContactTabularVisitor;
+    friend class SceneSnapshot;
+    friend class Scene;
+    friend class internal::Scene;
 
   public:
     ContactTabular() noexcept;
@@ -68,7 +76,9 @@ class UIPC_CORE_API ContactTabular final
     friend class SceneFactory;
     geometry::AttributeCollection& internal_contact_models() const noexcept;
     span<ContactElement>           contact_elements() const noexcept;
-    void build_from(const geometry::AttributeCollection& ac, span<ContactElement> ce);
+    void build_from(const geometry::AttributeCollection& ac, span<const ContactElement> ce);
+    void update_from(const geometry::AttributeCollectionCommit& acc,
+                     span<const ContactElement>                 ce);
 };
 
 void to_json(Json& j, const ContactTabular& ct);

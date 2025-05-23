@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_scene_i_o" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::SceneIO</compoundname>
     <sectiondef kind="private-attrib">
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="68" column="11" bodyfile="include/uipc/io/scene_io.h" bodystart="68" bodyend="-1"/>
+        <location file="include/uipc/io/scene_io.h" line="129" column="11" bodyfile="include/uipc/io/scene_io.h" bodystart="129" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -132,11 +132,185 @@
         </inbodydescription>
         <location file="include/uipc/io/scene_io.h" line="65" column="10"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a559dd2f279452e2aba0792baaa02a175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::SceneIO::commit</definition>
+        <argsstring>(const SceneSnapshot &amp;reference, std::string_view filename)</argsstring>
+        <name>commit</name>
+        <qualifiedname>uipc::core::SceneIO::commit</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_scene_snapshot" kindref="compound">SceneSnapshot</ref> &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Commit the scene&apos;s update to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported formats:<itemizedlist>
+<listitem><para>.json</para>
+</listitem><listitem><para>.bson</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="77" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a5b42cd936153a3d77a8df01756cee2ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::SceneIO::update</definition>
+        <argsstring>(std::string_view filename)</argsstring>
+        <name>update</name>
+        <qualifiedname>uipc::core::SceneIO::update</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Update the scene from a SnapshotCommit file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported formats:<itemizedlist>
+<listitem><para>- .json</para>
+</listitem><listitem><para>.bson</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="88" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a99dd9e5cd957ec877e264cac2491aa1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::core::SceneIO::to_json</definition>
+        <argsstring>() const</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::SceneIO::to_json</qualifiedname>
+        <briefdescription>
+<para>Convert the scene to a json object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="95" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a5616c3ae68250bd70e0e9f2a7a39b904" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::core::SceneIO::commit_to_json</definition>
+        <argsstring>(const SceneSnapshot &amp;reference) const</argsstring>
+        <name>commit_to_json</name>
+        <qualifiedname>uipc::core::SceneIO::commit_to_json</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_scene_snapshot" kindref="compound">SceneSnapshot</ref> &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <briefdescription>
+<para>Commit the scene&apos;s update to a json object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported formats:<itemizedlist>
+<listitem><para>.json</para>
+</listitem><listitem><para>.bson</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="115" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1ab40003a41208509be9090b84a5414a69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::SceneIO::update_from_json</definition>
+        <argsstring>(const Json &amp;json)</argsstring>
+        <name>update_from_json</name>
+        <qualifiedname>uipc::core::SceneIO::update_from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+<para>Update the scene from a scene commit json object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supported formats:<itemizedlist>
+<listitem><para>- .json</para>
+</listitem><listitem><para>.bson</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="126" column="10"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1aa64325bcb9915c136532d6ca3689f90b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref> &gt;</type>
-        <definition>static S&lt; Scene &gt; uipc::core::SceneIO::load</definition>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1acb2bd75bbac54900729d61273f0a4878" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref></type>
+        <definition>static Scene uipc::core::SceneIO::load</definition>
         <argsstring>(std::string_view filename)</argsstring>
         <name>load</name>
         <qualifiedname>uipc::core::SceneIO::load</qualifiedname>
@@ -168,7 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="42" column="14"/>
+        <location file="include/uipc/io/scene_io.h" line="42" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1aed401fd405073abc51448df5a9332681" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -216,6 +390,37 @@
         </inbodydescription>
         <location file="include/uipc/io/scene_io.h" line="54" column="17"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1af26c3fce6c5846e0b73d3e5a863fa5e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref></type>
+        <definition>static Scene uipc::core::SceneIO::from_json</definition>
+        <argsstring>(const Json &amp;json)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::core::SceneIO::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+<para>Convert a json object to a scene. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>json</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/scene_io.h" line="103" column="18"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
       <memberdef kind="function" id="classuipc_1_1core_1_1_scene_i_o_1a03dc37f08371ae98eb31d936b8a6f470" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -234,21 +439,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/io/scene_io.h" line="69" column="12"/>
+        <location file="include/uipc/io/scene_io.h" line="130" column="12"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/io/scene_io.h" line="8" column="1" bodyfile="include/uipc/io/scene_io.h" bodystart="9" bodyend="70"/>
+    <location file="include/uipc/io/scene_io.h" line="8" column="1" bodyfile="include/uipc/io/scene_io.h" bodystart="9" bodyend="131"/>
     <listofallmembers>
-      <member refid="classuipc_1_1core_1_1_scene_i_o_1aa64325bcb9915c136532d6ca3689f90b" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>load</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1a559dd2f279452e2aba0792baaa02a175" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>commit</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1a5616c3ae68250bd70e0e9f2a7a39b904" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>commit_to_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1af26c3fce6c5846e0b73d3e5a863fa5e0" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>from_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1acb2bd75bbac54900729d61273f0a4878" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>load</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1afbcb62a24b4fbc0a00430bd10ab480ba" prot="private" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>m_scene</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1aed401fd405073abc51448df5a9332681" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>save</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1a2fbe56693aac409915e17f87104abeaa" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>save</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1a03e210001b1a4bd6ef6b2073ff4f0a91" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>SceneIO</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1ad879a63749b9908348d09a395a4d94fe" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>simplicial_surface</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1a99dd9e5cd957ec877e264cac2491aa1c" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1a5b42cd936153a3d77a8df01756cee2ca" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>update</name></member>
+      <member refid="classuipc_1_1core_1_1_scene_i_o_1ab40003a41208509be9090b84a5414a69" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>update_from_json</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1a0a716d58dc007c9ea0da5eb5a2448a3c" prot="public" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>write_surface</name></member>
       <member refid="classuipc_1_1core_1_1_scene_i_o_1a03dc37f08371ae98eb31d936b8a6f470" prot="private" virt="non-virtual"><scope>uipc::core::SceneIO</scope><name>write_surface_obj</name></member>
     </listofallmembers>

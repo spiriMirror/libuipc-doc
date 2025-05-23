@@ -68,6 +68,7 @@
 |  [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) | [**pull**](#function-pull) (span&lt; const SizeT &gt; mapping) noexcept<br>_Dst[i] = Src[Mapping[i]]._  |
 |  [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) | [**push**](#function-push) (span&lt; const SizeT &gt; mapping) noexcept<br>_Dst[Mapping[i]] = Src[i]._  |
 |  [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) | [**range**](#function-range) (SizeT dst\_offset, SizeT src\_offset, SizeT count) noexcept<br>_Dst[dst\_offset + i] = Src[src\_offset + i] $$ i \in [0, count) $$._  |
+|  [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) | [**same\_dim**](#function-same_dim) () noexcept<br>_Dst[i] = Src[i]._  |
 
 
 
@@ -123,6 +124,7 @@ enum uipc::geometry::AttributeCopy::CopyType {
 
 ### function AttributeCopy 
 
+_Dst[i] = Src[i]._ 
 ```C++
 uipc::geometry::AttributeCopy::AttributeCopy () noexcept
 ```
@@ -151,6 +153,7 @@ CopyType uipc::geometry::AttributeCopy::type () noexcept const
 
 ### function pair 
 
+_Dst[Pairs[i].first] = Src[Pairs[i].second]._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::pair (
     span< const std::pair< SizeT, SizeT > > pairs
@@ -166,6 +169,7 @@ static AttributeCopy uipc::geometry::AttributeCopy::pair (
 
 ### function pull 
 
+_Dst[i] = Src[Mapping[i]]._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::pull (
     span< const SizeT > mapping
@@ -181,6 +185,7 @@ static AttributeCopy uipc::geometry::AttributeCopy::pull (
 
 ### function push 
 
+_Dst[Mapping[i]] = Src[i]._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::push (
     span< const SizeT > mapping
@@ -196,12 +201,27 @@ static AttributeCopy uipc::geometry::AttributeCopy::push (
 
 ### function range 
 
+_Dst[dst\_offset + i] = Src[src\_offset + i] $$ i \in [0, count) $$._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::range (
     SizeT dst_offset,
     SizeT src_offset,
     SizeT count
 ) noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function same\_dim 
+
+_Dst[i] = Src[i]._ 
+```C++
+static AttributeCopy uipc::geometry::AttributeCopy::same_dim () noexcept
 ```
 
 

@@ -184,6 +184,23 @@ uipc::core::ConstitutionTabular::~ConstitutionTabular () noexcept
 
 
 
+<hr>## Friends Documentation
+
+
+
+
+
+### friend Scene 
+
+```C++
+class uipc::core::ConstitutionTabular::Scene (
+    internal::Scene
+) 
+```
+
+
+
+
 <hr>
 
 ------------------------------

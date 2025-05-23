@@ -11,7 +11,6 @@
 #pragma once
 #include <uipc/geometry/attribute_slot.h>
 
-
 namespace uipc::geometry
 {
 class UIPC_CORE_API AttributeFactory

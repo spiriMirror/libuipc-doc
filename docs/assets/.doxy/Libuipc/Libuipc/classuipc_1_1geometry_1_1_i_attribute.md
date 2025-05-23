@@ -88,7 +88,6 @@ Inherited by the following classes: [uipc::geometry::Attribute](classuipc_1_1geo
 
 | Type | Name |
 | ---: | :--- |
-|  [**backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md) | [**backend\_view**](#function-backend_view-22) () noexcept const<br> |
 | virtual void | [**do\_clear**](#function-do_clear) () = 0<br> |
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) &gt; | [**do\_clone**](#function-do_clone) () const = 0<br> |
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) &gt; | [**do\_clone\_empty**](#function-do_clone_empty) () const = 0<br> |
@@ -99,7 +98,6 @@ Inherited by the following classes: [uipc::geometry::Attribute](classuipc_1_1geo
 | virtual void | [**do\_resize**](#function-do_resize) (SizeT N) = 0<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json-12) (SizeT i) noexcept const = 0<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json-22) () noexcept const = 0<br> |
-| virtual [**backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md) | [**get\_backend\_view**](#function-get_backend_view) () noexcept const = 0<br> |
 | virtual SizeT | [**get\_size**](#function-get_size) () const = 0<br> |
 | virtual std::string\_view | [**get\_type\_name**](#function-get_type_name) () noexcept const = 0<br> |
 
@@ -141,6 +139,7 @@ void uipc::geometry::IAttribute::from_json (
 
 ### function size 
 
+_Get the size of the attribute._ 
 ```C++
 SizeT uipc::geometry::IAttribute::size () noexcept const
 ```
@@ -182,6 +181,7 @@ Json uipc::geometry::IAttribute::to_json () noexcept const
 
 ### function type\_name 
 
+_Get the type name of data stored in the attribute slot._ 
 ```C++
 std::string_view uipc::geometry::IAttribute::type_name () noexcept const
 ```
@@ -205,19 +205,6 @@ virtual uipc::geometry::IAttribute::~IAttribute () = default
 <hr>
 ## Protected Functions Documentation
 
-
-
-
-### function backend\_view [2/2]
-
-```C++
-backend::BufferView uipc::geometry::IAttribute::backend_view () noexcept const
-```
-
-
-
-
-<hr>
 
 
 
@@ -355,19 +342,6 @@ virtual Json uipc::geometry::IAttribute::do_to_json (
 
 ```C++
 virtual Json uipc::geometry::IAttribute::do_to_json () noexcept const = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function get\_backend\_view 
-
-```C++
-virtual backend::BufferView uipc::geometry::IAttribute::get_backend_view () noexcept const = 0
 ```
 
 

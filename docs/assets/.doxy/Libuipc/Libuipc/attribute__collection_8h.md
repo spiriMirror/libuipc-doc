@@ -47,7 +47,7 @@
 | ---: | :--- |
 | struct | [**formatter&lt; uipc::geometry::AttributeCollection &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_attribute_collection_01_4.md) &lt;&gt;<br> |
 | class | [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) <br>_A collection of geometries attributes._  |
-| class | [**GeometryAttributeError**](classuipc_1_1geometry_1_1_geometry_attribute_error.md) <br> |
+| class | [**AttributeCollectionError**](classuipc_1_1geometry_1_1_attribute_collection_error.md) <br> |
 
 
 
