@@ -57,10 +57,10 @@
 |  const Json & | [**config**](#function-config) () noexcept const<br> |
 |  const vector&lt; [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) &gt; & | [**contact\_elements**](#function-contact_elements) () noexcept const<br> |
 |  const [**geometry::AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & | [**contact\_models**](#function-contact_models) () noexcept const<br> |
-|  const unordered\_map&lt; IndexT, [**geometry::GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &gt; & | [**geometries**](#function-geometries) () noexcept const<br> |
+|  const unordered\_map&lt; IndexT, S&lt; [**geometry::GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &gt; &gt; & | [**geometries**](#function-geometries) () noexcept const<br> |
 |  bool | [**is\_valid**](#function-is_valid) () noexcept const<br> |
 |  const [**ObjectCollectionSnapshot**](classuipc_1_1core_1_1_object_collection_snapshot.md) & | [**object\_collection**](#function-object_collection) () noexcept const<br> |
-|  const unordered\_map&lt; IndexT, [**geometry::GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &gt; & | [**rest\_geometries**](#function-rest_geometries) () noexcept const<br> |
+|  const unordered\_map&lt; IndexT, S&lt; [**geometry::GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &gt; &gt; & | [**rest\_geometries**](#function-rest_geometries) () noexcept const<br> |
 
 
 
@@ -172,7 +172,7 @@ inline const geometry::AttributeCollectionCommit & uipc::core::SceneSnapshotComm
 ### function geometries 
 
 ```C++
-inline const unordered_map< IndexT, geometry::GeometryCommit > & uipc::core::SceneSnapshotCommit::geometries () noexcept const
+inline const unordered_map< IndexT, S< geometry::GeometryCommit > > & uipc::core::SceneSnapshotCommit::geometries () noexcept const
 ```
 
 
@@ -211,7 +211,7 @@ inline const ObjectCollectionSnapshot & uipc::core::SceneSnapshotCommit::object_
 ### function rest\_geometries 
 
 ```C++
-inline const unordered_map< IndexT, geometry::GeometryCommit > & uipc::core::SceneSnapshotCommit::rest_geometries () noexcept const
+inline const unordered_map< IndexT, S< geometry::GeometryCommit > > & uipc::core::SceneSnapshotCommit::rest_geometries () noexcept const
 ```
 
 

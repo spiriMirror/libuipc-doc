@@ -55,7 +55,7 @@
 |   | [**AttributeCollectionCommit**](#function-attributecollectioncommit-24) (const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & dst) <br> |
 |   | [**AttributeCollectionCommit**](#function-attributecollectioncommit-34) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & other) = default<br> |
 |  const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & | [**attribute\_collection**](#function-attribute_collection) () noexcept const<br> |
-|  [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & | [**operator=**](#function-operator) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & other) = default<br> |
+|  [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & | [**operator=**](#function-operator) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & other) = delete<br> |
 |  span&lt; const std::string &gt; | [**removed\_names**](#function-removed_names) () noexcept const<br> |
 
 
@@ -151,7 +151,7 @@ inline const AttributeCollection & uipc::geometry::AttributeCollectionCommit::at
 ```C++
 AttributeCollectionCommit & uipc::geometry::AttributeCollectionCommit::operator= (
     const AttributeCollectionCommit & other
-) = default
+) = delete
 ```
 
 

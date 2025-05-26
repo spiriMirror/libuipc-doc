@@ -1806,9 +1806,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-attributeslot" class="md-nav__link">
+  <a href="#function-attributeslot-12" class="md-nav__link">
     <span class="md-ellipsis">
-      function AttributeSlot
+      function AttributeSlot [1/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-attributeslot-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      function AttributeSlot [2/2]
     </span>
   </a>
   
@@ -1902,7 +1911,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-attributeslot"><strong>AttributeSlot</strong></a> (std::string_view m_name, S&lt; <a href="../classuipc_1_1geometry_1_1_attribute/"><strong>Attribute</strong></a>&lt; T &gt; &gt; attribute, bool allow_destroy) <br></td>
+<td style="text-align: left;"><a href="#function-attributeslot-12"><strong>AttributeSlot</strong></a> (std::string_view name, S&lt; <a href="../classuipc_1_1geometry_1_1_attribute/"><strong>Attribute</strong></a>&lt; T &gt; &gt; attribute, bool allow_destroy) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-attributeslot-22"><strong>AttributeSlot</strong></a> (std::string_view name, S&lt; <a href="../classuipc_1_1geometry_1_1_attribute/"><strong>Attribute</strong></a>&lt; T &gt; &gt; attribute, bool allow_destory, TimePoint tp) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">span&lt; const T &gt;</td>
@@ -1950,7 +1963,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">TimePoint</td>
-<td style="text-align: left;"><a href="../classuipc_1_1geometry_1_1_i_attribute_slot/#function-last_modified"><strong>last_modified</strong></a> () noexcept const<br><em>Get the last modification time of the attribute slot.</em></td>
+<td style="text-align: left;"><a href="../classuipc_1_1geometry_1_1_i_attribute_slot/#function-last_modified-12"><strong>last_modified</strong></a> () noexcept const<br><em>Get the last modification time of the attribute slot.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string_view</td>
@@ -2054,11 +2067,23 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="../classuipc_1_1geometry_1_1_i_attribute_slot/#function-last_modified-22"><strong>last_modified</strong></a> (const TimePoint &amp; tp) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="../classuipc_1_1geometry_1_1_i_attribute_slot/#function-make_owned"><strong>make_owned</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="../classuipc_1_1geometry_1_1_i_attribute_slot/#function-rw_access"><strong>rw_access</strong></a> () <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
 <td style="text-align: left;"><a href="../classuipc_1_1geometry_1_1_i_attribute_slot/#function-set_is_evolving"><strong>set_is_evolving</strong></a> (bool v) noexcept = 0<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classuipc_1_1geometry_1_1_i_attribute_slot/#function-set_last_modified"><strong>set_last_modified</strong></a> (const TimePoint &amp; tp) noexcept = 0<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -2081,18 +2106,28 @@
 </span></code></pre></div>
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-attributeslot">function AttributeSlot</h3>
+<h3 id="function-attributeslot-12">function AttributeSlot [1/2]</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">m_name</span><span class="p">,</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Attribute</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">attribute</span><span class="p">,</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">allow_destroy</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-attributeslot-22">function AttributeSlot [2/2]</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Attribute</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">attribute</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">allow_destory</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">TimePoint</span><span class="w"> </span><span class="n">tp</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-view-22">function view [2/2]</h3>
 <p><em>Get the const attribute values.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">view</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">view</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p><strong>Returns:</strong></p>
 <p><code>span&lt;const T&gt;</code> </p>
@@ -2100,10 +2135,10 @@
 <h2 id="friends-documentation">Friends Documentation</h2>
 <h3 id="friend-view-12">friend view [1/2]</h3>
 <p><em>Get the non-const attribute values.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">view</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">AttributeSlot</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">slot</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeSlot</span><span class="o">::</span><span class="n">view</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">AttributeSlot</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">slot</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Returns:</strong></p>
 <p><code>span&lt;T&gt;</code> </p>

@@ -1999,9 +1999,9 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">cd</span><span class="w"> </span>vcpkg
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>./bootstrap-vcpkg.sh
 </span></code></pre></div>
-<p>The simplest way to let CMake detect Vcpkg is to set the <strong>System Environment Variable</strong> <code>CMAKE_TOOLCHAIN_FILE</code> to <code>~/Toolchain/scripts/buildsystems/vcpkg.cmake</code></p>
+<p>The simplest way to let CMake detect Vcpkg is to set the <strong>System Environment Variable</strong> <code>CMAKE_TOOLCHAIN_FILE</code> to <code>~/Toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake</code></p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Write in ~/.bashrc</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_TOOLCHAIN_FILE</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Toolchain/scripts/buildsystems/vcpkg.cmake"</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_TOOLCHAIN_FILE</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake"</span>
 </span></code></pre></div>
 <h2 id="clone-libuipc">Clone Libuipc</h2>
 <p>Clone the repository with the following command:</p>

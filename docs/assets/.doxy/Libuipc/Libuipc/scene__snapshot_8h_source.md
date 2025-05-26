@@ -38,7 +38,7 @@ class UIPC_CORE_API SceneSnapshot
     unordered_map<IndexT, S<geometry::Geometry>> m_geometries;
     unordered_map<IndexT, S<geometry::Geometry>> m_rest_geometries;
 
-    geometry::AttributeCollection m_contact_models;
+    S<geometry::AttributeCollection> m_contact_models;
 };
 
 class UIPC_CORE_API SceneSnapshotCommit
@@ -58,24 +58,25 @@ class UIPC_CORE_API SceneSnapshotCommit
     {
         return m_object_collection;
     }
+
     const vector<ContactElement>& contact_elements() const noexcept
     {
         return m_contact_elements;
     }
 
-    const unordered_map<IndexT, geometry::GeometryCommit>& geometries() const noexcept
+    const unordered_map<IndexT, S<geometry::GeometryCommit>>& geometries() const noexcept
     {
         return m_geometries;
     }
 
-    const unordered_map<IndexT, geometry::GeometryCommit>& rest_geometries() const noexcept
+    const unordered_map<IndexT, S<geometry::GeometryCommit>>& rest_geometries() const noexcept
     {
         return m_rest_geometries;
     }
 
     const geometry::AttributeCollectionCommit& contact_models() const noexcept
     {
-        return m_contact_models;
+        return *m_contact_models;
     }
 
   private:
@@ -86,11 +87,11 @@ class UIPC_CORE_API SceneSnapshotCommit
     vector<ContactElement>   m_contact_elements;
 
     // Full Copy Geometries/ Diff Copy AttributeCollection
-    unordered_map<IndexT, geometry::GeometryCommit> m_geometries;
-    unordered_map<IndexT, geometry::GeometryCommit> m_rest_geometries;
+    unordered_map<IndexT, S<geometry::GeometryCommit>> m_geometries;
+    unordered_map<IndexT, S<geometry::GeometryCommit>> m_rest_geometries;
 
     // Diff Copy AttributeCollection
-    geometry::AttributeCollectionCommit m_contact_models;
+    S<geometry::AttributeCollectionCommit> m_contact_models;
 };
 
 SceneSnapshotCommit UIPC_CORE_API operator-(const SceneSnapshot& dst,

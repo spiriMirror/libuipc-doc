@@ -54,12 +54,12 @@
 |   | [**GeometryCommit**](#function-geometrycommit-14) () = default<br> |
 |   | [**GeometryCommit**](#function-geometrycommit-24) (const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &) <br> |
 |   | [**GeometryCommit**](#function-geometrycommit-34) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & dst) <br> |
-|  const unordered\_map&lt; std::string, [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) &gt; & | [**attribute\_collections**](#function-attribute_collections) () noexcept const<br> |
+|  const unordered\_map&lt; std::string, S&lt; [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) &gt; &gt; & | [**attribute\_collections**](#function-attribute_collections) () noexcept const<br> |
 |  bool | [**is\_modification**](#function-is_modification) () noexcept const<br> |
 |  bool | [**is\_new**](#function-is_new) () noexcept const<br> |
 |  bool | [**is\_valid**](#function-is_valid) () noexcept const<br> |
 |  S&lt; [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) &gt; | [**new\_geometry**](#function-new_geometry) () noexcept const<br> |
-|  [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & | [**operator=**](#function-operator) (const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &) <br> |
+|  [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & | [**operator=**](#function-operator) (const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &) = delete<br> |
 |  const std::string & | [**type**](#function-type) () noexcept const<br> |
 
 
@@ -140,7 +140,7 @@ explicit uipc::geometry::GeometryCommit::GeometryCommit (
 ### function attribute\_collections 
 
 ```C++
-inline const unordered_map< std::string, AttributeCollectionCommit > & uipc::geometry::GeometryCommit::attribute_collections () noexcept const
+inline const unordered_map< std::string, S< AttributeCollectionCommit > > & uipc::geometry::GeometryCommit::attribute_collections () noexcept const
 ```
 
 
@@ -207,7 +207,7 @@ inline S< Geometry > uipc::geometry::GeometryCommit::new_geometry () noexcept co
 ```C++
 GeometryCommit & uipc::geometry::GeometryCommit::operator= (
     const GeometryCommit &
-) 
+) = delete
 ```
 
 

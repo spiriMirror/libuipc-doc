@@ -606,6 +606,57 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="96" column="31"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_slot_1ae47ba7b5c6476ff999652629fec91d16" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::IAttributeSlot::rw_access</definition>
+        <argsstring>()</argsstring>
+        <name>rw_access</name>
+        <qualifiedname>uipc::geometry::IAttributeSlot::rw_access</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="98" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_slot_1aed4374941de220dcb313811b85ec6826" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::IAttributeSlot::last_modified</definition>
+        <argsstring>(const TimePoint &amp;tp)</argsstring>
+        <name>last_modified</name>
+        <qualifiedname>uipc::geometry::IAttributeSlot::last_modified</qualifiedname>
+        <param>
+          <type>const TimePoint &amp;</type>
+          <declname>tp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="99" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1_i_attribute_slot_1a257f222c848ba8c1d5305113cc8bb01d" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::geometry::IAttributeSlot::set_last_modified</definition>
+        <argsstring>(const TimePoint &amp;tp) noexcept=0</argsstring>
+        <name>set_last_modified</name>
+        <qualifiedname>uipc::geometry::IAttributeSlot::set_last_modified</qualifiedname>
+        <reimplementedby refid="classuipc_1_1geometry_1_1_attribute_slot_1a5ffdc70be92717912841a3f5b124a791">set_last_modified</reimplementedby>
+        <param>
+          <type>const TimePoint &amp;</type>
+          <declname>tp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="100" column="18"/>
+      </memberdef>
     </sectiondef>
     <briefdescription>
 <para>An abstract class to represent a geometries attribute slot in a geometries attribute collection. </para>
@@ -624,7 +675,7 @@
         <link refid="classuipc_1_1geometry_1_1_i_attribute_slot"/>
       </node>
     </inheritancegraph>
-    <location file="include/uipc/geometry/attribute_slot.h" line="17" column="1" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="18" bodyend="97"/>
+    <location file="include/uipc/geometry/attribute_slot.h" line="17" column="1" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="18" bodyend="101"/>
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a56fb0e32f4cfb8f8133ba3b3bc5d1bf5" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>allow_destroy</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a3f1468f60cf044bf4fe1decb69dc61be" prot="protected" virt="virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>attribute</name></member>
@@ -651,11 +702,14 @@
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a30bb51ebca8ee26b6339168853bc0c25" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>is_evolving</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1ab07e2c5b7280e9f68385a10f274cd507" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>is_shared</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1ab8ea3035873ff6c883808fd2e7b4ee08" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>last_modified</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1aed4374941de220dcb313811b85ec6826" prot="protected" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>last_modified</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a91bb9228ec906c463e898d1fcc85a5f5" prot="protected" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>make_owned</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a07995e9d78cc362984d6081784840d4e" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>name</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a55c13bf1084d3221bcec64e213d08a14" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>operator=</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1abf79d20076eeef6b62c780d9176cefc2" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1ae47ba7b5c6476ff999652629fec91d16" prot="protected" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>rw_access</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a9b8d488711de1b31f58b064b1b92a341" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>set_is_evolving</name></member>
+      <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a257f222c848ba8c1d5305113cc8bb01d" prot="protected" virt="pure-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>set_last_modified</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a15284652cd75eb6bcc072f17bea8dcef" prot="protected" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>share_from</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1ad694f2117a902bd3d2f385fc71a23c95" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>size</name></member>
       <member refid="classuipc_1_1geometry_1_1_i_attribute_slot_1a0e76dd0ea94cd918c44e8559d682279f" prot="public" virt="non-virtual"><scope>uipc::geometry::IAttributeSlot</scope><name>to_json</name></member>

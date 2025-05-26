@@ -60,7 +60,7 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 |  bool | [**is\_evolving**](#function-is_evolving-12) () noexcept const<br> |
 |  void | [**is\_evolving**](#function-is_evolving-22) (bool v) noexcept<br> |
 |  bool | [**is\_shared**](#function-is_shared) () noexcept const<br>_Check if the underlying attribute is shared._  |
-|  TimePoint | [**last\_modified**](#function-last_modified) () noexcept const<br>_Get the last modification time of the attribute slot._  |
+|  TimePoint | [**last\_modified**](#function-last_modified-12) () noexcept const<br>_Get the last modification time of the attribute slot._  |
 |  std::string\_view | [**name**](#function-name) () noexcept const<br>_Get the name of the attribute slot._  |
 |  [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) & | [**operator=**](#function-operator) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &) = delete<br> |
 |  [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) & | [**operator=**](#function-operator_1) ([**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &&) noexcept<br> |
@@ -111,8 +111,11 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 | virtual TimePoint | [**get\_last\_modified**](#function-get_last_modified) () noexcept const = 0<br> |
 | virtual std::string\_view | [**get\_name**](#function-get_name) () noexcept const = 0<br> |
 | virtual SizeT | [**get\_use\_count**](#function-get_use_count) () const = 0<br> |
+|  void | [**last\_modified**](#function-last_modified-22) (const TimePoint & tp) <br> |
 |  void | [**make\_owned**](#function-make_owned) () <br> |
+|  void | [**rw\_access**](#function-rw_access) () <br> |
 | virtual void | [**set\_is\_evolving**](#function-set_is_evolving) (bool v) noexcept = 0<br> |
+| virtual void | [**set\_last\_modified**](#function-set_last_modified) (const TimePoint & tp) noexcept = 0<br> |
 |  void | [**share\_from**](#function-share_from) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) & other) noexcept<br> |
 |  SizeT | [**use\_count**](#function-use_count) () const<br> |
 
@@ -241,7 +244,7 @@ false, if the underlying attribute is owned, only this geometries reference to t
 
 
 
-### function last\_modified 
+### function last\_modified [1/2]
 
 _Get the last modification time of the attribute slot._ 
 ```C++
@@ -563,10 +566,38 @@ virtual SizeT uipc::geometry::IAttributeSlot::get_use_count () const = 0
 
 
 
+### function last\_modified [2/2]
+
+```C++
+void uipc::geometry::IAttributeSlot::last_modified (
+    const TimePoint & tp
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function make\_owned 
 
 ```C++
 void uipc::geometry::IAttributeSlot::make_owned () 
+```
+
+
+
+
+<hr>
+
+
+
+### function rw\_access 
+
+```C++
+void uipc::geometry::IAttributeSlot::rw_access () 
 ```
 
 
@@ -581,6 +612,21 @@ void uipc::geometry::IAttributeSlot::make_owned ()
 ```C++
 virtual void uipc::geometry::IAttributeSlot::set_is_evolving (
     bool v
+) noexcept = 0
+```
+
+
+
+
+<hr>
+
+
+
+### function set\_last\_modified 
+
+```C++
+virtual void uipc::geometry::IAttributeSlot::set_last_modified (
+    const TimePoint & tp
 ) noexcept = 0
 ```
 
