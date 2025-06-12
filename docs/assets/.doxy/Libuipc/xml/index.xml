@@ -68,6 +68,15 @@
     <member refid="classuipc_1_1constitution_1_1_affine_body_material_1a62096d6be82f7bd4cbdbc90907f72afb" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1_affine_body_material_1a5f7c02b4123e2541174b325f0141e2b3" kind="function"><name>AffineBodyMaterial</name></member>
   </compound>
+  <compound refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint" kind="class"><name>uipc::constitution::AffineBodyRevoluteJoint</name>
+    <member refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1a31d0e655db4f9956298e2e5204cff361" kind="typedef"><name>SlotTuple</name></member>
+    <member refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1a39fafa2e2a5e684d2c374e3b74af3ce6" kind="variable"><name>m_config</name></member>
+    <member refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1abd48bfdd2adb81823aecb594e85babbd" kind="function"><name>default_config</name></member>
+    <member refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1a2eb8b9faa4ae380990ff16fe7a7af5e0" kind="function"><name>AffineBodyRevoluteJoint</name></member>
+    <member refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1a045ababffce3e970eb46e8316ce66f53" kind="function"><name>~AffineBodyRevoluteJoint</name></member>
+    <member refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1a160db18ea6bb31af16c44592d85caa6f" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1a148444c8ad35ff65bb453c28b72fb5b8" kind="function"><name>get_uid</name></member>
+  </compound>
   <compound refid="classuipc_1_1core_1_1_animation" kind="class"><name>uipc::core::Animation</name>
     <member refid="classuipc_1_1core_1_1_animation_1aa414fb0fd764d2e29444abeac12ad333" kind="typedef"><name>ActionOnUpdate</name></member>
     <member refid="classuipc_1_1core_1_1_animation_1abbbfe7b916ef7239a2e95fdb21d0211f" kind="friend"><name>Animator</name></member>
@@ -189,7 +198,7 @@
     <member refid="classuipc_1_1geometry_1_1_attribute_collection_commit_1aa54398fba9f4b087d7fd2a0445dcd41c" kind="function"><name>AttributeCollectionCommit</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_attribute_collection_error" kind="class"><name>uipc::geometry::AttributeCollectionError</name>
-    <member refid="classuipc_1_1geometry_1_1_attribute_collection_error_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
+    <member refid="classuipc_1_1geometry_1_1_attribute_collection_error_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_attribute_collection_factory" kind="class"><name>uipc::geometry::AttributeCollectionFactory</name>
     <member refid="classuipc_1_1geometry_1_1_attribute_collection_factory_1a91c5b3d00721ea0b07773796cbdd84e1" kind="variable"><name>m_impl</name></member>
@@ -241,7 +250,7 @@
     <member refid="classuipc_1_1geometry_1_1_attribute_i_o_1ae6f1eb3a680d535c2a64d18327d2d3a3" kind="function"><name>read</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_attribute_i_o_error" kind="class"><name>uipc::geometry::AttributeIOError</name>
-    <member refid="classuipc_1_1geometry_1_1_attribute_i_o_error_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
+    <member refid="classuipc_1_1geometry_1_1_attribute_i_o_error_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_attribute_slot" kind="class"><name>uipc::geometry::AttributeSlot</name>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a17f7ec4de997dd14d8d4fcd5df1586a4" kind="typedef"><name>value_type</name></member>
@@ -546,7 +555,7 @@
     <member refid="classuipc_1_1backend_1_1_engine_create_info_1ac40a77dcfe4bb5706faac199e84aec6b" kind="variable"><name>config</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_engine_exception" kind="class"><name>uipc::core::EngineException</name>
-    <member refid="classuipc_1_1core_1_1_engine_exception_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
+    <member refid="classuipc_1_1core_1_1_engine_exception_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_engine_status" kind="class"><name>uipc::core::EngineStatus</name>
     <member refid="classuipc_1_1core_1_1_engine_status_1ac04569d489d7cc5fac0e87acb1674384" kind="enum"><name>Type</name></member>
@@ -575,9 +584,7 @@
     <member refid="classuipc_1_1core_1_1_engine_status_collection_1a406a82a7f47f9db972122a5654bff4c6" kind="function"><name>to_json</name></member>
   </compound>
   <compound refid="classuipc_1_1_exception" kind="class"><name>uipc::Exception</name>
-    <member refid="classuipc_1_1_exception_1a9b12b9c6ae8ba86f354dd14b896c5a86" kind="variable"><name>m_msg</name></member>
-    <member refid="classuipc_1_1_exception_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
-    <member refid="classuipc_1_1_exception_1a249d7a62caa76368157d04b5bb17933b" kind="function"><name>what</name></member>
+    <member refid="classuipc_1_1_exception_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_feature" kind="class"><name>uipc::core::Feature</name>
     <member refid="classuipc_1_1core_1_1_feature_1a45e0b22f4dd17707c8c996f795d81226" kind="variable"><name>m_type_name</name></member>
@@ -800,7 +807,7 @@
   <compound refid="classuipc_1_1geometry_1_1_geometry_friend" kind="class"><name>uipc::geometry::GeometryFriend</name>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_geometry_i_o_error" kind="class"><name>uipc::geometry::GeometryIOError</name>
-    <member refid="classuipc_1_1geometry_1_1_geometry_i_o_error_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
+    <member refid="classuipc_1_1geometry_1_1_geometry_i_o_error_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_geometry_slot" kind="class"><name>uipc::geometry::GeometrySlot</name>
     <member refid="classuipc_1_1geometry_1_1_geometry_slot_1a0c44e887fac6b57baeb85e37286a9c5a" kind="friend"><name>GeometryCollection</name></member>
@@ -1062,6 +1069,8 @@
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1ae74b2e36e0d8bdafde745023c97b14e2" kind="function"><name>copy_from</name></member>
     <member refid="classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t_1ad7cf3e5bfc60b252238a9c853faeaaa1" kind="function"><name>to_json</name></member>
   </compound>
+  <compound refid="classuipc_1_1constitution_1_1_inter_affine_body_constitution" kind="class"><name>uipc::constitution::InterAffineBodyConstitution</name>
+  </compound>
   <compound refid="classuipc_1_1core_1_1_i_object" kind="class"><name>uipc::core::IObject</name>
     <member refid="classuipc_1_1core_1_1_i_object_1acd6a897554fd30c3d839fd03723120c1" kind="function"><name>~IObject</name></member>
     <member refid="classuipc_1_1core_1_1_i_object_1a842c7b6a06ea627eff87dff21431aa99" kind="function"><name>name</name></member>
@@ -1092,7 +1101,7 @@
     <member refid="classuipc_1_1core_1_1_i_sanity_checker_collection_1aa7b0393e71314c87391d5d39d7c575ec" kind="function"><name>check</name></member>
   </compound>
   <compound refid="classuipc_1_1_json_i_o_error" kind="class"><name>uipc::JsonIOError</name>
-    <member refid="classuipc_1_1_json_i_o_error_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
+    <member refid="classuipc_1_1_json_i_o_error_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
   </compound>
   <compound refid="classuipc_1_1constitution_1_1_kirchhoff_rod_bending" kind="class"><name>uipc::constitution::KirchhoffRodBending</name>
     <member refid="classuipc_1_1constitution_1_1_kirchhoff_rod_bending_1ab25fc49b9cda7f033860b5ddbc0e9831" kind="typedef"><name>Base</name></member>
@@ -1472,7 +1481,7 @@
     <member refid="classuipc_1_1core_1_1_scene_i_o_1a03dc37f08371ae98eb31d936b8a6f470" kind="function"><name>write_surface_obj</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_scene_i_o_error" kind="class"><name>uipc::core::SceneIOError</name>
-    <member refid="classuipc_1_1core_1_1_scene_i_o_error_1a03d8d2538447f92c5ea33e0450f1f10f" kind="function"><name>Exception</name></member>
+    <member refid="classuipc_1_1core_1_1_scene_i_o_error_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1_scene_snapshot" kind="class"><name>uipc::core::SceneSnapshot</name>
     <member refid="classuipc_1_1core_1_1_scene_snapshot_1a032858ae1fe02d2d1170981c2af2d67c" kind="friend"><name>Scene</name></member>
@@ -1721,10 +1730,10 @@
   <compound refid="classuipc_1_1geometry_1_1_spread_sheet_i_o" kind="class"><name>uipc::geometry::SpreadSheetIO</name>
     <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1ab0c4edbdc00ca4cbc0429fef163017b4" kind="variable"><name>m_output_folder</name></member>
     <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a2ec229852406425945a7a53f32bda3c5" kind="function"><name>SpreadSheetIO</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1ab03c49433ff69caa6710e7a7bb4a235c" kind="function"><name>write_json</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1ab01d8f2f9ba14b75de435cdd9bd4cbf4" kind="function"><name>write_json</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a73e62b274d417c9d5d0c6941e2aa6785" kind="function"><name>write_csv</name></member>
-    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a7a00d893dd502bb0c54b226d754dd9ea" kind="function"><name>write_csv</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a6b2d35955c253c1385eb67afe584827d" kind="function"><name>write_json</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a2bf9dca4c1c13c592a9d5bb0926695c7" kind="function"><name>write_json</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a9df3764381ea2208c7c5935bd86ad678" kind="function"><name>write_csv</name></member>
+    <member refid="classuipc_1_1geometry_1_1_spread_sheet_i_o_1a21f12884c557ee9e0b1aec3a5981578d" kind="function"><name>write_csv</name></member>
   </compound>
   <compound refid="classuipc_1_1constitution_1_1_stable_neo_hookean" kind="class"><name>uipc::constitution::StableNeoHookean</name>
     <member refid="classuipc_1_1constitution_1_1_stable_neo_hookean_1a688ad9d9358e60bb68a089ac85cb2dd7" kind="typedef"><name>Base</name></member>
@@ -1846,6 +1855,8 @@
     <member refid="classuipc_1_1backend_1_1_world_visitor_1a4329caf14462f695ebd3d7068fd66e6d" kind="function"><name>animator</name></member>
     <member refid="classuipc_1_1backend_1_1_world_visitor_1afd3ca1de4ba1cc10a9a8fd5b17c0570c" kind="function"><name>ref</name></member>
   </compound>
+  <compound refid="namespacecpptrace" kind="namespace"><name>cpptrace</name>
+  </compound>
   <compound refid="namespacefmt" kind="namespace"><name>fmt</name>
   </compound>
   <compound refid="namespacenlohmann" kind="namespace"><name>nlohmann</name>
@@ -1883,20 +1894,33 @@
     <member refid="common_2type__define_8h_1a71ff20abb2f39501461b4a47cd43f410" kind="typedef"><name>Matrix12x12</name></member>
     <member refid="common_2type__define_8h_1a32b89302db77feb0541487c15f9e9188" kind="typedef"><name>Transform</name></member>
     <member refid="common_2type__define_8h_1aa1e1cf6d1e47a1359a189077d1773747" kind="typedef"><name>Translation</name></member>
+    <member refid="common_2type__define_8h_1a73ab300c3dc012e02f292d3ed3dd238b" kind="typedef"><name>AngleAxis</name></member>
+    <member refid="common_2type__define_8h_1a6d13133f79c0851f2406b9f1214f1cfd" kind="typedef"><name>Quaternion</name></member>
     <member refid="common_2type__define_8h_1a73462c1b47058bfebae5bcab4f6b8cd0" kind="typedef"><name>VectorX</name></member>
     <member refid="common_2type__define_8h_1a99c9824968f0254809b795bf4cd00efc" kind="typedef"><name>VectorXi</name></member>
     <member refid="common_2type__define_8h_1aebb0885a7294c2056f0006e72e6b93ee" kind="typedef"><name>VectorXi64</name></member>
     <member refid="common_2type__define_8h_1a56b4aba92187554d9b3c94362a594a00" kind="typedef"><name>VectorXu</name></member>
     <member refid="common_2type__define_8h_1a84f63550f12c062068583914a8aaedbd" kind="typedef"><name>VectorXu64</name></member>
+    <member refid="common_2type__define_8h_1a281823b7b89e8dda68569c9bd3b9ae46" kind="typedef"><name>MatrixX</name></member>
     <member refid="type__traits_8h_1aa386252fe1b9ca302caf10b56b5cbef2" kind="typedef"><name>propagate_const_t</name></member>
     <member refid="type__traits_8h_1a2aae4c9bc8d4404c55de28dd1b8315b2" kind="typedef"><name>signature_t</name></member>
     <member refid="config_8h_1a909d9bca4c79c05d3ea39d63fa96adb2" kind="variable"><name>RUNTIME_CHECK</name></member>
     <member refid="type__traits_8h_1a66f926eba5f289bf4064a3f7169da694" kind="variable"><name>is_matrix_v</name></member>
+    <member refid="abort_8h_1a6bc2e831385c7f823b702cddd1352abd" kind="function"><name>abort</name></member>
     <member refid="run__length__encode_8h_1a84e9dce28fc0e024fb6b01763d46a08e" kind="function"><name>run_length_encode</name></member>
     <member refid="run__length__encode_8h_1adaff214cf172f33a7dcffa1a910d79dc" kind="function"><name>run_length_encode</name></member>
     <member refid="run__length__encode_8h_1a345c6aac020f80e7258cf7f8ec971e94" kind="function"><name>encode_offset_count</name></member>
     <member refid="run__length__encode_8h_1a97e90cf9d10a67050818da24d710f167" kind="function"><name>encode_offset_count</name></member>
+    <member refid="demangle_8h_1a27d396d83a1aefdf94e5ff85919401a5" kind="function"><name>demangle</name></member>
+    <member refid="demangle_8h_1a863de5ca02cd8fd8e70417b5c20b3a77" kind="function"><name>demangle</name></member>
     <member refid="readable__type__name_8h_1ac7b49fff7b09b87fb5c85a92cb77a8f4" kind="function"><name>readable_type_name</name></member>
+    <member refid="readable__type__name_8h_1a016bc64e53f970060763b8f5c6b67cef" kind="function"><name>readable_type_name&lt; std::string &gt;</name></member>
+    <member refid="readable__type__name_8h_1a3a5bf6cdaf97cb797fb5af7e54ab4c24" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
+    <member refid="readable__type__name_8h_1a37884fab1184ddb5b725eab22742fa2f" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
+    <member refid="readable__type__name_8h_1aa19ffa84ce837cf2e3ebc26f6cc4716c" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
+    <member refid="readable__type__name_8h_1af02ff26bdb5b48168416f5d7b303d948" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
+    <member refid="readable__type__name_8h_1a88307ac72041f04a83acf0e52eb04cb6" kind="function"><name>readable_type_name&lt; float &gt;</name></member>
+    <member refid="readable__type__name_8h_1a0d141db4e0cf961b175adba31cee6732" kind="function"><name>readable_type_name&lt; double &gt;</name></member>
     <member refid="readable__type__name_8h_1a767ed1c17e157433b46573af0304f2cb" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
     <member refid="readable__type__name_8h_1aa4f053e3c28ee8787ab91be851f73ce4" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
     <member refid="readable__type__name_8h_1a0f7e4e8d04ec3721a4f76a74cca441da" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
@@ -1941,6 +1965,7 @@
   </compound>
   <compound refid="namespaceuipc_1_1builtin" kind="namespace"><name>uipc::builtin</name>
     <member refid="constitution__type_8h_1a0230fb7c2299ffa4fe662603ebe98745" kind="variable"><name>AffineBody</name></member>
+    <member refid="constitution__type_8h_1a5e533f3e264fc94ecb69bf752384d2d3" kind="variable"><name>InterAffineBody</name></member>
     <member refid="constitution__type_8h_1a2511f47eb37582a61bc87a1f0a45abcc" kind="variable"><name>FiniteElement</name></member>
     <member refid="constitution__type_8h_1a0434adaa4a67edfaf3b4729d09a8a7af" kind="variable"><name>Constraint</name></member>
     <member refid="factory__keyword_8h_1a3834e1b7ae8129072cf536bb99e10987" kind="variable"><name>__meta__</name></member>
@@ -1975,6 +2000,7 @@
     <member refid="attribute__name_8h_1a0caaea88fd25b5b5a8d6e742d62cab7d" kind="function"><name>UIPC_BUILTIN_ATTRIBUTE</name></member>
     <member refid="attribute__name_8h_1a17520daad1005bf502db73bfaff48eb7" kind="function"><name>UIPC_BUILTIN_ATTRIBUTE</name></member>
     <member refid="attribute__name_8h_1a1c7fd7642bd2299e06d5ec0e9f14338f" kind="function"><name>UIPC_BUILTIN_ATTRIBUTE</name></member>
+    <member refid="attribute__name_8h_1a214ff705361f349843d9d3e555af7339" kind="function"><name>UIPC_BUILTIN_ATTRIBUTE</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1builtin_1_1details" kind="namespace"><name>uipc::builtin::details</name>
   </compound>
@@ -2042,13 +2068,14 @@
     <member refid="extract__surface_8h_1abf3aa83c105b784f90f152231214efae" kind="function"><name>extract_surface</name></member>
     <member refid="factory_8h_1a1045d44981bffaf213f391ab5087a39b" kind="function"><name>tetmesh</name></member>
     <member refid="factory_8h_1a01f00693aa5d07f2c0dab9a64cf3fbfd" kind="function"><name>trimesh</name></member>
+    <member refid="factory_8h_1a277f011fdd8f509ddd2fe59053a510c7" kind="function"><name>trimesh</name></member>
     <member refid="factory_8h_1a6eb70e35d6972620da3da8d876869323" kind="function"><name>linemesh</name></member>
     <member refid="factory_8h_1aa2e9088bf9d2b778426f5a7ebae010f3" kind="function"><name>pointcloud</name></member>
     <member refid="factory_8h_1aca9de12b39baedb25dcf7fe2e9fab5d1" kind="function"><name>halfplane</name></member>
     <member refid="factory_8h_1ad40a1598b9d7e853a483a020db95fa1a" kind="function"><name>ground</name></member>
     <member refid="flip__inward__triangles_8h_1a4c137afa7682ee35af954d95720ce3c2" kind="function"><name>flip_inward_triangles</name></member>
-    <member refid="intersection_8h_1a34870b858ccc85f3d3931fa0cb091a4f" kind="function"><name>tri_edge_intersect</name></member>
-    <member refid="intersection_8h_1a0493664e50f0cbe87c0502d8f9690259" kind="function"><name>is_point_in_tet</name></member>
+    <member refid="intersection_8h_1af6085c69008c474f0f2f2a7fe7b24f6a" kind="function"><name>tri_edge_intersect</name></member>
+    <member refid="intersection_8h_1aa8464427ffa82a6e3ed43fce4eeaf384" kind="function"><name>is_point_in_tet</name></member>
     <member refid="is__trimesh__closed_8h_1a35e2794cc41a45fdf3bddcc36e9d15cc" kind="function"><name>is_trimesh_closed</name></member>
     <member refid="label__connected__vertices_8h_1abfd3492665c6eb9b36a372d92cf95bc9" kind="function"><name>label_connected_vertices</name></member>
     <member refid="label__region_8h_1ab5d93eaee5668468c042a8615b5766fd" kind="function"><name>label_region</name></member>
@@ -2139,6 +2166,8 @@
   </compound>
   <compound refid="uid__register_8h" kind="file"><name>uid_register.h</name>
   </compound>
+  <compound refid="abort_8h" kind="file"><name>abort.h</name>
+  </compound>
   <compound refid="run__length__encode_8h" kind="file"><name>run_length_encode.h</name>
   </compound>
   <compound refid="allocator_8h" kind="file"><name>allocator.h</name>
@@ -2146,6 +2175,8 @@
   <compound refid="buffer__info_8h" kind="file"><name>buffer_info.h</name>
   </compound>
   <compound refid="config_8h" kind="file"><name>config.h</name>
+  </compound>
+  <compound refid="demangle_8h" kind="file"><name>demangle.h</name>
   </compound>
   <compound refid="dllexport_8h" kind="file"><name>dllexport.h</name>
     <member refid="dllexport_8h_1a3eb99fe897cd1af9d0dc6aad2a814a56" kind="define"><name>UIPC_EXTERN_C</name></member>
@@ -2220,6 +2251,8 @@
   </compound>
   <compound refid="affine__body__constitution_8h" kind="file"><name>affine_body_constitution.h</name>
   </compound>
+  <compound refid="affine__body__revolute__joint_8h" kind="file"><name>affine_body_revolute_joint.h</name>
+  </compound>
   <compound refid="arap_8h" kind="file"><name>arap.h</name>
   </compound>
   <compound refid="baraff__witkin__shell_8h" kind="file"><name>baraff_witkin_shell.h</name>
@@ -2241,6 +2274,8 @@
   <compound refid="finite__element__extra__constitution_8h" kind="file"><name>finite_element_extra_constitution.h</name>
   </compound>
   <compound refid="hookean__spring_8h" kind="file"><name>hookean_spring.h</name>
+  </compound>
+  <compound refid="inter__affine__body__constitution_8h" kind="file"><name>inter_affine_body_constitution.h</name>
   </compound>
   <compound refid="kirchhoff__rod__bending_8h" kind="file"><name>kirchhoff_rod_bending.h</name>
   </compound>

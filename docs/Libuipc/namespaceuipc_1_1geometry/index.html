@@ -2165,6 +2165,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-trimesh_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      function trimesh
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2452,7 +2461,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">UIPC_GEOMETRY_API bool</td>
-<td style="text-align: left;"><a href="#function-is_point_in_tet"><strong>is_point_in_tet</strong></a> (const Vector3 &amp; T0, const Vector3 &amp; T1, const Vector3 &amp; T2, const Vector3 &amp; T3, const Vector3 &amp; P, Vector4 &amp; tuvw_in_tet) <br><em>Check if a point is in a tetrahedron.</em></td>
+<td style="text-align: left;"><a href="#function-is_point_in_tet"><strong>is_point_in_tet</strong></a> (const Vector3 &amp; T0, const Vector3 &amp; T1, const Vector3 &amp; T2, const Vector3 &amp; T3, const Vector3 &amp; P) <br><em>Check if a point is in a tetrahedron.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">UIPC_GEOMETRY_API bool</td>
@@ -2548,11 +2557,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">UIPC_GEOMETRY_API bool</td>
-<td style="text-align: left;"><a href="#function-tri_edge_intersect"><strong>tri_edge_intersect</strong></a> (const Vector3 &amp; T0, const Vector3 &amp; T1, const Vector3 &amp; T2, const Vector3 &amp; E0, const Vector3 &amp; E1, bool &amp; coplanar, Vector3 &amp; uvw_in_tri, Vector2 &amp; uv_in_edge) <br><em>Check if a triangle and an edge intersect.</em></td>
+<td style="text-align: left;"><a href="#function-tri_edge_intersect"><strong>tri_edge_intersect</strong></a> (const Vector3 &amp; T0, const Vector3 &amp; T1, const Vector3 &amp; T2, const Vector3 &amp; E0, const Vector3 &amp; E1) <br><em>Check if a triangle and an edge intersect.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">UIPC_GEOMETRY_API <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a></td>
 <td style="text-align: left;"><a href="#function-trimesh"><strong>trimesh</strong></a> (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br><em>Create a simplicial complex from a triangle mesh.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">UIPC_GEOMETRY_API <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a></td>
+<td style="text-align: left;"><a href="#function-trimesh"><strong>trimesh</strong></a> (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Fs) <br><em>Create a 2D simplicial complex from a quad mesh (4-sided polygons).</em></td>
 </tr>
 </tbody>
 </table>
@@ -2734,15 +2747,10 @@
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span>
 </span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T2</span><span class="p">,</span>
 </span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T3</span><span class="p">,</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">P</span><span class="p">,</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="n">Vector4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">tuvw_in_tet</span>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">P</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>T0, T1, T2, T3 the vertices of the tetrahedron P is the point</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>tuvw_in_tet</code> the barycentric coordinates of the intersection point in the tet. Even if the function return false, the barycentric coordinates are still calculated correctly.</li>
-</ul>
 <p><strong>Returns:</strong></p>
 <p>true if the point is in the tetrahedron </p>
 <hr>
@@ -3016,18 +3024,10 @@
 </span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span>
 </span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T2</span><span class="p">,</span>
 </span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E0</span><span class="p">,</span>
-</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E1</span><span class="p">,</span>
-</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">coplanar</span><span class="p">,</span>
-</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uvw_in_tri</span><span class="p">,</span>
-</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">    </span><span class="n">Vector2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uv_in_edge</span>
-</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E1</span>
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>T0, T1, T2 the vertices of the triangle E0, E1 the vertices of the edge</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>uvw_in_tri</code> the barycentric coordinates of the intersection point in the triangle. Even if the function return false, the barycentric coordinates are still calculated correctly.</li>
-<li><code>uv_in_edge</code> the barycentric coordinates of the intersection point in the edge. Even if the function return false, the barycentric coordinates are still calculated correctly.</li>
-</ul>
 <p><strong>Returns:</strong></p>
 <p>true if the triangle and the edge intersect </p>
 <hr>
@@ -3043,6 +3043,22 @@
 <ul>
 <li><code>Vs</code> The vertex positions of the triangle mesh </li>
 <li><code>Fs</code> The triangles of the triangle mesh </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> </p>
+<hr>
+
+<h3 id="function-trimesh_1">function trimesh</h3>
+<p><em>Create a 2D simplicial complex from a quad mesh (4-sided polygons).</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">trimesh</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="p">,</span>
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector4i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Fs</span>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Vs</code> The vertex positions of the quad mesh </li>
+<li><code>Fs</code> The quads of the quad mesh </li>
 </ul>
 <p><strong>Returns:</strong></p>
 <p><a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> </p>

@@ -41,6 +41,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**uipc::constitution::FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1_finite_element_extra_constitution.md)     
         * **class** [**uipc::constitution::DiscreteShellBending**](classuipc_1_1constitution_1_1_discrete_shell_bending.md) 
         * **class** [**uipc::constitution::KirchhoffRodBending**](classuipc_1_1constitution_1_1_kirchhoff_rod_bending.md) 
+    * **class** [**uipc::constitution::InterAffineBodyConstitution**](classuipc_1_1constitution_1_1_inter_affine_body_constitution.md)     
+        * **class** [**uipc::constitution::AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md) 
 * **class** [**uipc::constitution::AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md) 
 * **class** [**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md) 
 * **class** [**uipc::core::Animation**](classuipc_1_1core_1_1_animation.md) 
@@ -148,7 +150,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **struct** [**uipc::signature&lt; R(C::\*)(Args...) volatile &gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_4.md) 
     * **struct** [**uipc::signature&lt; R(C::\*)(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.md) 
 * **struct** [**uipc::GlobalTimer::MergeResult**](structuipc_1_1_global_timer_1_1_merge_result.md) 
-* **class** **std::exception**    
+* **class** **cpptrace::exception_with_message**    
     * **class** [**uipc::Exception**](classuipc_1_1_exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1_json_i_o_error.md) 
         * **class** [**uipc::core::EngineException**](classuipc_1_1core_1_1_engine_exception.md) 

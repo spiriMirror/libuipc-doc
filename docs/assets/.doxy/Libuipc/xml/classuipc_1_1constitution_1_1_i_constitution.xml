@@ -6,6 +6,7 @@
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_constraint" prot="public" virt="non-virtual">uipc::constitution::Constraint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_finite_element_constitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementConstitution</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_finite_element_extra_constitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementExtraConstitution</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1_inter_affine_body_constitution" prot="public" virt="non-virtual">uipc::constitution::InterAffineBodyConstitution</derivedcompoundref>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classuipc_1_1constitution_1_1_i_constitution_1a85c4cecb41e89df19620224c251952ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -86,6 +87,7 @@
         <name>get_uid</name>
         <qualifiedname>uipc::constitution::IConstitution::get_uid</qualifiedname>
         <reimplementedby refid="classuipc_1_1constitution_1_1_affine_body_constitution_1a4df63da01793d6c48e9e09c6a3f081a4">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint_1a148444c8ad35ff65bb453c28b72fb5b8">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1_a_r_a_p_1aa38d637a1b8828f9e349e9cf5ddfffdf">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1_constraint_1a1c82273f5d6fbaa247b384a5af54a603">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1_discrete_shell_bending_1ab334f8c53f158570d9978b63025fbf97">get_uid</reimplementedby>
@@ -124,6 +126,12 @@
         <label>uipc::constitution::AffineBodyConstitution</label>
         <link refid="classuipc_1_1constitution_1_1_affine_body_constitution"/>
         <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>uipc::constitution::AffineBodyRevoluteJoint</label>
+        <link refid="classuipc_1_1constitution_1_1_affine_body_revolute_joint"/>
+        <childnode refid="18" relation="public-inheritance">
         </childnode>
       </node>
       <node id="3">
@@ -165,6 +173,12 @@
       <node id="1">
         <label>uipc::constitution::IConstitution</label>
         <link refid="classuipc_1_1constitution_1_1_i_constitution"/>
+      </node>
+      <node id="18">
+        <label>uipc::constitution::InterAffineBodyConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1_inter_affine_body_constitution"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="17">
         <label>uipc::constitution::KirchhoffRodBending</label>

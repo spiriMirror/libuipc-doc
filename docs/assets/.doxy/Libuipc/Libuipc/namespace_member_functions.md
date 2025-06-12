@@ -5,6 +5,7 @@
 
 ## a
 
+* **abort** ([**uipc**](namespaceuipc.md))
 * **as\_eigen** ([**uipc**](namespaceuipc.md), [**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))
 * **apply\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **apply\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -22,6 +23,7 @@
 ## d
 
 * **default\_config** ([**uipc**](namespaceuipc.md))
+* **demangle** ([**uipc**](namespaceuipc.md))
 
 
 ## e
@@ -114,6 +116,9 @@
 
 * **READABLE\_TYPE\_NAME\_AS\_ALIAS** ([**uipc**](namespaceuipc.md))
 * **readable\_type\_name** ([**uipc**](namespaceuipc.md))
+* **readable\_type\_name&lt; double &gt;** ([**uipc**](namespaceuipc.md))
+* **readable\_type\_name&lt; float &gt;** ([**uipc**](namespaceuipc.md))
+* **readable\_type\_name&lt; std::string &gt;** ([**uipc**](namespaceuipc.md))
 * **run\_length\_encode** ([**uipc**](namespaceuipc.md))
 
 

@@ -5,6 +5,7 @@
 Here are the classes, structs, unions and interfaces with brief descriptions:
 
 * **class** [**UIPCModuleInitInfo**](class_u_i_p_c_module_init_info.md)     
+* **namespace** [**cpptrace**](namespacecpptrace.md) 
 * **namespace** [**fmt**](namespacefmt.md)     
     * **struct** [**formatter&lt; uipc::core::Animation &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_animation_01_4.md)     
     * **struct** [**formatter&lt; uipc::core::Animator &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_animator_01_4.md)     
@@ -53,6 +54,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md)     
         * **class** [**AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md)     
         * **class** [**AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md)     
+        * **class** [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md)     
         * **class** [**Constraint**](classuipc_1_1constitution_1_1_constraint.md)     
         * **class** [**DiscreteShellBending**](classuipc_1_1constitution_1_1_discrete_shell_bending.md)     
         * **class** [**ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md)     
@@ -61,6 +63,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1_finite_element_extra_constitution.md)     
         * **class** [**HookeanSpring**](classuipc_1_1constitution_1_1_hookean_spring.md)     
         * **class** [**IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md)     
+        * **class** [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1_inter_affine_body_constitution.md) 
         * **class** [**KirchhoffRodBending**](classuipc_1_1constitution_1_1_kirchhoff_rod_bending.md)     
         * **class** [**LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md)     
         * **class** [**NeoHookeanShell**](classuipc_1_1constitution_1_1_neo_hookean_shell.md)     

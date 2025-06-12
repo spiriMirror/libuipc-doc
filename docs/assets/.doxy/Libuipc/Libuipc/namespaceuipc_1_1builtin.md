@@ -55,6 +55,7 @@
 |  std::string\_view | [**FiniteElement**](#variable-finiteelement)   = `"FiniteElement"`<br> |
 |  std::string\_view | [**Geometry**](#variable-geometry)   = `"Geometry"`<br> |
 |  std::string\_view | [**ImplicitGeometry**](#variable-implicitgeometry)   = `"ImplicitGeometry"`<br> |
+|  std::string\_view | [**InterAffineBody**](#variable-interaffinebody)   = `"InterAffineBody"`<br> |
 |  std::string\_view | [**SimplicialComplex**](#variable-simplicialcomplex)   = `"SimplicialComplex"`<br> |
 |  std::string\_view | [**\_\_data\_\_**](#variable-__data__)   = `"\_\_data\_\_"`<br> |
 |  std::string\_view | [**\_\_meta\_\_**](#variable-__meta__)   = `"\_\_meta\_\_"`<br> |
@@ -104,6 +105,7 @@
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (backend\_abd\_body\_offset) <br>`backend_abd_body_offset` _&lt;IndexT&gt; attribute on_**meta** _to indicate the offset of the body(instance) in the ABD system._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (dof\_offset) <br>`dof_offset` _&lt;IndexT&gt; attribute on_**meta** _to indicate the degree of freedom offset of this geometry in the whole system._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (dof\_count) <br>`dof_count` _&lt;IndexT&gt; attribute on_**meta** _to indicate the degree of freedom count of this geometry in the whole system._ |
+|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (self\_collision) <br>`self_collision` _&lt;IndexT&gt;[0,1] attribute on_**meta** _to indicate if the geometry needs self-collision detection._ |
 
 
 
@@ -206,6 +208,19 @@ std::string_view uipc::builtin::Geometry;
 
 ```C++
 std::string_view uipc::builtin::ImplicitGeometry;
+```
+
+
+
+
+<hr>
+
+
+
+### variable InterAffineBody 
+
+```C++
+std::string_view uipc::builtin::InterAffineBody;
 ```
 
 
@@ -691,6 +706,22 @@ uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
 ```C++
 uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
     dof_count
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function UIPC\_BUILTIN\_ATTRIBUTE 
+
+`self_collision` _&lt;IndexT&gt;[0,1] attribute on_**meta** _to indicate if the geometry needs self-collision detection._
+```C++
+uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
+    self_collision
 ) 
 ```
 

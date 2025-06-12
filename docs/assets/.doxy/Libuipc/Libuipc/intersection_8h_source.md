@@ -18,18 +18,13 @@ UIPC_GEOMETRY_API bool tri_edge_intersect(const Vector3& T0,
                                           const Vector3& T1,
                                           const Vector3& T2,
                                           const Vector3& E0,
-                                          const Vector3& E1,
-                                          bool&          coplanar,
-                                          Vector3&       uvw_in_tri,
-                                          Vector2&       uv_in_edge);
+                                          const Vector3& E1);
 
 UIPC_GEOMETRY_API bool is_point_in_tet(const Vector3& T0,
                                        const Vector3& T1,
                                        const Vector3& T2,
                                        const Vector3& T3,
-                                       const Vector3& P,
-                                       Vector4& tuvw_in_tet  // the barycentric coordinates of the intersection point in the tet
-);
+                                       const Vector3& P);
 }  // namespace uipc::geometry
 ```
 

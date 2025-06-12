@@ -57,6 +57,7 @@
 ## s
 
 * **STimer** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **SlotTuple** ([**uipc::constitution::AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md))
 
 
 ## t

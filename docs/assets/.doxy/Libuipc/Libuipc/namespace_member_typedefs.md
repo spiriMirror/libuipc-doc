@@ -6,6 +6,7 @@
 ## a
 
 * **Allocator** ([**uipc**](namespaceuipc.md))
+* **AngleAxis** ([**uipc**](namespaceuipc.md))
 
 
 ## c
@@ -45,11 +46,17 @@
 * **Matrix4x4** ([**uipc**](namespaceuipc.md))
 * **Matrix6x6** ([**uipc**](namespaceuipc.md))
 * **Matrix9x9** ([**uipc**](namespaceuipc.md))
+* **MatrixX** ([**uipc**](namespaceuipc.md))
 
 
 ## p
 
 * **propagate\_const\_t** ([**uipc**](namespaceuipc.md))
+
+
+## q
+
+* **Quaternion** ([**uipc**](namespaceuipc.md))
 
 
 ## s

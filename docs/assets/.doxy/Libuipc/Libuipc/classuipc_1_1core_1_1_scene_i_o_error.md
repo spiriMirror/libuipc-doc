@@ -72,7 +72,7 @@ Inherits the following classes: [uipc::Exception](classuipc_1_1_exception.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Exception**](#function-exception) (const string & msg) <br> |
+|   | [**Exception**](#function-exception) (std::string\_view msg) <br> |
 
 
 ## Public Functions inherited from uipc::Exception
@@ -81,8 +81,7 @@ See [uipc::Exception](classuipc_1_1_exception.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Exception**](classuipc_1_1_exception.md#function-exception) (const string & msg) <br> |
-| virtual const char \* | [**what**](classuipc_1_1_exception.md#function-what) () noexcept override const<br> |
+|   | [**Exception**](classuipc_1_1_exception.md#function-exception) (std::string\_view msg) <br> |
 
 
 
@@ -146,7 +145,7 @@ See [uipc::Exception](classuipc_1_1_exception.md)
 
 ```C++
 uipc::core::SceneIOError::Exception (
-    const string & msg
+    std::string_view msg
 ) 
 ```
 

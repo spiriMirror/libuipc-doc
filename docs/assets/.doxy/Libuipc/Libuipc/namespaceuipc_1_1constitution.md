@@ -32,6 +32,7 @@
 | class | [**ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md) <br> |
 | class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md) <br> |
 | class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md) <br> |
+| class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md) <br> |
 | class | [**Constraint**](classuipc_1_1constitution_1_1_constraint.md) <br> |
 | class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1_discrete_shell_bending.md) <br> |
 | class | [**ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md) <br> |
@@ -40,6 +41,7 @@
 | class | [**FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1_finite_element_extra_constitution.md) <br> |
 | class | [**HookeanSpring**](classuipc_1_1constitution_1_1_hookean_spring.md) <br> |
 | class | [**IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) <br> |
+| class | [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1_inter_affine_body_constitution.md) <br> |
 | class | [**KirchhoffRodBending**](classuipc_1_1constitution_1_1_kirchhoff_rod_bending.md) <br> |
 | class | [**LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md) <br> |
 | class | [**NeoHookeanShell**](classuipc_1_1constitution_1_1_neo_hookean_shell.md) <br> |

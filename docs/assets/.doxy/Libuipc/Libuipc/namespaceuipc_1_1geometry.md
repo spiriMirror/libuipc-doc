@@ -118,7 +118,7 @@
 |  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**ground**](#function-ground) (Float height=0.0, const Vector3 & N=Vector3::UnitY()) <br>_Create a gound plane._  |
 |  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**halfplane**](#function-halfplane) (const Vector3 & P=Vector3::Zero(), const Vector3 & N=Vector3::UnitY()) <br>_Create a half-plane._  |
 |  Float UIPC\_GEOMETRY\_API | [**halfplane\_vertex\_signed\_distance**](#function-halfplane_vertex_signed_distance) (const Vector3 & P, const Vector3 & N, const Vector3 & V, Float V\_thickness=0.0) <br>_Compute the distance between a half-plane (P, N) and a vertex V (with thickness V\_thickness)._  |
-|  UIPC\_GEOMETRY\_API bool | [**is\_point\_in\_tet**](#function-is_point_in_tet) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & T3, const Vector3 & P, Vector4 & tuvw\_in\_tet) <br>_Check if a point is in a tetrahedron._  |
+|  UIPC\_GEOMETRY\_API bool | [**is\_point\_in\_tet**](#function-is_point_in_tet) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & T3, const Vector3 & P) <br>_Check if a point is in a tetrahedron._  |
 |  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Check if a trimesh is closed._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_region**](#function-label_region) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the regions of a simplicial complex._  |
@@ -142,8 +142,9 @@
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetrahedralize**](#function-tetrahedralize) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const Json & options=Json::object()) <br>_Tetrahedralize a 2D simplicial complex (trimesh)._  |
-|  UIPC\_GEOMETRY\_API bool | [**tri\_edge\_intersect**](#function-tri_edge_intersect) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & E0, const Vector3 & E1, bool & coplanar, Vector3 & uvw\_in\_tri, Vector2 & uv\_in\_edge) <br>_Check if a triangle and an edge intersect._  |
+|  UIPC\_GEOMETRY\_API bool | [**tri\_edge\_intersect**](#function-tri_edge_intersect) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & E0, const Vector3 & E1) <br>_Check if a triangle and an edge intersect._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br>_Create a simplicial complex from a triangle mesh._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Fs) <br>_Create a 2D simplicial complex from a quad mesh (4-sided polygons)._  |
 
 
 
@@ -581,8 +582,7 @@ UIPC_GEOMETRY_API bool uipc::geometry::is_point_in_tet (
     const Vector3 & T1,
     const Vector3 & T2,
     const Vector3 & T3,
-    const Vector3 & P,
-    Vector4 & tuvw_in_tet
+    const Vector3 & P
 ) 
 ```
 
@@ -590,13 +590,6 @@ UIPC_GEOMETRY_API bool uipc::geometry::is_point_in_tet (
 
 T0, T1, T2, T3 the vertices of the tetrahedron P is the point
 
-
-
-
-**Parameters:**
-
-
-* `tuvw_in_tet` the barycentric coordinates of the intersection point in the tet. Even if the function return false, the barycentric coordinates are still calculated correctly.
 
 
 
@@ -1213,10 +1206,7 @@ UIPC_GEOMETRY_API bool uipc::geometry::tri_edge_intersect (
     const Vector3 & T1,
     const Vector3 & T2,
     const Vector3 & E0,
-    const Vector3 & E1,
-    bool & coplanar,
-    Vector3 & uvw_in_tri,
-    Vector2 & uv_in_edge
+    const Vector3 & E1
 ) 
 ```
 
@@ -1224,14 +1214,6 @@ UIPC_GEOMETRY_API bool uipc::geometry::tri_edge_intersect (
 
 T0, T1, T2 the vertices of the triangle E0, E1 the vertices of the edge
 
-
-
-
-**Parameters:**
-
-
-* `uvw_in_tri` the barycentric coordinates of the intersection point in the triangle. Even if the function return false, the barycentric coordinates are still calculated correctly.
-* `uv_in_edge` the barycentric coordinates of the intersection point in the edge. Even if the function return false, the barycentric coordinates are still calculated correctly.
 
 
 
@@ -1268,6 +1250,42 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::trimesh (
 
 * `Vs` The vertex positions of the triangle mesh 
 * `Fs` The triangles of the triangle mesh 
+
+
+
+**Returns:**
+
+[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function trimesh 
+
+_Create a 2D simplicial complex from a quad mesh (4-sided polygons)._ 
+```C++
+UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::trimesh (
+    span< const Vector3 > Vs,
+    span< const Vector4i > Fs
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `Vs` The vertex positions of the quad mesh 
+* `Fs` The quads of the quad mesh 
 
 
 

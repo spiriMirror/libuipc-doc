@@ -4,6 +4,7 @@
 Here is a list of all namespaces with brief descriptions:
 
 
+* **namespace** [**cpptrace**](namespacecpptrace.md) 
 * **namespace** [**fmt**](namespacefmt.md)     
 * **namespace** [**nlohmann**](namespacenlohmann.md)     
 * **namespace** [**std**](namespacestd.md) 

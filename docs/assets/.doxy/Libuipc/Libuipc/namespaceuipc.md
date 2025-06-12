@@ -69,6 +69,7 @@
 | Type | Name |
 | ---: | :--- |
 | typedef std::pmr::polymorphic\_allocator&lt; T &gt; | [**Allocator**](#typedef-allocator)  <br> |
+| typedef Eigen::AngleAxis&lt; Float &gt; | [**AngleAxis**](#typedef-angleaxis)  <br> |
 | typedef double | [**Float**](#typedef-float)  <br> |
 | typedef int32\_t | [**I32**](#typedef-i32)  <br> |
 | typedef int64\_t | [**I64**](#typedef-i64)  <br> |
@@ -80,6 +81,8 @@
 | typedef Matrix&lt; Float, 4, 4 &gt; | [**Matrix4x4**](#typedef-matrix4x4)  <br> |
 | typedef Matrix&lt; Float, 6, 6 &gt; | [**Matrix6x6**](#typedef-matrix6x6)  <br> |
 | typedef Matrix&lt; Float, 9, 9 &gt; | [**Matrix9x9**](#typedef-matrix9x9)  <br> |
+| typedef Eigen::MatrixX&lt; Float &gt; | [**MatrixX**](#typedef-matrixx)  <br> |
+| typedef Eigen::Quaternion&lt; Float &gt; | [**Quaternion**](#typedef-quaternion)  <br> |
 | typedef std::shared\_ptr&lt; T &gt; | [**S**](#typedef-s)  <br> |
 | typedef std::size\_t | [**SizeT**](#typedef-sizet)  <br> |
 | typedef Eigen::Transform&lt; Float, 3, Eigen::Affine &gt; | [**Transform**](#typedef-transform)  <br> |
@@ -135,6 +138,10 @@
 
 | Type | Name |
 | ---: | :--- |
+|   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (I32) <br> |
+|   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (U32) <br> |
+|   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (I64) <br> |
+|   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (U64) <br> |
 |   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (Vector2) <br> |
 |   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (Vector3) <br> |
 |   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (Vector4) <br> |
@@ -155,9 +162,12 @@
 |   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (VectorXi64) <br> |
 |   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (VectorXu) <br> |
 |   | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](#function-readable_type_name_as_alias) (VectorXu64) <br> |
+|  UIPC\_CORE\_API void | [**abort**](#function-abort) () noexcept<br> |
 |  auto | [**as\_eigen**](#function-as_eigen) (span&lt; T &gt; s) <br> |
 |  UIPC\_CORE\_API const Json & | [**config**](#function-config) () <br> |
 |  UIPC\_CORE\_API Json | [**default\_config**](#function-default_config) () <br> |
+|  UIPC\_CORE\_API std::string | [**demangle**](#function-demangle) (const std::string & mangled\_name) <br> |
+|  std::string | [**demangle**](#function-demangle) () noexcept<br> |
 |  size\_t | [**encode\_offset\_count**](#function-encode_offset_count) (RandIt first, RandIt last, OffsetCountIt offsets, OffsetCountIt counts, Pred && pred) <br> |
 |  auto | [**encode\_offset\_count**](#function-encode_offset_count) (RandIt first, RandIt last, OffsetCountIt offset, OffsetCountIt count) <br> |
 |  UIPC\_CORE\_API void | [**init**](#function-init) (const Json & config) <br> |
@@ -174,6 +184,9 @@
 |  long double | [**operator""\_ms**](#function-operator""_ms) (long double value) <br>_Second literal operator (ms)_  |
 |  long double | [**operator""\_s**](#function-operator""_s) (long double value) <br>_Second literal operator._  |
 |  std::string | [**readable\_type\_name**](#function-readable_type_name) () noexcept<br> |
+|  std::string | [**readable\_type\_name&lt; double &gt;**](#function-readable_type_name<-double->) () noexcept<br> |
+|  std::string | [**readable\_type\_name&lt; float &gt;**](#function-readable_type_name<-float->) () noexcept<br> |
+|  std::string | [**readable\_type\_name&lt; std::string &gt;**](#function-readable_type_name<-std::string->) () noexcept<br> |
 |  std::size\_t | [**run\_length\_encode**](#function-run_length_encode) (InputIt in\_first, InputIt in\_last, OutputIt out\_unique, OutputCountIt out\_counts, Pred && pred) <br>_Run-length encode the input range, the input range must be sorted._  |
 |  auto | [**run\_length\_encode**](#function-run_length_encode) (InputIt in\_first, InputIt in\_last, OutputIt out\_unique, OutputCountIt out\_counts) <br> |
 |  U&lt; DstT &gt; | [**static\_pointer\_cast**](#function-static_pointer_cast) (U&lt; SrcT &gt; && src) <br> |
@@ -215,6 +228,19 @@
 
 ```C++
 using uipc::Allocator =  std::pmr::polymorphic_allocator<T>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef AngleAxis 
+
+```C++
+using uipc::AngleAxis =  Eigen::AngleAxis<Float>;
 ```
 
 
@@ -358,6 +384,32 @@ using uipc::Matrix6x6 =  Matrix<Float, 6, 6>;
 
 ```C++
 using uipc::Matrix9x9 =  Matrix<Float, 9, 9>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef MatrixX 
+
+```C++
+using uipc::MatrixX =  Eigen::MatrixX<Float>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef Quaternion 
+
+```C++
+using uipc::Quaternion =  Eigen::Quaternion<Float>;
 ```
 
 
@@ -726,6 +778,66 @@ bool uipc::is_matrix_v;
 
 ```C++
 uipc::READABLE_TYPE_NAME_AS_ALIAS (
+    I32
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function READABLE\_TYPE\_NAME\_AS\_ALIAS 
+
+```C++
+uipc::READABLE_TYPE_NAME_AS_ALIAS (
+    U32
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function READABLE\_TYPE\_NAME\_AS\_ALIAS 
+
+```C++
+uipc::READABLE_TYPE_NAME_AS_ALIAS (
+    I64
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function READABLE\_TYPE\_NAME\_AS\_ALIAS 
+
+```C++
+uipc::READABLE_TYPE_NAME_AS_ALIAS (
+    U64
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function READABLE\_TYPE\_NAME\_AS\_ALIAS 
+
+```C++
+uipc::READABLE_TYPE_NAME_AS_ALIAS (
     Vector2
 ) 
 ```
@@ -1022,6 +1134,19 @@ uipc::READABLE_TYPE_NAME_AS_ALIAS (
 
 
 
+### function abort 
+
+```C++
+UIPC_CORE_API void uipc::abort () noexcept
+```
+
+
+
+
+<hr>
+
+
+
 ### function as\_eigen 
 
 ```C++
@@ -1055,6 +1180,35 @@ UIPC_CORE_API const Json & uipc::config ()
 
 ```C++
 UIPC_CORE_API Json uipc::default_config () 
+```
+
+
+
+
+<hr>
+
+
+
+### function demangle 
+
+```C++
+UIPC_CORE_API std::string uipc::demangle (
+    const std::string & mangled_name
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function demangle 
+
+```C++
+template<typename T>
+inline std::string uipc::demangle () noexcept
 ```
 
 
@@ -1348,6 +1502,48 @@ long double uipc::operator""_s (
 ```C++
 template<typename T>
 inline std::string uipc::readable_type_name () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function readable\_type\_name&lt; double &gt; 
+
+```C++
+template<>
+inline std::string uipc::readable_type_name< double > () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function readable\_type\_name&lt; float &gt; 
+
+```C++
+template<>
+inline std::string uipc::readable_type_name< float > () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function readable\_type\_name&lt; std::string &gt; 
+
+```C++
+template<>
+inline std::string uipc::readable_type_name< std::string > () noexcept
 ```
 
 

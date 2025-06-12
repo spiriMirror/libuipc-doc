@@ -65,6 +65,8 @@ UIPC_BUILTIN_ATTRIBUTE(backend_abd_body_offset);
 UIPC_BUILTIN_ATTRIBUTE(dof_offset);
 
 UIPC_BUILTIN_ATTRIBUTE(dof_count);
+
+UIPC_BUILTIN_ATTRIBUTE(self_collision);
 #endif
 ```
 

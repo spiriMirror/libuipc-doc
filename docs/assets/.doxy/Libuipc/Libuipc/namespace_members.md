@@ -6,6 +6,8 @@
 ## a
 
 * **Allocator** ([**uipc**](namespaceuipc.md))
+* **AngleAxis** ([**uipc**](namespaceuipc.md))
+* **abort** ([**uipc**](namespaceuipc.md))
 * **as\_eigen** ([**uipc**](namespaceuipc.md), [**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))
 * **AbstractSimplicialComplex** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **AffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
@@ -28,6 +30,7 @@
 ## d
 
 * **default\_config** ([**uipc**](namespaceuipc.md))
+* **demangle** ([**uipc**](namespaceuipc.md))
 
 
 ## e
@@ -73,6 +76,7 @@
 * **init** ([**uipc**](namespaceuipc.md))
 * **is\_matrix\_v** ([**uipc**](namespaceuipc.md))
 * **ImplicitGeometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **InterAffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **ImplicitGeometrySlot** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_point\_in\_tet** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -102,6 +106,7 @@
 * **Matrix4x4** ([**uipc**](namespaceuipc.md))
 * **Matrix6x6** ([**uipc**](namespaceuipc.md))
 * **Matrix9x9** ([**uipc**](namespaceuipc.md))
+* **MatrixX** ([**uipc**](namespaceuipc.md))
 * **make\_shared** ([**uipc**](namespaceuipc.md))
 * **make\_unique** ([**uipc**](namespaceuipc.md))
 * **merge** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -140,11 +145,19 @@
 * **pointcloud** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
+## q
+
+* **Quaternion** ([**uipc**](namespaceuipc.md))
+
+
 ## r
 
 * **READABLE\_TYPE\_NAME\_AS\_ALIAS** ([**uipc**](namespaceuipc.md))
 * **RUNTIME\_CHECK** ([**uipc**](namespaceuipc.md))
 * **readable\_type\_name** ([**uipc**](namespaceuipc.md))
+* **readable\_type\_name&lt; double &gt;** ([**uipc**](namespaceuipc.md))
+* **readable\_type\_name&lt; float &gt;** ([**uipc**](namespaceuipc.md))
+* **readable\_type\_name&lt; std::string &gt;** ([**uipc**](namespaceuipc.md))
 * **run\_length\_encode** ([**uipc**](namespaceuipc.md))
 
 

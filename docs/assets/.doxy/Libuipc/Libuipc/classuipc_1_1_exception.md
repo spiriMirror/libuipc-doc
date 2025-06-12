@@ -13,7 +13,7 @@
 
 
 
-Inherits the following classes: std::exception
+Inherits the following classes: cpptrace::exception_with_message
 
 
 Inherited by the following classes: [uipc::JsonIOError](classuipc_1_1_json_i_o_error.md),  [uipc::core::EngineException](classuipc_1_1core_1_1_engine_exception.md),  [uipc::core::SceneIOError](classuipc_1_1core_1_1_scene_i_o_error.md),  [uipc::geometry::AttributeCollectionError](classuipc_1_1geometry_1_1_attribute_collection_error.md),  [uipc::geometry::AttributeIOError](classuipc_1_1geometry_1_1_attribute_i_o_error.md),  [uipc::geometry::GeometryIOError](classuipc_1_1geometry_1_1_geometry_i_o_error.md)
@@ -53,8 +53,7 @@ Inherited by the following classes: [uipc::JsonIOError](classuipc_1_1_json_i_o_e
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Exception**](#function-exception) (const string & msg) <br> |
-| virtual const char \* | [**what**](#function-what) () noexcept override const<br> |
+|   | [**Exception**](#function-exception) (std::string\_view msg) <br> |
 
 
 
@@ -92,21 +91,8 @@ Inherited by the following classes: [uipc::JsonIOError](classuipc_1_1_json_i_o_e
 
 ```C++
 uipc::Exception::Exception (
-    const string & msg
+    std::string_view msg
 ) 
-```
-
-
-
-
-<hr>
-
-
-
-### function what 
-
-```C++
-virtual const char * uipc::Exception::what () noexcept override const
 ```
 
 

@@ -13,6 +13,7 @@
 * `#include <uipc/common/string.h>`
 * `#include <uipc/common/dllexport.h>`
 * `#include <exception>`
+* `#include <cpptrace/cpptrace.hpp>`
 
 
 
