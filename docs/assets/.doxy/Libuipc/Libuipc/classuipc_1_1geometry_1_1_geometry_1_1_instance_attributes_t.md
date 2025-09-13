@@ -166,6 +166,7 @@ uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
 
 ### function clear 
 
+
 ```C++
 void uipc::geometry::Geometry::InstanceAttributesT::clear () 
 ```
@@ -204,7 +205,6 @@ inline void uipc::geometry::Geometry::InstanceAttributesT::copy_from (
 
 ### function create 
 
-_Create an attribute with the given name._ 
 ```C++
 template<typename T>
 inline decltype(auto) uipc::geometry::Geometry::InstanceAttributesT::create (
@@ -221,6 +221,7 @@ inline decltype(auto) uipc::geometry::Geometry::InstanceAttributesT::create (
 
 
 ### function destroy 
+
 
 ```C++
 void uipc::geometry::Geometry::InstanceAttributesT::destroy (
@@ -244,7 +245,6 @@ void uipc::geometry::Geometry::InstanceAttributesT::destroy (
 
 ### function find 
 
-_Find an attribute by type and name, if the attribute does not exist, return nullptr._ 
 ```C++
 template<typename T>
 inline auto uipc::geometry::Geometry::InstanceAttributesT::find (
@@ -291,6 +291,7 @@ InstanceAttributesT & uipc::geometry::Geometry::InstanceAttributesT::operator= (
 
 ### function reserve 
 
+
 ```C++
 void uipc::geometry::Geometry::InstanceAttributesT::reserve (
     size_t size
@@ -312,6 +313,7 @@ void uipc::geometry::Geometry::InstanceAttributesT::reserve (
 
 
 ### function resize 
+
 
 ```C++
 void uipc::geometry::Geometry::InstanceAttributesT::resize (
@@ -351,6 +353,7 @@ inline decltype(auto) uipc::geometry::Geometry::InstanceAttributesT::share (
 
 
 ### function size 
+
 
 ```C++
 SizeT uipc::geometry::Geometry::InstanceAttributesT::size () 

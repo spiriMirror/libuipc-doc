@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1constitution_1_1_constraint" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>uipc::constitution::Constraint</compoundname>
     <basecompoundref refid="classuipc_1_1constitution_1_1_i_constitution" prot="public" virt="non-virtual">uipc::constitution::IConstitution</basecompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint" prot="public" virt="non-virtual">uipc::constitution::AffineBodyDrivingRevoluteJoint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_linear_motor" prot="public" virt="non-virtual">uipc::constitution::LinearMotor</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_rotating_motor" prot="public" virt="non-virtual">uipc::constitution::RotatingMotor</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_soft_position_constraint" prot="public" virt="non-virtual">uipc::constitution::SoftPositionConstraint</derivedcompoundref>
@@ -31,10 +32,11 @@
         <name>get_uid</name>
         <qualifiedname>uipc::constitution::Constraint::get_uid</qualifiedname>
         <reimplements refid="classuipc_1_1constitution_1_1_i_constitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
-        <reimplementedby refid="classuipc_1_1constitution_1_1_linear_motor_1a0e58f4b6c13f902701e682050dfb66ea">get_uid</reimplementedby>
-        <reimplementedby refid="classuipc_1_1constitution_1_1_rotating_motor_1a4d6941100708d7a806a036b5d744ff8b">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint_1a82a6cb96c0441075f897f7b43af3cf0c">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1_soft_position_constraint_1afb911802a44a053c0fbe1c273417cf83">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1_soft_transform_constraint_1ac9e639029147c634c81ee65f37cd7ae8">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1_rotating_motor_1a4d6941100708d7a806a036b5d744ff8b">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1_linear_motor_1a0e58f4b6c13f902701e682050dfb66ea">get_uid</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -67,6 +69,12 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="3">
+        <label>uipc::constitution::AffineBodyDrivingRevoluteJoint</label>
+        <link refid="classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="1">
         <label>uipc::constitution::Constraint</label>
         <link refid="classuipc_1_1constitution_1_1_constraint"/>
@@ -77,25 +85,25 @@
         <label>uipc::constitution::IConstitution</label>
         <link refid="classuipc_1_1constitution_1_1_i_constitution"/>
       </node>
-      <node id="3">
+      <node id="4">
         <label>uipc::constitution::LinearMotor</label>
         <link refid="classuipc_1_1constitution_1_1_linear_motor"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>uipc::constitution::RotatingMotor</label>
         <link refid="classuipc_1_1constitution_1_1_rotating_motor"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>uipc::constitution::SoftPositionConstraint</label>
         <link refid="classuipc_1_1constitution_1_1_soft_position_constraint"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>uipc::constitution::SoftTransformConstraint</label>
         <link refid="classuipc_1_1constitution_1_1_soft_transform_constraint"/>
         <childnode refid="1" relation="public-inheritance">

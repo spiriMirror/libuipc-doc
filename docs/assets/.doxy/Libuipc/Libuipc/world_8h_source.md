@@ -45,7 +45,6 @@ class UIPC_CORE_API World final
     void advance();
     void sync();
     void retrieve();
-    void backward();
     bool dump();
     bool recover(SizeT aim_frame = ~0ull);
     bool is_valid() const;
@@ -54,9 +53,10 @@ class UIPC_CORE_API World final
 
     const FeatureCollection& features() const;
 
-  private:
     // Allow create a core::World from a core::internal::World
     World(S<internal::World> w) noexcept;
+
+  private:
     S<internal::World> m_internal;
 };
 }  // namespace uipc::core

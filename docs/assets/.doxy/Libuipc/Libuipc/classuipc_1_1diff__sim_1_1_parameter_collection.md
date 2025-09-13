@@ -105,7 +105,6 @@ Eigen::Map< const Eigen::Matrix< Float, Eigen::Dynamic, 1 > > uipc::diff_sim::Pa
 
 ### function broadcast 
 
-_Broadcast the parameter collection to corresponding geometry attributes._ 
 ```C++
 void uipc::diff_sim::ParameterCollection::broadcast () 
 ```

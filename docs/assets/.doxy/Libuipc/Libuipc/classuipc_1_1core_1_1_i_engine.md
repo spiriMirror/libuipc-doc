@@ -52,7 +52,6 @@
 | Type | Name |
 | ---: | :--- |
 |  void | [**advance**](#function-advance) () <br> |
-|  void | [**backward**](#function-backward) () <br> |
 |  bool | [**dump**](#function-dump) () <br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
@@ -92,7 +91,6 @@
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**do\_advance**](#function-do_advance) () = 0<br> |
-| virtual void | [**do\_backward**](#function-do_backward) () = 0<br> |
 | virtual bool | [**do\_dump**](#function-do_dump) () <br> |
 | virtual void | [**do\_init**](#function-do_init) ([**internal::World**](classuipc_1_1core_1_1internal_1_1_world.md) &) = 0<br> |
 | virtual bool | [**do\_recover**](#function-do_recover) (SizeT dst\_frame) <br> |
@@ -115,19 +113,6 @@
 
 ```C++
 void uipc::core::IEngine::advance () 
-```
-
-
-
-
-<hr>
-
-
-
-### function backward 
-
-```C++
-void uipc::core::IEngine::backward () 
 ```
 
 
@@ -277,19 +262,6 @@ virtual uipc::core::IEngine::~IEngine () = default
 
 ```C++
 virtual void uipc::core::IEngine::do_advance () = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function do\_backward 
-
-```C++
-virtual void uipc::core::IEngine::do_backward () = 0
 ```
 
 

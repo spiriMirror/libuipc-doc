@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1io_1_1_urdf_controller" kind="class" language="C++" prot="public">
+    <compoundname>uipc::io::UrdfController</compoundname>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1io_1_1_urdf_controller_1a920adf4e7c96c998c064231ab7fe73da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class UrdfIO</definition>
+        <argsstring></argsstring>
+        <name>UrdfIO</name>
+        <qualifiedname>uipc::io::UrdfController::UrdfIO</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1io_1_1_urdf_i_o" kindref="compound">UrdfIO</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="11" column="18" bodyfile="include/uipc/io/urdf_io.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1io_1_1_urdf_controller_1aec0ec55f7e45e4ad9a06c5949ab5fd74" prot="private" static="no" mutable="no">
+        <type>S&lt; Impl &gt;</type>
+        <definition>S&lt;Impl&gt; uipc::io::UrdfController::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <qualifiedname>uipc::io::UrdfController::m_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="27" column="7" bodyfile="include/uipc/io/urdf_io.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1aca875feb0b947c06b84b3d05cec7b9d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::io::UrdfController::~UrdfController</definition>
+        <argsstring>()</argsstring>
+        <name>~UrdfController</name>
+        <qualifiedname>uipc::io::UrdfController::~UrdfController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="14" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1a5c8376db27123b6e55e01df5f52cf77a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::io::UrdfController::move_root</definition>
+        <argsstring>(const Vector3 &amp;xyz, const Vector3 &amp;rpy) const</argsstring>
+        <name>move_root</name>
+        <qualifiedname>uipc::io::UrdfController::move_root</qualifiedname>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>xyz</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>rpy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="15" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1a54c33b64f9f452f3321d77e42d71bdae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::io::UrdfController::rotate_to</definition>
+        <argsstring>(std::string_view joint_name, Float angle) const</argsstring>
+        <name>rotate_to</name>
+        <qualifiedname>uipc::io::UrdfController::rotate_to</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>joint_name</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="16" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1a2a2d5b0d4ebb7eae63b95f4341d8ad9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::io::UrdfController::apply_to</definition>
+        <argsstring>(std::string_view attr) const</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::io::UrdfController::apply_to</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="17" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1aa14a5285ab69cbe3c53382064b13bc3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4" kindref="compound">geometry::ImplicitGeometrySlot</ref> &gt;</type>
+        <definition>S&lt; geometry::ImplicitGeometrySlot &gt; uipc::io::UrdfController::revolute_joints</definition>
+        <argsstring>() const</argsstring>
+        <name>revolute_joints</name>
+        <qualifiedname>uipc::io::UrdfController::revolute_joints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="18" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1ac64893cf5adedb80c49c0029455fbef1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
+        <definition>vector&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; uipc::io::UrdfController::links</definition>
+        <argsstring>() const</argsstring>
+        <name>links</name>
+        <qualifiedname>uipc::io::UrdfController::links</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="19" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1a419d58ba70a704954a901a40524febbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::io::UrdfController::sync_visual_mesh</definition>
+        <argsstring>() const</argsstring>
+        <name>sync_visual_mesh</name>
+        <qualifiedname>uipc::io::UrdfController::sync_visual_mesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="20" column="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1a4fc75fa294f1928d6b58faca82f98588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::io::UrdfController::UrdfController</definition>
+        <argsstring>(const UrdfController &amp;other)</argsstring>
+        <name>UrdfController</name>
+        <qualifiedname>uipc::io::UrdfController::UrdfController</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1io_1_1_urdf_controller" kindref="compound">UrdfController</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1a2bfb76670e5c52f8fee9ae4c86ef87c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::io::UrdfController::UrdfController</definition>
+        <argsstring>(UrdfController &amp;&amp;other)=default</argsstring>
+        <name>UrdfController</name>
+        <qualifiedname>uipc::io::UrdfController::UrdfController</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1io_1_1_urdf_controller" kindref="compound">UrdfController</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="23" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1io_1_1_urdf_controller_1a414a4dbe03feeb07502d503e08a9a21e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::io::UrdfController::UrdfController</definition>
+        <argsstring>(S&lt; Impl &gt; impl)</argsstring>
+        <name>UrdfController</name>
+        <qualifiedname>uipc::io::UrdfController::UrdfController</qualifiedname>
+        <param>
+          <type>S&lt; Impl &gt;</type>
+          <declname>impl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/io/urdf_io.h" line="26" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/io/urdf_io.h" line="8" column="1" bodyfile="include/uipc/io/urdf_io.h" bodystart="9" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a2a2d5b0d4ebb7eae63b95f4341d8ad9a" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1ac64893cf5adedb80c49c0029455fbef1" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>links</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1aec0ec55f7e45e4ad9a06c5949ab5fd74" prot="private" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>m_impl</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a5c8376db27123b6e55e01df5f52cf77a" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>move_root</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1aa14a5285ab69cbe3c53382064b13bc3c" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>revolute_joints</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a54c33b64f9f452f3321d77e42d71bdae" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>rotate_to</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a419d58ba70a704954a901a40524febbc" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>sync_visual_mesh</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a4fc75fa294f1928d6b58faca82f98588" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>UrdfController</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a2bfb76670e5c52f8fee9ae4c86ef87c1" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>UrdfController</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a414a4dbe03feeb07502d503e08a9a21e" prot="private" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>UrdfController</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1a920adf4e7c96c998c064231ab7fe73da" prot="private" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>UrdfIO</name></member>
+      <member refid="classuipc_1_1io_1_1_urdf_controller_1aca875feb0b947c06b84b3d05cec7b9d3" prot="public" virt="non-virtual"><scope>uipc::io::UrdfController</scope><name>~UrdfController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

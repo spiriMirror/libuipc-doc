@@ -18,6 +18,7 @@
 ## f
 
 * **Float** ([**uipc**](namespaceuipc.md))
+* **Future** ([**uipc**](namespaceuipc.md))
 
 
 ## h

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1constitution_1_1_finite_element_constitution" kind="class" language="C++" prot="public">
     <compoundname>uipc::constitution::FiniteElementConstitution</compoundname>
     <basecompoundref refid="classuipc_1_1constitution_1_1_i_constitution" prot="public" virt="non-virtual">uipc::constitution::IConstitution</basecompoundref>
@@ -9,6 +9,7 @@
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_neo_hookean_shell" prot="public" virt="non-virtual">uipc::constitution::NeoHookeanShell</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_particle" prot="public" virt="non-virtual">uipc::constitution::Particle</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1_stable_neo_hookean" prot="public" virt="non-virtual">uipc::constitution::StableNeoHookean</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell" prot="public" virt="non-virtual">uipc::constitution::StrainLimitingBaraffWitkinShell</derivedcompoundref>
     <sectiondef kind="private-type">
       <memberdef kind="typedef" id="classuipc_1_1constitution_1_1_finite_element_constitution_1a6eba6019b84543607da81e600684c3ad" prot="private" static="no">
         <type><ref refid="classuipc_1_1constitution_1_1_i_constitution" kindref="compound">IConstitution</ref></type>
@@ -102,6 +103,12 @@
       <node id="8">
         <label>uipc::constitution::StableNeoHookean</label>
         <link refid="classuipc_1_1constitution_1_1_stable_neo_hookean"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>uipc::constitution::StrainLimitingBaraffWitkinShell</label>
+        <link refid="classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

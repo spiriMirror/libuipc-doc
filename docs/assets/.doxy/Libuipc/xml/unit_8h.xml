@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="unit_8h" kind="file" language="C++">
     <compoundname>unit.h</compoundname>
     <includedby refid="arap_8h" local="no">include/uipc/constitution/arap.h</includedby>
@@ -10,6 +10,7 @@
     <includedby refid="neo__hookean__shell_8h" local="no">include/uipc/constitution/neo_hookean_shell.h</includedby>
     <includedby refid="particle_8h" local="no">include/uipc/constitution/particle.h</includedby>
     <includedby refid="stable__neo__hookean_8h" local="no">include/uipc/constitution/stable_neo_hookean.h</includedby>
+    <includedby refid="strain__limiting__baraff__witkin_8h" local="no">include/uipc/constitution/strain_limiting_baraff_witkin.h</includedby>
     <includedby refid="core_8h" local="no">include/uipc/core.h</includedby>
     <invincdepgraph>
       <node id="1">
@@ -32,6 +33,8 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -67,12 +70,16 @@
         <link refid="stable__neo__hookean_8h_source"/>
       </node>
       <node id="10">
-        <label>include/uipc/core.h</label>
-        <link refid="core_8h_source"/>
-        <childnode refid="11" relation="include">
-        </childnode>
+        <label>include/uipc/constitution/strain_limiting_baraff_witkin.h</label>
+        <link refid="strain__limiting__baraff__witkin_8h_source"/>
       </node>
       <node id="11">
+        <label>include/uipc/core.h</label>
+        <link refid="core_8h_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
         <label>include/uipc/uipc.h</label>
         <link refid="uipc_8h_source"/>
       </node>

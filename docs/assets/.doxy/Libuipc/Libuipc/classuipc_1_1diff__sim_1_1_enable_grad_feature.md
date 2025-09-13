@@ -50,7 +50,7 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1_feat
 
 | Type | Name |
 | ---: | :--- |
-|  std::string\_view | [**FeatureName**](#variable-featurename)   = `"diff\_sim/enable\_grad"`<br> |
+|  constexpr std::string\_view | [**FeatureName**](#variable-featurename)   = = "diff\_sim/enable\_grad"<br> |
 
 
 
@@ -192,6 +192,7 @@ See [uipc::core::IFeature](classuipc_1_1core_1_1_i_feature.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_on\_required**](classuipc_1_1core_1_1_i_feature.md#function-do_on_required) () const = 0<br> |
 | virtual std::string\_view | [**get\_name**](classuipc_1_1core_1_1_i_feature.md#function-get_name) () const = 0<br> |
 | virtual std::string\_view | [**get\_type\_name**](classuipc_1_1core_1_1_i_feature.md#function-get_type_name) () const = 0<br> |
 
@@ -210,7 +211,7 @@ See [uipc::core::IFeature](classuipc_1_1core_1_1_i_feature.md)
 ### variable FeatureName 
 
 ```C++
-std::string_view uipc::diff_sim::EnableGradFeature::FeatureName;
+constexpr std::string_view uipc::diff_sim::EnableGradFeature::FeatureName;
 ```
 
 
@@ -264,7 +265,6 @@ true if parameter gradient computation is enabled.
 
 ### function no\_grad 
 
-_With DiffSim on, turn off parameter gradient computation._ 
 ```C++
 void uipc::diff_sim::EnableGradFeature::no_grad () 
 ```
@@ -278,7 +278,6 @@ void uipc::diff_sim::EnableGradFeature::no_grad ()
 
 ### function with\_grad 
 
-_With DiffSim on, turn on parameter gradient computation._ 
 ```C++
 void uipc::diff_sim::EnableGradFeature::with_grad () 
 ```

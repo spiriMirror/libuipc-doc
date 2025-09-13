@@ -34,6 +34,11 @@
 | namespace | [**geometry**](namespaceuipc_1_1geometry.md) <br> |
 
 
+## Classes
+
+| Type | Name |
+| ---: | :--- |
+| class | [**GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &lt;&gt;<br> |
 
 
 

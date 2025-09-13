@@ -36,6 +36,7 @@ class UIPC_IO_API SimplicialComplexIO
 
     [[nodiscard]] SimplicialComplex read_ply(std::string_view file_name);
 
+    [[nodiscard]] SimplicialComplex read_stl(std::string_view file_name);
 
     void write(std::string_view file_name, const SimplicialComplex& sc);
 

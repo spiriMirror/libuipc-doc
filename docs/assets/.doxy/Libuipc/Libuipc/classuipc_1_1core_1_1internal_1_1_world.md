@@ -54,7 +54,6 @@ Inherits the following classes: std::enable_shared_from_this< World >
 | ---: | :--- |
 |   | [**World**](#function-world) ([**internal::Engine**](classuipc_1_1core_1_1internal_1_1_engine.md) & e) noexcept<br> |
 |  void | [**advance**](#function-advance) () <br> |
-|  void | [**backward**](#function-backward) () <br> |
 |  bool | [**dump**](#function-dump) () <br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
@@ -115,19 +114,6 @@ uipc::core::internal::World::World (
 
 ```C++
 void uipc::core::internal::World::advance () 
-```
-
-
-
-
-<hr>
-
-
-
-### function backward 
-
-```C++
-void uipc::core::internal::World::backward () 
 ```
 
 

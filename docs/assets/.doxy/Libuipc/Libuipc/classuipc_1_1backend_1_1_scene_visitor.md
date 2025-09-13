@@ -65,6 +65,7 @@
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find\_geometry**](#function-find_geometry) (IndexT id) noexcept<br> |
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find\_rest\_geometry**](#function-find_rest_geometry) (IndexT id) noexcept<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**geometries**](#function-geometries) () noexcept const<br> |
+|  [**core::Scene**](classuipc_1_1core_1_1_scene.md) | [**get**](#function-get) () noexcept<br> |
 |  const Json & | [**info**](#function-info) () noexcept const<br> |
 |  bool | [**is\_pending**](#function-is_pending) () noexcept const<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator) (const [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &) = delete<br> |
@@ -72,7 +73,6 @@
 |  span&lt; IndexT &gt; | [**pending\_destroy\_ids**](#function-pending_destroy_ids) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_geometries**](#function-pending_geometries) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_rest\_geometries**](#function-pending_rest_geometries) () noexcept const<br> |
-|  [**core::Scene**](classuipc_1_1core_1_1_scene.md) & | [**ref**](#function-ref) () noexcept<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**rest\_geometries**](#function-rest_geometries) () noexcept const<br> |
 |  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
 
@@ -302,6 +302,19 @@ span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::geometries () n
 
 
 
+### function get 
+
+```C++
+core::Scene uipc::backend::SceneVisitor::get () noexcept
+```
+
+
+
+
+<hr>
+
+
+
 ### function info 
 
 ```C++
@@ -388,19 +401,6 @@ span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::pending_geometr
 
 ```C++
 span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::pending_rest_geometries () noexcept const
-```
-
-
-
-
-<hr>
-
-
-
-### function ref 
-
-```C++
-core::Scene & uipc::backend::SceneVisitor::ref () noexcept
 ```
 
 

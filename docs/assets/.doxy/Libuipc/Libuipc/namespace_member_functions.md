@@ -15,7 +15,9 @@
 
 * **config** ([**uipc**](namespaceuipc.md))
 * **compute\_instance\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_mesh\_d\_hat** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_vertex\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **constitution\_type** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **compute\_dyadic\_mass** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 
@@ -135,11 +137,6 @@
 * **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
-
-
-## u
-
-* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v

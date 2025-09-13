@@ -16,7 +16,7 @@
 Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1_i_constitution.md)
 
 
-Inherited by the following classes: [uipc::constitution::ARAP](classuipc_1_1constitution_1_1_a_r_a_p.md),  [uipc::constitution::Empty](classuipc_1_1constitution_1_1_empty.md),  [uipc::constitution::HookeanSpring](classuipc_1_1constitution_1_1_hookean_spring.md),  [uipc::constitution::NeoHookeanShell](classuipc_1_1constitution_1_1_neo_hookean_shell.md),  [uipc::constitution::Particle](classuipc_1_1constitution_1_1_particle.md),  [uipc::constitution::StableNeoHookean](classuipc_1_1constitution_1_1_stable_neo_hookean.md)
+Inherited by the following classes: [uipc::constitution::ARAP](classuipc_1_1constitution_1_1_a_r_a_p.md),  [uipc::constitution::Empty](classuipc_1_1constitution_1_1_empty.md),  [uipc::constitution::HookeanSpring](classuipc_1_1constitution_1_1_hookean_spring.md),  [uipc::constitution::NeoHookeanShell](classuipc_1_1constitution_1_1_neo_hookean_shell.md),  [uipc::constitution::Particle](classuipc_1_1constitution_1_1_particle.md),  [uipc::constitution::StableNeoHookean](classuipc_1_1constitution_1_1_stable_neo_hookean.md),  [uipc::constitution::StrainLimitingBaraffWitkinShell](classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell.md)
 
 
 

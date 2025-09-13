@@ -60,6 +60,7 @@
 |  std::string\_view | [**name**](#function-name) () noexcept const<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & | [**operator=**](#function-operator) (const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) &) = default<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & | [**operator=**](#function-operator_1) ([**ContactElement**](classuipc_1_1core_1_1_contact_element.md) &&) = default<br> |
+|  S&lt; [**geometry::AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**subscene\_append**](#function-subscene_append) ([**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geo) const<br> |
 
 
 
@@ -214,6 +215,21 @@ ContactElement & uipc::core::ContactElement::operator= (
 ContactElement & uipc::core::ContactElement::operator= (
     ContactElement &&
 ) = default
+```
+
+
+
+
+<hr>
+
+
+
+### function subscene\_append 
+
+```C++
+S< geometry::AttributeSlot < IndexT > > uipc::core::ContactElement::subscene_append (
+    geometry::Geometry & geo
+) const
 ```
 
 

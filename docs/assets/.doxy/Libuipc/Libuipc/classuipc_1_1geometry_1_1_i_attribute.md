@@ -139,7 +139,6 @@ void uipc::geometry::IAttribute::from_json (
 
 ### function size 
 
-_Get the size of the attribute._ 
 ```C++
 SizeT uipc::geometry::IAttribute::size () noexcept const
 ```
@@ -181,7 +180,6 @@ Json uipc::geometry::IAttribute::to_json () noexcept const
 
 ### function type\_name 
 
-_Get the type name of data stored in the attribute slot._ 
 ```C++
 std::string_view uipc::geometry::IAttribute::type_name () noexcept const
 ```

@@ -91,8 +91,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| define  | [**REGISTER\_CONSTITUTION\_UIDS**](constitution__uid__auto__register_8h.md#define-register_constitution_uids) (...) `REGISTER\_CONSTITUTION\_UIDS\_INTERNAL(\_\_COUNTER\_\_)`<br>_Register ConstitutionUIDs._  |
-| define  | [**REGISTER\_CONSTITUTION\_UIDS\_INTERNAL**](constitution__uid__auto__register_8h.md#define-register_constitution_uids_internal) (counter) `/* multi line expression */`<br> |
+| define  | [**REGISTER\_CONSTITUTION\_UIDS**](constitution__uid__auto__register_8h.md#define-register_constitution_uids) (...)     REGISTER\_CONSTITUTION\_UIDS\_INTERNAL(\_\_COUNTER\_\_)<br>_Register ConstitutionUIDs._  |
+| define  | [**REGISTER\_CONSTITUTION\_UIDS\_INTERNAL**](constitution__uid__auto__register_8h.md#define-register_constitution_uids_internal) (counter) <br> |
 
 ## Macro Definition Documentation
 
@@ -106,7 +106,7 @@ _Register ConstitutionUIDs._
 ```C++
 #define REGISTER_CONSTITUTION_UIDS (
     ...
-) `REGISTER_CONSTITUTION_UIDS_INTERNAL(__COUNTER__)`
+) REGISTER_CONSTITUTION_UIDS_INTERNAL(__COUNTER__)
 ```
 
 
@@ -115,7 +115,8 @@ Example:
 
 
 
-```
+```C++
+++
 ```
  
 
@@ -131,7 +132,13 @@ Example:
 ```C++
 #define REGISTER_CONSTITUTION_UIDS_INTERNAL (
     counter
-) `/* multi line expression */`
+) namespace auto_register                                                                           \
+    {                                                                                                 \
+        static ::uipc::list< ::uipc::builtin::UIDInfo > ConstitutionUIDAutoRegisterFunction##counter(); \
+        static ::uipc::builtin::ConstitutionUIDAutoRegister ConstitutionUIDAutoRegister##counter{     \
+            ConstitutionUIDAutoRegisterFunction##counter};                                            \
+    }                                                                                                 \
+    static ::uipc::list< ::uipc::builtin::UIDInfo > auto_register::ConstitutionUIDAutoRegisterFunction##counter()
 ```
 
 

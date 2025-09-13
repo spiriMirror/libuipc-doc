@@ -64,7 +64,8 @@
 |   | [**Scene**](#function-scene-34) ([**Scene**](classuipc_1_1core_1_1_scene.md) &&) = default<br> |
 |  [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-12) () <br> |
 |  const [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-22) () const<br> |
-|  const Json & | [**config**](#function-config) () noexcept const<br> |
+|  const Json & | [**config**](#function-config-12) () noexcept const<br> |
+|  Json & | [**config**](#function-config-22) () noexcept<br> |
 |  [**ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-12) () noexcept<br> |
 |  const [**ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-22) () noexcept const<br> |
 |  [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & | [**contact\_tabular**](#function-contact_tabular-12) () noexcept<br> |
@@ -73,7 +74,6 @@
 |  const [**DiffSim**](classuipc_1_1core_1_1_diff_sim.md) & | [**diff\_sim**](#function-diff_sim-22) () const<br> |
 |  [**Geometries**](classuipc_1_1core_1_1_scene_1_1_geometries.md) | [**geometries**](#function-geometries-12) () noexcept<br> |
 |  [**CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md) | [**geometries**](#function-geometries-22) () noexcept const<br> |
-|  const Json & | [**info**](#function-info) () noexcept const<br> |
 |  [**Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md) | [**objects**](#function-objects-12) () noexcept<br> |
 |  [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) | [**objects**](#function-objects-22) () noexcept const<br> |
 |  [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
@@ -189,10 +189,23 @@ const Animator & uipc::core::Scene::animator () const
 
 
 
-### function config 
+### function config [1/2]
 
 ```C++
 const Json & uipc::core::Scene::config () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function config [2/2]
+
+```C++
+Json & uipc::core::Scene::config () noexcept
 ```
 
 
@@ -297,19 +310,6 @@ Geometries uipc::core::Scene::geometries () noexcept
 
 ```C++
 CGeometries uipc::core::Scene::geometries () noexcept const
-```
-
-
-
-
-<hr>
-
-
-
-### function info 
-
-```C++
-const Json & uipc::core::Scene::info () noexcept const
 ```
 
 

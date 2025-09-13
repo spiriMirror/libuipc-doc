@@ -86,7 +86,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| define  | [**UIPC\_BUILTIN\_ATTRIBUTE**](attribute__name_8h.md#define-uipc_builtin_attribute) (name) `constexpr std::string\_view name = #name`<br> |
+| define  | [**UIPC\_BUILTIN\_ATTRIBUTE**](attribute__name_8h.md#define-uipc_builtin_attribute) (name) constexpr std::string\_view name = #name<br> |
 
 ## Macro Definition Documentation
 
@@ -99,7 +99,7 @@
 ```C++
 #define UIPC_BUILTIN_ATTRIBUTE (
     name
-) `constexpr std::string_view name = #name`
+) constexpr std::string_view name = #name
 ```
 
 

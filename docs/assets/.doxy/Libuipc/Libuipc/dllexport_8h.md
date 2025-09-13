@@ -81,13 +81,13 @@
 | define  | [**UIPC\_BACKEND\_API**](dllexport_8h.md#define-uipc_backend_api)  <br> |
 | define  | [**UIPC\_CONSTITUTION\_API**](dllexport_8h.md#define-uipc_constitution_api)  <br> |
 | define  | [**UIPC\_CORE\_API**](dllexport_8h.md#define-uipc_core_api)  <br> |
-| define  | [**UIPC\_EXPORT\_API**](dllexport_8h.md#define-uipc_export_api)  `UIPC\_EXTERN\_C \_\_attribute\_\_((visibility("default")))`<br> |
+| define  | [**UIPC\_EXPORT\_API**](dllexport_8h.md#define-uipc_export_api)  UIPC\_EXTERN\_C \_\_attribute\_\_((visibility("default")))<br> |
 | define  | [**UIPC\_EXTERN\_C**](dllexport_8h.md#define-uipc_extern_c)  <br> |
-| define  | [**UIPC\_FORCE\_INLINE**](dllexport_8h.md#define-uipc_force_inline)  `\_\_attribute\_\_((always\_inline, hot)) inline`<br> |
+| define  | [**UIPC\_FORCE\_INLINE**](dllexport_8h.md#define-uipc_force_inline)  \_\_attribute\_\_((always\_inline, hot)) inline<br> |
 | define  | [**UIPC\_GEOMETRY\_API**](dllexport_8h.md#define-uipc_geometry_api)  <br> |
-| define  | [**UIPC\_IMPORT\_API**](dllexport_8h.md#define-uipc_import_api)  `UIPC\_EXTERN\_C`<br> |
+| define  | [**UIPC\_IMPORT\_API**](dllexport_8h.md#define-uipc_import_api)  UIPC\_EXTERN\_C<br> |
 | define  | [**UIPC\_IO\_API**](dllexport_8h.md#define-uipc_io_api)  <br> |
-| define  | [**UIPC\_NEVER\_INLINE**](dllexport_8h.md#define-uipc_never_inline)  `\_\_attribute\_\_((noinline))`<br> |
+| define  | [**UIPC\_NEVER\_INLINE**](dllexport_8h.md#define-uipc_never_inline)  \_\_attribute\_\_((noinline))<br> |
 | define  | [**UIPC\_NOEXCEPT**](dllexport_8h.md#define-uipc_noexcept)  <br> |
 
 ## Macro Definition Documentation
@@ -138,7 +138,7 @@
 ### define UIPC\_EXPORT\_API 
 
 ```C++
-#define UIPC_EXPORT_API `UIPC_EXTERN_C __attribute__((visibility("default")))`
+#define UIPC_EXPORT_API UIPC_EXTERN_C __attribute__((visibility("default")))
 ```
 
 
@@ -164,7 +164,7 @@
 ### define UIPC\_FORCE\_INLINE 
 
 ```C++
-#define UIPC_FORCE_INLINE `__attribute__((always_inline, hot)) inline`
+#define UIPC_FORCE_INLINE __attribute__((always_inline, hot)) inline
 ```
 
 
@@ -190,7 +190,7 @@
 ### define UIPC\_IMPORT\_API 
 
 ```C++
-#define UIPC_IMPORT_API `UIPC_EXTERN_C`
+#define UIPC_IMPORT_API UIPC_EXTERN_C
 ```
 
 
@@ -216,7 +216,7 @@
 ### define UIPC\_NEVER\_INLINE 
 
 ```C++
-#define UIPC_NEVER_INLINE `__attribute__((noinline))`
+#define UIPC_NEVER_INLINE __attribute__((noinline))
 ```
 
 

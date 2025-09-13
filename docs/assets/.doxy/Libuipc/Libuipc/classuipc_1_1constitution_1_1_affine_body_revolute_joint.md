@@ -32,7 +32,7 @@ Inherits the following classes: [uipc::constitution::InterAffineBodyConstitution
 
 | Type | Name |
 | ---: | :--- |
-| typedef std::tuple&lt; S&lt; geometry::SimplicialComplexSlot &gt;, S&lt; geometry::SimplicialComplexSlot &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
+| typedef std::tuple&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &gt;, S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
 
 
 
@@ -215,8 +215,7 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1_i_constitu
 ### typedef SlotTuple 
 
 ```C++
-using uipc::constitution::AffineBodyRevoluteJoint::SlotTuple = 
-        std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot>>;
+using uipc::constitution::AffineBodyRevoluteJoint::SlotTuple =  std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot> >;
 ```
 
 

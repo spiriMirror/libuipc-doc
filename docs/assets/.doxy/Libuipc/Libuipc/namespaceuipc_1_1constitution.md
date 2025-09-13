@@ -31,6 +31,7 @@
 | ---: | :--- |
 | class | [**ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md) <br> |
 | class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md) <br> |
+| class | [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint.md) <br> |
 | class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md) <br> |
 | class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md) <br> |
 | class | [**Constraint**](classuipc_1_1constitution_1_1_constraint.md) <br> |
@@ -42,6 +43,7 @@
 | class | [**HookeanSpring**](classuipc_1_1constitution_1_1_hookean_spring.md) <br> |
 | class | [**IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) <br> |
 | class | [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1_inter_affine_body_constitution.md) <br> |
+| class | [**InterPrimitiveConstitution**](classuipc_1_1constitution_1_1_inter_primitive_constitution.md) <br> |
 | class | [**KirchhoffRodBending**](classuipc_1_1constitution_1_1_kirchhoff_rod_bending.md) <br> |
 | class | [**LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md) <br> |
 | class | [**NeoHookeanShell**](classuipc_1_1constitution_1_1_neo_hookean_shell.md) <br> |
@@ -49,7 +51,9 @@
 | class | [**RotatingMotor**](classuipc_1_1constitution_1_1_rotating_motor.md) <br> |
 | class | [**SoftPositionConstraint**](classuipc_1_1constitution_1_1_soft_position_constraint.md) <br> |
 | class | [**SoftTransformConstraint**](classuipc_1_1constitution_1_1_soft_transform_constraint.md) <br> |
+| class | [**SoftVertexStitch**](classuipc_1_1constitution_1_1_soft_vertex_stitch.md) <br> |
 | class | [**StableNeoHookean**](classuipc_1_1constitution_1_1_stable_neo_hookean.md) <br> |
+| class | [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell.md) <br> |
 
 
 

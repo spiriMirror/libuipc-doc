@@ -86,7 +86,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| define  | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](readable__type__name_8h.md#define-readable_type_name_as_alias) (type) `/* multi line expression */`<br> |
+| define  | [**READABLE\_TYPE\_NAME\_AS\_ALIAS**](readable__type__name_8h.md#define-readable_type_name_as_alias) (type) <br> |
 
 ## Macro Definition Documentation
 
@@ -99,7 +99,11 @@
 ```C++
 #define READABLE_TYPE_NAME_AS_ALIAS (
     type
-) `/* multi line expression */`
+) template <>                                                                \
+    inline std::string readable_type_name<type>() noexcept                     \
+    {                                                                          \
+        return #type;                                                          \
+    }
 ```
 
 

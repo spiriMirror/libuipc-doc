@@ -15,7 +15,7 @@
 
 
 
-Inherited by the following classes: [uipc::geometry::GeometrySlotT&lt; Geometry &gt;](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md),  [uipc::geometry::GeometrySlotT&lt; ImplicitGeometry &gt;](namespaceuipc_1_1geometry.md#none-geometryslott<-implicitgeometry->),  [uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;](namespaceuipc_1_1geometry.md#none-geometryslott<-simplicialcomplex->)
+Inherited by the following classes: [uipc::geometry::GeometrySlotT&lt; Geometry &gt;](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md),  [uipc::geometry::GeometrySlotT&lt; ImplicitGeometry &gt;](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md),  [uipc::geometry::GeometrySlotT&lt; SimplicialComplex &gt;](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md)
 
 
 

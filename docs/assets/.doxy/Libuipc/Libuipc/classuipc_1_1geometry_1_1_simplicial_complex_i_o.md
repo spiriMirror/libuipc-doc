@@ -63,6 +63,7 @@ _A class for reading and writing simplicial complex._
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**read\_msh**](#function-read_msh) (std::string\_view file\_name) <br>_Read a tetmesh from a .msh file._  |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**read\_obj**](#function-read_obj) (std::string\_view file\_name) <br>_Read a trimesh, linemesh or particles from a .obj file._  |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**read\_ply**](#function-read_ply) (std::string\_view file\_name) <br>_Read a trimesh, linemesh or particles from a .ply file._  |
+|  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**read\_stl**](#function-read_stl) (std::string\_view file\_name) <br>_Read a trimesh, linemesh or particles from a .stl file._  |
 |  void | [**write**](#function-write) (std::string\_view file\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Write a simplicial complex to a file, the file type is determined by the file extension._  |
 |  void | [**write\_msh**](#function-write_msh) (std::string\_view file\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Write a simplicial complex to .msh file._  |
 |  void | [**write\_obj**](#function-write_obj) (std::string\_view file\_name, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Write a simplicial complex to .obj file._  |
@@ -309,6 +310,40 @@ SimplicialComplex uipc::geometry::SimplicialComplexIO::read_obj (
 _Read a trimesh, linemesh or particles from a .ply file._ 
 ```C++
 SimplicialComplex uipc::geometry::SimplicialComplexIO::read_ply (
+    std::string_view file_name
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `file_name` The file to read
+
+
+
+**Returns:**
+
+[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function read\_stl 
+
+_Read a trimesh, linemesh or particles from a .stl file._ 
+```C++
+SimplicialComplex uipc::geometry::SimplicialComplexIO::read_stl (
     std::string_view file_name
 ) 
 ```

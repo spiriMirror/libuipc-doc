@@ -13,6 +13,7 @@
 
 
 
+Inherits the following classes: std::enable_shared_from_this< Engine >
 
 
 
@@ -51,7 +52,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Engine**](#function-engine) (std::string\_view backend\_name, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
+|   | [**Engine**](#function-engine-12) (std::string\_view backend\_name, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
+|   | [**Engine**](#function-engine-22) (std::string\_view backend\_name, S&lt; [**IEngine**](classuipc_1_1core_1_1_i_engine.md) &gt; overrider, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
 |  std::string\_view | [**backend\_name**](#function-backend_name) () noexcept const<br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () <br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) & | [**status**](#function-status) () <br> |
@@ -96,11 +98,29 @@
 
 
 
-### function Engine 
+### function Engine [1/2]
 
 ```C++
 uipc::core::internal::Engine::Engine (
     std::string_view backend_name,
+    std::string_view workspace="./",
+    const Json & config=default_config()
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function Engine [2/2]
+
+```C++
+uipc::core::internal::Engine::Engine (
+    std::string_view backend_name,
+    S< IEngine > overrider,
     std::string_view workspace="./",
     const Json & config=default_config()
 ) 

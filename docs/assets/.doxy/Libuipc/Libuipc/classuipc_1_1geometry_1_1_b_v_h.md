@@ -151,7 +151,6 @@ void uipc::geometry::BVH::build (
 
 ### function clear 
 
-_Clear the_ [_**BVH**_](classuipc_1_1geometry_1_1_b_v_h.md) _tree._
 ```C++
 void uipc::geometry::BVH::clear () 
 ```

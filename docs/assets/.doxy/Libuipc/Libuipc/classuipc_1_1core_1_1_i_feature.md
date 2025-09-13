@@ -83,6 +83,7 @@ Inherited by the following classes: [uipc::core::Feature](classuipc_1_1core_1_1_
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_on\_required**](#function-do_on_required) () const = 0<br> |
 | virtual std::string\_view | [**get\_name**](#function-get_name) () const = 0<br> |
 | virtual std::string\_view | [**get\_type\_name**](#function-get_type_name) () const = 0<br> |
 
@@ -132,6 +133,19 @@ virtual uipc::core::IFeature::~IFeature () = default
 <hr>
 ## Protected Functions Documentation
 
+
+
+
+### function do\_on\_required 
+
+```C++
+virtual void uipc::core::IFeature::do_on_required () const = 0
+```
+
+
+
+
+<hr>
 
 
 

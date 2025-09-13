@@ -163,7 +163,6 @@ AttributeCollectionCommit uipc::geometry::AttributeCollectionFactory::diff (
 
 ### function from\_json 
 
-_Create an attribute collection from a json object and a pool of shared attributes._ 
 ```C++
 S< AttributeCollection > uipc::geometry::AttributeCollectionFactory::from_json (
     const Json & j,
@@ -179,6 +178,7 @@ S< AttributeCollection > uipc::geometry::AttributeCollectionFactory::from_json (
 
 
 ### function to\_json 
+
 
 ```C++
 Json uipc::geometry::AttributeCollectionFactory::to_json (

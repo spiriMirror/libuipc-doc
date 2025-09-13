@@ -34,6 +34,7 @@
 * **is\_matrix\_v** ([**uipc**](namespaceuipc.md))
 * **ImplicitGeometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **InterAffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **InterPrimitive** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## r

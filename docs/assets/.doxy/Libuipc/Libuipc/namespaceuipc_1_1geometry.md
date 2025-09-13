@@ -56,10 +56,11 @@
 | class | [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) <br> |
 | class | [**GeometryFactory**](classuipc_1_1geometry_1_1_geometry_factory.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
-| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
 | class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md) &lt;&gt;<br> |
+| class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_implicit_geometry_01_4.md) &lt;&gt;<br> |
+| class | [**GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &lt;&gt;<br> |
 | class | [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) <br>_An abstract class to represent a geometries attribute._  |
 | class | [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) <br>_An abstract class to represent a geometries attribute slot in a geometries attribute collection._  |
 | class | [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) <br>_An abstract class for geometries._  |
@@ -109,7 +110,9 @@
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_region**](#function-apply_region) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Take apart the simplicial complex by regions._  |
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_instance\_volume**](#function-compute_instance_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Compute the volume of an instance in the simplicial complex._ [_**Attribute**_](classuipc_1_1geometry_1_1_attribute.md) __`volume` _&lt;Float&gt; will be created in the instance vertices._ |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_mesh\_d\_hat**](#function-compute_mesh_d_hat) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R, Float max\_d\_hat=std::numeric\_limits&lt; Float &gt;::max()) <br>_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._ |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_volume**](#function-compute_vertex_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br> |
+|  UIPC\_GEOMETRY\_API std::string | [**constitution\_type**](#function-constitution_type) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geo) <br> |
 |  Float UIPC\_GEOMETRY\_API | [**edge\_edge\_squared\_distance**](#function-edge_edge_squared_distance) (const Vector3 & Ea0, const Vector3 & Ea1, const Vector3 & Eb0, const Vector3 & Eb1) <br> |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & src) <br>_Extract the surface of a tetrahedral mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Extract the surface of a list of tetrahedral meshes and merge them into one._  |
@@ -126,6 +129,7 @@
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_triangle\_orient**](#function-label_triangle_orient) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Label the orientation of the triangles in the simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**linemesh**](#function-linemesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector2i &gt; Es) <br>_Create a simplicial complex from a line mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Merge a list of simplicial complexes into one simplicial complex._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; complexes) <br> |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (std::initializer\_list&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; && complexes) <br> |
 |  void UIPC\_GEOMETRY\_API | [**mesh\_partition**](#function-mesh_partition) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, SizeT part\_max\_size) <br>_partition the simplicial complex_  |
 |  UIPC\_CORE\_API [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & | [**operator+=**](#function-operator) ([**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & dst, const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & inc) <br> |
@@ -198,7 +202,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -211,7 +215,7 @@ using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
 ```
 
 
@@ -224,7 +228,7 @@ using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
 ### typedef TimePoint 
 
 ```C++
-using uipc::geometry::TimePoint =  std::chrono::time_point<std::chrono::high_resolution_clock>;
+using uipc::geometry::TimePoint = typedef std::chrono::time_point<std::chrono::high_resolution_clock>;
 ```
 
 
@@ -330,11 +334,55 @@ The attribute slot of the instance volume.
 
 
 
+### function compute\_mesh\_d\_hat 
+
+_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._
+```C++
+UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_mesh_d_hat (
+    SimplicialComplex & R,
+    Float max_d_hat=std::numeric_limits< Float >::max()
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `R` The simplicial complex to compute d\_hat for. 
+* `max_d_hat` The maximum allowed d\_hat, default to infinity. 
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function compute\_vertex\_volume 
 
 ```C++
 UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_vertex_volume (
     SimplicialComplex & R
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function constitution\_type 
+
+```C++
+UIPC_GEOMETRY_API std::string uipc::geometry::constitution_type (
+    const Geometry & geo
 ) 
 ```
 
@@ -835,6 +883,21 @@ All input simplicial complexes must have only one instance.
 
 
         
+
+<hr>
+
+
+
+### function merge 
+
+```C++
+UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::merge (
+    span< const SimplicialComplex > complexes
+) 
+```
+
+
+
 
 <hr>
 

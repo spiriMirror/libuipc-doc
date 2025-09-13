@@ -16,7 +16,7 @@
 Inherits the following classes: [uipc::core::IFeature](classuipc_1_1core_1_1_i_feature.md)
 
 
-Inherited by the following classes: [uipc::diff\_sim::AdjointMethodFeature](classuipc_1_1diff__sim_1_1_adjoint_method_feature.md),  [uipc::diff\_sim::EnableGradFeature](classuipc_1_1diff__sim_1_1_enable_grad_feature.md)
+Inherited by the following classes: [uipc::core::ContactSystemFeature](classuipc_1_1core_1_1_contact_system_feature.md),  [uipc::diff\_sim::AdjointMethodFeature](classuipc_1_1diff__sim_1_1_adjoint_method_feature.md),  [uipc::diff\_sim::EnableGradFeature](classuipc_1_1diff__sim_1_1_enable_grad_feature.md)
 
 
 
@@ -134,6 +134,7 @@ See [uipc::core::IFeature](classuipc_1_1core_1_1_i_feature.md)
 
 | Type | Name |
 | ---: | :--- |
+| virtual void | [**do\_on\_required**](classuipc_1_1core_1_1_i_feature.md#function-do_on_required) () const = 0<br> |
 | virtual std::string\_view | [**get\_name**](classuipc_1_1core_1_1_i_feature.md#function-get_name) () const = 0<br> |
 | virtual std::string\_view | [**get\_type\_name**](classuipc_1_1core_1_1_i_feature.md#function-get_type_name) () const = 0<br> |
 

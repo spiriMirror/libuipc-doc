@@ -103,7 +103,7 @@ _A collection of geometries attributes._ [More...](#detailed-description)
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 All geometries attributes in the collection always have the same size. 
@@ -160,7 +160,6 @@ uipc::geometry::AttributeCollection::AttributeCollection (
 
 ### function attribute\_count 
 
-_Get the number of attribute slots._ 
 ```C++
 SizeT uipc::geometry::AttributeCollection::attribute_count () const
 ```
@@ -346,7 +345,6 @@ nullptr if the attribute slot with the given name does not exist.
 
 ### function find [2/4]
 
-_const version of find._ 
 ```C++
 S< const IAttributeSlot > uipc::geometry::AttributeCollection::find (
     std::string_view name
@@ -362,7 +360,6 @@ S< const IAttributeSlot > uipc::geometry::AttributeCollection::find (
 
 ### function find [3/4]
 
-_Template version of find._ 
 ```C++
 template<typename T>
 S< AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
@@ -379,7 +376,6 @@ S< AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
 
 ### function find [4/4]
 
-_Template const version of find._ 
 ```C++
 template<typename T>
 S< const AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
@@ -396,7 +392,6 @@ S< const AttributeSlot < T > > uipc::geometry::AttributeCollection::find (
 
 ### function names 
 
-_Get the names of all attribute slots._ 
 ```C++
 vector< string > uipc::geometry::AttributeCollection::names () const
 ```
@@ -572,7 +567,6 @@ The new created attribute slot.
 
 ### function share [2/2]
 
-_Template version of share._ 
 ```C++
 template<typename T>
 S< AttributeSlot < T > > uipc::geometry::AttributeCollection::share (
@@ -591,7 +585,6 @@ S< AttributeSlot < T > > uipc::geometry::AttributeCollection::share (
 
 ### function size 
 
-_Get the size of the attribute slots._ 
 ```C++
 SizeT uipc::geometry::AttributeCollection::size () const
 ```
@@ -605,7 +598,6 @@ SizeT uipc::geometry::AttributeCollection::size () const
 
 ### function to\_json 
 
-_Get the json representation of the attribute collection._ 
 ```C++
 Json uipc::geometry::AttributeCollection::to_json () const
 ```

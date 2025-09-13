@@ -56,9 +56,9 @@
 |   | [**WorldVisitor**](#function-worldvisitor-34) (const [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) &) = delete<br> |
 |   | [**WorldVisitor**](#function-worldvisitor-44) ([**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) &&) = default<br> |
 |  [**AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md) | [**animator**](#function-animator) () noexcept<br> |
+|  [**core::World**](classuipc_1_1core_1_1_world.md) | [**get**](#function-get) () noexcept<br> |
 |  [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) & | [**operator=**](#function-operator) (const [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) &) = delete<br> |
 |  [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) & | [**operator=**](#function-operator_1) ([**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) &&) = default<br> |
-|  [**core::World**](classuipc_1_1core_1_1_world.md) & | [**ref**](#function-ref) () noexcept<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) | [**scene**](#function-scene) () noexcept<br> |
 
 
@@ -166,6 +166,19 @@ AnimatorVisitor uipc::backend::WorldVisitor::animator () noexcept
 
 
 
+### function get 
+
+```C++
+core::World uipc::backend::WorldVisitor::get () noexcept
+```
+
+
+
+
+<hr>
+
+
+
 ### function operator= 
 
 ```C++
@@ -187,19 +200,6 @@ WorldVisitor & uipc::backend::WorldVisitor::operator= (
 WorldVisitor & uipc::backend::WorldVisitor::operator= (
     WorldVisitor &&
 ) = default
-```
-
-
-
-
-<hr>
-
-
-
-### function ref 
-
-```C++
-core::World & uipc::backend::WorldVisitor::ref () noexcept
 ```
 
 

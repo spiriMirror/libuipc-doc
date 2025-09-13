@@ -93,7 +93,7 @@ Inherits the following classes: [uipc::constitution::FiniteElementExtraConstitut
 | Type | Name |
 | ---: | :--- |
 |   | [**DiscreteShellBending**](#function-discreteshellbending) (const Json & json=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float E=100.0\_kPa) <br> |
+|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float bending\_stiffness=100.0\_kPa) <br> |
 
 
 
@@ -234,7 +234,7 @@ uipc::constitution::DiscreteShellBending::DiscreteShellBending (
 ```C++
 void uipc::constitution::DiscreteShellBending::apply_to (
     geometry::SimplicialComplex & sc,
-    Float E=100.0_kPa
+    Float bending_stiffness=100.0_kPa
 ) 
 ```
 

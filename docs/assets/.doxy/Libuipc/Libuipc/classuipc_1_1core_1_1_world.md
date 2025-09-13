@@ -54,8 +54,8 @@
 |   | [**World**](#function-world-14) ([**Engine**](classuipc_1_1core_1_1_engine.md) & e) noexcept<br> |
 |   | [**World**](#function-world-24) (const [**World**](classuipc_1_1core_1_1_world.md) &) = delete<br> |
 |   | [**World**](#function-world-34) ([**World**](classuipc_1_1core_1_1_world.md) &&) = default<br> |
+|   | [**World**](#function-world-44) (S&lt; [**internal::World**](classuipc_1_1core_1_1internal_1_1_world.md) &gt; w) noexcept<br> |
 |  void | [**advance**](#function-advance) () <br> |
-|  void | [**backward**](#function-backward) () <br> |
 |  bool | [**dump**](#function-dump) () <br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
@@ -145,10 +145,12 @@ uipc::core::World::World (
 
 
 
-### function advance 
+### function World [4/4]
 
 ```C++
-void uipc::core::World::advance () 
+uipc::core::World::World (
+    S< internal::World > w
+) noexcept
 ```
 
 
@@ -158,10 +160,10 @@ void uipc::core::World::advance ()
 
 
 
-### function backward 
+### function advance 
 
 ```C++
-void uipc::core::World::backward () 
+void uipc::core::World::advance () 
 ```
 
 

@@ -20,6 +20,7 @@ Here is a list of all namespaces with brief descriptions:
     * **namespace** [**geometry**](namespaceuipc_1_1geometry.md)     
         * **namespace** [**affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md)     
     * **namespace** [**gui**](namespaceuipc_1_1gui.md)     
+    * **namespace** [**io**](namespaceuipc_1_1io.md)     
     * **namespace** [**pmr**](namespaceuipc_1_1pmr.md) 
     * **namespace** [**sanity\_check**](namespaceuipc_1_1sanity__check.md) 
 

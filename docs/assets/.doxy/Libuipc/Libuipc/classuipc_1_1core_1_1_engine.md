@@ -51,9 +51,10 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Engine**](#function-engine-13) (std::string\_view backend\_name, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
-|   | [**Engine**](#function-engine-23) (const [**Engine**](classuipc_1_1core_1_1_engine.md) &) = delete<br> |
-|   | [**Engine**](#function-engine-33) ([**Engine**](classuipc_1_1core_1_1_engine.md) &&) noexcept<br> |
+|   | [**Engine**](#function-engine-14) (std::string\_view backend\_name, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
+|   | [**Engine**](#function-engine-24) (std::string\_view backend\_name, S&lt; [**IEngine**](classuipc_1_1core_1_1_i_engine.md) &gt; overrider, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
+|   | [**Engine**](#function-engine-34) (const [**Engine**](classuipc_1_1core_1_1_engine.md) &) = delete<br> |
+|   | [**Engine**](#function-engine-44) ([**Engine**](classuipc_1_1core_1_1_engine.md) &&) noexcept<br> |
 |  std::string\_view | [**backend\_name**](#function-backend_name) () noexcept const<br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) & | [**features**](#function-features) () <br> |
 |  [**Engine**](classuipc_1_1core_1_1_engine.md) & | [**operator=**](#function-operator) (const [**Engine**](classuipc_1_1core_1_1_engine.md) &) = delete<br> |
@@ -100,7 +101,7 @@
 
 
 
-### function Engine [1/3]
+### function Engine [1/4]
 
 ```C++
 uipc::core::Engine::Engine (
@@ -117,7 +118,25 @@ uipc::core::Engine::Engine (
 
 
 
-### function Engine [2/3]
+### function Engine [2/4]
+
+```C++
+uipc::core::Engine::Engine (
+    std::string_view backend_name,
+    S< IEngine > overrider,
+    std::string_view workspace="./",
+    const Json & config=default_config()
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function Engine [3/4]
 
 ```C++
 uipc::core::Engine::Engine (
@@ -132,7 +151,7 @@ uipc::core::Engine::Engine (
 
 
 
-### function Engine [3/3]
+### function Engine [4/4]
 
 ```C++
 uipc::core::Engine::Engine (

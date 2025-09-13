@@ -85,7 +85,7 @@
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 Create a scene snapshot from the given scene, which is a plain data copy of the scene (detached from the world). 

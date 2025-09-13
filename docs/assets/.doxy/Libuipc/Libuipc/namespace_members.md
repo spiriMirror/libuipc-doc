@@ -22,7 +22,9 @@
 * **CContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **ContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **compute\_instance\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_mesh\_d\_hat** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_vertex\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **constitution\_type** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **compute\_dyadic\_mass** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 
@@ -47,6 +49,7 @@
 ## f
 
 * **Float** ([**uipc**](namespaceuipc.md))
+* **Future** ([**uipc**](namespaceuipc.md))
 * **FiniteElement** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **from\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **facet\_closure** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -77,6 +80,7 @@
 * **is\_matrix\_v** ([**uipc**](namespaceuipc.md))
 * **ImplicitGeometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **InterAffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **InterPrimitive** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **ImplicitGeometrySlot** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_point\_in\_tet** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -191,7 +195,6 @@
 * **U** ([**uipc**](namespaceuipc.md))
 * **U32** ([**uipc**](namespaceuipc.md))
 * **U64** ([**uipc**](namespaceuipc.md))
-* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v

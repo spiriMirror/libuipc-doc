@@ -124,7 +124,6 @@ enum uipc::geometry::AttributeCopy::CopyType {
 
 ### function AttributeCopy 
 
-_Dst[i] = Src[i]._ 
 ```C++
 uipc::geometry::AttributeCopy::AttributeCopy () noexcept
 ```
@@ -153,7 +152,6 @@ CopyType uipc::geometry::AttributeCopy::type () noexcept const
 
 ### function pair 
 
-_Dst[Pairs[i].first] = Src[Pairs[i].second]._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::pair (
     span< const std::pair< SizeT, SizeT > > pairs
@@ -169,7 +167,6 @@ static AttributeCopy uipc::geometry::AttributeCopy::pair (
 
 ### function pull 
 
-_Dst[i] = Src[Mapping[i]]._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::pull (
     span< const SizeT > mapping
@@ -185,7 +182,6 @@ static AttributeCopy uipc::geometry::AttributeCopy::pull (
 
 ### function push 
 
-_Dst[Mapping[i]] = Src[i]._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::push (
     span< const SizeT > mapping
@@ -201,7 +197,6 @@ static AttributeCopy uipc::geometry::AttributeCopy::push (
 
 ### function range 
 
-_Dst[dst\_offset + i] = Src[src\_offset + i] $$ i \in [0, count) $$._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::range (
     SizeT dst_offset,
@@ -219,7 +214,6 @@ static AttributeCopy uipc::geometry::AttributeCopy::range (
 
 ### function same\_dim 
 
-_Dst[i] = Src[i]._ 
 ```C++
 static AttributeCopy uipc::geometry::AttributeCopy::same_dim () noexcept
 ```

@@ -1,8 +1,27 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_i_feature" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>uipc::core::IFeature</compoundname>
     <derivedcompoundref refid="classuipc_1_1core_1_1_feature" prot="public" virt="non-virtual">uipc::core::Feature</derivedcompoundref>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_i_feature_1ab047cf9e1f132a4c7b86b5c31ad04c91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class FeatureCollection</definition>
+        <argsstring></argsstring>
+        <name>FeatureCollection</name>
+        <qualifiedname>uipc::core::IFeature::FeatureCollection</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_feature_collection" kindref="compound">FeatureCollection</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature.h" line="22" column="18" bodyfile="include/uipc/core/feature.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classuipc_1_1core_1_1_i_feature_1a9e377e68ea6ab0fcfbc2a2e19c9060bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -54,6 +73,7 @@
         <argsstring>() const =0</argsstring>
         <name>get_name</name>
         <qualifiedname>uipc::core::IFeature::get_name</qualifiedname>
+        <reimplementedby refid="classuipc_1_1core_1_1_contact_system_feature_1a4eedcb5ad7e34794f4f608c89379ecf3">get_name</reimplementedby>
         <reimplementedby refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature_1ab9721f36f966e5768e862afaa71ccb97">get_name</reimplementedby>
         <reimplementedby refid="classuipc_1_1diff__sim_1_1_enable_grad_feature_1a8a1c20b72f45b70a7953628b8ff946e4">get_name</reimplementedby>
         <briefdescription>
@@ -62,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/feature.h" line="16" column="30"/>
+        <location file="include/uipc/core/feature.h" line="17" column="30"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_i_feature_1acf3723937b39bfdb84b17f874b72cb51" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>std::string_view</type>
@@ -77,7 +97,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/feature.h" line="17" column="30"/>
+        <location file="include/uipc/core/feature.h" line="18" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_i_feature_1abf4d7b9ee39f292d2b8a6532d8079b15" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::core::IFeature::do_on_required</definition>
+        <argsstring>() const =0</argsstring>
+        <name>do_on_required</name>
+        <qualifiedname>uipc::core::IFeature::do_on_required</qualifiedname>
+        <reimplementedby refid="classuipc_1_1core_1_1_feature_1a0e6092e848969277bdb7172fda5db87f">do_on_required</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature.h" line="19" column="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_i_feature_1a9c1674b98d1d24bf597273bdda5d8b44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::IFeature::on_required</definition>
+        <argsstring>()</argsstring>
+        <name>on_required</name>
+        <qualifiedname>uipc::core::IFeature::on_required</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature.h" line="23" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -85,6 +136,12 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
+      <node id="3">
+        <label>uipc::core::ContactSystemFeature</label>
+        <link refid="classuipc_1_1core_1_1_contact_system_feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="2">
         <label>uipc::core::Feature</label>
         <link refid="classuipc_1_1core_1_1_feature"/>
@@ -95,24 +152,27 @@
         <label>uipc::core::IFeature</label>
         <link refid="classuipc_1_1core_1_1_i_feature"/>
       </node>
-      <node id="3">
+      <node id="4">
         <label>uipc::diff_sim::AdjointMethodFeature</label>
         <link refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>uipc::diff_sim::EnableGradFeature</label>
         <link refid="classuipc_1_1diff__sim_1_1_enable_grad_feature"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="include/uipc/core/feature.h" line="8" column="1" bodyfile="include/uipc/core/feature.h" bodystart="9" bodyend="18"/>
+    <location file="include/uipc/core/feature.h" line="8" column="1" bodyfile="include/uipc/core/feature.h" bodystart="9" bodyend="24"/>
     <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_i_feature_1abf4d7b9ee39f292d2b8a6532d8079b15" prot="protected" virt="pure-virtual"><scope>uipc::core::IFeature</scope><name>do_on_required</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1ab047cf9e1f132a4c7b86b5c31ad04c91" prot="private" virt="non-virtual"><scope>uipc::core::IFeature</scope><name>FeatureCollection</name></member>
       <member refid="classuipc_1_1core_1_1_i_feature_1a26b576454fc69d237ca8fe89cbce541e" prot="protected" virt="pure-virtual"><scope>uipc::core::IFeature</scope><name>get_name</name></member>
       <member refid="classuipc_1_1core_1_1_i_feature_1acf3723937b39bfdb84b17f874b72cb51" prot="protected" virt="pure-virtual"><scope>uipc::core::IFeature</scope><name>get_type_name</name></member>
       <member refid="classuipc_1_1core_1_1_i_feature_1acc3fc7569d0e68fa66ff1d77e9170775" prot="public" virt="non-virtual"><scope>uipc::core::IFeature</scope><name>name</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1a9c1674b98d1d24bf597273bdda5d8b44" prot="private" virt="non-virtual"><scope>uipc::core::IFeature</scope><name>on_required</name></member>
       <member refid="classuipc_1_1core_1_1_i_feature_1ab0df15502507d511d2182c9a3a6435ba" prot="public" virt="non-virtual"><scope>uipc::core::IFeature</scope><name>type_name</name></member>
       <member refid="classuipc_1_1core_1_1_i_feature_1a9e377e68ea6ab0fcfbc2a2e19c9060bd" prot="public" virt="virtual"><scope>uipc::core::IFeature</scope><name>~IFeature</name></member>
     </listofallmembers>

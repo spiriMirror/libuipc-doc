@@ -75,7 +75,7 @@ _This file records all the built-in attribute names in the libuipc specification
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 Programmers can define their own UIPC\_BUILTIN\_ATTRIBUTE macro outside this file, and include this file to get the built-in attribute names.
@@ -84,7 +84,7 @@ Programmers can define their own UIPC\_BUILTIN\_ATTRIBUTE macro outside this fil
 
 ```C++
 #define UIPC_BUILTIN_ATTRIBUTE(name) constexpr std::string_view name = #name
-#include <pyuipc/builtin/attribute_name.h>
+#include <uipc/builtin/attribute_name.h>
 #undef UIPC_BUILTIN_ATTRIBUTE
 ```
 

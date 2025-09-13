@@ -89,7 +89,7 @@
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 SceneSnapCommit (from B to A) = SceneSnapshotA - SceneSnapshotB 

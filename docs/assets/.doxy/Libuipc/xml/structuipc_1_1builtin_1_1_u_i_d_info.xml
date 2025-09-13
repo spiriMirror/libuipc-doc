@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="structuipc_1_1builtin_1_1_u_i_d_info" kind="struct" language="C++" prot="public">
     <compoundname>uipc::builtin::UIDInfo</compoundname>
     <sectiondef kind="public-static-attrib">
       <memberdef kind="variable" id="structuipc_1_1builtin_1_1_u_i_d_info_1ac17f218dc8a530103d1dbd1aa5749505" prot="public" static="yes" constexpr="yes" mutable="no">
-        <type>U64</type>
-        <definition>U64 uipc::builtin::UIDInfo::OfficialBuiltinUIDStart</definition>
+        <type>constexpr U64</type>
+        <definition>constexpr U64 uipc::builtin::UIDInfo::OfficialBuiltinUIDStart</definition>
         <argsstring></argsstring>
         <name>OfficialBuiltinUIDStart</name>
         <qualifiedname>uipc::builtin::UIDInfo::OfficialBuiltinUIDStart</qualifiedname>
@@ -19,8 +19,8 @@
         <location file="include/uipc/builtin/uid_info.h" line="11" column="26" bodyfile="include/uipc/builtin/uid_info.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structuipc_1_1builtin_1_1_u_i_d_info_1a7e4513af0f051b7a78a1637ef4ec5e32" prot="public" static="yes" constexpr="yes" mutable="no">
-        <type>U64</type>
-        <definition>U64 uipc::builtin::UIDInfo::UserDefinedUIDStart</definition>
+        <type>constexpr U64</type>
+        <definition>constexpr U64 uipc::builtin::UIDInfo::UserDefinedUIDStart</definition>
         <argsstring></argsstring>
         <name>UserDefinedUIDStart</name>
         <qualifiedname>uipc::builtin::UIDInfo::UserDefinedUIDStart</qualifiedname>
@@ -204,6 +204,23 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>uipc::builtin::UIDInfo</label>
+        <link refid="structuipc_1_1builtin_1_1_u_i_d_info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>author</edgelabel>
+          <edgelabel>description</edgelabel>
+          <edgelabel>email</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>website</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
     <location file="include/uipc/builtin/uid_info.h" line="9" column="1" bodyfile="include/uipc/builtin/uid_info.h" bodystart="10" bodyend="28"/>
     <listofallmembers>
       <member refid="structuipc_1_1builtin_1_1_u_i_d_info_1a076e846f1c1b447ad3e8111f13a27925" prot="public" virt="non-virtual"><scope>uipc::builtin::UIDInfo</scope><name>author</name></member>

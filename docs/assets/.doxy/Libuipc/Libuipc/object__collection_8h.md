@@ -41,7 +41,6 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::core::ObjectCollection &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_object_collection_01_4.md) &lt;&gt;<br> |
 | class | [**IObjectCollection**](classuipc_1_1core_1_1_i_object_collection.md) <br> |
 | class | [**ObjectCollection**](classuipc_1_1core_1_1_object_collection.md) <br> |
 | class | [**ObjectCollectionSnapshot**](classuipc_1_1core_1_1_object_collection_snapshot.md) <br> |

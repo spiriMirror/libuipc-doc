@@ -188,7 +188,7 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1_i_attribute_slot.
 
 
 
-## Detailed Description
+# Detailed Description
 
 
 

@@ -93,7 +93,7 @@ Inherits the following classes: [uipc::constitution::FiniteElementConstitution](
 | Type | Name |
 | ---: | :--- |
 |   | [**NeoHookeanShell**](#function-neohookeanshell) (const Json & config=default\_config()) noexcept<br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const [**ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md) & moduli=ElasticModuli::youngs\_poisson(10.0\_MPa, 0.49), Float mass\_density=1e3, Float thickness=0.01\_m) const<br> |
+|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const [**ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md) & moduli=ElasticModuli::youngs\_poisson(1.0\_MPa, 0.49), Float mass\_density=2e2, Float thickness=0.001\_m) const<br> |
 
 
 
@@ -238,9 +238,9 @@ uipc::constitution::NeoHookeanShell::NeoHookeanShell (
 ```C++
 void uipc::constitution::NeoHookeanShell::apply_to (
     geometry::SimplicialComplex & sc,
-    const ElasticModuli & moduli=ElasticModuli::youngs_poisson(10.0_MPa, 0.49),
-    Float mass_density=1e3,
-    Float thickness=0.01_m
+    const ElasticModuli & moduli=ElasticModuli::youngs_poisson(1.0_MPa, 0.49),
+    Float mass_density=2e2,
+    Float thickness=0.001_m
 ) const
 ```
 

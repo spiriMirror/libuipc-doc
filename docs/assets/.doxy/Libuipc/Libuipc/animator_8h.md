@@ -42,7 +42,6 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::core::Animator &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_animator_01_4.md) &lt;&gt;<br> |
 | class | [**Animator**](classuipc_1_1core_1_1_animator.md) <br> |
 
 

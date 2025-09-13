@@ -152,7 +152,6 @@ void uipc::geometry::Octree::build (
 
 ### function clear 
 
-_Clear the octree._ 
 ```C++
 void uipc::geometry::Octree::clear () 
 ```

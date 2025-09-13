@@ -54,7 +54,6 @@
 |   | [**DiffSimVisitor**](#function-diffsimvisitor) ([**core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md) & diff\_sim) <br> |
 |  [**diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md) & | [**parameters**](#function-parameters-12) () <br> |
 |  const [**diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md) & | [**parameters**](#function-parameters-22) () const<br> |
-|  [**core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md) & | [**ref**](#function-ref) () <br> |
 |   | [**~DiffSimVisitor**](#function-diffsimvisitor) () <br> |
 
 
@@ -121,19 +120,6 @@ diff_sim::ParameterCollection & uipc::backend::DiffSimVisitor::parameters ()
 
 ```C++
 const diff_sim::ParameterCollection & uipc::backend::DiffSimVisitor::parameters () const
-```
-
-
-
-
-<hr>
-
-
-
-### function ref 
-
-```C++
-core::DiffSim & uipc::backend::DiffSimVisitor::ref () 
 ```
 
 

@@ -37,10 +37,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|  S&lt; const [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**geometry**](#variable-geometry-12)  <br> |
-|  S&lt; AutoGeometrySlot &gt; | [**geometry**](#variable-geometry-22)  <br> |
-|  S&lt; const [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**rest\_geometry**](#variable-rest_geometry-12)  <br> |
-|  S&lt; AutoGeometrySlot &gt; | [**rest\_geometry**](#variable-rest_geometry-22)  <br> |
+|  S&lt; const [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**geometry**](#variable-geometry)  <br> |
+|  S&lt; const [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**rest\_geometry**](#variable-rest_geometry)  <br> |
 
 
 
@@ -90,7 +88,7 @@
 
 
 
-### variable geometry [1/2]
+### variable geometry 
 
 ```C++
 S<const geometry::GeometrySlot> uipc::core::ObjectGeometrySlots< const geometry::Geometry >::geometry;
@@ -103,36 +101,10 @@ S<const geometry::GeometrySlot> uipc::core::ObjectGeometrySlots< const geometry:
 
 
 
-### variable geometry [2/2]
-
-```C++
-S<AutoGeometrySlot> uipc::core::ObjectGeometrySlots< GeometryT >::geometry;
-```
-
-
-
-
-<hr>
-
-
-
-### variable rest\_geometry [1/2]
+### variable rest\_geometry 
 
 ```C++
 S<const geometry::GeometrySlot> uipc::core::ObjectGeometrySlots< const geometry::Geometry >::rest_geometry;
-```
-
-
-
-
-<hr>
-
-
-
-### variable rest\_geometry [2/2]
-
-```C++
-S<AutoGeometrySlot> uipc::core::ObjectGeometrySlots< GeometryT >::rest_geometry;
 ```
 
 
