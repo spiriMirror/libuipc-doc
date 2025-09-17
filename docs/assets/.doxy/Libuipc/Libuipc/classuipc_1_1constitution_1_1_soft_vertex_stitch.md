@@ -33,7 +33,7 @@ Inherits the following classes: [uipc::constitution::InterPrimitiveConstitution]
 | Type | Name |
 | ---: | :--- |
 | typedef std::tuple&lt; [**core::ContactElement**](classuipc_1_1core_1_1_contact_element.md), [**core::ContactElement**](classuipc_1_1core_1_1_contact_element.md) &gt; | [**ContactElementTuple**](#typedef-contactelementtuple)  <br> |
-| typedef std::tuple&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &gt;, S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_simplicial_complex_01_4.md) &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
+| typedef std::tuple&lt; S&lt; geometry::SimplicialComplexSlot &gt;, S&lt; geometry::SimplicialComplexSlot &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
 
 
 
@@ -229,7 +229,8 @@ using uipc::constitution::SoftVertexStitch::ContactElementTuple =  std::tuple<co
 ### typedef SlotTuple 
 
 ```C++
-using uipc::constitution::SoftVertexStitch::SlotTuple =  std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot> >;
+using uipc::constitution::SoftVertexStitch::SlotTuple = 
+        std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot>>;
 ```
 
 

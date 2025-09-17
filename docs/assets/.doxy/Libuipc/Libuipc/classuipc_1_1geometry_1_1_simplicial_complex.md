@@ -120,19 +120,19 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 |   | [**SimplicialComplex**](#function-simplicialcomplex-33) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) && o) = default<br> |
 |  IndexT | [**dim**](#function-dim) () noexcept const<br>_Get the dimension of the simplicial complex._  |
 |  [**EdgeAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-edgeattributes) | [**edges**](#function-edges-12) () noexcept<br>_A wrapper of the edges and its attributes of the simplicial complex._  |
-|  CEdgeAttributes | [**edges**](#function-edges-22) () noexcept const<br> |
+|  [**CEdgeAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**edges**](#function-edges-22) () noexcept const<br> |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & | [**operator=**](#function-operator) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & o) = delete<br> |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & | [**operator=**](#function-operator_1) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) && o) = delete<br> |
 |  [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Vector3 &gt; & | [**positions**](#function-positions-12) () noexcept<br>_Get the positions of the vertices._  |
 |  const [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Vector3 &gt; & | [**positions**](#function-positions-22) () noexcept const<br>_A short cut to get the positions of the vertices._  |
 |  [**TetrahedronAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-tetrahedronattributes) | [**tetrahedra**](#function-tetrahedra-12) () noexcept<br>_A wrapper of the tetrahedra and its attributes of the simplicial complex._  |
-|  CTetrahedronAttributes | [**tetrahedra**](#function-tetrahedra-22) () noexcept const<br> |
+|  [**CTetrahedronAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**tetrahedra**](#function-tetrahedra-22) () noexcept const<br> |
 |  [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Matrix4x4 &gt; & | [**transforms**](#function-transforms-12) () <br>_A short-cut to get the non-const transforms attribute slot._  |
 |  const [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Matrix4x4 &gt; & | [**transforms**](#function-transforms-22) () const<br>_A short-cut to get the const transforms attribute slot._  |
 |  [**TriangleAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-triangleattributes) | [**triangles**](#function-triangles-12) () noexcept<br>_A wrapper of the triangles and its attributes of the simplicial complex._  |
-|  CTriangleAttributes | [**triangles**](#function-triangles-22) () noexcept const<br> |
+|  [**CTriangleAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**triangles**](#function-triangles-22) () noexcept const<br> |
 |  [**VertexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-vertexattributes) | [**vertices**](#function-vertices-12) () noexcept<br>_A wrapper of the vertices and its attributes of the simplicial complex._  |
-|  CVertexAttributes | [**vertices**](#function-vertices-22) () noexcept const<br> |
+|  [**CVertexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) | [**vertices**](#function-vertices-22) () noexcept const<br> |
 
 
 ## Public Functions inherited from uipc::geometry::Geometry
@@ -146,10 +146,10 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 |   | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md#function-geometry-33) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = default<br> |
 |  T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as-12) () <br> |
 |  const T \* | [**as**](classuipc_1_1geometry_1_1_geometry.md#function-as-22) () const<br> |
-|  InstanceAttributes | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
-|  CInstanceAttributes | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-22) () const<br> |
-|  MetaAttributes | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
-|  CMetaAttributes | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-22) () const<br> |
+|  [**InstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
+|  [**CInstanceAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md) | [**instances**](classuipc_1_1geometry_1_1_geometry.md#function-instances-22) () const<br> |
+|  [**MetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
+|  [**CMetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](classuipc_1_1geometry_1_1_geometry.md#function-meta-22) () const<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1_geometry.md#function-operator) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = delete<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1_geometry.md#function-operator_1) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = delete<br> |
 
@@ -280,7 +280,7 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 In $\mathbb{R}^3$, a simplicial complex is defined as follows: $$ K = (V, E, F, T), $$ where $V$ is the set of vertices, $E$ is the set of edges, $F$ is the set of triangles, and $T$ is the set of tetrahedra.
@@ -520,7 +520,7 @@ EdgeAttributes uipc::geometry::SimplicialComplex::edges () noexcept
 
 **Returns:**
 
-EdgeAttributes 
+[**EdgeAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-edgeattributes) 
 
 
 
@@ -588,7 +588,7 @@ AttributeSlot < Vector3 > & uipc::geometry::SimplicialComplex::positions () noex
 
 **Returns:**
 
-AttributeSlot&lt;Vector3&gt;& 
+[**AttributeSlot&lt;Vector3&gt;**](classuipc_1_1geometry_1_1_attribute_slot.md)& 
 
 
 
@@ -613,7 +613,7 @@ const AttributeSlot < Vector3 > & uipc::geometry::SimplicialComplex::positions (
 
 **Returns:**
 
-const AttributeSlot&lt;Vector3&gt;& 
+const [**AttributeSlot&lt;Vector3&gt;**](classuipc_1_1geometry_1_1_attribute_slot.md)& 
 
 
 
@@ -638,7 +638,7 @@ TetrahedronAttributes uipc::geometry::SimplicialComplex::tetrahedra () noexcept
 
 **Returns:**
 
-TetrahedronAttributes 
+[**TetrahedronAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-tetrahedronattributes) 
 
 
 
@@ -726,7 +726,7 @@ TriangleAttributes uipc::geometry::SimplicialComplex::triangles () noexcept
 
 **Returns:**
 
-TriangleAttributes 
+[**TriangleAttributes**](classuipc_1_1geometry_1_1_simplicial_complex.md#typedef-triangleattributes) 
 
 
 

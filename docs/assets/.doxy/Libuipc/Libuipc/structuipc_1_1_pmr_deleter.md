@@ -58,7 +58,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**operator()**](#function-operator()) (T \* ptr) const<br> |
+|  void | [**operator()**](#function-operator) (T \* ptr) const<br> |
 
 
 

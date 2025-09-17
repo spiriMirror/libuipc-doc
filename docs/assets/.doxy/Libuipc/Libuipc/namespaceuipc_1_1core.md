@@ -109,14 +109,14 @@
 | ---: | :--- |
 |  void | [**from\_json**](#function-from_json) (const Json & j, [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & element) <br> |
 |  void | [**from\_json**](#function-from_json) (const Json & json, [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) & model) <br> |
-|  void | [**from\_json**](#function-from_json) (const Json & j, [**Object**](classuipc_1_1core_1_1_object.md) & object) noexcept<br> |
+|  void | [**from\_json**](#function-from_json) (const Json & j, [**Object**](classuipc_1_1core_1_1_object.md) & object) <br> |
 |  void UIPC\_CORE\_API | [**from\_json**](#function-from_json) (const Json & j, [**ObjectCollectionSnapshot**](classuipc_1_1core_1_1_object_collection_snapshot.md) & obj) <br> |
 |  UIPC\_CORE\_API void | [**from\_json**](#function-from_json) (const Json & j, [**ObjectSnapshot**](classuipc_1_1core_1_1_object_snapshot.md) & snapshot) <br> |
-|  [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) UIPC\_CORE\_API | [**operator-**](#function-operator) (const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & dst, const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & src) <br> |
+|  [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) UIPC\_CORE\_API | [**operator-**](#function-operator-) (const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & dst, const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & src) <br> |
 |  void | [**to\_json**](#function-to_json) (Json & j, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & element) <br> |
 |  void | [**to\_json**](#function-to_json) (Json & json, const [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) & model) <br> |
 |  void | [**to\_json**](#function-to_json) (Json & j, const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & ct) <br> |
-|  void | [**to\_json**](#function-to_json) (Json & j, const [**Object**](classuipc_1_1core_1_1_object.md) & object) noexcept<br> |
+|  void | [**to\_json**](#function-to_json) (Json & j, const [**Object**](classuipc_1_1core_1_1_object.md) & object) <br> |
 |  void UIPC\_CORE\_API | [**to\_json**](#function-to_json) (Json & j, const [**ObjectCollectionSnapshot**](classuipc_1_1core_1_1_object_collection_snapshot.md) & obj) <br> |
 |  UIPC\_CORE\_API void | [**to\_json**](#function-to_json) (Json & j, const [**ObjectSnapshot**](classuipc_1_1core_1_1_object_snapshot.md) & snapshot) <br> |
 
@@ -155,7 +155,7 @@
 ### typedef CContactModelCollection 
 
 ```C++
-using uipc::core::CContactModelCollection = typedef ContactModelCollectionT<true>;
+using uipc::core::CContactModelCollection =  ContactModelCollectionT<true>;
 ```
 
 
@@ -168,7 +168,7 @@ using uipc::core::CContactModelCollection = typedef ContactModelCollectionT<true
 ### typedef ContactModelCollection 
 
 ```C++
-using uipc::core::ContactModelCollection = typedef ContactModelCollectionT<false>;
+using uipc::core::ContactModelCollection =  ContactModelCollectionT<false>;
 ```
 
 
@@ -235,7 +235,7 @@ void uipc::core::from_json (
 void uipc::core::from_json (
     const Json & j,
     Object & object
-) noexcept
+) 
 ```
 
 
@@ -347,7 +347,7 @@ void uipc::core::to_json (
 void uipc::core::to_json (
     Json & j,
     const Object & object
-) noexcept
+) 
 ```
 
 

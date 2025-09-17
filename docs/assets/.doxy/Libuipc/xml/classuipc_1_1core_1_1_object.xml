@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1_object" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::Object</compoundname>
     <basecompoundref refid="classuipc_1_1core_1_1_i_object" prot="public" virt="non-virtual">uipc::core::IObject</basecompoundref>
@@ -108,10 +108,10 @@
         </inbodydescription>
         <location file="include/uipc/core/object.h" line="119" column="23" bodyfile="include/uipc/core/object.h" bodystart="122" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_1a10bc48e9fc307781c7e6d13147e6bbeb" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_1a295e565cbb114d276ca5ea512d6197b9" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void to_json</definition>
-        <argsstring>(Json &amp;j, const Object &amp;object) noexcept</argsstring>
+        <argsstring>(Json &amp;j, const Object &amp;object)</argsstring>
         <name>to_json</name>
         <qualifiedname>uipc::core::Object::to_json</qualifiedname>
         <param>
@@ -130,10 +130,10 @@
         </inbodydescription>
         <location file="include/uipc/core/object.h" line="136" column="17"/>
       </memberdef>
-      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_1ad99adc47cdf6b846ce187501f8e61d46" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_object_1aa9f6da656fca5456f8658a40f94f8125" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void from_json</definition>
-        <argsstring>(const Json &amp;j, Object &amp;object) noexcept</argsstring>
+        <argsstring>(const Json &amp;j, Object &amp;object)</argsstring>
         <name>from_json</name>
         <qualifiedname>uipc::core::Object::from_json</qualifiedname>
         <param>
@@ -336,7 +336,7 @@
         </inbodydescription>
         <location file="include/uipc/core/object.h" line="112" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a2d9ab1d9c9836ae152be439cfdbde569" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a2d9ab1d9c9836ae152be439cfdbde569" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_object_1_1_geometries" kindref="compound">Geometries</ref></type>
         <definition>Geometries uipc::core::Object::geometries</definition>
         <argsstring>() noexcept</argsstring>
@@ -350,7 +350,7 @@
         </inbodydescription>
         <location file="include/uipc/core/object.h" line="114" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a31de8c4e1be6ecdce18bfe917a159228" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a31de8c4e1be6ecdce18bfe917a159228" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_object_1_1_c_geometries" kindref="compound">CGeometries</ref></type>
         <definition>CGeometries uipc::core::Object::geometries</definition>
         <argsstring>() const noexcept</argsstring>
@@ -366,7 +366,7 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1ae5186cbf90d820fa8ab10b7d0ddcb325" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1ae5186cbf90d820fa8ab10b7d0ddcb325" prot="protected" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
         <type>std::string_view</type>
         <definition>std::string_view uipc::core::Object::get_name</definition>
         <argsstring>() const noexcept override</argsstring>
@@ -381,7 +381,7 @@
         </inbodydescription>
         <location file="include/uipc/core/object.h" line="118" column="23"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a7fd3a7955c829f86e87030bdce7beb12" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_object_1a7fd3a7955c829f86e87030bdce7beb12" prot="protected" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
         <type>IndexT</type>
         <definition>IndexT uipc::core::Object::get_id</definition>
         <argsstring>() const noexcept override</argsstring>
@@ -524,7 +524,7 @@
       <member refid="classuipc_1_1core_1_1_object_1af47625f50036c466946f960db7320bcf" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>Animation</name></member>
       <member refid="classuipc_1_1core_1_1_object_1a490bbb5b1dd421f96506876f5d266405" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>build_from</name></member>
       <member refid="classuipc_1_1core_1_1_object_1a0bfd5747e5399fc700c397a37c2c96e1" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>fmt::formatter&lt; Object &gt;</name></member>
-      <member refid="classuipc_1_1core_1_1_object_1ad99adc47cdf6b846ce187501f8e61d46" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>from_json</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1aa9f6da656fca5456f8658a40f94f8125" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>from_json</name></member>
       <member refid="classuipc_1_1core_1_1_object_1a2d9ab1d9c9836ae152be439cfdbde569" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>geometries</name></member>
       <member refid="classuipc_1_1core_1_1_object_1a31de8c4e1be6ecdce18bfe917a159228" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>geometries</name></member>
       <member refid="classuipc_1_1core_1_1_object_1a47143f67918f81c3df0a61b21830067b" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>geometry_collection</name></member>
@@ -549,7 +549,7 @@
       <member refid="classuipc_1_1core_1_1_object_1ab2b5050a88708b336d465bf21e75ebea" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>scene_pending</name></member>
       <member refid="classuipc_1_1core_1_1_object_1a98adc7dd2a365c088497dcdf7bc44e98" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>scene_started</name></member>
       <member refid="classuipc_1_1core_1_1_object_1aace72bb27f976f9bf22d4ef1f887c0a6" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>SceneFactory</name></member>
-      <member refid="classuipc_1_1core_1_1_object_1a10bc48e9fc307781c7e6d13147e6bbeb" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1core_1_1_object_1a295e565cbb114d276ca5ea512d6197b9" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>to_json</name></member>
       <member refid="classuipc_1_1core_1_1_object_1ade822370b6edb11310166aabd4e9f1eb" prot="private" virt="non-virtual"><scope>uipc::core::Object</scope><name>update_from</name></member>
       <member refid="classuipc_1_1core_1_1_i_object_1acd6a897554fd30c3d839fd03723120c1" prot="public" virt="virtual"><scope>uipc::core::Object</scope><name>~IObject</name></member>
       <member refid="classuipc_1_1core_1_1_object_1a5bd815ed0ef27fe224af070ded5e4bfa" prot="public" virt="non-virtual"><scope>uipc::core::Object</scope><name>~Object</name></member>

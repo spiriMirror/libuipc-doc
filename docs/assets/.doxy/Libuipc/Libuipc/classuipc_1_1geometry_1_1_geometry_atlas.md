@@ -136,6 +136,7 @@ vector< std::string > uipc::geometry::GeometryAtlas::attribute_collection_names 
 
 ### function create [1/2]
 
+_Create a geometry in the atlas._ 
 ```C++
 IndexT uipc::geometry::GeometryAtlas::create (
     const Geometry & geo,
@@ -152,6 +153,7 @@ IndexT uipc::geometry::GeometryAtlas::create (
 
 ### function create [2/2]
 
+_Create a named_ [_**AttributeCollection**_](classuipc_1_1geometry_1_1_attribute_collection.md) _in the atlas._
 ```C++
 void uipc::geometry::GeometryAtlas::create (
     std::string_view name,
@@ -250,6 +252,7 @@ SizeT uipc::geometry::GeometryAtlas::geometry_count () noexcept const
 
 ### function to\_json 
 
+_Create json representation of the geometry atlas._ 
 ```C++
 Json uipc::geometry::GeometryAtlas::to_json () const
 ```

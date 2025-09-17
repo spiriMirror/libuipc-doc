@@ -180,6 +180,7 @@ inline void uipc::geometry::Geometry::MetaAttributesT::copy_from (
 
 ### function create 
 
+_Create an attribute with the given name._ 
 ```C++
 template<typename T>
 inline decltype(auto) uipc::geometry::Geometry::MetaAttributesT::create (
@@ -196,7 +197,6 @@ inline decltype(auto) uipc::geometry::Geometry::MetaAttributesT::create (
 
 
 ### function destroy 
-
 
 ```C++
 inline void uipc::geometry::Geometry::MetaAttributesT::destroy (
@@ -220,6 +220,7 @@ inline void uipc::geometry::Geometry::MetaAttributesT::destroy (
 
 ### function find 
 
+_Find an attribute by type and name, if the attribute does not exist, return nullptr._ 
 ```C++
 template<typename T>
 inline auto uipc::geometry::Geometry::MetaAttributesT::find (

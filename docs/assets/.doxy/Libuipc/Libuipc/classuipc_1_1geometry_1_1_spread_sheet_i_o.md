@@ -85,7 +85,7 @@ _A class for writing geometry spreadsheet._ [More...](#detailed-description)
 
 
 
-# Detailed Description
+## Detailed Description
 
 
 

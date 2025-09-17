@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="namespaceuipc" kind="namespace" language="C++">
     <compoundname>uipc</compoundname>
     <innerclass refid="classuipc_1_1_buffer_info" prot="public">uipc::BufferInfo</innerclass>
@@ -35,14 +35,14 @@
     <innernamespace refid="namespaceuipc_1_1pmr">uipc::pmr</innernamespace>
     <innernamespace refid="namespaceuipc_1_1sanity__check">uipc::sanity_check</innernamespace>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="allocator_8h_1ac9be4f2eac29bb0cd6b305c53f210ecd" prot="public" static="no">
+      <memberdef kind="typedef" id="allocator_8h_1a806b61b73e18cb7ae69c3caf257a0af4" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
         <type>std::pmr::polymorphic_allocator&lt; T &gt;</type>
-        <definition>using uipc::Allocator = typedef std::pmr::polymorphic_allocator&lt;T&gt;</definition>
+        <definition>using uipc::Allocator =  std::pmr::polymorphic_allocator&lt;T&gt;</definition>
         <argsstring></argsstring>
         <name>Allocator</name>
         <qualifiedname>uipc::Allocator</qualifiedname>
@@ -54,9 +54,9 @@
         </inbodydescription>
         <location file="include/uipc/common/allocator.h" line="7" column="1" bodyfile="include/uipc/common/allocator.h" bodystart="7" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="future_8h_1aeb384301355f51f35a755a21fa30654c" prot="public" static="no">
+      <memberdef kind="typedef" id="future_8h_1a2afb92b8e2908e095739390b7a3c157d" prot="public" static="no">
         <type>std::future&lt; void &gt;</type>
-        <definition>using uipc::Future = typedef std::future&lt;void&gt;</definition>
+        <definition>using uipc::Future =  std::future&lt;void&gt;</definition>
         <argsstring></argsstring>
         <name>Future</name>
         <qualifiedname>uipc::Future</qualifiedname>
@@ -68,9 +68,9 @@
         </inbodydescription>
         <location file="include/uipc/common/future.h" line="6" column="1" bodyfile="include/uipc/common/future.h" bodystart="6" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="json_8h_1af0e87bd336ef43a56df46dceb25a7aca" prot="public" static="no">
+      <memberdef kind="typedef" id="json_8h_1a93cd19604d0595619c966e8c4f306aea" prot="public" static="no">
         <type>nlohmann::json</type>
-        <definition>using uipc::Json = typedef nlohmann::json</definition>
+        <definition>using uipc::Json =  nlohmann::json</definition>
         <argsstring></argsstring>
         <name>Json</name>
         <qualifiedname>uipc::Json</qualifiedname>
@@ -82,14 +82,14 @@
         </inbodydescription>
         <location file="include/uipc/common/json.h" line="6" column="1" bodyfile="include/uipc/common/json.h" bodystart="6" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="smart__pointer_8h_1a5b4e26f974ef71ef1ebdf8eadda647c2" prot="public" static="no">
+      <memberdef kind="typedef" id="smart__pointer_8h_1a50c8331c06ef86a9ac9f44215c33f1cc" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
         <type>std::unique_ptr&lt; T, <ref refid="structuipc_1_1_pmr_deleter" kindref="compound">PmrDeleter</ref>&lt; T &gt; &gt;</type>
-        <definition>using uipc::U = typedef std::unique_ptr&lt;T, PmrDeleter&lt;T&gt; &gt;</definition>
+        <definition>using uipc::U =  std::unique_ptr&lt;T, PmrDeleter&lt;T&gt;&gt;</definition>
         <argsstring></argsstring>
         <name>U</name>
         <qualifiedname>uipc::U</qualifiedname>
@@ -101,14 +101,14 @@
         </inbodydescription>
         <location file="include/uipc/common/smart_pointer.h" line="16" column="1" bodyfile="include/uipc/common/smart_pointer.h" bodystart="16" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="smart__pointer_8h_1a32a1460d4f04c02e49f968b6ea93cca9" prot="public" static="no">
+      <memberdef kind="typedef" id="smart__pointer_8h_1a5744445dc1587f825109dd9a4f1109a7" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
         <type>std::shared_ptr&lt; T &gt;</type>
-        <definition>using uipc::S = typedef std::shared_ptr&lt;T&gt;</definition>
+        <definition>using uipc::S =  std::shared_ptr&lt;T&gt;</definition>
         <argsstring></argsstring>
         <name>S</name>
         <qualifiedname>uipc::S</qualifiedname>
@@ -120,14 +120,14 @@
         </inbodydescription>
         <location file="include/uipc/common/smart_pointer.h" line="25" column="1" bodyfile="include/uipc/common/smart_pointer.h" bodystart="25" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="smart__pointer_8h_1a6c2c7b849aea7912830aee8ee6bfac35" prot="public" static="no">
+      <memberdef kind="typedef" id="smart__pointer_8h_1a550eb8ce0102889d4c7f5aca6a65631e" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
         <type>std::weak_ptr&lt; T &gt;</type>
-        <definition>using uipc::W = typedef std::weak_ptr&lt;T&gt;</definition>
+        <definition>using uipc::W =  std::weak_ptr&lt;T&gt;</definition>
         <argsstring></argsstring>
         <name>W</name>
         <qualifiedname>uipc::W</qualifiedname>
@@ -139,14 +139,14 @@
         </inbodydescription>
         <location file="include/uipc/common/smart_pointer.h" line="31" column="1" bodyfile="include/uipc/common/smart_pointer.h" bodystart="31" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="stack_8h_1af5b36dfea4feec72524671c83148d26a" prot="public" static="no">
+      <memberdef kind="typedef" id="stack_8h_1aaf016753d64060e8c621fd28b962e0a1" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
         <type>std::stack&lt; T, std::pmr::deque&lt; T &gt; &gt;</type>
-        <definition>using uipc::stack = typedef std::stack&lt;T, std::pmr::deque&lt;T&gt; &gt;</definition>
+        <definition>using uipc::stack =  std::stack&lt;T, std::pmr::deque&lt;T&gt;&gt;</definition>
         <argsstring></argsstring>
         <name>stack</name>
         <qualifiedname>uipc::stack</qualifiedname>
@@ -158,9 +158,9 @@
         </inbodydescription>
         <location file="include/uipc/common/stack.h" line="8" column="1" bodyfile="include/uipc/common/stack.h" bodystart="8" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a041ac1bfdc02405d78b944b71943a156" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a47b06ab20d0d6f91f9b3b196d422976e" prot="public" static="no">
         <type>double</type>
-        <definition>using uipc::Float = typedef double</definition>
+        <definition>using uipc::Float =  double</definition>
         <argsstring></argsstring>
         <name>Float</name>
         <qualifiedname>uipc::Float</qualifiedname>
@@ -172,9 +172,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="5" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="5" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a2c7134a7a9194fa6522b448f3fe5fdeb" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a1447119d14980356d5dbe18761c5fc96" prot="public" static="no">
         <type>int32_t</type>
-        <definition>using uipc::IndexT = typedef int32_t</definition>
+        <definition>using uipc::IndexT =  int32_t</definition>
         <argsstring></argsstring>
         <name>IndexT</name>
         <qualifiedname>uipc::IndexT</qualifiedname>
@@ -186,9 +186,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="6" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="6" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a936b3bc96b88d24de6e9881ce996083d" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1ab5bfbf8312987e1c26a7cbf991ff858d" prot="public" static="no">
         <type>std::size_t</type>
-        <definition>using uipc::SizeT = typedef std::size_t</definition>
+        <definition>using uipc::SizeT =  std::size_t</definition>
         <argsstring></argsstring>
         <name>SizeT</name>
         <qualifiedname>uipc::SizeT</qualifiedname>
@@ -200,9 +200,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="7" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="7" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a6fc02c496af97d82a7e20a51deed642b" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a32d1b5e6e6d383d1cf395c4e0f3b9d8f" prot="public" static="no">
         <type>int32_t</type>
-        <definition>using uipc::I32 = typedef int32_t</definition>
+        <definition>using uipc::I32 =  int32_t</definition>
         <argsstring></argsstring>
         <name>I32</name>
         <qualifiedname>uipc::I32</qualifiedname>
@@ -214,9 +214,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="8" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="8" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a1445c6b9b972e536f3b18edce07f8077" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a8ad8c59aec0bb728b48ccdd0e4a7941d" prot="public" static="no">
         <type>int64_t</type>
-        <definition>using uipc::I64 = typedef int64_t</definition>
+        <definition>using uipc::I64 =  int64_t</definition>
         <argsstring></argsstring>
         <name>I64</name>
         <qualifiedname>uipc::I64</qualifiedname>
@@ -228,9 +228,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="9" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="9" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a18c1e31e7e2794d7c4b5d2dd244d2ea4" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1ad91fbc584ef5d994faa686eec46efcd5" prot="public" static="no">
         <type>uint32_t</type>
-        <definition>using uipc::U32 = typedef uint32_t</definition>
+        <definition>using uipc::U32 =  uint32_t</definition>
         <argsstring></argsstring>
         <name>U32</name>
         <qualifiedname>uipc::U32</qualifiedname>
@@ -242,9 +242,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="10" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="10" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a9f18b97bdcad2c2a96138d7ea59111ef" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a5294c0dde3376ca799ddbd758c637c39" prot="public" static="no">
         <type>uint64_t</type>
-        <definition>using uipc::U64 = typedef uint64_t</definition>
+        <definition>using uipc::U64 =  uint64_t</definition>
         <argsstring></argsstring>
         <name>U64</name>
         <qualifiedname>uipc::U64</qualifiedname>
@@ -256,9 +256,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="11" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="11" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1ad98f4f0aa5762e722589355b9c5cf7b5" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a398b0d8e7eaabef8df2b6d2f9ea52e77" prot="public" static="no">
         <type>Vector&lt; Float, 2 &gt;</type>
-        <definition>using uipc::Vector2 = typedef Vector&lt;Float, 2&gt;</definition>
+        <definition>using uipc::Vector2 =  Vector&lt;Float, 2&gt;</definition>
         <argsstring></argsstring>
         <name>Vector2</name>
         <qualifiedname>uipc::Vector2</qualifiedname>
@@ -270,9 +270,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="16" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="16" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1adf7c62056f5b805b4ffd8d069c639b1e" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a0423c601fb052ad2f051051a2666877f" prot="public" static="no">
         <type>Vector&lt; Float, 3 &gt;</type>
-        <definition>using uipc::Vector3 = typedef Vector&lt;Float, 3&gt;</definition>
+        <definition>using uipc::Vector3 =  Vector&lt;Float, 3&gt;</definition>
         <argsstring></argsstring>
         <name>Vector3</name>
         <qualifiedname>uipc::Vector3</qualifiedname>
@@ -284,9 +284,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="17" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="17" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1ac6fe7fc5f981f493b4c46036c306a68c" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a67db01947c8b3776a18ff9f377d44296" prot="public" static="no">
         <type>Vector&lt; Float, 4 &gt;</type>
-        <definition>using uipc::Vector4 = typedef Vector&lt;Float, 4&gt;</definition>
+        <definition>using uipc::Vector4 =  Vector&lt;Float, 4&gt;</definition>
         <argsstring></argsstring>
         <name>Vector4</name>
         <qualifiedname>uipc::Vector4</qualifiedname>
@@ -298,9 +298,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="18" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="18" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a7202d75dd587750f7414790fe2d652ec" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a5df4266c8ab4a6a58b2d5a4cfd7ae680" prot="public" static="no">
         <type>Vector&lt; IndexT, 2 &gt;</type>
-        <definition>using uipc::Vector2i = typedef Vector&lt;IndexT, 2&gt;</definition>
+        <definition>using uipc::Vector2i =  Vector&lt;IndexT, 2&gt;</definition>
         <argsstring></argsstring>
         <name>Vector2i</name>
         <qualifiedname>uipc::Vector2i</qualifiedname>
@@ -312,9 +312,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="20" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="20" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a55256c0ec66bf5d69aade0f79b8874c7" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a8ef510fbfdc4e095ab8b7dcd9890cca7" prot="public" static="no">
         <type>Vector&lt; IndexT, 3 &gt;</type>
-        <definition>using uipc::Vector3i = typedef Vector&lt;IndexT, 3&gt;</definition>
+        <definition>using uipc::Vector3i =  Vector&lt;IndexT, 3&gt;</definition>
         <argsstring></argsstring>
         <name>Vector3i</name>
         <qualifiedname>uipc::Vector3i</qualifiedname>
@@ -326,9 +326,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="21" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="21" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1ad2c7ce12de7f413d7061ad1c33b517d3" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1aceff4b63bee9f811dec3879377dc4f02" prot="public" static="no">
         <type>Vector&lt; IndexT, 4 &gt;</type>
-        <definition>using uipc::Vector4i = typedef Vector&lt;IndexT, 4&gt;</definition>
+        <definition>using uipc::Vector4i =  Vector&lt;IndexT, 4&gt;</definition>
         <argsstring></argsstring>
         <name>Vector4i</name>
         <qualifiedname>uipc::Vector4i</qualifiedname>
@@ -340,9 +340,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="22" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="22" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a4dfc8a15a812b3cd1b016c4791742be3" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a71ea146401ffad530e9816f283d5528f" prot="public" static="no">
         <type>Vector&lt; Float, 6 &gt;</type>
-        <definition>using uipc::Vector6 = typedef Vector&lt;Float, 6&gt;</definition>
+        <definition>using uipc::Vector6 =  Vector&lt;Float, 6&gt;</definition>
         <argsstring></argsstring>
         <name>Vector6</name>
         <qualifiedname>uipc::Vector6</qualifiedname>
@@ -354,9 +354,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="24" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="24" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1afa101db4f6dd14bb9622957a5e1d42a6" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a315fcc246bc645bb98a0fdd85630ee9c" prot="public" static="no">
         <type>Vector&lt; Float, 9 &gt;</type>
-        <definition>using uipc::Vector9 = typedef Vector&lt;Float, 9&gt;</definition>
+        <definition>using uipc::Vector9 =  Vector&lt;Float, 9&gt;</definition>
         <argsstring></argsstring>
         <name>Vector9</name>
         <qualifiedname>uipc::Vector9</qualifiedname>
@@ -368,9 +368,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="25" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="25" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a79503abe4eed710e624448ff3c9c99d0" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1ad6eb9ab2aa2a9405bddc066eae97f787" prot="public" static="no">
         <type>Vector&lt; Float, 12 &gt;</type>
-        <definition>using uipc::Vector12 = typedef Vector&lt;Float, 12&gt;</definition>
+        <definition>using uipc::Vector12 =  Vector&lt;Float, 12&gt;</definition>
         <argsstring></argsstring>
         <name>Vector12</name>
         <qualifiedname>uipc::Vector12</qualifiedname>
@@ -382,9 +382,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="26" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="26" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a8fa86c8d3ad13a80734acb8fdd8e061a" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a19d018766f47b42dffe698cfb0fb2f35" prot="public" static="no">
         <type>Matrix&lt; Float, 2, 2 &gt;</type>
-        <definition>using uipc::Matrix2x2 = typedef Matrix&lt;Float, 2, 2&gt;</definition>
+        <definition>using uipc::Matrix2x2 =  Matrix&lt;Float, 2, 2&gt;</definition>
         <argsstring></argsstring>
         <name>Matrix2x2</name>
         <qualifiedname>uipc::Matrix2x2</qualifiedname>
@@ -396,9 +396,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="28" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="28" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1ab490126d74acdcc71c7171c4b897c982" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1ad28c02f87918584a6844885a56ee3118" prot="public" static="no">
         <type>Matrix&lt; Float, 3, 3 &gt;</type>
-        <definition>using uipc::Matrix3x3 = typedef Matrix&lt;Float, 3, 3&gt;</definition>
+        <definition>using uipc::Matrix3x3 =  Matrix&lt;Float, 3, 3&gt;</definition>
         <argsstring></argsstring>
         <name>Matrix3x3</name>
         <qualifiedname>uipc::Matrix3x3</qualifiedname>
@@ -410,9 +410,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="29" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="29" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1afae818f3965d22576ab64d517bc34d5d" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1ae74d4481b54213b4507bb379c80d1d9f" prot="public" static="no">
         <type>Matrix&lt; Float, 4, 4 &gt;</type>
-        <definition>using uipc::Matrix4x4 = typedef Matrix&lt;Float, 4, 4&gt;</definition>
+        <definition>using uipc::Matrix4x4 =  Matrix&lt;Float, 4, 4&gt;</definition>
         <argsstring></argsstring>
         <name>Matrix4x4</name>
         <qualifiedname>uipc::Matrix4x4</qualifiedname>
@@ -424,9 +424,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="30" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="30" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1abd949591d3da266a3e6c12815fe72d82" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a4c36d6d66a5985281264d200e0bc0a47" prot="public" static="no">
         <type>Matrix&lt; Float, 6, 6 &gt;</type>
-        <definition>using uipc::Matrix6x6 = typedef Matrix&lt;Float, 6, 6&gt;</definition>
+        <definition>using uipc::Matrix6x6 =  Matrix&lt;Float, 6, 6&gt;</definition>
         <argsstring></argsstring>
         <name>Matrix6x6</name>
         <qualifiedname>uipc::Matrix6x6</qualifiedname>
@@ -438,9 +438,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="31" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="31" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a1b784961a120b2ee334b951bd5ee1147" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a8c8a6cb409de87c5a855e5bde9df979b" prot="public" static="no">
         <type>Matrix&lt; Float, 9, 9 &gt;</type>
-        <definition>using uipc::Matrix9x9 = typedef Matrix&lt;Float, 9, 9&gt;</definition>
+        <definition>using uipc::Matrix9x9 =  Matrix&lt;Float, 9, 9&gt;</definition>
         <argsstring></argsstring>
         <name>Matrix9x9</name>
         <qualifiedname>uipc::Matrix9x9</qualifiedname>
@@ -452,9 +452,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="32" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="32" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1aded81f058c6296ad63aaf97ce2358496" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a71ff20abb2f39501461b4a47cd43f410" prot="public" static="no">
         <type>Matrix&lt; Float, 12, 12 &gt;</type>
-        <definition>using uipc::Matrix12x12 = typedef Matrix&lt;Float, 12, 12&gt;</definition>
+        <definition>using uipc::Matrix12x12 =  Matrix&lt;Float, 12, 12&gt;</definition>
         <argsstring></argsstring>
         <name>Matrix12x12</name>
         <qualifiedname>uipc::Matrix12x12</qualifiedname>
@@ -466,9 +466,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="33" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1aa0746a4c20eb4f3df3de40f9afa58722" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a32b89302db77feb0541487c15f9e9188" prot="public" static="no">
         <type>Eigen::Transform&lt; Float, 3, Eigen::Affine &gt;</type>
-        <definition>using uipc::Transform = typedef Eigen::Transform&lt;Float, 3, Eigen::Affine&gt;</definition>
+        <definition>using uipc::Transform =  Eigen::Transform&lt;Float, 3, Eigen::Affine&gt;</definition>
         <argsstring></argsstring>
         <name>Transform</name>
         <qualifiedname>uipc::Transform</qualifiedname>
@@ -480,9 +480,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="35" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="35" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a5f2640bf7a9d2a68b56d4b47838e6aaa" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1aa1e1cf6d1e47a1359a189077d1773747" prot="public" static="no">
         <type>Eigen::Translation&lt; Float, 3 &gt;</type>
-        <definition>using uipc::Translation = typedef Eigen::Translation&lt;Float, 3&gt;</definition>
+        <definition>using uipc::Translation =  Eigen::Translation&lt;Float, 3&gt;</definition>
         <argsstring></argsstring>
         <name>Translation</name>
         <qualifiedname>uipc::Translation</qualifiedname>
@@ -494,9 +494,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="36" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a69215b5b03552c32023d8f6269137091" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a73ab300c3dc012e02f292d3ed3dd238b" prot="public" static="no">
         <type>Eigen::AngleAxis&lt; Float &gt;</type>
-        <definition>using uipc::AngleAxis = typedef Eigen::AngleAxis&lt;Float&gt;</definition>
+        <definition>using uipc::AngleAxis =  Eigen::AngleAxis&lt;Float&gt;</definition>
         <argsstring></argsstring>
         <name>AngleAxis</name>
         <qualifiedname>uipc::AngleAxis</qualifiedname>
@@ -508,9 +508,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="37" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="37" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a2c957199de0934c4c1838ccd0e4a8674" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a6d13133f79c0851f2406b9f1214f1cfd" prot="public" static="no">
         <type>Eigen::Quaternion&lt; Float &gt;</type>
-        <definition>using uipc::Quaternion = typedef Eigen::Quaternion&lt;Float&gt;</definition>
+        <definition>using uipc::Quaternion =  Eigen::Quaternion&lt;Float&gt;</definition>
         <argsstring></argsstring>
         <name>Quaternion</name>
         <qualifiedname>uipc::Quaternion</qualifiedname>
@@ -522,9 +522,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="38" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="38" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a11a1a033d576410ff1fb3fef67196b67" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a73462c1b47058bfebae5bcab4f6b8cd0" prot="public" static="no">
         <type>Eigen::VectorX&lt; Float &gt;</type>
-        <definition>using uipc::VectorX = typedef Eigen::VectorX&lt;Float&gt;</definition>
+        <definition>using uipc::VectorX =  Eigen::VectorX&lt;Float&gt;</definition>
         <argsstring></argsstring>
         <name>VectorX</name>
         <qualifiedname>uipc::VectorX</qualifiedname>
@@ -536,9 +536,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="40" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="40" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a0a96889e0583cf6201bd3e3b2764efe5" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a99c9824968f0254809b795bf4cd00efc" prot="public" static="no">
         <type>Eigen::VectorX&lt; IndexT &gt;</type>
-        <definition>using uipc::VectorXi = typedef Eigen::VectorX&lt;IndexT&gt;</definition>
+        <definition>using uipc::VectorXi =  Eigen::VectorX&lt;IndexT&gt;</definition>
         <argsstring></argsstring>
         <name>VectorXi</name>
         <qualifiedname>uipc::VectorXi</qualifiedname>
@@ -550,9 +550,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="41" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="41" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1acb8003c4c50d4d6a05a13ac02532d37c" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1aebb0885a7294c2056f0006e72e6b93ee" prot="public" static="no">
         <type>Eigen::VectorX&lt; I64 &gt;</type>
-        <definition>using uipc::VectorXi64 = typedef Eigen::VectorX&lt;I64&gt;</definition>
+        <definition>using uipc::VectorXi64 =  Eigen::VectorX&lt;I64&gt;</definition>
         <argsstring></argsstring>
         <name>VectorXi64</name>
         <qualifiedname>uipc::VectorXi64</qualifiedname>
@@ -564,9 +564,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="42" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="42" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1afe849e5e56df267070b188ef0c9ab21b" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a56b4aba92187554d9b3c94362a594a00" prot="public" static="no">
         <type>Eigen::VectorX&lt; U32 &gt;</type>
-        <definition>using uipc::VectorXu = typedef Eigen::VectorX&lt;U32&gt;</definition>
+        <definition>using uipc::VectorXu =  Eigen::VectorX&lt;U32&gt;</definition>
         <argsstring></argsstring>
         <name>VectorXu</name>
         <qualifiedname>uipc::VectorXu</qualifiedname>
@@ -578,9 +578,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="43" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="43" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1ad3d7ed2864655ed23811b21045393671" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a84f63550f12c062068583914a8aaedbd" prot="public" static="no">
         <type>Eigen::VectorX&lt; U64 &gt;</type>
-        <definition>using uipc::VectorXu64 = typedef Eigen::VectorX&lt;U64&gt;</definition>
+        <definition>using uipc::VectorXu64 =  Eigen::VectorX&lt;U64&gt;</definition>
         <argsstring></argsstring>
         <name>VectorXu64</name>
         <qualifiedname>uipc::VectorXu64</qualifiedname>
@@ -592,9 +592,9 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="44" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="common_2type__define_8h_1a02f928cdfa6b3e2d12110cb158f5775c" prot="public" static="no">
+      <memberdef kind="typedef" id="common_2type__define_8h_1a281823b7b89e8dda68569c9bd3b9ae46" prot="public" static="no">
         <type>Eigen::MatrixX&lt; Float &gt;</type>
-        <definition>using uipc::MatrixX = typedef Eigen::MatrixX&lt;Float&gt;</definition>
+        <definition>using uipc::MatrixX =  Eigen::MatrixX&lt;Float&gt;</definition>
         <argsstring></argsstring>
         <name>MatrixX</name>
         <qualifiedname>uipc::MatrixX</qualifiedname>
@@ -606,7 +606,7 @@
         </inbodydescription>
         <location file="include/uipc/common/type_define.h" line="45" column="1" bodyfile="include/uipc/common/type_define.h" bodystart="45" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="type__traits_8h_1a16a20bc760afdf91c1452e58b4b77d49" prot="public" static="no">
+      <memberdef kind="typedef" id="type__traits_8h_1aa386252fe1b9ca302caf10b56b5cbef2" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -616,7 +616,7 @@
           </param>
         </templateparamlist>
         <type>typename <ref refid="structuipc_1_1propagate__const" kindref="compound">propagate_const</ref>&lt; T, DstT &gt;::type</type>
-        <definition>using uipc::propagate_const_t = typedef typename propagate_const&lt;T, DstT&gt;::type</definition>
+        <definition>using uipc::propagate_const_t =  typename propagate_const&lt;T, DstT&gt;::type</definition>
         <argsstring></argsstring>
         <name>propagate_const_t</name>
         <qualifiedname>uipc::propagate_const_t</qualifiedname>
@@ -628,14 +628,14 @@
         </inbodydescription>
         <location file="include/uipc/common/type_traits.h" line="18" column="1" bodyfile="include/uipc/common/type_traits.h" bodystart="18" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="type__traits_8h_1a3a65d6e3ce75b13ebca387866dd9fd68" prot="public" static="no">
+      <memberdef kind="typedef" id="type__traits_8h_1a2aae4c9bc8d4404c55de28dd1b8315b2" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>typename Sig</type>
           </param>
         </templateparamlist>
         <type>typename <ref refid="structuipc_1_1signature" kindref="compound">signature</ref>&lt; Sig &gt;::type</type>
-        <definition>using uipc::signature_t = typedef typename signature&lt;Sig&gt;::type</definition>
+        <definition>using uipc::signature_t =  typename signature&lt;Sig&gt;::type</definition>
         <argsstring></argsstring>
         <name>signature_t</name>
         <qualifiedname>uipc::signature_t</qualifiedname>
@@ -650,8 +650,8 @@
     </sectiondef>
     <sectiondef kind="var">
       <memberdef kind="variable" id="config_8h_1a909d9bca4c79c05d3ea39d63fa96adb2" prot="public" static="no" constexpr="yes" mutable="no">
-        <type>constexpr bool</type>
-        <definition>constexpr bool uipc::RUNTIME_CHECK</definition>
+        <type>bool</type>
+        <definition>bool uipc::RUNTIME_CHECK</definition>
         <argsstring></argsstring>
         <name>RUNTIME_CHECK</name>
         <qualifiedname>uipc::RUNTIME_CHECK</qualifiedname>
@@ -670,8 +670,8 @@
             <type>typename MatrixT</type>
           </param>
         </templateparamlist>
-        <type>constexpr bool</type>
-        <definition>constexpr bool uipc::is_matrix_v</definition>
+        <type>bool</type>
+        <definition>bool uipc::is_matrix_v</definition>
         <argsstring></argsstring>
         <name>is_matrix_v</name>
         <qualifiedname>uipc::is_matrix_v</qualifiedname>
@@ -1576,8 +1576,8 @@
         <location file="include/uipc/common/uipc.h" line="9" column="26" declfile="include/uipc/common/uipc.h" declline="9" declcolumn="26"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1a257f545db7d8b4960548601671ed13d3" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_s</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_s</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_s</name>
         <qualifiedname>uipc::operator&quot;&quot;_s</qualifiedname>
@@ -1591,7 +1591,8 @@
         <detaileddescription>
 <para><itemizedlist>
 <listitem></listitem><listitem><para><computeroutput>cpp</computeroutput></para>
-</listitem><listitem><para><computeroutput>auto time = 1.0_s; *</computeroutput> </para>
+</listitem><listitem><para><computeroutput>auto time = 1.0_s;</computeroutput></para>
+</listitem><listitem><para><computeroutput></computeroutput> </para>
 </listitem></itemizedlist>
 </para>
         </detaileddescription>
@@ -1600,8 +1601,8 @@
         <location file="include/uipc/common/unit.h" line="12" column="23" bodyfile="include/uipc/common/unit.h" bodystart="12" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1abdd0d480da9459d6bbc85f13ba5ee65a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_ms</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_ms</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_ms</name>
         <qualifiedname>uipc::operator&quot;&quot;_ms</qualifiedname>
@@ -1619,8 +1620,8 @@
         <location file="include/uipc/common/unit.h" line="20" column="23" bodyfile="include/uipc/common/unit.h" bodystart="20" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1a98e64bd68668a2bc7a409ff4a38d6368" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_m</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_m</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_m</name>
         <qualifiedname>uipc::operator&quot;&quot;_m</qualifiedname>
@@ -1640,8 +1641,8 @@
         <location file="include/uipc/common/unit.h" line="31" column="23" bodyfile="include/uipc/common/unit.h" bodystart="31" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1ac2a5a854252c66ece7c4648ac8d6fcf8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_mm</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_mm</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_mm</name>
         <qualifiedname>uipc::operator&quot;&quot;_mm</qualifiedname>
@@ -1659,8 +1660,8 @@
         <location file="include/uipc/common/unit.h" line="39" column="23" bodyfile="include/uipc/common/unit.h" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1a47f7617d80198a047b02285297b755ac" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_km</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_km</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_km</name>
         <qualifiedname>uipc::operator&quot;&quot;_km</qualifiedname>
@@ -1678,8 +1679,8 @@
         <location file="include/uipc/common/unit.h" line="47" column="23" bodyfile="include/uipc/common/unit.h" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1a39b597fe3bbc0742edeaf0bcefaf2bdc" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_Pa</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_Pa</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_Pa</name>
         <qualifiedname>uipc::operator&quot;&quot;_Pa</qualifiedname>
@@ -1699,8 +1700,8 @@
         <location file="include/uipc/common/unit.h" line="59" column="23" bodyfile="include/uipc/common/unit.h" bodystart="59" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1acb02f4932df97428626f761411bf870c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_kPa</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_kPa</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_kPa</name>
         <qualifiedname>uipc::operator&quot;&quot;_kPa</qualifiedname>
@@ -1718,8 +1719,8 @@
         <location file="include/uipc/common/unit.h" line="67" column="23" bodyfile="include/uipc/common/unit.h" bodystart="67" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1a861e98a8df18dccd4a225a581452f6f7" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_MPa</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_MPa</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_MPa</name>
         <qualifiedname>uipc::operator&quot;&quot;_MPa</qualifiedname>
@@ -1737,8 +1738,8 @@
         <location file="include/uipc/common/unit.h" line="75" column="23" bodyfile="include/uipc/common/unit.h" bodystart="75" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1ac6416e601174ab6caf1ade44ae75e434" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_GPa</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_GPa</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_GPa</name>
         <qualifiedname>uipc::operator&quot;&quot;_GPa</qualifiedname>
@@ -1756,8 +1757,8 @@
         <location file="include/uipc/common/unit.h" line="83" column="23" bodyfile="include/uipc/common/unit.h" bodystart="83" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="unit_8h_1a22eab1324a5f982dc202c24b1572d47e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>constexpr long double</type>
-        <definition>constexpr long double uipc::operator&quot;&quot;_N</definition>
+        <type>long double</type>
+        <definition>long double uipc::operator&quot;&quot;_N</definition>
         <argsstring>(long double value)</argsstring>
         <name>operator&quot;&quot;_N</name>
         <qualifiedname>uipc::operator&quot;&quot;_N</qualifiedname>

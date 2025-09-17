@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="simplicial__complex__io_8h" kind="file" language="C++">
     <compoundname>simplicial_complex_io.h</compoundname>
     <includes refid="exception_8h" local="no">uipc/common/exception.h</includes>
@@ -332,7 +332,7 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" prot="public">uipc::geometry::SimplicialComplexIO</innerclass>
-    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="private">uipc::geometry::GeometryIOError</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="public">uipc::geometry::GeometryIOError</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1geometry">uipc::geometry</innernamespace>
     <briefdescription>
@@ -347,18 +347,18 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11" refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_IO_API<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref></highlight></codeline>
+<codeline lineno="11" refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_IO_API<sp/>SimplicialComplexIO</highlight></codeline>
 <codeline lineno="12"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix4x4&amp;<sp/>pre_transform)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Transform&amp;<sp/>pre_transform)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplexIO()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/>SimplicialComplexIO(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix4x4&amp;<sp/>pre_transform)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/>SimplicialComplexIO(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Transform&amp;<sp/>pre_transform)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>default<sp/>copy/move<sp/>ctor/assignment</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>(<ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>&amp;<sp/>operator=(<ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o" kindref="compound">SimplicialComplexIO</ref>&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplexIO(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SimplicialComplexIO&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplexIO(SimplicialComplexIO&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplexIO&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SimplicialComplexIO&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>SimplicialComplexIO&amp;<sp/>operator=(SimplicialComplexIO&amp;&amp;)<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30" refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1aadbc6c519f6365475b079fb9e71d5cc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref><sp/><ref refid="classuipc_1_1geometry_1_1_simplicial_complex_i_o_1aadbc6c519f6365475b079fb9e71d5cc8" kindref="member">read</ref>(std::string_view<sp/>file_name);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
@@ -384,12 +384,12 @@
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::geometry</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">GeometryIOError<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1_exception" kindref="compound">Exception</ref></highlight></codeline>
+<codeline lineno="100" refid="classuipc_1_1geometry_1_1_geometry_i_o_error" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1geometry_1_1_geometry_i_o_error" kindref="compound">GeometryIOError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Exception</highlight></codeline>
 <codeline lineno="101"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Exception::Exception;</highlight></codeline>
 <codeline lineno="104"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::geometry</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/io/simplicial_complex_io.h"/>
   </compounddef>

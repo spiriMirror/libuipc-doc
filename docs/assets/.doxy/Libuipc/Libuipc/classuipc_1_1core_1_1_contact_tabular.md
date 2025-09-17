@@ -54,8 +54,8 @@
 |   | [**ContactTabular**](#function-contacttabular-12) () noexcept<br> |
 |   | [**ContactTabular**](#function-contacttabular-22) (const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) &) = delete<br> |
 |  [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) | [**at**](#function-at) (SizeT i, SizeT j) const<br> |
-|  ContactModelCollection | [**contact\_models**](#function-contact_models-12) () noexcept<br> |
-|  CContactModelCollection | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
+|  [**ContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**contact\_models**](#function-contact_models-12) () noexcept<br> |
+|  [**CContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) | [**create**](#function-create) (std::string\_view name="") noexcept<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) | [**create\_subscene**](#function-create_subscene) (std::string\_view name="") noexcept<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) | [**default\_element**](#function-default_element) () noexcept<br> |
@@ -65,8 +65,8 @@
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
 |  IndexT | [**insert**](#function-insert) (const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & L, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & R, Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
 |  [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & | [**operator=**](#function-operator) (const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) &) = delete<br> |
-|  ContactModelCollection | [**subscene\_contact\_models**](#function-subscene_contact_models-12) () noexcept<br> |
-|  CContactModelCollection | [**subscene\_contact\_models**](#function-subscene_contact_models-22) () noexcept const<br> |
+|  [**ContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**subscene\_contact\_models**](#function-subscene_contact_models-12) () noexcept<br> |
+|  [**CContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**subscene\_contact\_models**](#function-subscene_contact_models-22) () noexcept const<br> |
 |  SizeT | [**subscene\_element\_count**](#function-subscene_element_count) () noexcept const<br> |
 |  IndexT | [**subscene\_insert**](#function-subscene_insert) (const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & L, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & R, bool enable=true, const Json & config=default\_config()) <br> |
 |   | [**~ContactTabular**](#function-contacttabular) () noexcept<br> |

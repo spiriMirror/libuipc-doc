@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="soft__position__constraint_8h" kind="file" language="C++">
     <compoundname>soft_position_constraint.h</compoundname>
     <includes refid="constraint_8h" local="no">uipc/constitution/constraint.h</includes>
@@ -388,12 +388,12 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/json.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::constitution</highlight></codeline>
 <codeline lineno="6"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="7" refid="classuipc_1_1constitution_1_1_soft_position_constraint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/><ref refid="classuipc_1_1constitution_1_1_soft_position_constraint" kindref="compound">SoftPositionConstraint</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1_constraint" kindref="compound">Constraint</ref></highlight></codeline>
+<codeline lineno="7" refid="classuipc_1_1constitution_1_1_soft_position_constraint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/>SoftPositionConstraint<sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Constraint</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1constitution_1_1_constraint" kindref="compound">Base</ref><sp/>=<sp/><ref refid="classuipc_1_1constitution_1_1_constraint" kindref="compound">Constraint</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Base<sp/>=<sp/>Constraint;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1constitution_1_1_soft_position_constraint" kindref="compound">SoftPositionConstraint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json&amp;<sp/>config<sp/>=<sp/>default_config())<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>SoftPositionConstraint(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json&amp;<sp/>config<sp/>=<sp/>default_config())<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21" refid="classuipc_1_1constitution_1_1_soft_position_constraint_1ad2a39d7b8b9cec8ee218b51c5a36dd69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1_soft_position_constraint_1ad2a39d7b8b9cec8ee218b51c5a36dd69" kindref="member">apply_to</ref>(<ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref>&amp;<sp/>sc,<sp/>Float<sp/>strength_rate<sp/>=<sp/>100.0)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>

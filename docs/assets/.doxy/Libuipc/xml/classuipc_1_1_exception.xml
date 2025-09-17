@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1_exception" kind="class" language="C++" prot="public">
     <compoundname>uipc::Exception</compoundname>
     <basecompoundref prot="public" virt="non-virtual">cpptrace::exception_with_message</basecompoundref>
@@ -8,6 +8,7 @@
     <derivedcompoundref refid="classuipc_1_1core_1_1_scene_i_o_error" prot="public" virt="non-virtual">uipc::core::SceneIOError</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1_attribute_collection_error" prot="public" virt="non-virtual">uipc::geometry::AttributeCollectionError</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1_attribute_i_o_error" prot="public" virt="non-virtual">uipc::geometry::AttributeIOError</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1geometry_1_1_geometry_i_o_error" prot="public" virt="non-virtual">uipc::geometry::GeometryIOError</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1io_1_1_urdf_i_o_error" prot="public" virt="non-virtual">uipc::io::UrdfIOError</derivedcompoundref>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classuipc_1_1_exception_1afa08db1175c0345cda3dbc37c76b1c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -74,6 +75,12 @@
         </childnode>
       </node>
       <node id="8">
+        <label>uipc::geometry::GeometryIOError</label>
+        <link refid="classuipc_1_1geometry_1_1_geometry_i_o_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
         <label>uipc::io::UrdfIOError</label>
         <link refid="classuipc_1_1io_1_1_urdf_i_o_error"/>
         <childnode refid="1" relation="public-inheritance">

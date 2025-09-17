@@ -195,6 +195,7 @@
 * **U** ([**uipc**](namespaceuipc.md))
 * **U32** ([**uipc**](namespaceuipc.md))
 * **U64** ([**uipc**](namespaceuipc.md))
+* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v
