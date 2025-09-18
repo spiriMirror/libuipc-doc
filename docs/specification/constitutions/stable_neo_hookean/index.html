@@ -796,7 +796,7 @@
   
   
   <span class="md-ellipsis">
-    Soft transform constraint
+    Soft Transform Constraint
     
   </span>
   
@@ -823,6 +823,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Stable Neo Hookean
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -834,6 +847,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-stable-neo-hookean" class="md-nav__link">
+    <span class="md-ellipsis">
+      #10 Stable Neo Hookean
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1763,6 +1804,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-stable-neo-hookean" class="md-nav__link">
+    <span class="md-ellipsis">
+      #10 Stable Neo Hookean
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1777,7 +1835,22 @@
 
 
 
-<h1 id="stable-neo-hookean">Stable Neo Hookean</h1>
+<div><h1 id="stable-neo-hookean">Stable Neo Hookean</h1>
+<p>Stable Neo Hookean constitutions implement a stable version of the classic Neo Hookean material model. This model is particularly well-suited for simulating soft, rubber-like materials due to its ability to handle large deformations while maintaining numerical stability.</p>
+<p>There are so many constitutive models called "Neo Hookean", we will distinguish them with UID numbers.</p>
+<blockquote>
+<p><a href="http://www.tkim.graphics/DYNAMIC_DEFORMABLES/">Dynamic Deformables:
+Implementation and Production
+Practicalities (Now With Code!)
+</a></p>
+</blockquote>
+<h2 id="10-stable-neo-hookean">#10 Stable Neo Hookean</h2>
+<p>Deformation energy <strong>density</strong>:</p>
+<div class="arithmatex">\[
+E = \frac{1}{2} \lambda (J - \alpha)^2 + \frac{1}{2} \mu (I_c - 3) - \frac{1}{2} \mu \ln(I_c + 1),
+\]</div>
+<p>where <span class="arithmatex">\(J = \det(F)\)</span>, <span class="arithmatex">\(I_c = \|F\|_F^2\)</span>, <span class="arithmatex">\(\alpha = 1 + \frac{3\mu}{4\lambda}\)</span>.</p>
+<p>In continuum mechanics, <span class="arithmatex">\(F\)</span> is called the deformation gradient, <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> are the Lamé parameters. <span class="arithmatex">\(I_c\)</span> is the first invariant of the right Cauchy-Green deformation tensor <span class="arithmatex">\(C = \|F\|_F^2\)</span>, <span class="arithmatex">\(\|\cdot\|_F\)</span> is the <a href="https://en.wikipedia.org/wiki/Matrix_norm">Frobenius norm</a>.</p></div>
 
 
 

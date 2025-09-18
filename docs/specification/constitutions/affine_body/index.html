@@ -883,7 +883,7 @@
   
   
   <span class="md-ellipsis">
-    Soft transform constraint
+    Soft Transform Constraint
     
   </span>
   
@@ -1988,19 +1988,20 @@ z \\
 \]</div>
 <h2 id="1-orthopotential">#1 OrthoPotential</h2>
 <p>Formulation: <a href="https://dl.acm.org/doi/10.1145/3528223.3530064">Affine body dynamics: fast, stable and intersection-free simulation of stiff materials</a> (eq. 7)</p>
+<p>Shape preservation energy per body:</p>
 <div class="arithmatex">\[
-V_{\perp}(\mathbf{q}) = \kappa v \|\mathbf{A}\mathbf{A}^T - \mathbf{I}_3\|_F^2,
+V_{\perp}(\mathbf{q}) = \kappa \bar{v} \|\mathbf{A}\mathbf{A}^T - \mathbf{I}_3\|_F^2,
 \]</div>
-<p>where <span class="arithmatex">\(\kappa\)</span> is the stiffness parameter, <span class="arithmatex">\(v\)</span> is the volume of the affine body, <span class="arithmatex">\(\mathbf{I}_3\)</span> is the <span class="arithmatex">\(3\times3\)</span> identity matrix, and <span class="arithmatex">\(\|\cdot\|_F\)</span> is the <a href="https://en.wikipedia.org/wiki/Matrix_norm">Frobenius norm</a>.</p>
+<p>where <span class="arithmatex">\(\kappa\)</span> is the stiffness parameter, <span class="arithmatex">\(\bar{v}\)</span> is the rest volume of the affine body, <span class="arithmatex">\(\mathbf{I}_3\)</span> is the <span class="arithmatex">\(3\times3\)</span> identity matrix, and <span class="arithmatex">\(\|\cdot\|_F\)</span> is the <a href="https://en.wikipedia.org/wiki/Matrix_norm">Frobenius norm</a>.</p>
 <p>We'd like to take <span class="arithmatex">\(100MPa \le \kappa \le 100GPa\)</span>.</p>
 <h2 id="2-arap">#2 ARAP</h2>
 <p><a href="http://www.tkim.graphics/DYNAMIC_DEFORMABLES/">Dynamic Deformables:
 Implementation and Production
 Practicalities (Now With Code!)
 </a></p>
-<p>As Rigid As Possible (ARAP) deformation energy:</p>
+<p>As Rigid As Possible (ARAP) deformation energy per body:</p>
 <div class="arithmatex">\[
-V = \kappa v \|\mathbf{A}-\mathbf{R}\|_F^2 = \kappa v \|\mathbf{S}-\mathbf{I}\|_F^2
+V = \kappa \bar{v} \|\mathbf{A}-\mathbf{R}\|_F^2 = \kappa \bar{v} \|\mathbf{S}-\mathbf{I}\|_F^2
 \]</div>
 <p>where <span class="arithmatex">\(\mathbf{R}\mathbf{S}\)</span> is the polar decomposition of <span class="arithmatex">\(\mathbf{A}\)</span>. </p></div>
 
