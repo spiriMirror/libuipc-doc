@@ -30,10 +30,11 @@ class UIPC_CORE_API SceneSnapshot
 
   private:
     SceneSnapshot() = default;
-    Json                     m_config;
+
+    S<geometry::AttributeCollection> m_config;
+
     ObjectCollectionSnapshot m_object_collection;
     vector<ContactElement>   m_contact_elements;
-
 
     unordered_map<IndexT, S<geometry::Geometry>> m_geometries;
     unordered_map<IndexT, S<geometry::Geometry>> m_rest_geometries;
@@ -52,8 +53,13 @@ class UIPC_CORE_API SceneSnapshotCommit
     SceneSnapshotCommit() = default;
     SceneSnapshotCommit(const SceneSnapshot& dst, const SceneSnapshot& src);
 
-    bool        is_valid() const noexcept { return m_is_valid; }
-    const Json& config() const noexcept { return m_config; }
+    bool is_valid() const noexcept { return m_is_valid; }
+
+    const geometry::AttributeCollectionCommit& config() const noexcept
+    {
+        return *m_config;
+    }
+
     const ObjectCollectionSnapshot& object_collection() const noexcept
     {
         return m_object_collection;
@@ -81,8 +87,9 @@ class UIPC_CORE_API SceneSnapshotCommit
 
   private:
     bool m_is_valid = true;
+    // Diff Copy Scene Config:
+    S<geometry::AttributeCollectionCommit> m_config;
     // Fully Copy:
-    Json                     m_config;
     ObjectCollectionSnapshot m_object_collection;
     vector<ContactElement>   m_contact_elements;
 

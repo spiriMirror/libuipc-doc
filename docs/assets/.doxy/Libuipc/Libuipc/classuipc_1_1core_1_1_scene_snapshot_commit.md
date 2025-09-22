@@ -54,7 +54,7 @@
 | ---: | :--- |
 |   | [**SceneSnapshotCommit**](#function-scenesnapshotcommit-12) () = default<br> |
 |   | [**SceneSnapshotCommit**](#function-scenesnapshotcommit-22) (const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & dst, const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & src) <br> |
-|  const Json & | [**config**](#function-config) () noexcept const<br> |
+|  const [**geometry::AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & | [**config**](#function-config) () noexcept const<br> |
 |  const vector&lt; [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) &gt; & | [**contact\_elements**](#function-contact_elements) () noexcept const<br> |
 |  const [**geometry::AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & | [**contact\_models**](#function-contact_models) () noexcept const<br> |
 |  const unordered\_map&lt; IndexT, S&lt; [**geometry::GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) &gt; &gt; & | [**geometries**](#function-geometries) () noexcept const<br> |
@@ -133,7 +133,7 @@ uipc::core::SceneSnapshotCommit::SceneSnapshotCommit (
 ### function config 
 
 ```C++
-inline const Json & uipc::core::SceneSnapshotCommit::config () noexcept const
+inline const geometry::AttributeCollectionCommit & uipc::core::SceneSnapshotCommit::config () noexcept const
 ```
 
 

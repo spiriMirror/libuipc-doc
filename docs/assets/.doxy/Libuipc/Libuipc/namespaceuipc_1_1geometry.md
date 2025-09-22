@@ -41,6 +41,7 @@
 | class | [**AttributeCollectionError**](classuipc_1_1geometry_1_1_attribute_collection_error.md) <br> |
 | class | [**AttributeCollectionFactory**](classuipc_1_1geometry_1_1_attribute_collection_factory.md) <br> |
 | class | [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) <br> |
+| class | [**AttributeDebugInfo**](classuipc_1_1geometry_1_1_attribute_debug_info.md) <br> |
 | class | [**AttributeFactory**](classuipc_1_1geometry_1_1_attribute_factory.md) <br> |
 | class | [**AttributeFriend**](classuipc_1_1geometry_1_1_attribute_friend.md) &lt;typename T&gt;<br> |
 | class | [**AttributeIO**](classuipc_1_1geometry_1_1_attribute_i_o.md) <br> |
@@ -108,6 +109,7 @@
 | ---: | :--- |
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_region**](#function-apply_region) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Take apart the simplicial complex by regions._  |
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
+|  UIPC\_CORE\_API void | [**check\_view**](#function-check_view) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) \* slot) <br> |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_instance\_volume**](#function-compute_instance_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Compute the volume of an instance in the simplicial complex._ [_**Attribute**_](classuipc_1_1geometry_1_1_attribute.md) __`volume` _&lt;Float&gt; will be created in the instance vertices._ |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_mesh\_d\_hat**](#function-compute_mesh_d_hat) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R, Float max\_d\_hat=std::numeric\_limits&lt; Float &gt;::max()) <br>_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._ |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_volume**](#function-compute_vertex_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br> |
@@ -291,6 +293,21 @@ vector&lt;SimplicialComplex&gt; the transformed simplicial complexes.
 
 
         
+
+<hr>
+
+
+
+### function check\_view 
+
+```C++
+UIPC_CORE_API void uipc::geometry::check_view (
+    const IAttributeSlot * slot
+) 
+```
+
+
+
 
 <hr>
 

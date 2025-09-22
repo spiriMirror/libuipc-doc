@@ -17,6 +17,7 @@
 * `#include <uipc/core/animator.h>`
 * `#include <uipc/core/diff_sim.h>`
 * `#include <uipc/core/sanity_checker.h>`
+* `#include <uipc/geometry/attribute_collection.h>`
 
 
 
@@ -50,6 +51,7 @@
 | class | [**Scene**](classuipc_1_1core_1_1_scene.md) <br> |
 | class | [**CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md) <br> |
 | class | [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) <br> |
+| class | [**ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md) &lt;IsConst&gt;<br> |
 | class | [**Geometries**](classuipc_1_1core_1_1_scene_1_1_geometries.md) <br> |
 | class | [**Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md) <br> |
 

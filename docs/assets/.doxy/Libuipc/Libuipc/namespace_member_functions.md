@@ -14,6 +14,7 @@
 ## c
 
 * **config** ([**uipc**](namespaceuipc.md))
+* **check\_view** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_instance\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_mesh\_d\_hat** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_vertex\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))

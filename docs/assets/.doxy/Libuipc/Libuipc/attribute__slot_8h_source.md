@@ -88,6 +88,8 @@ class UIPC_CORE_API IAttributeSlot
     virtual void set_last_modified(const TimePoint& tp) noexcept = 0;
 };
 
+UIPC_CORE_API void check_view(const IAttributeSlot* slot);
+
 template <typename T>
 class AttributeSlot final : public IAttributeSlot
 {

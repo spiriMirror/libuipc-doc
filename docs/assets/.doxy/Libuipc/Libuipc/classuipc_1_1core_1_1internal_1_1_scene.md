@@ -274,7 +274,7 @@ inline auto & uipc::core::internal::Scene::diff_sim () noexcept
 ### function dt 
 
 ```C++
-inline Float uipc::core::internal::Scene::dt () noexcept const
+Float uipc::core::internal::Scene::dt () noexcept const
 ```
 
 

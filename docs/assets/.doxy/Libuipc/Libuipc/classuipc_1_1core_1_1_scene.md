@@ -31,10 +31,17 @@
 | ---: | :--- |
 | class | [**CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md) <br> |
 | class | [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) <br> |
+| class | [**ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md) &lt;IsConst&gt;<br> |
 | class | [**Geometries**](classuipc_1_1core_1_1_scene_1_1_geometries.md) <br> |
 | class | [**Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md) <br> |
 
 
+## Public Types
+
+| Type | Name |
+| ---: | :--- |
+| typedef [**ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md)&lt; true &gt; | [**CConfigAttributes**](#typedef-cconfigattributes)  <br> |
+| typedef [**ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md)&lt; false &gt; | [**ConfigAttributes**](#typedef-configattributes)  <br> |
 
 
 
@@ -64,8 +71,8 @@
 |   | [**Scene**](#function-scene-34) ([**Scene**](classuipc_1_1core_1_1_scene.md) &&) = default<br> |
 |  [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-12) () <br> |
 |  const [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-22) () const<br> |
-|  const Json & | [**config**](#function-config-12) () noexcept const<br> |
-|  Json & | [**config**](#function-config-22) () noexcept<br> |
+|  [**ConfigAttributes**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md) | [**config**](#function-config-12) () noexcept<br> |
+|  [**CConfigAttributes**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md) | [**config**](#function-config-22) () noexcept const<br> |
 |  [**ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-12) () noexcept<br> |
 |  const [**ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-22) () noexcept const<br> |
 |  [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & | [**contact\_tabular**](#function-contact_tabular-12) () noexcept<br> |
@@ -113,6 +120,34 @@
 
 
 
+## Public Types Documentation
+
+
+
+
+### typedef CConfigAttributes 
+
+```C++
+using uipc::core::Scene::CConfigAttributes =  ConfigAttributesT<true>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef ConfigAttributes 
+
+```C++
+using uipc::core::Scene::ConfigAttributes =  ConfigAttributesT<false>;
+```
+
+
+
+
+<hr>
 ## Public Functions Documentation
 
 
@@ -192,7 +227,7 @@ const Animator & uipc::core::Scene::animator () const
 ### function config [1/2]
 
 ```C++
-const Json & uipc::core::Scene::config () noexcept const
+ConfigAttributes uipc::core::Scene::config () noexcept
 ```
 
 
@@ -205,7 +240,7 @@ const Json & uipc::core::Scene::config () noexcept const
 ### function config [2/2]
 
 ```C++
-Json & uipc::core::Scene::config () noexcept
+CConfigAttributes uipc::core::Scene::config () noexcept const
 ```
 
 

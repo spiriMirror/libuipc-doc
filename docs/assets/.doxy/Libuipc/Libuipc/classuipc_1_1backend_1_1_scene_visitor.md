@@ -56,6 +56,7 @@
 |   | [**SceneVisitor**](#function-scenevisitor-34) (const [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &) = delete<br> |
 |   | [**SceneVisitor**](#function-scenevisitor-44) ([**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &&) = default<br> |
 |  void | [**begin\_pending**](#function-begin_pending) () noexcept<br> |
+|  const [**geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & | [**config**](#function-config) () noexcept const<br> |
 |  const [**core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-12) () noexcept const<br> |
 |  [**core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-22) () noexcept<br> |
 |  const [**core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & | [**contact\_tabular**](#function-contact_tabular-12) () noexcept const<br> |
@@ -66,7 +67,6 @@
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find\_rest\_geometry**](#function-find_rest_geometry) (IndexT id) noexcept<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**geometries**](#function-geometries) () noexcept const<br> |
 |  [**core::Scene**](classuipc_1_1core_1_1_scene.md) | [**get**](#function-get) () noexcept<br> |
-|  const Json & | [**info**](#function-info) () noexcept const<br> |
 |  bool | [**is\_pending**](#function-is_pending) () noexcept const<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator) (const [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &) = delete<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator_1) ([**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &&) = default<br> |
@@ -172,6 +172,19 @@ uipc::backend::SceneVisitor::SceneVisitor (
 
 ```C++
 void uipc::backend::SceneVisitor::begin_pending () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function config 
+
+```C++
+const geometry::AttributeCollection & uipc::backend::SceneVisitor::config () noexcept const
 ```
 
 
@@ -306,19 +319,6 @@ span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::geometries () n
 
 ```C++
 core::Scene uipc::backend::SceneVisitor::get () noexcept
-```
-
-
-
-
-<hr>
-
-
-
-### function info 
-
-```C++
-const Json & uipc::backend::SceneVisitor::info () noexcept const
 ```
 
 

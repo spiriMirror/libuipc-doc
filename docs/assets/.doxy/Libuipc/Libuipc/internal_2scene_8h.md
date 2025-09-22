@@ -18,6 +18,7 @@
 * `#include <uipc/core/diff_sim.h>`
 * `#include <uipc/core/sanity_checker.h>`
 * `#include <uipc/core/internal/world.h>`
+* `#include <uipc/geometry/attribute_collection.h>`
 
 
 

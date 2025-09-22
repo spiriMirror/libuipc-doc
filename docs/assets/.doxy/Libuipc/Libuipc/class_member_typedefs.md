@@ -7,8 +7,11 @@
 
 * **Allocator** ([**uipc::PmrDeleter**](structuipc_1_1_pmr_deleter.md))
 * **ActionOnUpdate** ([**uipc::core::Animation**](classuipc_1_1core_1_1_animation.md))
-* **AutoAttributeCollection** ([**uipc::core::ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
+* **AutoAttributeCollection** ([**uipc::core::ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md), [**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **AutoGeometrySlot** ([**uipc::core::ObjectGeometrySlots**](classuipc_1_1core_1_1_object_geometry_slots.md), [**uipc::core::ObjectGeometrySlots&lt; const geometry::Geometry &gt;**](classuipc_1_1core_1_1_object_geometry_slots_3_01const_01geometry_1_1_geometry_01_4.md), [**uipc::core::ObjectGeometrySlots&lt; geometry::Geometry &gt;**](classuipc_1_1core_1_1_object_geometry_slots_3_01geometry_1_1_geometry_01_4.md))
+* **AttributeCollection** ([**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md))
+* **AttributeCopy** ([**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md))
+* **AttributeSlot** ([**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md))
 * **AABB** ([**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
 
 
@@ -21,6 +24,8 @@
 
 * **Creator** ([**uipc::builtin::ConstitutionUIDAutoRegister**](classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register.md), [**uipc::builtin::ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md))
 * **ContactElementTuple** ([**uipc::constitution::SoftVertexStitch**](classuipc_1_1constitution_1_1_soft_vertex_stitch.md))
+* **CConfigAttributes** ([**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
+* **ConfigAttributes** ([**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md))
 * **CEdgeAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **CTetrahedronAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **CTriangleAttributes** ([**uipc::geometry::AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md), [**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
