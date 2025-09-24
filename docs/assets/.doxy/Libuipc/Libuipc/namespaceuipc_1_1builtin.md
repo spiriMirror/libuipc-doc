@@ -87,7 +87,7 @@
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (transform) <br>`transform` _&lt;Matrix4x4&gt; attribute on_**instances** __ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (aim\_transform) <br>`aim_transform` _&lt;Matrix4x4&gt; attribute on_**instances** _, indicates the aim transform of the instances if the instances are animated._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (contact\_element\_id) <br>`contact_element_id` _&lt;IndexT&gt; attribute on_**meta** __ |
-|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (contact\_subscene\_element\_id) <br>`contact_subscene_element_id` _&lt;IndexT&gt; attribute on_**meta** __ |
+|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (subscene\_element\_id) <br>`subscene_element_id` _&lt;IndexT&gt; attribute on_**meta** __ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (d\_hat) <br>`d_hat` _&lt;Float&gt; attribute on_**meta** _, indicates mesh-wise d\_hat_ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (constitution\_uid) <br>`constitution_uid` _&lt;U64&gt; attribute on_**meta** _, uid is a unique identifier for a constitution which is defined in the libuipc specification._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (extra\_constitution\_uids) <br>`extra_constitution_uids` _&lt;VectorXu64&gt; attribute on_**meta** _, extra constitutions that are applied to the geometry._ |
@@ -402,10 +402,10 @@ uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
 
 ### function UIPC\_BUILTIN\_ATTRIBUTE 
 
-`contact_subscene_element_id` _&lt;IndexT&gt; attribute on_**meta** __
+`subscene_element_id` _&lt;IndexT&gt; attribute on_**meta** __
 ```C++
 uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
-    contact_subscene_element_id
+    subscene_element_id
 ) 
 ```
 

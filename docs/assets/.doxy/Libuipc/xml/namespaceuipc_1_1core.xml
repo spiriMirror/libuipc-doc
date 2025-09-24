@@ -41,6 +41,10 @@
     <innerclass refid="classuipc_1_1core_1_1_scene_i_o_error" prot="public">uipc::core::SceneIOError</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_scene_snapshot" prot="public">uipc::core::SceneSnapshot</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_scene_snapshot_commit" prot="public">uipc::core::SceneSnapshotCommit</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_subscene_element" prot="public">uipc::core::SubsceneElement</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_subscene_model" prot="public">uipc::core::SubsceneModel</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_subscene_model_collection_t" prot="public">uipc::core::SubsceneModelCollectionT</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1_subscene_tabular" prot="public">uipc::core::SubsceneTabular</innerclass>
     <innerclass refid="classuipc_1_1core_1_1_world" prot="public">uipc::core::World</innerclass>
     <innernamespace refid="namespaceuipc_1_1core_1_1internal">uipc::core::internal</innernamespace>
     <sectiondef kind="enum">
@@ -110,6 +114,34 @@
         </inbodydescription>
         <location file="include/uipc/core/contact_model_collection.h" line="53" column="1" bodyfile="include/uipc/core/contact_model_collection.h" bodystart="53" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="typedef" id="subscene__model__collection_8h_1a6d7b595505c3ad61ec0355cc88cdfa98" prot="public" static="no">
+        <type><ref refid="classuipc_1_1core_1_1_subscene_model_collection_t" kindref="compound">SubsceneModelCollectionT</ref>&lt; false &gt;</type>
+        <definition>using uipc::core::SubsceneModelCollection =  SubsceneModelCollectionT&lt;false&gt;</definition>
+        <argsstring></argsstring>
+        <name>SubsceneModelCollection</name>
+        <qualifiedname>uipc::core::SubsceneModelCollection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/subscene_model_collection.h" line="52" column="1" bodyfile="include/uipc/core/subscene_model_collection.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="subscene__model__collection_8h_1a7ad72fab8450cbeadbd192e377e15f64" prot="public" static="no">
+        <type><ref refid="classuipc_1_1core_1_1_subscene_model_collection_t" kindref="compound">SubsceneModelCollectionT</ref>&lt; true &gt;</type>
+        <definition>using uipc::core::CSubsceneModelCollection =  SubsceneModelCollectionT&lt;true&gt;</definition>
+        <argsstring></argsstring>
+        <name>CSubsceneModelCollection</name>
+        <qualifiedname>uipc::core::CSubsceneModelCollection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/subscene_model_collection.h" line="53" column="1" bodyfile="include/uipc/core/subscene_model_collection.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="func">
       <memberdef kind="function" id="contact__element_8h_1a7602785be3f9d015d583cf8b02e335a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -132,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_element.h" line="32" column="6" declfile="include/uipc/core/contact_element.h" declline="32" declcolumn="6"/>
+        <location file="include/uipc/core/contact_element.h" line="33" column="6" declfile="include/uipc/core/contact_element.h" declline="33" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="contact__element_8h_1a4f843662793df62c096c01babd049c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -154,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_element.h" line="33" column="6" declfile="include/uipc/core/contact_element.h" declline="33" declcolumn="6"/>
+        <location file="include/uipc/core/contact_element.h" line="34" column="6" declfile="include/uipc/core/contact_element.h" declline="34" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="contact__model_8h_1aedef044135cab1a2600278e260c1c956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,9 +232,9 @@
         </inbodydescription>
         <location file="include/uipc/core/contact_model.h" line="33" column="6" declfile="include/uipc/core/contact_model.h" declline="33" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="contact__tabular_8h_1abcd24d07abd7e67d377543c23fa79538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::to_json</definition>
+      <memberdef kind="function" id="contact__tabular_8h_1a25d4ad23014482a0ba74beac655d18fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API void</type>
+        <definition>UIPC_CORE_API void uipc::core::to_json</definition>
         <argsstring>(Json &amp;j, const ContactTabular &amp;ct)</argsstring>
         <name>to_json</name>
         <qualifiedname>uipc::core::to_json</qualifiedname>
@@ -220,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="87" column="6" declfile="include/uipc/core/contact_tabular.h" declline="87" declcolumn="6"/>
+        <location file="include/uipc/core/contact_tabular.h" line="74" column="20" declfile="include/uipc/core/contact_tabular.h" declline="74" declcolumn="20"/>
       </memberdef>
       <memberdef kind="function" id="object_8h_1ae69a23e3ddade2d16cb1dff6c0c66d9e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -374,7 +406,117 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_snapshot.h" line="101" column="35" declfile="include/uipc/core/scene_snapshot.h" declline="101" declcolumn="35"/>
+        <location file="include/uipc/core/scene_snapshot.h" line="106" column="35" declfile="include/uipc/core/scene_snapshot.h" declline="106" declcolumn="35"/>
+      </memberdef>
+      <memberdef kind="function" id="subscene__element_8h_1a9fdd17c256d09e9075485a93dc0060ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API void</type>
+        <definition>UIPC_CORE_API void uipc::core::to_json</definition>
+        <argsstring>(Json &amp;j, const SubsceneElement &amp;element)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_subscene_element" kindref="compound">SubsceneElement</ref> &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/subscene_element.h" line="32" column="20" declfile="include/uipc/core/subscene_element.h" declline="32" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="subscene__element_8h_1ae227a3bdde0c4f99226f0aed40565398" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API void</type>
+        <definition>UIPC_CORE_API void uipc::core::from_json</definition>
+        <argsstring>(const Json &amp;j, SubsceneElement &amp;element)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::core::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_subscene_element" kindref="compound">SubsceneElement</ref> &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/subscene_element.h" line="33" column="21" declfile="include/uipc/core/subscene_element.h" declline="33" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="subscene__model_8h_1a576e0c56d76aa30f321732e95700ffbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::to_json</definition>
+        <argsstring>(Json &amp;json, const SubsceneModel &amp;model)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_subscene_model" kindref="compound">SubsceneModel</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/subscene_model.h" line="27" column="6" declfile="include/uipc/core/subscene_model.h" declline="27" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="subscene__model_8h_1a0418002b16731edba54b998177d0cd33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::from_json</definition>
+        <argsstring>(const Json &amp;json, SubsceneModel &amp;model)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::core::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>json</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1_subscene_model" kindref="compound">SubsceneModel</ref> &amp;</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/subscene_model.h" line="29" column="6" declfile="include/uipc/core/subscene_model.h" declline="29" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="subscene__tabular_8h_1a56d540f9f6e17bdd31cb37a034573aea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API void</type>
+        <definition>UIPC_CORE_API void uipc::core::to_json</definition>
+        <argsstring>(Json &amp;j, const SubsceneTabular &amp;ct)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::core::to_json</qualifiedname>
+        <param>
+          <type>Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1_subscene_tabular" kindref="compound">SubsceneTabular</ref> &amp;</type>
+          <declname>ct</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/subscene_tabular.h" line="68" column="20" declfile="include/uipc/core/subscene_tabular.h" declline="68" declcolumn="20"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -44,6 +44,10 @@
 | file | [**scene\_archieve.h**](scene__archieve_8h.md) <br> |
 | file | [**scene\_factory.h**](scene__factory_8h.md) <br> |
 | file | [**scene\_snapshot.h**](scene__snapshot_8h.md) <br> |
+| file | [**subscene\_element.h**](subscene__element_8h.md) <br> |
+| file | [**subscene\_model.h**](subscene__model_8h.md) <br> |
+| file | [**subscene\_model\_collection.h**](subscene__model__collection_8h.md) <br> |
+| file | [**subscene\_tabular.h**](subscene__tabular_8h.md) <br> |
 | file | [**world.h**](world_8h.md) <br> |
 
 

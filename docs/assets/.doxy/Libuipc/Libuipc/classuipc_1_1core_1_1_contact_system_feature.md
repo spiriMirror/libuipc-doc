@@ -98,16 +98,12 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1_feat
 | Type | Name |
 | ---: | :--- |
 |   | [**ContactSystemFeature**](#function-contactsystemfeature) (S&lt; [**ContactSystemFeatureOverrider**](classuipc_1_1core_1_1_contact_system_feature_overrider.md) &gt; overrider) <br> |
-|  void | [**compute\_contact**](#function-compute_contact) () <br> |
-|  void | [**contact\_energy**](#function-contact_energy-13) ([**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy\_geo) <br>_return the contact energy of the system._  |
-|  void | [**contact\_energy**](#function-contact_energy-23) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy) <br> |
-|  void | [**contact\_energy**](#function-contact_energy-33) (const [**constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) & c, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy) <br> |
-|  void | [**contact\_gradient**](#function-contact_gradient-13) ([**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) <br>_return all contact gradients for the vertices in the system._  |
-|  void | [**contact\_gradient**](#function-contact_gradient-23) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) <br> |
-|  void | [**contact\_gradient**](#function-contact_gradient-33) (const [**constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) & c, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) <br> |
-|  void | [**contact\_hessian**](#function-contact_hessian-13) ([**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) <br>_return all contact hessians for the vertices in the system._  |
-|  void | [**contact\_hessian**](#function-contact_hessian-23) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) <br> |
-|  void | [**contact\_hessian**](#function-contact_hessian-33) (const [**constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) & c, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) <br> |
+|  void | [**contact\_energy**](#function-contact_energy-12) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy) <br> |
+|  void | [**contact\_energy**](#function-contact_energy-22) (const [**constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) & c, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy) <br> |
+|  void | [**contact\_gradient**](#function-contact_gradient-12) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) <br> |
+|  void | [**contact\_gradient**](#function-contact_gradient-22) (const [**constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) & c, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) <br> |
+|  void | [**contact\_hessian**](#function-contact_hessian-12) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) <br> |
+|  void | [**contact\_hessian**](#function-contact_hessian-22) (const [**constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) & c, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) <br> |
 |  vector&lt; std::string &gt; | [**contact\_primitive\_types**](#function-contact_primitive_types) () const<br> |
 
 
@@ -246,47 +242,7 @@ uipc::core::ContactSystemFeature::ContactSystemFeature (
 
 
 
-### function compute\_contact 
-
-```C++
-void uipc::core::ContactSystemFeature::compute_contact () 
-```
-
-
-
-
-<hr>
-
-
-
-### function contact\_energy [1/3]
-
-_return the contact energy of the system._ 
-```C++
-void uipc::core::ContactSystemFeature::contact_energy (
-    geometry::Geometry & energy_geo
-) 
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `energy_geo` 
-
-
-
-
-        
-
-<hr>
-
-
-
-### function contact\_energy [2/3]
+### function contact\_energy [1/2]
 
 ```C++
 void uipc::core::ContactSystemFeature::contact_energy (
@@ -302,7 +258,7 @@ void uipc::core::ContactSystemFeature::contact_energy (
 
 
 
-### function contact\_energy [3/3]
+### function contact\_energy [2/2]
 
 ```C++
 void uipc::core::ContactSystemFeature::contact_energy (
@@ -318,34 +274,7 @@ void uipc::core::ContactSystemFeature::contact_energy (
 
 
 
-### function contact\_gradient [1/3]
-
-_return all contact gradients for the vertices in the system._ 
-```C++
-void uipc::core::ContactSystemFeature::contact_gradient (
-    geometry::Geometry & vert_grad
-) 
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `vert_grad` 
-
-
-
-
-        
-
-<hr>
-
-
-
-### function contact\_gradient [2/3]
+### function contact\_gradient [1/2]
 
 ```C++
 void uipc::core::ContactSystemFeature::contact_gradient (
@@ -361,7 +290,7 @@ void uipc::core::ContactSystemFeature::contact_gradient (
 
 
 
-### function contact\_gradient [3/3]
+### function contact\_gradient [2/2]
 
 ```C++
 void uipc::core::ContactSystemFeature::contact_gradient (
@@ -377,34 +306,7 @@ void uipc::core::ContactSystemFeature::contact_gradient (
 
 
 
-### function contact\_hessian [1/3]
-
-_return all contact hessians for the vertices in the system._ 
-```C++
-void uipc::core::ContactSystemFeature::contact_hessian (
-    geometry::Geometry & vert_hess
-) 
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `vert_hess` 
-
-
-
-
-        
-
-<hr>
-
-
-
-### function contact\_hessian [2/3]
+### function contact\_hessian [1/2]
 
 ```C++
 void uipc::core::ContactSystemFeature::contact_hessian (
@@ -420,7 +322,7 @@ void uipc::core::ContactSystemFeature::contact_hessian (
 
 
 
-### function contact\_hessian [3/3]
+### function contact\_hessian [2/2]
 
 ```C++
 void uipc::core::ContactSystemFeature::contact_hessian (

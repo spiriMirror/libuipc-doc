@@ -20,6 +20,7 @@
 * **config** ([**uipc**](namespaceuipc.md))
 * **Constraint** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **CContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
+* **CSubsceneModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **ContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **check\_view** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_instance\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -175,6 +176,7 @@
 * **static\_pointer\_cast** ([**uipc**](namespaceuipc.md))
 * **SimplicialComplex** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **SanityCheckResult** ([**uipc::core**](namespaceuipc_1_1core.md))
+* **SubsceneModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **SimplicialComplexSlot** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 

@@ -11,6 +11,7 @@
 
 
 * `#include <uipc/core/contact_tabular.h>`
+* `#include <uipc/core/subscene_tabular.h>`
 * `#include <uipc/core/constitution_tabular.h>`
 * `#include <uipc/core/object.h>`
 * `#include <uipc/core/object_collection.h>`

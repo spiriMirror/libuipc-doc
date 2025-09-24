@@ -67,8 +67,9 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**Scene**](#function-scene-14) (const Json & config=default\_config()) <br> |
-|   | [**Scene**](#function-scene-24) (const [**Scene**](classuipc_1_1core_1_1_scene.md) &) = delete<br> |
-|   | [**Scene**](#function-scene-34) ([**Scene**](classuipc_1_1core_1_1_scene.md) &&) = default<br> |
+|   | [**Scene**](#function-scene-24) (S&lt; [**internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) &gt; scene) noexcept<br> |
+|   | [**Scene**](#function-scene-34) (const [**Scene**](classuipc_1_1core_1_1_scene.md) &) = delete<br> |
+|   | [**Scene**](#function-scene-44) ([**Scene**](classuipc_1_1core_1_1_scene.md) &&) = default<br> |
 |  [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-12) () <br> |
 |  const [**Animator**](classuipc_1_1core_1_1_animator.md) & | [**animator**](#function-animator-22) () const<br> |
 |  [**ConfigAttributes**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md) | [**config**](#function-config-12) () noexcept<br> |
@@ -85,6 +86,8 @@
 |  [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) | [**objects**](#function-objects-22) () noexcept const<br> |
 |  [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
 |  const [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
+|  [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept<br> |
+|  const [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept const<br> |
 |  void | [**update\_from**](#function-update_from) (const [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) & snapshot) <br> |
 |   | [**~Scene**](#function-scene) () <br> |
 
@@ -171,6 +174,21 @@ explicit uipc::core::Scene::Scene (
 ### function Scene [2/4]
 
 ```C++
+explicit uipc::core::Scene::Scene (
+    S< internal::Scene > scene
+) noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function Scene [3/4]
+
+```C++
 uipc::core::Scene::Scene (
     const Scene &
 ) = delete
@@ -183,7 +201,7 @@ uipc::core::Scene::Scene (
 
 
 
-### function Scene [3/4]
+### function Scene [4/4]
 
 ```C++
 uipc::core::Scene::Scene (
@@ -397,6 +415,32 @@ SanityChecker & uipc::core::Scene::sanity_checker ()
 
 ```C++
 const SanityChecker & uipc::core::Scene::sanity_checker () const
+```
+
+
+
+
+<hr>
+
+
+
+### function subscene\_tabular [1/2]
+
+```C++
+SubsceneTabular & uipc::core::Scene::subscene_tabular () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function subscene\_tabular [2/2]
+
+```C++
+const SubsceneTabular & uipc::core::Scene::subscene_tabular () noexcept const
 ```
 
 

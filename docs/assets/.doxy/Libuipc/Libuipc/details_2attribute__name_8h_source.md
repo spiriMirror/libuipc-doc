@@ -29,7 +29,7 @@ UIPC_BUILTIN_ATTRIBUTE(aim_transform);
 UIPC_BUILTIN_ATTRIBUTE(contact_element_id);
 
 
-UIPC_BUILTIN_ATTRIBUTE(contact_subscene_element_id);
+UIPC_BUILTIN_ATTRIBUTE(subscene_element_id);
 
 
 UIPC_BUILTIN_ATTRIBUTE(d_hat);

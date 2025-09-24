@@ -1808,6 +1808,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#contact-tabular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Tabular
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contact Tabular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscene-tabular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscene Tabular
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscene Tabular">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-rule_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1826,20 +1874,6 @@
 
 <div><h1 id="libuipc-specification">Libuipc Specification</h1>
 <p>This document, referred to as the "Libuipc Specification" defines the behavior of the library.</p>
-<div class="toc">
-<ul>
-<li><a href="#libuipc-specification">Libuipc Specification</a><ul>
-<li><a href="#coordinates">Coordinates</a></li>
-<li><a href="#unit-system">Unit System</a></li>
-<li><a href="#geometry-orientation">Geometry Orientation</a><ul>
-<li><a href="#triangle-orientation">Triangle Orientation</a></li>
-<li><a href="#tetrahedron-orientation">Tetrahedron Orientation</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
 <h2 id="coordinates">Coordinates</h2>
 <p>The <code>libuipc</code> uses 3D coordinates to represent points in space. The coordinates are represented as a tuple of three real numbers <code>(x, y, z)</code> with units in meters. The convention used is the right-handed coordinate system.</p>
 <p>Although the <code>libuipc</code> itself does not depend on the specific meaning of the <code>XYZ</code> axes, during development and samples creation, we prefer the following conventions:</p>
@@ -1892,7 +1926,96 @@ V=\frac{1}{6}(T_1-T_0)\times(T_2-T_0)\cdot(T_3-T_0)
 <p>The surface direction of a positive volume tetrahedron is always outward.</p>
 <p align="center">
     <img src="../media/tetrahedron_orient.png" alt="Tetrahedron Orientation" width="50%">
-</p></div>
+</p>
+
+<h2 id="contact-tabular">Contact Tabular</h2>
+<p>The contact behaviour of two contact element is defined by the tuple <span class="arithmatex">\(C = (\kappa, \mu, f)\)</span>, where <span class="arithmatex">\(\kappa \in (0, +\infty)\)</span> is the restitution coefficient, <span class="arithmatex">\(\mu \in [0,1]\)</span> is the friction coefficient, and <span class="arithmatex">\(f \in \{0,1\}\)</span> is the enable flag. If <span class="arithmatex">\(f=1\)</span>, the two contact elements are allowed to contact with each other, otherwise not.</p>
+<p><span class="arithmatex">\(C\)</span> is called a <strong>Contact Model</strong>.</p>
+<p>The contact tabular is a matrix-like structure <span class="arithmatex">\(C_{ij}\)</span>.</p>
+<p>The users create contact elements by:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">contact_tabular</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">contact_tabular</span><span class="p">();</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ce1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contact_tabular</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">"#1"</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ce2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contact_tabular</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">"#2"</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">contact_tabular</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">contact_tabular</span><span class="p">()</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">ce1</span> <span class="o">=</span> <span class="n">contact_tabular</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"#1"</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">ce2</span> <span class="o">=</span> <span class="n">contact_tabular</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"#2"</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>and create contact model by:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">contact_tabular</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">ce1</span><span class="p">,</span><span class="w"> </span><span class="n">ce2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="n">_GPa</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">contact_tabular</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">ce1</span><span class="p">,</span> <span class="n">ce2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">GPa</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="default-rule">Default Rule</h3>
+<ol>
+<li>If <span class="arithmatex">\(C_{ij}\)</span> is not defined(<code>insert()</code>) before simulation, the simulator regards <span class="arithmatex">\(C_{ij} = C_{00}\)</span></li>
+<li><span class="arithmatex">\(C_{0,0}\)</span> is always defined, users are allowed to modify the default model.</li>
+</ol>
+<h2 id="subscene-tabular">Subscene Tabular</h2>
+<p>The inter-subscene behaviour of two subscenes is defined by the tuple <span class="arithmatex">\(S = (f)\)</span>, where <span class="arithmatex">\(f \in \{0,1\}\)</span> is the enable flag, if <span class="arithmatex">\(f=1\)</span>, the objects in subscenes <span class="arithmatex">\(S_i\)</span> and <span class="arithmatex">\(S_j\)</span> are allowed to interact, otherwise not.</p>
+<p><span class="arithmatex">\(S\)</span> is called a <strong>Subscene Model</strong>.</p>
+<p>The subscene tabular is a matrix-like structure <span class="arithmatex">\(S_{ij}\)</span>.</p>
+<p>The users create subscenes by:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">subscene_tabular</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scene</span><span class="p">.</span><span class="n">subscene_tabular</span><span class="p">();</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ss1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subscene_tabular</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">"#1"</span><span class="p">);</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ss2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subscene_tabular</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">"#2"</span><span class="p">);</span><span class="w"> </span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">subscene_tabular</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">subscene_tabular</span><span class="p">()</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">ss1</span> <span class="o">=</span> <span class="n">subscene_tabular</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"#1"</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">ss2</span> <span class="o">=</span> <span class="n">subscene_tabular</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"#2"</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>and create subscene model by:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">subscene_tabular</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">ss1</span><span class="p">,</span><span class="w"> </span><span class="n">ss2</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">subscene_tabular</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">ss1</span><span class="p">,</span> <span class="n">ss2</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="default-rule_1">Default Rule</h3>
+<ol>
+<li>If <span class="arithmatex">\(S_{ij} = (f_{ij})\)</span> is not defined(<code>insert()</code>) before simulation, the simulator regards:
+    $$
+    \begin{aligned}\notag
+    f_{ij} = 
+        \begin{cases}
+        1, &amp; \text{if } i=j \newline
+        0, &amp; \text{if } i \neq j
+        \end{cases}
+    \end{aligned}
+    $$</li>
+<li><span class="arithmatex">\(S_{0,0}\)</span> (default model) is always defined, users are allowed to modify the default model.</li>
+</ol>
+<p>Note that the default rule 1 is different from the contact tabular, because normally objects in the same subscene are allowed to interact, while objects in different subscenes are not, the matrix of <span class="arithmatex">\(S_{ij}\)</span> most of time looks like an identity matrix. We make the most common case as the default rule to reduce the burden of users.</p></div>
 
 
 

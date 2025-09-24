@@ -409,6 +409,16 @@
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md)
+([**uipc::core**](namespaceuipc_1_1core.md))
+* [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md)
+([**uipc::core**](namespaceuipc_1_1core.md))
+* [**SubsceneModelCollectionT**](classuipc_1_1core_1_1_subscene_model_collection_t.md)
+([**uipc::core**](namespaceuipc_1_1core.md))
+* [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md)
+([**uipc::core**](namespaceuipc_1_1core.md))
+* [**SubsceneTabularVisitor**](classuipc_1_1backend_1_1_subscene_tabular_visitor.md)
+([**uipc::backend**](namespaceuipc_1_1backend.md))
 
 
 ## t

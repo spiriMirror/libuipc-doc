@@ -17,6 +17,7 @@
 * `#include <uipc/geometry/geometry_collection.h>`
 * `#include <uipc/core/constitution_tabular.h>`
 * `#include <uipc/core/contact_tabular.h>`
+* `#include <uipc/core/subscene_tabular.h>`
 * `#include <uipc/backend/visitors/diff_sim_visitor.h>`
 
 

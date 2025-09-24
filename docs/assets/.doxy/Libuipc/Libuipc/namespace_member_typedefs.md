@@ -12,6 +12,7 @@
 ## c
 
 * **CContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
+* **CSubsceneModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **ContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 
 
@@ -66,6 +67,7 @@
 * **SizeT** ([**uipc**](namespaceuipc.md))
 * **signature\_t** ([**uipc**](namespaceuipc.md))
 * **stack** ([**uipc**](namespaceuipc.md))
+* **SubsceneModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **SimplicialComplexSlot** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 

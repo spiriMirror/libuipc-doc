@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="37" column="39" bodyfile="include/uipc/core/contact_system_feature.h" bodystart="37" bodyend="-1"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="28" column="39" bodyfile="include/uipc/core/contact_system_feature.h" bodystart="28" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="80" column="7" bodyfile="include/uipc/core/contact_system_feature.h" bodystart="80" bodyend="-1"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="48" column="7" bodyfile="include/uipc/core/contact_system_feature.h" bodystart="48" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -53,108 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="39" column="5"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1a724222680f37263a5a3b6a8c69d8d1ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::ContactSystemFeature::compute_contact</definition>
-        <argsstring>()</argsstring>
-        <name>compute_contact</name>
-        <qualifiedname>uipc::core::ContactSystemFeature::compute_contact</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="41" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1a24b6b8c4cdcef4c5313b0e0fa9fca022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::ContactSystemFeature::contact_energy</definition>
-        <argsstring>(geometry::Geometry &amp;energy_geo)</argsstring>
-        <name>contact_energy</name>
-        <qualifiedname>uipc::core::ContactSystemFeature::contact_energy</qualifiedname>
-        <param>
-          <type><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">geometry::Geometry</ref> &amp;</type>
-          <declname>energy_geo</declname>
-        </param>
-        <briefdescription>
-<para>return the contact energy of the system. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>energy_geo</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="48" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1ab7f47a593bbfe6f8dc757b57fb91c69c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::ContactSystemFeature::contact_gradient</definition>
-        <argsstring>(geometry::Geometry &amp;vert_grad)</argsstring>
-        <name>contact_gradient</name>
-        <qualifiedname>uipc::core::ContactSystemFeature::contact_gradient</qualifiedname>
-        <param>
-          <type><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">geometry::Geometry</ref> &amp;</type>
-          <declname>vert_grad</declname>
-        </param>
-        <briefdescription>
-<para>return all contact gradients for the vertices in the system. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>vert_grad</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="55" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1adb4bb35aa2d272177f5d03822d018175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void uipc::core::ContactSystemFeature::contact_hessian</definition>
-        <argsstring>(geometry::Geometry &amp;vert_hess)</argsstring>
-        <name>contact_hessian</name>
-        <qualifiedname>uipc::core::ContactSystemFeature::contact_hessian</qualifiedname>
-        <param>
-          <type><ref refid="classuipc_1_1geometry_1_1_geometry" kindref="compound">geometry::Geometry</ref> &amp;</type>
-          <declname>vert_hess</declname>
-        </param>
-        <briefdescription>
-<para>return all contact hessians for the vertices in the system. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>vert_hess</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="62" column="10"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="30" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1a34e18a40bbffef74fcdc98e652001296" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -176,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="64" column="10"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="32" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1aa2cdc71e7d20f43780ede984127cccb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="66" column="10"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="34" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1a1f8c2462175b2a6da502a3ee00c6a7cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -220,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="68" column="10"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="36" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1ad8c1d3d9c1faf400d556754f8090fd2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -242,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="70" column="10"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="38" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1ae90d092ec82bef65e4c71bdb243c491d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -264,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="72" column="10"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="40" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1a4e8d23eb6f2741aba643c9ec22d17597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -286,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="74" column="10"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="42" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_system_feature_1a37dcc24b512fb24ae5f37370a852219e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; std::string &gt;</type>
@@ -300,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="76" column="12"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="44" column="12"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -317,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_system_feature.h" line="79" column="38"/>
+        <location file="include/uipc/core/contact_system_feature.h" line="47" column="38"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -360,16 +259,12 @@
         <link refid="classuipc_1_1core_1_1_i_feature"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/core/contact_system_feature.h" line="34" column="1" bodyfile="include/uipc/core/contact_system_feature.h" bodystart="35" bodyend="81"/>
+    <location file="include/uipc/core/contact_system_feature.h" line="25" column="1" bodyfile="include/uipc/core/contact_system_feature.h" bodystart="26" bodyend="49"/>
     <listofallmembers>
-      <member refid="classuipc_1_1core_1_1_contact_system_feature_1a724222680f37263a5a3b6a8c69d8d1ad" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>compute_contact</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_system_feature_1a24b6b8c4cdcef4c5313b0e0fa9fca022" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_energy</name></member>
       <member refid="classuipc_1_1core_1_1_contact_system_feature_1a34e18a40bbffef74fcdc98e652001296" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_energy</name></member>
       <member refid="classuipc_1_1core_1_1_contact_system_feature_1ad8c1d3d9c1faf400d556754f8090fd2b" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_energy</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_system_feature_1ab7f47a593bbfe6f8dc757b57fb91c69c" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_gradient</name></member>
       <member refid="classuipc_1_1core_1_1_contact_system_feature_1aa2cdc71e7d20f43780ede984127cccb8" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_gradient</name></member>
       <member refid="classuipc_1_1core_1_1_contact_system_feature_1ae90d092ec82bef65e4c71bdb243c491d" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_gradient</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_system_feature_1adb4bb35aa2d272177f5d03822d018175" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_hessian</name></member>
       <member refid="classuipc_1_1core_1_1_contact_system_feature_1a1f8c2462175b2a6da502a3ee00c6a7cd" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_hessian</name></member>
       <member refid="classuipc_1_1core_1_1_contact_system_feature_1a4e8d23eb6f2741aba643c9ec22d17597" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_hessian</name></member>
       <member refid="classuipc_1_1core_1_1_contact_system_feature_1a37dcc24b512fb24ae5f37370a852219e" prot="public" virt="non-virtual"><scope>uipc::core::ContactSystemFeature</scope><name>contact_primitive_types</name></member>

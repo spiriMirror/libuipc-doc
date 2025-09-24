@@ -66,7 +66,7 @@
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find\_geometry**](#function-find_geometry) (IndexT id) noexcept<br> |
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; | [**find\_rest\_geometry**](#function-find_rest_geometry) (IndexT id) noexcept<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**geometries**](#function-geometries) () noexcept const<br> |
-|  [**core::Scene**](classuipc_1_1core_1_1_scene.md) | [**get**](#function-get) () noexcept<br> |
+|  [**core::Scene**](classuipc_1_1core_1_1_scene.md) | [**get**](#function-get) () noexcept const<br> |
 |  bool | [**is\_pending**](#function-is_pending) () noexcept const<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator) (const [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &) = delete<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator_1) ([**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &&) = default<br> |
@@ -75,6 +75,8 @@
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_rest\_geometries**](#function-pending_rest_geometries) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**rest\_geometries**](#function-rest_geometries) () noexcept const<br> |
 |  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
+|  const [**core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept const<br> |
+|  [**core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept<br> |
 
 
 
@@ -318,7 +320,7 @@ span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::geometries () n
 ### function get 
 
 ```C++
-core::Scene uipc::backend::SceneVisitor::get () noexcept
+core::Scene uipc::backend::SceneVisitor::get () noexcept const
 ```
 
 
@@ -427,6 +429,32 @@ span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::rest_geometries
 
 ```C++
 void uipc::backend::SceneVisitor::solve_pending () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function subscene\_tabular [1/2]
+
+```C++
+const core::SubsceneTabular & uipc::backend::SceneVisitor::subscene_tabular () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function subscene\_tabular [2/2]
+
+```C++
+core::SubsceneTabular & uipc::backend::SceneVisitor::subscene_tabular () noexcept
 ```
 
 

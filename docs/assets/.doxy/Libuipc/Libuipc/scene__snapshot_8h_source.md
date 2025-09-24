@@ -34,12 +34,15 @@ class UIPC_CORE_API SceneSnapshot
     S<geometry::AttributeCollection> m_config;
 
     ObjectCollectionSnapshot m_object_collection;
-    vector<ContactElement>   m_contact_elements;
 
     unordered_map<IndexT, S<geometry::Geometry>> m_geometries;
     unordered_map<IndexT, S<geometry::Geometry>> m_rest_geometries;
 
+    vector<ContactElement>  m_contact_elements;
+    vector<SubsceneElement> m_subscene_elements;
+
     S<geometry::AttributeCollection> m_contact_models;
+    S<geometry::AttributeCollection> m_subscene_models;
 };
 
 class UIPC_CORE_API SceneSnapshotCommit
@@ -92,6 +95,7 @@ class UIPC_CORE_API SceneSnapshotCommit
     // Fully Copy:
     ObjectCollectionSnapshot m_object_collection;
     vector<ContactElement>   m_contact_elements;
+    vector<SubsceneElement>  m_subscene_elements;
 
     // Full Copy Geometries/ Diff Copy AttributeCollection
     unordered_map<IndexT, S<geometry::GeometryCommit>> m_geometries;
@@ -99,6 +103,7 @@ class UIPC_CORE_API SceneSnapshotCommit
 
     // Diff Copy AttributeCollection
     S<geometry::AttributeCollectionCommit> m_contact_models;
+    S<geometry::AttributeCollectionCommit> m_subscene_models;
 };
 
 SceneSnapshotCommit UIPC_CORE_API operator-(const SceneSnapshot& dst,

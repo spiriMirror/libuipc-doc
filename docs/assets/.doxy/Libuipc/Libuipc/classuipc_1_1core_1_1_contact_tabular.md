@@ -57,18 +57,12 @@
 |  [**ContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**contact\_models**](#function-contact_models-12) () noexcept<br> |
 |  [**CContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) | [**create**](#function-create) (std::string\_view name="") noexcept<br> |
-|  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) | [**create\_subscene**](#function-create_subscene) (std::string\_view name="") noexcept<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) | [**default\_element**](#function-default_element) () noexcept<br> |
 |  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) noexcept<br> |
 |  [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) | [**default\_model**](#function-default_model-22) () noexcept const<br> |
-|  [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) | [**default\_subscene\_element**](#function-default_subscene_element) () noexcept<br> |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
 |  IndexT | [**insert**](#function-insert) (const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & L, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & R, Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
 |  [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & | [**operator=**](#function-operator) (const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) &) = delete<br> |
-|  [**ContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**subscene\_contact\_models**](#function-subscene_contact_models-12) () noexcept<br> |
-|  [**CContactModelCollection**](classuipc_1_1core_1_1_contact_model_collection_t.md) | [**subscene\_contact\_models**](#function-subscene_contact_models-22) () noexcept const<br> |
-|  SizeT | [**subscene\_element\_count**](#function-subscene_element_count) () noexcept const<br> |
-|  IndexT | [**subscene\_insert**](#function-subscene_insert) (const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & L, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & R, bool enable=true, const Json & config=default\_config()) <br> |
 |   | [**~ContactTabular**](#function-contacttabular) () noexcept<br> |
 
 
@@ -193,21 +187,6 @@ ContactElement uipc::core::ContactTabular::create (
 
 
 
-### function create\_subscene 
-
-```C++
-ContactElement uipc::core::ContactTabular::create_subscene (
-    std::string_view name=""
-) noexcept
-```
-
-
-
-
-<hr>
-
-
-
 ### function default\_element 
 
 ```C++
@@ -243,19 +222,6 @@ void uipc::core::ContactTabular::default_model (
 
 ```C++
 ContactModel uipc::core::ContactTabular::default_model () noexcept const
-```
-
-
-
-
-<hr>
-
-
-
-### function default\_subscene\_element 
-
-```C++
-ContactElement uipc::core::ContactTabular::default_subscene_element () noexcept
 ```
 
 
@@ -313,63 +279,6 @@ ContactTabular & uipc::core::ContactTabular::operator= (
 
 
 
-### function subscene\_contact\_models [1/2]
-
-```C++
-ContactModelCollection uipc::core::ContactTabular::subscene_contact_models () noexcept
-```
-
-
-
-
-<hr>
-
-
-
-### function subscene\_contact\_models [2/2]
-
-```C++
-CContactModelCollection uipc::core::ContactTabular::subscene_contact_models () noexcept const
-```
-
-
-
-
-<hr>
-
-
-
-### function subscene\_element\_count 
-
-```C++
-SizeT uipc::core::ContactTabular::subscene_element_count () noexcept const
-```
-
-
-
-
-<hr>
-
-
-
-### function subscene\_insert 
-
-```C++
-IndexT uipc::core::ContactTabular::subscene_insert (
-    const ContactElement & L,
-    const ContactElement & R,
-    bool enable=true,
-    const Json & config=default_config()
-) 
-```
-
-
-
-
-<hr>
-
-
-
 ### function ~ContactTabular 
 
 ```C++
@@ -418,7 +327,7 @@ class uipc::core::ContactTabular::Scene (
 ### friend to\_json 
 
 ```C++
-void uipc::core::ContactTabular::to_json (
+UIPC_CORE_API void uipc::core::ContactTabular::to_json (
     Json & j,
     const ContactTabular & ct
 ) 

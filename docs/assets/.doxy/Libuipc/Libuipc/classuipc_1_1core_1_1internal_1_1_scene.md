@@ -77,6 +77,8 @@ Inherits the following classes: std::enable_shared_from_this< Scene >
 |  auto & | [**sanity\_checker**](#function-sanity_checker-12) () noexcept const<br> |
 |  auto & | [**sanity\_checker**](#function-sanity_checker-22) () noexcept<br> |
 |  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
+|  auto & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept const<br> |
+|  auto & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept<br> |
 |  void | [**update\_from**](#function-update_from) (const [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) & commit) <br> |
 |  auto | [**world**](#function-world) () noexcept<br> |
 |   | [**~Scene**](#function-scene) () <br> |
@@ -433,6 +435,32 @@ inline auto & uipc::core::internal::Scene::sanity_checker () noexcept
 
 ```C++
 void uipc::core::internal::Scene::solve_pending () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function subscene\_tabular [1/2]
+
+```C++
+inline auto & uipc::core::internal::Scene::subscene_tabular () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function subscene\_tabular [2/2]
+
+```C++
+inline auto & uipc::core::internal::Scene::subscene_tabular () noexcept
 ```
 
 

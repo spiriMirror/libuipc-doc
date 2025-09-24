@@ -73,6 +73,10 @@
 | class | [**SceneIOError**](classuipc_1_1core_1_1_scene_i_o_error.md) <br> |
 | class | [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) <br> |
 | class | [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) <br> |
+| class | [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) <br> |
+| class | [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md) <br> |
+| class | [**SubsceneModelCollectionT**](classuipc_1_1core_1_1_subscene_model_collection_t.md) &lt;IsConst&gt;<br> |
+| class | [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) <br> |
 | class | [**World**](classuipc_1_1core_1_1_world.md) <br> |
 
 
@@ -81,8 +85,10 @@
 | Type | Name |
 | ---: | :--- |
 | typedef [**ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md)&lt; true &gt; | [**CContactModelCollection**](#typedef-ccontactmodelcollection)  <br> |
+| typedef [**SubsceneModelCollectionT**](classuipc_1_1core_1_1_subscene_model_collection_t.md)&lt; true &gt; | [**CSubsceneModelCollection**](#typedef-csubscenemodelcollection)  <br> |
 | typedef [**ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md)&lt; false &gt; | [**ContactModelCollection**](#typedef-contactmodelcollection)  <br> |
 | enum int | [**SanityCheckResult**](#enum-sanitycheckresult)  <br> |
+| typedef [**SubsceneModelCollectionT**](classuipc_1_1core_1_1_subscene_model_collection_t.md)&lt; false &gt; | [**SubsceneModelCollection**](#typedef-subscenemodelcollection)  <br> |
 
 
 
@@ -112,13 +118,18 @@
 |  void | [**from\_json**](#function-from_json) (const Json & j, [**Object**](classuipc_1_1core_1_1_object.md) & object) <br> |
 |  void UIPC\_CORE\_API | [**from\_json**](#function-from_json) (const Json & j, [**ObjectCollectionSnapshot**](classuipc_1_1core_1_1_object_collection_snapshot.md) & obj) <br> |
 |  UIPC\_CORE\_API void | [**from\_json**](#function-from_json) (const Json & j, [**ObjectSnapshot**](classuipc_1_1core_1_1_object_snapshot.md) & snapshot) <br> |
+|  UIPC\_CORE\_API void | [**from\_json**](#function-from_json) (const Json & j, [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) & element) <br> |
+|  void | [**from\_json**](#function-from_json) (const Json & json, [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md) & model) <br> |
 |  [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) UIPC\_CORE\_API | [**operator-**](#function-operator-) (const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & dst, const [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) & src) <br> |
 |  void | [**to\_json**](#function-to_json) (Json & j, const [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) & element) <br> |
 |  void | [**to\_json**](#function-to_json) (Json & json, const [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) & model) <br> |
-|  void | [**to\_json**](#function-to_json) (Json & j, const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & ct) <br> |
+|  UIPC\_CORE\_API void | [**to\_json**](#function-to_json) (Json & j, const [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) & ct) <br> |
 |  void | [**to\_json**](#function-to_json) (Json & j, const [**Object**](classuipc_1_1core_1_1_object.md) & object) <br> |
 |  void UIPC\_CORE\_API | [**to\_json**](#function-to_json) (Json & j, const [**ObjectCollectionSnapshot**](classuipc_1_1core_1_1_object_collection_snapshot.md) & obj) <br> |
 |  UIPC\_CORE\_API void | [**to\_json**](#function-to_json) (Json & j, const [**ObjectSnapshot**](classuipc_1_1core_1_1_object_snapshot.md) & snapshot) <br> |
+|  UIPC\_CORE\_API void | [**to\_json**](#function-to_json) (Json & j, const [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) & element) <br> |
+|  void | [**to\_json**](#function-to_json) (Json & json, const [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md) & model) <br> |
+|  UIPC\_CORE\_API void | [**to\_json**](#function-to_json) (Json & j, const [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & ct) <br> |
 
 
 
@@ -165,6 +176,19 @@ using uipc::core::CContactModelCollection =  ContactModelCollectionT<true>;
 
 
 
+### typedef CSubsceneModelCollection 
+
+```C++
+using uipc::core::CSubsceneModelCollection =  SubsceneModelCollectionT<true>;
+```
+
+
+
+
+<hr>
+
+
+
 ### typedef ContactModelCollection 
 
 ```C++
@@ -186,6 +210,19 @@ enum uipc::core::SanityCheckResult {
     Warning = 1,
     Error = 2
 };
+```
+
+
+
+
+<hr>
+
+
+
+### typedef SubsceneModelCollection 
+
+```C++
+using uipc::core::SubsceneModelCollection =  SubsceneModelCollectionT<false>;
 ```
 
 
@@ -277,6 +314,38 @@ UIPC_CORE_API void uipc::core::from_json (
 
 
 
+### function from\_json 
+
+```C++
+UIPC_CORE_API void uipc::core::from_json (
+    const Json & j,
+    SubsceneElement & element
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function from\_json 
+
+```C++
+void uipc::core::from_json (
+    const Json & json,
+    SubsceneModel & model
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function operator- 
 
 ```C++
@@ -328,7 +397,7 @@ void uipc::core::to_json (
 ### function to\_json 
 
 ```C++
-void uipc::core::to_json (
+UIPC_CORE_API void uipc::core::to_json (
     Json & j,
     const ContactTabular & ct
 ) 
@@ -379,6 +448,54 @@ void UIPC_CORE_API uipc::core::to_json (
 UIPC_CORE_API void uipc::core::to_json (
     Json & j,
     const ObjectSnapshot & snapshot
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function to\_json 
+
+```C++
+UIPC_CORE_API void uipc::core::to_json (
+    Json & j,
+    const SubsceneElement & element
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function to\_json 
+
+```C++
+void uipc::core::to_json (
+    Json & json,
+    const SubsceneModel & model
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function to\_json 
+
+```C++
+UIPC_CORE_API void uipc::core::to_json (
+    Json & j,
+    const SubsceneTabular & ct
 ) 
 ```
 

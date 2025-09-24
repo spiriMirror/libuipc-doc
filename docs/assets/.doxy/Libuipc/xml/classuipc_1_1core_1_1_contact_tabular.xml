@@ -86,11 +86,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="79" column="18" bodyfile="include/uipc/core/contact_tabular.h" bodystart="79" bodyend="-1"/>
+        <location file="include/uipc/core/contact_tabular.h" line="66" column="18" bodyfile="include/uipc/core/contact_tabular.h" bodystart="66" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="friend" id="classuipc_1_1core_1_1_contact_tabular_1ac07b94b43766c79cd43b6938f953687a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void to_json</definition>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1_contact_tabular_1a0ab2bdf919897f99de3dfdb2f7d213f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_CORE_API void</type>
+        <definition>UIPC_CORE_API void to_json</definition>
         <argsstring>(Json &amp;j, const ContactTabular &amp;ct)</argsstring>
         <name>to_json</name>
         <qualifiedname>uipc::core::ContactTabular::to_json</qualifiedname>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="62" column="17"/>
+        <location file="include/uipc/core/contact_tabular.h" line="54" column="31"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="78" column="7" bodyfile="include/uipc/core/contact_tabular.h" bodystart="78" bodyend="-1"/>
+        <location file="include/uipc/core/contact_tabular.h" line="65" column="7" bodyfile="include/uipc/core/contact_tabular.h" bodystart="65" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -209,25 +209,6 @@
         </inbodydescription>
         <location file="include/uipc/core/contact_tabular.h" line="34" column="20"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a2e5b8f0c9f4cf8614e41d799aa4fcf10" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type><ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref></type>
-        <definition>ContactElement uipc::core::ContactTabular::create_subscene</definition>
-        <argsstring>(std::string_view name=&quot;&quot;) noexcept</argsstring>
-        <name>create_subscene</name>
-        <qualifiedname>uipc::core::ContactTabular::create_subscene</qualifiedname>
-        <param>
-          <type>std::string_view</type>
-          <declname>name</declname>
-          <defval>&quot;&quot;</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="36" column="20"/>
-      </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a452ba1b385d0fde3f7065d9680712d81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>IndexT</type>
         <definition>IndexT uipc::core::ContactTabular::insert</definition>
@@ -266,39 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="38" column="12"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a0ec558d00eca4c0e55051a53e1d654e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>IndexT</type>
-        <definition>IndexT uipc::core::ContactTabular::subscene_insert</definition>
-        <argsstring>(const ContactElement &amp;L, const ContactElement &amp;R, bool enable=true, const Json &amp;config=default_config())</argsstring>
-        <name>subscene_insert</name>
-        <qualifiedname>uipc::core::ContactTabular::subscene_insert</qualifiedname>
-        <param>
-          <type>const <ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref> &amp;</type>
-          <declname>L</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref> &amp;</type>
-          <declname>R</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>enable</declname>
-          <defval>true</defval>
-        </param>
-        <param>
-          <type>const Json &amp;</type>
-          <declname>config</declname>
-          <defval>default_config()</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="45" column="12"/>
+        <location file="include/uipc/core/contact_tabular.h" line="36" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a628516a6ea08170a8b9d3a9224cf4b09" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_contact_model" kindref="compound">ContactModel</ref></type>
@@ -320,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="50" column="18"/>
+        <location file="include/uipc/core/contact_tabular.h" line="43" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a1931132de81d877303797ae7fc4b9567" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -352,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="52" column="10"/>
+        <location file="include/uipc/core/contact_tabular.h" line="45" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a2f689fd009cc478e3e706d90d27c6dd9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref></type>
@@ -366,21 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="57" column="20"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1ad9702f2838f47072bc36e734d0498747" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type><ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref></type>
-        <definition>ContactElement uipc::core::ContactTabular::default_subscene_element</definition>
-        <argsstring>() noexcept</argsstring>
-        <name>default_subscene_element</name>
-        <qualifiedname>uipc::core::ContactTabular::default_subscene_element</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="58" column="20"/>
+        <location file="include/uipc/core/contact_tabular.h" line="50" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a071645e5d31c012dbde6a9978f422c65" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_contact_model" kindref="compound">ContactModel</ref></type>
@@ -394,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="59" column="20"/>
+        <location file="include/uipc/core/contact_tabular.h" line="51" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a8fad077d3e0895531c86447e983636ef" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
@@ -408,21 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="64" column="11"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a69c77c043537f29a3a368305002026fe" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type>SizeT</type>
-        <definition>SizeT uipc::core::ContactTabular::subscene_element_count</definition>
-        <argsstring>() const noexcept</argsstring>
-        <name>subscene_element_count</name>
-        <qualifiedname>uipc::core::ContactTabular::subscene_element_count</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="66" column="11"/>
+        <location file="include/uipc/core/contact_tabular.h" line="56" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a9d148f5599f9a1420e026390fbeb7964" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_contact_model_collection_t" kindref="compound">ContactModelCollection</ref></type>
@@ -436,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="70" column="29"/>
+        <location file="include/uipc/core/contact_tabular.h" line="60" column="29"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a1dff3b267e11f46d5e28396bbbcce253" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1_contact_model_collection_t" kindref="compound">CContactModelCollection</ref></type>
@@ -450,35 +371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="71" column="29"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a8dda3947ca83c09f9d6a2208a3c20b3e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type><ref refid="classuipc_1_1core_1_1_contact_model_collection_t" kindref="compound">ContactModelCollection</ref></type>
-        <definition>ContactModelCollection uipc::core::ContactTabular::subscene_contact_models</definition>
-        <argsstring>() noexcept</argsstring>
-        <name>subscene_contact_models</name>
-        <qualifiedname>uipc::core::ContactTabular::subscene_contact_models</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="73" column="29"/>
-      </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1aed9bcccd9cd8f209e2d1fdce88f42b9f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type><ref refid="classuipc_1_1core_1_1_contact_model_collection_t" kindref="compound">CContactModelCollection</ref></type>
-        <definition>CContactModelCollection uipc::core::ContactTabular::subscene_contact_models</definition>
-        <argsstring>() const noexcept</argsstring>
-        <name>subscene_contact_models</name>
-        <qualifiedname>uipc::core::ContactTabular::subscene_contact_models</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="74" column="29"/>
+        <location file="include/uipc/core/contact_tabular.h" line="61" column="29"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -494,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="68" column="17"/>
+        <location file="include/uipc/core/contact_tabular.h" line="58" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -510,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="80" column="35"/>
+        <location file="include/uipc/core/contact_tabular.h" line="67" column="35"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1aa667a58ff7c76d7db0e15857913e19cd" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>span&lt; <ref refid="classuipc_1_1core_1_1_contact_element" kindref="compound">ContactElement</ref> &gt;</type>
@@ -524,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="81" column="20"/>
+        <location file="include/uipc/core/contact_tabular.h" line="68" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1a3fd47a5c5b82336bde5033debcfabf39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -546,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="82" column="10"/>
+        <location file="include/uipc/core/contact_tabular.h" line="69" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1_contact_tabular_1abcc58b567ec9612f82ec685ccc890e2e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -568,14 +461,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="83" column="10"/>
+        <location file="include/uipc/core/contact_tabular.h" line="70" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/contact_tabular.h" line="20" column="1" bodyfile="include/uipc/core/contact_tabular.h" bodystart="21" bodyend="85"/>
+    <location file="include/uipc/core/contact_tabular.h" line="20" column="1" bodyfile="include/uipc/core/contact_tabular.h" bodystart="21" bodyend="72"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a628516a6ea08170a8b9d3a9224cf4b09" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>at</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a3fd47a5c5b82336bde5033debcfabf39" prot="private" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>build_from</name></member>
@@ -585,12 +478,10 @@
       <member refid="classuipc_1_1core_1_1_contact_tabular_1aad2541c67acc71c0c2dca0575a5adaf4" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>ContactTabular</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a76621f50a912a040ca2d111d35c02783" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>ContactTabular</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1ac606fcbf718bba833d69f00a81c61ea8" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>create</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_tabular_1a2e5b8f0c9f4cf8614e41d799aa4fcf10" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>create_subscene</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1acbcaf91f990b9a10a20a37975b9f224b" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>default_config</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a2f689fd009cc478e3e706d90d27c6dd9" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>default_element</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a1931132de81d877303797ae7fc4b9567" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>default_model</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a071645e5d31c012dbde6a9978f422c65" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>default_model</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_tabular_1ad9702f2838f47072bc36e734d0498747" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>default_subscene_element</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a8fad077d3e0895531c86447e983636ef" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>element_count</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a452ba1b385d0fde3f7065d9680712d81" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>insert</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1acad16e33e3942e02cf164e4ec7f26ac0" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>internal::Scene</name></member>
@@ -600,11 +491,7 @@
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a032858ae1fe02d2d1170981c2af2d67c" prot="private" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>Scene</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1aace72bb27f976f9bf22d4ef1f887c0a6" prot="private" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>SceneFactory</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a3630dc06eabc9e304ec14767607a7b71" prot="private" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>SceneSnapshot</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_tabular_1a8dda3947ca83c09f9d6a2208a3c20b3e" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>subscene_contact_models</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_tabular_1aed9bcccd9cd8f209e2d1fdce88f42b9f" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>subscene_contact_models</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_tabular_1a69c77c043537f29a3a368305002026fe" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>subscene_element_count</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_tabular_1a0ec558d00eca4c0e55051a53e1d654e7" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>subscene_insert</name></member>
-      <member refid="classuipc_1_1core_1_1_contact_tabular_1ac07b94b43766c79cd43b6938f953687a" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1core_1_1_contact_tabular_1a0ab2bdf919897f99de3dfdb2f7d213f2" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>to_json</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1ac99e0c3c89a524fe911bb99b78784f64" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>uipc::backend::ContactTabularVisitor</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1abcc58b567ec9612f82ec685ccc890e2e" prot="private" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>update_from</name></member>
       <member refid="classuipc_1_1core_1_1_contact_tabular_1a12410dde80a9fa22644716ccd47f5b1e" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>~ContactTabular</name></member>

@@ -51,13 +51,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**do\_compute\_contact**](#function-do_compute_contact) () = 0<br> |
-| virtual void | [**get\_contact\_energy**](#function-get_contact_energy-12) ([**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy\_geo) = 0<br> |
-| virtual void | [**get\_contact\_energy**](#function-get_contact_energy-22) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy\_geo) = 0<br> |
-| virtual void | [**get\_contact\_gradient**](#function-get_contact_gradient-12) ([**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) = 0<br> |
-| virtual void | [**get\_contact\_gradient**](#function-get_contact_gradient-22) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) = 0<br> |
-| virtual void | [**get\_contact\_hessian**](#function-get_contact_hessian-12) ([**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) = 0<br> |
-| virtual void | [**get\_contact\_hessian**](#function-get_contact_hessian-22) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) = 0<br> |
+| virtual void | [**get\_contact\_energy**](#function-get_contact_energy) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & energy\_geo) = 0<br> |
+| virtual void | [**get\_contact\_gradient**](#function-get_contact_gradient) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_grad) = 0<br> |
+| virtual void | [**get\_contact\_hessian**](#function-get_contact_hessian) (std::string\_view prim\_type, [**geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md) & vert\_hess) = 0<br> |
 | virtual vector&lt; std::string &gt; | [**get\_contact\_primitive\_types**](#function-get_contact_primitive_types) () const = 0<br> |
 
 
@@ -92,35 +88,7 @@
 
 
 
-### function do\_compute\_contact 
-
-```C++
-virtual void uipc::core::ContactSystemFeatureOverrider::do_compute_contact () = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function get\_contact\_energy [1/2]
-
-```C++
-virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_energy (
-    geometry::Geometry & energy_geo
-) = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function get\_contact\_energy [2/2]
+### function get\_contact\_energy 
 
 ```C++
 virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_energy (
@@ -136,22 +104,7 @@ virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_energy (
 
 
 
-### function get\_contact\_gradient [1/2]
-
-```C++
-virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_gradient (
-    geometry::Geometry & vert_grad
-) = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function get\_contact\_gradient [2/2]
+### function get\_contact\_gradient 
 
 ```C++
 virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_gradient (
@@ -167,22 +120,7 @@ virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_gradient (
 
 
 
-### function get\_contact\_hessian [1/2]
-
-```C++
-virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_hessian (
-    geometry::Geometry & vert_hess
-) = 0
-```
-
-
-
-
-<hr>
-
-
-
-### function get\_contact\_hessian [2/2]
+### function get\_contact\_hessian 
 
 ```C++
 virtual void uipc::core::ContactSystemFeatureOverrider::get_contact_hessian (

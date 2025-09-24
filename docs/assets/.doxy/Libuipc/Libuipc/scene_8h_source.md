@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 #include <uipc/core/contact_tabular.h>
+#include <uipc/core/subscene_tabular.h>
 #include <uipc/core/constitution_tabular.h>
 #include <uipc/core/object.h>
 #include <uipc/core/object_collection.h>
@@ -89,13 +90,13 @@ class UIPC_CORE_API Scene final
         ConfigAttributesT& operator=(ConfigAttributesT&& o)      = default;
 
         template <typename T>
-        [[nodiscard]] auto find(std::string_view name) &&
+        [[nodiscard]] auto find(std::string_view name)
         {
             return m_attributes.template find<T>(name);
         }
 
         template <typename T>
-        decltype(auto) create(std::string_view name, const T& init_value = {}) &&
+        decltype(auto) create(std::string_view name, const T& init_value = {})
         {
             return m_attributes.template create<T>(name, init_value);
         }
@@ -107,7 +108,7 @@ class UIPC_CORE_API Scene final
             return m_attributes.template share<T>(name, slot);
         }
 
-        void destroy(std::string_view name) &&
+        void destroy(std::string_view name)
             requires(!IsConst)
         {
             m_attributes.destroy(name);
@@ -116,7 +117,7 @@ class UIPC_CORE_API Scene final
         void copy_from(ConfigAttributesT<true> other,
                        const AttributeCopy&    copy          = {},
                        span<const string>      include_names = {},
-                       span<const string>      exclude_names = {}) &&
+                       span<const string>      exclude_names = {})
             requires(!IsConst)
         {
             m_attributes.copy_from(other.m_attributes, copy, include_names, exclude_names);
@@ -124,15 +125,29 @@ class UIPC_CORE_API Scene final
 
         Json to_json() const { return m_attributes.to_json(); }
 
+        void update_from(const geometry::AttributeCollectionCommit& commit)
+            requires(!IsConst)
+        {
+            m_attributes.update_from(commit);
+        }
+
+        void build_from(const AttributeCollection& ac)
+            requires(!IsConst)
+        {
+            m_attributes = ac;
+        }
+
       private:
         AutoAttributeCollection& m_attributes;
+        friend class SceneFactory;
     };
 
     using ConfigAttributes  = ConfigAttributesT<false>;
     using CConfigAttributes = ConfigAttributesT<true>;
 
     explicit Scene(const Json& config = default_config());
-
+    // Allow create a core::Scene from a core::internal::Scene
+    explicit Scene(S<internal::Scene> scene) noexcept;
 
     Scene(const Scene&) = delete;
     Scene(Scene&&)      = default;
@@ -203,6 +218,9 @@ class UIPC_CORE_API Scene final
     ContactTabular&       contact_tabular() noexcept;
     const ContactTabular& contact_tabular() const noexcept;
 
+    SubsceneTabular&       subscene_tabular() noexcept;
+    const SubsceneTabular& subscene_tabular() const noexcept;
+
     ConstitutionTabular&       constitution_tabular() noexcept;
     const ConstitutionTabular& constitution_tabular() const noexcept;
 
@@ -224,9 +242,7 @@ class UIPC_CORE_API Scene final
     void update_from(const SceneSnapshotCommit& snapshot);
 
   private:
-    // Allow create a core::Scene from a core::internal::Scene
-    Scene(S<internal::Scene> scene) noexcept;
-    S<core::internal::Scene> m_internal;
+    S<internal::Scene> m_internal;
 };
 }  // namespace uipc::core
 
