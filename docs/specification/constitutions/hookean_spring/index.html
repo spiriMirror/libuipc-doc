@@ -1869,22 +1869,40 @@
 <p><strong>Hookean Spring</strong> is a constitutive model for simulating linear elastic springs connecting two particles in 3D space.</p>
 <h2 id="12-hookean-spring">#12 Hookean Spring</h2>
 <p>For a spring element connecting two particles at positions <span class="arithmatex">\(\mathbf{x}_0\)</span> and <span class="arithmatex">\(\mathbf{x}_1\)</span>, we define:</p>
-<p><strong>Distance Vector:</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(\mathbf{d} = \mathbf{x}_1 - \mathbf{x}_0\)</span>\)</span></p>
-<p><strong>Current Length:</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(L = \|\mathbf{d}\|_2\)</span>\)</span></p>
-<p><strong>Strain:</strong>
-<span class="arithmatex">\(<span class="arithmatex">\(\epsilon = \frac{L - L_0}{L_0}\)</span>\)</span></p>
+<p><strong>Distance Vector:</strong></p>
+<div class="arithmatex">\[
+\mathbf{d} = \mathbf{x}_1 - \mathbf{x}_0
+\]</div>
+<p><strong>Current Length:</strong></p>
+<div class="arithmatex">\[
+L = \|\mathbf{d}\|_2
+\]</div>
+<p><strong>Strain:</strong></p>
+<div class="arithmatex">\[
+\epsilon = \frac{L - L_0}{L_0}
+\]</div>
 <p>where <span class="arithmatex">\(L_0\)</span> is the rest length of the spring.</p>
 <h3 id="strain-energy-density">Strain Energy Density</h3>
-<p>The strain energy of the Hookean spring is given by:
-<span class="arithmatex">\(<span class="arithmatex">\(E = \frac{\kappa}{2} \epsilon^2 = \frac{\kappa}{2} \left(\frac{L - L_0}{L_0}\right)^2\)</span>\)</span></p>
-<p>Substituting the expressions for <span class="arithmatex">\(L\)</span>:
-<span class="arithmatex">\(<span class="arithmatex">\(E = \frac{\kappa}{2} \left(\frac{\|\mathbf{d}\|_2 - L_0}{L_0}\right)^2\)</span>\)</span></p>
-<p>where:
-- <span class="arithmatex">\(\kappa\)</span> is the spring constant (stiffness parameter)
-- <span class="arithmatex">\(L_0\)</span> is the rest length of the spring
-- <span class="arithmatex">\(\mathbf{d}\)</span> is the current displacement vector between the two particles</p></div>
+<p>The strain energy of the Hookean spring is given by:</p>
+<div class="arithmatex">\[
+E = \frac{\kappa}{2} \epsilon^2 = \frac{\kappa}{2} \left(\frac{L - L_0}{L_0}\right)^2
+\]</div>
+<p>Substituting the expressions for <span class="arithmatex">\(L\)</span>:</p>
+<div class="arithmatex">\[
+E = \frac{\kappa}{2} \left(\frac{\|\mathbf{d}\|_2 - L_0}{L_0}\right)^2
+\]</div>
+<p>where:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\kappa\)</span> is the spring constant (stiffness parameter)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L_0\)</span> is the rest length of the spring</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{d}\)</span> is the current displacement vector between the two particles</p>
+</li>
+</ul></div>
 
 
 
