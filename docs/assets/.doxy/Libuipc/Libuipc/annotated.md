@@ -208,5 +208,6 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **struct** [**signature&lt; R(C::\*)(Args...) const volatile &gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01const_01volatile_01_4.md) 
     * **struct** [**signature&lt; R(C::\*)(Args...) volatile &gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_01volatile_01_4.md) 
     * **struct** [**signature&lt; R(C::\*)(Args...)&gt;**](structuipc_1_1signature_3_01_r_07_c_1_1_5_08_07_args_8_8_8_08_4.md) 
+    * **namespace** [**vdb**](namespaceuipc_1_1vdb.md)     
 * **struct** [**MergeResult**](structuipc_1_1_global_timer_1_1_merge_result.md)     
 

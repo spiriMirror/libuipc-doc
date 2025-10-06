@@ -113,6 +113,7 @@
 * **point\_point\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **point\_triangle\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **pointcloud** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **points\_from\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md), [**uipc::vdb**](namespaceuipc_1_1vdb.md))
 
 
 ## r

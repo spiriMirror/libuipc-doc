@@ -145,6 +145,7 @@
 |  Float UIPC\_GEOMETRY\_API | [**point\_point\_squared\_distance**](#function-point_point_squared_distance) (const Vector3 & P0, const Vector3 & P1) <br> |
 |  Float UIPC\_GEOMETRY\_API | [**point\_triangle\_squared\_distance**](#function-point_triangle_squared_distance) (const Vector3 & P, const Vector3 & T0, const Vector3 & T1, const Vector3 & T2) <br> |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**points\_from\_volume**](#function-points_from_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float resolution=0.01) <br>_Construct a point cloud inside a volume represented by a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetrahedralize**](#function-tetrahedralize) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const Json & options=Json::object()) <br>_Tetrahedralize a 2D simplicial complex (trimesh)._  |
 |  UIPC\_GEOMETRY\_API bool | [**tri\_edge\_intersect**](#function-tri_edge_intersect) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & E0, const Vector3 & E1) <br>_Check if a triangle and an edge intersect._  |
@@ -1208,6 +1209,42 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::pointcloud (
 **Returns:**
 
 [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function points\_from\_volume 
+
+_Construct a point cloud inside a volume represented by a simplicial complex._ 
+```C++
+UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::points_from_volume (
+    const SimplicialComplex & sc,
+    Float resolution=0.01
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `sc` The input simplicial complex representing a volume (closed manifold). 
+* `resolution` The resolution of the point cloud.
+
+
+
+**Returns:**
+
+[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) A point cloud represented as a simplicial complex with only vertices. 
 
 
 

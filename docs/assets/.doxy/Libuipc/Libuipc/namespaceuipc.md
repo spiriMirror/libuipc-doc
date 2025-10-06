@@ -38,6 +38,7 @@
 | namespace | [**io**](namespaceuipc_1_1io.md) <br> |
 | namespace | [**pmr**](namespaceuipc_1_1pmr.md) <br> |
 | namespace | [**sanity\_check**](namespaceuipc_1_1sanity__check.md) <br> |
+| namespace | [**vdb**](namespaceuipc_1_1vdb.md) <br> |
 
 
 ## Classes

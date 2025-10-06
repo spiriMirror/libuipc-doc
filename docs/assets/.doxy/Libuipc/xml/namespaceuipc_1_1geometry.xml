@@ -1386,6 +1386,50 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/optimal_transform.h" line="23" column="29" declfile="include/uipc/geometry/utils/optimal_transform.h" declline="23" declcolumn="29"/>
       </memberdef>
+      <memberdef kind="function" id="geometry_2utils_2points__from__volume_8h_1a8cdeb54c17cb45ef98e89af18958861a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
+        <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::points_from_volume</definition>
+        <argsstring>(const SimplicialComplex &amp;sc, Float resolution=0.01)</argsstring>
+        <name>points_from_volume</name>
+        <qualifiedname>uipc::geometry::points_from_volume</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>resolution</declname>
+          <defval>0.01</defval>
+        </param>
+        <briefdescription>
+<para>Construct a point cloud inside a volume represented by a simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input simplicial complex representing a volume (closed manifold). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resolution of the point cloud.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref> A point cloud represented as a simplicial complex with only vertices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/points_from_volume.h" line="14" column="37" declfile="include/uipc/geometry/utils/points_from_volume.h" declline="14" declcolumn="37"/>
+      </memberdef>
       <memberdef kind="function" id="tetrahedralize_8h_1aebe236e16bb17bf5eb9f4585ba9f4b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetrahedralize</definition>

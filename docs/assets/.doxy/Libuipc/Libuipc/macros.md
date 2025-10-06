@@ -35,6 +35,7 @@
 * **UIPC\_NAME\_WITH\_ID** ([**macro.h**](common_2macro_8h.md))
 * **UIPC\_NAME\_WITH\_ID\_IMPL** ([**macro.h**](common_2macro_8h.md))
 * **UIPC\_TO\_STRING** ([**macro.h**](common_2macro_8h.md))
+* **UIPC\_VDB\_API** ([**dll\_export.h**](dll__export_8h.md))
 
 
 

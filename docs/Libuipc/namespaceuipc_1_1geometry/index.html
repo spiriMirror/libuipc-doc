@@ -2191,6 +2191,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-points_from_volume" class="md-nav__link">
+    <span class="md-ellipsis">
+      function points_from_volume
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-tetmesh" class="md-nav__link">
     <span class="md-ellipsis">
       function tetmesh
@@ -2627,6 +2636,10 @@
 <tr>
 <td style="text-align: right;">UIPC_GEOMETRY_API <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a></td>
 <td style="text-align: left;"><a href="#function-pointcloud"><strong>pointcloud</strong></a> (span&lt; const Vector3 &gt; Vs) <br><em>Create a simplicial complex from a point cloud.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">UIPC_GEOMETRY_API <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a></td>
+<td style="text-align: left;"><a href="#function-points_from_volume"><strong>points_from_volume</strong></a> (const <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> &amp; sc, Float resolution=0.01) <br><em>Construct a point cloud inside a volume represented by a simplicial complex.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">UIPC_GEOMETRY_API <a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a></td>
@@ -3108,12 +3121,28 @@
 <p><a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> </p>
 <hr>
 
+<h3 id="function-points_from_volume">function points_from_volume</h3>
+<p><em>Construct a point cloud inside a volume represented by a simplicial complex.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">points_from_volume</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">resolution</span><span class="o">=</span><span class="mf">0.01</span>
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sc</code> The input simplicial complex representing a volume (closed manifold). </li>
+<li><code>resolution</code> The resolution of the point cloud.</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> A point cloud represented as a simplicial complex with only vertices. </p>
+<hr>
+
 <h3 id="function-tetmesh">function tetmesh</h3>
 <p><em>Create a simplicial complex from a tetrahedral mesh.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">tetmesh</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="p">,</span>
-</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector4i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Ts</span>
-</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">tetmesh</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="p">,</span>
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector4i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Ts</span>
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -3124,10 +3153,10 @@
 
 <h3 id="function-tetrahedralize">function tetrahedralize</h3>
 <p><em>Tetrahedralize a 2D simplicial complex (trimesh).</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">tetrahedralize</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
-</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">options</span><span class="o">=</span><span class="n">Json</span><span class="o">::</span><span class="n">object</span><span class="p">()</span>
-</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">tetrahedralize</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">options</span><span class="o">=</span><span class="n">Json</span><span class="o">::</span><span class="n">object</span><span class="p">()</span>
+</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Returns:</strong></p>
 <p><a href="../classuipc_1_1geometry_1_1_simplicial_complex/"><strong>SimplicialComplex</strong></a> The simplicial complexes by regions. </p>
@@ -3135,13 +3164,13 @@
 
 <h3 id="function-tri_edge_intersect">function tri_edge_intersect</h3>
 <p><em>Check if a triangle and an edge intersect.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">tri_edge_intersect</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T0</span><span class="p">,</span>
-</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span>
-</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T2</span><span class="p">,</span>
-</span><span id="__span-44-5"><a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E0</span><span class="p">,</span>
-</span><span id="__span-44-6"><a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E1</span>
-</span><span id="__span-44-7"><a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">tri_edge_intersect</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T0</span><span class="p">,</span>
+</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span>
+</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">T2</span><span class="p">,</span>
+</span><span id="__span-45-5"><a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E0</span><span class="p">,</span>
+</span><span id="__span-45-6"><a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">E1</span>
+</span><span id="__span-45-7"><a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>T0, T1, T2 the vertices of the triangle E0, E1 the vertices of the edge</p>
 <p><strong>Returns:</strong></p>
@@ -3150,10 +3179,10 @@
 
 <h3 id="function-trimesh">function trimesh</h3>
 <p><em>Create a simplicial complex from a triangle mesh.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">trimesh</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="p">,</span>
-</span><span id="__span-45-3"><a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Fs</span>
-</span><span id="__span-45-4"><a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">trimesh</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="p">,</span>
+</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Fs</span>
+</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -3166,10 +3195,10 @@
 
 <h3 id="function-trimesh_1">function trimesh</h3>
 <p><em>Create a 2D simplicial complex from a quad mesh (4-sided polygons).</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">trimesh</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="p">,</span>
-</span><span id="__span-46-3"><a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector4i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Fs</span>
-</span><span id="__span-46-4"><a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">trimesh</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Vs</span><span class="p">,</span>
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector4i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Fs</span>
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>

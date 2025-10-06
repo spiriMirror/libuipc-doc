@@ -731,6 +731,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Hookean Spring
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -742,6 +755,49 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#12-hookean-spring" class="md-nav__link">
+    <span class="md-ellipsis">
+      #12 Hookean Spring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="#12 Hookean Spring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strain-energy-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strain Energy Density
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1763,6 +1819,38 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#12-hookean-spring" class="md-nav__link">
+    <span class="md-ellipsis">
+      #12 Hookean Spring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="#12 Hookean Spring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strain-energy-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strain Energy Density
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1777,7 +1865,26 @@
 
 
 
-<h1 id="hookean-spring">Hookean Spring</h1>
+<div><h1 id="hookean-spring">Hookean Spring</h1>
+<p><strong>Hookean Spring</strong> is a constitutive model for simulating linear elastic springs connecting two particles in 3D space.</p>
+<h2 id="12-hookean-spring">#12 Hookean Spring</h2>
+<p>For a spring element connecting two particles at positions <span class="arithmatex">\(\mathbf{x}_0\)</span> and <span class="arithmatex">\(\mathbf{x}_1\)</span>, we define:</p>
+<p><strong>Distance Vector:</strong>
+<span class="arithmatex">\(<span class="arithmatex">\(\mathbf{d} = \mathbf{x}_1 - \mathbf{x}_0\)</span>\)</span></p>
+<p><strong>Current Length:</strong>
+<span class="arithmatex">\(<span class="arithmatex">\(L = \|\mathbf{d}\|_2\)</span>\)</span></p>
+<p><strong>Strain:</strong>
+<span class="arithmatex">\(<span class="arithmatex">\(\epsilon = \frac{L - L_0}{L_0}\)</span>\)</span></p>
+<p>where <span class="arithmatex">\(L_0\)</span> is the rest length of the spring.</p>
+<h3 id="strain-energy-density">Strain Energy Density</h3>
+<p>The strain energy of the Hookean spring is given by:
+<span class="arithmatex">\(<span class="arithmatex">\(E = \frac{\kappa}{2} \epsilon^2 = \frac{\kappa}{2} \left(\frac{L - L_0}{L_0}\right)^2\)</span>\)</span></p>
+<p>Substituting the expressions for <span class="arithmatex">\(L\)</span>:
+<span class="arithmatex">\(<span class="arithmatex">\(E = \frac{\kappa}{2} \left(\frac{\|\mathbf{d}\|_2 - L_0}{L_0}\right)^2\)</span>\)</span></p>
+<p>where:
+- <span class="arithmatex">\(\kappa\)</span> is the spring constant (stiffness parameter)
+- <span class="arithmatex">\(L_0\)</span> is the rest length of the spring
+- <span class="arithmatex">\(\mathbf{d}\)</span> is the current displacement vector between the two particles</p></div>
 
 
 

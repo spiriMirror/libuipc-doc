@@ -23,4 +23,5 @@ Here is a list of all namespaces with brief descriptions:
     * **namespace** [**io**](namespaceuipc_1_1io.md)     
     * **namespace** [**pmr**](namespaceuipc_1_1pmr.md) 
     * **namespace** [**sanity\_check**](namespaceuipc_1_1sanity__check.md) 
+    * **namespace** [**vdb**](namespaceuipc_1_1vdb.md)     
 

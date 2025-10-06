@@ -32,9 +32,11 @@
     <includedby refid="merge_8h" local="no">include/uipc/geometry/utils/merge.h</includedby>
     <includedby refid="mesh__partition_8h" local="no">include/uipc/geometry/utils/mesh_partition.h</includedby>
     <includedby refid="optimal__transform_8h" local="no">include/uipc/geometry/utils/optimal_transform.h</includedby>
+    <includedby refid="geometry_2utils_2points__from__volume_8h" local="no">include/uipc/geometry/utils/points_from_volume.h</includedby>
     <includedby refid="tetrahedralize_8h" local="no">include/uipc/geometry/utils/tetrahedralize.h</includedby>
     <includedby refid="scene__io_8h" local="no">include/uipc/io/scene_io.h</includedby>
     <includedby refid="simplicial__complex__io_8h" local="no">include/uipc/io/simplicial_complex_io.h</includedby>
+    <includedby refid="vdb_2points__from__volume_8h" local="no">include/uipc/vdb/points_from_volume.h</includedby>
     <incdepgraph>
       <node id="19">
         <label>uipc/backend/buffer_view.h</label>
@@ -505,7 +507,11 @@
         </childnode>
         <childnode refid="46" relation="include">
         </childnode>
-        <childnode refid="49" relation="include">
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
         </childnode>
       </node>
       <node id="20">
@@ -635,33 +641,39 @@
         </childnode>
       </node>
       <node id="45">
+        <label>include/uipc/geometry/utils/points_from_volume.h</label>
+        <link refid="geometry_2utils_2points__from__volume_8h_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
         <label>include/uipc/geometry/utils/tetrahedralize.h</label>
         <link refid="tetrahedralize_8h_source"/>
         <childnode refid="28" relation="include">
         </childnode>
       </node>
-      <node id="47">
+      <node id="48">
         <label>include/uipc/io.h</label>
         <link refid="io_8h_source"/>
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="48">
+      <node id="49">
         <label>include/uipc/io/gltf_io.h</label>
         <link refid="gltf__io_8h_source"/>
       </node>
-      <node id="46">
+      <node id="47">
         <label>include/uipc/io/scene_io.h</label>
         <link refid="scene__io_8h_source"/>
-        <childnode refid="47" relation="include">
-        </childnode>
         <childnode refid="48" relation="include">
         </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
       </node>
-      <node id="49">
+      <node id="50">
         <label>include/uipc/io/simplicial_complex_io.h</label>
         <link refid="simplicial__complex__io_8h_source"/>
-        <childnode refid="47" relation="include">
+        <childnode refid="48" relation="include">
         </childnode>
       </node>
       <node id="24">
@@ -671,6 +683,10 @@
       <node id="19">
         <label>include/uipc/uipc.h</label>
         <link refid="uipc_8h_source"/>
+      </node>
+      <node id="51">
+        <label>include/uipc/vdb/points_from_volume.h</label>
+        <link refid="vdb_2points__from__volume_8h_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classuipc_1_1geometry_1_1_simplicial_complex" prot="public">uipc::geometry::SimplicialComplex</innerclass>

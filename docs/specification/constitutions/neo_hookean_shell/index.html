@@ -754,6 +754,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Neo Hookean Shell
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -765,6 +778,49 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-neo-hookean-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      #11 Neo Hookean Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="#11 Neo Hookean Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deformation-energy-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deformation Energy Density
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1763,6 +1819,38 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-neo-hookean-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      #11 Neo Hookean Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="#11 Neo Hookean Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deformation-energy-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deformation Energy Density
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1777,7 +1865,58 @@
 
 
 
-<h1 id="neo-hookean-shell">Neo Hookean Shell</h1>
+<div><h1 id="neo-hookean-shell">Neo Hookean Shell</h1>
+<p><strong>Neo Hookean Shell</strong> is a constitutive model designed for simulating thin shell structures, based on a triangle element.</p>
+<p>For the sake of simplicity, we denote the three vertices of the triangle as <span class="arithmatex">\(\mathbf{x}_0\)</span>, <span class="arithmatex">\(\mathbf{x}_1\)</span>, and <span class="arithmatex">\(\mathbf{x}_2\)</span>. The rest shape positions are denoted as <span class="arithmatex">\(\bar{\mathbf{x}}_0\)</span>, <span class="arithmatex">\(\bar{\mathbf{x}}_1\)</span>, and <span class="arithmatex">\(\bar{\mathbf{x}}_2\)</span>.</p>
+<h2 id="11-neo-hookean-shell">#11 Neo Hookean Shell</h2>
+<p>For a triangular shell element with vertices at positions <span class="arithmatex">\(\mathbf{x}_0\)</span>, <span class="arithmatex">\(\mathbf{x}_1\)</span>, and <span class="arithmatex">\(\mathbf{x}_2\)</span>, we define the edge vectors:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathbf{e}_{01} = \mathbf{x}_1 - \mathbf{x}_0\\
+\mathbf{e}_{02} = \mathbf{x}_2 - \mathbf{x}_0
+\end{aligned}
+\]</div>
+<p>The current metric tensor is constructed as:</p>
+<div class="arithmatex">\[
+\mathbf{A} = \begin{bmatrix}
+\mathbf{e}_{01} \cdot \mathbf{e}_{01} &amp; \mathbf{e}_{01} \cdot \mathbf{e}_{02} \\
+\mathbf{e}_{02} \cdot \mathbf{e}_{01} &amp; \mathbf{e}_{02} \cdot \mathbf{e}_{02}
+\end{bmatrix}
+\]</div>
+<p>Similarly, for the reference configuration with positions <span class="arithmatex">\(\bar{\mathbf{x}}_0\)</span>, <span class="arithmatex">\(\bar{\mathbf{x}}_1\)</span>, and <span class="arithmatex">\(\bar{\mathbf{x}}_2\)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\bar{\mathbf{e}}_{01} = \bar{\mathbf{x}}_1 - \bar{\mathbf{x}}_0\\
+\bar{\mathbf{e}}_{02} = \bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_0
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\bar{\mathbf{B}} = \begin{bmatrix}
+\bar{\mathbf{e}}_{01} \cdot \bar{\mathbf{e}}_{01} &amp; \bar{\mathbf{e}}_{01} \cdot \bar{\mathbf{e}}_{02} \\
+\bar{\mathbf{e}}_{02} \cdot \bar{\mathbf{e}}_{01} &amp; \bar{\mathbf{e}}_{02} \cdot \bar{\mathbf{e}}_{02}
+\end{bmatrix}
+\]</div>
+<p>Here we use <span class="arithmatex">\(\bar{\mathbf{B}}\)</span> to denote the reference metric tensor.</p>
+<h3 id="deformation-energy-density">Deformation Energy Density</h3>
+<p>The Neo-Hookean shell deformation energy density is given by:</p>
+<div class="arithmatex">\[
+\Psi = \frac{\mu}{2} \left( \text{tr}(\bar{\mathbf{B}}^{-1} \mathbf{A}) - 2 - 2\ln J \right) + \frac{\lambda}{2} (\ln J)^2
+\]</div>
+<p>where:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\mu\)</span> is the shear modulus</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\lambda\)</span> is the Lamé parameter  </p>
+</li>
+<li>
+<p><span class="arithmatex">\(J = \sqrt{\det(\mathbf{A}) \det(\bar{\mathbf{B}}^{-1})}\)</span> is the determinant of the deformation</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\ln J = \frac{1}{2}\ln(\det(\mathbf{A}) \det(\bar{\mathbf{B}}^{-1}))\)</span> is the logarithmic strain</p>
+</li>
+</ul></div>
 
 
 
