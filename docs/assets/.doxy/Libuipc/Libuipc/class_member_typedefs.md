@@ -50,6 +50,11 @@
 * **InstanceAttributes** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md))
 
 
+## l
+
+* **Level** ([**uipc::Logger**](classuipc_1_1_logger.md))
+
+
 ## m
 
 * **MetaAttributes** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1_geometry.md))

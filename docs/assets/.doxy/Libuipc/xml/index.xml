@@ -279,8 +279,8 @@
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a99622e01f7f2b316925798f1f581fe9b" kind="function"><name>view</name></member>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a81d2f42b0c7cf43bbf3a0cbd10d8760b" kind="function"><name>get_name</name></member>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1afa92bd5a4cce8ade2fd12b0a73908cd7" kind="function"><name>get_allow_destroy</name></member>
-    <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a12e1a8d86b6fe2197d55ce89bd93f247" kind="function"><name>get_is_evolving</name></member>
-    <member refid="classuipc_1_1geometry_1_1_attribute_slot_1ad6235dd285f700b36b51ba4899021e6f" kind="function"><name>set_is_evolving</name></member>
+    <member refid="classuipc_1_1geometry_1_1_attribute_slot_1af6d3b8bd3ec4fae550a92e8862febeb9" kind="function"><name>get_is_evolving</name></member>
+    <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a45ce0c7e2f8149a4beede0e43b2b61ed" kind="function"><name>set_is_evolving</name></member>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a8ed2c85b8b67a40be1d1e322e359d48f" kind="function"><name>get_attribute</name></member>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a89efdbfca266e09af6ed2484f547bd00" kind="function"><name>get_attribute</name></member>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a271a1b68a4c04848706b089d83faa79e" kind="function"><name>get_use_count</name></member>
@@ -289,7 +289,7 @@
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a6ddea42ff87ea6af514d4833f473e9b3" kind="function"><name>do_clone_empty</name></member>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a346ea9aa4c08b95b0c9118dd787f5507" kind="function"><name>do_share_from</name></member>
     <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a1f8a233c299c7a3fac95915916988ca2" kind="function"><name>get_last_modified</name></member>
-    <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a5ffdc70be92717912841a3f5b124a791" kind="function"><name>set_last_modified</name></member>
+    <member refid="classuipc_1_1geometry_1_1_attribute_slot_1a08992d11471720a1ac12b5ac1f7e9465" kind="function"><name>set_last_modified</name></member>
   </compound>
   <compound refid="classuipc_1_1backend_1_1_buffer" kind="class"><name>uipc::backend::Buffer</name>
     <member refid="classuipc_1_1backend_1_1_buffer_1ac6ca8818ed4acdbffe7e930249e64cd2" kind="variable"><name>m_resize_func</name></member>
@@ -1188,6 +1188,28 @@
     <member refid="classuipc_1_1constitution_1_1_linear_motor_1a54cdf7a39672c4ca04cc509ace8b71f9" kind="function"><name>animate</name></member>
     <member refid="classuipc_1_1constitution_1_1_linear_motor_1a0e58f4b6c13f902701e682050dfb66ea" kind="function"><name>get_uid</name></member>
   </compound>
+  <compound refid="classuipc_1_1_logger" kind="class"><name>uipc::Logger</name>
+    <member refid="classuipc_1_1_logger_1a923ea6e73791378b3e219b3bef8358c1" kind="typedef"><name>Level</name></member>
+    <member refid="classuipc_1_1_logger_1a75cd74640953cfaa9336908ccd0e92f3" kind="variable"><name>m_impl</name></member>
+    <member refid="classuipc_1_1_logger_1abc14f0bbd76ec1ffee0ca2333eb513c8" kind="function"><name>create_console_logger</name></member>
+    <member refid="classuipc_1_1_logger_1a6539d51fb2a3e31daa2710db8859956c" kind="function"><name>current_logger</name></member>
+    <member refid="classuipc_1_1_logger_1af88b2b5f75b7407acd0632384efc3640" kind="function"><name>current_logger</name></member>
+    <member refid="classuipc_1_1_logger_1ab9b5c704bd50ef62956ca8ab459010e9" kind="function"><name>set_level</name></member>
+    <member refid="classuipc_1_1_logger_1a284b4d770bec1a266a2b8f25ac7d1e3e" kind="function"><name>get_level</name></member>
+    <member refid="classuipc_1_1_logger_1a3a2d6435b74803bd270fa8fc236d36fd" kind="function"><name>set_pattern</name></member>
+    <member refid="classuipc_1_1_logger_1adc516476f38fea7a72481c428b687686" kind="function"><name>debug</name></member>
+    <member refid="classuipc_1_1_logger_1a5025eeb56a5bf8ac56a679ebc82775ab" kind="function"><name>info</name></member>
+    <member refid="classuipc_1_1_logger_1ae9703cac2d12ed1875ab304c9f070a88" kind="function"><name>warn</name></member>
+    <member refid="classuipc_1_1_logger_1ae4c03ef2cf80d664b8c6af91e4d50b9c" kind="function"><name>error</name></member>
+    <member refid="classuipc_1_1_logger_1a7cdb8bb3e80353a87cc95b7e6cd05aa8" kind="function"><name>critical</name></member>
+    <member refid="classuipc_1_1_logger_1a3cda77e20a0d44c637a888721299b8ce" kind="function"><name>log</name></member>
+    <member refid="classuipc_1_1_logger_1a1851440181f9f0760b2436518dab1cc1" kind="function"><name>_debug</name></member>
+    <member refid="classuipc_1_1_logger_1ae7b5b1c00c1d8f8570dea279f3c2b2ed" kind="function"><name>_info</name></member>
+    <member refid="classuipc_1_1_logger_1ad273d12bf2c6a32e0c7ded7e912d23d5" kind="function"><name>_warn</name></member>
+    <member refid="classuipc_1_1_logger_1aa7272ab81f5a084f67d0323034446229" kind="function"><name>_error</name></member>
+    <member refid="classuipc_1_1_logger_1ae40e57f54ff7798abc588bc3a19847e5" kind="function"><name>_critical</name></member>
+    <member refid="classuipc_1_1_logger_1abe5ee43e99bcb01a35b8ba06885185e6" kind="function"><name>_log</name></member>
+  </compound>
   <compound refid="classuipc_1_1_log_pattern_guard" kind="class"><name>uipc::LogPatternGuard</name>
     <member refid="classuipc_1_1_log_pattern_guard_1a5b3e6f2091c14b041e8a5ebd25006e1c" kind="function"><name>LogPatternGuard</name></member>
     <member refid="classuipc_1_1_log_pattern_guard_1a52d30e97f769acfc09f88b5e9e5fed19" kind="function"><name>~LogPatternGuard</name></member>
@@ -1379,6 +1401,13 @@
   <compound refid="structuipc_1_1_pmr_deleter" kind="struct"><name>uipc::PmrDeleter</name>
     <member refid="structuipc_1_1_pmr_deleter_1a2540d453c875b52be0b7d7113bee74d8" kind="typedef"><name>Allocator</name></member>
     <member refid="structuipc_1_1_pmr_deleter_1addc52ce2e3241bb3b6d1783db209167b" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classuipc_1_1usd_1_1_prim" kind="class"><name>uipc::usd::Prim</name>
+    <member refid="classuipc_1_1usd_1_1_prim_1a3b8dcde326337225efae2cc32b1ef76d" kind="friend"><name>Stage</name></member>
+    <member refid="classuipc_1_1usd_1_1_prim_1ad0b1bed171ddaf89ef044fbefbdcfe72" kind="variable"><name>m_impl</name></member>
+    <member refid="classuipc_1_1usd_1_1_prim_1a0d07279371067060de1b0eb0a31ac7c8" kind="function"><name>to_geometry</name></member>
+    <member refid="classuipc_1_1usd_1_1_prim_1a1eb7e0c02f505c181ffc9bfb8a8b8cc5" kind="function"><name>from_geometry</name></member>
+    <member refid="classuipc_1_1usd_1_1_prim_1aa50ff8533c3fadd27211af64d4c99e7f" kind="function"><name>Prim</name></member>
   </compound>
   <compound refid="structuipc_1_1propagate__const" kind="struct"><name>uipc::propagate_const</name>
     <member refid="structuipc_1_1propagate__const_1a3014858c8137e10d48b4930edd00b24e" kind="typedef"><name>DstT_</name></member>
@@ -1612,7 +1641,7 @@
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1ae146637d8a5bad36ce666e35169f3be4" kind="function"><name>SceneVisitor</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1afbed2702754bb8e7b893d12057871519" kind="function"><name>SceneVisitor</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a26af605086aad23c2ee1df489d5869fa" kind="function"><name>operator=</name></member>
-    <member refid="classuipc_1_1backend_1_1_scene_visitor_1a23772fad953f08e00b1cee45b9ed5bf0" kind="function"><name>operator=</name></member>
+    <member refid="classuipc_1_1backend_1_1_scene_visitor_1a622c776301db0bf6efd73aab41b0c9ce" kind="function"><name>operator=</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9dc8ab605db9652fc502e7e1066a3fbc" kind="function"><name>begin_pending</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a9f2ac311e7ba7b2bf297cac64313c35c" kind="function"><name>solve_pending</name></member>
     <member refid="classuipc_1_1backend_1_1_scene_visitor_1a4a297c76ad7d20acc43bc95ab17b9912" kind="function"><name>is_pending</name></member>
@@ -1839,6 +1868,13 @@
     <member refid="classuipc_1_1constitution_1_1_stable_neo_hookean_1ae42bccc60a7a6f7d1d220c3ddc698504" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1_stable_neo_hookean_1aa9fdaee94af914bbd21f4c1ab3602aea" kind="function"><name>get_uid</name></member>
   </compound>
+  <compound refid="classuipc_1_1usd_1_1_stage" kind="class"><name>uipc::usd::Stage</name>
+    <member refid="classuipc_1_1usd_1_1_stage_1add67a76c8bc7610bb3c4fa41090be650" kind="variable"><name>m_impl</name></member>
+    <member refid="classuipc_1_1usd_1_1_stage_1a2adf274c58051c35e1371874226c3cc2" kind="function"><name>open</name></member>
+    <member refid="classuipc_1_1usd_1_1_stage_1aadcf21a6a4a534a140fb1ade81ceae7f" kind="function"><name>get_prim_at_path</name></member>
+    <member refid="classuipc_1_1usd_1_1_stage_1a2d2d9503357c42c0c6a84a62e83b6a0a" kind="function"><name>~Stage</name></member>
+    <member refid="classuipc_1_1usd_1_1_stage_1a426559190346c9a02d6fb6b1cf55a63f" kind="function"><name>Stage</name></member>
+  </compound>
   <compound refid="classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell" kind="class"><name>uipc::constitution::StrainLimitingBaraffWitkinShell</name>
     <member refid="classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell_1abd157e92efd10593af6c0a4fca8267da" kind="typedef"><name>Base</name></member>
     <member refid="classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell_1af1b8f2163595874c5cc47f8ebe399bec" kind="variable"><name>m_config</name></member>
@@ -2045,7 +2081,7 @@
     <member refid="classuipc_1_1backend_1_1_world_visitor_1ad88242e6114b981071ddaca5c1a1b654" kind="function"><name>WorldVisitor</name></member>
     <member refid="classuipc_1_1backend_1_1_world_visitor_1a35044942585402dfcc20bace1268047b" kind="function"><name>WorldVisitor</name></member>
     <member refid="classuipc_1_1backend_1_1_world_visitor_1a570a7722d073c100a2dbfbf99c0e751b" kind="function"><name>operator=</name></member>
-    <member refid="classuipc_1_1backend_1_1_world_visitor_1aa98ebf080d352ce7c42b9c75e62ccd71" kind="function"><name>operator=</name></member>
+    <member refid="classuipc_1_1backend_1_1_world_visitor_1ae11439f358938905650bd81b2843e8c0" kind="function"><name>operator=</name></member>
     <member refid="classuipc_1_1backend_1_1_world_visitor_1ac755580589c0a6ff8a22fcae7bf6462c" kind="function"><name>scene</name></member>
     <member refid="classuipc_1_1backend_1_1_world_visitor_1a4329caf14462f695ebd3d7068fd66e6d" kind="function"><name>animator</name></member>
     <member refid="classuipc_1_1backend_1_1_world_visitor_1aa9dd36cd4ba1549cb1f459ceb7f7673f" kind="function"><name>get</name></member>
@@ -2288,6 +2324,7 @@
     <member refid="intersection_8h_1aa8464427ffa82a6e3ed43fce4eeaf384" kind="function"><name>is_point_in_tet</name></member>
     <member refid="is__trimesh__closed_8h_1a35e2794cc41a45fdf3bddcc36e9d15cc" kind="function"><name>is_trimesh_closed</name></member>
     <member refid="label__connected__vertices_8h_1abfd3492665c6eb9b36a372d92cf95bc9" kind="function"><name>label_connected_vertices</name></member>
+    <member refid="label__graph__color_8h_1ab128b9f385b495098eec249d03465621" kind="function"><name>label_graph_color</name></member>
     <member refid="label__region_8h_1ab5d93eaee5668468c042a8615b5766fd" kind="function"><name>label_region</name></member>
     <member refid="label__surface_8h_1afb2b526f1cc340a206d0b17dd21c8833" kind="function"><name>label_surface</name></member>
     <member refid="label__triangle__orient_8h_1af6e266c588cca12386e555a02e6713ff" kind="function"><name>label_triangle_orient</name></member>
@@ -2298,7 +2335,6 @@
     <member refid="optimal__transform_8h_1a977a754d89cd0d7b7f9190c35d737e5e" kind="function"><name>optimal_transform</name></member>
     <member refid="optimal__transform_8h_1ab9433bc37e2338ebeebe22e763cbe32c" kind="function"><name>optimal_transform</name></member>
     <member refid="geometry_2utils_2points__from__volume_8h_1a8cdeb54c17cb45ef98e89af18958861a" kind="function"><name>points_from_volume</name></member>
-    <member refid="tetrahedralize_8h_1aebe236e16bb17bf5eb9f4585ba9f4b5c" kind="function"><name>tetrahedralize</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1geometry_1_1affine__body" kind="namespace"><name>uipc::geometry::affine_body</name>
     <member refid="compute__body__force_8h_1ad9461f8d0d720c9b7e21ba32ddc219e9" kind="function"><name>compute_body_force</name></member>
@@ -2311,9 +2347,22 @@
   </compound>
   <compound refid="namespaceuipc_1_1io" kind="namespace"><name>uipc::io</name>
   </compound>
+  <compound refid="namespaceuipc_1_1logger" kind="namespace"><name>uipc::logger</name>
+    <member refid="logger_8h_1ab1c04d56d69eadd80430eca09edf9eec" kind="function"><name>set_level</name></member>
+    <member refid="logger_8h_1a445d813c1b7c5e228255887ebb5aba6b" kind="function"><name>get_level</name></member>
+    <member refid="logger_8h_1a56be7297c0fd8dd706d12ab2613d5407" kind="function"><name>set_pattern</name></member>
+    <member refid="logger_8h_1a44a3ac0ade8523db5a1f701e216dfc2c" kind="function"><name>debug</name></member>
+    <member refid="logger_8h_1a3a08f6b10f4e463b842a7b68f1027e9f" kind="function"><name>info</name></member>
+    <member refid="logger_8h_1a928f8b325c26da74104b7694517db041" kind="function"><name>warn</name></member>
+    <member refid="logger_8h_1af03ff3d4c4b9d1709fddc94964d0db78" kind="function"><name>error</name></member>
+    <member refid="logger_8h_1a6de83480a2fc81f86214dcec99406fd2" kind="function"><name>critical</name></member>
+    <member refid="logger_8h_1a3915f7e9788d1858a6996406c99547f2" kind="function"><name>log</name></member>
+  </compound>
   <compound refid="namespaceuipc_1_1pmr" kind="namespace"><name>uipc::pmr</name>
   </compound>
   <compound refid="namespaceuipc_1_1sanity__check" kind="namespace"><name>uipc::sanity_check</name>
+  </compound>
+  <compound refid="namespaceuipc_1_1usd" kind="namespace"><name>uipc::usd</name>
   </compound>
   <compound refid="namespaceuipc_1_1vdb" kind="namespace"><name>uipc::vdb</name>
     <member refid="vdb_2points__from__volume_8h_1a455c866ae287a4691d12e659f6f79875" kind="function"><name>points_from_volume</name></member>
@@ -2397,19 +2446,6 @@
   </compound>
   <compound refid="demangle_8h" kind="file"><name>demangle.h</name>
   </compound>
-  <compound refid="dllexport_8h" kind="file"><name>dllexport.h</name>
-    <member refid="dllexport_8h_1a3eb99fe897cd1af9d0dc6aad2a814a56" kind="define"><name>UIPC_EXTERN_C</name></member>
-    <member refid="dllexport_8h_1a3c6a0d45f17518b8aa4e4b9700f45c9e" kind="define"><name>UIPC_NOEXCEPT</name></member>
-    <member refid="dllexport_8h_1a9e9f506e7132b579453c887273a4622d" kind="define"><name>UIPC_FORCE_INLINE</name></member>
-    <member refid="dllexport_8h_1a2fb5c35f3aa428ea8593002f0eb8f768" kind="define"><name>UIPC_NEVER_INLINE</name></member>
-    <member refid="dllexport_8h_1acfccf2768a9b0aaf9ad8ea2ead4c558f" kind="define"><name>UIPC_EXPORT_API</name></member>
-    <member refid="dllexport_8h_1a848fac04bc547d078236b5dcd65299a5" kind="define"><name>UIPC_IMPORT_API</name></member>
-    <member refid="dllexport_8h_1a33fa693b263526a6f1b0d54d32854e57" kind="define"><name>UIPC_CORE_API</name></member>
-    <member refid="dllexport_8h_1a0419b297355481c979554797ed959585" kind="define"><name>UIPC_GEOMETRY_API</name></member>
-    <member refid="dllexport_8h_1a4a497ff025eae67c79130f1132cc2b63" kind="define"><name>UIPC_CONSTITUTION_API</name></member>
-    <member refid="dllexport_8h_1ab57ac2f37137c1ea1a58aa7ee31d021a" kind="define"><name>UIPC_IO_API</name></member>
-    <member refid="dllexport_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
-  </compound>
   <compound refid="enumerate_8h" kind="file"><name>enumerate.h</name>
   </compound>
   <compound refid="exception_8h" kind="file"><name>exception.h</name>
@@ -2434,6 +2470,8 @@
     <member refid="log_8h_1ad4179a5e9603e13dc762f9722439a519" kind="define"><name>UIPC_ASSERT</name></member>
   </compound>
   <compound refid="log__pattern__guard_8h" kind="file"><name>log_pattern_guard.h</name>
+  </compound>
+  <compound refid="logger_8h" kind="file"><name>logger.h</name>
   </compound>
   <compound refid="magic__enum_8h" kind="file"><name>magic_enum.h</name>
   </compound>
@@ -2680,6 +2718,8 @@
   </compound>
   <compound refid="label__connected__vertices_8h" kind="file"><name>label_connected_vertices.h</name>
   </compound>
+  <compound refid="label__graph__color_8h" kind="file"><name>label_graph_color.h</name>
+  </compound>
   <compound refid="label__region_8h" kind="file"><name>label_region.h</name>
   </compound>
   <compound refid="label__surface_8h" kind="file"><name>label_surface.h</name>
@@ -2695,8 +2735,6 @@
   <compound refid="optimal__transform_8h" kind="file"><name>optimal_transform.h</name>
   </compound>
   <compound refid="simplex__utils_8h" kind="file"><name>simplex_utils.h</name>
-  </compound>
-  <compound refid="tetrahedralize_8h" kind="file"><name>tetrahedralize.h</name>
   </compound>
   <compound refid="io_8h" kind="file"><name>io.h</name>
   </compound>
@@ -2716,8 +2754,30 @@
   </compound>
   <compound refid="uipc_8h" kind="file"><name>uipc.h</name>
   </compound>
-  <compound refid="dll__export_8h" kind="file"><name>dll_export.h</name>
-    <member refid="dll__export_8h_1a14c73594cdba16323c5172fc3eda71ef" kind="define"><name>UIPC_VDB_API</name></member>
+  <compound refid="prim_8h" kind="file"><name>prim.h</name>
+  </compound>
+  <compound refid="stage_8h" kind="file"><name>stage.h</name>
+  </compound>
+  <compound refid="stage__io_8h" kind="file"><name>stage_io.h</name>
+  </compound>
+  <compound refid="common_2dllexport_8h" kind="file"><name>dllexport.h</name>
+    <member refid="common_2dllexport_8h_1a3eb99fe897cd1af9d0dc6aad2a814a56" kind="define"><name>UIPC_EXTERN_C</name></member>
+    <member refid="common_2dllexport_8h_1a3c6a0d45f17518b8aa4e4b9700f45c9e" kind="define"><name>UIPC_NOEXCEPT</name></member>
+    <member refid="common_2dllexport_8h_1a9e9f506e7132b579453c887273a4622d" kind="define"><name>UIPC_FORCE_INLINE</name></member>
+    <member refid="common_2dllexport_8h_1a2fb5c35f3aa428ea8593002f0eb8f768" kind="define"><name>UIPC_NEVER_INLINE</name></member>
+    <member refid="common_2dllexport_8h_1acfccf2768a9b0aaf9ad8ea2ead4c558f" kind="define"><name>UIPC_EXPORT_API</name></member>
+    <member refid="common_2dllexport_8h_1a848fac04bc547d078236b5dcd65299a5" kind="define"><name>UIPC_IMPORT_API</name></member>
+    <member refid="common_2dllexport_8h_1a33fa693b263526a6f1b0d54d32854e57" kind="define"><name>UIPC_CORE_API</name></member>
+    <member refid="common_2dllexport_8h_1a0419b297355481c979554797ed959585" kind="define"><name>UIPC_GEOMETRY_API</name></member>
+    <member refid="common_2dllexport_8h_1a4a497ff025eae67c79130f1132cc2b63" kind="define"><name>UIPC_CONSTITUTION_API</name></member>
+    <member refid="common_2dllexport_8h_1ab57ac2f37137c1ea1a58aa7ee31d021a" kind="define"><name>UIPC_IO_API</name></member>
+    <member refid="common_2dllexport_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
+  </compound>
+  <compound refid="usd_2dllexport_8h" kind="file"><name>dllexport.h</name>
+    <member refid="usd_2dllexport_8h_1a1bc347f491ef02d5c3b88b62fe7e145b" kind="define"><name>UIPC_USD_API</name></member>
+  </compound>
+  <compound refid="vdb_2dllexport_8h" kind="file"><name>dllexport.h</name>
+    <member refid="vdb_2dllexport_8h_1a14c73594cdba16323c5172fc3eda71ef" kind="define"><name>UIPC_VDB_API</name></member>
   </compound>
   <compound refid="geometry_2utils_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
   </compound>
@@ -2756,6 +2816,8 @@
   <compound refid="dir_9f30510905f1286cc334e7ecdb1aceca" kind="dir"><name>include/uipc</name>
   </compound>
   <compound refid="dir_e6f33594e1ca9c65efcf98646d93736b" kind="dir"><name>include/uipc_gui</name>
+  </compound>
+  <compound refid="dir_127bf4b01602b8d031b5fde8b608abd9" kind="dir"><name>include/uipc/usd</name>
   </compound>
   <compound refid="dir_739799d2da88efedfd4a7c44220c72e4" kind="dir"><name>include/uipc/geometry/utils</name>
   </compound>

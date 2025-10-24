@@ -278,6 +278,8 @@
 
 * [**LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**Logger**](classuipc_1_1_logger.md)
+([**uipc**](namespaceuipc.md))
 * [**LogPatternGuard**](classuipc_1_1_log_pattern_guard.md)
 ([**uipc**](namespaceuipc.md))
 
@@ -325,6 +327,8 @@
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**PmrDeleter**](structuipc_1_1_pmr_deleter.md)
 ([**uipc**](namespaceuipc.md))
+* [**Prim**](classuipc_1_1usd_1_1_prim.md)
+([**uipc::usd**](namespaceuipc_1_1usd.md))
 * [**propagate\_const**](structuipc_1_1propagate__const.md)
 ([**uipc**](namespaceuipc.md))
 
@@ -407,6 +411,8 @@
 ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * [**StableNeoHookean**](classuipc_1_1constitution_1_1_stable_neo_hookean.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**Stage**](classuipc_1_1usd_1_1_stage.md)
+([**uipc::usd**](namespaceuipc_1_1usd.md))
 * [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md)

@@ -69,7 +69,7 @@
 |  [**core::Scene**](classuipc_1_1core_1_1_scene.md) | [**get**](#function-get) () noexcept const<br> |
 |  bool | [**is\_pending**](#function-is_pending) () noexcept const<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator) (const [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &) = delete<br> |
-|  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator_1) ([**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &&) = default<br> |
+|  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) & | [**operator=**](#function-operator_1) ([**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) &&) = delete<br> |
 |  span&lt; IndexT &gt; | [**pending\_destroy\_ids**](#function-pending_destroy_ids) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_geometries**](#function-pending_geometries) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) &gt; &gt; | [**pending\_rest\_geometries**](#function-pending_rest_geometries) () noexcept const<br> |
@@ -363,7 +363,7 @@ SceneVisitor & uipc::backend::SceneVisitor::operator= (
 ```C++
 SceneVisitor & uipc::backend::SceneVisitor::operator= (
     SceneVisitor &&
-) = default
+) = delete
 ```
 
 

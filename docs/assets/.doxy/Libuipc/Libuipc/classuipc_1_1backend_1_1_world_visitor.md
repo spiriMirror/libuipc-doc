@@ -58,7 +58,7 @@
 |  [**AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md) | [**animator**](#function-animator) () noexcept<br> |
 |  [**core::World**](classuipc_1_1core_1_1_world.md) | [**get**](#function-get) () noexcept const<br> |
 |  [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) & | [**operator=**](#function-operator) (const [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) &) = delete<br> |
-|  [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) & | [**operator=**](#function-operator_1) ([**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) &&) = default<br> |
+|  [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) & | [**operator=**](#function-operator_1) ([**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) &&) = delete<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) | [**scene**](#function-scene) () noexcept<br> |
 
 
@@ -199,7 +199,7 @@ WorldVisitor & uipc::backend::WorldVisitor::operator= (
 ```C++
 WorldVisitor & uipc::backend::WorldVisitor::operator= (
     WorldVisitor &&
-) = default
+) = delete
 ```
 
 

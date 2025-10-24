@@ -125,6 +125,7 @@
 |  UIPC\_GEOMETRY\_API bool | [**is\_point\_in\_tet**](#function-is_point_in_tet) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & T3, const Vector3 & P) <br>_Check if a point is in a tetrahedron._  |
 |  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Check if a trimesh is closed._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_graph\_color**](#function-label_graph_color) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Label the vertex color of a simplicial complex by graph coloring algorithm._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_region**](#function-label_region) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the regions of a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_surface**](#function-label_surface) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Label the surface of a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_triangle\_orient**](#function-label_triangle_orient) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Label the orientation of the triangles in the simplicial complex._  |
@@ -147,7 +148,6 @@
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**points\_from\_volume**](#function-points_from_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float resolution=0.01) <br>_Construct a point cloud inside a volume represented by a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetrahedralize**](#function-tetrahedralize) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const Json & options=Json::object()) <br>_Tetrahedralize a 2D simplicial complex (trimesh)._  |
 |  UIPC\_GEOMETRY\_API bool | [**tri\_edge\_intersect**](#function-tri_edge_intersect) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & E0, const Vector3 & E1) <br>_Check if a triangle and an edge intersect._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br>_Create a simplicial complex from a triangle mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Fs) <br>_Create a 2D simplicial complex from a quad mesh (4-sided polygons)._  |
@@ -743,6 +743,40 @@ S&lt;AttributeSlot&lt;IndexT&gt;&gt; The `region` attribute slot.
 
 
 
+### function label\_graph\_color 
+
+_Label the vertex color of a simplicial complex by graph coloring algorithm._ 
+```C++
+UIPC_GEOMETRY_API S< AttributeSlot < IndexT > > uipc::geometry::label_graph_color (
+    SimplicialComplex & sc
+) 
+```
+
+
+
+The edges of the graph is from the edges of the simplicial complex.
+* Create a `graph/color` &lt;IndexT&gt; attribute on `vertices` to tell the color of each vertex.
+* Create a `graph/color_count` &lt;IndexT&gt; attribute on `meta` to tell how many colors are used.
+
+
+
+
+
+
+**Returns:**
+
+S&lt;AttributeSlot&lt;IndexT&gt;&gt; The `graph/color` attribute slot. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function label\_region 
 
 _Label the regions of a simplicial complex._ 
@@ -755,20 +789,11 @@ UIPC_GEOMETRY_API void uipc::geometry::label_region (
 
 
 
-* Create a `region` &lt;IndexT&gt; attribute on `edges` to tell which region an edge is belong to.
-* Create a `region` &lt;IndexT&gt; attribute on `triangles` to tell which region a triangle is belong to. (if exists)
-* Create a `region` &lt;IndexT&gt; attribute on `tetrahedra` to tell which region a tetrahedron is belong to. (if exists)
-* Create a `region_count` &lt;IndexT&gt; attribute on `meta` to tell how many regions are there.
-
-
-
-
-
-
-**Returns:**
-
-S&lt;AttributeSlot&lt;IndexT&gt;&gt; The `region` attribute slot. 
-
+* Create a `region` &lt;IndexT&gt; attribute on `vertices` to tell which region a vertex belongs to.
+* Create a `region` &lt;IndexT&gt; attribute on `edges` to tell which region an edge belongs to.
+* Create a `region` &lt;IndexT&gt; attribute on `triangles` (if exists) to tell which region a triangle belongs to.
+* Create a `region` &lt;IndexT&gt; attribute on `tetrahedra` (if exists) to tell which region a tetrahedron belongs to.
+* Create a `region_count` &lt;IndexT&gt; attribute on `meta` to tell how many regions are there. 
 
 
 
@@ -1275,34 +1300,6 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetmesh (
 
 * `Vs` The vertex positions of the tetrahedral mesh 
 * `Ts` The tetrahedra of the tetrahedral mesh 
-
-
-
-
-        
-
-<hr>
-
-
-
-### function tetrahedralize 
-
-_Tetrahedralize a 2D simplicial complex (trimesh)._ 
-```C++
-UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetrahedralize (
-    const SimplicialComplex & sc,
-    const Json & options=Json::object()
-) 
-```
-
-
-
-
-
-**Returns:**
-
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) The simplicial complexes by regions. 
-
 
 
 

@@ -21,12 +21,14 @@
 * **constitution\_type** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **compute\_dyadic\_mass** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
+* **critical** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## d
 
 * **default\_config** ([**uipc**](namespaceuipc.md))
 * **demangle** ([**uipc**](namespaceuipc.md))
+* **debug** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## e
@@ -37,6 +39,7 @@
 * **EP\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **edge\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **extract\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **error** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## f
@@ -50,6 +53,7 @@
 
 * **ground** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **glfw\_native\_window\_handle** ([**uipc::gui**](namespaceuipc_1_1gui.md))
+* **get\_level** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## h
@@ -63,6 +67,7 @@
 * **init** ([**uipc**](namespaceuipc.md))
 * **is\_point\_in\_tet** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **info** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## l
@@ -70,10 +75,12 @@
 * **lame\_to\_EG** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **lame\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **label\_connected\_vertices** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **label\_graph\_color** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_triangle\_orient** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **linemesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **log** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## m
@@ -129,6 +136,8 @@
 ## s
 
 * **static\_pointer\_cast** ([**uipc**](namespaceuipc.md))
+* **set\_level** ([**uipc::logger**](namespaceuipc_1_1logger.md))
+* **set\_pattern** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## t
@@ -136,7 +145,6 @@
 * **test\_gltf** ([**uipc**](namespaceuipc.md))
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
-* **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
@@ -149,6 +157,11 @@
 ## v
 
 * **view** ([**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))
+
+
+## w
+
+* **warn** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 

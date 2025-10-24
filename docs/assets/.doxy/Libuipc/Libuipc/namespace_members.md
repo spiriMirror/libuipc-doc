@@ -29,12 +29,14 @@
 * **constitution\_type** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **compute\_dyadic\_mass** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
+* **critical** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## d
 
 * **default\_config** ([**uipc**](namespaceuipc.md))
 * **demangle** ([**uipc**](namespaceuipc.md))
+* **debug** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## e
@@ -46,6 +48,7 @@
 * **Engine** ([**uipc::core::internal**](namespaceuipc_1_1core_1_1internal.md))
 * **edge\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **extract\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **error** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## f
@@ -64,6 +67,7 @@
 * **GeometrySlotState** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **ground** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **glfw\_native\_window\_handle** ([**uipc::gui**](namespaceuipc_1_1gui.md))
+* **get\_level** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## h
@@ -86,6 +90,7 @@
 * **ImplicitGeometrySlot** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_point\_in\_tet** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **info** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## j
@@ -98,10 +103,12 @@
 * **lame\_to\_EG** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **lame\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **label\_connected\_vertices** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **label\_graph\_color** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_triangle\_orient** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **linemesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **log** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## m
@@ -179,6 +186,8 @@
 * **SanityCheckResult** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **SubsceneModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **SimplicialComplexSlot** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **set\_level** ([**uipc::logger**](namespaceuipc_1_1logger.md))
+* **set\_pattern** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## t
@@ -189,7 +198,6 @@
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **TimePoint** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
-* **tetrahedralize** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
@@ -224,6 +232,7 @@
 ## w
 
 * **W** ([**uipc**](namespaceuipc.md))
+* **warn** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
 ## _

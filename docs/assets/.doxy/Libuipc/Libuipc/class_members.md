@@ -68,6 +68,9 @@
 
 * **clear** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md), [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md), [**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md), [**uipc::geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md), [**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md), [**uipc::geometry::DeserialSharedAttributeContext**](classuipc_1_1geometry_1_1_deserial_shared_attribute_context.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1_geometry_1_1_instance_attributes_t.md), [**uipc::geometry::IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md), [**uipc::geometry::IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md), [**uipc::geometry::SerialSharedAttributeContext**](classuipc_1_1geometry_1_1_serial_shared_attribute_context.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
 * **current** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **create\_console\_logger** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **critical** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **current\_logger** ([**uipc::Logger**](classuipc_1_1_logger.md))
 * **ContactTabularVisitor** ([**uipc::backend::ContactTabularVisitor**](classuipc_1_1backend_1_1_contact_tabular_visitor.md))
 * **contact\_models** ([**uipc::backend::ContactTabularVisitor**](classuipc_1_1backend_1_1_contact_tabular_visitor.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md))
 * **config** ([**uipc::backend::EngineCreateInfo**](classuipc_1_1backend_1_1_engine_create_info.md), [**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md), [**uipc::core::SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md), [**uipc::core::SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md), [**uipc::core::internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md))
@@ -130,6 +133,7 @@
 
 * **data** ([**uipc::BufferInfo**](classuipc_1_1_buffer_info.md))
 * **default\_instance** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **debug** ([**uipc::Logger**](classuipc_1_1_logger.md))
 * **disable\_all** ([**uipc::Timer**](classuipc_1_1_timer.md))
 * **DiffSimVisitor** ([**uipc::backend::DiffSimVisitor**](classuipc_1_1backend_1_1_diff_sim_visitor.md))
 * **diff\_sim** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md), [**uipc::core::internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md))
@@ -182,6 +186,7 @@
 ## e
 
 * **Exception** ([**uipc::Exception**](classuipc_1_1_exception.md), [**uipc::JsonIOError**](classuipc_1_1_json_i_o_error.md), [**uipc::core::EngineException**](classuipc_1_1core_1_1_engine_exception.md), [**uipc::core::SceneIOError**](classuipc_1_1core_1_1_scene_i_o_error.md), [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1_attribute_collection_error.md), [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1_attribute_i_o_error.md), [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md), [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1_urdf_i_o_error.md))
+* **error** ([**uipc::Logger**](classuipc_1_1_logger.md), [**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
 * **elapsed** ([**uipc::Timer**](classuipc_1_1_timer.md), [**uipc::details::ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md))
 * **enable\_all** ([**uipc::Timer**](classuipc_1_1_timer.md))
 * **element\_size** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md))
@@ -195,7 +200,6 @@
 * **element\_count** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md))
 * **Engine** ([**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1_engine.md))
 * **EngineStatus** ([**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
-* **error** ([**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
 * **EngineStatusCollection** ([**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md))
 * **emplace** ([**uipc::core::ObjectCollection**](classuipc_1_1core_1_1_object_collection.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md))
 * **errors** ([**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
@@ -220,11 +224,13 @@
 * **from\_snapshot** ([**uipc::core::SceneFactory**](classuipc_1_1core_1_1_scene_factory.md))
 * **full\_name** ([**uipc::details::ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md))
 * **flush** ([**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md))
+* **from\_geometry** ([**uipc::usd::Prim**](classuipc_1_1usd_1_1_prim.md))
 
 
 ## g
 
 * **GlobalTimer** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **get\_level** ([**uipc::Logger**](classuipc_1_1_logger.md))
 * **GeometryVisitor** ([**uipc::backend::GeometryVisitor**](classuipc_1_1backend_1_1_geometry_visitor.md))
 * **geometries** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md), [**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::core::Object**](classuipc_1_1core_1_1_object.md), [**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md), [**uipc::core::Scene**](classuipc_1_1core_1_1_scene.md), [**uipc::core::SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md), [**uipc::core::internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md))
 * **get** ([**uipc::backend::SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md), [**uipc::backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md))
@@ -264,6 +270,7 @@
 * **GeometrySlot** ([**uipc::geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md))
 * **get\_geometry** ([**uipc::geometry::GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md), [**uipc::geometry::GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md))
 * **GeometrySlotT** ([**uipc::geometry::GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md))
+* **get\_prim\_at\_path** ([**uipc::usd::Stage**](classuipc_1_1usd_1_1_stage.md))
 
 
 ## h
@@ -278,6 +285,7 @@
 ## i
 
 * **itemsize** ([**uipc::BufferInfo**](classuipc_1_1_buffer_info.md))
+* **info** ([**uipc::Logger**](classuipc_1_1_logger.md), [**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
 * **is\_ready** ([**uipc::ResidentThread**](classuipc_1_1_resident_thread.md))
 * **init** ([**uipc::backend::AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md), [**uipc::core::Animation**](classuipc_1_1core_1_1_animation.md), [**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::core::World**](classuipc_1_1core_1_1_world.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1_engine.md), [**uipc::core::internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md), [**uipc::core::internal::World**](classuipc_1_1core_1_1internal_1_1_world.md))
 * **INVALID** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1_buffer_view.md))
@@ -291,7 +299,6 @@
 * **insert** ([**uipc::core::Animator**](classuipc_1_1core_1_1_animator.md), [**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md), [**uipc::core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md))
 * **is\_enabled** ([**uipc::core::ContactModel**](classuipc_1_1core_1_1_contact_model.md), [**uipc::core::SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md))
 * **internal\_contact\_models** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
-* **info** ([**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
 * **ids** ([**uipc::core::Object::CGeometries**](classuipc_1_1core_1_1_object_1_1_c_geometries.md), [**uipc::core::Object::Geometries**](classuipc_1_1core_1_1_object_1_1_geometries.md))
 * **is\_empty** ([**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md))
 * **infos** ([**uipc::core::SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md))
@@ -327,6 +334,8 @@
 ## l
 
 * **LogPatternGuard** ([**uipc::LogPatternGuard**](classuipc_1_1_log_pattern_guard.md))
+* **Level** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **log** ([**uipc::Logger**](classuipc_1_1_logger.md))
 * **lambda** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md))
 * **lame** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md))
 * **LinearMotor** ([**uipc::constitution::LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md))
@@ -351,7 +360,7 @@
 * **max\_depth** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **max\_full\_name\_length** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **merge\_timers** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
-* **m\_impl** ([**uipc::ResidentThread**](classuipc_1_1_resident_thread.md), [**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md), [**uipc::core::ContactSystemFeature**](classuipc_1_1core_1_1_contact_system_feature.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md), [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md), [**uipc::core::SceneFactory**](classuipc_1_1core_1_1_scene_factory.md), [**uipc::core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1_engine.md), [**uipc::diff\_sim::AdjointMethodFeature**](classuipc_1_1diff__sim_1_1_adjoint_method_feature.md), [**uipc::diff\_sim::EnableGradFeature**](classuipc_1_1diff__sim_1_1_enable_grad_feature.md), [**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md), [**uipc::geometry::AttributeCollectionFactory**](classuipc_1_1geometry_1_1_attribute_collection_factory.md), [**uipc::geometry::AttributeFactory**](classuipc_1_1geometry_1_1_attribute_factory.md), [**uipc::geometry::AttributeIO**](classuipc_1_1geometry_1_1_attribute_i_o.md), [**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md), [**uipc::geometry::GeometryAtlas**](classuipc_1_1geometry_1_1_geometry_atlas.md), [**uipc::geometry::GeometryAtlasCommit**](classuipc_1_1geometry_1_1_geometry_atlas_commit.md), [**uipc::geometry::GeometryFactory**](classuipc_1_1geometry_1_1_geometry_factory.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md), [**uipc::io::UrdfController**](classuipc_1_1io_1_1_urdf_controller.md), [**uipc::io::UrdfIO**](classuipc_1_1io_1_1_urdf_i_o.md))
+* **m\_impl** ([**uipc::Logger**](classuipc_1_1_logger.md), [**uipc::ResidentThread**](classuipc_1_1_resident_thread.md), [**uipc::core::ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md), [**uipc::core::ContactSystemFeature**](classuipc_1_1core_1_1_contact_system_feature.md), [**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md), [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md), [**uipc::core::SceneFactory**](classuipc_1_1core_1_1_scene_factory.md), [**uipc::core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1_engine.md), [**uipc::diff\_sim::AdjointMethodFeature**](classuipc_1_1diff__sim_1_1_adjoint_method_feature.md), [**uipc::diff\_sim::EnableGradFeature**](classuipc_1_1diff__sim_1_1_enable_grad_feature.md), [**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md), [**uipc::geometry::AttributeCollectionFactory**](classuipc_1_1geometry_1_1_attribute_collection_factory.md), [**uipc::geometry::AttributeFactory**](classuipc_1_1geometry_1_1_attribute_factory.md), [**uipc::geometry::AttributeIO**](classuipc_1_1geometry_1_1_attribute_i_o.md), [**uipc::geometry::BVH**](classuipc_1_1geometry_1_1_b_v_h.md), [**uipc::geometry::GeometryAtlas**](classuipc_1_1geometry_1_1_geometry_atlas.md), [**uipc::geometry::GeometryAtlasCommit**](classuipc_1_1geometry_1_1_geometry_atlas_commit.md), [**uipc::geometry::GeometryFactory**](classuipc_1_1geometry_1_1_geometry_factory.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md), [**uipc::io::UrdfController**](classuipc_1_1io_1_1_urdf_controller.md), [**uipc::io::UrdfIO**](classuipc_1_1io_1_1_urdf_i_o.md), [**uipc::usd::Prim**](classuipc_1_1usd_1_1_prim.md), [**uipc::usd::Stage**](classuipc_1_1usd_1_1_stage.md))
 * **m\_force\_on** ([**uipc::Timer**](classuipc_1_1_timer.md))
 * **m\_global\_on** ([**uipc::Timer**](classuipc_1_1_timer.md))
 * **m\_sync** ([**uipc::Timer**](classuipc_1_1_timer.md))
@@ -500,6 +509,7 @@
 * **object\_collection** ([**uipc::core::SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md))
 * **Octree** ([**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
 * **outward\_tri\_from\_tet** ([**uipc::geometry::SimplexUtils**](classuipc_1_1geometry_1_1_simplex_utils.md))
+* **open** ([**uipc::usd::Stage**](classuipc_1_1usd_1_1_stage.md))
 
 
 ## p
@@ -524,6 +534,7 @@
 * **pending\_destroy** ([**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md))
 * **pending\_emplace** ([**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md))
 * **positions** ([**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* **Prim** ([**uipc::usd::Prim**](classuipc_1_1usd_1_1_prim.md))
 * **parent\_full\_name** ([**uipc::GlobalTimer::MergeResult**](structuipc_1_1_global_timer_1_1_merge_result.md))
 * **parent\_name** ([**uipc::GlobalTimer::MergeResult**](structuipc_1_1_global_timer_1_1_merge_result.md))
 
@@ -571,6 +582,8 @@
 * **strides** ([**uipc::BufferInfo**](classuipc_1_1_buffer_info.md))
 * **STimer** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **set\_as\_current** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **set\_level** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **set\_pattern** ([**uipc::Logger**](classuipc_1_1_logger.md))
 * **set\_sync\_func** ([**uipc::Timer**](classuipc_1_1_timer.md))
 * **sync** ([**uipc::Timer**](classuipc_1_1_timer.md), [**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md), [**uipc::core::World**](classuipc_1_1core_1_1_world.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1_engine.md), [**uipc::core::internal::World**](classuipc_1_1core_1_1internal_1_1_world.md))
 * **substep** ([**uipc::backend::AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md), [**uipc::core::Animator**](classuipc_1_1core_1_1_animator.md))
@@ -627,6 +640,7 @@
 * **SimplicialComplexIO** ([**uipc::geometry::SimplicialComplexIO**](classuipc_1_1geometry_1_1_simplicial_complex_i_o.md))
 * **SpreadSheetIO** ([**uipc::geometry::SpreadSheetIO**](classuipc_1_1geometry_1_1_spread_sheet_i_o.md))
 * **sync\_visual\_mesh** ([**uipc::io::UrdfController**](classuipc_1_1io_1_1_urdf_controller.md))
+* **Stage** ([**uipc::usd::Stage**](classuipc_1_1usd_1_1_stage.md))
 
 
 ## t
@@ -652,6 +666,7 @@
 * **thread\_local\_last\_not\_found\_name** ([**uipc::geometry::AttributeDebugInfo**](classuipc_1_1geometry_1_1_attribute_debug_info.md))
 * **transforms** ([**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
 * **TopoValueT** ([**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md))
+* **to\_geometry** ([**uipc::usd::Prim**](classuipc_1_1usd_1_1_prim.md))
 
 
 ## u
@@ -680,6 +695,7 @@
 
 ## w
 
+* **warn** ([**uipc::Logger**](classuipc_1_1_logger.md))
 * **workspace** ([**uipc::backend::EngineCreateInfo**](classuipc_1_1backend_1_1_engine_create_info.md), [**uipc::core::Engine**](classuipc_1_1core_1_1_engine.md), [**uipc::core::SanityCheckerCollectionCreateInfo**](classuipc_1_1core_1_1_sanity_checker_collection_create_info.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1_engine.md))
 * **WorldVisitor** ([**uipc::backend::WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md))
 * **website** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md))
@@ -750,6 +766,7 @@
 * **~Octree** ([**uipc::geometry::Octree**](classuipc_1_1geometry_1_1_octree.md))
 * **~UrdfController** ([**uipc::io::UrdfController**](classuipc_1_1io_1_1_urdf_controller.md))
 * **~UrdfIO** ([**uipc::io::UrdfIO**](classuipc_1_1io_1_1_urdf_i_o.md))
+* **~Stage** ([**uipc::usd::Stage**](classuipc_1_1usd_1_1_stage.md))
 
 
 ## _
@@ -757,6 +774,12 @@
 * **\_print\_merged\_timings** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **\_print\_timings** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
 * **\_traverse\_merge\_timers** ([**uipc::GlobalTimer**](classuipc_1_1_global_timer.md))
+* **\_critical** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **\_debug** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **\_error** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **\_info** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **\_log** ([**uipc::Logger**](classuipc_1_1_logger.md))
+* **\_warn** ([**uipc::Logger**](classuipc_1_1_logger.md))
 
 
 

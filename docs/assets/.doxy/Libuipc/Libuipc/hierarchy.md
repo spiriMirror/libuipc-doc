@@ -9,6 +9,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**uipc::ConstStringMap**](classuipc_1_1_const_string_map.md) 
 * **class** [**uipc::GlobalTimer**](classuipc_1_1_global_timer.md) 
 * **class** [**uipc::LogPatternGuard**](classuipc_1_1_log_pattern_guard.md) 
+* **class** [**uipc::Logger**](classuipc_1_1_logger.md) 
 * **class** [**uipc::ResidentThread**](classuipc_1_1_resident_thread.md) 
 * **class** [**uipc::Timer**](classuipc_1_1_timer.md) 
 * **class** [**uipc::backend::AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md) 
@@ -152,6 +153,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**uipc::geometry::SpreadSheetIO**](classuipc_1_1geometry_1_1_spread_sheet_i_o.md) _A class for writing geometry spreadsheet._ 
 * **class** [**uipc::io::UrdfController**](classuipc_1_1io_1_1_urdf_controller.md) 
 * **class** [**uipc::io::UrdfIO**](classuipc_1_1io_1_1_urdf_i_o.md) 
+* **class** [**uipc::usd::Prim**](classuipc_1_1usd_1_1_prim.md) 
+* **class** [**uipc::usd::Stage**](classuipc_1_1usd_1_1_stage.md) 
 * **struct** [**nlohmann::adl\_serializer&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structnlohmann_1_1adl__serializer_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_761cd29d85d72c4c15331d22893c1439.md) 
 * **struct** [**uipc::PmrDeleter**](structuipc_1_1_pmr_deleter.md) 
 * **struct** [**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) 

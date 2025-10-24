@@ -36,8 +36,10 @@
 | namespace | [**geometry**](namespaceuipc_1_1geometry.md) <br> |
 | namespace | [**gui**](namespaceuipc_1_1gui.md) <br> |
 | namespace | [**io**](namespaceuipc_1_1io.md) <br> |
+| namespace | [**logger**](namespaceuipc_1_1logger.md) <br> |
 | namespace | [**pmr**](namespaceuipc_1_1pmr.md) <br> |
 | namespace | [**sanity\_check**](namespaceuipc_1_1sanity__check.md) <br> |
+| namespace | [**usd**](namespaceuipc_1_1usd.md) <br> |
 | namespace | [**vdb**](namespaceuipc_1_1vdb.md) <br> |
 
 
@@ -51,6 +53,7 @@
 | class | [**GlobalTimer**](classuipc_1_1_global_timer.md) <br> |
 | class | [**JsonIOError**](classuipc_1_1_json_i_o_error.md) <br> |
 | class | [**LogPatternGuard**](classuipc_1_1_log_pattern_guard.md) <br> |
+| class | [**Logger**](classuipc_1_1_logger.md) <br> |
 | struct | [**PmrDeleter**](structuipc_1_1_pmr_deleter.md) &lt;typename T&gt;<br> |
 | class | [**ResidentThread**](classuipc_1_1_resident_thread.md) <br> |
 | class | [**Timer**](classuipc_1_1_timer.md) <br> |

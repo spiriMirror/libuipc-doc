@@ -9,7 +9,7 @@
 
 ```C++
 #pragma once
-#include <uipc/vdb/dll_export.h>
+#include <uipc/vdb/dllexport.h>
 #include <uipc/geometry/simplicial_complex.h>
 
 namespace uipc::vdb

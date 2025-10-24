@@ -21,7 +21,9 @@ Here is a list of all namespaces with brief descriptions:
         * **namespace** [**affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md)     
     * **namespace** [**gui**](namespaceuipc_1_1gui.md)     
     * **namespace** [**io**](namespaceuipc_1_1io.md)     
+    * **namespace** [**logger**](namespaceuipc_1_1logger.md)     
     * **namespace** [**pmr**](namespaceuipc_1_1pmr.md) 
     * **namespace** [**sanity\_check**](namespaceuipc_1_1sanity__check.md) 
+    * **namespace** [**usd**](namespaceuipc_1_1usd.md)     
     * **namespace** [**vdb**](namespaceuipc_1_1vdb.md)     
 

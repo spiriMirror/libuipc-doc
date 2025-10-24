@@ -17,6 +17,7 @@ namespace uipc::geometry
 {
 UIPC_GEOMETRY_API [[nodiscard]] SimplicialComplex tetmesh(span<const Vector3> Vs,
                                                           span<const Vector4i> Ts);
+
 UIPC_GEOMETRY_API [[nodiscard]] SimplicialComplex trimesh(span<const Vector3> Vs,
                                                           span<const Vector3i> Fs);
 
@@ -25,6 +26,7 @@ UIPC_GEOMETRY_API [[nodiscard]] SimplicialComplex trimesh(span<const Vector3> Vs
 
 UIPC_GEOMETRY_API [[nodiscard]] SimplicialComplex linemesh(span<const Vector3> Vs,
                                                            span<const Vector2i> Es);
+
 UIPC_GEOMETRY_API [[nodiscard]] SimplicialComplex pointcloud(span<const Vector3> Vs);
 
 

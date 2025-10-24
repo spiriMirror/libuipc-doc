@@ -35,7 +35,7 @@ class UIPC_CORE_API WorldVisitor
     WorldVisitor(const WorldVisitor&)            = delete;
     WorldVisitor(WorldVisitor&&)                 = default;
     WorldVisitor& operator=(const WorldVisitor&) = delete;
-    WorldVisitor& operator=(WorldVisitor&&)      = default;
+    WorldVisitor& operator=(WorldVisitor&&)      = delete;
 
     SceneVisitor    scene() noexcept;
     AnimatorVisitor animator() noexcept;
