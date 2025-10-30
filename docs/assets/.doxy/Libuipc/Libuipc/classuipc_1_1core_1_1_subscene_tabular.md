@@ -53,11 +53,9 @@
 | ---: | :--- |
 |   | [**SubsceneTabular**](#function-subscenetabular-12) () noexcept<br> |
 |   | [**SubsceneTabular**](#function-subscenetabular-22) (const [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) &) = delete<br> |
-|  [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md) | [**at**](#function-at) (SizeT i, SizeT j) const<br> |
+|  [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md) | [**at**](#function-at) (IndexT i, IndexT j) const<br> |
 |  [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) | [**create**](#function-create) (std::string\_view name="") noexcept<br> |
-|  [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) | [**default\_element**](#function-default_element) () noexcept<br> |
-|  void | [**default\_model**](#function-default_model-12) (bool enable, const Json & config=default\_config()) noexcept<br> |
-|  [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md) | [**default\_model**](#function-default_model-22) () noexcept const<br> |
+|  [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) | [**default\_element**](#function-default_element) () noexcept const<br> |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
 |  IndexT | [**insert**](#function-insert) (const [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) & L, const [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) & R, bool enable=false, const Json & config=default\_config()) <br> |
 |  [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & | [**operator=**](#function-operator) (const [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) &) = delete<br> |
@@ -134,8 +132,8 @@ uipc::core::SubsceneTabular::SubsceneTabular (
 
 ```C++
 SubsceneModel uipc::core::SubsceneTabular::at (
-    SizeT i,
-    SizeT j
+    IndexT i,
+    IndexT j
 ) const
 ```
 
@@ -164,36 +162,7 @@ SubsceneElement uipc::core::SubsceneTabular::create (
 ### function default\_element 
 
 ```C++
-SubsceneElement uipc::core::SubsceneTabular::default_element () noexcept
-```
-
-
-
-
-<hr>
-
-
-
-### function default\_model [1/2]
-
-```C++
-void uipc::core::SubsceneTabular::default_model (
-    bool enable,
-    const Json & config=default_config()
-) noexcept
-```
-
-
-
-
-<hr>
-
-
-
-### function default\_model [2/2]
-
-```C++
-SubsceneModel uipc::core::SubsceneTabular::default_model () noexcept const
+SubsceneElement uipc::core::SubsceneTabular::default_element () noexcept const
 ```
 
 

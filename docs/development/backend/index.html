@@ -2053,7 +2053,7 @@
 
 <div><h1 id="backend">Backend</h1>
 <p><code>Libuipc</code> has frontend and backend components. The frontend part is used to create the scene, objects, and geometries, and the backend part is used to simulate the physics of the scene.</p>
-<p>A <code>libuipc</code> backend is a independent module that will be dynamically loaded and linked by the frontend. Typically througth the <code>engine::Engine</code> class.
+<p>A <code>libuipc</code> backend is an independent module that will be dynamically loaded and linked by the frontend, typically through the <code>engine::Engine</code> class.
 The frontend user utilizes the backend functionalities through <code>World</code> interface.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">"BACKEND_NAME"</span><span class="p">};</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">world</span><span class="o">::</span><span class="n">World</span><span class="w"> </span><span class="n">world</span><span class="p">{</span><span class="n">engine</span><span class="p">};</span>

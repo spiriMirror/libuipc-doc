@@ -142,7 +142,7 @@
 * **DiscreteShellBending** ([**uipc::constitution::DiscreteShellBending**](classuipc_1_1constitution_1_1_discrete_shell_bending.md))
 * **dt** ([**uipc::core::Animation::UpdateInfo**](classuipc_1_1core_1_1_animation_1_1_update_info.md), [**uipc::core::internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md))
 * **default\_element** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md))
-* **default\_model** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md), [**uipc::core::SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md))
+* **default\_model** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md))
 * **DiffSim** ([**uipc::core::DiffSim**](classuipc_1_1core_1_1_diff_sim.md))
 * **do\_on\_required** ([**uipc::core::Feature**](classuipc_1_1core_1_1_feature.md), [**uipc::core::IFeature**](classuipc_1_1core_1_1_i_feature.md))
 * **do\_advance** ([**uipc::core::IEngine**](classuipc_1_1core_1_1_i_engine.md))
