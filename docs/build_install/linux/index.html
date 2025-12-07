@@ -448,15 +448,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Environment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#build-libuipc" class="md-nav__link">
     <span class="md-ellipsis">
       Build Libuipc
@@ -487,6 +478,15 @@
   <a href="#check-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Check Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-in-any-python-venv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install in Any Python Venv
     </span>
   </a>
   
@@ -800,6 +800,8 @@
       
         
       
+        
+      
     
     
     
@@ -853,6 +855,29 @@
   
   <span class="md-ellipsis">
     Affine Body
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    External Force for Affine Body
     
   </span>
   
@@ -1967,15 +1992,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Other Environment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#build-libuipc" class="md-nav__link">
     <span class="md-ellipsis">
       Build Libuipc
@@ -2006,6 +2022,15 @@
   <a href="#check-installation" class="md-nav__link">
     <span class="md-ellipsis">
       Check Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-in-any-python-venv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install in Any Python Venv
     </span>
   </a>
   
@@ -2074,28 +2099,29 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">cd</span><span class="w"> </span>vcpkg
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>./bootstrap-vcpkg.sh
 </span></code></pre></div>
-<p>The simplest way to let CMake detect Vcpkg is to set the <strong>System Environment Variable</strong> <code>CMAKE_TOOLCHAIN_FILE</code> to <code>~/Toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake</code></p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Write in ~/.bashrc</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CMAKE_TOOLCHAIN_FILE</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake"</span>
-</span></code></pre></div>
 <h2 id="clone-libuipc">Clone Libuipc</h2>
 <p>Clone the repository with the following command:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spiriMirror/libuipc.git
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spiriMirror/libuipc.git
 </span></code></pre></div>
 <h2 id="conda-environment">Conda Environment</h2>
 <p>We <strong>recommend</strong> using conda environments to build the project on Linux.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>conda/env.yaml
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>conda/env.yaml
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>uipc_env
 </span></code></pre></div>
-<p>Cuda-12.4.0 requires driver version &gt;= 550.54.14 (https://docs.nvidia.com/deploy/cuda-compatibility/index.html#use-the-right-compat-package), check your nvidia driver version with the following command.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>nvidia-smi
+<p>Please make sure your <strong>Nvidia driver</strong> is compatible with the installed Cuda version.</p>
+<p>https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html</p>
+<p>You can check your nvidia driver version with the following command.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>nvidia-smi
 </span></code></pre></div>
-<h2 id="other-environment">Other Environment</h2>
-<p>If you don't want to use conda, you can manually install <code>CMake 3.26</code>, <code>GCC 11.4</code>, <code>Cuda 12.4</code> and <code>Python &gt;=3.11</code> with your favorite package manager.</p>
+<p>You can set the <code>CMAKE_TOOLCHAIN_FILE</code> environment variable in the conda environment with the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda<span class="w"> </span>env<span class="w"> </span>config<span class="w"> </span>vars<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">CMAKE_TOOLCHAIN_FILE</span><span class="o">=</span>~/Toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake
+</span></code></pre></div>
+<p>It's <strong>important</strong> to set the environment variable in the conda environment, so that CMake can find the Vcpkg toolchain file when building the project.</p>
 <h2 id="build-libuipc">Build Libuipc</h2>
 <p>Build the project with the following commands.</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>uipc_env
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>libuipc<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>..<span class="p">;</span><span class="w"> </span>mkdir<span class="w"> </span>CMakeBuild<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>CMakeBuild<span class="p">;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>cmake<span class="w"> </span>-S<span class="w"> </span>../libuipc<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>libuipc<span class="p">;</span><span class="w"> </span>mkdir<span class="w"> </span>build<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>cmake<span class="w"> </span>-S<span class="w"> </span>..<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>-j8
 </span></code></pre></div>
 <div class="admonition note">
@@ -2103,11 +2129,11 @@
 <p>Use multi-thread to speed up the build process as possible, becasue the NVCC compiler will take a lot of time.</p>
 </div>
 <h2 id="run-project">Run Project</h2>
-<p>Just run the executable files in <code>CMakeBuild/&lt;Release/RelWithDebInfo&gt;/bin</code> folder.</p>
+<p>Just run the executable files in <code>build/&lt;Release/RelWithDebInfo&gt;/bin</code> folder.</p>
 <h2 id="install-pyuipc">Install Pyuipc</h2>
 <p>With <code>UIPC_BUILD_PYBIND</code> option set to <code>ON</code>, the Python binding will be <strong>built</strong> and <strong>installed</strong> in the specified Python environment.</p>
 <p>If some <strong>errors</strong> occur during the installation, you can try to <strong>manually</strong> install the Python binding.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>CMakeBuild/python
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>build/python
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>pip<span class="w"> </span>install<span class="w"> </span>.
 </span></code></pre></div>
 <h2 id="check-installation">Check Installation</h2>
@@ -2115,7 +2141,12 @@
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc/python
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>python<span class="w"> </span>uipc_info.py
 </span></code></pre></div>
-<p>More samples are at <a href="https://github.com/spiriMirror/libuipc-samples">Pyuipc Samples</a>.</p></div>
+<p>More samples are at <a href="https://github.com/spiriMirror/libuipc-samples">Pyuipc Samples</a>.</p>
+<h2 id="install-in-any-python-venv">Install in Any Python Venv</h2>
+<p>If you want to install the Pyuipc to any Python Venv (like <a href="https://docs.astral.sh/uv/">uv</a>) after build, you can use the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cmake<span class="w"> </span>-S<span class="w"> </span>..<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DUIPC_PYTHON_EXECUTABLE_PATH<span class="o">=</span>&lt;YOUR_PYTHON_EXECUTABLE_PATH&gt;<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>&lt;Release/RelWithDebInfo&gt;
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w">  </span>-j8
+</span></code></pre></div></div>
 
 
 

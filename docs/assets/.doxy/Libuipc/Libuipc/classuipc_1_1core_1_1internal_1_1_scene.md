@@ -52,7 +52,7 @@ Inherits the following classes: std::enable_shared_from_this< Scene >
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Scene**](#function-scene) (const Json & config) noexcept<br> |
+|   | [**Scene**](#function-scene) (const [**geometry::AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & config) noexcept<br> |
 |  auto & | [**animator**](#function-animator-12) () noexcept const<br> |
 |  auto & | [**animator**](#function-animator-22) () noexcept<br> |
 |  void | [**begin\_pending**](#function-begin_pending) () noexcept<br> |
@@ -74,8 +74,6 @@ Inherits the following classes: std::enable_shared_from_this< Scene >
 |  auto & | [**objects**](#function-objects-22) () noexcept<br> |
 |  auto & | [**rest\_geometries**](#function-rest_geometries-12) () noexcept const<br> |
 |  auto & | [**rest\_geometries**](#function-rest_geometries-22) () noexcept<br> |
-|  auto & | [**sanity\_checker**](#function-sanity_checker-12) () noexcept const<br> |
-|  auto & | [**sanity\_checker**](#function-sanity_checker-22) () noexcept<br> |
 |  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
 |  auto & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept const<br> |
 |  auto & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept<br> |
@@ -119,7 +117,7 @@ Inherits the following classes: std::enable_shared_from_this< Scene >
 
 ```C++
 uipc::core::internal::Scene::Scene (
-    const Json & config
+    const geometry::AttributeCollection & config
 ) noexcept
 ```
 
@@ -396,32 +394,6 @@ inline auto & uipc::core::internal::Scene::rest_geometries () noexcept const
 
 ```C++
 inline auto & uipc::core::internal::Scene::rest_geometries () noexcept
-```
-
-
-
-
-<hr>
-
-
-
-### function sanity\_checker [1/2]
-
-```C++
-inline auto & uipc::core::internal::Scene::sanity_checker () noexcept const
-```
-
-
-
-
-<hr>
-
-
-
-### function sanity\_checker [2/2]
-
-```C++
-inline auto & uipc::core::internal::Scene::sanity_checker () noexcept
 ```
 
 

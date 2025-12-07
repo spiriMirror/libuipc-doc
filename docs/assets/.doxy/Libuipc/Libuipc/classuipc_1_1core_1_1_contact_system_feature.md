@@ -50,7 +50,7 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1_feat
 
 | Type | Name |
 | ---: | :--- |
-|  std::string\_view | [**FeatureName**](#variable-featurename)   = `"contact\_system"`<br> |
+|  std::string\_view | [**FeatureName**](#variable-featurename)   = `"core/contact\_system"`<br> |
 
 
 

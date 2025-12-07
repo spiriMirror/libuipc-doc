@@ -9,6 +9,7 @@
 
 ```C++
 #pragma once
+#include <uipc/core/sanity_checker.h>
 #include <uipc/core/scene.h>
 #include <uipc/core/feature_collection.h>
 
@@ -52,6 +53,8 @@ class UIPC_CORE_API World final
     SizeT frame() const;
 
     const FeatureCollection& features() const;
+    SanityChecker&           sanity_checker();
+    const SanityChecker&     sanity_checker() const;
 
     // Allow create a core::World from a core::internal::World
     World(S<internal::World> w) noexcept;

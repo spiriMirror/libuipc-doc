@@ -84,8 +84,6 @@
 |  [**CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md) | [**geometries**](#function-geometries-22) () noexcept const<br> |
 |  [**Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md) | [**objects**](#function-objects-12) () noexcept<br> |
 |  [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) | [**objects**](#function-objects-22) () noexcept const<br> |
-|  [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
-|  const [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
 |  [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept<br> |
 |  const [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept const<br> |
 |  void | [**update\_from**](#function-update_from) (const [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) & snapshot) <br> |
@@ -389,32 +387,6 @@ Objects uipc::core::Scene::objects () noexcept
 
 ```C++
 CObjects uipc::core::Scene::objects () noexcept const
-```
-
-
-
-
-<hr>
-
-
-
-### function sanity\_checker [1/2]
-
-```C++
-SanityChecker & uipc::core::Scene::sanity_checker () 
-```
-
-
-
-
-<hr>
-
-
-
-### function sanity\_checker [2/2]
-
-```C++
-const SanityChecker & uipc::core::Scene::sanity_checker () const
 ```
 
 

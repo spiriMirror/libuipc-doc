@@ -42,6 +42,7 @@
 ## e
 
 * **encode\_offset\_count** ([**uipc**](namespaceuipc.md))
+* **ExtraConstitution** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **EG\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EG\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EP\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))

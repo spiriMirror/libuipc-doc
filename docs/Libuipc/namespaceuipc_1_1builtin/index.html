@@ -671,6 +671,8 @@
       
         
       
+        
+      
     
     
     
@@ -724,6 +726,29 @@
   
   <span class="md-ellipsis">
     Affine Body
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    External Force for Affine Body
     
   </span>
   
@@ -1875,6 +1900,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#variable-extraconstitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      variable ExtraConstitution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#variable-finiteelement" class="md-nav__link">
     <span class="md-ellipsis">
       variable FiniteElement
@@ -2323,6 +2357,10 @@
 </tr>
 <tr>
 <td style="text-align: right;">std::string_view</td>
+<td style="text-align: left;"><a href="#variable-extraconstitution"><strong>ExtraConstitution</strong></a>   = <code>"ExtraConstitution"</code><br></td>
+</tr>
+<tr>
+<td style="text-align: right;">std::string_view</td>
 <td style="text-align: left;"><a href="#variable-finiteelement"><strong>FiniteElement</strong></a>   = <code>"FiniteElement"</code><br></td>
 </tr>
 <tr>
@@ -2410,7 +2448,7 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-uipc_builtin_attribute"><strong>UIPC_BUILTIN_ATTRIBUTE</strong></a> (constraint_uid) <br><code>constraint_uid</code> <em>&lt;U64&gt; attribute on</em><strong>meta</strong> <em>, uid is a unique identifier for a constraint which is defined in the libuipc specification.</em></td>
+<td style="text-align: left;"><a href="#function-uipc_builtin_attribute"><strong>UIPC_BUILTIN_ATTRIBUTE</strong></a> (constraint_uids) <br><code>constraint_uids</code> <em>&lt;VectorXu64&gt; attribute on</em><strong>meta</strong> <em>, constraint uids are unique identifiers for constraints which is defined in the libuipc specification.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -2502,188 +2540,193 @@
 </span></code></pre></div>
 <hr>
 
+<h3 id="variable-extraconstitution">variable ExtraConstitution</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">ExtraConstitution</span><span class="p">;</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="variable-finiteelement">variable FiniteElement</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">FiniteElement</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">FiniteElement</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="variable-geometry">variable Geometry</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">Geometry</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">Geometry</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="variable-implicitgeometry">variable ImplicitGeometry</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">ImplicitGeometry</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">ImplicitGeometry</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="variable-interaffinebody">variable InterAffineBody</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">InterAffineBody</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">InterAffineBody</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="variable-interprimitive">variable InterPrimitive</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">InterPrimitive</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">InterPrimitive</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="variable-simplicialcomplex">variable SimplicialComplex</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="variable-__data__">variable __data__</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">__data__</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">__data__</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="variable-__meta__">variable __meta__</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">__meta__</span><span class="p">;</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">__meta__</span><span class="p">;</span>
 </span></code></pre></div>
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-uipc_builtin_attribute">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>topo</code> <em>attribute on</em><strong>vertices</strong> <em>/</em><strong>edges</strong> <em>/</em><strong>triangles</strong> <em>/</em><strong>tetrahedra</strong> <em>... to indicate the topological type of the element.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">topo</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">topo</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_1">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>position</code> <em>&lt;Vector3&gt; attribute on</em><strong>vertices</strong> __
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">position</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">position</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_2">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>velocity</code> <em>&lt;Vector3&gt; attribute on</em><strong>vertices</strong> <em>or</em><code>velocity</code> <em>&lt;Matrix4x4&gt; attribute on</em><strong>instances</strong> <em>(the derivative of the transform matrix).</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">velocity</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">velocity</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_3">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>aim_position</code> <em>&lt;Vector3&gt; attribute on</em><strong>vertices</strong> <em>, indicates the aim position of the vertices if the vertices are animated.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">aim_position</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">aim_position</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_4">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>transform</code> <em>&lt;Matrix4x4&gt; attribute on</em><strong>instances</strong> __
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">transform</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">transform</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_5">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>aim_transform</code> <em>&lt;Matrix4x4&gt; attribute on</em><strong>instances</strong> <em>, indicates the aim transform of the instances if the instances are animated.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">aim_transform</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">aim_transform</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_6">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>contact_element_id</code> <em>&lt;IndexT&gt; attribute on</em><strong>meta</strong> __
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">contact_element_id</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">contact_element_id</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_7">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>subscene_element_id</code> <em>&lt;IndexT&gt; attribute on</em><strong>meta</strong> __
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">subscene_element_id</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">subscene_element_id</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_8">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>d_hat</code> <em>&lt;Float&gt; attribute on</em><strong>meta</strong> <em>, indicates mesh-wise d_hat</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">d_hat</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">d_hat</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_9">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>constitution_uid</code> <em>&lt;U64&gt; attribute on</em><strong>meta</strong> <em>, uid is a unique identifier for a constitution which is defined in the libuipc specification.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">constitution_uid</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">constitution_uid</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_10">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>extra_constitution_uids</code> <em>&lt;VectorXu64&gt; attribute on</em><strong>meta</strong> <em>, extra constitutions that are applied to the geometry.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">extra_constitution_uids</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">extra_constitution_uids</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_11">function UIPC_BUILTIN_ATTRIBUTE</h3>
-<p><code>constraint_uid</code> <em>&lt;U64&gt; attribute on</em><strong>meta</strong> <em>, uid is a unique identifier for a constraint which is defined in the libuipc specification.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">constraint_uid</span>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span>
+<p><code>constraint_uids</code> <em>&lt;VectorXu64&gt; attribute on</em><strong>meta</strong> <em>, constraint uids are unique identifiers for constraints which is defined in the libuipc specification.</em>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">constraint_uids</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_12">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>implicit_geometry_uid</code> <em>&lt;U64&gt; attribute on</em><strong>meta</strong> <em>, uid is a unique identifier for an implicit geometry which is defined in the libuipc specification.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">implicit_geometry_uid</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">implicit_geometry_uid</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_13">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>is_surf</code> <em>&lt;IndexT&gt; attribute on</em><strong>vertices</strong> <em>/</em><strong>edges</strong> <em>/</em><strong>triangles</strong> <em>/</em><strong>tetrahedra</strong> <em>... to indicate if the element is a surface element.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">is_surf</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">is_surf</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_14">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>is_facet</code> <em>&lt;IndexT&gt; attribute on</em><strong>vertices</strong> <em>/</em><strong>edges</strong> <em>/</em><strong>triangles</strong> <em>/</em><strong>tetrahedra</strong> <em>to indicate if the element is a facet element.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">is_facet</span>
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">is_facet</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_15">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>orient</code> <em>&lt;IndexT&gt;[-1,0,1] attribute on</em><strong>triangles</strong> <em>to indicate the orientation of the triangle.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="n">orient</span>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">orient</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>1) 0 is the default value, which means the orientation is not determined, or the triangle is not a surface triangle. 2) 1 means outward the tetrahedron 3) -1 means inward the tetrahedron. </p>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_16">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>parent_id</code> <em>&lt;IndexT&gt; attribute on</em><strong>edges</strong> <em>/</em><strong>triangles</strong> <em>, indicates the parent simplex id</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="n">parent_id</span>
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">parent_id</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_17">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>is_fixed</code> <em>&lt;IndexT&gt;[0,1] attribute, indicates if the</em><strong>instance</strong> <em>or</em><strong>vertex</strong> <em>is fixed.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">is_fixed</span>
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">is_fixed</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>'Fixed' means the vertices are not influenced by its constitution and kinetic, keeping the position unchanged. They may be fixed with a certain position, or they are animated with a certain aim position.</p>
 <p>1) 0 means the instance or vertex is not fixed. 2) 1 means the instance or vertex is fixed. </p>
@@ -2691,9 +2734,9 @@
 
 <h3 id="function-uipc_builtin_attribute_18">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>is_constrained</code> <em>&lt;IndexT&gt;[0,1] attribute, indicates if the</em><strong>instance</strong> <em>or</em><strong>vertex</strong> <em>is constrained.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">is_constrained</span>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">is_constrained</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>'Constrained' means the instances or vertices are trying to obey the constraints.</p>
 <p>1) 0 means the instance or vertex is not constrained. 2) 1 means the instance or vertex is constrained. </p>
@@ -2701,9 +2744,9 @@
 
 <h3 id="function-uipc_builtin_attribute_19">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>is_dynamic</code> <em>&lt;IndexT&gt;[0,1] attribute, indicates if the</em><strong>instance</strong> <em>or</em><strong>vertex</strong> <em>is is dynamic.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">is_dynamic</span>
-</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">is_dynamic</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>'Dynamic' means the kinetic of instances or vertices is considered.</p>
 <p>1) 0 means the the kinetic of the instance or vertex is not considered. 2) 1 means the the kinetic of the instance or vertex is considered. </p>
@@ -2711,82 +2754,82 @@
 
 <h3 id="function-uipc_builtin_attribute_20">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>volume</code> <em>&lt;Float&gt; attribute on</em><strong>vertices</strong> <em>.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">volume</span>
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">volume</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_21">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>mass_density</code> <em>&lt;Float&gt; attribute on</em><strong>vertices</strong> <em>or</em><strong>meta</strong> <em>.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">mass_density</span>
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">mass_density</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_22">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>gravity</code> <em>&lt;Vector3&gt; attribute on</em><strong>instance</strong> <em>or</em><strong>vertices</strong> <em>.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">gravity</span>
-</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="n">gravity</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>If attribute exists, backend will take this value as the gravity of the instance or vertices, instead of the global gravity set in the scene configuration. </p>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_23">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>thickness</code> <em>&lt;Float&gt; attribute on</em><strong>vertices</strong> <em>to indicate the shell thickness (radius) of the vertices which is valid when dealing with codimensional geometries.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="n">thickness</span>
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="n">thickness</span>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_24">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>backend_fem_vertex_offset</code> <em>&lt;IndexT&gt; attribute on</em><strong>meta</strong> <em>to indicate the offset of the vertex in the FEM system.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w">    </span><span class="n">backend_fem_vertex_offset</span>
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="n">backend_fem_vertex_offset</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_25">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>backend_abd_body_offset</code> <em>&lt;IndexT&gt; attribute on</em><strong>meta</strong> <em>to indicate the offset of the body(instance) in the ABD system.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span><span class="n">backend_abd_body_offset</span>
-</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="n">backend_abd_body_offset</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_26">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>dof_offset</code> <em>&lt;IndexT&gt; attribute on</em><strong>meta</strong> <em>to indicate the degree of freedom offset of this geometry in the whole system.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w">    </span><span class="n">dof_offset</span>
-</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="n">dof_offset</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_27">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>dof_count</code> <em>&lt;IndexT&gt; attribute on</em><strong>meta</strong> <em>to indicate the degree of freedom count of this geometry in the whole system.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span><span class="n">dof_count</span>
-</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="n">dof_count</span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_28">function UIPC_BUILTIN_ATTRIBUTE</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="n">global_vertex_offset</span>
-</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span><span class="n">global_vertex_offset</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>@breif <code>global_vertex_offset</code> &lt;IndexT&gt; attribute on <strong>meta</strong> to indicate the global vertex offset of this geometry in the whole system. </p>
 <hr>
 
 <h3 id="function-uipc_builtin_attribute_29">function UIPC_BUILTIN_ATTRIBUTE</h3>
 <p><code>self_collision</code> <em>&lt;IndexT&gt;[0,1] attribute on</em><strong>meta</strong> <em>to indicate if the geometry needs self-collision detection.</em>
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span><span class="n">self_collision</span>
-</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="p">)</span><span class="w"> </span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">builtin</span><span class="o">::</span><span class="n">UIPC_BUILTIN_ATTRIBUTE</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">    </span><span class="n">self_collision</span>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 

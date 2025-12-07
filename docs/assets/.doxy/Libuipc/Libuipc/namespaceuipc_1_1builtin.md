@@ -52,6 +52,7 @@
 |  std::string\_view | [**AbstractSimplicialComplex**](#variable-abstractsimplicialcomplex)   = `"AbstractSimplicialComplex"`<br> |
 |  std::string\_view | [**AffineBody**](#variable-affinebody)   = `"AffineBody"`<br> |
 |  std::string\_view | [**Constraint**](#variable-constraint)   = `"Constraint"`<br> |
+|  std::string\_view | [**ExtraConstitution**](#variable-extraconstitution)   = `"ExtraConstitution"`<br> |
 |  std::string\_view | [**FiniteElement**](#variable-finiteelement)   = `"FiniteElement"`<br> |
 |  std::string\_view | [**Geometry**](#variable-geometry)   = `"Geometry"`<br> |
 |  std::string\_view | [**ImplicitGeometry**](#variable-implicitgeometry)   = `"ImplicitGeometry"`<br> |
@@ -91,7 +92,7 @@
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (d\_hat) <br>`d_hat` _&lt;Float&gt; attribute on_**meta** _, indicates mesh-wise d\_hat_ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (constitution\_uid) <br>`constitution_uid` _&lt;U64&gt; attribute on_**meta** _, uid is a unique identifier for a constitution which is defined in the libuipc specification._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (extra\_constitution\_uids) <br>`extra_constitution_uids` _&lt;VectorXu64&gt; attribute on_**meta** _, extra constitutions that are applied to the geometry._ |
-|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (constraint\_uid) <br>`constraint_uid` _&lt;U64&gt; attribute on_**meta** _, uid is a unique identifier for a constraint which is defined in the libuipc specification._ |
+|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (constraint\_uids) <br>`constraint_uids` _&lt;VectorXu64&gt; attribute on_**meta** _, constraint uids are unique identifiers for constraints which is defined in the libuipc specification._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (implicit\_geometry\_uid) <br>`implicit_geometry_uid` _&lt;U64&gt; attribute on_**meta** _, uid is a unique identifier for an implicit geometry which is defined in the libuipc specification._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (is\_surf) <br>`is_surf` _&lt;IndexT&gt; attribute on_**vertices** _/_**edges** _/_**triangles** _/_**tetrahedra** _... to indicate if the element is a surface element._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (is\_facet) <br>`is_facet` _&lt;IndexT&gt; attribute on_**vertices** _/_**edges** _/_**triangles** _/_**tetrahedra** _to indicate if the element is a facet element._ |
@@ -173,6 +174,19 @@ std::string_view uipc::builtin::AffineBody;
 
 ```C++
 std::string_view uipc::builtin::Constraint;
+```
+
+
+
+
+<hr>
+
+
+
+### variable ExtraConstitution 
+
+```C++
+std::string_view uipc::builtin::ExtraConstitution;
 ```
 
 
@@ -466,10 +480,10 @@ uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
 
 ### function UIPC\_BUILTIN\_ATTRIBUTE 
 
-`constraint_uid` _&lt;U64&gt; attribute on_**meta** _, uid is a unique identifier for a constraint which is defined in the libuipc specification._
+`constraint_uids` _&lt;VectorXu64&gt; attribute on_**meta** _, constraint uids are unique identifiers for constraints which is defined in the libuipc specification._
 ```C++
 uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
-    constraint_uid
+    constraint_uids
 ) 
 ```
 

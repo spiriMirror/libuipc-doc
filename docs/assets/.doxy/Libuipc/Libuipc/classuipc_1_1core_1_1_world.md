@@ -65,6 +65,8 @@
 |  [**World**](classuipc_1_1core_1_1_world.md) & | [**operator=**](#function-operator_1) ([**World**](classuipc_1_1core_1_1_world.md) &&) = default<br> |
 |  bool | [**recover**](#function-recover) (SizeT aim\_frame=~0ull) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
+|  [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
+|  const [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
 |  void | [**sync**](#function-sync) () <br> |
 |   | [**~World**](#function-world) () <br> |
 
@@ -289,6 +291,32 @@ bool uipc::core::World::recover (
 
 ```C++
 void uipc::core::World::retrieve () 
+```
+
+
+
+
+<hr>
+
+
+
+### function sanity\_checker [1/2]
+
+```C++
+SanityChecker & uipc::core::World::sanity_checker () 
+```
+
+
+
+
+<hr>
+
+
+
+### function sanity\_checker [2/2]
+
+```C++
+const SanityChecker & uipc::core::World::sanity_checker () const
 ```
 
 

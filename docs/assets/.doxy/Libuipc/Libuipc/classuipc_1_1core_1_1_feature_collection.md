@@ -51,6 +51,8 @@
 
 | Type | Name |
 | ---: | :--- |
+|  bool | [**contains**](#function-contains-12) (std::string\_view name) const<br> |
+|  bool | [**contains**](#function-contains-22) () const<br> |
 |  S&lt; [**IFeature**](classuipc_1_1core_1_1_i_feature.md) &gt; | [**find**](#function-find-12) (std::string\_view name) const<br> |
 |  S&lt; T &gt; | [**find**](#function-find-22) (std::string\_view name=T::FeatureName) const<br> |
 |  void | [**insert**](#function-insert-12) (std::string\_view name, S&lt; [**IFeature**](classuipc_1_1core_1_1_i_feature.md) &gt; feature) <br> |
@@ -87,6 +89,35 @@
 
 ## Public Functions Documentation
 
+
+
+
+### function contains [1/2]
+
+```C++
+bool uipc::core::FeatureCollection::contains (
+    std::string_view name
+) const
+```
+
+
+
+
+<hr>
+
+
+
+### function contains [2/2]
+
+```C++
+template<std::derived_from< IFeature > T>
+inline bool uipc::core::FeatureCollection::contains () const
+```
+
+
+
+
+<hr>
 
 
 

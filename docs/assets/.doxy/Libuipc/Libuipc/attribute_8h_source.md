@@ -38,6 +38,8 @@ class UIPC_CORE_API IAttribute
     [[nodiscard]] Json to_json() const noexcept;
 
     void from_json(const Json& j) noexcept;
+
+    void from_json_array(const Json& j) noexcept;
     [[nodiscard]] std::string_view type_name() const noexcept;
 
   private:
@@ -64,9 +66,12 @@ class UIPC_CORE_API IAttribute
     virtual void          do_reorder(span<const SizeT> O) noexcept = 0;
     virtual void do_copy_from(const IAttribute& other, const AttributeCopy& copy) noexcept = 0;
 
-    virtual void do_from_json(const Json& j) noexcept = 0;
-    virtual Json do_to_json(SizeT i) const noexcept   = 0;
-    virtual Json do_to_json() const noexcept          = 0;
+
+    virtual Json do_to_json(SizeT i) const noexcept = 0;
+    virtual Json do_to_json() const noexcept        = 0;
+
+    virtual void do_from_json(const Json& j) noexcept       = 0;
+    virtual void do_from_json_array(const Json& j) noexcept = 0;
 };
 
 template <typename T>
@@ -109,6 +114,7 @@ class Attribute : public IAttribute
     virtual Json do_to_json() const noexcept override;
 
     virtual void do_from_json(const Json& j) noexcept override;
+    virtual void do_from_json_array(const Json& j) noexcept override;
 
   private:
     vector<T> m_values;

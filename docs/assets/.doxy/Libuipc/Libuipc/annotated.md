@@ -58,6 +58,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md)     
         * **class** [**AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md)     
         * **class** [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint.md)     
+        * **class** [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1_affine_body_external_body_force.md)     
         * **class** [**AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md)     
         * **class** [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md)     
         * **class** [**Constraint**](classuipc_1_1constitution_1_1_constraint.md)     
@@ -81,6 +82,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**StableNeoHookean**](classuipc_1_1constitution_1_1_stable_neo_hookean.md)     
         * **class** [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell.md)     
     * **namespace** [**core**](namespaceuipc_1_1core.md)     
+        * **class** [**AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1_affine_body_state_accessor_feature.md)     
+        * **class** [**AffineBodyStateAccessorFeatureOverrider**](classuipc_1_1core_1_1_affine_body_state_accessor_feature_overrider.md)     
         * **class** [**Animation**](classuipc_1_1core_1_1_animation.md)     
             * **class** [**UpdateHint**](classuipc_1_1core_1_1_animation_1_1_update_hint.md)     
             * **class** [**UpdateInfo**](classuipc_1_1core_1_1_animation_1_1_update_info.md)     
@@ -99,6 +102,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md)     
         * **class** [**Feature**](classuipc_1_1core_1_1_feature.md)     
         * **class** [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md)     
+        * **class** [**FiniteElementStateAccessorFeature**](classuipc_1_1core_1_1_finite_element_state_accessor_feature.md) [_**Feature**_](classuipc_1_1core_1_1_feature.md) _to access finite element state data._    
+        * **class** [**FiniteElementStateAccessorFeatureOverrider**](classuipc_1_1core_1_1_finite_element_state_accessor_feature_overrider.md)     
         * **class** [**IEngine**](classuipc_1_1core_1_1_i_engine.md)     
         * **class** [**IFeature**](classuipc_1_1core_1_1_i_feature.md)     
         * **class** [**IObject**](classuipc_1_1core_1_1_i_object.md)     
@@ -186,6 +191,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**SerialSharedAttributeContext**](classuipc_1_1geometry_1_1_serial_shared_attribute_context.md)     
         * **class** [**SimplexUtils**](classuipc_1_1geometry_1_1_simplex_utils.md)     
         * **class** [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) _A simplicial complex is a collection of simplices._     
+            * **class** [**CreateInfo**](classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info.md)     
         * **class** [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md)     
         * **class** [**SimplicialComplexIO**](classuipc_1_1geometry_1_1_simplicial_complex_i_o.md) _A class for reading and writing simplicial complex._     
         * **class** [**SpreadSheetIO**](classuipc_1_1geometry_1_1_spread_sheet_i_o.md) _A class for writing geometry spreadsheet._     

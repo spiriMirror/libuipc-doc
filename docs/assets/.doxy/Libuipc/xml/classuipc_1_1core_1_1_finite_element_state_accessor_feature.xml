@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1_finite_element_state_accessor_feature" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::core::FiniteElementStateAccessorFeature</compoundname>
+    <basecompoundref refid="classuipc_1_1core_1_1_feature" prot="public" virt="non-virtual">uipc::core::Feature</basecompoundref>
+    <includes refid="finite__element__state__accessor__feature_8h" local="no">finite_element_state_accessor_feature.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a4154cfe7a2b4095d230b503b690759fa" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>std::string_view</type>
+        <definition>std::string_view uipc::core::FiniteElementStateAccessorFeature::FeatureName</definition>
+        <argsstring></argsstring>
+        <name>FeatureName</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::FeatureName</qualifiedname>
+        <initializer>= &quot;core/finite_element_state_accessor&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="27" column="39" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a47eaa9514ddc3d489d826d2b4fc11ce4" prot="private" static="no" mutable="no">
+        <type>S&lt; <ref refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_overrider" kindref="compound">FiniteElementStateAccessorFeatureOverrider</ref> &gt;</type>
+        <definition>S&lt;FiniteElementStateAccessorFeatureOverrider&gt; uipc::core::FiniteElementStateAccessorFeature::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::m_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="61" column="7" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a80b2cb86129bafe3be4532dba83c74a0" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::FiniteElementStateAccessorFeature::FiniteElementStateAccessorFeature</definition>
+        <argsstring>(S&lt; FiniteElementStateAccessorFeatureOverrider &gt; overrider)</argsstring>
+        <name>FiniteElementStateAccessorFeature</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::FiniteElementStateAccessorFeature</qualifiedname>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_overrider" kindref="compound">FiniteElementStateAccessorFeatureOverrider</ref> &gt;</type>
+          <declname>overrider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="29" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1af13e5d3bbef505fa84ef29f9c009387b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SizeT</type>
+        <definition>SizeT uipc::core::FiniteElementStateAccessorFeature::vertex_count</definition>
+        <argsstring>() const</argsstring>
+        <name>vertex_count</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::vertex_count</qualifiedname>
+        <briefdescription>
+<para>Get the number of vertices in the finite element system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="34" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a2924ee483b91be95039a619ca20c2a0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref></type>
+        <definition>geometry::SimplicialComplex uipc::core::FiniteElementStateAccessorFeature::create_geometry</definition>
+        <argsstring>(IndexT vertex_offset=0, SizeT vertex_count=~0ull) const</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::create_geometry</qualifiedname>
+        <param>
+          <type>IndexT</type>
+          <declname>vertex_offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>vertex_count</declname>
+          <defval>~0ull</defval>
+        </param>
+        <briefdescription>
+<para>Create a simplicial complex geometry to contain finite element state data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertex_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting vertex index in finite element system. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertex_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of vertices to include, if vertex_count == ~0ull, all vertices from vertex_offset to the end will be included. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="42" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1abf061e5c7d71629cddafabab2ecc3a47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::FiniteElementStateAccessorFeature::copy_from</definition>
+        <argsstring>(const geometry::SimplicialComplex &amp;state_geo) const</argsstring>
+        <name>copy_from</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::copy_from</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>state_geo</declname>
+        </param>
+        <briefdescription>
+<para>Copy finite element state data from the given geometry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state_geo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The geometry containing finite element state data to copy from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a974a6ff7b58e61e025fedf6f777200d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::FiniteElementStateAccessorFeature::copy_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;state_geo) const</argsstring>
+        <name>copy_to</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::copy_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1_simplicial_complex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>state_geo</declname>
+        </param>
+        <briefdescription>
+<para>Copy finite element state data to the given geometry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state_geo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The geometry to copy finite element state data to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="57" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1abad5c7356cfd457c31f486928a5d654b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::core::FiniteElementStateAccessorFeature::get_name</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_name</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::get_name</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1_i_feature_1a26b576454fc69d237ca8fe89cbce541e">get_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="60" column="51"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classuipc_1_1core_1_1_feature" kindref="compound">Feature</ref> to access finite element state data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://github.com/spiriMirror/libuipc/discussions/232">https://github.com/spiriMirror/libuipc/discussions/232</ulink> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1_feature"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::core::FiniteElementStateAccessorFeature</label>
+        <link refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1_i_feature"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1_feature"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::core::FiniteElementStateAccessorFeature</label>
+        <link refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1_i_feature"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="24" column="1" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="25" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1abf061e5c7d71629cddafabab2ecc3a47" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>copy_from</name></member>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a974a6ff7b58e61e025fedf6f777200d1" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>copy_to</name></member>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a2924ee483b91be95039a619ca20c2a0e" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a4154cfe7a2b4095d230b503b690759fa" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>FeatureName</name></member>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a80b2cb86129bafe3be4532dba83c74a0" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>FiniteElementStateAccessorFeature</name></member>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1abad5c7356cfd457c31f486928a5d654b" prot="private" virt="virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>get_name</name></member>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1a47eaa9514ddc3d489d826d2b4fc11ce4" prot="private" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>m_impl</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1acc3fc7569d0e68fa66ff1d77e9170775" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>name</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1ab0df15502507d511d2182c9a3a6435ba" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>type_name</name></member>
+      <member refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature_1af13e5d3bbef505fa84ef29f9c009387b" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>vertex_count</name></member>
+      <member refid="classuipc_1_1core_1_1_i_feature_1a9e377e68ea6ab0fcfbc2a2e19c9060bd" prot="public" virt="virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>~IFeature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

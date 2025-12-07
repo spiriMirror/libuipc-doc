@@ -3,7 +3,9 @@
   <compounddef id="classuipc_1_1core_1_1_feature" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::Feature</compoundname>
     <basecompoundref refid="classuipc_1_1core_1_1_i_feature" prot="public" virt="non-virtual">uipc::core::IFeature</basecompoundref>
+    <derivedcompoundref refid="classuipc_1_1core_1_1_affine_body_state_accessor_feature" prot="public" virt="non-virtual">uipc::core::AffineBodyStateAccessorFeature</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1core_1_1_contact_system_feature" prot="public" virt="non-virtual">uipc::core::ContactSystemFeature</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature" prot="public" virt="non-virtual">uipc::core::FiniteElementStateAccessorFeature</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature" prot="public" virt="non-virtual">uipc::diff_sim::AdjointMethodFeature</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1diff__sim_1_1_enable_grad_feature" prot="public" virt="non-virtual">uipc::diff_sim::EnableGradFeature</derivedcompoundref>
     <sectiondef kind="friend">
@@ -79,6 +81,12 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
+        <label>uipc::core::AffineBodyStateAccessorFeature</label>
+        <link refid="classuipc_1_1core_1_1_affine_body_state_accessor_feature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
         <label>uipc::core::ContactSystemFeature</label>
         <link refid="classuipc_1_1core_1_1_contact_system_feature"/>
         <childnode refid="1" relation="public-inheritance">
@@ -90,17 +98,23 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="5">
+        <label>uipc::core::FiniteElementStateAccessorFeature</label>
+        <link refid="classuipc_1_1core_1_1_finite_element_state_accessor_feature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="2">
         <label>uipc::core::IFeature</label>
         <link refid="classuipc_1_1core_1_1_i_feature"/>
       </node>
-      <node id="4">
+      <node id="6">
         <label>uipc::diff_sim::AdjointMethodFeature</label>
         <link refid="classuipc_1_1diff__sim_1_1_adjoint_method_feature"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5">
+      <node id="7">
         <label>uipc::diff_sim::EnableGradFeature</label>
         <link refid="classuipc_1_1diff__sim_1_1_enable_grad_feature"/>
         <childnode refid="1" relation="public-inheritance">

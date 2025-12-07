@@ -38,7 +38,7 @@ UIPC_BUILTIN_ATTRIBUTE(constitution_uid);
 
 UIPC_BUILTIN_ATTRIBUTE(extra_constitution_uids);
 
-UIPC_BUILTIN_ATTRIBUTE(constraint_uid);
+UIPC_BUILTIN_ATTRIBUTE(constraint_uids);
 
 UIPC_BUILTIN_ATTRIBUTE(implicit_geometry_uid);
 

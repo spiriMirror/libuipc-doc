@@ -16,6 +16,8 @@
 #include <uipc/backend/buffer_view.h>
 #include <uipc/common/buffer_info.h>
 #include <chrono>
+
+
 namespace uipc::geometry
 {
 using TimePoint = std::chrono::time_point<std::chrono::high_resolution_clock>;
@@ -46,6 +48,10 @@ class UIPC_CORE_API IAttributeSlot
     [[nodiscard]] SizeT size() const noexcept;
 
     [[nodiscard]] Json to_json() const;
+
+    [[nodiscard]] Json to_json(SizeT i) const;
+
+    void from_json_array(const Json& j) noexcept;
 
     [[nodiscard]] bool is_evolving() const noexcept;
     void               is_evolving(bool v) noexcept;

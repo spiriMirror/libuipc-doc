@@ -95,6 +95,7 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1_i_attribute_slot.
 |   | [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-iattributeslot-23) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &) = delete<br> |
 |   | [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-iattributeslot-33) ([**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &&) noexcept<br> |
 |  bool | [**allow\_destroy**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-allow_destroy) () noexcept const<br>_Check if the underlying attribute is allowed to be destroyed._  |
+|  void | [**from\_json\_array**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-from_json_array) (const Json & j) noexcept<br> |
 |  bool | [**is\_evolving**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-is_evolving-12) () noexcept const<br> |
 |  void | [**is\_evolving**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-is_evolving-22) (bool v) noexcept<br> |
 |  bool | [**is\_shared**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-is_shared) () noexcept const<br>_Check if the underlying attribute is shared._  |
@@ -103,7 +104,8 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1_i_attribute_slot.
 |  [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) & | [**operator=**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-operator) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &) = delete<br> |
 |  [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) & | [**operator=**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-operator_1) ([**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &&) noexcept<br> |
 |  SizeT | [**size**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-size) () noexcept const<br> |
-|  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-to_json) () const<br> |
+|  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-to_json-12) () const<br> |
+|  Json | [**to\_json**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-to_json-22) (SizeT i) const<br> |
 |  std::string\_view | [**type\_name**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-type_name) () noexcept const<br>_Get the type name of data stored in the attribute slot._  |
 | virtual  | [**~IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md#function-iattributeslot) () = default<br> |
 

@@ -10,6 +10,7 @@
 
 
 
+* `#include <uipc/core/sanity_checker.h>`
 * `#include <uipc/core/internal/scene.h>`
 * `#include <uipc/core/internal/engine.h>`
 * `#include <uipc/core/feature_collection.h>`

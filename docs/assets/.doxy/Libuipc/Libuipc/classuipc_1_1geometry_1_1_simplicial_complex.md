@@ -27,6 +27,11 @@ Inherits the following classes: [uipc::geometry::Geometry](classuipc_1_1geometry
 
 
 
+## Classes
+
+| Type | Name |
+| ---: | :--- |
+| class | [**CreateInfo**](classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info.md) <br> |
 
 
 ## Public Types
@@ -115,7 +120,7 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
-|   | [**SimplicialComplex**](#function-simplicialcomplex-13) () <br> |
+|   | [**SimplicialComplex**](#function-simplicialcomplex-13) (const [**CreateInfo**](classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info.md) & info=[**CreateInfo**](classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info.md){}) <br> |
 |   | [**SimplicialComplex**](#function-simplicialcomplex-23) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & o) <br> |
 |   | [**SimplicialComplex**](#function-simplicialcomplex-33) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) && o) = default<br> |
 |  IndexT | [**dim**](#function-dim) () noexcept const<br>_Get the dimension of the simplicial complex._  |
@@ -439,7 +444,9 @@ using uipc::geometry::SimplicialComplex::VertexAttributes =  SimplicialComplexAt
 ### function SimplicialComplex [1/3]
 
 ```C++
-uipc::geometry::SimplicialComplex::SimplicialComplex () 
+explicit uipc::geometry::SimplicialComplex::SimplicialComplex (
+    const CreateInfo & info=CreateInfo {}
+) 
 ```
 
 

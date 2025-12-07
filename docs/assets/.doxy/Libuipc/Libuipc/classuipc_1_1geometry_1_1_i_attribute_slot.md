@@ -57,6 +57,7 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 |   | [**IAttributeSlot**](#function-iattributeslot-23) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &) = delete<br> |
 |   | [**IAttributeSlot**](#function-iattributeslot-33) ([**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &&) noexcept<br> |
 |  bool | [**allow\_destroy**](#function-allow_destroy) () noexcept const<br>_Check if the underlying attribute is allowed to be destroyed._  |
+|  void | [**from\_json\_array**](#function-from_json_array) (const Json & j) noexcept<br> |
 |  bool | [**is\_evolving**](#function-is_evolving-12) () noexcept const<br> |
 |  void | [**is\_evolving**](#function-is_evolving-22) (bool v) noexcept<br> |
 |  bool | [**is\_shared**](#function-is_shared) () noexcept const<br>_Check if the underlying attribute is shared._  |
@@ -65,7 +66,8 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 |  [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) & | [**operator=**](#function-operator) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &) = delete<br> |
 |  [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) & | [**operator=**](#function-operator_1) ([**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) &&) noexcept<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
-|  Json | [**to\_json**](#function-to_json) () const<br> |
+|  Json | [**to\_json**](#function-to_json-12) () const<br> |
+|  Json | [**to\_json**](#function-to_json-22) (SizeT i) const<br> |
 |  std::string\_view | [**type\_name**](#function-type_name) () noexcept const<br>_Get the type name of data stored in the attribute slot._  |
 | virtual  | [**~IAttributeSlot**](#function-iattributeslot) () = default<br> |
 
@@ -175,6 +177,21 @@ uipc::geometry::IAttributeSlot::IAttributeSlot (
 _Check if the underlying attribute is allowed to be destroyed._ 
 ```C++
 bool uipc::geometry::IAttributeSlot::allow_destroy () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function from\_json\_array 
+
+```C++
+void uipc::geometry::IAttributeSlot::from_json_array (
+    const Json & j
+) noexcept
 ```
 
 
@@ -315,10 +332,25 @@ SizeT uipc::geometry::IAttributeSlot::size () noexcept const
 
 
 
-### function to\_json 
+### function to\_json [1/2]
 
 ```C++
 Json uipc::geometry::IAttributeSlot::to_json () const
+```
+
+
+
+
+<hr>
+
+
+
+### function to\_json [2/2]
+
+```C++
+Json uipc::geometry::IAttributeSlot::to_json (
+    SizeT i
+) const
 ```
 
 

@@ -51,8 +51,8 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**SanityChecker**](#function-sanitychecker) ([**internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) & scene) <br> |
-|  SanityCheckResult | [**check**](#function-check) (std::string\_view workspace) <br> |
+|   | [**SanityChecker**](#function-sanitychecker) ([**internal::Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) & scene, std::string\_view workspace) <br> |
+|  SanityCheckResult | [**check**](#function-check) () <br> |
 |  void | [**clear**](#function-clear) () <br> |
 |  const unordered\_map&lt; U64, S&lt; [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) &gt; &gt; & | [**errors**](#function-errors) () const<br> |
 |  const unordered\_map&lt; U64, S&lt; [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) &gt; &gt; & | [**infos**](#function-infos) () const<br> |
@@ -96,7 +96,8 @@
 
 ```C++
 uipc::core::SanityChecker::SanityChecker (
-    internal::Scene & scene
+    internal::Scene & scene,
+    std::string_view workspace
 ) 
 ```
 
@@ -110,9 +111,7 @@ uipc::core::SanityChecker::SanityChecker (
 ### function check 
 
 ```C++
-SanityCheckResult uipc::core::SanityChecker::check (
-    std::string_view workspace
-) 
+SanityCheckResult uipc::core::SanityChecker::check () 
 ```
 
 

@@ -671,6 +671,8 @@
       
         
       
+        
+      
     
     
     
@@ -724,6 +726,29 @@
   
   <span class="md-ellipsis">
     Affine Body
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    External Force for Affine Body
     
   </span>
   
@@ -1902,6 +1927,24 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-sanity_checker-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      function sanity_checker [1/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-sanity_checker-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      function sanity_checker [2/2]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-sync" class="md-nav__link">
     <span class="md-ellipsis">
       function sync
@@ -2004,6 +2047,14 @@
 <td style="text-align: left;"><a href="#function-retrieve"><strong>retrieve</strong></a> () <br></td>
 </tr>
 <tr>
+<td style="text-align: right;"><a href="../classuipc_1_1core_1_1_sanity_checker/"><strong>SanityChecker</strong></a> &amp;</td>
+<td style="text-align: left;"><a href="#function-sanity_checker-12"><strong>sanity_checker</strong></a> () <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">const <a href="../classuipc_1_1core_1_1_sanity_checker/"><strong>SanityChecker</strong></a> &amp;</td>
+<td style="text-align: left;"><a href="#function-sanity_checker-22"><strong>sanity_checker</strong></a> () const<br></td>
+</tr>
+<tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-sync"><strong>sync</strong></a> () <br></td>
 </tr>
@@ -2061,15 +2112,25 @@
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-sanity_checker-12">function sanity_checker [1/2]</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">SanityChecker</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">World</span><span class="o">::</span><span class="n">sanity_checker</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-sanity_checker-22">function sanity_checker [2/2]</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">const</span><span class="w"> </span><span class="n">SanityChecker</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">World</span><span class="o">::</span><span class="n">sanity_checker</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-sync">function sync</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">World</span><span class="o">::</span><span class="n">sync</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">World</span><span class="o">::</span><span class="n">sync</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 <h2 id="friends-documentation">Friends Documentation</h2>
 <h3 id="friend-worldvisitor">friend WorldVisitor</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">World</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">World</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 

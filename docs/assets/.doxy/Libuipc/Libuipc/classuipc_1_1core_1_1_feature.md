@@ -16,7 +16,7 @@
 Inherits the following classes: [uipc::core::IFeature](classuipc_1_1core_1_1_i_feature.md)
 
 
-Inherited by the following classes: [uipc::core::ContactSystemFeature](classuipc_1_1core_1_1_contact_system_feature.md),  [uipc::diff\_sim::AdjointMethodFeature](classuipc_1_1diff__sim_1_1_adjoint_method_feature.md),  [uipc::diff\_sim::EnableGradFeature](classuipc_1_1diff__sim_1_1_enable_grad_feature.md)
+Inherited by the following classes: [uipc::core::AffineBodyStateAccessorFeature](classuipc_1_1core_1_1_affine_body_state_accessor_feature.md),  [uipc::core::ContactSystemFeature](classuipc_1_1core_1_1_contact_system_feature.md),  [uipc::core::FiniteElementStateAccessorFeature](classuipc_1_1core_1_1_finite_element_state_accessor_feature.md),  [uipc::diff\_sim::AdjointMethodFeature](classuipc_1_1diff__sim_1_1_adjoint_method_feature.md),  [uipc::diff\_sim::EnableGradFeature](classuipc_1_1diff__sim_1_1_enable_grad_feature.md)
 
 
 

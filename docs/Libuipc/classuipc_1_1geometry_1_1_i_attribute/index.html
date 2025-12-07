@@ -671,6 +671,8 @@
       
         
       
+        
+      
     
     
     
@@ -724,6 +726,29 @@
   
   <span class="md-ellipsis">
     Affine Body
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    External Force for Affine Body
     
   </span>
   
@@ -1848,6 +1873,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-from_json_array" class="md-nav__link">
+    <span class="md-ellipsis">
+      function from_json_array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-size" class="md-nav__link">
     <span class="md-ellipsis">
       function size
@@ -1947,6 +1981,15 @@
   <a href="#function-do_from_json" class="md-nav__link">
     <span class="md-ellipsis">
       function do_from_json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-do_from_json_array" class="md-nav__link">
+    <span class="md-ellipsis">
+      function do_from_json_array
     </span>
   </a>
   
@@ -2061,6 +2104,10 @@
 <td style="text-align: left;"><a href="#function-from_json"><strong>from_json</strong></a> (const Json &amp; j) noexcept<br></td>
 </tr>
 <tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-from_json_array"><strong>from_json_array</strong></a> (const Json &amp; j) noexcept<br></td>
+</tr>
+<tr>
 <td style="text-align: right;">SizeT</td>
 <td style="text-align: left;"><a href="#function-size"><strong>size</strong></a> () noexcept const<br><em>Get the size of the attribute.</em></td>
 </tr>
@@ -2113,6 +2160,10 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-do_from_json_array"><strong>do_from_json_array</strong></a> (const Json &amp; j) noexcept = 0<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
 <td style="text-align: left;"><a href="#function-do_reorder"><strong>do_reorder</strong></a> (span&lt; const SizeT &gt; O) noexcept = 0<br></td>
 </tr>
 <tr>
@@ -2154,105 +2205,119 @@
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-from_json_array">function from_json_array</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">from_json_array</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-size">function size</h3>
 <p><em>Get the size of the attribute.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-to_json-12">function to_json [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">i</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">i</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-to_json-22">function to_json [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-type_name">function type_name</h3>
 <p><em>Get the type name of data stored in the attribute slot.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">type_name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">type_name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-iattribute_1">function ~IAttribute</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::~</span><span class="n">IAttribute</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::~</span><span class="n">IAttribute</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
 </span></code></pre></div>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
 <h3 id="function-do_clear">function do_clear</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_clear</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_clear</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-do_clone">function do_clone</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttribute</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_clone</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttribute</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_clone</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-do_clone_empty">function do_clone_empty</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttribute</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_clone_empty</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IAttribute</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_clone_empty</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-do_copy_from">function do_copy_from</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_copy_from</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">IAttribute</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">,</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCopy</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">copy</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_copy_from</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">IAttribute</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCopy</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">copy</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-do_from_json">function do_from_json</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_from_json</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-</span></code></pre></div>
-<hr>
-
-<h3 id="function-do_reorder">function do_reorder</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_reorder</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SizeT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">O</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_from_json</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-do_from_json_array">function do_from_json_array</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_from_json_array</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">j</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-do_reorder">function do_reorder</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_reorder</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SizeT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">O</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-do_reserve">function do_reserve</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_reserve</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">N</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_reserve</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">N</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-do_resize">function do_resize</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_resize</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">N</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_resize</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">N</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-do_to_json-12">function do_to_json [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_to_json</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">i</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_to_json</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">i</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-do_to_json-22">function do_to_json [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">do_to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-get_size">function get_size</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">get_size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">get_size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-get_type_name">function get_type_name</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">get_type_name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">IAttribute</span><span class="o">::</span><span class="n">get_type_name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 

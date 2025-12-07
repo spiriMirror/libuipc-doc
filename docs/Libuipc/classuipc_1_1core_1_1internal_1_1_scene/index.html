@@ -671,6 +671,8 @@
       
         
       
+        
+      
     
     
     
@@ -724,6 +726,29 @@
   
   <span class="md-ellipsis">
     Affine Body
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    External Force for Affine Body
     
   </span>
   
@@ -2019,24 +2044,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-sanity_checker-12" class="md-nav__link">
-    <span class="md-ellipsis">
-      function sanity_checker [1/2]
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-sanity_checker-22" class="md-nav__link">
-    <span class="md-ellipsis">
-      function sanity_checker [2/2]
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#function-solve_pending" class="md-nav__link">
     <span class="md-ellipsis">
       function solve_pending
@@ -2149,7 +2156,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-scene"><strong>Scene</strong></a> (const Json &amp; config) noexcept<br></td>
+<td style="text-align: left;"><a href="#function-scene"><strong>Scene</strong></a> (const <a href="../classuipc_1_1geometry_1_1_attribute_collection/"><strong>geometry::AttributeCollection</strong></a> &amp; config) noexcept<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">auto &amp;</td>
@@ -2236,14 +2243,6 @@
 <td style="text-align: left;"><a href="#function-rest_geometries-22"><strong>rest_geometries</strong></a> () noexcept<br></td>
 </tr>
 <tr>
-<td style="text-align: right;">auto &amp;</td>
-<td style="text-align: left;"><a href="#function-sanity_checker-12"><strong>sanity_checker</strong></a> () noexcept const<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">auto &amp;</td>
-<td style="text-align: left;"><a href="#function-sanity_checker-22"><strong>sanity_checker</strong></a> () noexcept<br></td>
-</tr>
-<tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-solve_pending"><strong>solve_pending</strong></a> () noexcept<br></td>
 </tr>
@@ -2272,7 +2271,7 @@
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
 <h3 id="function-scene">function Scene</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">Scene</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
@@ -2384,52 +2383,42 @@
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-sanity_checker-12">function sanity_checker [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">sanity_checker</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
-</span></code></pre></div>
-<hr>
-
-<h3 id="function-sanity_checker-22">function sanity_checker [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">sanity_checker</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
-</span></code></pre></div>
-<hr>
-
 <h3 id="function-solve_pending">function solve_pending</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">solve_pending</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">solve_pending</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-subscene_tabular-12">function subscene_tabular [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-subscene_tabular-22">function subscene_tabular [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-update_from">function update_from</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">update_from</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SceneSnapshotCommit</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">commit</span>
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">update_from</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SceneSnapshotCommit</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">commit</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-world">function world</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">world</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">world</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-scene_1">function ~Scene</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::~</span><span class="n">Scene</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::~</span><span class="n">Scene</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 <h2 id="friends-documentation">Friends Documentation</h2>
 <h3 id="friend-scene">friend Scene</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">Scene</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">core</span><span class="o">::</span><span class="n">Scene</span>
-</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">::</span><span class="n">Scene</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n">core</span><span class="o">::</span><span class="n">Scene</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 

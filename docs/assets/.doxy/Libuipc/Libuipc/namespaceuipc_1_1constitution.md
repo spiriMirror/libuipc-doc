@@ -32,6 +32,7 @@
 | class | [**ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md) <br> |
 | class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md) <br> |
 | class | [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint.md) <br> |
+| class | [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1_affine_body_external_body_force.md) <br> |
 | class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md) <br> |
 | class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md) <br> |
 | class | [**Constraint**](classuipc_1_1constitution_1_1_constraint.md) <br> |
