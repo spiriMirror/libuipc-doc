@@ -56,6 +56,8 @@ UIPC_BUILTIN_ATTRIBUTE(is_constrained);
 
 UIPC_BUILTIN_ATTRIBUTE(is_dynamic);
 
+UIPC_BUILTIN_ATTRIBUTE(external_kinetic);
+
 UIPC_BUILTIN_ATTRIBUTE(volume);
 
 UIPC_BUILTIN_ATTRIBUTE(mass_density);

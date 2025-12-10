@@ -185,16 +185,12 @@ class UIPC_CORE_API Geometry : public IGeometry
         InstanceAttributesT& operator=(const InstanceAttributesT& o) = default;
         InstanceAttributesT& operator=(InstanceAttributesT&& o)      = default;
 
-        void resize(size_t size) &&
-            requires(!IsConst);
-        void reserve(size_t size) &&
-            requires(!IsConst);
-        void clear() &&
-            requires(!IsConst);
+        void resize(size_t size) && requires(!IsConst);
+        void reserve(size_t size) && requires(!IsConst);
+        void clear() && requires(!IsConst);
         [[nodiscard]] SizeT size() &&;
 
-        void destroy(std::string_view name) &&
-            requires(!IsConst);
+        void destroy(std::string_view name) && requires(!IsConst);
 
         template <typename T>
         [[nodiscard]] auto find(std::string_view name) &&
@@ -243,25 +239,28 @@ class UIPC_CORE_API Geometry : public IGeometry
     Geometry& operator=(const Geometry& o) = delete;
     Geometry& operator=(Geometry&& o)      = delete;
 
-    [[nodiscard]] MetaAttributes meta();
-
+    [[nodiscard]] MetaAttributes  meta();
     [[nodiscard]] CMetaAttributes meta() const;
 
 
-    [[nodiscard]] InstanceAttributes instances();
-
+    [[nodiscard]] InstanceAttributes  instances();
     [[nodiscard]] CInstanceAttributes instances() const;
 
     template <std::derived_from<Geometry> T>
     [[nodiscard]] T* as();
-
     template <std::derived_from<Geometry> T>
     [[nodiscard]] const T* as() const;
 
+
+    S<AttributeCollection> operator[](std::string_view name);
+
+    S<const AttributeCollection> operator[](std::string_view name) const;
+
   protected:
-    S<AttributeCollection>       create(std::string_view name);
-    S<const AttributeCollection> find(std::string_view name) const;
-    S<AttributeCollection>       find(std::string_view name);
+    S<AttributeCollection> create(std::string_view name);
+
+    [[nodiscard]] S<const AttributeCollection> find(std::string_view name) const;
+    [[nodiscard]] S<AttributeCollection> find(std::string_view name);
 
     virtual Json do_to_json() const override;
     virtual void do_collect_attribute_collections(vector<std::string>& names,

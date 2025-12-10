@@ -100,7 +100,8 @@
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (parent\_id) <br>`parent_id` _&lt;IndexT&gt; attribute on_**edges** _/_**triangles** _, indicates the parent simplex id_ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (is\_fixed) <br>`is_fixed` _&lt;IndexT&gt;[0,1] attribute, indicates if the_**instance** _or_**vertex** _is fixed._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (is\_constrained) <br>`is_constrained` _&lt;IndexT&gt;[0,1] attribute, indicates if the_**instance** _or_**vertex** _is constrained._ |
-|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (is\_dynamic) <br>`is_dynamic` _&lt;IndexT&gt;[0,1] attribute, indicates if the_**instance** _or_**vertex** _is is dynamic._ |
+|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (is\_dynamic) <br>`is_dynamic` _&lt;IndexT&gt;[0,1] attribute, indicates if the_**instance** _or_**vertex** _is dynamic._ |
+|   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (external\_kinetic) <br>`external_kinetic` _&lt;IndexT&gt;[0,1] attribute，indicates if the_**instance** _or_**vertex** _is fully controlled by external kinetic._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (volume) <br>`volume` _&lt;Float&gt; attribute on_**vertices** _._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (mass\_density) <br>`mass_density` _&lt;Float&gt; attribute on_**vertices** _or_**meta** _._ |
 |   | [**UIPC\_BUILTIN\_ATTRIBUTE**](#function-uipc_builtin_attribute) (gravity) <br>`gravity` _&lt;Vector3&gt; attribute on_**instance** _or_**vertices** _._ |
@@ -626,7 +627,7 @@ uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
 
 ### function UIPC\_BUILTIN\_ATTRIBUTE 
 
-`is_dynamic` _&lt;IndexT&gt;[0,1] attribute, indicates if the_**instance** _or_**vertex** _is is dynamic._
+`is_dynamic` _&lt;IndexT&gt;[0,1] attribute, indicates if the_**instance** _or_**vertex** _is dynamic._
 ```C++
 uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
     is_dynamic
@@ -639,6 +640,29 @@ uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
 
 
 1) 0 means the the kinetic of the instance or vertex is not considered. 2) 1 means the the kinetic of the instance or vertex is considered. 
+
+
+        
+
+<hr>
+
+
+
+### function UIPC\_BUILTIN\_ATTRIBUTE 
+
+`external_kinetic` _&lt;IndexT&gt;[0,1] attribute，indicates if the_**instance** _or_**vertex** _is fully controlled by external kinetic._
+```C++
+uipc::builtin::UIPC_BUILTIN_ATTRIBUTE (
+    external_kinetic
+) 
+```
+
+
+
+If an instance or vertex is marked with `external_kinetic` attribute, default kinetic computation will be skipped for it. It's always used together with Constraints to fully control the kinetic of the instance or vertex.
+
+
+1) 0 means the instance or vertex will go through default kinetic computation. 2) 1 means the instance or vertex will skip default kinetic computation. 
 
 
         

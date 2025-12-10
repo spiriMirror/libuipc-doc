@@ -673,6 +673,8 @@
       
         
       
+        
+      
     
     
     
@@ -749,6 +751,29 @@
   
   <span class="md-ellipsis">
     External Force for Affine Body
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_revolute_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Affine Body Revolute Joint
     
   </span>
   
@@ -2040,6 +2065,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-operator_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      function operator[]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-operator_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      function operator[]
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2273,6 +2316,14 @@
 <td style="text-align: right;"><a href="./"><strong>Geometry</strong></a> &amp;</td>
 <td style="text-align: left;"><a href="#function-operator_1"><strong>operator=</strong></a> (<a href="./"><strong>Geometry</strong></a> &amp;&amp; o) = delete<br></td>
 </tr>
+<tr>
+<td style="text-align: right;">S&lt; <a href="../classuipc_1_1geometry_1_1_attribute_collection/"><strong>AttributeCollection</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#function-operator_2"><strong>operator[]</strong></a> (std::string_view name) <br><em>Get the attribute collection with the given name.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">S&lt; const <a href="../classuipc_1_1geometry_1_1_attribute_collection/"><strong>AttributeCollection</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#function-operator_3"><strong>operator[]</strong></a> (std::string_view name) const<br><em>Get the attribute collection with the given name.</em></td>
+</tr>
 </tbody>
 </table>
 <h2 id="public-functions-inherited-from-uipcgeometryigeometry">Public Functions inherited from uipc::geometry::IGeometry</h2>
@@ -2318,7 +2369,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">S&lt; <a href="../classuipc_1_1geometry_1_1_attribute_collection/"><strong>AttributeCollection</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-create"><strong>create</strong></a> (std::string_view name) <br></td>
+<td style="text-align: left;"><a href="#function-create"><strong>create</strong></a> (std::string_view name) <br><em>Create a new attribute collection with the given name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
@@ -2346,7 +2397,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">S&lt; const <a href="../classuipc_1_1geometry_1_1_attribute_collection/"><strong>AttributeCollection</strong></a> &gt;</td>
-<td style="text-align: left;"><a href="#function-find-12"><strong>find</strong></a> (std::string_view name) const<br></td>
+<td style="text-align: left;"><a href="#function-find-12"><strong>find</strong></a> (std::string_view name) const<br><em>Find the attribute collection with the given name.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">S&lt; <a href="../classuipc_1_1geometry_1_1_attribute_collection/"><strong>AttributeCollection</strong></a> &gt;</td>
@@ -2489,77 +2540,123 @@
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
 </span></code></pre></div>
 <hr>
-<h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
-<h3 id="function-create">function create</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">create</span><span class="w"> </span><span class="p">(</span>
+
+<h3 id="function-operator_2">function operator[]</h3>
+<p><em>Get the attribute collection with the given name.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="k">operator</span><span class="p">[]</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
+<p>If the attribute collection does not exist, create a new one.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the attribute collection. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The attribute collection with the given name. </p>
+<hr>
+
+<h3 id="function-operator_3">function operator[]</h3>
+<p><em>Get the attribute collection with the given name.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="k">operator</span><span class="p">[]</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</span></code></pre></div>
+<p>If the attribute collection does not exist, return nullptr.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the attribute collection. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The attribute collection with the given name. </p>
+<hr>
+<h2 id="protected-functions-documentation">Protected Functions Documentation</h2>
+<h3 id="function-create">function create</h3>
+<p><em>Create a new attribute collection with the given name.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">create</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the attribute collection. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The created attribute collection. </p>
 <hr>
 
 <h3 id="function-do_build_from_attribute_collections">function do_build_from_attribute_collections</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_build_from_attribute_collections</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="p">,</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">collections</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_build_from_attribute_collections</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">names</span><span class="p">,</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">collections</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </span></code></pre></div>
 <p>Implements <a href="../classuipc_1_1geometry_1_1_i_geometry/#function-do_build_from_attribute_collections"><em>uipc::geometry::IGeometry::do_build_from_attribute_collections</em></a></p>
 <hr>
 
 <h3 id="function-do_clone">function do_clone</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IGeometry</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_clone</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IGeometry</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_clone</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p>Implements <a href="../classuipc_1_1geometry_1_1_i_geometry/#function-do_clone"><em>uipc::geometry::IGeometry::do_clone</em></a></p>
 <hr>
 
 <h3 id="function-do_collect_attribute_collections-12">function do_collect_attribute_collections [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_collect_attribute_collections</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">names</span><span class="p">,</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">collections</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_collect_attribute_collections</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">names</span><span class="p">,</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">collections</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p>Implements <a href="../classuipc_1_1geometry_1_1_i_geometry/#function-do_collect_attribute_collections-12"><em>uipc::geometry::IGeometry::do_collect_attribute_collections</em></a></p>
 <hr>
 
 <h3 id="function-do_collect_attribute_collections-22">function do_collect_attribute_collections [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_collect_attribute_collections</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">names</span><span class="p">,</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">collections</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_collect_attribute_collections</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">names</span><span class="p">,</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">collections</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </span></code></pre></div>
 <p>Implements <a href="../classuipc_1_1geometry_1_1_i_geometry/#function-do_collect_attribute_collections-22"><em>uipc::geometry::IGeometry::do_collect_attribute_collections</em></a></p>
 <hr>
 
 <h3 id="function-do_to_json">function do_to_json</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p>Implements <a href="../classuipc_1_1geometry_1_1_i_geometry/#function-do_to_json"><em>uipc::geometry::IGeometry::do_to_json</em></a></p>
 <hr>
 
 <h3 id="function-do_update_from">function do_update_from</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_update_from</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GeometryCommit</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">commit</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">do_update_from</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GeometryCommit</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">commit</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </span></code></pre></div>
 <p>Implements <a href="../classuipc_1_1geometry_1_1_i_geometry/#function-do_update_from"><em>uipc::geometry::IGeometry::do_update_from</em></a></p>
 <hr>
 
 <h3 id="function-find-12">function find [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">find</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+<p><em>Find the attribute collection with the given name.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">find</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> The name of the attribute collection. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The attribute collection with the given name. </p>
+<p><strong>Returns:</strong></p>
+<p>nullptr if the attribute collection with the given name does not exist. </p>
 <hr>
 
 <h3 id="function-find-22">function find [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">find</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">find</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">name</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-get_type">function get_type</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">get_type</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">get_type</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p>Implements <a href="../classuipc_1_1geometry_1_1_i_geometry/#function-get_type"><em>uipc::geometry::IGeometry::get_type</em></a></p>
 <hr>

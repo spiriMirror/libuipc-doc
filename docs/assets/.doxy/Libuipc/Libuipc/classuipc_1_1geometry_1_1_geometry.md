@@ -99,6 +99,8 @@ Inherited by the following classes: [uipc::geometry::AbstractSimplicialComplex](
 |  [**CMetaAttributes**](classuipc_1_1geometry_1_1_geometry_1_1_meta_attributes_t.md) | [**meta**](#function-meta-22) () const<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](#function-operator) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & o) = delete<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator=**](#function-operator_1) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) && o) = delete<br> |
+|  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**operator[]**](#function-operator_2) (std::string\_view name) <br>_Get the attribute collection with the given name._  |
+|  S&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**operator[]**](#function-operator_3) (std::string\_view name) const<br>_Get the attribute collection with the given name._  |
 
 
 ## Public Functions inherited from uipc::geometry::IGeometry
@@ -162,14 +164,14 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1_i_geometry.md)
 
 | Type | Name |
 | ---: | :--- |
-|  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**create**](#function-create) (std::string\_view name) <br> |
+|  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**create**](#function-create) (std::string\_view name) <br>_Create a new attribute collection with the given name._  |
 | virtual void | [**do\_build\_from\_attribute\_collections**](#function-do_build_from_attribute_collections) (span&lt; const std::string &gt; names, span&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; collections) override<br> |
 | virtual S&lt; [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections-12) (vector&lt; std::string &gt; & names, vector&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override const<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections-22) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) \* &gt; & collections) override<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json) () override const<br> |
 | virtual void | [**do\_update\_from**](#function-do_update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & commit) override<br> |
-|  S&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**find**](#function-find-12) (std::string\_view name) const<br> |
+|  S&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**find**](#function-find-12) (std::string\_view name) const<br>_Find the attribute collection with the given name._  |
 |  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) &gt; | [**find**](#function-find-22) (std::string\_view name) <br> |
 | virtual std::string\_view | [**get\_type**](#function-get_type) () noexcept override const<br> |
 
@@ -426,6 +428,80 @@ Geometry & uipc::geometry::Geometry::operator= (
 
 
 <hr>
+
+
+
+### function operator[] 
+
+_Get the attribute collection with the given name._ 
+```C++
+S< AttributeCollection > uipc::geometry::Geometry::operator[] (
+    std::string_view name
+) 
+```
+
+
+
+If the attribute collection does not exist, create a new one.
+
+
+
+
+**Parameters:**
+
+
+* `name` The name of the attribute collection. 
+
+
+
+**Returns:**
+
+The attribute collection with the given name. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function operator[] 
+
+_Get the attribute collection with the given name._ 
+```C++
+S< const AttributeCollection > uipc::geometry::Geometry::operator[] (
+    std::string_view name
+) const
+```
+
+
+
+If the attribute collection does not exist, return nullptr.
+
+
+
+
+**Parameters:**
+
+
+* `name` The name of the attribute collection. 
+
+
+
+**Returns:**
+
+The attribute collection with the given name. 
+
+
+
+
+
+        
+
+<hr>
 ## Protected Functions Documentation
 
 
@@ -433,6 +509,7 @@ Geometry & uipc::geometry::Geometry::operator= (
 
 ### function create 
 
+_Create a new attribute collection with the given name._ 
 ```C++
 S< AttributeCollection > uipc::geometry::Geometry::create (
     std::string_view name
@@ -441,6 +518,24 @@ S< AttributeCollection > uipc::geometry::Geometry::create (
 
 
 
+
+
+**Parameters:**
+
+
+* `name` The name of the attribute collection. 
+
+
+
+**Returns:**
+
+The created attribute collection. 
+
+
+
+
+
+        
 
 <hr>
 
@@ -549,6 +644,7 @@ Implements [*uipc::geometry::IGeometry::do\_update\_from*](classuipc_1_1geometry
 
 ### function find [1/2]
 
+_Find the attribute collection with the given name._ 
 ```C++
 S< const AttributeCollection > uipc::geometry::Geometry::find (
     std::string_view name
@@ -557,6 +653,31 @@ S< const AttributeCollection > uipc::geometry::Geometry::find (
 
 
 
+
+
+**Parameters:**
+
+
+* `name` The name of the attribute collection. 
+
+
+
+**Returns:**
+
+The attribute collection with the given name. 
+
+
+
+
+**Returns:**
+
+nullptr if the attribute collection with the given name does not exist. 
+
+
+
+
+
+        
 
 <hr>
 
