@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../particle/">
+        <link rel="prev" href="../soft_position_constraint/">
       
       
         <link rel="next" href="../stable_neo_hookean/">
@@ -683,6 +683,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -822,12 +830,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../discrete_shell_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Discrete Shell Bending
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../empty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Empty
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../hookean_spring/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Hookean Spring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kirchhoff_rod_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kirchhoff Rod Bending
     
   </span>
   
@@ -874,6 +951,29 @@
   
   <span class="md-ellipsis">
     Particle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soft_position_constraint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Soft Position Constraint
     
   </span>
   
@@ -1976,7 +2076,7 @@ a_{33}\\
 <div class="arithmatex">\[
 \Psi = \frac{1}{2} \left( \mathbf{q} - \hat{\mathbf{q}} \right)^T \mathbf{\eta} \mathbf{M} \left( \mathbf{q} - \hat{\mathbf{q}} \right),
 \]</div>
-<p>where <span class="arithmatex">\(\hat{\mathbf{q}}\)</span> is the target state, <span class="arithmatex">\(\mathbf{M}\)</span> is the mass matrix of the affine body, <span class="arithmatex">\(\eta_p \in (0,+\inf)\)</span> is the position constraint strength ratio, and <span class="arithmatex">\(\eta_a \in (0,+\inf)\)</span> is the affine (or rotation if not so rigorous) constraint strength ratio.</p>
+<p>where <span class="arithmatex">\(\hat{\mathbf{q}}\)</span> is the target state, <span class="arithmatex">\(\mathbf{M}\)</span> is the mass matrix of the affine body, <span class="arithmatex">\(\eta_p \in (0,+\infty)\)</span> is the position constraint strength ratio, and <span class="arithmatex">\(\eta_a \in (0,+\infty)\)</span> is the affine (or rotation if not so rigorous) constraint strength ratio.</p>
 <p>The reason we use strength ratio is that the mass matrix <span class="arithmatex">\(\mathbf{M}\)</span> already contains the mass and inertia information, so that users only need to care about how strong the constraint is compared to the mass and inertia of the body, which is more intuitive.</p>
 <p>Because the constraint is "SOFT", we don't allow a too-strong strength which will lead to numerical instability. Normally, <span class="arithmatex">\(\eta_p\)</span> and <span class="arithmatex">\(\eta_a\)</span> are better in the range of <span class="arithmatex">\([0, 100]\)</span>.</p></div>
 
