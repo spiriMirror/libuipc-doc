@@ -115,7 +115,13 @@ Example:
 
 
 
-```
+```C++
+REGISTER_CONSTITUTION_UIDS()
+{
+    using namespace uipc::builtin;
+    list<UIDInfo> uids;
+    return uids;
+}
 ```
  
 

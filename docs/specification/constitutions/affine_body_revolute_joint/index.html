@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../affine_body_external_force/">
+        <link rel="prev" href="../affine_body_prismatic_joint/">
       
       
         <link rel="next" href="../arap/">
@@ -691,6 +691,8 @@
       
         
       
+        
+      
     
     
     
@@ -767,6 +769,29 @@
   
   <span class="md-ellipsis">
     External Force for Affine Body
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affine_body_prismatic_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Affine Body Prismatic Joint
     
   </span>
   
@@ -2036,7 +2061,7 @@
 
 
 <div><h1 id="affine-body-revolute-joint">Affine Body Revolute Joint</h1>
-<p>Literature References:</p>
+<p>References:</p>
 <p><a href="https://dl.acm.org/doi/pdf/10.1145/3528223.3530076">A unified newton barrier method for multibody dynamics</a></p>
 <h2 id="18-affinebodyrevolutejoint">#18 AffineBodyRevoluteJoint</h2>
 <p>The <strong>Affine Body Revolute Joint</strong> constitution constrains two affine bodies to rotate relative to each other about a shared axis. This joint allows for rotational motion while restricting translational movement between the two bodies.</p>
@@ -2053,7 +2078,7 @@
 <p>intuitively <span class="arithmatex">\(\mathbf{J}^0\)</span> and <span class="arithmatex">\(\mathbf{J}^1\)</span> tell the local coordinates of the two points on affine bodies <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>. </p>
 <p>The energy function for the <strong>Affine Body Revolute Joint</strong> is defined as:</p>
 <div class="arithmatex">\[
-E = K \cdot \left( 
+E = \frac{K}{2} \cdot \left( 
     \| \mathbf{J}^0_i \mathbf{q}_i - \mathbf{J}^0_j \mathbf{q}_j \|^2
     +
     \| \mathbf{J}^1_i \mathbf{q}_i - \mathbf{J}^1_j \mathbf{q}_j \|^2

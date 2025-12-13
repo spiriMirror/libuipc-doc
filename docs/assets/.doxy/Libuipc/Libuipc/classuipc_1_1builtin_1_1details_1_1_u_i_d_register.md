@@ -83,7 +83,7 @@ Inherited by the following classes: [uipc::builtin::ConstitutionUIDCollection](c
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**create**](#function-create) (const [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) & info) <br> |
+|  void | [**create**](#function-create) (const [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) & info, const [**CreatorInfo**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1_1_creator_info.md) & creator) <br> |
 
 
 
@@ -142,7 +142,8 @@ Json uipc::builtin::details::UIDRegister::to_json () noexcept const
 
 ```C++
 void uipc::builtin::details::UIDRegister::create (
-    const UIDInfo & info
+    const UIDInfo & info,
+    const CreatorInfo & creator
 ) 
 ```
 

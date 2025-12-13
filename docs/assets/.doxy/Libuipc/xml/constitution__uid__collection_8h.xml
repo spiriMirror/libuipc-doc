@@ -3,15 +3,12 @@
   <compounddef id="constitution__uid__collection_8h" kind="file" language="C++">
     <compoundname>constitution_uid_collection.h</compoundname>
     <includes refid="uid__register_8h" local="no">uipc/builtin/uid_register.h</includes>
-    <includes refid="list_8h" local="no">uipc/common/list.h</includes>
     <includedby refid="constitution_8h" local="no">include/uipc/constitution/constitution.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>include/uipc/builtin/constitution_uid_collection.h</label>
         <link refid="constitution__uid__collection_8h"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="4">
@@ -25,6 +22,10 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>uipc/builtin/uid_register.h</label>
@@ -32,6 +33,8 @@
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -46,12 +49,12 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="11">
         <label>uipc/common/list.h</label>
         <link refid="list_8h_source"/>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -66,18 +69,21 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="15">
         <label>uipc/common/unordered_map.h</label>
         <link refid="unordered__map_8h_source"/>
         <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="6">
         <label>Eigen/Core</label>
       </node>
-      <node id="15">
+      <node id="14">
+        <label>functional</label>
+      </node>
+      <node id="13">
         <label>list</label>
       </node>
       <node id="12">
@@ -89,7 +95,7 @@
       <node id="8">
         <label>string</label>
       </node>
-      <node id="13">
+      <node id="16">
         <label>unordered_map</label>
       </node>
     </incdepgraph>
@@ -369,19 +375,18 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/builtin/uid_register.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/list.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::builtin</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="7" refid="classuipc_1_1builtin_1_1_constitution_u_i_d_collection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>ConstitutionUIDCollection<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register" kindref="compound">details::UIDRegister</ref></highlight></codeline>
-<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ConstitutionUIDCollection&amp;<sp/>instance()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::builtin</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="classuipc_1_1builtin_1_1_constitution_u_i_d_collection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>ConstitutionUIDCollection<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register" kindref="compound">details::UIDRegister</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ConstitutionUIDCollection&amp;<sp/>instance()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ConstitutionUIDAutoRegister;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>ConstitutionUIDCollection();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="15"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::builtin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>ConstitutionUIDCollection();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::builtin</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/builtin/constitution_uid_collection.h"/>
   </compounddef>

@@ -41,7 +41,7 @@
 |  Json | [**extras**](#variable-extras)  <br> |
 |  string | [**name**](#variable-name)  <br> |
 |  string | [**type**](#variable-type)  <br> |
-|  U64 | [**uid**](#variable-uid)  <br> |
+|  U64 | [**uid**](#variable-uid)   = `0`<br> |
 |  string | [**website**](#variable-website)  <br> |
 
 

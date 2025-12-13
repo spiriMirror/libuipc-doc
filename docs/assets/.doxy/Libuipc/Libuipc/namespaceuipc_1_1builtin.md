@@ -39,6 +39,7 @@
 | class | [**ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md) <br> |
 | class | [**ImplicitGeometryUIDCollection**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_collection.md) <br> |
 | struct | [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) <br> |
+| class | [**UIDInfoCreator**](classuipc_1_1builtin_1_1_u_i_d_info_creator.md) <br> |
 
 
 

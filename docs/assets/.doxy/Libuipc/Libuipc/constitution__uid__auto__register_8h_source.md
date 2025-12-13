@@ -17,7 +17,8 @@ namespace uipc::builtin
 class UIPC_CORE_API ConstitutionUIDAutoRegister
 {
   public:
-    using Creator = std::function<list<UIDInfo>()>;
+    using Creator = UIDInfoCreator;
+
     ConstitutionUIDAutoRegister(Creator creator) noexcept;
 
   private:
@@ -31,7 +32,8 @@ class UIPC_CORE_API ConstitutionUIDAutoRegister
     {                                                                                                 \
         static ::uipc::list<::uipc::builtin::UIDInfo> ConstitutionUIDAutoRegisterFunction##counter(); \
         static ::uipc::builtin::ConstitutionUIDAutoRegister ConstitutionUIDAutoRegister##counter{     \
-            ConstitutionUIDAutoRegisterFunction##counter};                                            \
+            ::uipc::builtin::ConstitutionUIDAutoRegister::Creator{                                    \
+                ConstitutionUIDAutoRegisterFunction##counter, __FILE__, __LINE__}};                   \
     }                                                                                                 \
     static ::uipc::list<::uipc::builtin::UIDInfo> auto_register::ConstitutionUIDAutoRegisterFunction##counter()
 

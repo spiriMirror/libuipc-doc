@@ -138,7 +138,7 @@ See [uipc::builtin::details::UIDRegister](classuipc_1_1builtin_1_1details_1_1_u_
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**create**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md#function-create) (const [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) & info) <br> |
+|  void | [**create**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md#function-create) (const [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) & info, const [**CreatorInfo**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1_1_creator_info.md) & creator) <br> |
 
 
 

@@ -14,6 +14,8 @@
 * `#include <uipc/common/type_define.h>`
 * `#include <uipc/common/string.h>`
 * `#include <uipc/common/json.h>`
+* `#include <uipc/common/list.h>`
+* `#include <functional>`
 
 
 
@@ -40,6 +42,7 @@
 | Type | Name |
 | ---: | :--- |
 | struct | [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) <br> |
+| class | [**UIDInfoCreator**](classuipc_1_1builtin_1_1_u_i_d_info_creator.md) <br> |
 
 
 

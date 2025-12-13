@@ -422,13 +422,12 @@
     <member refid="classuipc_1_1core_1_1_constitution_tabular_1a9ae4502deec2b8fbe543705dfde85492" kind="function"><name>init</name></member>
   </compound>
   <compound refid="classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register" kind="class"><name>uipc::builtin::ConstitutionUIDAutoRegister</name>
-    <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register_1a094fdcced2acc9f7fa816e1c44d6da2b" kind="typedef"><name>Creator</name></member>
+    <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register_1a8eedb06d88a56907b259689da3d31f9c" kind="typedef"><name>Creator</name></member>
     <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register_1a4da772ee59e650ae592791d9c2334b6b" kind="friend"><name>ConstitutionUIDCollection</name></member>
     <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register_1aeb0e037550c0802ebe82f9d7090a0138" kind="function"><name>ConstitutionUIDAutoRegister</name></member>
     <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register_1aae6e691abdfd3ae3ad56e1da5017f9d5" kind="function"><name>creators</name></member>
   </compound>
   <compound refid="classuipc_1_1builtin_1_1_constitution_u_i_d_collection" kind="class"><name>uipc::builtin::ConstitutionUIDCollection</name>
-    <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_collection_1ab40231f72e409ee43dfae617f117d4d4" kind="friend"><name>ConstitutionUIDAutoRegister</name></member>
     <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_collection_1ad8e155fa2051329207e8ead0920e7bc8" kind="function"><name>instance</name></member>
     <member refid="classuipc_1_1builtin_1_1_constitution_u_i_d_collection_1ade6ceff93707d59289e7d7dacd459d1b" kind="function"><name>ConstitutionUIDCollection</name></member>
   </compound>
@@ -539,6 +538,10 @@
     <member refid="classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info_1afdfa3bc210e5c6a60c5650dc3fde0895" kind="variable"><name>create_position</name></member>
     <member refid="classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info_1a37ce094eed15150001fcca3f31bb05f6" kind="variable"><name>create_transform</name></member>
     <member refid="classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info_1a9045b78eabdca659486ac4aacf6b64f1" kind="function"><name>CreateInfo</name></member>
+  </compound>
+  <compound refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1_1_creator_info" kind="class"><name>uipc::builtin::details::UIDRegister::CreatorInfo</name>
+    <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1_1_creator_info_1a0df8ded5baa80203414b395ba0acc973" kind="variable"><name>file</name></member>
+    <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1_1_creator_info_1adbc2de0ea453072adee9e79c9eb950d5" kind="variable"><name>line</name></member>
   </compound>
   <compound refid="classuipc_1_1geometry_1_1_deserial_shared_attribute_context" kind="class"><name>uipc::geometry::DeserialSharedAttributeContext</name>
     <member refid="classuipc_1_1geometry_1_1_deserial_shared_attribute_context_1a7b4abd1095c539c2338416c5f7ab349f" kind="friend"><name>GeometryAtlas</name></member>
@@ -1161,7 +1164,7 @@
     <member refid="classuipc_1_1geometry_1_1_implicit_geometry_1a9b108616a45b08c3951c5ee856528860" kind="function"><name>do_clone</name></member>
   </compound>
   <compound refid="classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register" kind="class"><name>uipc::builtin::ImplicitGeometryUIDAutoRegister</name>
-    <member refid="classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register_1a996b7f71c297dc8fafff345a2f3a41be" kind="typedef"><name>Creator</name></member>
+    <member refid="classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register_1af34df20a7de1645262fb80e7d14c5481" kind="typedef"><name>Creator</name></member>
     <member refid="classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register_1acc55ea1ec9d7a2328ab08fcdc0fe6a86" kind="friend"><name>ImplicitGeometryUIDCollection</name></member>
     <member refid="classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register_1aa5b76d3ae67ad721d83f24eb168eed09" kind="function"><name>ImplicitGeometryUIDAutoRegister</name></member>
     <member refid="classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register_1afb8bd433ca5df139ae9ac9b93fc22aaf" kind="function"><name>creators</name></member>
@@ -2036,12 +2039,21 @@
     <member refid="structuipc_1_1builtin_1_1_u_i_d_info_1a36ad84351b04c6ff0a9402915ef9fa84" kind="function"><name>is_user_defined_uid</name></member>
     <member refid="structuipc_1_1builtin_1_1_u_i_d_info_1a5bb0a89d11f3a6b40cef5cb7bde44659" kind="function"><name>to_json</name></member>
   </compound>
+  <compound refid="classuipc_1_1builtin_1_1_u_i_d_info_creator" kind="class"><name>uipc::builtin::UIDInfoCreator</name>
+    <member refid="classuipc_1_1builtin_1_1_u_i_d_info_creator_1a7810fd0839697a2c60db3841499036de" kind="variable"><name>m_creator</name></member>
+    <member refid="classuipc_1_1builtin_1_1_u_i_d_info_creator_1acf0a18a56c720d61708691d6115992eb" kind="variable"><name>m_file</name></member>
+    <member refid="classuipc_1_1builtin_1_1_u_i_d_info_creator_1a2ef70b935144d79d43f2f5817ffb613f" kind="variable"><name>m_line</name></member>
+    <member refid="classuipc_1_1builtin_1_1_u_i_d_info_creator_1aea569d8e2f5dcc610cd639a0d190250e" kind="function"><name>UIDInfoCreator</name></member>
+    <member refid="classuipc_1_1builtin_1_1_u_i_d_info_creator_1a66f29423089396c82fafd9a2bfc282d7" kind="function"><name>operator()</name></member>
+    <member refid="classuipc_1_1builtin_1_1_u_i_d_info_creator_1a31396fa3cca3ec8801ebe3dbb9703045" kind="function"><name>file</name></member>
+    <member refid="classuipc_1_1builtin_1_1_u_i_d_info_creator_1abf3c2ed67c6ede131593f30838d74403" kind="function"><name>line</name></member>
+  </compound>
   <compound refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register" kind="class"><name>uipc::builtin::details::UIDRegister</name>
     <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1a103b6043e495eb3ac2cf331d9b5672b9" kind="variable"><name>m_uid_to_info</name></member>
     <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1a35ab6461863d52a7e771214a61a806c8" kind="function"><name>find</name></member>
     <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1ac6f0b3777252f518914aa7215d0231a0" kind="function"><name>exists</name></member>
     <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1ab9869fe55e0c50ef3f2da7ba6d027953" kind="function"><name>to_json</name></member>
-    <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1a75ab94dac608b2a07e46bd9861261ee2" kind="function"><name>create</name></member>
+    <member refid="classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1a6982546c2de9af90ebc3b24f49063d93" kind="function"><name>create</name></member>
   </compound>
   <compound refid="class_u_i_p_c_module_init_info" kind="class"><name>UIPCModuleInitInfo</name>
     <member refid="class_u_i_p_c_module_init_info_1a6eff0f1d7bdcef5372bc0f242d5659d8" kind="variable"><name>module_name</name></member>

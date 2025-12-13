@@ -28,6 +28,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**uipc::builtin::ConstitutionUIDCollection**](classuipc_1_1builtin_1_1_constitution_u_i_d_collection.md) 
     * **class** [**uipc::builtin::ImplicitGeometryUIDCollection**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_collection.md) 
 * **class** [**uipc::builtin::ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md) 
+* **class** [**uipc::builtin::UIDInfoCreator**](classuipc_1_1builtin_1_1_u_i_d_info_creator.md) 
+* **class** [**uipc::builtin::details::UIDRegister::CreatorInfo**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1_1_creator_info.md) 
 * **class** [**uipc::constitution::IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md)     
     * **class** [**uipc::constitution::AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md) 
     * **class** [**uipc::constitution::AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1_affine_body_external_body_force.md) 

@@ -31,7 +31,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| typedef std::function&lt; list&lt; [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) &gt;()&gt; | [**Creator**](#typedef-creator)  <br> |
+| typedef [**UIDInfoCreator**](classuipc_1_1builtin_1_1_u_i_d_info_creator.md) | [**Creator**](#typedef-creator)  <br> |
 
 
 
@@ -56,7 +56,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**ImplicitGeometryUIDAutoRegister**](#function-implicitgeometryuidautoregister) (Creator creator) noexcept<br> |
+|   | [**ImplicitGeometryUIDAutoRegister**](#function-implicitgeometryuidautoregister) ([**Creator**](classuipc_1_1builtin_1_1_u_i_d_info_creator.md) creator) noexcept<br> |
 
 
 
@@ -93,7 +93,7 @@
 ### typedef Creator 
 
 ```C++
-using uipc::builtin::ImplicitGeometryUIDAutoRegister::Creator =  std::function<list<UIDInfo>()>;
+using uipc::builtin::ImplicitGeometryUIDAutoRegister::Creator =  UIDInfoCreator;
 ```
 
 

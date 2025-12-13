@@ -108,6 +108,8 @@
 ([**uipc::backend**](namespaceuipc_1_1backend.md))
 * [**CreateInfo**](classuipc_1_1geometry_1_1_simplicial_complex_1_1_create_info.md)
 ([**uipc::geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md))
+* [**CreatorInfo**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register_1_1_creator_info.md)
+([**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md))
 
 
 ## d
@@ -448,6 +450,8 @@
 ## u
 
 * [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md)
+([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* [**UIDInfoCreator**](classuipc_1_1builtin_1_1_u_i_d_info_creator.md)
 ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * [**UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md)
 ([**uipc::builtin::details**](namespaceuipc_1_1builtin_1_1details.md))
