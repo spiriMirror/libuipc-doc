@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ContactModel**](classuipc_1_1core_1_1_contact_model.md) <br> |
+| class | [**ContactModel**](classuipc_1_1core_1_1ContactModel.md) <br> |
 
 
 

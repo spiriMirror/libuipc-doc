@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) <br> |
+| class | [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) <br> |
 
 
 

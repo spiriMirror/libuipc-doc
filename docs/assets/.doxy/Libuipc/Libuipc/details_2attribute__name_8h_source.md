@@ -11,7 +11,6 @@
 // Don't put #pragma once here, this file may be included multiple times.
 
 /*****************************************************************/ 
-
 #ifdef UIPC_BUILTIN_ATTRIBUTE
 UIPC_BUILTIN_ATTRIBUTE(topo);
 
@@ -25,12 +24,9 @@ UIPC_BUILTIN_ATTRIBUTE(transform);
 
 UIPC_BUILTIN_ATTRIBUTE(aim_transform);
 
-
 UIPC_BUILTIN_ATTRIBUTE(contact_element_id);
 
-
 UIPC_BUILTIN_ATTRIBUTE(subscene_element_id);
-
 
 UIPC_BUILTIN_ATTRIBUTE(d_hat);
 

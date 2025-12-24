@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="sanity__checker_8h" kind="file" language="C++">
     <compoundname>sanity_checker.h</compoundname>
     <includes refid="i__sanity__checker_8h" local="no">uipc/core/i_sanity_checker.h</includes>
@@ -338,7 +338,7 @@
         <link refid="uipc_8h_source"/>
       </node>
     </invincdepgraph>
-    <innerclass refid="classuipc_1_1core_1_1_sanity_checker" prot="public">uipc::core::SanityChecker</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1SanityChecker" prot="public">uipc::core::SanityChecker</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core">uipc::core</innernamespace>
     <innernamespace refid="namespaceuipc_1_1core_1_1internal">uipc::core::internal</innernamespace>
@@ -352,18 +352,18 @@
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core::internal</highlight></codeline>
 <codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1core_1_1internal_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scene;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::core</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1core_1_1_scene" kindref="compound">Scene</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scene;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="classuipc_1_1core_1_1_sanity_checker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>SanityChecker<sp/>final</highlight></codeline>
+<codeline lineno="13" refid="classuipc_1_1core_1_1SanityChecker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1core_1_1SanityChecker" kindref="compound">SanityChecker</ref><sp/>final</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityChecker(<ref refid="classuipc_1_1core_1_1internal_1_1_scene" kindref="compound">internal::Scene</ref>&amp;<sp/>scene,<sp/>std::string_view<sp/>workspace);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>~SanityChecker();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1SanityChecker" kindref="compound">SanityChecker</ref>(<ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref>&amp;<sp/>scene,<sp/>std::string_view<sp/>workspace);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1SanityChecker" kindref="compound">~SanityChecker</ref>();</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>SanityCheckResult<sp/>check();</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>report();</highlight></codeline>
@@ -375,11 +375,11 @@
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear();</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_errors;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_warns;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1_sanity_check_message_collection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_infos;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1SanityCheckMessageCollection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_errors;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1SanityCheckMessageCollection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_warns;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1SanityCheckMessageCollection" kindref="compound">core::SanityCheckMessageCollection</ref><sp/>m_infos;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1internal_1_1_scene" kindref="compound">internal::Scene</ref>&amp;<sp/>m_scene;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref>&amp;<sp/>m_scene;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><sp/><sp/><sp/><sp/><sp/>m_workspace;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="36"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>

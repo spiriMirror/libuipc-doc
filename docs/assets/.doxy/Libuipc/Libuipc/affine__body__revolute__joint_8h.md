@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md) <br> |
+| class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) <br> |
 
 
 

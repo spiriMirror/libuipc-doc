@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1SerialSharedAttributeContext" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::SerialSharedAttributeContext</compoundname>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a7b4abd1095c539c2338416c5f7ab349f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class GeometryAtlas</definition>
+        <argsstring></argsstring>
+        <name>GeometryAtlas</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::GeometryAtlas</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1GeometryAtlas" kindref="compound">GeometryAtlas</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="18" column="18" bodyfile="include/uipc/geometry/shared_attribute_context.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1aefe67dcc8b6c7b47d459d444fd893f9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class GeometryAtlasCommit</definition>
+        <argsstring></argsstring>
+        <name>GeometryAtlasCommit</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::GeometryAtlasCommit</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1GeometryAtlasCommit" kindref="compound">GeometryAtlasCommit</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="19" column="18" bodyfile="include/uipc/geometry/shared_attribute_context.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1af9c3822dafb76e98acccbdb6bc73a8c3" prot="private" static="no" mutable="no">
+        <type>unordered_map&lt; <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> *, IndexT &gt;</type>
+        <definition>unordered_map&lt;IAttribute*, IndexT&gt; uipc::geometry::SerialSharedAttributeContext::m_attr_to_index</definition>
+        <argsstring></argsstring>
+        <name>m_attr_to_index</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::m_attr_to_index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="21" column="19" bodyfile="include/uipc/geometry/shared_attribute_context.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a283f4435cff68b5e950a9ad76015e144" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> * &gt;</type>
+        <definition>vector&lt;IAttribute*&gt; uipc::geometry::SerialSharedAttributeContext::m_index_to_attr</definition>
+        <argsstring></argsstring>
+        <name>m_index_to_attr</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::m_index_to_attr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="22" column="27" bodyfile="include/uipc/geometry/shared_attribute_context.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a1beaf9a474a91a873b3ba4e5771dabda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::SerialSharedAttributeContext::SerialSharedAttributeContext</definition>
+        <argsstring>()=default</argsstring>
+        <name>SerialSharedAttributeContext</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::SerialSharedAttributeContext</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="11" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a4e0f4130fb4cf256a9523b766742a5ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>IndexT</type>
+        <definition>IndexT uipc::geometry::SerialSharedAttributeContext::index_of</definition>
+        <argsstring>(IAttribute *attr) const</argsstring>
+        <name>index_of</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::index_of</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> *</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="13" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a53265f5281d89130c39eb00dae848b75" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> *</type>
+        <definition>IAttribute * uipc::geometry::SerialSharedAttributeContext::attribute_of</definition>
+        <argsstring>(IndexT index) const</argsstring>
+        <name>attribute_of</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::attribute_of</qualifiedname>
+        <param>
+          <type>IndexT</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="15" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a28437e17f1bc1c520bd90bee96fe785f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::SerialSharedAttributeContext::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>uipc::geometry::SerialSharedAttributeContext::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/shared_attribute_context.h" line="23" column="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/geometry/shared_attribute_context.h" line="8" column="1" bodyfile="include/uipc/geometry/shared_attribute_context.h" bodystart="9" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a53265f5281d89130c39eb00dae848b75" prot="public" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>attribute_of</name></member>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a28437e17f1bc1c520bd90bee96fe785f" prot="private" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>clear</name></member>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a7b4abd1095c539c2338416c5f7ab349f" prot="private" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>GeometryAtlas</name></member>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1aefe67dcc8b6c7b47d459d444fd893f9c" prot="private" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>GeometryAtlasCommit</name></member>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a4e0f4130fb4cf256a9523b766742a5ee" prot="public" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>index_of</name></member>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1af9c3822dafb76e98acccbdb6bc73a8c3" prot="private" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>m_attr_to_index</name></member>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a283f4435cff68b5e950a9ad76015e144" prot="private" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>m_index_to_attr</name></member>
+      <member refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext_1a1beaf9a474a91a873b3ba4e5771dabda" prot="public" virt="non-virtual"><scope>uipc::geometry::SerialSharedAttributeContext</scope><name>SerialSharedAttributeContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

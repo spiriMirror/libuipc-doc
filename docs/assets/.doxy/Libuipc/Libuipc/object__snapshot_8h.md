@@ -40,7 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ObjectSnapshot**](classuipc_1_1core_1_1_object_snapshot.md) <br> |
+| class | [**ObjectSnapshot**](classuipc_1_1core_1_1ObjectSnapshot.md) <br> |
 
 
 

@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SimplexUtils**](classuipc_1_1geometry_1_1_simplex_utils.md) <br> |
+| class | [**SimplexUtils**](classuipc_1_1geometry_1_1SimplexUtils.md) <br> |
 
 
 

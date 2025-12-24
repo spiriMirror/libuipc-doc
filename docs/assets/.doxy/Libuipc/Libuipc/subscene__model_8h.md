@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SubsceneModel**](classuipc_1_1core_1_1_subscene_model.md) <br> |
+| class | [**SubsceneModel**](classuipc_1_1core_1_1SubsceneModel.md) <br> |
 
 
 

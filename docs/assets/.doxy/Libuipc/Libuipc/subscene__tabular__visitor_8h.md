@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SubsceneTabularVisitor**](classuipc_1_1backend_1_1_subscene_tabular_visitor.md) <br> |
+| class | [**SubsceneTabularVisitor**](classuipc_1_1backend_1_1SubsceneTabularVisitor.md) <br> |
 
 
 

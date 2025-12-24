@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GeometryVisitor**](classuipc_1_1backend_1_1_geometry_visitor.md) <br> |
+| class | [**GeometryVisitor**](classuipc_1_1backend_1_1GeometryVisitor.md) <br> |
 
 
 

@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**StableNeoHookean**](classuipc_1_1constitution_1_1_stable_neo_hookean.md) <br> |
+| class | [**StableNeoHookean**](classuipc_1_1constitution_1_1StableNeoHookean.md) <br> |
 
 
 

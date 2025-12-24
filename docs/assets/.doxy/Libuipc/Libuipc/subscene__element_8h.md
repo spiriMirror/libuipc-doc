@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SubsceneElement**](classuipc_1_1core_1_1_subscene_element.md) <br> |
+| class | [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) <br> |
 
 
 

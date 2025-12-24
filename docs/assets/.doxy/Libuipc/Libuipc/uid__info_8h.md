@@ -41,8 +41,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**UIDInfo**](structuipc_1_1builtin_1_1_u_i_d_info.md) <br> |
-| class | [**UIDInfoCreator**](classuipc_1_1builtin_1_1_u_i_d_info_creator.md) <br> |
+| struct | [**UIDInfo**](structuipc_1_1builtin_1_1UIDInfo.md) <br> |
+| class | [**UIDInfoCreator**](classuipc_1_1builtin_1_1UIDInfoCreator.md) <br> |
 
 
 

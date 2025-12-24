@@ -42,8 +42,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Engine**](classuipc_1_1core_1_1_engine.md) <br> |
-| class | [**EngineException**](classuipc_1_1core_1_1_engine_exception.md) <br> |
+| class | [**Engine**](classuipc_1_1core_1_1Engine.md) <br> |
+| class | [**EngineException**](classuipc_1_1core_1_1EngineException.md) <br> |
 
 
 

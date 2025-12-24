@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**BufferInfo**](classuipc_1_1_buffer_info.md) <br> |
+| class | [**BufferInfo**](classuipc_1_1BufferInfo.md) <br> |
 
 
 

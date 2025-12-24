@@ -46,7 +46,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) <br> |
+| class | [**Scene**](classuipc_1_1core_1_1internal_1_1Scene.md) <br> |
 
 
 

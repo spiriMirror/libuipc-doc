@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**BufferView**](classuipc_1_1backend_1_1_buffer_view.md) <br> |
+| class | [**BufferView**](classuipc_1_1backend_1_1BufferView.md) <br> |
 
 
 

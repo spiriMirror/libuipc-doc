@@ -41,10 +41,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::core::Animation &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_animation_01_4.md) &lt;&gt;<br> |
-| class | [**Animation**](classuipc_1_1core_1_1_animation.md) <br> |
-| class | [**UpdateHint**](classuipc_1_1core_1_1_animation_1_1_update_hint.md) <br> |
-| class | [**UpdateInfo**](classuipc_1_1core_1_1_animation_1_1_update_info.md) <br> |
+| class | [**Animation**](classuipc_1_1core_1_1Animation.md) <br> |
+| class | [**UpdateHint**](classuipc_1_1core_1_1Animation_1_1UpdateHint.md) <br> |
+| class | [**UpdateInfo**](classuipc_1_1core_1_1Animation_1_1UpdateInfo.md) <br> |
 
 
 

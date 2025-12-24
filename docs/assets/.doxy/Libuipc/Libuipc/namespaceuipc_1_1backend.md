@@ -29,17 +29,17 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md) <br> |
-| class | [**Buffer**](classuipc_1_1backend_1_1_buffer.md) <br> |
-| class | [**BufferView**](classuipc_1_1backend_1_1_buffer_view.md) <br> |
-| class | [**ContactTabularVisitor**](classuipc_1_1backend_1_1_contact_tabular_visitor.md) <br> |
-| class | [**DiffSimVisitor**](classuipc_1_1backend_1_1_diff_sim_visitor.md) <br> |
-| class | [**EngineCreateInfo**](classuipc_1_1backend_1_1_engine_create_info.md) <br> |
-| class | [**GeometryVisitor**](classuipc_1_1backend_1_1_geometry_visitor.md) <br> |
-| class | [**SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md) <br> |
-| class | [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) <br> |
-| class | [**SubsceneTabularVisitor**](classuipc_1_1backend_1_1_subscene_tabular_visitor.md) <br> |
-| class | [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) <br> |
+| class | [**AnimatorVisitor**](classuipc_1_1backend_1_1AnimatorVisitor.md) <br> |
+| class | [**Buffer**](classuipc_1_1backend_1_1Buffer.md) <br> |
+| class | [**BufferView**](classuipc_1_1backend_1_1BufferView.md) <br> |
+| class | [**ContactTabularVisitor**](classuipc_1_1backend_1_1ContactTabularVisitor.md) <br> |
+| class | [**DiffSimVisitor**](classuipc_1_1backend_1_1DiffSimVisitor.md) <br> |
+| class | [**EngineCreateInfo**](classuipc_1_1backend_1_1EngineCreateInfo.md) <br> |
+| class | [**GeometryVisitor**](classuipc_1_1backend_1_1GeometryVisitor.md) <br> |
+| class | [**SanityCheckMessageVisitor**](classuipc_1_1backend_1_1SanityCheckMessageVisitor.md) <br> |
+| class | [**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) <br> |
+| class | [**SubsceneTabularVisitor**](classuipc_1_1backend_1_1SubsceneTabularVisitor.md) <br> |
+| class | [**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) <br> |
 
 
 ## Public Types
@@ -103,7 +103,7 @@
 ### typedef HandleT 
 
 ```C++
-using uipc::backend::HandleT =  std::uint64_t;
+using uipc::backend::HandleT = typedef std::uint64_t;
 ```
 
 

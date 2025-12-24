@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="inter__affine__body__constitution_8h" kind="file" language="C++">
     <compoundname>inter_affine_body_constitution.h</compoundname>
     <includes refid="constitution_8h" local="no">uipc/constitution/constitution.h</includes>
     <includes refid="geometry_2geometry_8h" local="no">uipc/geometry/geometry.h</includes>
+    <includedby refid="affine__body__prismatic__joint_8h" local="no">include/uipc/constitution/affine_body_prismatic_joint.h</includedby>
     <includedby refid="affine__body__revolute__joint_8h" local="no">include/uipc/constitution/affine_body_revolute_joint.h</includedby>
     <incdepgraph>
       <node id="20">
@@ -343,6 +344,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
+        <label>include/uipc/constitution/affine_body_prismatic_joint.h</label>
+        <link refid="affine__body__prismatic__joint_8h_source"/>
+      </node>
+      <node id="3">
         <label>include/uipc/constitution/affine_body_revolute_joint.h</label>
         <link refid="affine__body__revolute__joint_8h_source"/>
       </node>
@@ -351,9 +356,11 @@
         <link refid="inter__affine__body__constitution_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="classuipc_1_1constitution_1_1_inter_affine_body_constitution" prot="public">uipc::constitution::InterAffineBodyConstitution</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1InterAffineBodyConstitution" prot="public">uipc::constitution::InterAffineBodyConstitution</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1constitution">uipc::constitution</innernamespace>
     <briefdescription>
@@ -366,7 +373,7 @@
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/geometry.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::constitution</highlight></codeline>
 <codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="6" refid="classuipc_1_1constitution_1_1_inter_affine_body_constitution" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/><ref refid="classuipc_1_1constitution_1_1_inter_affine_body_constitution" kindref="compound">InterAffineBodyConstitution</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1_i_constitution" kindref="compound">IConstitution</ref></highlight></codeline>
+<codeline lineno="6" refid="classuipc_1_1constitution_1_1InterAffineBodyConstitution" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/><ref refid="classuipc_1_1constitution_1_1InterAffineBodyConstitution" kindref="compound">InterAffineBodyConstitution</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1IConstitution" kindref="compound">IConstitution</ref></highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">};</highlight></codeline>

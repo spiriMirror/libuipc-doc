@@ -51,7 +51,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  UIPC\_VDB\_API [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**points\_from\_volume**](#function-points_from_volume) (const [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float resolution) <br> |
+|  UIPC\_VDB\_API [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**points\_from\_volume**](#function-points_from_volume) (const [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float resolution) <br> |
 
 
 

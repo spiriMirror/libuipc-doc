@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ContactModelCollectionT**](classuipc_1_1core_1_1_contact_model_collection_t.md) &lt;IsConst&gt;<br> |
+| class | [**ContactModelCollectionT**](classuipc_1_1core_1_1ContactModelCollectionT.md) &lt;IsConst&gt;<br> |
 
 
 

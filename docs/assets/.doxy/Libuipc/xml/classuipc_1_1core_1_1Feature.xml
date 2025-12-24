@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1Feature" kind="class" language="C++" prot="public">
+    <compoundname>uipc::core::Feature</compoundname>
+    <basecompoundref refid="classuipc_1_1core_1_1IFeature" prot="public" virt="non-virtual">uipc::core::IFeature</basecompoundref>
+    <derivedcompoundref refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature" prot="public" virt="non-virtual">uipc::core::AffineBodyStateAccessorFeature</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1core_1_1ContactSystemFeature" prot="public" virt="non-virtual">uipc::core::ContactSystemFeature</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature" prot="public" virt="non-virtual">uipc::core::FiniteElementStateAccessorFeature</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1diff__sim_1_1AdjointMethodFeature" prot="public" virt="non-virtual">uipc::diff_sim::AdjointMethodFeature</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1diff__sim_1_1EnableGradFeature" prot="public" virt="non-virtual">uipc::diff_sim::EnableGradFeature</derivedcompoundref>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Feature_1ab047cf9e1f132a4c7b86b5c31ad04c91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class FeatureCollection</definition>
+        <argsstring></argsstring>
+        <name>FeatureCollection</name>
+        <qualifiedname>uipc::core::Feature::FeatureCollection</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1FeatureCollection" kindref="compound">FeatureCollection</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature.h" line="30" column="18" bodyfile="include/uipc/core/feature.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Feature_1a45e0b22f4dd17707c8c996f795d81226" prot="private" static="no" mutable="yes">
+        <type>std::string</type>
+        <definition>std::string uipc::core::Feature::m_type_name</definition>
+        <argsstring></argsstring>
+        <name>m_type_name</name>
+        <qualifiedname>uipc::core::Feature::m_type_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature.h" line="33" column="30" bodyfile="include/uipc/core/feature.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1Feature_1a66f584a10303d4764ef2d02bafb73daa" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::core::Feature::get_type_name</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_type_name</name>
+        <qualifiedname>uipc::core::Feature::get_type_name</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1IFeature_1acf3723937b39bfdb84b17f874b72cb51">get_type_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature.h" line="31" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Feature_1a0e6092e848969277bdb7172fda5db87f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void uipc::core::Feature::do_on_required</definition>
+        <argsstring>() const override</argsstring>
+        <name>do_on_required</name>
+        <qualifiedname>uipc::core::Feature::do_on_required</qualifiedname>
+        <reimplements refid="classuipc_1_1core_1_1IFeature_1abf4d7b9ee39f292d2b8a6532d8079b15">do_on_required</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/feature.h" line="32" column="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>uipc::core::AffineBodyStateAccessorFeature</label>
+        <link refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>uipc::core::ContactSystemFeature</label>
+        <link refid="classuipc_1_1core_1_1ContactSystemFeature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1Feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc::core::FiniteElementStateAccessorFeature</label>
+        <link refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1IFeature"/>
+      </node>
+      <node id="6">
+        <label>uipc::diff_sim::AdjointMethodFeature</label>
+        <link refid="classuipc_1_1diff__sim_1_1AdjointMethodFeature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>uipc::diff_sim::EnableGradFeature</label>
+        <link refid="classuipc_1_1diff__sim_1_1EnableGradFeature"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::core::Feature</label>
+        <link refid="classuipc_1_1core_1_1Feature"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::core::IFeature</label>
+        <link refid="classuipc_1_1core_1_1IFeature"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/core/feature.h" line="26" column="1" bodyfile="include/uipc/core/feature.h" bodystart="27" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1Feature_1a0e6092e848969277bdb7172fda5db87f" prot="private" virt="virtual"><scope>uipc::core::Feature</scope><name>do_on_required</name></member>
+      <member refid="classuipc_1_1core_1_1Feature_1ab047cf9e1f132a4c7b86b5c31ad04c91" prot="private" virt="non-virtual"><scope>uipc::core::Feature</scope><name>FeatureCollection</name></member>
+      <member refid="classuipc_1_1core_1_1IFeature_1a26b576454fc69d237ca8fe89cbce541e" prot="protected" virt="pure-virtual"><scope>uipc::core::Feature</scope><name>get_name</name></member>
+      <member refid="classuipc_1_1core_1_1Feature_1a66f584a10303d4764ef2d02bafb73daa" prot="private" virt="virtual"><scope>uipc::core::Feature</scope><name>get_type_name</name></member>
+      <member refid="classuipc_1_1core_1_1Feature_1a45e0b22f4dd17707c8c996f795d81226" prot="private" virt="non-virtual"><scope>uipc::core::Feature</scope><name>m_type_name</name></member>
+      <member refid="classuipc_1_1core_1_1IFeature_1acc3fc7569d0e68fa66ff1d77e9170775" prot="public" virt="non-virtual"><scope>uipc::core::Feature</scope><name>name</name></member>
+      <member refid="classuipc_1_1core_1_1IFeature_1ab0df15502507d511d2182c9a3a6435ba" prot="public" virt="non-virtual"><scope>uipc::core::Feature</scope><name>type_name</name></member>
+      <member refid="classuipc_1_1core_1_1IFeature_1a9e377e68ea6ab0fcfbc2a2e19c9060bd" prot="public" virt="virtual"><scope>uipc::core::Feature</scope><name>~IFeature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

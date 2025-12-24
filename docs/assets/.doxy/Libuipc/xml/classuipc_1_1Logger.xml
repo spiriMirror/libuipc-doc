@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1Logger" kind="class" language="C++" prot="public">
+    <compoundname>uipc::Logger</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1Logger_1a923ea6e73791378b3e219b3bef8358c1" prot="public" static="no">
+        <type>spdlog::level::level_enum</type>
+        <definition>using uipc::Logger::Level =  spdlog::level::level_enum</definition>
+        <argsstring></argsstring>
+        <name>Level</name>
+        <qualifiedname>uipc::Logger::Level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="15" column="5" bodyfile="include/uipc/common/logger.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1Logger_1a75cd74640953cfaa9336908ccd0e92f3" prot="private" static="no" mutable="no">
+        <type>S&lt; Impl &gt;</type>
+        <definition>S&lt;Impl&gt; uipc::Logger::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <qualifiedname>uipc::Logger::m_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="74" column="7" bodyfile="include/uipc/common/logger.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1Logger_1abc14f0bbd76ec1ffee0ca2333eb513c8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1Logger" kindref="compound">Logger</ref></type>
+        <definition>static Logger uipc::Logger::create_console_logger</definition>
+        <argsstring>(std::string_view logger_name, spdlog::sink_ptr sink_ptr=nullptr)</argsstring>
+        <name>create_console_logger</name>
+        <qualifiedname>uipc::Logger::create_console_logger</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>logger_name</declname>
+        </param>
+        <param>
+          <type>spdlog::sink_ptr</type>
+          <declname>sink_ptr</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="17" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1a6539d51fb2a3e31daa2710db8859956c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::Logger::current_logger</definition>
+        <argsstring>(Logger logger)</argsstring>
+        <name>current_logger</name>
+        <qualifiedname>uipc::Logger::current_logger</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1Logger" kindref="compound">Logger</ref></type>
+          <declname>logger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="62" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1af88b2b5f75b7407acd0632384efc3640" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1Logger" kindref="compound">Logger</ref></type>
+        <definition>static Logger uipc::Logger::current_logger</definition>
+        <argsstring>()</argsstring>
+        <name>current_logger</name>
+        <qualifiedname>uipc::Logger::current_logger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="63" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1Logger_1ab9b5c704bd50ef62956ca8ab459010e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::set_level</definition>
+        <argsstring>(spdlog::level::level_enum level)</argsstring>
+        <name>set_level</name>
+        <qualifiedname>uipc::Logger::set_level</qualifiedname>
+        <param>
+          <type>spdlog::level::level_enum</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="20" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1a284b4d770bec1a266a2b8f25ac7d1e3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>spdlog::level::level_enum</type>
+        <definition>spdlog::level::level_enum uipc::Logger::get_level</definition>
+        <argsstring>() const</argsstring>
+        <name>get_level</name>
+        <qualifiedname>uipc::Logger::get_level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="22" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1a3a2d6435b74803bd270fa8fc236d36fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::set_pattern</definition>
+        <argsstring>(std::string_view pattern)</argsstring>
+        <name>set_pattern</name>
+        <qualifiedname>uipc::Logger::set_pattern</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>pattern</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1adc516476f38fea7a72481c428b687686" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void uipc::Logger::debug</definition>
+        <argsstring>(std::string_view fmt, Args &amp;&amp;... args)</argsstring>
+        <name>debug</name>
+        <qualifiedname>uipc::Logger::debug</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="27" column="10" bodyfile="include/uipc/common/logger.h" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1a5025eeb56a5bf8ac56a679ebc82775ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void uipc::Logger::info</definition>
+        <argsstring>(std::string_view fmt, Args &amp;&amp;... args)</argsstring>
+        <name>info</name>
+        <qualifiedname>uipc::Logger::info</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="33" column="10" bodyfile="include/uipc/common/logger.h" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1ae9703cac2d12ed1875ab304c9f070a88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void uipc::Logger::warn</definition>
+        <argsstring>(std::string_view fmt, Args &amp;&amp;... args)</argsstring>
+        <name>warn</name>
+        <qualifiedname>uipc::Logger::warn</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="39" column="10" bodyfile="include/uipc/common/logger.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1ae4c03ef2cf80d664b8c6af91e4d50b9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void uipc::Logger::error</definition>
+        <argsstring>(std::string_view fmt, Args &amp;&amp;... args)</argsstring>
+        <name>error</name>
+        <qualifiedname>uipc::Logger::error</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="45" column="10" bodyfile="include/uipc/common/logger.h" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1a7cdb8bb3e80353a87cc95b7e6cd05aa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void uipc::Logger::critical</definition>
+        <argsstring>(std::string_view fmt, Args &amp;&amp;... args)</argsstring>
+        <name>critical</name>
+        <qualifiedname>uipc::Logger::critical</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="51" column="10" bodyfile="include/uipc/common/logger.h" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1a3cda77e20a0d44c637a888721299b8ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void uipc::Logger::log</definition>
+        <argsstring>(Level level, std::string_view fmt, Args &amp;&amp;... args)</argsstring>
+        <name>log</name>
+        <qualifiedname>uipc::Logger::log</qualifiedname>
+        <param>
+          <type>Level</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="57" column="10" bodyfile="include/uipc/common/logger.h" bodystart="57" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1Logger_1a1851440181f9f0760b2436518dab1cc1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::_debug</definition>
+        <argsstring>(std::string_view msg)</argsstring>
+        <name>_debug</name>
+        <qualifiedname>uipc::Logger::_debug</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1ae7b5b1c00c1d8f8570dea279f3c2b2ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::_info</definition>
+        <argsstring>(std::string_view msg)</argsstring>
+        <name>_info</name>
+        <qualifiedname>uipc::Logger::_info</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="67" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1ad273d12bf2c6a32e0c7ded7e912d23d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::_warn</definition>
+        <argsstring>(std::string_view msg)</argsstring>
+        <name>_warn</name>
+        <qualifiedname>uipc::Logger::_warn</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="68" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1aa7272ab81f5a084f67d0323034446229" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::_error</definition>
+        <argsstring>(std::string_view msg)</argsstring>
+        <name>_error</name>
+        <qualifiedname>uipc::Logger::_error</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="69" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1ae40e57f54ff7798abc588bc3a19847e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::_critical</definition>
+        <argsstring>(std::string_view msg)</argsstring>
+        <name>_critical</name>
+        <qualifiedname>uipc::Logger::_critical</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="70" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1Logger_1abe5ee43e99bcb01a35b8ba06885185e6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::Logger::_log</definition>
+        <argsstring>(spdlog::level::level_enum level, std::string_view msg)</argsstring>
+        <name>_log</name>
+        <qualifiedname>uipc::Logger::_log</qualifiedname>
+        <param>
+          <type>spdlog::level::level_enum</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/logger.h" line="71" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/common/logger.h" line="12" column="1" bodyfile="include/uipc/common/logger.h" bodystart="13" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1Logger_1ae40e57f54ff7798abc588bc3a19847e5" prot="private" virt="non-virtual"><scope>uipc::Logger</scope><name>_critical</name></member>
+      <member refid="classuipc_1_1Logger_1a1851440181f9f0760b2436518dab1cc1" prot="private" virt="non-virtual"><scope>uipc::Logger</scope><name>_debug</name></member>
+      <member refid="classuipc_1_1Logger_1aa7272ab81f5a084f67d0323034446229" prot="private" virt="non-virtual"><scope>uipc::Logger</scope><name>_error</name></member>
+      <member refid="classuipc_1_1Logger_1ae7b5b1c00c1d8f8570dea279f3c2b2ed" prot="private" virt="non-virtual"><scope>uipc::Logger</scope><name>_info</name></member>
+      <member refid="classuipc_1_1Logger_1abe5ee43e99bcb01a35b8ba06885185e6" prot="private" virt="non-virtual"><scope>uipc::Logger</scope><name>_log</name></member>
+      <member refid="classuipc_1_1Logger_1ad273d12bf2c6a32e0c7ded7e912d23d5" prot="private" virt="non-virtual"><scope>uipc::Logger</scope><name>_warn</name></member>
+      <member refid="classuipc_1_1Logger_1abc14f0bbd76ec1ffee0ca2333eb513c8" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>create_console_logger</name></member>
+      <member refid="classuipc_1_1Logger_1a7cdb8bb3e80353a87cc95b7e6cd05aa8" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>critical</name></member>
+      <member refid="classuipc_1_1Logger_1a6539d51fb2a3e31daa2710db8859956c" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>current_logger</name></member>
+      <member refid="classuipc_1_1Logger_1af88b2b5f75b7407acd0632384efc3640" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>current_logger</name></member>
+      <member refid="classuipc_1_1Logger_1adc516476f38fea7a72481c428b687686" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>debug</name></member>
+      <member refid="classuipc_1_1Logger_1ae4c03ef2cf80d664b8c6af91e4d50b9c" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>error</name></member>
+      <member refid="classuipc_1_1Logger_1a284b4d770bec1a266a2b8f25ac7d1e3e" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>get_level</name></member>
+      <member refid="classuipc_1_1Logger_1a5025eeb56a5bf8ac56a679ebc82775ab" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>info</name></member>
+      <member refid="classuipc_1_1Logger_1a923ea6e73791378b3e219b3bef8358c1" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>Level</name></member>
+      <member refid="classuipc_1_1Logger_1a3cda77e20a0d44c637a888721299b8ce" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>log</name></member>
+      <member refid="classuipc_1_1Logger_1a75cd74640953cfaa9336908ccd0e92f3" prot="private" virt="non-virtual"><scope>uipc::Logger</scope><name>m_impl</name></member>
+      <member refid="classuipc_1_1Logger_1ab9b5c704bd50ef62956ca8ab459010e9" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>set_level</name></member>
+      <member refid="classuipc_1_1Logger_1a3a2d6435b74803bd270fa8fc236d36fd" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>set_pattern</name></member>
+      <member refid="classuipc_1_1Logger_1ae9703cac2d12ed1875ab304c9f070a88" prot="public" virt="non-virtual"><scope>uipc::Logger</scope><name>warn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

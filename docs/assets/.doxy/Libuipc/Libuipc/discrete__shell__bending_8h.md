@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1_discrete_shell_bending.md) <br> |
+| class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md) <br> |
 
 
 

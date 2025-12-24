@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**FiniteElementConstitution**](classuipc_1_1constitution_1_1_finite_element_constitution.md) <br> |
+| class | [**FiniteElementConstitution**](classuipc_1_1constitution_1_1FiniteElementConstitution.md) <br> |
 
 
 

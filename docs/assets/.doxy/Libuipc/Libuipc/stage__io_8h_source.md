@@ -7,8 +7,7 @@
 [Go to the documentation of this file](stage__io_8h.md)
 
 
-```C++
-
+```
 ```
 
 

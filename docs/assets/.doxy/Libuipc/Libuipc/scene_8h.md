@@ -47,13 +47,12 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::core::Scene &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1_scene_01_4.md) &lt;&gt;<br> |
-| class | [**Scene**](classuipc_1_1core_1_1_scene.md) <br> |
-| class | [**CGeometries**](classuipc_1_1core_1_1_scene_1_1_c_geometries.md) <br> |
-| class | [**CObjects**](classuipc_1_1core_1_1_scene_1_1_c_objects.md) <br> |
-| class | [**ConfigAttributesT**](classuipc_1_1core_1_1_scene_1_1_config_attributes_t.md) &lt;IsConst&gt;<br> |
-| class | [**Geometries**](classuipc_1_1core_1_1_scene_1_1_geometries.md) <br> |
-| class | [**Objects**](classuipc_1_1core_1_1_scene_1_1_objects.md) <br> |
+| class | [**Scene**](classuipc_1_1core_1_1Scene.md) <br> |
+| class | [**CGeometries**](classuipc_1_1core_1_1Scene_1_1CGeometries.md) <br> |
+| class | [**CObjects**](classuipc_1_1core_1_1Scene_1_1CObjects.md) <br> |
+| class | [**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md) &lt;IsConst&gt;<br> |
+| class | [**Geometries**](classuipc_1_1core_1_1Scene_1_1Geometries.md) <br> |
+| class | [**Objects**](classuipc_1_1core_1_1Scene_1_1Objects.md) <br> |
 
 
 

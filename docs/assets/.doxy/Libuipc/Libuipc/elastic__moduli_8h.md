@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md) <br> |
+| class | [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) <br> |
 
 
 

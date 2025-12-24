@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ResidentThread**](classuipc_1_1_resident_thread.md) <br> |
+| class | [**ResidentThread**](classuipc_1_1ResidentThread.md) <br> |
 
 
 

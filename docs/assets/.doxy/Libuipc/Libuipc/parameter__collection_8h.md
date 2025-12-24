@@ -43,7 +43,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ParameterCollection**](classuipc_1_1diff__sim_1_1_parameter_collection.md) <br> |
+| class | [**ParameterCollection**](classuipc_1_1diff__sim_1_1ParameterCollection.md) <br> |
 
 
 

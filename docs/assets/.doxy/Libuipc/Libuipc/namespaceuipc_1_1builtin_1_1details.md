@@ -29,7 +29,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**UIDRegister**](classuipc_1_1builtin_1_1details_1_1_u_i_d_register.md) <br> |
+| class | [**UIDRegister**](classuipc_1_1builtin_1_1details_1_1UIDRegister.md) <br> |
 
 
 

@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AttributeDebugInfo**](classuipc_1_1geometry_1_1_attribute_debug_info.md) <br> |
+| class | [**AttributeDebugInfo**](classuipc_1_1geometry_1_1AttributeDebugInfo.md) <br> |
 
 
 

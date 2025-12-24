@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SoftVertexStitch**](classuipc_1_1constitution_1_1_soft_vertex_stitch.md) <br> |
+| class | [**SoftVertexStitch**](classuipc_1_1constitution_1_1SoftVertexStitch.md) <br> |
 
 
 

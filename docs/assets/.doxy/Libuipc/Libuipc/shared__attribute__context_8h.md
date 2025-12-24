@@ -38,8 +38,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**DeserialSharedAttributeContext**](classuipc_1_1geometry_1_1_deserial_shared_attribute_context.md) <br> |
-| class | [**SerialSharedAttributeContext**](classuipc_1_1geometry_1_1_serial_shared_attribute_context.md) <br> |
+| class | [**DeserialSharedAttributeContext**](classuipc_1_1geometry_1_1DeserialSharedAttributeContext.md) <br> |
+| class | [**SerialSharedAttributeContext**](classuipc_1_1geometry_1_1SerialSharedAttributeContext.md) <br> |
 
 
 

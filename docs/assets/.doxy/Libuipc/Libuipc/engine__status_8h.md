@@ -39,8 +39,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**EngineStatus**](classuipc_1_1core_1_1_engine_status.md) <br> |
-| class | [**EngineStatusCollection**](classuipc_1_1core_1_1_engine_status_collection.md) <br> |
+| class | [**EngineStatus**](classuipc_1_1core_1_1EngineStatus.md) <br> |
+| class | [**EngineStatusCollection**](classuipc_1_1core_1_1EngineStatusCollection.md) <br> |
 
 
 

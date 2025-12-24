@@ -38,8 +38,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Feature**](classuipc_1_1core_1_1_feature.md) <br> |
-| class | [**IFeature**](classuipc_1_1core_1_1_i_feature.md) <br> |
+| class | [**Feature**](classuipc_1_1core_1_1Feature.md) <br> |
+| class | [**IFeature**](classuipc_1_1core_1_1IFeature.md) <br> |
 
 
 

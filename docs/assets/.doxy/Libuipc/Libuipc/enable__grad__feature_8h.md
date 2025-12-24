@@ -37,8 +37,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**EnableGradFeature**](classuipc_1_1diff__sim_1_1_enable_grad_feature.md) <br> |
-| class | [**EnableGradFeatureOverrider**](classuipc_1_1diff__sim_1_1_enable_grad_feature_overrider.md) <br> |
+| class | [**EnableGradFeature**](classuipc_1_1diff__sim_1_1EnableGradFeature.md) <br> |
+| class | [**EnableGradFeatureOverrider**](classuipc_1_1diff__sim_1_1EnableGradFeatureOverrider.md) <br> |
 
 
 

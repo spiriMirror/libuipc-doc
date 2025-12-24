@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md) <br> |
+| class | [**ARAP**](classuipc_1_1constitution_1_1ARAP.md) <br> |
 
 
 

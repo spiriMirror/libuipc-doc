@@ -40,7 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**World**](classuipc_1_1core_1_1_world.md) <br> |
+| class | [**World**](classuipc_1_1core_1_1World.md) <br> |
 
 
 

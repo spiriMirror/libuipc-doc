@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Buffer**](classuipc_1_1backend_1_1_buffer.md) <br> |
+| class | [**Buffer**](classuipc_1_1backend_1_1Buffer.md) <br> |
 
 
 

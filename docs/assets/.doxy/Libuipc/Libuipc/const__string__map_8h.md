@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ConstStringMap**](classuipc_1_1_const_string_map.md) <br> |
+| class | [**ConstStringMap**](classuipc_1_1ConstStringMap.md) <br> |
 
 
 

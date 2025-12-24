@@ -43,11 +43,11 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ISanityChecker**](classuipc_1_1core_1_1_i_sanity_checker.md) <br> |
-| class | [**ISanityCheckerCollection**](classuipc_1_1core_1_1_i_sanity_checker_collection.md) <br> |
-| class | [**SanityCheckMessage**](classuipc_1_1core_1_1_sanity_check_message.md) <br> |
-| class | [**SanityCheckMessageCollection**](classuipc_1_1core_1_1_sanity_check_message_collection.md) <br> |
-| class | [**SanityCheckerCollectionCreateInfo**](classuipc_1_1core_1_1_sanity_checker_collection_create_info.md) <br> |
+| class | [**ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md) <br> |
+| class | [**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) <br> |
+| class | [**SanityCheckMessage**](classuipc_1_1core_1_1SanityCheckMessage.md) <br> |
+| class | [**SanityCheckMessageCollection**](classuipc_1_1core_1_1SanityCheckMessageCollection.md) <br> |
+| class | [**SanityCheckerCollectionCreateInfo**](classuipc_1_1core_1_1SanityCheckerCollectionCreateInfo.md) <br> |
 
 
 

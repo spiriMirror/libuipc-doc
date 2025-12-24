@@ -40,7 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**BVH**](classuipc_1_1geometry_1_1_b_v_h.md) <br> |
+| class | [**BVH**](classuipc_1_1geometry_1_1BVH.md) <br> |
 
 
 

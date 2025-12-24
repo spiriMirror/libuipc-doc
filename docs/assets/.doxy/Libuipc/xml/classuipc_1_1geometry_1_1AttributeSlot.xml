@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1AttributeSlot" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::AttributeSlot</compoundname>
+    <basecompoundref refid="classuipc_1_1geometry_1_1IAttributeSlot" prot="public" virt="non-virtual">uipc::geometry::IAttributeSlot</basecompoundref>
+    <includes refid="attribute__slot_8h" local="no">attribute_slot.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1AttributeSlot_1a17f7ec4de997dd14d8d4fcd5df1586a4" prot="public" static="no">
+        <type>T</type>
+        <definition>using uipc::geometry::AttributeSlot&lt; T &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="120" column="5" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1AttributeSlot_1aa6924f7d92fd6f1c36eb4f15bceb336d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AttributeCollection</definition>
+        <argsstring></argsstring>
+        <name>AttributeCollection</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::AttributeCollection</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="141" column="18" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1AttributeSlot_1a3b4977fc93b408ec43fd324109f1c303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>span&lt; U &gt;</type>
+        <definition>span&lt; U &gt; view</definition>
+        <argsstring>(AttributeSlot&lt; U &gt; &amp;slot)</argsstring>
+        <name>view</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::view</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; U &gt; &amp;</type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+<para>Get the non-const attribute values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>span&lt;T&gt;</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="131" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeSlot_1a2646ce1808dd869d35664f650ed4d1a4" prot="private" static="no" mutable="no">
+        <type>TimePoint</type>
+        <definition>TimePoint uipc::geometry::AttributeSlot&lt; T &gt;::m_last_modified</definition>
+        <argsstring></argsstring>
+        <name>m_last_modified</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::m_last_modified</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="161" column="21" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeSlot_1a1dca9ea1498d75d552cde234662b72fa" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string uipc::geometry::AttributeSlot&lt; T &gt;::m_name</definition>
+        <argsstring></argsstring>
+        <name>m_name</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::m_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="162" column="21" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeSlot_1a1ad720412f6ed2db3d16a2cb6e93034d" prot="private" static="no" mutable="no">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1Attribute" kindref="compound">Attribute</ref>&lt; T &gt; &gt;</type>
+        <definition>S&lt;Attribute&lt;T&gt; &gt; uipc::geometry::AttributeSlot&lt; T &gt;::m_attribute</definition>
+        <argsstring></argsstring>
+        <name>m_attribute</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::m_attribute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="163" column="7" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeSlot_1aecb000a4468be495edd8cd1747e351d7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool uipc::geometry::AttributeSlot&lt; T &gt;::m_allow_destroy</definition>
+        <argsstring></argsstring>
+        <name>m_allow_destroy</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::m_allow_destroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="164" column="21" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeSlot_1a64e06fcbb93a249718fdf364592ce320" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool uipc::geometry::AttributeSlot&lt; T &gt;::m_is_evolving</definition>
+        <argsstring></argsstring>
+        <name>m_is_evolving</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::m_is_evolving</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="165" column="21" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1ab5508d8d739dc3adb2980aeda799c2f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AttributeSlot&lt; T &gt;::AttributeSlot</definition>
+        <argsstring>(std::string_view name, S&lt; Attribute&lt; T &gt; &gt; attribute, bool allow_destroy)</argsstring>
+        <name>AttributeSlot</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::AttributeSlot</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1geometry_1_1Attribute" kindref="compound">Attribute</ref>&lt; T &gt; &gt;</type>
+          <declname>attribute</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="122" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a65356f9da15b4a00b17c22eb98382b57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AttributeSlot&lt; T &gt;::AttributeSlot</definition>
+        <argsstring>(std::string_view name, S&lt; Attribute&lt; T &gt; &gt; attribute, bool allow_destory, TimePoint tp)</argsstring>
+        <name>AttributeSlot</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::AttributeSlot</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1geometry_1_1Attribute" kindref="compound">Attribute</ref>&lt; T &gt; &gt;</type>
+          <declname>attribute</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destory</declname>
+        </param>
+        <param>
+          <type>TimePoint</type>
+          <declname>tp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="123" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a99622e01f7f2b316925798f1f581fe9b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>span&lt; const T &gt;</type>
+        <definition>span&lt; const T &gt; uipc::geometry::AttributeSlot&lt; T &gt;::view</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>view</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::view</qualifiedname>
+        <briefdescription>
+<para>Get the const attribute values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>span&lt;const T&gt;</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="138" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a81d2f42b0c7cf43bbf3a0cbd10d8760b" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>std::string_view</type>
+        <definition>virtual std::string_view uipc::geometry::AttributeSlot&lt; T &gt;::get_name</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_name</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::get_name</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a048018a0ec52ff735930589fccd2cad0">get_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="143" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1afa92bd5a4cce8ade2fd12b0a73908cd7" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool uipc::geometry::AttributeSlot&lt; T &gt;::get_allow_destroy</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_allow_destroy</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::get_allow_destroy</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1ad43bcdc023b09d11eea88df03774de20">get_allow_destroy</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="144" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1af6d3b8bd3ec4fae550a92e8862febeb9" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool uipc::geometry::AttributeSlot&lt; T &gt;::get_is_evolving</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_is_evolving</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::get_is_evolving</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a68e83a2d62a86118d62e118dc90655d4">get_is_evolving</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="145" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a45ce0c7e2f8149a4beede0e43b2b61ed" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void uipc::geometry::AttributeSlot&lt; T &gt;::set_is_evolving</definition>
+        <argsstring>(bool v) noexcept override</argsstring>
+        <name>set_is_evolving</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::set_is_evolving</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a9b8d488711de1b31f58b064b1b92a341">set_is_evolving</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="146" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a8ed2c85b8b67a40be1d1e322e359d48f" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &amp;</type>
+        <definition>virtual IAttribute &amp; uipc::geometry::AttributeSlot&lt; T &gt;::get_attribute</definition>
+        <argsstring>() noexcept override</argsstring>
+        <name>get_attribute</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::get_attribute</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1ae3af8c2b4015a6a6edced398c7e26db4">get_attribute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="148" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a89efdbfca266e09af6ed2484f547bd00" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>const <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &amp;</type>
+        <definition>virtual const IAttribute &amp; uipc::geometry::AttributeSlot&lt; T &gt;::get_attribute</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_attribute</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::get_attribute</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a19c03019be19e49cb725dddc07a824c6">get_attribute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="149" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a271a1b68a4c04848706b089d83faa79e" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>SizeT</type>
+        <definition>virtual SizeT uipc::geometry::AttributeSlot&lt; T &gt;::get_use_count</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_use_count</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::get_use_count</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1afe69a200cd8336c1683459a171e6c8b7">get_use_count</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="150" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a8b4af2cabbbac8ffb1d693fb92f85d52" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeSlot&lt; T &gt;::do_make_owned</definition>
+        <argsstring>() override</argsstring>
+        <name>do_make_owned</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::do_make_owned</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1aed76a5afc89b901132f50022ac65d45a">do_make_owned</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="153" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a8a628172d893c825f985f9a06272782e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <definition>virtual S&lt; IAttributeSlot &gt; uipc::geometry::AttributeSlot&lt; T &gt;::do_clone</definition>
+        <argsstring>(std::string_view name, bool allow_destroy) const override</argsstring>
+        <name>do_clone</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::do_clone</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1ae77d96a7676786330b50c6fde51beb94">do_clone</reimplements>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="154" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a6ddea42ff87ea6af514d4833f473e9b3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <definition>virtual S&lt; IAttributeSlot &gt; uipc::geometry::AttributeSlot&lt; T &gt;::do_clone_empty</definition>
+        <argsstring>(std::string_view name, bool allow_destroy) const override</argsstring>
+        <name>do_clone_empty</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::do_clone_empty</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a978096ff4b55ff45ffcdd56878728d67">do_clone_empty</reimplements>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="155" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a346ea9aa4c08b95b0c9118dd787f5507" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void uipc::geometry::AttributeSlot&lt; T &gt;::do_share_from</definition>
+        <argsstring>(const IAttributeSlot &amp;other) noexcept override</argsstring>
+        <name>do_share_from</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::do_share_from</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a88e95187daec91aeab5a6bcc8469c6df">do_share_from</reimplements>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="157" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a1f8a233c299c7a3fac95915916988ca2" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>TimePoint</type>
+        <definition>virtual TimePoint uipc::geometry::AttributeSlot&lt; T &gt;::get_last_modified</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_last_modified</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::get_last_modified</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a33da0608164bedf4e1ab862baa7a307d">get_last_modified</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="158" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a08992d11471720a1ac12b5ac1f7e9465" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void uipc::geometry::AttributeSlot&lt; T &gt;::set_last_modified</definition>
+        <argsstring>(const TimePoint &amp;pt) noexcept override</argsstring>
+        <name>set_last_modified</name>
+        <qualifiedname>uipc::geometry::AttributeSlot::set_last_modified</qualifiedname>
+        <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a257f222c848ba8c1d5305113cc8bb01d">set_last_modified</reimplements>
+        <param>
+          <type>const TimePoint &amp;</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_slot.h" line="159" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Template class to represent a geometries attribute slot of type T in a geometries attribute collection. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the attribute values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::geometry::AttributeSlot&lt; T &gt;</label>
+        <link refid="classuipc_1_1geometry_1_1AttributeSlot"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::geometry::IAttributeSlot</label>
+        <link refid="classuipc_1_1geometry_1_1IAttributeSlot"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::geometry::AttributeSlot&lt; T &gt;</label>
+        <link refid="classuipc_1_1geometry_1_1AttributeSlot"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::geometry::IAttributeSlot</label>
+        <link refid="classuipc_1_1geometry_1_1IAttributeSlot"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/geometry/attribute_slot.h" line="117" column="1" bodyfile="include/uipc/geometry/attribute_slot.h" bodystart="118" bodyend="166"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a56fb0e32f4cfb8f8133ba3b3bc5d1bf5" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>allow_destroy</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a3f1468f60cf044bf4fe1decb69dc61be" prot="protected" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>attribute</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a26b8c6d80afcc3727d1134cc5a8de73c" prot="protected" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>attribute</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1aa6924f7d92fd6f1c36eb4f15bceb336d" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>AttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1ab5508d8d739dc3adb2980aeda799c2f0" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>AttributeSlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a65356f9da15b4a00b17c22eb98382b57" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>AttributeSlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a9dbd0dce8acc363736613a54250e640b" prot="protected" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>clone</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1adad12e51e64a3f31672ed5bbb6d5a864" prot="protected" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>clone_empty</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a8a628172d893c825f985f9a06272782e" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>do_clone</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a6ddea42ff87ea6af514d4833f473e9b3" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>do_clone_empty</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a8b4af2cabbbac8ffb1d693fb92f85d52" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>do_make_owned</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a346ea9aa4c08b95b0c9118dd787f5507" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>do_share_from</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a7b996d66e9328ebaf810a26f77837b02" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>from_json_array</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1afa92bd5a4cce8ade2fd12b0a73908cd7" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>get_allow_destroy</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a8ed2c85b8b67a40be1d1e322e359d48f" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>get_attribute</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a89efdbfca266e09af6ed2484f547bd00" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>get_attribute</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1af6d3b8bd3ec4fae550a92e8862febeb9" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>get_is_evolving</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a1f8a233c299c7a3fac95915916988ca2" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>get_last_modified</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a81d2f42b0c7cf43bbf3a0cbd10d8760b" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>get_name</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a271a1b68a4c04848706b089d83faa79e" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>get_use_count</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1ae8e6d8ff3af921836cc5565ceb15e477" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>IAttributeSlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a750661fc05e48678f3affda4ed6ef46b" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>IAttributeSlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1aa0ea32682a6bd74bdec54493e3052b2b" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>IAttributeSlot</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a1337cfdfa42e55607f791b572ae94f46" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>is_evolving</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a30bb51ebca8ee26b6339168853bc0c25" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>is_evolving</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1ab07e2c5b7280e9f68385a10f274cd507" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>is_shared</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1ab8ea3035873ff6c883808fd2e7b4ee08" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>last_modified</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1aed4374941de220dcb313811b85ec6826" prot="protected" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>last_modified</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1aecb000a4468be495edd8cd1747e351d7" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>m_allow_destroy</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a1ad720412f6ed2db3d16a2cb6e93034d" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>m_attribute</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a64e06fcbb93a249718fdf364592ce320" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>m_is_evolving</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a2646ce1808dd869d35664f650ed4d1a4" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>m_last_modified</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a1dca9ea1498d75d552cde234662b72fa" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>m_name</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a91bb9228ec906c463e898d1fcc85a5f5" prot="protected" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>make_owned</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a07995e9d78cc362984d6081784840d4e" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>name</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a55c13bf1084d3221bcec64e213d08a14" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1abf79d20076eeef6b62c780d9176cefc2" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1ae47ba7b5c6476ff999652629fec91d16" prot="protected" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>rw_access</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a45ce0c7e2f8149a4beede0e43b2b61ed" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>set_is_evolving</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a08992d11471720a1ac12b5ac1f7e9465" prot="private" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>set_last_modified</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a15284652cd75eb6bcc072f17bea8dcef" prot="protected" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>share_from</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1ad694f2117a902bd3d2f385fc71a23c95" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>size</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a0e76dd0ea94cd918c44e8559d682279f" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a69eedb59d90dbfb2fdc0c145d360bccd" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1af8fdbf15774c9cf829dde0481c9d2065" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>type_name</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a819638eb4efe1f5740ac264fb159d59a" prot="protected" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>use_count</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a17f7ec4de997dd14d8d4fcd5df1586a4" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>value_type</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a3b4977fc93b408ec43fd324109f1c303" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>view</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeSlot_1a99622e01f7f2b316925798f1f581fe9b" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeSlot</scope><name>view</name></member>
+      <member refid="classuipc_1_1geometry_1_1IAttributeSlot_1a09a25df35cffacc8891e253c76ac98ad" prot="public" virt="virtual"><scope>uipc::geometry::AttributeSlot</scope><name>~IAttributeSlot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

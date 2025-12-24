@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SubsceneModelCollectionT**](classuipc_1_1core_1_1_subscene_model_collection_t.md) &lt;IsConst&gt;<br> |
+| class | [**SubsceneModelCollectionT**](classuipc_1_1core_1_1SubsceneModelCollectionT.md) &lt;IsConst&gt;<br> |
 
 
 

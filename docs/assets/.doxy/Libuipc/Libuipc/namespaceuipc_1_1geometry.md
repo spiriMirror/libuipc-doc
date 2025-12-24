@@ -34,45 +34,46 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1_abstract_simplicial_complex.md) <br>_Represents an abstract simplicial complex, containing vertices, edges, triangles, and tetrahedra._  |
-| class | [**Attribute**](classuipc_1_1geometry_1_1_attribute.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute of type T._  |
-| class | [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) <br>_A collection of geometries attributes._  |
-| class | [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) <br> |
-| class | [**AttributeCollectionError**](classuipc_1_1geometry_1_1_attribute_collection_error.md) <br> |
-| class | [**AttributeCollectionFactory**](classuipc_1_1geometry_1_1_attribute_collection_factory.md) <br> |
-| class | [**AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md) <br> |
-| class | [**AttributeDebugInfo**](classuipc_1_1geometry_1_1_attribute_debug_info.md) <br> |
-| class | [**AttributeFactory**](classuipc_1_1geometry_1_1_attribute_factory.md) <br> |
-| class | [**AttributeFriend**](classuipc_1_1geometry_1_1_attribute_friend.md) &lt;typename T&gt;<br> |
-| class | [**AttributeIO**](classuipc_1_1geometry_1_1_attribute_i_o.md) <br> |
-| class | [**AttributeIOError**](classuipc_1_1geometry_1_1_attribute_i_o_error.md) <br> |
-| class | [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute slot of type T in a geometries attribute collection._  |
-| class | [**BVH**](classuipc_1_1geometry_1_1_b_v_h.md) <br> |
-| class | [**DeserialSharedAttributeContext**](classuipc_1_1geometry_1_1_deserial_shared_attribute_context.md) <br> |
-| class | [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) <br>_A base geometries class that contains the instance attributes and the meta attributes._  |
-| class | [**GeometryAtlas**](classuipc_1_1geometry_1_1_geometry_atlas.md) <br> |
-| class | [**GeometryAtlasCommit**](classuipc_1_1geometry_1_1_geometry_atlas_commit.md) <br> |
-| class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
-| class | [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1_geometry_collection_commit.md) <br> |
-| class | [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) <br> |
-| class | [**GeometryFactory**](classuipc_1_1geometry_1_1_geometry_factory.md) <br> |
-| class | [**GeometryFriend**](classuipc_1_1geometry_1_1_geometry_friend.md) &lt;typename T&gt;<br> |
-| class | [**GeometryIOError**](classuipc_1_1geometry_1_1_geometry_i_o_error.md) <br> |
-| class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
-| class | [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md) &lt;GeometryT&gt;<br> |
-| class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md) &lt;&gt;<br> |
-| class | [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) <br>_An abstract class to represent a geometries attribute._  |
-| class | [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) <br>_An abstract class to represent a geometries attribute slot in a geometries attribute collection._  |
-| class | [**IGeometry**](classuipc_1_1geometry_1_1_i_geometry.md) <br>_An abstract class for geometries._  |
-| class | [**IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md) <br> |
-| class | [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) <br> |
-| class | [**Octree**](classuipc_1_1geometry_1_1_octree.md) <br> |
-| class | [**SerialSharedAttributeContext**](classuipc_1_1geometry_1_1_serial_shared_attribute_context.md) <br> |
-| class | [**SimplexUtils**](classuipc_1_1geometry_1_1_simplex_utils.md) <br> |
-| class | [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) <br>_A simplicial complex is a collection of simplices._  |
-| class | [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1_simplicial_complex_attributes.md) &lt;IsConst, N&gt;<br> |
-| class | [**SimplicialComplexIO**](classuipc_1_1geometry_1_1_simplicial_complex_i_o.md) <br>_A class for reading and writing simplicial complex._  |
-| class | [**SpreadSheetIO**](classuipc_1_1geometry_1_1_spread_sheet_i_o.md) <br>_A class for writing geometry spreadsheet._  |
+| class | [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md) <br>_Represents an abstract simplicial complex, containing vertices, edges, triangles, and tetrahedra._  |
+| class | [**Attribute**](classuipc_1_1geometry_1_1Attribute.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute of type T._  |
+| class | [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) <br>_A collection of geometries attributes._  |
+| class | [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) <br> |
+| class | [**AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) <br> |
+| class | [**AttributeCollectionFactory**](classuipc_1_1geometry_1_1AttributeCollectionFactory.md) <br> |
+| class | [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) <br> |
+| class | [**AttributeDebugInfo**](classuipc_1_1geometry_1_1AttributeDebugInfo.md) <br> |
+| class | [**AttributeFactory**](classuipc_1_1geometry_1_1AttributeFactory.md) <br> |
+| class | [**AttributeFriend**](classuipc_1_1geometry_1_1AttributeFriend.md) &lt;typename T&gt;<br> |
+| class | [**AttributeIO**](classuipc_1_1geometry_1_1AttributeIO.md) <br> |
+| class | [**AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) <br> |
+| class | [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute slot of type T in a geometries attribute collection._  |
+| class | [**BVH**](classuipc_1_1geometry_1_1BVH.md) <br> |
+| class | [**DeserialSharedAttributeContext**](classuipc_1_1geometry_1_1DeserialSharedAttributeContext.md) <br> |
+| class | [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) <br>_A base geometries class that contains the instance attributes and the meta attributes._  |
+| class | [**GeometryAtlas**](classuipc_1_1geometry_1_1GeometryAtlas.md) <br> |
+| class | [**GeometryAtlasCommit**](classuipc_1_1geometry_1_1GeometryAtlasCommit.md) <br> |
+| class | [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) <br> |
+| class | [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1GeometryCollectionCommit.md) <br> |
+| class | [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) <br> |
+| class | [**GeometryFactory**](classuipc_1_1geometry_1_1GeometryFactory.md) <br> |
+| class | [**GeometryFriend**](classuipc_1_1geometry_1_1GeometryFriend.md) &lt;typename T&gt;<br> |
+| class | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) <br> |
+| class | [**GeometrySlotT**](classuipc_1_1geometry_1_1GeometrySlotT.md) &lt;GeometryT&gt;<br> |
+| class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1GeometrySlotT_3_01Geometry_01_4.md) &lt;&gt;<br> |
+| class | [**GeometrySlotT&lt; ImplicitGeometry &gt;**](classuipc_1_1geometry_1_1GeometrySlotT_3_01ImplicitGeometry_01_4.md) &lt;&gt;<br> |
+| class | [**GeometrySlotT&lt; SimplicialComplex &gt;**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &lt;&gt;<br> |
+| class | [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) <br>_An abstract class to represent a geometries attribute._  |
+| class | [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) <br>_An abstract class to represent a geometries attribute slot in a geometries attribute collection._  |
+| class | [**IGeometry**](classuipc_1_1geometry_1_1IGeometry.md) <br>_An abstract class for geometries._  |
+| class | [**IGeometryCollection**](classuipc_1_1geometry_1_1IGeometryCollection.md) <br> |
+| class | [**ImplicitGeometry**](classuipc_1_1geometry_1_1ImplicitGeometry.md) <br> |
+| class | [**Octree**](classuipc_1_1geometry_1_1Octree.md) <br> |
+| class | [**SerialSharedAttributeContext**](classuipc_1_1geometry_1_1SerialSharedAttributeContext.md) <br> |
+| class | [**SimplexUtils**](classuipc_1_1geometry_1_1SimplexUtils.md) <br> |
+| class | [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) <br>_A simplicial complex is a collection of simplices._  |
+| class | [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) &lt;IsConst, N&gt;<br> |
+| class | [**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) <br>_A class for reading and writing simplicial complex._  |
+| class | [**SpreadSheetIO**](classuipc_1_1geometry_1_1SpreadSheetIO.md) <br>_A class for writing geometry spreadsheet._  |
 
 
 ## Public Types
@@ -80,8 +81,8 @@
 | Type | Name |
 | ---: | :--- |
 | enum  | [**GeometrySlotState**](#enum-geometryslotstate)  <br> |
-| typedef [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) &gt; | [**ImplicitGeometrySlot**](#typedef-implicitgeometryslot)  <br> |
-| typedef [**GeometrySlotT**](classuipc_1_1geometry_1_1_geometry_slot_t.md)&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**SimplicialComplexSlot**](#typedef-simplicialcomplexslot)  <br> |
+| typedef [**GeometrySlotT**](classuipc_1_1geometry_1_1GeometrySlotT.md)&lt; [**ImplicitGeometry**](classuipc_1_1geometry_1_1ImplicitGeometry.md) &gt; | [**ImplicitGeometrySlot**](#typedef-implicitgeometryslot)  <br> |
+| typedef [**GeometrySlotT**](classuipc_1_1geometry_1_1GeometrySlotT.md)&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) &gt; | [**SimplicialComplexSlot**](#typedef-simplicialcomplexslot)  <br> |
 | typedef std::chrono::time\_point&lt; std::chrono::high\_resolution\_clock &gt; | [**TimePoint**](#typedef-timepoint)  <br> |
 
 
@@ -107,50 +108,50 @@
 
 | Type | Name |
 | ---: | :--- |
-|  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_region**](#function-apply_region) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Take apart the simplicial complex by regions._  |
-|  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
-|  UIPC\_CORE\_API void | [**check\_view**](#function-check_view) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) \* slot) <br> |
-|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_instance\_volume**](#function-compute_instance_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Compute the volume of an instance in the simplicial complex._ [_**Attribute**_](classuipc_1_1geometry_1_1_attribute.md) __`volume` _&lt;Float&gt; will be created in the instance vertices._ |
-|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_mesh\_d\_hat**](#function-compute_mesh_d_hat) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R, Float max\_d\_hat=std::numeric\_limits&lt; Float &gt;::max()) <br>_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._ |
-|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_volume**](#function-compute_vertex_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br> |
-|  UIPC\_GEOMETRY\_API std::string | [**constitution\_type**](#function-constitution_type) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & geo) <br> |
+|  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) &gt; | [**apply\_region**](#function-apply_region) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Take apart the simplicial complex by regions._  |
+|  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
+|  UIPC\_CORE\_API void | [**check\_view**](#function-check_view) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) \* slot) <br> |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; Float &gt; &gt; | [**compute\_mesh\_d\_hat**](#function-compute_mesh_d_hat) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R, Float max\_d\_hat=std::numeric\_limits&lt; Float &gt;::max()) <br>_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._ |
+|  UIPC\_GEOMETRY\_API Float | [**compute\_mesh\_volume**](#function-compute_mesh_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Compute the volume of the simplicial complex._  |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_volume**](#function-compute_vertex_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br> |
+|  UIPC\_GEOMETRY\_API std::string | [**constitution\_type**](#function-constitution_type) (const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & geo) <br> |
 |  Float UIPC\_GEOMETRY\_API | [**edge\_edge\_squared\_distance**](#function-edge_edge_squared_distance) (const Vector3 & Ea0, const Vector3 & Ea1, const Vector3 & Eb0, const Vector3 & Eb1) <br> |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & src) <br>_Extract the surface of a tetrahedral mesh._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**extract\_surface**](#function-extract_surface) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Extract the surface of a list of tetrahedral meshes and merge them into one._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**facet\_closure**](#function-facet_closure) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Generate the closure from a collection of facet simplices, who only have the top dimension simplices._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**flip\_inward\_triangles**](#function-flip_inward_triangles) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Flip the orientation of the triangles in the simplicial complex._  |
-|  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**ground**](#function-ground) (Float height=0.0, const Vector3 & N=Vector3::UnitY()) <br>_Create a gound plane._  |
-|  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) | [**halfplane**](#function-halfplane) (const Vector3 & P=Vector3::Zero(), const Vector3 & N=Vector3::UnitY()) <br>_Create a half-plane._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**extract\_surface**](#function-extract_surface) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & src) <br>_Extract the surface of a tetrahedral mesh._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**extract\_surface**](#function-extract_surface) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) \* &gt; complexes) <br>_Extract the surface of a list of tetrahedral meshes and merge them into one._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**facet\_closure**](#function-facet_closure) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Generate the closure from a collection of facet simplices, who only have the top dimension simplices._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**flip\_inward\_triangles**](#function-flip_inward_triangles) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc) <br>_Flip the orientation of the triangles in the simplicial complex._  |
+|  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1ImplicitGeometry.md) | [**ground**](#function-ground) (Float height=0.0, const Vector3 & N=Vector3::UnitY()) <br>_Create a gound plane._  |
+|  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1ImplicitGeometry.md) | [**halfplane**](#function-halfplane) (const Vector3 & P=Vector3::Zero(), const Vector3 & N=Vector3::UnitY()) <br>_Create a half-plane._  |
 |  Float UIPC\_GEOMETRY\_API | [**halfplane\_vertex\_signed\_distance**](#function-halfplane_vertex_signed_distance) (const Vector3 & P, const Vector3 & N, const Vector3 & V, Float V\_thickness=0.0) <br>_Compute the distance between a half-plane (P, N) and a vertex V (with thickness V\_thickness)._  |
 |  UIPC\_GEOMETRY\_API bool | [**is\_point\_in\_tet**](#function-is_point_in_tet) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & T3, const Vector3 & P) <br>_Check if a point is in a tetrahedron._  |
-|  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Check if a trimesh is closed._  |
-|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
-|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_graph\_color**](#function-label_graph_color) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Label the vertex color of a simplicial complex by graph coloring algorithm._  |
-|  UIPC\_GEOMETRY\_API void | [**label\_region**](#function-label_region) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & complex) <br>_Label the regions of a simplicial complex._  |
-|  UIPC\_GEOMETRY\_API void | [**label\_surface**](#function-label_surface) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & R) <br>_Label the surface of a simplicial complex._  |
-|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md)&lt; IndexT &gt; &gt; | [**label\_triangle\_orient**](#function-label_triangle_orient) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc) <br>_Label the orientation of the triangles in the simplicial complex._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**linemesh**](#function-linemesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector2i &gt; Es) <br>_Create a simplicial complex from a line mesh._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; complexes) <br>_Merge a list of simplicial complexes into one simplicial complex._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) &gt; complexes) <br> |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**merge**](#function-merge) (std::initializer\_list&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) \* &gt; && complexes) <br> |
-|  void UIPC\_GEOMETRY\_API | [**mesh\_partition**](#function-mesh_partition) ([**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, SizeT part\_max\_size) <br>_partition the simplicial complex_  |
-|  UIPC\_CORE\_API [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & | [**operator+=**](#function-operator) ([**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & dst, const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) & inc) <br> |
-|  UIPC\_CORE\_API [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & | [**operator+=**](#function-operator_1) ([**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & dst, const [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1_geometry_collection_commit.md) & inc) <br> |
-|  UIPC\_CORE\_API [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & | [**operator+=**](#function-operator_2) ([**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & base, const [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) & inc) <br> |
-|  UIPC\_CORE\_API [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) | [**operator-**](#function-operator-) (const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & dst, const [**AttributeCollection**](classuipc_1_1geometry_1_1_attribute_collection.md) & src) <br> |
-|  UIPC\_CORE\_API [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1_geometry_collection_commit.md) | [**operator-**](#function-operator-_1) (const [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & dst, const [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) & src) <br> |
-|  UIPC\_CORE\_API [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) | [**operator-**](#function-operator-_2) (const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & dst, const [**Geometry**](classuipc_1_1geometry_1_1_geometry.md) & src) <br> |
+|  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Check if a trimesh is closed._  |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_graph\_color**](#function-label_graph_color) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc) <br>_Label the vertex color of a simplicial complex by graph coloring algorithm._  |
+|  UIPC\_GEOMETRY\_API void | [**label\_region**](#function-label_region) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Label the regions of a simplicial complex._  |
+|  UIPC\_GEOMETRY\_API void | [**label\_surface**](#function-label_surface) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Label the surface of a simplicial complex._  |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_triangle\_orient**](#function-label_triangle_orient) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc) <br>_Label the orientation of the triangles in the simplicial complex._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**linemesh**](#function-linemesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector2i &gt; Es) <br>_Create a simplicial complex from a line mesh._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) \* &gt; complexes) <br>_Merge a list of simplicial complexes into one simplicial complex._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**merge**](#function-merge) (span&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) &gt; complexes) <br> |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**merge**](#function-merge) (std::initializer\_list&lt; const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) \* &gt; && complexes) <br> |
+|  void UIPC\_GEOMETRY\_API | [**mesh\_partition**](#function-mesh_partition) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, SizeT part\_max\_size) <br>_partition the simplicial complex_  |
+|  UIPC\_CORE\_API [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & | [**operator+=**](#function-operator) ([**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & dst, const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & inc) <br> |
+|  UIPC\_CORE\_API [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & | [**operator+=**](#function-operator_1) ([**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & dst, const [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1GeometryCollectionCommit.md) & inc) <br> |
+|  UIPC\_CORE\_API [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**operator+=**](#function-operator_2) ([**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & base, const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) & inc) <br> |
+|  UIPC\_CORE\_API [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) | [**operator-**](#function-operator-) (const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & dst, const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & src) <br> |
+|  UIPC\_CORE\_API [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1GeometryCollectionCommit.md) | [**operator-**](#function-operator-_1) (const [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & dst, const [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & src) <br> |
+|  UIPC\_CORE\_API [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) | [**operator-**](#function-operator-_2) (const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & dst, const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & src) <br> |
 |  UIPC\_GEOMETRY\_API Matrix4x4 | [**optimal\_transform**](#function-optimal_transform) (span&lt; const Vector3 &gt; S, span&lt; const Vector3 &gt; D) <br>_Find out the optimal transformation matrix that maps the source points to the destination points._  |
-|  UIPC\_GEOMETRY\_API Matrix4x4 | [**optimal\_transform**](#function-optimal_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & S, const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & D) <br>_Find out the optimal transformation matrix that maps the source simplicial complex to the destination simplicial complex._  |
+|  UIPC\_GEOMETRY\_API Matrix4x4 | [**optimal\_transform**](#function-optimal_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & S, const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & D) <br>_Find out the optimal transformation matrix that maps the source simplicial complex to the destination simplicial complex._  |
 |  Float UIPC\_GEOMETRY\_API | [**point\_edge\_squared\_distance**](#function-point_edge_squared_distance) (const Vector3 & P, const Vector3 & E0, const Vector3 & E1) <br> |
 |  Float UIPC\_GEOMETRY\_API | [**point\_point\_squared\_distance**](#function-point_point_squared_distance) (const Vector3 & P0, const Vector3 & P1) <br> |
 |  Float UIPC\_GEOMETRY\_API | [**point\_triangle\_squared\_distance**](#function-point_triangle_squared_distance) (const Vector3 & P, const Vector3 & T0, const Vector3 & T1, const Vector3 & T2) <br> |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**points\_from\_volume**](#function-points_from_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float resolution=0.01) <br>_Construct a point cloud inside a volume represented by a simplicial complex._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**points\_from\_volume**](#function-points_from_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float resolution=0.01) <br>_Construct a point cloud inside a volume represented by a simplicial complex._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
 |  UIPC\_GEOMETRY\_API bool | [**tri\_edge\_intersect**](#function-tri_edge_intersect) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & E0, const Vector3 & E1) <br>_Check if a triangle and an edge intersect._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br>_Create a simplicial complex from a triangle mesh._  |
-|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Fs) <br>_Create a 2D simplicial complex from a quad mesh (4-sided polygons)._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br>_Create a simplicial complex from a triangle mesh._  |
+|  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Fs) <br>_Create a 2D simplicial complex from a quad mesh (4-sided polygons)._  |
 
 
 
@@ -204,7 +205,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -217,7 +218,7 @@ using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
 ```
 
 
@@ -230,7 +231,7 @@ using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
 ### typedef TimePoint 
 
 ```C++
-using uipc::geometry::TimePoint =  std::chrono::time_point<std::chrono::high_resolution_clock>;
+using uipc::geometry::TimePoint = typedef std::chrono::time_point<std::chrono::high_resolution_clock>;
 ```
 
 
@@ -314,11 +315,40 @@ UIPC_CORE_API void uipc::geometry::check_view (
 
 
 
-### function compute\_instance\_volume 
+### function compute\_mesh\_d\_hat 
 
-_Compute the volume of an instance in the simplicial complex._ [_**Attribute**_](classuipc_1_1geometry_1_1_attribute.md) __`volume` _&lt;Float&gt; will be created in the instance vertices._
+_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._
 ```C++
-UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_instance_volume (
+UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_mesh_d_hat (
+    SimplicialComplex & R,
+    Float max_d_hat=std::numeric_limits< Float >::max()
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `R` The simplicial complex to compute d\_hat for. 
+* `max_d_hat` The maximum allowed d\_hat, default to infinity. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function compute\_mesh\_volume 
+
+_Compute the volume of the simplicial complex._ 
+```C++
+UIPC_GEOMETRY_API Float uipc::geometry::compute_mesh_volume (
     SimplicialComplex & R
 ) 
 ```
@@ -339,37 +369,8 @@ Only tetmesh and closed trimesh are supported.
 
 **Returns:**
 
-The attribute slot of the instance volume. 
+The volume of the simplicial complex. 
 
-
-
-
-
-        
-
-<hr>
-
-
-
-### function compute\_mesh\_d\_hat 
-
-_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._
-```C++
-UIPC_GEOMETRY_API S< AttributeSlot < Float > > uipc::geometry::compute_mesh_d_hat (
-    SimplicialComplex & R,
-    Float max_d_hat=std::numeric_limits< Float >::max()
-) 
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `R` The simplicial complex to compute d\_hat for. 
-* `max_d_hat` The maximum allowed d\_hat, default to infinity. 
 
 
 
@@ -450,7 +451,7 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::extract_surface (
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) The surface of the tetrahedral mesh. 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) The surface of the tetrahedral mesh. 
 
 
 
@@ -487,7 +488,7 @@ All the instances of the input tetrahedral meshes will be applied to the output 
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) The surface of the tetrahedral meshes. 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) The surface of the tetrahedral meshes. 
 
 
 
@@ -537,7 +538,7 @@ The input simplicial complex should have the attribute slot 'orient':&lt;Index&g
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) the simplicial complex with the orientation of the triangles flipped. 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) the simplicial complex with the orientation of the triangles flipped. 
 
 
 
@@ -683,7 +684,7 @@ UIPC_GEOMETRY_API bool uipc::geometry::is_trimesh_closed (
 
 
 
-Only 2D [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) is supported.
+Only 2D [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) is supported.
 
 
 
@@ -888,7 +889,7 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::linemesh (
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) 
 
 
 
@@ -918,7 +919,7 @@ All input simplicial complexes must have only one instance.
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) the merged simplicial complex. 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) the merged simplicial complex. 
 
 
 
@@ -1233,7 +1234,7 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::pointcloud (
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) 
 
 
 
@@ -1269,7 +1270,7 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::points_from_volume (
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) A point cloud represented as a simplicial complex with only vertices. 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) A point cloud represented as a simplicial complex with only vertices. 
 
 
 
@@ -1368,7 +1369,7 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::trimesh (
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) 
 
 
 
@@ -1404,7 +1405,7 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::trimesh (
 
 **Returns:**
 
-[**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) 
+[**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) 
 
 
 

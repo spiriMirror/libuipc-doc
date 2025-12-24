@@ -23,8 +23,8 @@
 * **CSubsceneModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **ContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **check\_view** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
-* **compute\_instance\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_mesh\_d\_hat** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_mesh\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_vertex\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **constitution\_type** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
@@ -42,7 +42,6 @@
 ## e
 
 * **encode\_offset\_count** ([**uipc**](namespaceuipc.md))
-* **ExtraConstitution** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **EG\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EG\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EP\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
@@ -163,6 +162,8 @@
 ## q
 
 * **Quaternion** ([**uipc**](namespaceuipc.md))
+* **q\_to\_transform** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
+* **q\_v\_to\_transform\_v** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 
 
 ## r
@@ -201,6 +202,8 @@
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **transform\_to\_q** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
+* **transform\_v\_to\_q\_v** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 
 
 ## u
@@ -208,7 +211,6 @@
 * **U** ([**uipc**](namespaceuipc.md))
 * **U32** ([**uipc**](namespaceuipc.md))
 * **U64** ([**uipc**](namespaceuipc.md))
-* **UIPC\_BUILTIN\_ATTRIBUTE** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 
 
 ## v

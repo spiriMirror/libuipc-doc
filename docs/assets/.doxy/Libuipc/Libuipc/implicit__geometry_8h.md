@@ -38,8 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**formatter&lt; uipc::geometry::ImplicitGeometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1_implicit_geometry_01_4.md) &lt;&gt;<br> |
-| class | [**ImplicitGeometry**](classuipc_1_1geometry_1_1_implicit_geometry.md) <br> |
+| class | [**ImplicitGeometry**](classuipc_1_1geometry_1_1ImplicitGeometry.md) <br> |
 
 
 

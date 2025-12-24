@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AttributeFactory**](classuipc_1_1geometry_1_1_attribute_factory.md) <br> |
+| class | [**AttributeFactory**](classuipc_1_1geometry_1_1AttributeFactory.md) <br> |
 
 
 

@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ContactTabularVisitor**](classuipc_1_1backend_1_1_contact_tabular_visitor.md) <br> |
+| class | [**ContactTabularVisitor**](classuipc_1_1backend_1_1ContactTabularVisitor.md) <br> |
 
 
 

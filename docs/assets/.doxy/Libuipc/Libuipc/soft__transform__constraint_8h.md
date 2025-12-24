@@ -39,9 +39,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md) <br> |
-| class | [**RotatingMotor**](classuipc_1_1constitution_1_1_rotating_motor.md) <br> |
-| class | [**SoftTransformConstraint**](classuipc_1_1constitution_1_1_soft_transform_constraint.md) <br> |
+| class | [**LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md) <br> |
+| class | [**RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md) <br> |
+| class | [**SoftTransformConstraint**](classuipc_1_1constitution_1_1SoftTransformConstraint.md) <br> |
 
 
 

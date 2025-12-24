@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SanityCheckMessageVisitor**](classuipc_1_1backend_1_1_sanity_check_message_visitor.md) <br> |
+| class | [**SanityCheckMessageVisitor**](classuipc_1_1backend_1_1SanityCheckMessageVisitor.md) <br> |
 
 
 

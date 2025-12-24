@@ -38,14 +38,14 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**EngineCreateInfo**](classuipc_1_1backend_1_1_engine_create_info.md) <br> |
+| class | [**EngineCreateInfo**](classuipc_1_1backend_1_1EngineCreateInfo.md) <br> |
 
 
 ## Public Types
 
 | Type | Name |
 | ---: | :--- |
-| typedef [**uipc::backend::EngineCreateInfo**](classuipc_1_1backend_1_1_engine_create_info.md) | [**EngineCreateInfo**](#typedef-enginecreateinfo)  <br> |
+| typedef [**uipc::backend::EngineCreateInfo**](classuipc_1_1backend_1_1EngineCreateInfo.md) | [**EngineCreateInfo**](#typedef-enginecreateinfo)  <br> |
 
 
 

@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SoftPositionConstraint**](classuipc_1_1constitution_1_1_soft_position_constraint.md) <br> |
+| class | [**SoftPositionConstraint**](classuipc_1_1constitution_1_1SoftPositionConstraint.md) <br> |
 
 
 

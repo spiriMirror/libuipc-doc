@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AttributeFriend**](classuipc_1_1geometry_1_1_attribute_friend.md) &lt;typename T&gt;<br> |
+| class | [**AttributeFriend**](classuipc_1_1geometry_1_1AttributeFriend.md) &lt;typename T&gt;<br> |
 
 
 
