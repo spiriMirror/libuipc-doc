@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1ExternalArticulationConstraint" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::ExternalArticulationConstraint</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1Constraint" prot="public" virt="non-virtual">uipc::constitution::Constraint</basecompoundref>
+    <includes refid="external__articulation__constraint_8h" local="no">external_articulation_constraint.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a312c9e7866dc8667e99ab86f8ba39876" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1Constraint" kindref="compound">Constraint</ref></type>
+        <definition>using uipc::constitution::ExternalArticulationConstraint::Base =  Constraint</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="21" column="5" bodyfile="include/uipc/constitution/external_articulation_constraint.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a00434499dec02f9d063095dc73738fe6" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::ExternalArticulationConstraint::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="75" column="10" bodyfile="include/uipc/constitution/external_articulation_constraint.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1afc50076fa342b522fb1585638a7a0a5c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::ExternalArticulationConstraint::ExternalArticulationConstraint</definition>
+        <argsstring>(const Json &amp;config=default_config()) noexcept</argsstring>
+        <name>ExternalArticulationConstraint</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::ExternalArticulationConstraint</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval><ref refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a2842f9f8c50aac08fd75d5553d980e65" kindref="member">default_config</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint" kindref="compound">ExternalArticulationConstraint</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration dictionary (optional, uses default if not provided). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1ad97ced2d4e2bf5da113c01ec29205d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::ExternalArticulationConstraint::~ExternalArticulationConstraint</definition>
+        <argsstring>()</argsstring>
+        <name>~ExternalArticulationConstraint</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::~ExternalArticulationConstraint</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a6a9e13061e3ff47e074cae960141fabd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
+        <definition>geometry::Geometry uipc::constitution::ExternalArticulationConstraint::create_geometry</definition>
+        <argsstring>(span&lt; S&lt; const geometry::GeometrySlot &gt; &gt; joint_geos) const</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::create_geometry</qualifiedname>
+        <param>
+          <type>span&lt; S&lt; const <ref refid="classuipc_1_1geometry_1_1GeometrySlot" kindref="compound">geometry::GeometrySlot</ref> &gt; &gt;</type>
+          <declname>joint_geos</declname>
+        </param>
+        <briefdescription>
+<para>Create geometry for external articulation joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates geometry structure with joint attributes (geo_id, index, delta_theta_tilde, delta_theta) and joint-joint mass attributes. All joints use index 0 by default.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_geos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Geometry slots containing joint information. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref> Created geometry with joint constraint data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="45" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1af08605f5b80e0809fbc9c71adc3a5d48" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
+        <definition>geometry::Geometry uipc::constitution::ExternalArticulationConstraint::create_geometry</definition>
+        <argsstring>(span&lt; S&lt; const geometry::GeometrySlot &gt; &gt; joint_geos, span&lt; IndexT &gt; indices) const</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::create_geometry</qualifiedname>
+        <param>
+          <type>span&lt; S&lt; const <ref refid="classuipc_1_1geometry_1_1GeometrySlot" kindref="compound">geometry::GeometrySlot</ref> &gt; &gt;</type>
+          <declname>joint_geos</declname>
+        </param>
+        <param>
+          <type>span&lt; IndexT &gt;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+<para>Create geometry for external articulation joints with specified indices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Same as single-parameter version but allows selecting specific joints from each geometry slot.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>joint_geos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Geometry slots containing joint information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indices specifying which joint to use from each slot. Must match joint_geos size. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref> Created geometry with joint constraint data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="56" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a2842f9f8c50aac08fd75d5553d980e65" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::ExternalArticulationConstraint::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::default_config</qualifiedname>
+        <briefdescription>
+<para>Get the default configuration for <ref refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint" kindref="compound">ExternalArticulationConstraint</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Json Default configuration dictionary (currently empty). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="64" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a73fa172511936f0fc8d9e2fcf746ad81" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::constitution::ExternalArticulationConstraint::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::ExternalArticulationConstraint::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1Constraint_1a1c82273f5d6fbaa247b384a5af54a603">get_uid</reimplements>
+        <briefdescription>
+<para>Get the unique identifier for this constraint type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>U64 The constraint UID. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/external_articulation_constraint.h" line="72" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>External articulation constraint for incorporating external kinetic energy into the IPC system. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Controls motion of affine bodies by prescribing articulation DOFs (joint positions, angles, etc.). Incorporates kinetic energy term: K = 1/2(delta_theta - delta_theta_tilde)^T M^t (delta_theta - delta_theta_tilde) where delta_theta is variational joint DOF, delta_theta_tilde is predicted variational joint DOF, and M^t is effective mass matrix at previous time step.</para>
+<para>Users must provide M^t and delta_theta_tilde through animator callback. Works with <ref refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint" kindref="compound">AffineBodyRevoluteJoint</ref> and <ref refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJoint" kindref="compound">AffineBodyPrismaticJoint</ref> to constrain affine bodies to follow articulation motion. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::ExternalArticulationConstraint</label>
+        <link refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::ExternalArticulationConstraint</label>
+        <link refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/external_articulation_constraint.h" line="19" column="1" bodyfile="include/uipc/constitution/external_articulation_constraint.h" bodystart="20" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1a87edc064bcbfd767150a4f185ddbb8c9" prot="protected" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a312c9e7866dc8667e99ab86f8ba39876" prot="private" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1ad1c93564e93d05c9ecd0330cfcacbe46" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>Constraint</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a6a9e13061e3ff47e074cae960141fabd" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1af08605f5b80e0809fbc9c71adc3a5d48" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a2842f9f8c50aac08fd75d5553d980e65" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1afc50076fa342b522fb1585638a7a0a5c" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>ExternalArticulationConstraint</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a73fa172511936f0fc8d9e2fcf746ad81" prot="protected" virt="virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a00434499dec02f9d063095dc73738fe6" prot="private" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1ad97ced2d4e2bf5da113c01ec29205d86" prot="public" virt="non-virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>~ExternalArticulationConstraint</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::ExternalArticulationConstraint</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

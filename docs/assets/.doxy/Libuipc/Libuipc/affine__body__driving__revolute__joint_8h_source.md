@@ -10,6 +10,7 @@
 ```C++
 #pragma once
 #include <uipc/constitution/constraint.h>
+#include <uipc/geometry/simplicial_complex.h>
 
 namespace uipc::constitution
 {

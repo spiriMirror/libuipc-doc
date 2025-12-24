@@ -40,7 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**DiffSim**](classuipc_1_1core_1_1_diff_sim.md) <br> |
+| class | [**DiffSim**](classuipc_1_1core_1_1DiffSim.md) <br> |
 
 
 

@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**PmrDeleter**](structuipc_1_1_pmr_deleter.md) &lt;typename T&gt;<br> |
+| struct | [**PmrDeleter**](structuipc_1_1PmrDeleter.md) &lt;typename T&gt;<br> |
 
 
 

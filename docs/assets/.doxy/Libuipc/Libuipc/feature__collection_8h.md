@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**FeatureCollection**](classuipc_1_1core_1_1_feature_collection.md) <br> |
+| class | [**FeatureCollection**](classuipc_1_1core_1_1FeatureCollection.md) <br> |
 
 
 

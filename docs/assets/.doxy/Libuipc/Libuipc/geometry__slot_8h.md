@@ -40,8 +40,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GeometrySlot**](classuipc_1_1geometry_1_1_geometry_slot.md) <br> |
-| class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1_geometry_slot_t_3_01_geometry_01_4.md) &lt;&gt;<br> |
+| class | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) <br> |
+| class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1GeometrySlotT_3_01Geometry_01_4.md) &lt;&gt;<br> |
 
 
 

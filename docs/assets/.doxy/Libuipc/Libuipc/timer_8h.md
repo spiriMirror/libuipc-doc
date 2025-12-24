@@ -48,9 +48,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GlobalTimer**](classuipc_1_1_global_timer.md) <br> |
-| class | [**Timer**](classuipc_1_1_timer.md) <br> |
-| class | [**ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md) <br> |
+| class | [**GlobalTimer**](classuipc_1_1GlobalTimer.md) <br> |
+| class | [**Timer**](classuipc_1_1Timer.md) <br> |
+| class | [**ScopedTimer**](classuipc_1_1details_1_1ScopedTimer.md) <br> |
 
 
 

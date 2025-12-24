@@ -42,7 +42,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SubsceneTabular**](classuipc_1_1core_1_1_subscene_tabular.md) <br> |
+| class | [**SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) <br> |
 
 
 

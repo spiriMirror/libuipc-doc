@@ -41,7 +41,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ConstitutionTabular**](classuipc_1_1core_1_1_constitution_tabular.md) <br> |
+| class | [**ConstitutionTabular**](classuipc_1_1core_1_1ConstitutionTabular.md) <br> |
 
 
 

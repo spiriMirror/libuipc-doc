@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ConstitutionUIDAutoRegister**](classuipc_1_1builtin_1_1_constitution_u_i_d_auto_register.md) <br> |
+| class | [**ConstitutionUIDAutoRegister**](classuipc_1_1builtin_1_1ConstitutionUIDAutoRegister.md) <br> |
 
 
 
@@ -116,6 +116,7 @@ Example:
 
 
 ```C++
+++
 REGISTER_CONSTITUTION_UIDS()
 {
     using namespace uipc::builtin;

@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_auto_register.md) <br> |
+| class | [**ImplicitGeometryUIDAutoRegister**](classuipc_1_1builtin_1_1ImplicitGeometryUIDAutoRegister.md) <br> |
 
 
 
@@ -116,6 +116,7 @@ Example:
 
 
 ```C++
+++
 REGISTER_IMPLICIT_GEOMETRY_UIDS()
 {
     using namespace uipc::builtin;

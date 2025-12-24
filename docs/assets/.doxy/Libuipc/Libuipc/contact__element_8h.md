@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ContactElement**](classuipc_1_1core_1_1_contact_element.md) <br> |
+| class | [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) <br> |
 
 
 

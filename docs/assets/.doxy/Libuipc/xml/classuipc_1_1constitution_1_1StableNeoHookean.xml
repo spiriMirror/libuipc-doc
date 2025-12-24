@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1StableNeoHookean" kind="class" language="C++" prot="public">
+    <compoundname>uipc::constitution::StableNeoHookean</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1FiniteElementConstitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementConstitution</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1StableNeoHookean_1a688ad9d9358e60bb68a089ac85cb2dd7" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1FiniteElementConstitution" kindref="compound">FiniteElementConstitution</ref></type>
+        <definition>using uipc::constitution::StableNeoHookean::Base =  FiniteElementConstitution</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::StableNeoHookean::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/stable_neo_hookean.h" line="10" column="5" bodyfile="include/uipc/constitution/stable_neo_hookean.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1StableNeoHookean_1a26a3336dc1db7260f7590fea52e49f68" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::StableNeoHookean::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::StableNeoHookean::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/stable_neo_hookean.h" line="25" column="10" bodyfile="include/uipc/constitution/stable_neo_hookean.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1StableNeoHookean_1a57052f1e857f9b3e7bf507055c937e9d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::StableNeoHookean::StableNeoHookean</definition>
+        <argsstring>(const Json &amp;config=default_config()) noexcept</argsstring>
+        <name>StableNeoHookean</name>
+        <qualifiedname>uipc::constitution::StableNeoHookean::StableNeoHookean</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/stable_neo_hookean.h" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1StableNeoHookean_1aea75d3e4f55aa1d6b384223d3c689aa0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::StableNeoHookean::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, const ElasticModuli &amp;moduli=ElasticModuli::youngs_poisson(20.0_kPa, 0.49), Float mass_density=1e3) const</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::StableNeoHookean::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1constitution_1_1ElasticModuli" kindref="compound">ElasticModuli</ref> &amp;</type>
+          <declname>moduli</declname>
+          <defval>ElasticModuli::youngs_poisson(20.0_kPa, 0.49)</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mass_density</declname>
+          <defval>1e3</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/stable_neo_hookean.h" line="15" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1StableNeoHookean_1ae42bccc60a7a6f7d1d220c3ddc698504" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::StableNeoHookean::default_config</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::StableNeoHookean::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/stable_neo_hookean.h" line="19" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1StableNeoHookean_1aa9fdaee94af914bbd21f4c1ab3602aea" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::constitution::StableNeoHookean::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::StableNeoHookean::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1IConstitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/stable_neo_hookean.h" line="22" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::constitution::FiniteElementConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1FiniteElementConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::StableNeoHookean</label>
+        <link refid="classuipc_1_1constitution_1_1StableNeoHookean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::constitution::FiniteElementConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1FiniteElementConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::StableNeoHookean</label>
+        <link refid="classuipc_1_1constitution_1_1StableNeoHookean"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/stable_neo_hookean.h" line="8" column="1" bodyfile="include/uipc/constitution/stable_neo_hookean.h" bodystart="9" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1StableNeoHookean_1aea75d3e4f55aa1d6b384223d3c689aa0" prot="public" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementConstitution_1a07511bccde7bffd0a8bf93763f1743a1" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::FiniteElementConstitution::"><scope>uipc::constitution::StableNeoHookean</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1StableNeoHookean_1a688ad9d9358e60bb68a089ac85cb2dd7" prot="private" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1StableNeoHookean_1ae42bccc60a7a6f7d1d220c3ddc698504" prot="public" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1StableNeoHookean_1aa9fdaee94af914bbd21f4c1ab3602aea" prot="protected" virt="virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1StableNeoHookean_1a26a3336dc1db7260f7590fea52e49f68" prot="private" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1StableNeoHookean_1a57052f1e857f9b3e7bf507055c937e9d" prot="public" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>StableNeoHookean</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::StableNeoHookean</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -11,7 +11,7 @@
 
 
 * `#include <uipc/constitution/constitution.h>`
-* `#include <uipc/geometry/simplicial_complex.h>`
+* `#include <uipc/geometry/geometry.h>`
 
 
 
@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Constraint**](classuipc_1_1constitution_1_1_constraint.md) <br> |
+| class | [**Constraint**](classuipc_1_1constitution_1_1Constraint.md) <br> |
 
 
 

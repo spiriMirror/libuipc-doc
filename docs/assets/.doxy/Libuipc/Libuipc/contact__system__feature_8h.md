@@ -39,8 +39,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ContactSystemFeature**](classuipc_1_1core_1_1_contact_system_feature.md) <br> |
-| class | [**ContactSystemFeatureOverrider**](classuipc_1_1core_1_1_contact_system_feature_overrider.md) <br> |
+| class | [**ContactSystemFeature**](classuipc_1_1core_1_1ContactSystemFeature.md) <br> |
+| class | [**ContactSystemFeatureOverrider**](classuipc_1_1core_1_1ContactSystemFeatureOverrider.md) <br> |
 
 
 

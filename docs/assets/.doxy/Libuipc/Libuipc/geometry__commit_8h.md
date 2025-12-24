@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GeometryCommit**](classuipc_1_1geometry_1_1_geometry_commit.md) <br> |
+| class | [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) <br> |
 
 
 

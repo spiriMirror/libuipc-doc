@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**HookeanSpring**](classuipc_1_1constitution_1_1_hookean_spring.md) <br> |
+| class | [**HookeanSpring**](classuipc_1_1constitution_1_1HookeanSpring.md) <br> |
 
 
 

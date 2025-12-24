@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1RotatingMotor" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::RotatingMotor</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1Constraint" prot="public" virt="non-virtual">uipc::constitution::Constraint</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1RotatingMotor_1a787fcf793ca73a29f90f2a3f20a3e7f4" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1Constraint" kindref="compound">Constraint</ref></type>
+        <definition>using uipc::constitution::RotatingMotor::Base =  Constraint</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::RotatingMotor::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="37" column="5" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1RotatingMotor_1ad9fa54f37b6b493a69eb4fe0077c4e00" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::RotatingMotor::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::RotatingMotor::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="55" column="10" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1RotatingMotor_1adc95b6aae76d09429ae9ae3171f29757" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::RotatingMotor::RotatingMotor</definition>
+        <argsstring>(const Json &amp;config=default_config()) noexcept</argsstring>
+        <name>RotatingMotor</name>
+        <qualifiedname>uipc::constitution::RotatingMotor::RotatingMotor</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="40" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1RotatingMotor_1a235dc6b55c435da3c5e573b9ac72aeba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::RotatingMotor::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float strength_ratio=100.0, const Vector3 &amp;motor_rot_axis=Vector3::UnitX(), Float motor_rot_vel=2 *std::numbers::pi) const</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::RotatingMotor::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>strength_ratio</declname>
+          <defval>100.0</defval>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>motor_rot_axis</declname>
+          <defval>Vector3::UnitX()</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>motor_rot_vel</declname>
+          <defval>2 *std::numbers::pi</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="42" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1RotatingMotor_1a67c1abfd8b90d9e8861d09c2926d88e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::RotatingMotor::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::RotatingMotor::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="47" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1RotatingMotor_1a56818ae0377997bf51a342da38cc43b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void uipc::constitution::RotatingMotor::animate</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float dt)</argsstring>
+        <name>animate</name>
+        <qualifiedname>uipc::constitution::RotatingMotor::animate</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="49" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1RotatingMotor_1a4d6941100708d7a806a036b5d744ff8b" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>U64 uipc::constitution::RotatingMotor::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::RotatingMotor::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1Constraint_1a1c82273f5d6fbaa247b384a5af54a603">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="52" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::RotatingMotor</label>
+        <link refid="classuipc_1_1constitution_1_1RotatingMotor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::RotatingMotor</label>
+        <link refid="classuipc_1_1constitution_1_1RotatingMotor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/soft_transform_constraint.h" line="35" column="1" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="36" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1RotatingMotor_1a56818ae0377997bf51a342da38cc43b9" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>animate</name></member>
+      <member refid="classuipc_1_1constitution_1_1RotatingMotor_1a235dc6b55c435da3c5e573b9ac72aeba" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1a87edc064bcbfd767150a4f185ddbb8c9" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::Constraint::"><scope>uipc::constitution::RotatingMotor</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1RotatingMotor_1a787fcf793ca73a29f90f2a3f20a3e7f4" prot="private" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1ad1c93564e93d05c9ecd0330cfcacbe46" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>Constraint</name></member>
+      <member refid="classuipc_1_1constitution_1_1RotatingMotor_1a67c1abfd8b90d9e8861d09c2926d88e5" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1RotatingMotor_1a4d6941100708d7a806a036b5d744ff8b" prot="protected" virt="virtual"><scope>uipc::constitution::RotatingMotor</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1RotatingMotor_1ad9fa54f37b6b493a69eb4fe0077c4e00" prot="private" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1RotatingMotor_1adc95b6aae76d09429ae9ae3171f29757" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>RotatingMotor</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::RotatingMotor</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::RotatingMotor</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

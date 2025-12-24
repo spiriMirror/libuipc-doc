@@ -29,8 +29,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Prim**](classuipc_1_1usd_1_1_prim.md) <br> |
-| class | [**Stage**](classuipc_1_1usd_1_1_stage.md) <br> |
+| class | [**Prim**](classuipc_1_1usd_1_1Prim.md) <br> |
+| class | [**Stage**](classuipc_1_1usd_1_1Stage.md) <br> |
 
 
 

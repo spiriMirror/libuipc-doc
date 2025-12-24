@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1Animator" kind="class" language="C++" prot="public">
+    <compoundname>uipc::core::Animator</compoundname>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Animator_1acad16e33e3942e02cf164e4ec7f26ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class internal::Scene</definition>
+        <argsstring></argsstring>
+        <name>internal::Scene</name>
+        <qualifiedname>uipc::core::Animator::Scene</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="36" column="18" bodyfile="include/uipc/core/animator.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Animator_1a10ee0c8cdcd90bf7634450179f9c3081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class backend::AnimatorVisitor</definition>
+        <argsstring></argsstring>
+        <name>backend::AnimatorVisitor</name>
+        <qualifiedname>uipc::core::Animator::AnimatorVisitor</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1AnimatorVisitor" kindref="compound">backend::AnimatorVisitor</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="37" column="18" bodyfile="include/uipc/core/animator.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Animator_1afb54b5313d09b7e4aef569d284a3365e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct</type>
+        <definition>friend struct fmt::formatter&lt; Animator &gt;</definition>
+        <argsstring></argsstring>
+        <name>fmt::formatter&lt; Animator &gt;</name>
+        <qualifiedname>uipc::core::Animator::formatter&lt; Animator &gt;</qualifiedname>
+        <param>
+          <type>fmt::formatter&lt; <ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="37" column="18" bodyfile="include/uipc/core/animator.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animator_1af7f4cefebc0b2714b0288ca1f1f875ee" prot="private" static="no" mutable="no">
+        <type>unordered_map&lt; IndexT, <ref refid="classuipc_1_1core_1_1Animation" kindref="compound">Animation</ref> &gt;</type>
+        <definition>unordered_map&lt;IndexT, Animation&gt; uipc::core::Animator::m_animations</definition>
+        <argsstring></argsstring>
+        <name>m_animations</name>
+        <qualifiedname>uipc::core::Animator::m_animations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="42" column="19" bodyfile="include/uipc/core/animator.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animator_1a0cbff36f898851dacd41a335fd2d3510" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref> &amp;</type>
+        <definition>internal::Scene&amp; uipc::core::Animator::m_scene</definition>
+        <argsstring></argsstring>
+        <name>m_scene</name>
+        <qualifiedname>uipc::core::Animator::m_scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="43" column="37" bodyfile="include/uipc/core/animator.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animator_1ae328f573853ee2cd10ab61ebd1fe9562" prot="private" static="no" mutable="no">
+        <type>SizeT</type>
+        <definition>SizeT uipc::core::Animator::m_substep</definition>
+        <argsstring></argsstring>
+        <name>m_substep</name>
+        <qualifiedname>uipc::core::Animator::m_substep</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="44" column="38" bodyfile="include/uipc/core/animator.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1a0d7031b33974b6d6e53bae36a776f1ea" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::Animator::substep</definition>
+        <argsstring>(SizeT n) noexcept</argsstring>
+        <name>substep</name>
+        <qualifiedname>uipc::core::Animator::substep</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="23" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1ad0f6334baf386c453423ea04a4b5889a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>SizeT</type>
+        <definition>SizeT uipc::core::Animator::substep</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>substep</name>
+        <qualifiedname>uipc::core::Animator::substep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="24" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1a17a9013356f050564f715b588acf14f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::Animator::insert</definition>
+        <argsstring>(Object &amp;obj, Animation::ActionOnUpdate &amp;&amp;on_update)</argsstring>
+        <name>insert</name>
+        <qualifiedname>uipc::core::Animator::insert</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Object" kindref="compound">Object</ref> &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>Animation::ActionOnUpdate &amp;&amp;</type>
+          <declname>on_update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1af31f5d608492204369f10ec731854a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::Animator::erase</definition>
+        <argsstring>(IndexT id)</argsstring>
+        <name>erase</name>
+        <qualifiedname>uipc::core::Animator::erase</qualifiedname>
+        <param>
+          <type>IndexT</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="27" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1a0291c6b179bcfe65484c1117939631ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Animator::Animator</definition>
+        <argsstring>(const Animator &amp;)=delete</argsstring>
+        <name>Animator</name>
+        <qualifiedname>uipc::core::Animator::Animator</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="30" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1a0138a611cc5837dafa391ae94b1c2ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Animator::Animator</definition>
+        <argsstring>(Animator &amp;&amp;)=delete</argsstring>
+        <name>Animator</name>
+        <qualifiedname>uipc::core::Animator::Animator</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1a9a11832c59d97352656c43aa63816316" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
+        <definition>Animator &amp; uipc::core::Animator::operator=</definition>
+        <argsstring>(const Animator &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::core::Animator::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="32" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1aa6af884926fb611c2cce749295899b82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
+        <definition>Animator &amp; uipc::core::Animator::operator=</definition>
+        <argsstring>(Animator &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::core::Animator::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="33" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animator_1aa05c743081989fb05b36281a41c998f2" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Animator::Animator</definition>
+        <argsstring>(internal::Scene &amp;scene) noexcept</argsstring>
+        <name>Animator</name>
+        <qualifiedname>uipc::core::Animator::Animator</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref> &amp;</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animator.h" line="40" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/animator.h" line="20" column="1" bodyfile="include/uipc/core/animator.h" bodystart="21" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1Animator_1a0291c6b179bcfe65484c1117939631ae" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>Animator</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1a0138a611cc5837dafa391ae94b1c2ac8" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>Animator</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1aa05c743081989fb05b36281a41c998f2" prot="private" virt="non-virtual"><scope>uipc::core::Animator</scope><name>Animator</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1a10ee0c8cdcd90bf7634450179f9c3081" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>backend::AnimatorVisitor</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1af31f5d608492204369f10ec731854a34" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>erase</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1afb54b5313d09b7e4aef569d284a3365e" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>fmt::formatter&lt; Animator &gt;</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1a17a9013356f050564f715b588acf14f5" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>insert</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1acad16e33e3942e02cf164e4ec7f26ac0" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>internal::Scene</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1af7f4cefebc0b2714b0288ca1f1f875ee" prot="private" virt="non-virtual"><scope>uipc::core::Animator</scope><name>m_animations</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1a0cbff36f898851dacd41a335fd2d3510" prot="private" virt="non-virtual"><scope>uipc::core::Animator</scope><name>m_scene</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1ae328f573853ee2cd10ab61ebd1fe9562" prot="private" virt="non-virtual"><scope>uipc::core::Animator</scope><name>m_substep</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1a9a11832c59d97352656c43aa63816316" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1aa6af884926fb611c2cce749295899b82" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1a0d7031b33974b6d6e53bae36a776f1ea" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>substep</name></member>
+      <member refid="classuipc_1_1core_1_1Animator_1ad0f6334baf386c453423ea04a4b5889a" prot="public" virt="non-virtual"><scope>uipc::core::Animator</scope><name>substep</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

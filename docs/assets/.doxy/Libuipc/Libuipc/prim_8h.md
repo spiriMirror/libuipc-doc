@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Prim**](classuipc_1_1usd_1_1_prim.md) <br> |
+| class | [**Prim**](classuipc_1_1usd_1_1Prim.md) <br> |
 
 
 

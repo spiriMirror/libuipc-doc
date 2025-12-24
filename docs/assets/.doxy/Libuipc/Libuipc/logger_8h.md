@@ -42,7 +42,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Logger**](classuipc_1_1_logger.md) <br> |
+| class | [**Logger**](classuipc_1_1Logger.md) <br> |
 
 
 

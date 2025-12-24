@@ -51,8 +51,12 @@
 
 | Type | Name |
 | ---: | :--- |
-|  UIPC\_GEOMETRY\_API Vector12 | [**compute\_body\_force**](#function-compute_body_force) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, const Vector3 & body\_force\_density) <br>_Compute the body force of an affine body._  |
-|  UIPC\_GEOMETRY\_API void | [**compute\_dyadic\_mass**](#function-compute_dyadic_mass) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1_simplicial_complex.md) & sc, Float rho, Float & m, Vector3 & m\_x\_bar, Matrix3x3 & m\_x\_bar\_x\_bar) <br>_Compute the dyadic mass of a simplicial complex._  |
+|  UIPC\_GEOMETRY\_API Vector12 | [**compute\_body\_force**](#function-compute_body_force) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector3 & body\_force\_density) <br>_Compute the body force of an affine body._  |
+|  UIPC\_GEOMETRY\_API void | [**compute\_dyadic\_mass**](#function-compute_dyadic_mass) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float rho, Float & m, Vector3 & m\_x\_bar, Matrix3x3 & m\_x\_bar\_x\_bar) <br>_Compute the dyadic mass of a simplicial complex._  |
+|  Matrix4x4 | [**q\_to\_transform**](#function-q_to_transform) (const Vector12 & q) <br> |
+|  Matrix4x4 | [**q\_v\_to\_transform\_v**](#function-q_v_to_transform_v) (const Vector12 & q) <br> |
+|  Vector12 | [**transform\_to\_q**](#function-transform_to_q) (const Matrix4x4 & trans) <br> |
+|  Vector12 | [**transform\_v\_to\_q\_v**](#function-transform_v_to_q_v) (const Matrix4x4 & transform\_v) <br> |
 
 
 
@@ -105,7 +109,6 @@ UIPC_GEOMETRY_API Vector12 uipc::geometry::affine_body::compute_body_force (
 
 * `sc` The simplicial complex. 
 * `body_force_density` The body force density in N/m^3. 
-* `body_force` The body force 
 
 
 
@@ -148,6 +151,66 @@ Integrate the mass density over the simplicial complex to compute the dyadic mas
 
 
         
+
+<hr>
+
+
+
+### function q\_to\_transform 
+
+```C++
+inline Matrix4x4 uipc::geometry::affine_body::q_to_transform (
+    const Vector12 & q
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function q\_v\_to\_transform\_v 
+
+```C++
+inline Matrix4x4 uipc::geometry::affine_body::q_v_to_transform_v (
+    const Vector12 & q
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function transform\_to\_q 
+
+```C++
+inline Vector12 uipc::geometry::affine_body::transform_to_q (
+    const Matrix4x4 & trans
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function transform\_v\_to\_q\_v 
+
+```C++
+inline Vector12 uipc::geometry::affine_body::transform_v_to_q_v (
+    const Matrix4x4 & transform_v
+) 
+```
+
+
+
 
 <hr>
 

@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**LogPatternGuard**](classuipc_1_1_log_pattern_guard.md) <br> |
+| class | [**LogPatternGuard**](classuipc_1_1LogPatternGuard.md) <br> |
 
 
 

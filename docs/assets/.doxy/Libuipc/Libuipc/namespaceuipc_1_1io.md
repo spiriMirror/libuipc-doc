@@ -29,9 +29,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**UrdfController**](classuipc_1_1io_1_1_urdf_controller.md) <br> |
-| class | [**UrdfIO**](classuipc_1_1io_1_1_urdf_i_o.md) <br> |
-| class | [**UrdfIOError**](classuipc_1_1io_1_1_urdf_i_o_error.md) <br> |
+| class | [**UrdfController**](classuipc_1_1io_1_1UrdfController.md) <br> |
+| class | [**UrdfIO**](classuipc_1_1io_1_1UrdfIO.md) <br> |
+| class | [**UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) <br> |
 
 
 

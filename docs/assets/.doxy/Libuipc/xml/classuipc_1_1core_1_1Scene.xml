@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1Scene" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::core::Scene</compoundname>
+    <innerclass refid="classuipc_1_1core_1_1Scene_1_1CGeometries" prot="public">uipc::core::Scene::CGeometries</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1Scene_1_1CObjects" prot="public">uipc::core::Scene::CObjects</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" prot="public">uipc::core::Scene::ConfigAttributesT</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1Scene_1_1Geometries" prot="public">uipc::core::Scene::Geometries</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1Scene_1_1Objects" prot="public">uipc::core::Scene::Objects</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1core_1_1Scene_1a10394edbab1ca3dcf5d2ab5022ef9c69" prot="public" static="no">
+        <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref>&lt; false &gt;</type>
+        <definition>using uipc::core::Scene::ConfigAttributes =  ConfigAttributesT&lt;false&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConfigAttributes</name>
+        <qualifiedname>uipc::core::Scene::ConfigAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="143" column="5" bodyfile="include/uipc/core/scene.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classuipc_1_1core_1_1Scene_1ad6a43aae4c09e5a6dd23eb7e0c338f88" prot="public" static="no">
+        <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref>&lt; true &gt;</type>
+        <definition>using uipc::core::Scene::CConfigAttributes =  ConfigAttributesT&lt;true&gt;</definition>
+        <argsstring></argsstring>
+        <name>CConfigAttributes</name>
+        <qualifiedname>uipc::core::Scene::CConfigAttributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="144" column="5" bodyfile="include/uipc/core/scene.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1a82e06600245526c1cafd2dc5709718e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class backend::SceneVisitor</definition>
+        <argsstring></argsstring>
+        <name>backend::SceneVisitor</name>
+        <qualifiedname>uipc::core::Scene::SceneVisitor</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1SceneVisitor" kindref="compound">backend::SceneVisitor</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="35" column="18" bodyfile="include/uipc/core/scene.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class World</definition>
+        <argsstring></argsstring>
+        <name>World</name>
+        <qualifiedname>uipc::core::Scene::World</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1World" kindref="compound">World</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="36" column="18" bodyfile="include/uipc/core/scene.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1a0720b5f434e636e22a3ed34f847eec57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Object</definition>
+        <argsstring></argsstring>
+        <name>Object</name>
+        <qualifiedname>uipc::core::Scene::Object</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Object" kindref="compound">Object</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="37" column="18" bodyfile="include/uipc/core/scene.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1adf36dc3244ec42eb0cd7009d1ca720a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class sanity_check::SanityChecker</definition>
+        <argsstring></argsstring>
+        <name>sanity_check::SanityChecker</name>
+        <qualifiedname>uipc::core::Scene::SanityChecker</qualifiedname>
+        <param>
+          <type>sanity_check::SanityChecker</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="38" column="18" bodyfile="include/uipc/core/scene.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1af47625f50036c466946f960db7320bcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Animation</definition>
+        <argsstring></argsstring>
+        <name>Animation</name>
+        <qualifiedname>uipc::core::Scene::Animation</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Animation" kindref="compound">Animation</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="39" column="18" bodyfile="include/uipc/core/scene.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1aace72bb27f976f9bf22d4ef1f887c0a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class SceneFactory</definition>
+        <argsstring></argsstring>
+        <name>SceneFactory</name>
+        <qualifiedname>uipc::core::Scene::SceneFactory</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1SceneFactory" kindref="compound">SceneFactory</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="40" column="18" bodyfile="include/uipc/core/scene.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1a3630dc06eabc9e304ec14767607a7b71" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class SceneSnapshot</definition>
+        <argsstring></argsstring>
+        <name>SceneSnapshot</name>
+        <qualifiedname>uipc::core::Scene::SceneSnapshot</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1SceneSnapshot" kindref="compound">SceneSnapshot</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="41" column="18" bodyfile="include/uipc/core/scene.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Scene_1a705e3e41c7082a969579dd9a2b10ec92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct</type>
+        <definition>friend struct fmt::formatter&lt; Scene &gt;</definition>
+        <argsstring></argsstring>
+        <name>fmt::formatter&lt; Scene &gt;</name>
+        <qualifiedname>uipc::core::Scene::formatter&lt; Scene &gt;</qualifiedname>
+        <param>
+          <type>fmt::formatter&lt; <ref refid="classuipc_1_1core_1_1Scene" kindref="compound">Scene</ref> &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="41" column="18" bodyfile="include/uipc/core/scene.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Scene_1a0f1375847f4c7ea4de1ffb4e00b97acb" prot="private" static="no" mutable="no">
+        <type>S&lt; <ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref> &gt;</type>
+        <definition>S&lt;internal::Scene&gt; uipc::core::Scene::m_internal</definition>
+        <argsstring></argsstring>
+        <name>m_internal</name>
+        <qualifiedname>uipc::core::Scene::m_internal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="240" column="7" bodyfile="include/uipc/core/scene.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a8e12b9093a1d0030f8b4c32c571857e4" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Scene::Scene</definition>
+        <argsstring>(const Json &amp;config=default_config())</argsstring>
+        <name>Scene</name>
+        <qualifiedname>uipc::core::Scene::Scene</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="146" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a2c6b89f45a2cfd8d88438052c5342075" prot="public" static="no" const="no" explicit="yes" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Scene::Scene</definition>
+        <argsstring>(S&lt; internal::Scene &gt; scene) noexcept</argsstring>
+        <name>Scene</name>
+        <qualifiedname>uipc::core::Scene::Scene</qualifiedname>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref> &gt;</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="148" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a3df9b21a6d043ed293ffe27e4073e72f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Scene::Scene</definition>
+        <argsstring>(const Scene &amp;)=delete</argsstring>
+        <name>Scene</name>
+        <qualifiedname>uipc::core::Scene::Scene</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1Scene" kindref="compound">Scene</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="150" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a5b54feb68c95274ed18b656a74a7888d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Scene::Scene</definition>
+        <argsstring>(Scene &amp;&amp;)=default</argsstring>
+        <name>Scene</name>
+        <qualifiedname>uipc::core::Scene::Scene</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Scene" kindref="compound">Scene</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="151" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a6afd45e447219f92f17197d16beb2ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Scene::~Scene</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene</name>
+        <qualifiedname>uipc::core::Scene::~Scene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="153" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1af42012f8104c234f7918622d30257a48" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>ConfigAttributes</type>
+        <definition>ConfigAttributes uipc::core::Scene::config</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>config</name>
+        <qualifiedname>uipc::core::Scene::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="213" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a792e0e16c7b6d769cbd12825eb3ae7c2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>CConfigAttributes</type>
+        <definition>CConfigAttributes uipc::core::Scene::config</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>config</name>
+        <qualifiedname>uipc::core::Scene::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="214" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a62f3721e455e45efe0ed429b4bc33b2d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1ContactTabular" kindref="compound">ContactTabular</ref> &amp;</type>
+        <definition>ContactTabular &amp; uipc::core::Scene::contact_tabular</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>contact_tabular</name>
+        <qualifiedname>uipc::core::Scene::contact_tabular</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="216" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a82ca0271cc881ca08c4b4250ca28b3ed" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>const <ref refid="classuipc_1_1core_1_1ContactTabular" kindref="compound">ContactTabular</ref> &amp;</type>
+        <definition>const ContactTabular &amp; uipc::core::Scene::contact_tabular</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>contact_tabular</name>
+        <qualifiedname>uipc::core::Scene::contact_tabular</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="217" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a9755d79376152db7ed7dd7f8685af89e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1SubsceneTabular" kindref="compound">SubsceneTabular</ref> &amp;</type>
+        <definition>SubsceneTabular &amp; uipc::core::Scene::subscene_tabular</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>subscene_tabular</name>
+        <qualifiedname>uipc::core::Scene::subscene_tabular</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="219" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a859c937365641e6ce1c694006ab7e03e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>const <ref refid="classuipc_1_1core_1_1SubsceneTabular" kindref="compound">SubsceneTabular</ref> &amp;</type>
+        <definition>const SubsceneTabular &amp; uipc::core::Scene::subscene_tabular</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>subscene_tabular</name>
+        <qualifiedname>uipc::core::Scene::subscene_tabular</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="220" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a37a11d0d7a4a06052d3348b388c10001" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1ConstitutionTabular" kindref="compound">ConstitutionTabular</ref> &amp;</type>
+        <definition>ConstitutionTabular &amp; uipc::core::Scene::constitution_tabular</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>constitution_tabular</name>
+        <qualifiedname>uipc::core::Scene::constitution_tabular</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="222" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1aff050a7d47f1bf523035955606259f28" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>const <ref refid="classuipc_1_1core_1_1ConstitutionTabular" kindref="compound">ConstitutionTabular</ref> &amp;</type>
+        <definition>const ConstitutionTabular &amp; uipc::core::Scene::constitution_tabular</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>constitution_tabular</name>
+        <qualifiedname>uipc::core::Scene::constitution_tabular</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="223" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a79f1fa9c6144b1bb5ef2d3707753d1bd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1Scene_1_1Objects" kindref="compound">Objects</ref></type>
+        <definition>Objects uipc::core::Scene::objects</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>objects</name>
+        <qualifiedname>uipc::core::Scene::objects</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="225" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1ad2514520befd9203eb7ad906967ddd6f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1Scene_1_1CObjects" kindref="compound">CObjects</ref></type>
+        <definition>CObjects uipc::core::Scene::objects</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>objects</name>
+        <qualifiedname>uipc::core::Scene::objects</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="226" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a32a30a91e21d302949436284ae22491b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1Scene_1_1Geometries" kindref="compound">Geometries</ref></type>
+        <definition>Geometries uipc::core::Scene::geometries</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>geometries</name>
+        <qualifiedname>uipc::core::Scene::geometries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="228" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1aa8890c30090361e99203b3117971e66a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1Scene_1_1CGeometries" kindref="compound">CGeometries</ref></type>
+        <definition>CGeometries uipc::core::Scene::geometries</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>geometries</name>
+        <qualifiedname>uipc::core::Scene::geometries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="229" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1abe5d010f4c2a7c3844a040cba662ae09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
+        <definition>Animator &amp; uipc::core::Scene::animator</definition>
+        <argsstring>()</argsstring>
+        <name>animator</name>
+        <qualifiedname>uipc::core::Scene::animator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="231" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a8b04cdf670cc526387f549bc151bf91f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
+        <definition>const Animator &amp; uipc::core::Scene::animator</definition>
+        <argsstring>() const</argsstring>
+        <name>animator</name>
+        <qualifiedname>uipc::core::Scene::animator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="232" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a89e3fbd243c278fdf2f2b90c3faf739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1core_1_1DiffSim" kindref="compound">DiffSim</ref> &amp;</type>
+        <definition>DiffSim &amp; uipc::core::Scene::diff_sim</definition>
+        <argsstring>()</argsstring>
+        <name>diff_sim</name>
+        <qualifiedname>uipc::core::Scene::diff_sim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="234" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1ad81248ee53c29638cf91b9a577d6ddb9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classuipc_1_1core_1_1DiffSim" kindref="compound">DiffSim</ref> &amp;</type>
+        <definition>const DiffSim &amp; uipc::core::Scene::diff_sim</definition>
+        <argsstring>() const</argsstring>
+        <name>diff_sim</name>
+        <qualifiedname>uipc::core::Scene::diff_sim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="235" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a8e9c98d1d8caa31d2a33ecb523a14294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::Scene::update_from</definition>
+        <argsstring>(const SceneSnapshotCommit &amp;snapshot)</argsstring>
+        <name>update_from</name>
+        <qualifiedname>uipc::core::Scene::update_from</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1core_1_1SceneSnapshotCommit" kindref="compound">SceneSnapshotCommit</ref> &amp;</type>
+          <declname>snapshot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="237" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1ae491fea3f421dc710f86e596dd0dd146" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::core::Scene::default_config</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::core::Scene::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="155" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/scene.h" line="33" column="1" bodyfile="include/uipc/core/scene.h" bodystart="34" bodyend="241"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1Scene_1af47625f50036c466946f960db7320bcf" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Animation</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1abe5d010f4c2a7c3844a040cba662ae09" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>animator</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a8b04cdf670cc526387f549bc151bf91f" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>animator</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a82e06600245526c1cafd2dc5709718e3" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>backend::SceneVisitor</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1ad6a43aae4c09e5a6dd23eb7e0c338f88" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>CConfigAttributes</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1af42012f8104c234f7918622d30257a48" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>config</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a792e0e16c7b6d769cbd12825eb3ae7c2" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>config</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a10394edbab1ca3dcf5d2ab5022ef9c69" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>ConfigAttributes</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a37a11d0d7a4a06052d3348b388c10001" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>constitution_tabular</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1aff050a7d47f1bf523035955606259f28" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>constitution_tabular</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a62f3721e455e45efe0ed429b4bc33b2d" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>contact_tabular</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a82ca0271cc881ca08c4b4250ca28b3ed" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>contact_tabular</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1ae491fea3f421dc710f86e596dd0dd146" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a89e3fbd243c278fdf2f2b90c3faf739c" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>diff_sim</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1ad81248ee53c29638cf91b9a577d6ddb9" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>diff_sim</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a705e3e41c7082a969579dd9a2b10ec92" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>fmt::formatter&lt; Scene &gt;</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a32a30a91e21d302949436284ae22491b" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>geometries</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1aa8890c30090361e99203b3117971e66a" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>geometries</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a0f1375847f4c7ea4de1ffb4e00b97acb" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>m_internal</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a0720b5f434e636e22a3ed34f847eec57" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Object</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a79f1fa9c6144b1bb5ef2d3707753d1bd" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>objects</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1ad2514520befd9203eb7ad906967ddd6f" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>objects</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1adf36dc3244ec42eb0cd7009d1ca720a2" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>sanity_check::SanityChecker</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a8e12b9093a1d0030f8b4c32c571857e4" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Scene</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a2c6b89f45a2cfd8d88438052c5342075" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Scene</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a3df9b21a6d043ed293ffe27e4073e72f" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Scene</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a5b54feb68c95274ed18b656a74a7888d" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Scene</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1aace72bb27f976f9bf22d4ef1f887c0a6" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>SceneFactory</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a3630dc06eabc9e304ec14767607a7b71" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>SceneSnapshot</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a9755d79376152db7ed7dd7f8685af89e" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>subscene_tabular</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a859c937365641e6ce1c694006ab7e03e" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>subscene_tabular</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a8e9c98d1d8caa31d2a33ecb523a14294" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>update_from</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>World</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a6afd45e447219f92f17197d16beb2ab1" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

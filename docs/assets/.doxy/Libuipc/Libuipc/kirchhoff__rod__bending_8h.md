@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**KirchhoffRodBending**](classuipc_1_1constitution_1_1_kirchhoff_rod_bending.md) <br> |
+| class | [**KirchhoffRodBending**](classuipc_1_1constitution_1_1KirchhoffRodBending.md) <br> |
 
 
 

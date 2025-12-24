@@ -38,8 +38,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SceneIO**](classuipc_1_1core_1_1_scene_i_o.md) <br> |
-| class | [**SceneIOError**](classuipc_1_1core_1_1_scene_i_o_error.md) <br> |
+| class | [**SceneIO**](classuipc_1_1core_1_1SceneIO.md) <br> |
+| class | [**SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) <br> |
 
 
 

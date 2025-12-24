@@ -37,8 +37,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AdjointMethodFeature**](classuipc_1_1diff__sim_1_1_adjoint_method_feature.md) <br> |
-| class | [**AdjointMethodFeatureOverrider**](classuipc_1_1diff__sim_1_1_adjoint_method_feature_overrider.md) <br> |
+| class | [**AdjointMethodFeature**](classuipc_1_1diff__sim_1_1AdjointMethodFeature.md) <br> |
+| class | [**AdjointMethodFeatureOverrider**](classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider.md) <br> |
 
 
 

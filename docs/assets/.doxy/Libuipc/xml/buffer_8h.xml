@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="buffer_8h" kind="file" language="C++">
     <compoundname>buffer.h</compoundname>
     <includes refid="common_2type__define_8h" local="no">uipc/common/type_define.h</includes>
@@ -52,7 +52,7 @@
         <label>functional</label>
       </node>
     </incdepgraph>
-    <innerclass refid="classuipc_1_1backend_1_1_buffer" prot="public">uipc::backend::Buffer</innerclass>
+    <innerclass refid="classuipc_1_1backend_1_1Buffer" prot="public">uipc::backend::Buffer</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1backend">uipc::backend</innernamespace>
     <briefdescription>
@@ -67,20 +67,20 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::backend</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="classuipc_1_1backend_1_1_buffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/>Buffer</highlight></codeline>
+<codeline lineno="8" refid="classuipc_1_1backend_1_1Buffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CORE_API<sp/><ref refid="classuipc_1_1backend_1_1Buffer" kindref="compound">Buffer</ref></highlight></codeline>
 <codeline lineno="9"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>Buffer(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(SizeT)&gt;<sp/><sp/>resize_func,</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::function&lt;<ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">BufferView</ref>()&gt;<sp/>get_buffer_view_func);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1Buffer" kindref="compound">Buffer</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(SizeT)&gt;<sp/><sp/>resize_func,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::function&lt;<ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">BufferView</ref>()&gt;<sp/>get_buffer_view_func);</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resize(SizeT<sp/>size);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">BufferView</ref><sp/>view()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">BufferView</ref><sp/>view()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(SizeT)&gt;<sp/><sp/>m_resize_func;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;<ref refid="classuipc_1_1backend_1_1_buffer_view" kindref="compound">BufferView</ref>()&gt;<sp/>m_get_buffer_view_func;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;<ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">BufferView</ref>()&gt;<sp/>m_get_buffer_view_func;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::backend</highlight></codeline>
     </programlisting>
     <location file="include/uipc/backend/buffer.h"/>
   </compounddef>

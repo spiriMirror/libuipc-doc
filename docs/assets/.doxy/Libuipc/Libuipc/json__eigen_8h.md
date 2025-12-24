@@ -39,8 +39,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**adl\_serializer&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structnlohmann_1_1adl__serializer_3_01_eigen_1_1_matrix_3_01_scalar_00_01_rows_00_01_cols_00_01_761cd29d85d72c4c15331d22893c1439.md) &lt;typename Scalar, Rows, Cols, Options, MaxRows, MaxCols&gt;<br> |
-| class | [**JsonIOError**](classuipc_1_1_json_i_o_error.md) <br> |
+| struct | [**adl\_serializer&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structnlohmann_1_1adl__serializer_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Optionf9088c91cb1e6f49f31ad967e9c7aa67.md) &lt;typename Scalar, Rows, Cols, Options, MaxRows, MaxCols&gt;<br> |
+| class | [**JsonIOError**](classuipc_1_1JsonIOError.md) <br> |
 
 
 

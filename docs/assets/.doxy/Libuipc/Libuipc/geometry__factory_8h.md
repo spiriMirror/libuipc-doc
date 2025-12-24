@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GeometryFactory**](classuipc_1_1geometry_1_1_geometry_factory.md) <br> |
+| class | [**GeometryFactory**](classuipc_1_1geometry_1_1GeometryFactory.md) <br> |
 
 
 

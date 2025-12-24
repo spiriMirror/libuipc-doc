@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Empty**](classuipc_1_1constitution_1_1_empty.md) <br> |
+| class | [**Empty**](classuipc_1_1constitution_1_1Empty.md) <br> |
 
 
 

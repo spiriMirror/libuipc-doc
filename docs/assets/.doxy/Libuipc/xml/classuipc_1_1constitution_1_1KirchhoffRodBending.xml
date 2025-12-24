@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1KirchhoffRodBending" kind="class" language="C++" prot="public">
+    <compoundname>uipc::constitution::KirchhoffRodBending</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementExtraConstitution</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1KirchhoffRodBending_1ab25fc49b9cda7f033860b5ddbc0e9831" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution" kindref="compound">FiniteElementExtraConstitution</ref></type>
+        <definition>using uipc::constitution::KirchhoffRodBending::Base =  FiniteElementExtraConstitution</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::KirchhoffRodBending::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/kirchhoff_rod_bending.h" line="9" column="5" bodyfile="include/uipc/constitution/kirchhoff_rod_bending.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1KirchhoffRodBending_1ad373f6b67e5bc69405e5d57f7352f650" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::KirchhoffRodBending::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::KirchhoffRodBending::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/kirchhoff_rod_bending.h" line="21" column="17" bodyfile="include/uipc/constitution/kirchhoff_rod_bending.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1KirchhoffRodBending_1a9fcfa9333e7dbde902fb495e03a5f292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::KirchhoffRodBending::KirchhoffRodBending</definition>
+        <argsstring>(const Json &amp;json=default_config())</argsstring>
+        <name>KirchhoffRodBending</name>
+        <qualifiedname>uipc::constitution::KirchhoffRodBending::KirchhoffRodBending</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>json</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/kirchhoff_rod_bending.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1KirchhoffRodBending_1a539174924ec4c8d35e9837812823149e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::KirchhoffRodBending::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float E=100.0_MPa)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::KirchhoffRodBending::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+          <defval>100.0_MPa</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/kirchhoff_rod_bending.h" line="14" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1KirchhoffRodBending_1a611746cc4f0a9e5a04e1b475c6b8d3b2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::KirchhoffRodBending::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::KirchhoffRodBending::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/kirchhoff_rod_bending.h" line="16" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1KirchhoffRodBending_1ac3e0416435ab0f1239a04362ed8b0a4a" prot="private" static="no" const="yes" explicit="no" inline="no" final="yes" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::constitution::KirchhoffRodBending::get_uid</definition>
+        <argsstring>() const noexcept final override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::KirchhoffRodBending::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution_1a48e02b80fc81d52413a065f687e8a0d3">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/kirchhoff_rod_bending.h" line="20" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::constitution::FiniteElementExtraConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::KirchhoffRodBending</label>
+        <link refid="classuipc_1_1constitution_1_1KirchhoffRodBending"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::constitution::FiniteElementExtraConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::KirchhoffRodBending</label>
+        <link refid="classuipc_1_1constitution_1_1KirchhoffRodBending"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/kirchhoff_rod_bending.h" line="7" column="1" bodyfile="include/uipc/constitution/kirchhoff_rod_bending.h" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1KirchhoffRodBending_1a539174924ec4c8d35e9837812823149e" prot="public" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution_1aa1605c483aff95fb43ab33d289685f16" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::FiniteElementExtraConstitution::"><scope>uipc::constitution::KirchhoffRodBending</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1KirchhoffRodBending_1ab25fc49b9cda7f033860b5ddbc0e9831" prot="private" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1KirchhoffRodBending_1a611746cc4f0a9e5a04e1b475c6b8d3b2" prot="public" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1KirchhoffRodBending_1ac3e0416435ab0f1239a04362ed8b0a4a" prot="private" virt="virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1KirchhoffRodBending_1a9fcfa9333e7dbde902fb495e03a5f292" prot="public" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>KirchhoffRodBending</name></member>
+      <member refid="classuipc_1_1constitution_1_1KirchhoffRodBending_1ad373f6b67e5bc69405e5d57f7352f650" prot="private" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::KirchhoffRodBending</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

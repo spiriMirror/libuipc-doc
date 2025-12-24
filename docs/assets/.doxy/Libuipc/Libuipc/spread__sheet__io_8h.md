@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SpreadSheetIO**](classuipc_1_1geometry_1_1_spread_sheet_i_o.md) <br>_A class for writing geometry spreadsheet._  |
+| class | [**SpreadSheetIO**](classuipc_1_1geometry_1_1SpreadSheetIO.md) <br>_A class for writing geometry spreadsheet._  |
 
 
 

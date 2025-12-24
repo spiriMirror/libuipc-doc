@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SceneFactory**](classuipc_1_1core_1_1_scene_factory.md) <br> |
+| class | [**SceneFactory**](classuipc_1_1core_1_1SceneFactory.md) <br> |
 
 
 

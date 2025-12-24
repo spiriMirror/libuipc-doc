@@ -40,7 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Octree**](classuipc_1_1geometry_1_1_octree.md) <br> |
+| class | [**Octree**](classuipc_1_1geometry_1_1Octree.md) <br> |
 
 
 

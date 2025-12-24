@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AnimatorVisitor**](classuipc_1_1backend_1_1_animator_visitor.md) <br> |
+| class | [**AnimatorVisitor**](classuipc_1_1backend_1_1AnimatorVisitor.md) <br> |
 
 
 

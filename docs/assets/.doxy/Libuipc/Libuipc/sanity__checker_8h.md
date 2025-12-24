@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SanityChecker**](classuipc_1_1core_1_1_sanity_checker.md) <br> |
+| class | [**SanityChecker**](classuipc_1_1core_1_1SanityChecker.md) <br> |
 
 
 

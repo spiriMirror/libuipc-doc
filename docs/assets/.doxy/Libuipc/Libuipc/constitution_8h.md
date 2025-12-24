@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) <br> |
+| class | [**IConstitution**](classuipc_1_1constitution_1_1IConstitution.md) <br> |
 
 
 

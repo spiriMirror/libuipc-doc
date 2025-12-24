@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1core_1_1Animation" kind="class" language="C++" prot="public">
+    <compoundname>uipc::core::Animation</compoundname>
+    <innerclass refid="classuipc_1_1core_1_1Animation_1_1UpdateHint" prot="public">uipc::core::Animation::UpdateHint</innerclass>
+    <innerclass refid="classuipc_1_1core_1_1Animation_1_1UpdateInfo" prot="public">uipc::core::Animation::UpdateInfo</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1core_1_1Animation_1aa414fb0fd764d2e29444abeac12ad333" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="classuipc_1_1core_1_1Animation_1_1UpdateInfo" kindref="compound">UpdateInfo</ref> &amp;)&gt;</type>
+        <definition>using uipc::core::Animation::ActionOnUpdate =  std::function&lt;void(UpdateInfo&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ActionOnUpdate</name>
+        <qualifiedname>uipc::core::Animation::ActionOnUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="46" column="5" bodyfile="include/uipc/core/animation.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Animation_1abbbfe7b916ef7239a2e95fdb21d0211f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class Animator</definition>
+        <argsstring></argsstring>
+        <name>Animator</name>
+        <qualifiedname>uipc::core::Animation::Animator</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="49" column="18" bodyfile="include/uipc/core/animation.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Animation_1a10ee0c8cdcd90bf7634450179f9c3081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class backend::AnimatorVisitor</definition>
+        <argsstring></argsstring>
+        <name>backend::AnimatorVisitor</name>
+        <qualifiedname>uipc::core::Animation::AnimatorVisitor</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1AnimatorVisitor" kindref="compound">backend::AnimatorVisitor</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="50" column="18" bodyfile="include/uipc/core/animation.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1core_1_1Animation_1afc210f6e70ff63447c6d2a6555a27f9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct</type>
+        <definition>friend struct fmt::formatter&lt; Animation &gt;</definition>
+        <argsstring></argsstring>
+        <name>fmt::formatter&lt; Animation &gt;</name>
+        <qualifiedname>uipc::core::Animation::formatter&lt; Animation &gt;</qualifiedname>
+        <param>
+          <type>fmt::formatter&lt; <ref refid="classuipc_1_1core_1_1Animation" kindref="compound">Animation</ref> &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="50" column="18" bodyfile="include/uipc/core/animation.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animation_1acca7b3c2864ede8884ca60bcd647dc92" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1Object" kindref="compound">Object</ref> *</type>
+        <definition>Object* uipc::core::Animation::m_object</definition>
+        <argsstring></argsstring>
+        <name>m_object</name>
+        <qualifiedname>uipc::core::Animation::m_object</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="57" column="21" bodyfile="include/uipc/core/animation.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animation_1a054148b7ce0b9d39b1dc7e69b40677cb" prot="private" static="no" mutable="no">
+        <type><ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref> *</type>
+        <definition>internal::Scene* uipc::core::Animation::m_scene</definition>
+        <argsstring></argsstring>
+        <name>m_scene</name>
+        <qualifiedname>uipc::core::Animation::m_scene</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="58" column="21" bodyfile="include/uipc/core/animation.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animation_1a70d015c92801140de207a83db6b10d25" prot="private" static="no" mutable="no">
+        <type>ActionOnUpdate</type>
+        <definition>ActionOnUpdate uipc::core::Animation::m_on_update</definition>
+        <argsstring></argsstring>
+        <name>m_on_update</name>
+        <qualifiedname>uipc::core::Animation::m_on_update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="59" column="22" bodyfile="include/uipc/core/animation.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animation_1aec9ed81e322d3b4527498abaac58cf94" prot="private" static="no" mutable="yes">
+        <type>vector&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlot" kindref="compound">geometry::GeometrySlot</ref> &gt; &gt;</type>
+        <definition>vector&lt;S&lt;geometry::GeometrySlot&gt; &gt; uipc::core::Animation::m_temp_geo_slots</definition>
+        <argsstring></argsstring>
+        <name>m_temp_geo_slots</name>
+        <qualifiedname>uipc::core::Animation::m_temp_geo_slots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="61" column="20" bodyfile="include/uipc/core/animation.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1Animation_1ae2c128f31b2093a23f1741d83345ca5b" prot="private" static="no" mutable="yes">
+        <type>vector&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlot" kindref="compound">geometry::GeometrySlot</ref> &gt; &gt;</type>
+        <definition>vector&lt;S&lt;geometry::GeometrySlot&gt; &gt; uipc::core::Animation::m_temp_rest_geo_slots</definition>
+        <argsstring></argsstring>
+        <name>m_temp_rest_geo_slots</name>
+        <qualifiedname>uipc::core::Animation::m_temp_rest_geo_slots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="62" column="20" bodyfile="include/uipc/core/animation.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animation_1ae30b65f979854231205825cca12104d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::Animation::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>uipc::core::Animation::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animation_1a6d824281b9c50a0d34a1b3f550950b46" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::Animation::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <qualifiedname>uipc::core::Animation::update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="53" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Animation_1ad57b28a77226033d3f88ea35b1c4c584" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::core::Animation::Animation</definition>
+        <argsstring>(internal::Scene &amp;scene, Object &amp;object, ActionOnUpdate &amp;&amp;on_update) noexcept</argsstring>
+        <name>Animation</name>
+        <qualifiedname>uipc::core::Animation::Animation</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1internal_1_1Scene" kindref="compound">internal::Scene</ref> &amp;</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1core_1_1Object" kindref="compound">Object</ref> &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>ActionOnUpdate &amp;&amp;</type>
+          <declname>on_update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/animation.h" line="55" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/core/animation.h" line="15" column="1" bodyfile="include/uipc/core/animation.h" bodystart="16" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1core_1_1Animation_1aa414fb0fd764d2e29444abeac12ad333" prot="public" virt="non-virtual"><scope>uipc::core::Animation</scope><name>ActionOnUpdate</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1ad57b28a77226033d3f88ea35b1c4c584" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>Animation</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1abbbfe7b916ef7239a2e95fdb21d0211f" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>Animator</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1a10ee0c8cdcd90bf7634450179f9c3081" prot="public" virt="non-virtual"><scope>uipc::core::Animation</scope><name>backend::AnimatorVisitor</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1afc210f6e70ff63447c6d2a6555a27f9c" prot="public" virt="non-virtual"><scope>uipc::core::Animation</scope><name>fmt::formatter&lt; Animation &gt;</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1ae30b65f979854231205825cca12104d9" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>init</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1acca7b3c2864ede8884ca60bcd647dc92" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>m_object</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1a70d015c92801140de207a83db6b10d25" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>m_on_update</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1a054148b7ce0b9d39b1dc7e69b40677cb" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>m_scene</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1aec9ed81e322d3b4527498abaac58cf94" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>m_temp_geo_slots</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1ae2c128f31b2093a23f1741d83345ca5b" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>m_temp_rest_geo_slots</name></member>
+      <member refid="classuipc_1_1core_1_1Animation_1a6d824281b9c50a0d34a1b3f550950b46" prot="private" virt="non-virtual"><scope>uipc::core::Animation</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

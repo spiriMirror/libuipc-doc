@@ -46,7 +46,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SceneVisitor**](classuipc_1_1backend_1_1_scene_visitor.md) <br> |
+| class | [**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) <br> |
 
 
 

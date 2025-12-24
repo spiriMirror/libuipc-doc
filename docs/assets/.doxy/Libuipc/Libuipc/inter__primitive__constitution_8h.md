@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InterPrimitiveConstitution**](classuipc_1_1constitution_1_1_inter_primitive_constitution.md) <br> |
+| class | [**InterPrimitiveConstitution**](classuipc_1_1constitution_1_1InterPrimitiveConstitution.md) <br> |
 
 
 

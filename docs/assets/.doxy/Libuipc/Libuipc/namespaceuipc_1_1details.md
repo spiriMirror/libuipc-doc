@@ -29,7 +29,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScopedTimer**](classuipc_1_1details_1_1_scoped_timer.md) <br> |
+| class | [**ScopedTimer**](classuipc_1_1details_1_1ScopedTimer.md) <br> |
 
 
 

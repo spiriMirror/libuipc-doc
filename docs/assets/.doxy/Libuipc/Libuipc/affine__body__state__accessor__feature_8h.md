@@ -37,8 +37,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1_affine_body_state_accessor_feature.md) <br> |
-| class | [**AffineBodyStateAccessorFeatureOverrider**](classuipc_1_1core_1_1_affine_body_state_accessor_feature_overrider.md) <br> |
+| class | [**AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1AffineBodyStateAccessorFeature.md) <br> |
+| class | [**AffineBodyStateAccessorFeatureOverrider**](classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider.md) <br> |
 
 
 

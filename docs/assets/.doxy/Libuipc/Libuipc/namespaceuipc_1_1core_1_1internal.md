@@ -29,9 +29,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Engine**](classuipc_1_1core_1_1internal_1_1_engine.md) <br> |
-| class | [**Scene**](classuipc_1_1core_1_1internal_1_1_scene.md) <br> |
-| class | [**World**](classuipc_1_1core_1_1internal_1_1_world.md) <br> |
+| class | [**Engine**](classuipc_1_1core_1_1internal_1_1Engine.md) <br> |
+| class | [**Scene**](classuipc_1_1core_1_1internal_1_1Scene.md) <br> |
+| class | [**World**](classuipc_1_1core_1_1internal_1_1World.md) <br> |
 
 
 

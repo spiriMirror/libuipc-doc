@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1_attribute_collection_commit.md) <br> |
+| class | [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) <br> |
 
 
 

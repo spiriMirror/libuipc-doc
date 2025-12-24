@@ -31,7 +31,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**UIPCModuleInitInfo**](class_u_i_p_c_module_init_info.md) <br> |
+| class | [**UIPCModuleInitInfo**](classUIPCModuleInitInfo.md) <br> |
 
 
 

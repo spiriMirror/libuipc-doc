@@ -16,7 +16,6 @@
 
 ## e
 
-* **ExtraConstitution** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **Engine** ([**uipc::core::internal**](namespaceuipc_1_1core_1_1internal.md))
 
 

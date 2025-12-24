@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1_affine_body_external_body_force.md) <br> |
+| class | [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md) <br> |
 
 
 

@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Particle**](classuipc_1_1constitution_1_1_particle.md) <br> |
+| class | [**Particle**](classuipc_1_1constitution_1_1Particle.md) <br> |
 
 
 

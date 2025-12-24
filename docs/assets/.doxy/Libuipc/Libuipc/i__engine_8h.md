@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**IEngine**](classuipc_1_1core_1_1_i_engine.md) <br> |
+| class | [**IEngine**](classuipc_1_1core_1_1IEngine.md) <br> |
 
 
 

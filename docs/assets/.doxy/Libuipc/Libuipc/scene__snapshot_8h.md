@@ -38,8 +38,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SceneSnapshot**](classuipc_1_1core_1_1_scene_snapshot.md) <br> |
-| class | [**SceneSnapshotCommit**](classuipc_1_1core_1_1_scene_snapshot_commit.md) <br> |
+| class | [**SceneSnapshot**](classuipc_1_1core_1_1SceneSnapshot.md) <br> |
+| class | [**SceneSnapshotCommit**](classuipc_1_1core_1_1SceneSnapshotCommit.md) <br> |
 
 
 

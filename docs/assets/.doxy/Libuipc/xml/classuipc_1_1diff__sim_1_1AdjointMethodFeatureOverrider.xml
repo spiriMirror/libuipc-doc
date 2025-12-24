@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>uipc::diff_sim::AdjointMethodFeatureOverrider</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider_1a442835f4d4d43a820f92414b1391e802" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::diff_sim::AdjointMethodFeatureOverrider::do_select_dofs</definition>
+        <argsstring>(SizeT frame, backend::BufferView in_SDI)=0</argsstring>
+        <name>do_select_dofs</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeatureOverrider::do_select_dofs</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>frame</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>in_SDI</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="10" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider_1ad1fc43296379bba0752c49811e8df174" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::diff_sim::AdjointMethodFeatureOverrider::do_receive_dofs</definition>
+        <argsstring>(backend::BufferView out_dofs)=0</argsstring>
+        <name>do_receive_dofs</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeatureOverrider::do_receive_dofs</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>out_dofs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="11" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider_1aea85fc6bced36be69b8f4a67f9165d06" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::diff_sim::AdjointMethodFeatureOverrider::do_compute_dLdP</definition>
+        <argsstring>(backend::BufferView out_dLdP, backend::BufferView in_dLdx)=0</argsstring>
+        <name>do_compute_dLdP</name>
+        <qualifiedname>uipc::diff_sim::AdjointMethodFeatureOverrider::do_compute_dLdP</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>out_dLdP</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>in_dLdx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="12" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/diff_sim/adjoint_method_feature.h" line="7" column="1" bodyfile="include/uipc/diff_sim/adjoint_method_feature.h" bodystart="8" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider_1aea85fc6bced36be69b8f4a67f9165d06" prot="public" virt="pure-virtual"><scope>uipc::diff_sim::AdjointMethodFeatureOverrider</scope><name>do_compute_dLdP</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider_1ad1fc43296379bba0752c49811e8df174" prot="public" virt="pure-virtual"><scope>uipc::diff_sim::AdjointMethodFeatureOverrider</scope><name>do_receive_dofs</name></member>
+      <member refid="classuipc_1_1diff__sim_1_1AdjointMethodFeatureOverrider_1a442835f4d4d43a820f92414b1391e802" prot="public" virt="pure-virtual"><scope>uipc::diff_sim::AdjointMethodFeatureOverrider</scope><name>do_select_dofs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

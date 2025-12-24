@@ -37,8 +37,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md) <br> |
-| class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md) <br> |
+| class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md) <br> |
+| class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) <br> |
 
 
 

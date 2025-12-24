@@ -46,8 +46,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Attribute**](classuipc_1_1geometry_1_1_attribute.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute of type T._  |
-| class | [**IAttribute**](classuipc_1_1geometry_1_1_i_attribute.md) <br>_An abstract class to represent a geometries attribute._  |
+| class | [**Attribute**](classuipc_1_1geometry_1_1Attribute.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute of type T._  |
+| class | [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) <br>_An abstract class to represent a geometries attribute._  |
 
 
 

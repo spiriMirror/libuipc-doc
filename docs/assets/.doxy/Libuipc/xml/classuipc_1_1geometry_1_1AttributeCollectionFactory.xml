@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1AttributeCollectionFactory" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::AttributeCollectionFactory</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a91c5b3d00721ea0b07773796cbdd84e1" prot="private" static="no" mutable="no">
+        <type>U&lt; Impl &gt;</type>
+        <definition>U&lt;Impl&gt; uipc::geometry::AttributeCollectionFactory::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::m_impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="46" column="7" bodyfile="include/uipc/geometry/attribute_collection_factory.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a1c4bd7d516d90d41c64681190f4fac30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AttributeCollectionFactory::AttributeCollectionFactory</definition>
+        <argsstring>()</argsstring>
+        <name>AttributeCollectionFactory</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::AttributeCollectionFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="15" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1ab7703c8a0f476f3906245ff27ccb6716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AttributeCollectionFactory::~AttributeCollectionFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~AttributeCollectionFactory</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::~AttributeCollectionFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="16" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a666891e35609e6608e8aba8cf65031d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
+        <definition>S&lt; AttributeCollection &gt; uipc::geometry::AttributeCollectionFactory::from_json</definition>
+        <argsstring>(const Json &amp;j, DeserialSharedAttributeContext &amp;ctx)</argsstring>
+        <name>from_json</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1DeserialSharedAttributeContext" kindref="compound">DeserialSharedAttributeContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Create an attribute collection from a json object and a pool of shared attributes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="21" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1ab0456aa6d4c4254e07ea809b94ed66f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::geometry::AttributeCollectionFactory::to_json</definition>
+        <argsstring>(const AttributeCollection &amp;ac, SerialSharedAttributeContext &amp;ctx)</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::to_json</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <declname>ac</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext" kindref="compound">SerialSharedAttributeContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@breif Convert an attribute collection to a json object, while using index to replace the attributes pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="27" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a6d7565bcd454cdcc828f960f853ff57e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::geometry::AttributeCollectionFactory::commit_to_json</definition>
+        <argsstring>(const AttributeCollectionCommit &amp;acc, SerialSharedAttributeContext &amp;ctx)</argsstring>
+        <name>commit_to_json</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::commit_to_json</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref> &amp;</type>
+          <declname>acc</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SerialSharedAttributeContext" kindref="compound">SerialSharedAttributeContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="30" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1acecc44b79cc7794b92cafa456de8a46a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref> &gt;</type>
+        <definition>S&lt; AttributeCollectionCommit &gt; uipc::geometry::AttributeCollectionFactory::commit_from_json</definition>
+        <argsstring>(const Json &amp;j, DeserialSharedAttributeContext &amp;ctx)</argsstring>
+        <name>commit_from_json</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::commit_from_json</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1DeserialSharedAttributeContext" kindref="compound">DeserialSharedAttributeContext</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="33" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a5df1a270e5394daa720247558c294f10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref></type>
+        <definition>AttributeCollectionCommit uipc::geometry::AttributeCollectionFactory::diff</definition>
+        <argsstring>(const AttributeCollection &amp;current, const AttributeCollection &amp;reference)</argsstring>
+        <name>diff</name>
+        <qualifiedname>uipc::geometry::AttributeCollectionFactory::diff</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <declname>current</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <declname>reference</declname>
+        </param>
+        <briefdescription>
+<para>Get the difference between the current and reference attribute collections. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>New Attributes and Modified Attributes will be copied to the diff_copy.</para>
+</listitem><listitem><para>Deleted Attributes will be collected in the removed_names. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection_factory.h" line="42" column="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/geometry/attribute_collection_factory.h" line="10" column="1" bodyfile="include/uipc/geometry/attribute_collection_factory.h" bodystart="11" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a1c4bd7d516d90d41c64681190f4fac30" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>AttributeCollectionFactory</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1acecc44b79cc7794b92cafa456de8a46a" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>commit_from_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a6d7565bcd454cdcc828f960f853ff57e" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>commit_to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a5df1a270e5394daa720247558c294f10" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>diff</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a666891e35609e6608e8aba8cf65031d8" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>from_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1a91c5b3d00721ea0b07773796cbdd84e1" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>m_impl</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1ab0456aa6d4c4254e07ea809b94ed66f1" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollectionFactory_1ab7703c8a0f476f3906245ff27ccb6716" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollectionFactory</scope><name>~AttributeCollectionFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

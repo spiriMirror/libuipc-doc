@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ConstitutionUIDCollection**](classuipc_1_1builtin_1_1_constitution_u_i_d_collection.md) <br> |
+| class | [**ConstitutionUIDCollection**](classuipc_1_1builtin_1_1ConstitutionUIDCollection.md) <br> |
 
 
 

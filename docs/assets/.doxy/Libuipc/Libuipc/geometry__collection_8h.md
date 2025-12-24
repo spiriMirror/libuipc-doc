@@ -42,8 +42,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**GeometryCollection**](classuipc_1_1geometry_1_1_geometry_collection.md) <br> |
-| class | [**IGeometryCollection**](classuipc_1_1geometry_1_1_i_geometry_collection.md) <br> |
+| class | [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) <br> |
+| class | [**IGeometryCollection**](classuipc_1_1geometry_1_1IGeometryCollection.md) <br> |
 
 
 

@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**SparseCOOView**](classuipc_1_1diff__sim_1_1_sparse_c_o_o_view.md) <br> |
+| class | [**SparseCOOView**](classuipc_1_1diff__sim_1_1SparseCOOView.md) <br> |
 
 
 

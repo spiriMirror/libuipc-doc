@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ImplicitGeometryUIDCollection**](classuipc_1_1builtin_1_1_implicit_geometry_u_i_d_collection.md) <br> |
+| class | [**ImplicitGeometryUIDCollection**](classuipc_1_1builtin_1_1ImplicitGeometryUIDCollection.md) <br> |
 
 
 

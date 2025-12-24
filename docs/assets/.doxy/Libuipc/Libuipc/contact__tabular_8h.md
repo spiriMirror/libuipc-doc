@@ -42,7 +42,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ContactTabular**](classuipc_1_1core_1_1_contact_tabular.md) <br> |
+| class | [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) <br> |
 
 
 

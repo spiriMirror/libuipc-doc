@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**NeoHookeanShell**](classuipc_1_1constitution_1_1_neo_hookean_shell.md) <br> |
+| class | [**NeoHookeanShell**](classuipc_1_1constitution_1_1NeoHookeanShell.md) <br> |
 
 
 

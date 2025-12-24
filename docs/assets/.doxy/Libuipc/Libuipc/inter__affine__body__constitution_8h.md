@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1_inter_affine_body_constitution.md) <br> |
+| class | [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1InterAffineBodyConstitution.md) <br> |
 
 
 

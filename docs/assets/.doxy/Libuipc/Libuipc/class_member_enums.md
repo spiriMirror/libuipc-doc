@@ -5,12 +5,12 @@
 
 ## c
 
-* **CopyType** ([**uipc::geometry::AttributeCopy**](classuipc_1_1geometry_1_1_attribute_copy.md))
+* **CopyType** ([**uipc::geometry::AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md))
 
 
 ## t
 
-* **Type** ([**uipc::core::EngineStatus**](classuipc_1_1core_1_1_engine_status.md))
+* **Type** ([**uipc::core::EngineStatus**](classuipc_1_1core_1_1EngineStatus.md))
 
 
 

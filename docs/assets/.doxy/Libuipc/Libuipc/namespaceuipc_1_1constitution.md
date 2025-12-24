@@ -29,32 +29,34 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ARAP**](classuipc_1_1constitution_1_1_a_r_a_p.md) <br> |
-| class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1_affine_body_constitution.md) <br> |
-| class | [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint.md) <br> |
-| class | [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1_affine_body_external_body_force.md) <br> |
-| class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1_affine_body_material.md) <br> |
-| class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_revolute_joint.md) <br> |
-| class | [**Constraint**](classuipc_1_1constitution_1_1_constraint.md) <br> |
-| class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1_discrete_shell_bending.md) <br> |
-| class | [**ElasticModuli**](classuipc_1_1constitution_1_1_elastic_moduli.md) <br> |
-| class | [**Empty**](classuipc_1_1constitution_1_1_empty.md) <br> |
-| class | [**FiniteElementConstitution**](classuipc_1_1constitution_1_1_finite_element_constitution.md) <br> |
-| class | [**FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1_finite_element_extra_constitution.md) <br> |
-| class | [**HookeanSpring**](classuipc_1_1constitution_1_1_hookean_spring.md) <br> |
-| class | [**IConstitution**](classuipc_1_1constitution_1_1_i_constitution.md) <br> |
-| class | [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1_inter_affine_body_constitution.md) <br> |
-| class | [**InterPrimitiveConstitution**](classuipc_1_1constitution_1_1_inter_primitive_constitution.md) <br> |
-| class | [**KirchhoffRodBending**](classuipc_1_1constitution_1_1_kirchhoff_rod_bending.md) <br> |
-| class | [**LinearMotor**](classuipc_1_1constitution_1_1_linear_motor.md) <br> |
-| class | [**NeoHookeanShell**](classuipc_1_1constitution_1_1_neo_hookean_shell.md) <br> |
-| class | [**Particle**](classuipc_1_1constitution_1_1_particle.md) <br> |
-| class | [**RotatingMotor**](classuipc_1_1constitution_1_1_rotating_motor.md) <br> |
-| class | [**SoftPositionConstraint**](classuipc_1_1constitution_1_1_soft_position_constraint.md) <br> |
-| class | [**SoftTransformConstraint**](classuipc_1_1constitution_1_1_soft_transform_constraint.md) <br> |
-| class | [**SoftVertexStitch**](classuipc_1_1constitution_1_1_soft_vertex_stitch.md) <br> |
-| class | [**StableNeoHookean**](classuipc_1_1constitution_1_1_stable_neo_hookean.md) <br> |
-| class | [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1_strain_limiting_baraff_witkin_shell.md) <br> |
+| class | [**ARAP**](classuipc_1_1constitution_1_1ARAP.md) <br> |
+| class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md) <br> |
+| class | [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md) <br> |
+| class | [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md) <br> |
+| class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) <br> |
+| class | [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md) <br> |
+| class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) <br> |
+| class | [**Constraint**](classuipc_1_1constitution_1_1Constraint.md) <br> |
+| class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md) <br> |
+| class | [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) <br> |
+| class | [**Empty**](classuipc_1_1constitution_1_1Empty.md) <br> |
+| class | [**ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md) <br>_External articulation constraint for incorporating external kinetic energy into the IPC system._  |
+| class | [**FiniteElementConstitution**](classuipc_1_1constitution_1_1FiniteElementConstitution.md) <br> |
+| class | [**FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1FiniteElementExtraConstitution.md) <br> |
+| class | [**HookeanSpring**](classuipc_1_1constitution_1_1HookeanSpring.md) <br> |
+| class | [**IConstitution**](classuipc_1_1constitution_1_1IConstitution.md) <br> |
+| class | [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1InterAffineBodyConstitution.md) <br> |
+| class | [**InterPrimitiveConstitution**](classuipc_1_1constitution_1_1InterPrimitiveConstitution.md) <br> |
+| class | [**KirchhoffRodBending**](classuipc_1_1constitution_1_1KirchhoffRodBending.md) <br> |
+| class | [**LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md) <br> |
+| class | [**NeoHookeanShell**](classuipc_1_1constitution_1_1NeoHookeanShell.md) <br> |
+| class | [**Particle**](classuipc_1_1constitution_1_1Particle.md) <br> |
+| class | [**RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md) <br> |
+| class | [**SoftPositionConstraint**](classuipc_1_1constitution_1_1SoftPositionConstraint.md) <br> |
+| class | [**SoftTransformConstraint**](classuipc_1_1constitution_1_1SoftTransformConstraint.md) <br> |
+| class | [**SoftVertexStitch**](classuipc_1_1constitution_1_1SoftVertexStitch.md) <br> |
+| class | [**StableNeoHookean**](classuipc_1_1constitution_1_1StableNeoHookean.md) <br> |
+| class | [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell.md) <br> |
 
 
 

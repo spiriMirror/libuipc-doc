@@ -43,8 +43,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AttributeSlot**](classuipc_1_1geometry_1_1_attribute_slot.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute slot of type T in a geometries attribute collection._  |
-| class | [**IAttributeSlot**](classuipc_1_1geometry_1_1_i_attribute_slot.md) <br>_An abstract class to represent a geometries attribute slot in a geometries attribute collection._  |
+| class | [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md) &lt;typename T&gt;<br>_Template class to represent a geometries attribute slot of type T in a geometries attribute collection._  |
+| class | [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) <br>_An abstract class to represent a geometries attribute slot in a geometries attribute collection._  |
 
 
 

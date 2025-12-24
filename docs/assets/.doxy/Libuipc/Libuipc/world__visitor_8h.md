@@ -39,7 +39,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**WorldVisitor**](classuipc_1_1backend_1_1_world_visitor.md) <br> |
+| class | [**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) <br> |
 
 
 

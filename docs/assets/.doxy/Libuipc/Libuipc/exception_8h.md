@@ -38,7 +38,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Exception**](classuipc_1_1_exception.md) <br> |
+| class | [**Exception**](classuipc_1_1Exception.md) <br> |
 
 
 

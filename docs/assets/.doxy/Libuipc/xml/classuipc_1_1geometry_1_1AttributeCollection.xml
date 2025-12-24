@@ -1,0 +1,733 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1geometry_1_1AttributeCollection" kind="class" language="C++" prot="public">
+    <compoundname>uipc::geometry::AttributeCollection</compoundname>
+    <includes refid="attribute__collection_8h" local="no">attribute_collection.h</includes>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1AttributeCollection_1abd621cd374772a67fae8b860ddfca14c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>class</type>
+        <definition>friend class AttributeFriend</definition>
+        <argsstring></argsstring>
+        <name>AttributeFriend</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::AttributeFriend</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1AttributeFriend" kindref="compound">AttributeFriend</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="22" column="18" bodyfile="include/uipc/geometry/attribute_collection.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1AttributeCollection_1a8612da586cc873bb50dab20955ae26d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct</type>
+        <definition>friend struct fmt::formatter&lt; AttributeCollection &gt;</definition>
+        <argsstring></argsstring>
+        <name>fmt::formatter&lt; AttributeCollection &gt;</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::formatter&lt; AttributeCollection &gt;</qualifiedname>
+        <param>
+          <type>fmt::formatter&lt; <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="22" column="18" bodyfile="include/uipc/geometry/attribute_collection.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classuipc_1_1geometry_1_1AttributeCollection_1ad11fe7fa871e0ca151a9f5311272599f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class AttributeCollectionCommit</definition>
+        <argsstring></argsstring>
+        <name>AttributeCollectionCommit</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::AttributeCollectionCommit</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="26" column="18" bodyfile="include/uipc/geometry/attribute_collection.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeCollection_1a42ae13ffa7830c8f3c5a20464bc550b6" prot="private" static="no" mutable="no">
+        <type>SizeT</type>
+        <definition>SizeT uipc::geometry::AttributeCollection::m_size</definition>
+        <argsstring></argsstring>
+        <name>m_size</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::m_size</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="176" column="46" bodyfile="include/uipc/geometry/attribute_collection.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1geometry_1_1AttributeCollection_1a76b0747a5235b4e2b3f08f93084a0590" prot="private" static="no" mutable="no">
+        <type>unordered_map&lt; string, S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt; &gt;</type>
+        <definition>unordered_map&lt;string, S&lt;IAttributeSlot&gt; &gt; uipc::geometry::AttributeCollection::m_attributes</definition>
+        <argsstring></argsstring>
+        <name>m_attributes</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::m_attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="177" column="19" bodyfile="include/uipc/geometry/attribute_collection.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a761a1c0eb85f2be9b0d96fcec89056e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AttributeCollection::AttributeCollection</definition>
+        <argsstring>()=default</argsstring>
+        <name>AttributeCollection</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::AttributeCollection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a9864996338f4d3a83042fe7489f65910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AttributeCollection::AttributeCollection</definition>
+        <argsstring>(const AttributeCollection &amp;)</argsstring>
+        <name>AttributeCollection</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::AttributeCollection</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a818f16080d6efff47ed678801a95b044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+        <definition>AttributeCollection &amp; uipc::geometry::AttributeCollection::operator=</definition>
+        <argsstring>(const AttributeCollection &amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="32" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a91550ff5a9f966b6a859590915428085" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::geometry::AttributeCollection::AttributeCollection</definition>
+        <argsstring>(AttributeCollection &amp;&amp;) noexcept</argsstring>
+        <name>AttributeCollection</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::AttributeCollection</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a9179b840a21125c2a97f45d1cbfd2b06" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+        <definition>AttributeCollection &amp; uipc::geometry::AttributeCollection::operator=</definition>
+        <argsstring>(AttributeCollection &amp;&amp;) noexcept</argsstring>
+        <name>operator=</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="35" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1adcc69257c818244eb908cdf3f11d2a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; T &gt; &gt;</type>
+        <definition>S&lt; AttributeSlot&lt; T &gt; &gt; uipc::geometry::AttributeCollection::create</definition>
+        <argsstring>(std::string_view name, const T &amp;default_value={}, bool allow_destroy=true)</argsstring>
+        <name>create</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::create</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>default_value</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Create a new attribute slot of type T with a given name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the attribute values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the attribute slot. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The created attribute slot. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="45" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a96d1977b3f44f5d2e30b1294de1dc5b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <definition>S&lt; IAttributeSlot &gt; uipc::geometry::AttributeCollection::share</definition>
+        <argsstring>(std::string_view name, const IAttributeSlot &amp;slot, bool allow_destroy=true)</argsstring>
+        <name>share</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::share</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+          <declname>slot</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Share the underlying attribute of the given slot with a new name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The slot may be from another geometries attribute collection or just current geometries attribute collection. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the attribute slot. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot brings the underlying attribute. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new created attribute slot.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>AttributeAlreadyExist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the attribute with the given name already exists. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="59" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1ac107a8e9301b271292750b26ec854f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; T &gt; &gt;</type>
+        <definition>S&lt; AttributeSlot&lt; T &gt; &gt; uipc::geometry::AttributeCollection::share</definition>
+        <argsstring>(std::string_view name, const AttributeSlot&lt; T &gt; &amp;slot, bool allow_destroy=true)</argsstring>
+        <name>share</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::share</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; T &gt; &amp;</type>
+          <declname>slot</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_destroy</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Template version of share. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="67" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1aa8e469b36fcc1bf03ca58b5310d94d75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeCollection::destroy</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>destroy</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::destroy</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Remove the attribute slot with the given name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The underlying attribute will not be destroyed if it is shared by other attribute slots.</para>
+<para>@danger Accessing the removed attribute slot will cause undefined behavior. It&apos;s user&apos;s responsibility to ensure that the removed attribute slot is not accessed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="80" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a7597679f4fce2084f00d90058442c5f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <definition>S&lt; IAttributeSlot &gt; uipc::geometry::AttributeCollection::find</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Find the attribute slot with the given name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the attribute slot. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The attribute slot with the given name. </para>
+</simplesect>
+<simplesect kind="return"><para>nullptr if the attribute slot with the given name does not exist. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="89" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a9bed8ad0c30f250eba51382304f4fb9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <definition>S&lt; const IAttributeSlot &gt; uipc::geometry::AttributeCollection::find</definition>
+        <argsstring>(std::string_view name) const</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>const version of find. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="93" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a1227ff84bc6c5773cb7d6228a9dcbbff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; T &gt; &gt;</type>
+        <definition>S&lt; AttributeSlot&lt; T &gt; &gt; uipc::geometry::AttributeCollection::find</definition>
+        <argsstring>(std::string_view name)</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Template version of find. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="99" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1ad8bf4284206dd0db10e975a7296ebe13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; T &gt; &gt;</type>
+        <definition>S&lt; const AttributeSlot&lt; T &gt; &gt; uipc::geometry::AttributeCollection::find</definition>
+        <argsstring>(std::string_view name) const</argsstring>
+        <name>find</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::find</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Template const version of find. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="105" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1aa3ed4893b603f9ce9e28aeb6d2bede31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeCollection::resize</definition>
+        <argsstring>(SizeT N)</argsstring>
+        <name>resize</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::resize</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Resize all attribute slots to the given size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This method may generate data clones. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="112" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a19f0d665f5d944efb6d45962486bd3cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeCollection::reorder</definition>
+        <argsstring>(span&lt; const SizeT &gt; O)</argsstring>
+        <name>reorder</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::reorder</qualifiedname>
+        <param>
+          <type>span&lt; const SizeT &gt;</type>
+          <declname>O</declname>
+        </param>
+        <briefdescription>
+<para>Reorder the underlying attribute values of all attribute slots. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>O</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A New2Old mapping. O[i] = j means the i-th element in the new order has the value of the j-th element in the old order.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This method may generate data clones. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="121" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1ae2355fb62cdf2ead88ab8a4143e58fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeCollection::copy_from</definition>
+        <argsstring>(const AttributeCollection &amp;other, const AttributeCopy &amp;copy, span&lt; const string &gt; include_names={}, span&lt; const string &gt; exclude_names={})</argsstring>
+        <name>copy_from</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::copy_from</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCopy" kindref="compound">AttributeCopy</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <param>
+          <type>span&lt; const string &gt;</type>
+          <declname>include_names</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>span&lt; const string &gt;</type>
+          <declname>exclude_names</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>copy_from the underlying attribute values of all attribute slots. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>copy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The copy strategy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>include_names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The names of the attribute slots to be copied. If it is empty, all attribute slots will be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exclude_names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The names of the attribute slots not to be copied, the exclude_names has higher priority than include_names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="130" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a69c0a11471d3f335f52b427773cb1216" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SizeT</type>
+        <definition>SizeT uipc::geometry::AttributeCollection::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::size</qualifiedname>
+        <briefdescription>
+<para>Get the size of the attribute slots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="138" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a54e6a0538f4615fe428b238a2f4d5e8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeCollection::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::clear</qualifiedname>
+        <briefdescription>
+<para>clear the underlying attribute values of all attribute slots, the attribute slots will not be destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This method may generate data clones. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="144" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1adcdeaa3ec0b024436751528fa2a2c9a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeCollection::reserve</definition>
+        <argsstring>(SizeT N)</argsstring>
+        <name>reserve</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::reserve</qualifiedname>
+        <param>
+          <type>SizeT</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>Reserve memory for all attribute slots. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This method generates no data clone. But the memory of the underlying attribute values may be reallocated. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="150" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a8eacb7916a17737d644435cc568288db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt; string &gt; uipc::geometry::AttributeCollection::names</definition>
+        <argsstring>() const</argsstring>
+        <name>names</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::names</qualifiedname>
+        <briefdescription>
+<para>Get the names of all attribute slots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="155" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1aa405afa586696b46829f89c4470977a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>SizeT</type>
+        <definition>SizeT uipc::geometry::AttributeCollection::attribute_count</definition>
+        <argsstring>() const</argsstring>
+        <name>attribute_count</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::attribute_count</qualifiedname>
+        <briefdescription>
+<para>Get the number of attribute slots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="160" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a2871a2a290e463bd343a2dfb3ac4159a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>Json uipc::geometry::AttributeCollection::to_json</definition>
+        <argsstring>() const</argsstring>
+        <name>to_json</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::to_json</qualifiedname>
+        <briefdescription>
+<para>Get the json representation of the attribute collection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="165" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a09307139874ef48cb66143e4f1e8f59d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::geometry::AttributeCollection::update_from</definition>
+        <argsstring>(const AttributeCollectionCommit &amp;commit)</argsstring>
+        <name>update_from</name>
+        <qualifiedname>uipc::geometry::AttributeCollection::update_from</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref> &amp;</type>
+          <declname>commit</declname>
+        </param>
+        <briefdescription>
+<para>Update the attribute collection from <ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/attribute_collection.h" line="173" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A collection of geometries attributes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>All geometries attributes in the collection always have the same size. </para>
+    </detaileddescription>
+    <location file="include/uipc/geometry/attribute_collection.h" line="19" column="1" bodyfile="include/uipc/geometry/attribute_collection.h" bodystart="20" bodyend="178"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1aa405afa586696b46829f89c4470977a1" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>attribute_count</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a761a1c0eb85f2be9b0d96fcec89056e3" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>AttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a9864996338f4d3a83042fe7489f65910" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>AttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a91550ff5a9f966b6a859590915428085" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>AttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1ad11fe7fa871e0ca151a9f5311272599f" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>AttributeCollectionCommit</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1abd621cd374772a67fae8b860ddfca14c" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>AttributeFriend</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a54e6a0538f4615fe428b238a2f4d5e8e" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>clear</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1ae2355fb62cdf2ead88ab8a4143e58fa6" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>copy_from</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1adcc69257c818244eb908cdf3f11d2a85" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>create</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1aa8e469b36fcc1bf03ca58b5310d94d75" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>destroy</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a7597679f4fce2084f00d90058442c5f3" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a9bed8ad0c30f250eba51382304f4fb9e" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a1227ff84bc6c5773cb7d6228a9dcbbff" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1ad8bf4284206dd0db10e975a7296ebe13" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>find</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a8612da586cc873bb50dab20955ae26d3" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>fmt::formatter&lt; AttributeCollection &gt;</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a76b0747a5235b4e2b3f08f93084a0590" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>m_attributes</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a42ae13ffa7830c8f3c5a20464bc550b6" prot="private" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>m_size</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a8eacb7916a17737d644435cc568288db" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>names</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a818f16080d6efff47ed678801a95b044" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a9179b840a21125c2a97f45d1cbfd2b06" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>operator=</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a19f0d665f5d944efb6d45962486bd3cf" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>reorder</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1adcdeaa3ec0b024436751528fa2a2c9a7" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>reserve</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1aa3ed4893b603f9ce9e28aeb6d2bede31" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>resize</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a96d1977b3f44f5d2e30b1294de1dc5b0" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>share</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1ac107a8e9301b271292750b26ec854f43" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>share</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a69c0a11471d3f335f52b427773cb1216" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>size</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a2871a2a290e463bd343a2dfb3ac4159a" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>to_json</name></member>
+      <member refid="classuipc_1_1geometry_1_1AttributeCollection_1a09307139874ef48cb66143e4f1e8f59d" prot="public" virt="non-virtual"><scope>uipc::geometry::AttributeCollection</scope><name>update_from</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

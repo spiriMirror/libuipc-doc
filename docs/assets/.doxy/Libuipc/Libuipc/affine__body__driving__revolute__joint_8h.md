@@ -11,6 +11,7 @@
 
 
 * `#include <uipc/constitution/constraint.h>`
+* `#include <uipc/geometry/simplicial_complex.h>`
 
 
 
@@ -36,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1_affine_body_driving_revolute_joint.md) <br> |
+| class | [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md) <br> |
 
 
 

@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1ElasticModuli" kind="class" language="C++" prot="public">
+    <compoundname>uipc::constitution::ElasticModuli</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1ElasticModuli_1a99675853fe40945f0526438957fe418e" prot="private" static="no" mutable="no">
+        <type>Float</type>
+        <definition>Float uipc::constitution::ElasticModuli::m_lambda</definition>
+        <argsstring></argsstring>
+        <name>m_lambda</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::m_lambda</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="20" column="11" bodyfile="include/uipc/constitution/elastic_moduli.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1ElasticModuli_1ae8388fe538283e4bed54ad48779c218b" prot="private" static="no" mutable="no">
+        <type>Float</type>
+        <definition>Float uipc::constitution::ElasticModuli::m_mu</definition>
+        <argsstring></argsstring>
+        <name>m_mu</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::m_mu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="21" column="11" bodyfile="include/uipc/constitution/elastic_moduli.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ElasticModuli_1ac0074a02e08be6d149d0a319f89470bb" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1constitution_1_1ElasticModuli" kindref="compound">ElasticModuli</ref></type>
+        <definition>static ElasticModuli uipc::constitution::ElasticModuli::lame</definition>
+        <argsstring>(Float lambda, Float mu) noexcept</argsstring>
+        <name>lame</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::lame</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="10" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ElasticModuli_1a96615aa1fbb0f44d4e5d52ea0b6b6db3" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classuipc_1_1constitution_1_1ElasticModuli" kindref="compound">ElasticModuli</ref></type>
+        <definition>static ElasticModuli uipc::constitution::ElasticModuli::youngs_shear</definition>
+        <argsstring>(Float E, Float G) noexcept</argsstring>
+        <name>youngs_shear</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::youngs_shear</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>G</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="11" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ElasticModuli_1a354460b499eba88dd59b6c2dde54065b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1constitution_1_1ElasticModuli" kindref="compound">ElasticModuli</ref></type>
+        <definition>static ElasticModuli uipc::constitution::ElasticModuli::youngs_poisson</definition>
+        <argsstring>(Float E, Float nu)</argsstring>
+        <name>youngs_poisson</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::youngs_poisson</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>nu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="12" column="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ElasticModuli_1a4e8436bb9602645bfe4d661d2ef1332d" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto uipc::constitution::ElasticModuli::lambda</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>lambda</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::lambda</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="14" column="10" bodyfile="include/uipc/constitution/elastic_moduli.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ElasticModuli_1a3a1fb5a07c1859ce520dbc21048d8a0e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto uipc::constitution::ElasticModuli::mu</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>mu</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::mu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="15" column="10" bodyfile="include/uipc/constitution/elastic_moduli.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ElasticModuli_1a423a992df4505e6b070d07e70ae6cffb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::ElasticModuli::ElasticModuli</definition>
+        <argsstring>()=default</argsstring>
+        <name>ElasticModuli</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::ElasticModuli</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="18" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1ElasticModuli_1ae30e4891b242903c99ef3473a4dde1ff" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::ElasticModuli::ElasticModuli</definition>
+        <argsstring>(Float lambda, Float mu) noexcept</argsstring>
+        <name>ElasticModuli</name>
+        <qualifiedname>uipc::constitution::ElasticModuli::ElasticModuli</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/elastic_moduli.h" line="19" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/uipc/constitution/elastic_moduli.h" line="7" column="1" bodyfile="include/uipc/constitution/elastic_moduli.h" bodystart="8" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1a423a992df4505e6b070d07e70ae6cffb" prot="private" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>ElasticModuli</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1ae30e4891b242903c99ef3473a4dde1ff" prot="private" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>ElasticModuli</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1a4e8436bb9602645bfe4d661d2ef1332d" prot="public" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>lambda</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1ac0074a02e08be6d149d0a319f89470bb" prot="public" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>lame</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1a99675853fe40945f0526438957fe418e" prot="private" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>m_lambda</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1ae8388fe538283e4bed54ad48779c218b" prot="private" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>m_mu</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1a3a1fb5a07c1859ce520dbc21048d8a0e" prot="public" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>mu</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1a354460b499eba88dd59b6c2dde54065b" prot="public" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>youngs_poisson</name></member>
+      <member refid="classuipc_1_1constitution_1_1ElasticModuli_1a96615aa1fbb0f44d4e5d52ea0b6b6db3" prot="public" virt="non-virtual"><scope>uipc::constitution::ElasticModuli</scope><name>youngs_shear</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
