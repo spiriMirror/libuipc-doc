@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../linux/">
-      
-      
-        <link rel="next" href="../build_docs/">
       
       
         
@@ -23,7 +19,7 @@
     
     
       
-        <title>Linux-Docker - Libuipc Documentation</title>
+        <title>Build with Docker - Libuipc Documentation</title>
       
     
     
@@ -76,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-on-linux-docker" class="md-skip">
+        <a href="#build-with-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Linux-Docker
+              Build with Docker
             
           </span>
         </div>
@@ -285,8 +281,6 @@
       
   
   
-    
-  
   
   
     
@@ -308,11 +302,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -340,7 +334,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -413,37 +407,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Linux-Docker
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../linux_docker.md" class="md-nav__link">
         
   
   
@@ -459,81 +426,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install Docker
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clone-libuipc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clone Libuipc
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install Image
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Run Image
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2442,10 +2334,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-docker" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install Docker
+        Prerequisites
       
     </span>
   </a>
@@ -2453,10 +2345,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#clone-libuipc" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Clone Libuipc
+        Quick Start
       
     </span>
   </a>
@@ -2464,10 +2356,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install-image" class="md-nav__link">
+  <a href="#development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install Image
+        Development
       
     </span>
   </a>
@@ -2475,10 +2367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-image" class="md-nav__link">
+  <a href="#available-services" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Run Image
+        Available Services
       
     </span>
   </a>
@@ -2486,10 +2378,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-installation" class="md-nav__link">
+  <a href="#useful-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check Installation
+        Useful Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
       
     </span>
   </a>
@@ -2513,27 +2416,89 @@
 
 
 
-<div><h1 id="build-on-linux-docker">Build on Linux Docker</h1>
-<h2 id="install-docker">Install Docker</h2>
-<p>Install Docker following the instructions.</p>
-<p><a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
-<h2 id="clone-libuipc">Clone Libuipc</h2>
+<div><h1 id="build-with-docker">Build with Docker</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Install Docker and Docker Compose:</p>
+<ul>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/">Linux Docker</a></li>
+<li><a href="https://docs.docker.com/desktop/install/windows-install/">Windows Docker Desktop</a></li>
+</ul>
+<p><strong>Note for Windows users:</strong> For better performance, especially when mounting volumes, it's recommended to use WSL2 (Windows Subsystem for Linux 2). Docker Desktop on Windows can use WSL2 as the backend, which provides significantly faster filesystem performance compared to the Windows filesystem. See <a href="https://docs.docker.com/desktop/wsl/">Docker Desktop WSL 2 backend</a> for setup instructions.</p>
+<h2 id="quick-start">Quick Start</h2>
 <p>Clone the repository with the following command:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/spiriMirror/libuipc.git
 </span></code></pre></div>
-<h2 id="install-image">Install Image</h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>pub/libuipc:dev<span class="w"> </span>-f<span class="w"> </span>artifacts/docker/dev.dockerfile<span class="w"> </span>.
+<p>Navigate to the <code>docker</code> directory:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc/artifacts/docker
 </span></code></pre></div>
-<h2 id="run-image">Run Image</h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--gpus<span class="w"> </span>all<span class="w"> </span>pub/libuipc:dev
+<p>Build and start the container:</p>
+<p></p><div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>dev-cmake<span class="w"> </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>dev-cmake<span class="w"> </span>bash
 </span></code></pre></div>
-<h2 id="check-installation">Check Installation</h2>
-<p>You can run the <code>uipc_info.py</code> to check if the <code>Pyuipc</code> is installed correctly.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc/python
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python<span class="w"> </span>uipc_info.py
+Build the project inside the container:
+<p><strong>Note:</strong> The container runs as a non-root user (<code>developer</code>) to avoid privilege warnings. The user has UID 1000 and GID 1000.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># /home/developer/libuipc</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mkdir<span class="w"> </span>build<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>cmake<span class="w"> </span>-S<span class="w"> </span>..<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
 </span></code></pre></div>
-<p>More samples are at <a href="https://github.com/spiriMirror/libuipc-samples">Pyuipc Samples</a>.</p></div>
+<p>Then you can follow the other instructions in <a href="../linux/">Linux Installation Guide</a> to explore more features.</p>
+<h2 id="development">Development</h2>
+<p>If you want to develop the project inside the container, you can attach your IDE to the container.</p>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/devcontainers/containers">VSCode Dev Container</a></li>
+<li><a href="https://www.jetbrains.com/help/clion/connect-to-devcontainer.html">CLion Dev Container</a></li>
+</ul>
+<h2 id="available-services">Available Services</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dev-empty-conda</code></td>
+<td>Empty development environment</td>
+</tr>
+<tr>
+<td><code>dev-cmake</code></td>
+<td>CMake development environment</td>
+</tr>
+<tr>
+<td><code>dev-cmake-cu128</code></td>
+<td>CMake CUDA 12.8 development environment</td>
+</tr>
+<tr>
+<td><code>dev-cmake-cu130</code></td>
+<td>CMake CUDA 13.0 development environment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="useful-commands">Useful Commands</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Build and start</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>dev-cmake
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Create a new shell from the container</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>docker<span class="w"> </span>compose<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>dev-cmake<span class="w"> </span>bash
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Stop</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>docker<span class="w"> </span>compose<span class="w"> </span>stop<span class="w"> </span>dev-cmake
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Remove</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+</span></code></pre></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Build cache issues:</strong></p>
+<p>If the build cache is not working properly, you can try to remove the cache with the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>builder<span class="w"> </span>prune<span class="w"> </span>-af
+</span></code></pre></div>
+<p><strong>Slow filesystem performance on Windows:</strong></p>
+<p>If you experience slow build times or file operations when using Docker on Windows, this is likely due to filesystem performance issues when mounting Windows directories. To resolve this:</p>
+<ol>
+<li><strong>Use WSL2:</strong> Ensure Docker Desktop is configured to use WSL2 backend (Settings → General → Use the WSL 2 based engine)</li>
+<li><strong>Clone repository in WSL2:</strong> Clone the repository inside your WSL2 filesystem (e.g., <code>/home/username/Projects/libuipc</code>) rather than on the Windows filesystem (e.g., <code>C:\Users\...</code>)</li>
+<li><strong>Mount from WSL2:</strong> When running docker commands, use the WSL2 path (e.g., <code>/home/username/Projects/libuipc</code>) instead of Windows paths (e.g., <code>/mnt/c/Users/...</code>)</li>
+</ol>
+<p>This will provide native Linux filesystem performance and significantly improve build times.</p></div>
 
 
 

@@ -37,8 +37,7 @@ class UIPC_CORE_API ImplicitGeometryUIDAutoRegister
     }                                                                                                     \
     static ::uipc::list<::uipc::builtin::UIDInfo> auto_register::ImplicitGeometryUIDAutoRegisterFunction##counter()
 
-#define REGISTER_IMPLICIT_GEOMETRY_UIDS(...)                                   \
-    REGISTER_IMPLICIT_GEOMETRY_UIDS_INTERNAL(__COUNTER__)
+#define REGISTER_IMPLICIT_GEOMETRY_UIDS(...) REGISTER_IMPLICIT_GEOMETRY_UIDS_INTERNAL(__COUNTER__)
 ```
 
 

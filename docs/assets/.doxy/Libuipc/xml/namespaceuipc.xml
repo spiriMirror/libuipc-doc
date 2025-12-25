@@ -2,12 +2,13 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="namespaceuipc" kind="namespace" language="C++">
     <compoundname>uipc</compoundname>
+    <innerclass refid="structuipc_1_1always__false" prot="public">uipc::always_false</innerclass>
     <innerclass refid="classuipc_1_1BufferInfo" prot="public">uipc::BufferInfo</innerclass>
     <innerclass refid="classuipc_1_1ConstStringMap" prot="public">uipc::ConstStringMap</innerclass>
     <innerclass refid="classuipc_1_1Exception" prot="public">uipc::Exception</innerclass>
     <innerclass refid="classuipc_1_1GlobalTimer" prot="public">uipc::GlobalTimer</innerclass>
-    <innerclass refid="classuipc_1_1is__matrix" prot="public">uipc::is_matrix</innerclass>
-    <innerclass refid="classuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4" prot="public">uipc::is_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;</innerclass>
+    <innerclass refid="structuipc_1_1is__matrix" prot="public">uipc::is_matrix</innerclass>
+    <innerclass refid="structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4" prot="public">uipc::is_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;</innerclass>
     <innerclass refid="classuipc_1_1JsonIOError" prot="public">uipc::JsonIOError</innerclass>
     <innerclass refid="classuipc_1_1Logger" prot="public">uipc::Logger</innerclass>
     <innerclass refid="classuipc_1_1LogPatternGuard" prot="public">uipc::LogPatternGuard</innerclass>
@@ -679,7 +680,7 @@
         <argsstring></argsstring>
         <name>is_matrix_v</name>
         <qualifiedname>uipc::is_matrix_v</qualifiedname>
-        <initializer>= <ref refid="classuipc_1_1is__matrix" kindref="compound">is_matrix</ref>&lt;MatrixT&gt;::value</initializer>
+        <initializer>= <ref refid="structuipc_1_1is__matrix" kindref="compound">is_matrix</ref>&lt;MatrixT&gt;::value</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -687,6 +688,26 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/uipc/common/type_traits.h" line="75" column="23" bodyfile="include/uipc/common/type_traits.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="type__traits_8h_1af64f81cddc22067ae70d2bd3d8e695ee" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool uipc::always_false_v</definition>
+        <argsstring></argsstring>
+        <name>always_false_v</name>
+        <qualifiedname>uipc::always_false_v</qualifiedname>
+        <initializer>= <ref refid="structuipc_1_1always__false" kindref="compound">always_false</ref>&lt;T&gt;::value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/type_traits.h" line="88" column="23" bodyfile="include/uipc/common/type_traits.h" bodystart="88" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -704,7 +725,7 @@
         </inbodydescription>
         <location file="include/uipc/common/abort.h" line="6" column="20" declfile="include/uipc/common/abort.h" declline="6" declcolumn="20"/>
       </memberdef>
-      <memberdef kind="function" id="run__length__encode_8h_1a84e9dce28fc0e024fb6b01763d46a08e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="run__length__encode_8h_1a5ff7b29fa536f30fc5671bf8b2f03d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename InputIt</type>
@@ -744,7 +765,7 @@
           <type>Pred &amp;&amp;</type>
           <declname>pred</declname>
         </param>
-    <requiresclause>requires(InputIt in_first, InputIt in_last, OutputIt out_unique, OutputCountIt out_counts, Pred p) { *out_unique = *in_first; std::integral&lt;typename std::iterator_traits&lt;OutputCountIt&gt;::value_type&gt;; *out_counts = 0; { p(*in_first, *in_first) } -&gt; std::convertible_to&lt;bool&gt;; }    </requiresclause>
+    <requiresclause>requires(InputIt in_first, InputIt in_last, OutputIt out_unique, OutputCountIt out_counts, Pred p) { *out_unique = *in_first; *out_counts = 0; { p(*in_first, *in_first) } -&gt; std::convertible_to&lt;bool&gt;; }    </requiresclause>
         <briefdescription>
 <para>Run-length encode the input range, the input range must be sorted. </para>
         </briefdescription>
@@ -788,7 +809,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/common/algorithm/run_length_encode.h" line="30" column="13" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="30" bodyend="73"/>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="28" column="13" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="28" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="run__length__encode_8h_1adaff214cf172f33a7dcffa1a910d79dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -829,7 +850,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/common/algorithm/run_length_encode.h" line="76" column="6" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="76" bodyend="79"/>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="74" column="6" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="74" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="run__length__encode_8h_1a345c6aac020f80e7258cf7f8ec971e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -874,7 +895,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/common/algorithm/run_length_encode.h" line="83" column="8" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="83" bodyend="121"/>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="81" column="8" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="81" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="run__length__encode_8h_1a97e90cf9d10a67050818da24d710f167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -912,7 +933,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/common/algorithm/run_length_encode.h" line="124" column="6" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="124" bodyend="127"/>
+        <location file="include/uipc/common/algorithm/run_length_encode.h" line="122" column="6" bodyfile="include/uipc/common/algorithm/run_length_encode.h" bodystart="122" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="demangle_8h_1a27d396d83a1aefdf94e5ff85919401a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_CORE_API std::string</type>

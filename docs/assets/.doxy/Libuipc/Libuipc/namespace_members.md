@@ -8,6 +8,7 @@
 * **Allocator** ([**uipc**](namespaceuipc.md))
 * **AngleAxis** ([**uipc**](namespaceuipc.md))
 * **abort** ([**uipc**](namespaceuipc.md))
+* **always\_false\_v** ([**uipc**](namespaceuipc.md))
 * **as\_eigen** ([**uipc**](namespaceuipc.md), [**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))
 * **AbstractSimplicialComplex** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **AffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))

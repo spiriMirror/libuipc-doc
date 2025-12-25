@@ -57,8 +57,9 @@
 | struct | [**PmrDeleter**](structuipc_1_1PmrDeleter.md) &lt;typename T&gt;<br> |
 | class | [**ResidentThread**](classuipc_1_1ResidentThread.md) <br> |
 | class | [**Timer**](classuipc_1_1Timer.md) <br> |
-| class | [**is\_matrix**](classuipc_1_1is__matrix.md) &lt;typename MatrixT&gt;<br> |
-| class | [**is\_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](classuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4.md) &lt;typename Scalar, Rows, Cols, Options, MaxRows, MaxCols&gt;<br> |
+| struct | [**always\_false**](structuipc_1_1always__false.md) &lt;typename T&gt;<br> |
+| struct | [**is\_matrix**](structuipc_1_1is__matrix.md) &lt;typename MatrixT&gt;<br> |
+| struct | [**is\_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4.md) &lt;typename Scalar, Rows, Cols, Options, MaxRows, MaxCols&gt;<br> |
 | struct | [**propagate\_const**](structuipc_1_1propagate__const.md) &lt;typename T, typename DstT&gt;<br> |
 | struct | [**signature**](structuipc_1_1signature.md) &lt;typename Sig&gt;<br> |
 | struct | [**signature&lt; R(&)(Args...)&gt;**](structuipc_1_1signature_3_01R_07_6_08_07Args_8_8_8_08_4.md) &lt;typename R, Args&gt;<br> |
@@ -125,7 +126,8 @@
 | Type | Name |
 | ---: | :--- |
 |  constexpr bool | [**RUNTIME\_CHECK**](#variable-runtime_check)   = `false`<br> |
-|  constexpr bool | [**is\_matrix\_v**](#variable-is_matrix_v)   = `[**is\_matrix**](classuipc_1_1is__matrix.md)&lt;MatrixT&gt;::value`<br> |
+|  constexpr bool | [**always\_false\_v**](#variable-always_false_v)   = `[**always\_false**](structuipc_1_1always__false.md)&lt;T&gt;::value`<br> |
+|  constexpr bool | [**is\_matrix\_v**](#variable-is_matrix_v)   = `[**is\_matrix**](structuipc_1_1is__matrix.md)&lt;MatrixT&gt;::value`<br> |
 
 
 
@@ -771,6 +773,19 @@ using uipc::stack = typedef std::stack<T, std::pmr::deque<T> >;
 
 ```C++
 constexpr bool uipc::RUNTIME_CHECK;
+```
+
+
+
+
+<hr>
+
+
+
+### variable always\_false\_v 
+
+```C++
+constexpr bool uipc::always_false_v;
 ```
 
 

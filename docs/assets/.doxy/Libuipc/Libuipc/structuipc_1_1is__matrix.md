@@ -1,12 +1,12 @@
 
 
-# Class uipc::is\_matrix
+# Struct uipc::is\_matrix
 
 **template &lt;typename MatrixT&gt;**
 
 
 
-[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**is\_matrix**](classuipc_1_1is__matrix.md)
+[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**is\_matrix**](structuipc_1_1is__matrix.md)
 
 
 

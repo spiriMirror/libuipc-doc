@@ -194,8 +194,9 @@
     <innerclass refid="structuipc_1_1signature_3_01R_07C_1_1_5_08_07Args_8_8_8_08_01volatile_01_4" prot="public">uipc::signature&lt; R(C::*)(Args...) volatile &gt;</innerclass>
     <innerclass refid="structuipc_1_1signature_3_01R_07C_1_1_5_08_07Args_8_8_8_08_01const_01volatile_01_4" prot="public">uipc::signature&lt; R(C::*)(Args...) const volatile &gt;</innerclass>
     <innerclass refid="structuipc_1_1signature_3_01R_07C_1_1_5_08_07Args_8_8_8_08_01_6_6_01_4" prot="public">uipc::signature&lt; R(C::*)(Args...) &amp;&amp; &gt;</innerclass>
-    <innerclass refid="classuipc_1_1is__matrix" prot="public">uipc::is_matrix</innerclass>
-    <innerclass refid="classuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4" prot="public">uipc::is_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;</innerclass>
+    <innerclass refid="structuipc_1_1is__matrix" prot="public">uipc::is_matrix</innerclass>
+    <innerclass refid="structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4" prot="public">uipc::is_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;</innerclass>
+    <innerclass refid="structuipc_1_1always__false" prot="public">uipc::always_false</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -271,19 +272,26 @@
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MatrixT&gt;</highlight></codeline>
-<codeline lineno="70" refid="classuipc_1_1is__matrix" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1is__matrix" kindref="compound">is_matrix</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::false_type</highlight></codeline>
+<codeline lineno="70" refid="structuipc_1_1is__matrix" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structuipc_1_1is__matrix" kindref="compound">is_matrix</ref><sp/>:<sp/>std::false_type</highlight></codeline>
 <codeline lineno="71"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="72"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MatrixT&gt;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_matrix_v<sp/>=<sp/><ref refid="classuipc_1_1is__matrix" kindref="compound">is_matrix&lt;MatrixT&gt;::value</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_matrix_v<sp/>=<sp/><ref refid="structuipc_1_1is__matrix" kindref="compound">is_matrix&lt;MatrixT&gt;::value</ref>;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Scalar,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Rows,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Cols,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Options,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MaxRows,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MaxCols&gt;</highlight></codeline>
-<codeline lineno="78" refid="classuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1is__matrix" kindref="compound">is_matrix</ref>&lt;Eigen::Matrix&lt;Scalar,<sp/>Rows,<sp/>Cols,<sp/>Options,<sp/>MaxRows,<sp/>MaxCols&gt;&gt;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::true_type</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structuipc_1_1is__matrix" kindref="compound">is_matrix</ref>&lt;Eigen::Matrix&lt;Scalar,<sp/>Rows,<sp/>Cols,<sp/>Options,<sp/>MaxRows,<sp/>MaxCols&gt;&gt;<sp/>:<sp/>std::true_type</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="83" refid="structuipc_1_1always__false" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structuipc_1_1always__false" kindref="compound">always_false</ref><sp/>:<sp/>std::false_type</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>always_false_v<sp/>=<sp/><ref refid="structuipc_1_1always__false" kindref="compound">always_false&lt;T&gt;::value</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/common/type_traits.h"/>
   </compounddef>
