@@ -132,6 +132,8 @@
 
 * [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md)
+([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**Empty**](classuipc_1_1constitution_1_1Empty.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**EnableGradFeature**](classuipc_1_1diff__sim_1_1EnableGradFeature.md)

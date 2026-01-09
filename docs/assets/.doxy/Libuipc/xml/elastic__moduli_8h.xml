@@ -76,6 +76,7 @@
       </node>
     </invincdepgraph>
     <innerclass refid="classuipc_1_1constitution_1_1ElasticModuli" prot="public">uipc::constitution::ElasticModuli</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1ElasticModuli2D" prot="public">uipc::constitution::ElasticModuli2D</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1constitution">uipc::constitution</innernamespace>
     <briefdescription>
@@ -105,7 +106,24 @@
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/>m_lambda;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/>m_mu;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="23"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classuipc_1_1constitution_1_1ElasticModuli2D" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/><ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref><sp/>lame(Float<sp/>lambda,<sp/>Float<sp/>mu)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref><sp/>youngs_shear(Float<sp/>E,<sp/>Float<sp/>G)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref><sp/>youngs_poisson(Float<sp/>E,<sp/>Float<sp/>nu);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lambda()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_lambda;<sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mu()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_mu;<sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref>(Float<sp/>lambda,<sp/>Float<sp/>mu)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/>m_lambda;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>Float<sp/>m_mu;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/constitution/elastic_moduli.h"/>
   </compounddef>

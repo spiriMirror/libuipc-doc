@@ -12,6 +12,7 @@
     <innerclass refid="classuipc_1_1constitution_1_1Constraint" prot="public">uipc::constitution::Constraint</innerclass>
     <innerclass refid="classuipc_1_1constitution_1_1DiscreteShellBending" prot="public">uipc::constitution::DiscreteShellBending</innerclass>
     <innerclass refid="classuipc_1_1constitution_1_1ElasticModuli" prot="public">uipc::constitution::ElasticModuli</innerclass>
+    <innerclass refid="classuipc_1_1constitution_1_1ElasticModuli2D" prot="public">uipc::constitution::ElasticModuli2D</innerclass>
     <innerclass refid="classuipc_1_1constitution_1_1Empty" prot="public">uipc::constitution::Empty</innerclass>
     <innerclass refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint" prot="public">uipc::constitution::ExternalArticulationConstraint</innerclass>
     <innerclass refid="classuipc_1_1constitution_1_1FiniteElementConstitution" prot="public">uipc::constitution::FiniteElementConstitution</innerclass>
@@ -63,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/conversion.h" line="6" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="6" bodyend="17"/>
+        <location file="include/uipc/constitution/conversion.h" line="8" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="8" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="conversion_8h_1a1a8c1eff6643c48affd5ca3abb77f242" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -180,6 +181,70 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/uipc/constitution/conversion.h" line="43" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="conversion_8h_1a3e75443e1afb1ca46767545158f4af14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::EG_to_lame_2D</definition>
+        <argsstring>(Float E, Float G, Float &amp;lambda, Float &amp;mu, Float &amp;poisson)</argsstring>
+        <name>EG_to_lame_2D</name>
+        <qualifiedname>uipc::constitution::EG_to_lame_2D</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>G</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>poisson</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/conversion.h" line="49" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="conversion_8h_1a200d643c28095999881acd31045af12e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::EP_to_lame_2D</definition>
+        <argsstring>(Float E, Float poisson, Float &amp;lambda, Float &amp;mu)</argsstring>
+        <name>EP_to_lame_2D</name>
+        <qualifiedname>uipc::constitution::EP_to_lame_2D</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>poisson</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>lambda</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>mu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/conversion.h" line="56" column="13" bodyfile="include/uipc/constitution/conversion.h" bodystart="56" bodyend="60"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

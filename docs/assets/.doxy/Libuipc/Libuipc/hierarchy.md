@@ -58,6 +58,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::constitution::SoftVertexStitch**](classuipc_1_1constitution_1_1SoftVertexStitch.md) 
 * **class** [**uipc::constitution::AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) 
 * **class** [**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) 
+* **class** [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) 
 * **class** [**uipc::core::IFeature**](classuipc_1_1core_1_1IFeature.md)     
     * **class** [**uipc::core::Feature**](classuipc_1_1core_1_1Feature.md)     
         * **class** [**uipc::core::AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1AffineBodyStateAccessorFeature.md) 

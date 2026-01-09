@@ -55,10 +55,10 @@
         </inbodydescription>
         <location file="include/uipc/constitution/neo_hookean_shell.h" line="13" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1NeoHookeanShell_1a722f53a3583e48d1ab58ea37b692abc6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1NeoHookeanShell_1a0cdbb4b3d181a1b2ea20697b70641e23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::constitution::NeoHookeanShell::apply_to</definition>
-        <argsstring>(geometry::SimplicialComplex &amp;sc, const ElasticModuli &amp;moduli=ElasticModuli::youngs_poisson(1.0_MPa, 0.49), Float mass_density=2e2, Float thickness=0.001_m) const</argsstring>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, const ElasticModuli2D &amp;moduli=ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49), Float mass_density=2e2, Float thickness=0.001_m) const</argsstring>
         <name>apply_to</name>
         <qualifiedname>uipc::constitution::NeoHookeanShell::apply_to</qualifiedname>
         <param>
@@ -66,9 +66,9 @@
           <declname>sc</declname>
         </param>
         <param>
-          <type>const <ref refid="classuipc_1_1constitution_1_1ElasticModuli" kindref="compound">ElasticModuli</ref> &amp;</type>
+          <type>const <ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref> &amp;</type>
           <declname>moduli</declname>
-          <defval>ElasticModuli::youngs_poisson(1.0_MPa, 0.49)</defval>
+          <defval>ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49)</defval>
         </param>
         <param>
           <type>Float</type>
@@ -164,7 +164,7 @@
     </collaborationgraph>
     <location file="include/uipc/constitution/neo_hookean_shell.h" line="8" column="1" bodyfile="include/uipc/constitution/neo_hookean_shell.h" bodystart="9" bodyend="27"/>
     <listofallmembers>
-      <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a722f53a3583e48d1ab58ea37b692abc6" prot="public" virt="non-virtual"><scope>uipc::constitution::NeoHookeanShell</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a0cdbb4b3d181a1b2ea20697b70641e23" prot="public" virt="non-virtual"><scope>uipc::constitution::NeoHookeanShell</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1FiniteElementConstitution_1a07511bccde7bffd0a8bf93763f1743a1" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::FiniteElementConstitution::"><scope>uipc::constitution::NeoHookeanShell</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1ae438642124750a16fdebd0fec1dde779" prot="private" virt="non-virtual"><scope>uipc::constitution::NeoHookeanShell</scope><name>Base</name></member>
       <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a13d743ed64915f6762f30dfb4005db20" prot="public" virt="non-virtual"><scope>uipc::constitution::NeoHookeanShell</scope><name>default_config</name></member>

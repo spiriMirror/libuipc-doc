@@ -176,6 +176,7 @@
 * **element\_stride** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1BufferView.md))
 * **exists** ([**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1UIDRegister.md))
 * **ElasticModuli** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **ElasticModuli2D** ([**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 * **Empty** ([**uipc::constitution::Empty**](classuipc_1_1constitution_1_1Empty.md))
 * **ExternalArticulationConstraint** ([**uipc::constitution::ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md))
 * **erase** ([**uipc::core::Animator**](classuipc_1_1core_1_1Animator.md))
@@ -315,8 +316,8 @@
 * **LogPatternGuard** ([**uipc::LogPatternGuard**](classuipc_1_1LogPatternGuard.md))
 * **log** ([**uipc::Logger**](classuipc_1_1Logger.md))
 * **line** ([**uipc::builtin::UIDInfoCreator**](classuipc_1_1builtin_1_1UIDInfoCreator.md))
-* **lambda** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
-* **lame** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **lambda** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
+* **lame** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 * **LinearMotor** ([**uipc::constitution::LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md))
 * **load** ([**uipc::core::SceneIO**](classuipc_1_1core_1_1SceneIO.md))
 * **last\_modified** ([**uipc::geometry::IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md))
@@ -329,7 +330,7 @@
 * **max\_full\_name\_length** ([**uipc::GlobalTimer**](classuipc_1_1GlobalTimer.md))
 * **merge\_timers** ([**uipc::GlobalTimer**](classuipc_1_1GlobalTimer.md))
 * **message** ([**uipc::backend::SanityCheckMessageVisitor**](classuipc_1_1backend_1_1SanityCheckMessageVisitor.md), [**uipc::core::SanityCheckMessage**](classuipc_1_1core_1_1SanityCheckMessage.md))
-* **mu** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **mu** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 * **messages** ([**uipc::core::SanityCheckMessageCollection**](classuipc_1_1core_1_1SanityCheckMessageCollection.md))
 * **meta** ([**uipc::geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md))
 * **MetaAttributesT** ([**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md))
@@ -557,8 +558,8 @@
 
 ## y
 
-* **youngs\_poisson** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
-* **youngs\_shear** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **youngs\_poisson** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
+* **youngs\_shear** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 
 
 ## ~

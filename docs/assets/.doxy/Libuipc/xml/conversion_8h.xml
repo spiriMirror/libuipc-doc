@@ -30,12 +30,12 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/common/type_define.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::constitution</highlight></codeline>
-<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EG_to_lame(Float<sp/>E,<sp/>Float<sp/>G,<sp/>Float&amp;<sp/>lambda,<sp/>Float&amp;<sp/>mu,<sp/>Float&amp;<sp/>poisson)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ref:<sp/>https://en.wikipedia.org/wiki/Lam%C3%A9_parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::constitution</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ref:<sp/>https://en.wikipedia.org/wiki/Lam%C3%A9_parameters</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EG_to_lame(Float<sp/>E,<sp/>Float<sp/>G,<sp/>Float&amp;<sp/>lambda,<sp/>Float&amp;<sp/>mu,<sp/>Float&amp;<sp/>poisson)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\mu<sp/>=<sp/>G$</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>mu<sp/>=<sp/>G;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//tex:<sp/>$\lambda<sp/>=<sp/>\frac{G(E-2<sp/>G)}{3<sp/>G-E}$</highlight><highlight class="normal"></highlight></codeline>
@@ -74,7 +74,20 @@
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>lambda<sp/>=<sp/>E<sp/>*<sp/>poission<sp/>/<sp/>(1<sp/>+<sp/>poission)<sp/>/<sp/>(1<sp/>-<sp/>2<sp/>*<sp/>poission);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>mu<sp/><sp/><sp/><sp/><sp/>=<sp/>E<sp/>/<sp/>(2<sp/>*<sp/>(1<sp/>+<sp/>poission));</highlight></codeline>
 <codeline lineno="47"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EG_to_lame_2D(Float<sp/>E,<sp/>Float<sp/>G,<sp/>Float&amp;<sp/>lambda,<sp/>Float&amp;<sp/>mu,<sp/>Float&amp;<sp/>poisson)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>lambda<sp/><sp/>=<sp/>2<sp/>*<sp/>G<sp/>*<sp/>(E<sp/>-<sp/>2<sp/>*<sp/>G)<sp/>/<sp/>(4<sp/>*<sp/>G<sp/>-<sp/>E);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>mu<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>G;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>poisson<sp/>=<sp/>E<sp/>/<sp/>(2<sp/>*<sp/>G)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EP_to_lame_2D(Float<sp/>E,<sp/>Float<sp/>poisson,<sp/>Float&amp;<sp/>lambda,<sp/>Float&amp;<sp/>mu)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>lambda<sp/>=<sp/>E<sp/>*<sp/>poisson<sp/>/<sp/>((1<sp/>+<sp/>poisson)<sp/>*<sp/>(1<sp/>-<sp/>poisson));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>mu<sp/><sp/><sp/><sp/><sp/>=<sp/>E<sp/>/<sp/>(2<sp/>*<sp/>(1<sp/>+<sp/>poisson));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/constitution/conversion.h"/>
   </compounddef>

@@ -68,6 +68,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**Constraint**](classuipc_1_1constitution_1_1Constraint.md)     
         * **class** [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md)     
         * **class** [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md)     
+        * **class** [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md)     
         * **class** [**Empty**](classuipc_1_1constitution_1_1Empty.md)     
         * **class** [**ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md) _External articulation constraint for incorporating external kinetic energy into the IPC system._     
         * **class** [**FiniteElementConstitution**](classuipc_1_1constitution_1_1FiniteElementConstitution.md)     

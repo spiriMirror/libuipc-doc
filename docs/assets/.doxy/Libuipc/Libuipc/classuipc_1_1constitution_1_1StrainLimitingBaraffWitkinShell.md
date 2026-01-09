@@ -93,7 +93,7 @@ Inherits the following classes: [uipc::constitution::FiniteElementConstitution](
 | Type | Name |
 | ---: | :--- |
 |   | [**StrainLimitingBaraffWitkinShell**](#function-strainlimitingbaraffwitkinshell) (const Json & config=default\_config()) noexcept<br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) & moduli=ElasticModuli::youngs\_poisson(1.0\_MPa, 0.49), Float mass\_density=2e2, Float thickness=0.001\_m) const<br> |
+|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) & moduli=ElasticModuli2D::youngs\_poisson(1.0\_MPa, 0.49), Float mass\_density=2e2, Float thickness=0.001\_m) const<br> |
 
 
 
@@ -238,7 +238,7 @@ uipc::constitution::StrainLimitingBaraffWitkinShell::StrainLimitingBaraffWitkinS
 ```C++
 void uipc::constitution::StrainLimitingBaraffWitkinShell::apply_to (
     geometry::SimplicialComplex & sc,
-    const ElasticModuli & moduli=ElasticModuli::youngs_poisson(1.0_MPa, 0.49),
+    const ElasticModuli2D & moduli=ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49),
     Float mass_density=2e2,
     Float thickness=0.001_m
 ) const

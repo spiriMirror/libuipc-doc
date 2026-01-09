@@ -207,6 +207,7 @@
 * **extras** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1UIDInfo.md))
 * **exists** ([**uipc::builtin::details::UIDRegister**](classuipc_1_1builtin_1_1details_1_1UIDRegister.md))
 * **ElasticModuli** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **ElasticModuli2D** ([**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 * **Empty** ([**uipc::constitution::Empty**](classuipc_1_1constitution_1_1Empty.md))
 * **ExternalArticulationConstraint** ([**uipc::constitution::ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md))
 * **erase** ([**uipc::core::Animator**](classuipc_1_1core_1_1Animator.md))
@@ -355,8 +356,8 @@
 * **Level** ([**uipc::Logger**](classuipc_1_1Logger.md))
 * **log** ([**uipc::Logger**](classuipc_1_1Logger.md))
 * **line** ([**uipc::builtin::UIDInfoCreator**](classuipc_1_1builtin_1_1UIDInfoCreator.md), [**uipc::builtin::details::UIDRegister::CreatorInfo**](classuipc_1_1builtin_1_1details_1_1UIDRegister_1_1CreatorInfo.md))
-* **lambda** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
-* **lame** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **lambda** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
+* **lame** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 * **LinearMotor** ([**uipc::constitution::LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md))
 * **load** ([**uipc::core::SceneIO**](classuipc_1_1core_1_1SceneIO.md))
 * **last\_calling\_frame** ([**uipc::diff\_sim::AdjointMethodFeature**](classuipc_1_1diff__sim_1_1AdjointMethodFeature.md))
@@ -410,9 +411,9 @@
 * **m\_constitution** ([**uipc::constitution::AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md))
 * **m\_kappa** ([**uipc::constitution::AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md))
 * **m\_mass\_density** ([**uipc::constitution::AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md))
-* **m\_lambda** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
-* **m\_mu** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
-* **mu** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **m\_lambda** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
+* **m\_mu** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
+* **mu** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 * **m\_object** ([**uipc::core::Animation**](classuipc_1_1core_1_1Animation.md), [**uipc::core::Object::CGeometries**](classuipc_1_1core_1_1Object_1_1CGeometries.md), [**uipc::core::Object::Geometries**](classuipc_1_1core_1_1Object_1_1Geometries.md))
 * **m\_on\_update** ([**uipc::core::Animation**](classuipc_1_1core_1_1Animation.md))
 * **m\_temp\_geo\_slots** ([**uipc::core::Animation**](classuipc_1_1core_1_1Animation.md))
@@ -741,8 +742,8 @@
 
 ## y
 
-* **youngs\_poisson** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
-* **youngs\_shear** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md))
+* **youngs\_poisson** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
+* **youngs\_shear** ([**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md), [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md))
 
 
 ## ~

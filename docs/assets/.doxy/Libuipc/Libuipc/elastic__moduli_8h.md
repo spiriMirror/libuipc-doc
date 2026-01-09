@@ -38,6 +38,7 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) <br> |
+| class | [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) <br> |
 
 
 

@@ -605,6 +605,17 @@
     <member refid="classuipc_1_1constitution_1_1ElasticModuli_1a423a992df4505e6b070d07e70ae6cffb" kind="function"><name>ElasticModuli</name></member>
     <member refid="classuipc_1_1constitution_1_1ElasticModuli_1ae30e4891b242903c99ef3473a4dde1ff" kind="function"><name>ElasticModuli</name></member>
   </compound>
+  <compound refid="classuipc_1_1constitution_1_1ElasticModuli2D" kind="class"><name>uipc::constitution::ElasticModuli2D</name>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1a6f5d975056209c63840a28ce36a26997" kind="variable"><name>m_lambda</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1a73e113b55621368bb53118a536b3cede" kind="variable"><name>m_mu</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1ac1d635220f68faa01a5b8a314832d4e8" kind="function"><name>lame</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1aee98e20b026a7fab1b9a69f6d2587916" kind="function"><name>youngs_shear</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1ab32753f0fef3fa3718f1bfcd44b9d335" kind="function"><name>youngs_poisson</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1ad8a9419c0d4f25d332043baf452c7059" kind="function"><name>lambda</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1aadc02c2eb62bdfb9e100462750806299" kind="function"><name>mu</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1a8d8d5b23e45c908084aea7fbf5532735" kind="function"><name>ElasticModuli2D</name></member>
+    <member refid="classuipc_1_1constitution_1_1ElasticModuli2D_1a3d36a85a4daabbc2635f29e16916c5d2" kind="function"><name>ElasticModuli2D</name></member>
+  </compound>
   <compound refid="classuipc_1_1constitution_1_1Empty" kind="class"><name>uipc::constitution::Empty</name>
     <member refid="classuipc_1_1constitution_1_1Empty_1a531c3b3a2964c2a08cff34f12bcd36b6" kind="typedef"><name>Base</name></member>
     <member refid="classuipc_1_1constitution_1_1Empty_1a5fa4867d9e3773ed457316c33ce4da97" kind="variable"><name>m_config</name></member>
@@ -1355,7 +1366,7 @@
     <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1ae438642124750a16fdebd0fec1dde779" kind="typedef"><name>Base</name></member>
     <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1aa0e37c6b9945eb2b5d01ef6505201b72" kind="variable"><name>m_config</name></member>
     <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1ad2748aad58328bd5e80fe91c64de3711" kind="function"><name>NeoHookeanShell</name></member>
-    <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a722f53a3583e48d1ab58ea37b692abc6" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a0cdbb4b3d181a1b2ea20697b70641e23" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a13d743ed64915f6762f30dfb4005db20" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a9a0e349a728f67681b9e233dff9c435b" kind="function"><name>get_uid</name></member>
   </compound>
@@ -1980,7 +1991,7 @@
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1abd157e92efd10593af6c0a4fca8267da" kind="typedef"><name>Base</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1af1b8f2163595874c5cc47f8ebe399bec" kind="variable"><name>m_config</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a284f63eb2381bc8522c68390da77a278" kind="function"><name>StrainLimitingBaraffWitkinShell</name></member>
-    <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a01d2a348928cb88eee38486b8d531bc7" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a4b5fbac4467326bd2b3bb1aabc8e9681" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a7458574b80e1f89014cb4520716fbcaf" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a57d019a86a8ae3c31cefeddc1663b100" kind="function"><name>get_uid</name></member>
   </compound>
@@ -2330,6 +2341,8 @@
     <member refid="conversion_8h_1a997c5704ad46fa3a4ca8e8c7358d92e6" kind="function"><name>lame_to_poisson</name></member>
     <member refid="conversion_8h_1a3227103baf7a3302637c43cdc1dae355" kind="function"><name>EG_to_poisson</name></member>
     <member refid="conversion_8h_1a6577aeaf029d661332cdf64213423471" kind="function"><name>EP_to_lame</name></member>
+    <member refid="conversion_8h_1a3e75443e1afb1ca46767545158f4af14" kind="function"><name>EG_to_lame_2D</name></member>
+    <member refid="conversion_8h_1a200d643c28095999881acd31045af12e" kind="function"><name>EP_to_lame_2D</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1core" kind="namespace"><name>uipc::core</name>
     <member refid="i__sanity__checker_8h_1a28646e9d4452daca78c1b664dd9d5667" kind="enum"><name>SanityCheckResult</name></member>

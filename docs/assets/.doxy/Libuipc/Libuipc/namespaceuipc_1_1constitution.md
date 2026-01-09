@@ -39,6 +39,7 @@
 | class | [**Constraint**](classuipc_1_1constitution_1_1Constraint.md) <br> |
 | class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md) <br> |
 | class | [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) <br> |
+| class | [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) <br> |
 | class | [**Empty**](classuipc_1_1constitution_1_1Empty.md) <br> |
 | class | [**ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md) <br>_External articulation constraint for incorporating external kinetic energy into the IPC system._  |
 | class | [**FiniteElementConstitution**](classuipc_1_1constitution_1_1FiniteElementConstitution.md) <br> |
@@ -84,8 +85,10 @@
 | Type | Name |
 | ---: | :--- |
 |  void | [**EG\_to\_lame**](#function-eg_to_lame) (Float E, Float G, Float & lambda, Float & mu, Float & poisson) <br> |
+|  void | [**EG\_to\_lame\_2D**](#function-eg_to_lame_2d) (Float E, Float G, Float & lambda, Float & mu, Float & poisson) <br> |
 |  void | [**EG\_to\_poisson**](#function-eg_to_poisson) (Float E, Float G, Float & poisson) <br> |
 |  void | [**EP\_to\_lame**](#function-ep_to_lame) (Float E, Float poission, Float & lambda, Float & mu) <br> |
+|  void | [**EP\_to\_lame\_2D**](#function-ep_to_lame_2d) (Float E, Float poisson, Float & lambda, Float & mu) <br> |
 |  void | [**lame\_to\_EG**](#function-lame_to_eg) (Float lambda, Float mu, Float & E, Float & G, Float & poisson) <br> |
 |  void | [**lame\_to\_poisson**](#function-lame_to_poisson) (Float lambda, Float mu, Float & poisson) <br> |
 
@@ -140,6 +143,25 @@ inline void uipc::constitution::EG_to_lame (
 
 
 
+### function EG\_to\_lame\_2D 
+
+```C++
+inline void uipc::constitution::EG_to_lame_2D (
+    Float E,
+    Float G,
+    Float & lambda,
+    Float & mu,
+    Float & poisson
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function EG\_to\_poisson 
 
 ```C++
@@ -163,6 +185,24 @@ inline void uipc::constitution::EG_to_poisson (
 inline void uipc::constitution::EP_to_lame (
     Float E,
     Float poission,
+    Float & lambda,
+    Float & mu
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function EP\_to\_lame\_2D 
+
+```C++
+inline void uipc::constitution::EP_to_lame_2D (
+    Float E,
+    Float poisson,
     Float & lambda,
     Float & mu
 ) 

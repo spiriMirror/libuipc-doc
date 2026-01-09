@@ -35,8 +35,10 @@
 
 * **encode\_offset\_count** ([**uipc**](namespaceuipc.md))
 * **EG\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* **EG\_to\_lame\_2D** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EG\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **EP\_to\_lame** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* **EP\_to\_lame\_2D** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **edge\_edge\_squared\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **extract\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **error** ([**uipc::logger**](namespaceuipc_1_1logger.md))
