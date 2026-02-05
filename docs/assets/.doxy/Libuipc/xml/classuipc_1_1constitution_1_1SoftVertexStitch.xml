@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="40" column="10" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="40" bodyend="-1"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="42" column="10" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="42" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -85,10 +85,10 @@
         </inbodydescription>
         <location file="include/uipc/constitution/soft_vertex_stitch.h" line="17" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexStitch_1aad96484b41039c231cd13bcd11269050" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexStitch_1a1936d4b5749e89af17f9d0ea121c540b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
         <definition>geometry::Geometry uipc::constitution::SoftVertexStitch::create_geometry</definition>
-        <argsstring>(const SlotTuple &amp;aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, Float kappa=1e6) const</argsstring>
+        <argsstring>(const SlotTuple &amp;aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, Float kappa=1e6, Float rest_length=0.0) const</argsstring>
         <name>create_geometry</name>
         <qualifiedname>uipc::constitution::SoftVertexStitch::create_geometry</qualifiedname>
         <param>
@@ -103,6 +103,11 @@
           <type>Float</type>
           <declname>kappa</declname>
           <defval>1e6</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>rest_length</declname>
+          <defval>0.0</defval>
         </param>
         <briefdescription>
 <para>Create soft vertex stitch constraints between two Geometries. </para>
@@ -139,10 +144,10 @@
         </inbodydescription>
         <location file="include/uipc/constitution/soft_vertex_stitch.h" line="27" column="24"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexStitch_1a1445d417f1d9744ef8093301399ee728" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexStitch_1a1ab58fbe77f414206d0de8c33f2a477c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
         <definition>geometry::Geometry uipc::constitution::SoftVertexStitch::create_geometry</definition>
-        <argsstring>(const SlotTuple &amp;aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, const ContactElementTuple &amp;contact_elements, Float kappa=1e6) const</argsstring>
+        <argsstring>(const SlotTuple &amp;aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, const ContactElementTuple &amp;contact_elements, Float kappa=1e6, Float rest_length=0.0) const</argsstring>
         <name>create_geometry</name>
         <qualifiedname>uipc::constitution::SoftVertexStitch::create_geometry</qualifiedname>
         <param>
@@ -162,13 +167,18 @@
           <declname>kappa</declname>
           <defval>1e6</defval>
         </param>
+        <param>
+          <type>Float</type>
+          <declname>rest_length</declname>
+          <defval>0.0</defval>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="31" column="24"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="33" column="24"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -184,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="36" column="17"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="38" column="24"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -201,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="39" column="10"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="41" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -244,12 +254,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/soft_vertex_stitch.h" line="8" column="1" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="9" bodyend="41"/>
+    <location file="include/uipc/constitution/soft_vertex_stitch.h" line="8" column="1" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="9" bodyend="43"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a9c1936d6bf053280a7b9589184466ad0" prot="private" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>Base</name></member>
       <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1aed6c607316b224969f00f5ec3f35d93f" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>ContactElementTuple</name></member>
-      <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1aad96484b41039c231cd13bcd11269050" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>create_geometry</name></member>
-      <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a1445d417f1d9744ef8093301399ee728" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a1936d4b5749e89af17f9d0ea121c540b" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a1ab58fbe77f414206d0de8c33f2a477c" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>create_geometry</name></member>
       <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a1479d0556dc83a16b33a13cc700bc15f" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>default_config</name></member>
       <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a385284150a33a319d1697525b8517252" prot="private" virt="virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>get_uid</name></member>
       <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a8a0b337e44961d9e364b36e57ffe2964" prot="private" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>m_config</name></member>

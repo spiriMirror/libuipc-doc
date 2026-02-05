@@ -99,8 +99,8 @@ Inherits the following classes: [uipc::constitution::InterPrimitiveConstitution]
 | Type | Name |
 | ---: | :--- |
 |   | [**SoftVertexStitch**](#function-softvertexstitch) (const Json & config=default\_config()) <br> |
-|  [**geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md) | [**create\_geometry**](#function-create_geometry-12) (const SlotTuple & aim\_geo\_slots, span&lt; const Vector2i &gt; stitched\_vert\_ids, Float kappa=1e6) const<br>_Create soft vertex stitch constraints between two Geometries._  |
-|  [**geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md) | [**create\_geometry**](#function-create_geometry-22) (const SlotTuple & aim\_geo\_slots, span&lt; const Vector2i &gt; stitched\_vert\_ids, const ContactElementTuple & contact\_elements, Float kappa=1e6) const<br> |
+|  [**geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md) | [**create\_geometry**](#function-create_geometry-12) (const SlotTuple & aim\_geo\_slots, span&lt; const Vector2i &gt; stitched\_vert\_ids, Float kappa=1e6, Float rest\_length=0.0) const<br>_Create soft vertex stitch constraints between two Geometries._  |
+|  [**geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md) | [**create\_geometry**](#function-create_geometry-22) (const SlotTuple & aim\_geo\_slots, span&lt; const Vector2i &gt; stitched\_vert\_ids, const ContactElementTuple & contact\_elements, Float kappa=1e6, Float rest\_length=0.0) const<br> |
 
 
 
@@ -263,7 +263,8 @@ _Create soft vertex stitch constraints between two Geometries._
 geometry::Geometry uipc::constitution::SoftVertexStitch::create_geometry (
     const SlotTuple & aim_geo_slots,
     span< const Vector2i > stitched_vert_ids,
-    Float kappa=1e6
+    Float kappa=1e6,
+    Float rest_length=0.0
 ) const
 ```
 
@@ -294,7 +295,8 @@ geometry::Geometry uipc::constitution::SoftVertexStitch::create_geometry (
     const SlotTuple & aim_geo_slots,
     span< const Vector2i > stitched_vert_ids,
     const ContactElementTuple & contact_elements,
-    Float kappa=1e6
+    Float kappa=1e6,
+    Float rest_length=0.0
 ) const
 ```
 

@@ -2559,11 +2559,11 @@
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../classuipc_1_1geometry_1_1Geometry/"><strong>geometry::Geometry</strong></a></td>
-<td style="text-align: left;"><a href="#function-create_geometry-12"><strong>create_geometry</strong></a> (const SlotTuple &amp; aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, Float kappa=1e6) const<br><em>Create soft vertex stitch constraints between two Geometries.</em></td>
+<td style="text-align: left;"><a href="#function-create_geometry-12"><strong>create_geometry</strong></a> (const SlotTuple &amp; aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, Float kappa=1e6, Float rest_length=0.0) const<br><em>Create soft vertex stitch constraints between two Geometries.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../classuipc_1_1geometry_1_1Geometry/"><strong>geometry::Geometry</strong></a></td>
-<td style="text-align: left;"><a href="#function-create_geometry-22"><strong>create_geometry</strong></a> (const SlotTuple &amp; aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, const ContactElementTuple &amp; contact_elements, Float kappa=1e6) const<br></td>
+<td style="text-align: left;"><a href="#function-create_geometry-22"><strong>create_geometry</strong></a> (const SlotTuple &amp; aim_geo_slots, span&lt; const Vector2i &gt; stitched_vert_ids, const ContactElementTuple &amp; contact_elements, Float kappa=1e6, Float rest_length=0.0) const<br></td>
 </tr>
 </tbody>
 </table>
@@ -2653,8 +2653,9 @@
 </p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">SoftVertexStitch</span><span class="o">::</span><span class="n">create_geometry</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SlotTuple</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aim_geo_slots</span><span class="p">,</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector2i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">stitched_vert_ids</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">kappa</span><span class="o">=</span><span class="mf">1e6</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">kappa</span><span class="o">=</span><span class="mf">1e6</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">rest_length</span><span class="o">=</span><span class="mf">0.0</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -2669,8 +2670,9 @@
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SlotTuple</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aim_geo_slots</span><span class="p">,</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector2i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">stitched_vert_ids</span><span class="p">,</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ContactElementTuple</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">contact_elements</span><span class="p">,</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">kappa</span><span class="o">=</span><span class="mf">1e6</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">kappa</span><span class="o">=</span><span class="mf">1e6</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">rest_length</span><span class="o">=</span><span class="mf">0.0</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
