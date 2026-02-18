@@ -180,7 +180,9 @@
 |  std::string | [**demangle**](#function-demangle) () noexcept<br> |
 |  size\_t | [**encode\_offset\_count**](#function-encode_offset_count) (RandIt first, RandIt last, OffsetCountIt offsets, OffsetCountIt counts, Pred && pred) <br> |
 |  auto | [**encode\_offset\_count**](#function-encode_offset_count) (RandIt first, RandIt last, OffsetCountIt offset, OffsetCountIt count) <br> |
+|  constexpr bool | [**has\_flags**](#function-has_flags) (const T & flags, const T & test\_flags) noexcept<br> |
 |  UIPC\_CORE\_API void | [**init**](#function-init) (const Json & config) <br> |
+|  constexpr bool | [**is\_valid\_flag**](#function-is_valid_flag) (const T & flag) noexcept<br>_Check if the given flag is a valid flag (only one bit is set)._  |
 |  S&lt; T &gt; | [**make\_shared**](#function-make_shared) (Args &&... args) <br> |
 |  U&lt; T &gt; | [**make\_unique**](#function-make_unique) (Args &&... args) <br> |
 |  constexpr long double | [**operator""\_GPa**](#function-operator""_gpa) (long double value) <br>_Pascal literal operator (GPa)_  |
@@ -201,6 +203,7 @@
 |  auto | [**run\_length\_encode**](#function-run_length_encode) (InputIt in\_first, InputIt in\_last, OutputIt out\_unique, OutputCountIt out\_counts) <br> |
 |  U&lt; DstT &gt; | [**static\_pointer\_cast**](#function-static_pointer_cast) (U&lt; SrcT &gt; && src) <br> |
 |  UIPC\_IO\_API int | [**test\_gltf**](#function-test_gltf) (std::string\_view path) <br> |
+|  constexpr auto | [**to\_underlying**](#function-to_underlying) (const T & e) noexcept<br> |
 
 
 
@@ -1293,12 +1296,46 @@ auto uipc::encode_offset_count (
 
 
 
+### function has\_flags 
+
+```C++
+template<typename T>
+constexpr bool uipc::has_flags (
+    const T & flags,
+    const T & test_flags
+) noexcept
+```
+
+
+
+
+<hr>
+
+
+
 ### function init 
 
 ```C++
 UIPC_CORE_API void uipc::init (
     const Json & config
 ) 
+```
+
+
+
+
+<hr>
+
+
+
+### function is\_valid\_flag 
+
+_Check if the given flag is a valid flag (only one bit is set)._ 
+```C++
+template<typename T>
+constexpr bool uipc::is_valid_flag (
+    const T & flag
+) noexcept
 ```
 
 
@@ -1672,6 +1709,22 @@ U< DstT > uipc::static_pointer_cast (
 UIPC_IO_API int uipc::test_gltf (
     std::string_view path
 ) 
+```
+
+
+
+
+<hr>
+
+
+
+### function to\_underlying 
+
+```C++
+template<typename T>
+constexpr auto uipc::to_underlying (
+    const T & e
+) noexcept
 ```
 
 

@@ -127,6 +127,7 @@
 |  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Check if a trimesh is closed._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_graph\_color**](#function-label_graph_color) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc) <br>_Label the vertex color of a simplicial complex by graph coloring algorithm._  |
+|  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_open\_edge**](#function-label_open_edge) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Label open edges in a trimesh._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_region**](#function-label_region) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Label the regions of a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API void | [**label\_surface**](#function-label_surface) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Label the surface of a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_triangle\_orient**](#function-label_triangle_orient) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc) <br>_Label the orientation of the triangles in the simplicial complex._  |
@@ -767,6 +768,52 @@ The edges of the graph is from the edges of the simplicial complex.
 **Returns:**
 
 S&lt;AttributeSlot&lt;IndexT&gt;&gt; The `graph/color` attribute slot. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function label\_open\_edge 
+
+_Label open edges in a trimesh._ 
+```C++
+UIPC_GEOMETRY_API S< AttributeSlot < IndexT > > uipc::geometry::label_open_edge (
+    SimplicialComplex & R
+) 
+```
+
+
+
+An edge is considered open if it is shared by exactly 1 triangle. An edge shared by 2 triangles is a normal closed edge. An edge shared by &gt;=3 triangles is invalid and will throw an exception.
+
+
+
+* Create an `is_open` &lt;IndexT&gt; attribute on `edges` to mark which edges are open (1 = open, 0 = closed).
+
+
+
+
+Only 2D [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) is supported.
+
+
+
+
+**Parameters:**
+
+
+* `R` the simplicial complex to be checked. 
+
+
+
+**Returns:**
+
+S&lt;AttributeSlot&lt;IndexT&gt;&gt; The `is_open` attribute slot. 
 
 
 

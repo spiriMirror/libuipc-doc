@@ -1144,6 +1144,43 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/label_graph_color.h" line="15" column="21" declfile="include/uipc/geometry/utils/label_graph_color.h" declline="15" declcolumn="21"/>
       </memberdef>
+      <memberdef kind="function" id="label__open__edge_8h_1acac0e80aa472cc08e8ccd5ffde71abae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; IndexT &gt; &gt;</type>
+        <definition>UIPC_GEOMETRY_API S&lt; AttributeSlot&lt; IndexT &gt; &gt; uipc::geometry::label_open_edge</definition>
+        <argsstring>(SimplicialComplex &amp;R)</argsstring>
+        <name>label_open_edge</name>
+        <qualifiedname>uipc::geometry::label_open_edge</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>R</declname>
+        </param>
+        <briefdescription>
+<para>Label open edges in a trimesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>An edge is considered open if it is shared by exactly 1 triangle. An edge shared by 2 triangles is a normal closed edge. An edge shared by &gt;=3 triangles is invalid and will throw an exception.</para>
+<para><itemizedlist>
+<listitem><para>Create an <computeroutput>is_open</computeroutput> &lt;IndexT&gt; attribute on <computeroutput>edges</computeroutput> to mark which edges are open (1 = open, 0 = closed).</para>
+</listitem></itemizedlist>
+</para>
+<para>Only 2D <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> is supported.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>R</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the simplicial complex to be checked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>S&lt;AttributeSlot&lt;IndexT&gt;&gt; The <computeroutput>is_open</computeroutput> attribute slot. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/label_open_edge.h" line="20" column="21" declfile="include/uipc/geometry/utils/label_open_edge.h" declline="20" declcolumn="21"/>
+      </memberdef>
       <memberdef kind="function" id="label__region_8h_1ab5d93eaee5668468c042a8615b5766fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API void</type>
         <definition>UIPC_GEOMETRY_API void uipc::geometry::label_region</definition>

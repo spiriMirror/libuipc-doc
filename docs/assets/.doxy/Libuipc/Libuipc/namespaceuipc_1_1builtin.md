@@ -61,6 +61,7 @@
 |  constexpr std::string\_view | [**SimplicialComplex**](#variable-simplicialcomplex)   = `"SimplicialComplex"`<br> |
 |  constexpr std::string\_view | [**\_\_data\_\_**](#variable-__data__)   = `"\_\_data\_\_"`<br> |
 |  constexpr std::string\_view | [**\_\_meta\_\_**](#variable-__meta__)   = `"\_\_meta\_\_"`<br> |
+|  constexpr Float | [**adaptive**](#variable-adaptive)   = `-1.0`<br> |
 
 
 
@@ -244,6 +245,19 @@ constexpr std::string_view uipc::builtin::__data__;
 
 ```C++
 constexpr std::string_view uipc::builtin::__meta__;
+```
+
+
+
+
+<hr>
+
+
+
+### variable adaptive 
+
+```C++
+constexpr Float uipc::builtin::adaptive;
 ```
 
 

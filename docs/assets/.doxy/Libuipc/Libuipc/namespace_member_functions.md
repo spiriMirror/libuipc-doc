@@ -60,6 +60,7 @@
 
 ## h
 
+* **has\_flags** ([**uipc**](namespaceuipc.md))
 * **halfplane** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **halfplane\_vertex\_signed\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
@@ -67,6 +68,7 @@
 ## i
 
 * **init** ([**uipc**](namespaceuipc.md))
+* **is\_valid\_flag** ([**uipc**](namespaceuipc.md))
 * **is\_point\_in\_tet** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **is\_trimesh\_closed** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **info** ([**uipc::logger**](namespaceuipc_1_1logger.md))
@@ -78,6 +80,7 @@
 * **lame\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **label\_connected\_vertices** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_graph\_color** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **label\_open\_edge** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_triangle\_orient** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -151,6 +154,7 @@
 ## t
 
 * **test\_gltf** ([**uipc**](namespaceuipc.md))
+* **to\_underlying** ([**uipc**](namespaceuipc.md))
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))

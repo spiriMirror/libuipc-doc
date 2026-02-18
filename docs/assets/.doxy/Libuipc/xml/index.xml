@@ -2270,6 +2270,9 @@
     <member refid="run__length__encode_8h_1a97e90cf9d10a67050818da24d710f167" kind="function"><name>encode_offset_count</name></member>
     <member refid="demangle_8h_1a27d396d83a1aefdf94e5ff85919401a5" kind="function"><name>demangle</name></member>
     <member refid="demangle_8h_1a863de5ca02cd8fd8e70417b5c20b3a77" kind="function"><name>demangle</name></member>
+    <member refid="flag_8h_1a8c59b4ddfa44b0d0bdcedcb1d716237e" kind="function"><name>to_underlying</name></member>
+    <member refid="flag_8h_1af437d43f042a32c653b3afee5bb203b2" kind="function"><name>has_flags</name></member>
+    <member refid="flag_8h_1a6e56f5e1923c44feef8af7e1ff3e619c" kind="function"><name>is_valid_flag</name></member>
     <member refid="readable__type__name_8h_1ac7b49fff7b09b87fb5c85a92cb77a8f4" kind="function"><name>readable_type_name</name></member>
     <member refid="readable__type__name_8h_1a016bc64e53f970060763b8f5c6b67cef" kind="function"><name>readable_type_name&lt; std::string &gt;</name></member>
     <member refid="readable__type__name_8h_1a3a5bf6cdaf97cb797fb5af7e54ab4c24" kind="function"><name>READABLE_TYPE_NAME_AS_ALIAS</name></member>
@@ -2321,6 +2324,7 @@
     <member refid="backend_2type__define_8h_1a5a5d6110d2873058971ffe4a90c7367b" kind="typedef"><name>HandleT</name></member>
   </compound>
   <compound refid="namespaceuipc_1_1builtin" kind="namespace"><name>uipc::builtin</name>
+    <member refid="constants_8h_1a293bac6e7c978734ef082afff704411c" kind="variable"><name>adaptive</name></member>
     <member refid="builtin_2constitution__type_8h_1a0230fb7c2299ffa4fe662603ebe98745" kind="variable"><name>AffineBody</name></member>
     <member refid="builtin_2constitution__type_8h_1a2511f47eb37582a61bc87a1f0a45abcc" kind="variable"><name>FiniteElement</name></member>
     <member refid="builtin_2constitution__type_8h_1a0434adaa4a67edfaf3b4729d09a8a7af" kind="variable"><name>Constraint</name></member>
@@ -2422,6 +2426,7 @@
     <member refid="is__trimesh__closed_8h_1a35e2794cc41a45fdf3bddcc36e9d15cc" kind="function"><name>is_trimesh_closed</name></member>
     <member refid="label__connected__vertices_8h_1abfd3492665c6eb9b36a372d92cf95bc9" kind="function"><name>label_connected_vertices</name></member>
     <member refid="label__graph__color_8h_1ab128b9f385b495098eec249d03465621" kind="function"><name>label_graph_color</name></member>
+    <member refid="label__open__edge_8h_1acac0e80aa472cc08e8ccd5ffde71abae" kind="function"><name>label_open_edge</name></member>
     <member refid="label__region_8h_1ab5d93eaee5668468c042a8615b5766fd" kind="function"><name>label_region</name></member>
     <member refid="label__surface_8h_1afb2b526f1cc340a206d0b17dd21c8833" kind="function"><name>label_surface</name></member>
     <member refid="label__triangle__orient_8h_1af6e266c588cca12386e555a02e6713ff" kind="function"><name>label_triangle_orient</name></member>
@@ -2475,20 +2480,7 @@
   <compound refid="engine__create__info_8h" kind="file"><name>engine_create_info.h</name>
     <member refid="engine__create__info_8h_1a1be0db7b6971258c6ade8ee388392e1b" kind="typedef"><name>EngineCreateInfo</name></member>
   </compound>
-  <compound refid="backend_2macro_8h" kind="file"><name>macro.h</name>
-    <member refid="backend_2macro_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
-  </compound>
-  <compound refid="common_2macro_8h" kind="file"><name>macro.h</name>
-    <member refid="common_2macro_8h_1acdc2fb3c333b8db7769ad0edfccd5f4a" kind="define"><name>UIPC_TO_STRING</name></member>
-    <member refid="common_2macro_8h_1a0becbf4b30fc2051ed0f94f281443bc1" kind="define"><name>UIPC_CONCATE</name></member>
-    <member refid="common_2macro_8h_1a01617e255ce2552dadac5c6ec72c7b66" kind="define"><name>UIPC_NAME_WITH_ID_IMPL</name></member>
-    <member refid="common_2macro_8h_1a637181fd667dba92d6cd9d5d66a6bb41" kind="define"><name>UIPC_NAME_WITH_ID</name></member>
-  </compound>
   <compound refid="module__init__info_8h" kind="file"><name>module_init_info.h</name>
-  </compound>
-  <compound refid="backend_2type__define_8h" kind="file"><name>type_define.h</name>
-  </compound>
-  <compound refid="common_2type__define_8h" kind="file"><name>type_define.h</name>
   </compound>
   <compound refid="animator__visitor_8h" kind="file"><name>animator_visitor.h</name>
   </compound>
@@ -2506,20 +2498,18 @@
   </compound>
   <compound refid="world__visitor_8h" kind="file"><name>world_visitor.h</name>
   </compound>
-  <compound refid="attribute__name_8h" kind="file"><name>attribute_name.h</name>
-    <member refid="attribute__name_8h_1a57fc6ff6bfb0beeb510ba37eb895d501" kind="define"><name>UIPC_BUILTIN_ATTRIBUTE</name></member>
-  </compound>
-  <compound refid="details_2attribute__name_8h" kind="file"><name>attribute_name.h</name>
-  </compound>
-  <compound refid="builtin_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
-  </compound>
-  <compound refid="geometry_2utils_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
+  <compound refid="constants_8h" kind="file"><name>constants.h</name>
   </compound>
   <compound refid="constitution__uid__auto__register_8h" kind="file"><name>constitution_uid_auto_register.h</name>
     <member refid="constitution__uid__auto__register_8h_1a95df5be6fc4ceeb9dcf11e7c66d60469" kind="define"><name>REGISTER_CONSTITUTION_UIDS_INTERNAL</name></member>
     <member refid="constitution__uid__auto__register_8h_1a16f70a12e2b52e34d191800f39a5e34b" kind="define"><name>REGISTER_CONSTITUTION_UIDS</name></member>
   </compound>
   <compound refid="constitution__uid__collection_8h" kind="file"><name>constitution_uid_collection.h</name>
+  </compound>
+  <compound refid="attribute__name_8h" kind="file"><name>attribute_name.h</name>
+    <member refid="attribute__name_8h_1a57fc6ff6bfb0beeb510ba37eb895d501" kind="define"><name>UIPC_BUILTIN_ATTRIBUTE</name></member>
+  </compound>
+  <compound refid="details_2attribute__name_8h" kind="file"><name>attribute_name.h</name>
   </compound>
   <compound refid="backend__name_8h" kind="file"><name>backend_name.h</name>
   </compound>
@@ -2551,9 +2541,30 @@
   </compound>
   <compound refid="demangle_8h" kind="file"><name>demangle.h</name>
   </compound>
+  <compound refid="common_2dllexport_8h" kind="file"><name>dllexport.h</name>
+    <member refid="common_2dllexport_8h_1a3eb99fe897cd1af9d0dc6aad2a814a56" kind="define"><name>UIPC_EXTERN_C</name></member>
+    <member refid="common_2dllexport_8h_1a3c6a0d45f17518b8aa4e4b9700f45c9e" kind="define"><name>UIPC_NOEXCEPT</name></member>
+    <member refid="common_2dllexport_8h_1a9e9f506e7132b579453c887273a4622d" kind="define"><name>UIPC_FORCE_INLINE</name></member>
+    <member refid="common_2dllexport_8h_1a2fb5c35f3aa428ea8593002f0eb8f768" kind="define"><name>UIPC_NEVER_INLINE</name></member>
+    <member refid="common_2dllexport_8h_1acfccf2768a9b0aaf9ad8ea2ead4c558f" kind="define"><name>UIPC_EXPORT_API</name></member>
+    <member refid="common_2dllexport_8h_1a848fac04bc547d078236b5dcd65299a5" kind="define"><name>UIPC_IMPORT_API</name></member>
+    <member refid="common_2dllexport_8h_1a33fa693b263526a6f1b0d54d32854e57" kind="define"><name>UIPC_CORE_API</name></member>
+    <member refid="common_2dllexport_8h_1a0419b297355481c979554797ed959585" kind="define"><name>UIPC_GEOMETRY_API</name></member>
+    <member refid="common_2dllexport_8h_1a4a497ff025eae67c79130f1132cc2b63" kind="define"><name>UIPC_CONSTITUTION_API</name></member>
+    <member refid="common_2dllexport_8h_1ab57ac2f37137c1ea1a58aa7ee31d021a" kind="define"><name>UIPC_IO_API</name></member>
+    <member refid="common_2dllexport_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
+  </compound>
+  <compound refid="usd_2dllexport_8h" kind="file"><name>dllexport.h</name>
+    <member refid="usd_2dllexport_8h_1a1bc347f491ef02d5c3b88b62fe7e145b" kind="define"><name>UIPC_USD_API</name></member>
+  </compound>
+  <compound refid="vdb_2dllexport_8h" kind="file"><name>dllexport.h</name>
+    <member refid="vdb_2dllexport_8h_1a14c73594cdba16323c5172fc3eda71ef" kind="define"><name>UIPC_VDB_API</name></member>
+  </compound>
   <compound refid="enumerate_8h" kind="file"><name>enumerate.h</name>
   </compound>
   <compound refid="exception_8h" kind="file"><name>exception.h</name>
+  </compound>
+  <compound refid="flag_8h" kind="file"><name>flag.h</name>
   </compound>
   <compound refid="fmt__eigen_8h" kind="file"><name>fmt_eigen.h</name>
   </compound>
@@ -2577,6 +2588,15 @@
   <compound refid="log__pattern__guard_8h" kind="file"><name>log_pattern_guard.h</name>
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
+  </compound>
+  <compound refid="backend_2macro_8h" kind="file"><name>macro.h</name>
+    <member refid="backend_2macro_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
+  </compound>
+  <compound refid="common_2macro_8h" kind="file"><name>macro.h</name>
+    <member refid="common_2macro_8h_1acdc2fb3c333b8db7769ad0edfccd5f4a" kind="define"><name>UIPC_TO_STRING</name></member>
+    <member refid="common_2macro_8h_1a0becbf4b30fc2051ed0f94f281443bc1" kind="define"><name>UIPC_CONCATE</name></member>
+    <member refid="common_2macro_8h_1a01617e255ce2552dadac5c6ec72c7b66" kind="define"><name>UIPC_NAME_WITH_ID_IMPL</name></member>
+    <member refid="common_2macro_8h_1a637181fd667dba92d6cd9d5d66a6bb41" kind="define"><name>UIPC_NAME_WITH_ID</name></member>
   </compound>
   <compound refid="magic__enum_8h" kind="file"><name>magic_enum.h</name>
   </compound>
@@ -2603,7 +2623,15 @@
   </compound>
   <compound refid="timer_8h" kind="file"><name>timer.h</name>
   </compound>
+  <compound refid="backend_2type__define_8h" kind="file"><name>type_define.h</name>
+  </compound>
+  <compound refid="common_2type__define_8h" kind="file"><name>type_define.h</name>
+  </compound>
   <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
+  </compound>
+  <compound refid="common_2uipc_8h" kind="file"><name>uipc.h</name>
+  </compound>
+  <compound refid="uipc_8h" kind="file"><name>uipc.h</name>
   </compound>
   <compound refid="unit_8h" kind="file"><name>unit.h</name>
   </compound>
@@ -2745,10 +2773,6 @@
   </compound>
   <compound refid="sparse__coo__view_8h" kind="file"><name>sparse_coo_view.h</name>
   </compound>
-  <compound refid="geometry_8h" kind="file"><name>geometry.h</name>
-  </compound>
-  <compound refid="geometry_2geometry_8h" kind="file"><name>geometry.h</name>
-  </compound>
   <compound refid="abstract__simplicial__complex_8h" kind="file"><name>abstract_simplicial_complex.h</name>
   </compound>
   <compound refid="attribute_8h" kind="file"><name>attribute.h</name>
@@ -2768,6 +2792,10 @@
   <compound refid="attribute__friend_8h" kind="file"><name>attribute_friend.h</name>
   </compound>
   <compound refid="attribute__slot_8h" kind="file"><name>attribute_slot.h</name>
+  </compound>
+  <compound refid="geometry_8h" kind="file"><name>geometry.h</name>
+  </compound>
+  <compound refid="geometry_2geometry_8h" kind="file"><name>geometry.h</name>
   </compound>
   <compound refid="geometry__atlas_8h" kind="file"><name>geometry_atlas.h</name>
   </compound>
@@ -2817,6 +2845,10 @@
   </compound>
   <compound refid="compute__vertex__volume_8h" kind="file"><name>compute_vertex_volume.h</name>
   </compound>
+  <compound refid="builtin_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
+  </compound>
+  <compound refid="geometry_2utils_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
+  </compound>
   <compound refid="distance_8h" kind="file"><name>distance.h</name>
   </compound>
   <compound refid="extract__surface_8h" kind="file"><name>extract_surface.h</name>
@@ -2833,6 +2865,8 @@
   </compound>
   <compound refid="label__graph__color_8h" kind="file"><name>label_graph_color.h</name>
   </compound>
+  <compound refid="label__open__edge_8h" kind="file"><name>label_open_edge.h</name>
+  </compound>
   <compound refid="label__region_8h" kind="file"><name>label_region.h</name>
   </compound>
   <compound refid="label__surface_8h" kind="file"><name>label_surface.h</name>
@@ -2846,6 +2880,10 @@
   <compound refid="octree_8h" kind="file"><name>octree.h</name>
   </compound>
   <compound refid="optimal__transform_8h" kind="file"><name>optimal_transform.h</name>
+  </compound>
+  <compound refid="geometry_2utils_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
+  </compound>
+  <compound refid="vdb_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
   </compound>
   <compound refid="simplex__utils_8h" kind="file"><name>simplex_utils.h</name>
   </compound>
@@ -2863,38 +2901,11 @@
   </compound>
   <compound refid="urdf__io_8h" kind="file"><name>urdf_io.h</name>
   </compound>
-  <compound refid="common_2uipc_8h" kind="file"><name>uipc.h</name>
-  </compound>
-  <compound refid="uipc_8h" kind="file"><name>uipc.h</name>
-  </compound>
-  <compound refid="common_2dllexport_8h" kind="file"><name>dllexport.h</name>
-    <member refid="common_2dllexport_8h_1a3eb99fe897cd1af9d0dc6aad2a814a56" kind="define"><name>UIPC_EXTERN_C</name></member>
-    <member refid="common_2dllexport_8h_1a3c6a0d45f17518b8aa4e4b9700f45c9e" kind="define"><name>UIPC_NOEXCEPT</name></member>
-    <member refid="common_2dllexport_8h_1a9e9f506e7132b579453c887273a4622d" kind="define"><name>UIPC_FORCE_INLINE</name></member>
-    <member refid="common_2dllexport_8h_1a2fb5c35f3aa428ea8593002f0eb8f768" kind="define"><name>UIPC_NEVER_INLINE</name></member>
-    <member refid="common_2dllexport_8h_1acfccf2768a9b0aaf9ad8ea2ead4c558f" kind="define"><name>UIPC_EXPORT_API</name></member>
-    <member refid="common_2dllexport_8h_1a848fac04bc547d078236b5dcd65299a5" kind="define"><name>UIPC_IMPORT_API</name></member>
-    <member refid="common_2dllexport_8h_1a33fa693b263526a6f1b0d54d32854e57" kind="define"><name>UIPC_CORE_API</name></member>
-    <member refid="common_2dllexport_8h_1a0419b297355481c979554797ed959585" kind="define"><name>UIPC_GEOMETRY_API</name></member>
-    <member refid="common_2dllexport_8h_1a4a497ff025eae67c79130f1132cc2b63" kind="define"><name>UIPC_CONSTITUTION_API</name></member>
-    <member refid="common_2dllexport_8h_1ab57ac2f37137c1ea1a58aa7ee31d021a" kind="define"><name>UIPC_IO_API</name></member>
-    <member refid="common_2dllexport_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
-  </compound>
-  <compound refid="usd_2dllexport_8h" kind="file"><name>dllexport.h</name>
-    <member refid="usd_2dllexport_8h_1a1bc347f491ef02d5c3b88b62fe7e145b" kind="define"><name>UIPC_USD_API</name></member>
-  </compound>
-  <compound refid="vdb_2dllexport_8h" kind="file"><name>dllexport.h</name>
-    <member refid="vdb_2dllexport_8h_1a14c73594cdba16323c5172fc3eda71ef" kind="define"><name>UIPC_VDB_API</name></member>
-  </compound>
   <compound refid="prim_8h" kind="file"><name>prim.h</name>
   </compound>
   <compound refid="stage_8h" kind="file"><name>stage.h</name>
   </compound>
   <compound refid="stage__io_8h" kind="file"><name>stage_io.h</name>
-  </compound>
-  <compound refid="geometry_2utils_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
-  </compound>
-  <compound refid="vdb_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
   </compound>
   <compound refid="platform__handle_8h" kind="file"><name>platform_handle.h</name>
   </compound>

@@ -12,6 +12,7 @@
 * **as\_eigen** ([**uipc**](namespaceuipc.md), [**uipc::diff\_sim**](namespaceuipc_1_1diff__sim.md))
 * **AbstractSimplicialComplex** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **AffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
+* **adaptive** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **apply\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **apply\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
@@ -75,6 +76,7 @@
 
 ## h
 
+* **has\_flags** ([**uipc**](namespaceuipc.md))
 * **HandleT** ([**uipc::backend**](namespaceuipc_1_1backend.md))
 * **halfplane** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **halfplane\_vertex\_signed\_distance** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -87,6 +89,7 @@
 * **IndexT** ([**uipc**](namespaceuipc.md))
 * **init** ([**uipc**](namespaceuipc.md))
 * **is\_matrix\_v** ([**uipc**](namespaceuipc.md))
+* **is\_valid\_flag** ([**uipc**](namespaceuipc.md))
 * **ImplicitGeometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **InterAffineBody** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **InterPrimitive** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
@@ -107,6 +110,7 @@
 * **lame\_to\_poisson** ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * **label\_connected\_vertices** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_graph\_color** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **label\_open\_edge** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_region** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_surface** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **label\_triangle\_orient** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
@@ -200,6 +204,7 @@
 * **Transform** ([**uipc**](namespaceuipc.md))
 * **Translation** ([**uipc**](namespaceuipc.md))
 * **test\_gltf** ([**uipc**](namespaceuipc.md))
+* **to\_underlying** ([**uipc**](namespaceuipc.md))
 * **to\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **TimePoint** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))

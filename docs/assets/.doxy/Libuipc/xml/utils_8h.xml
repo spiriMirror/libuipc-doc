@@ -13,6 +13,7 @@
     <includes refid="simplex__utils_8h" local="no">uipc/geometry/utils/simplex_utils.h</includes>
     <includes refid="label__connected__vertices_8h" local="no">uipc/geometry/utils/label_connected_vertices.h</includes>
     <includes refid="label__region_8h" local="no">uipc/geometry/utils/label_region.h</includes>
+    <includes refid="label__open__edge_8h" local="no">uipc/geometry/utils/label_open_edge.h</includes>
     <includes refid="apply__region_8h" local="no">uipc/geometry/utils/apply_region.h</includes>
     <includes refid="compute__mesh__volume_8h" local="no">uipc/geometry/utils/compute_mesh_volume.h</includes>
     <includes refid="optimal__transform_8h" local="no">uipc/geometry/utils/optimal_transform.h</includes>
@@ -331,8 +332,10 @@
         </childnode>
         <childnode refid="68" relation="include">
         </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
       </node>
-      <node id="62">
+      <node id="63">
         <label>uipc/geometry/utils/apply_region.h</label>
         <link refid="apply__region_8h_source"/>
         <childnode refid="5" relation="include">
@@ -350,19 +353,19 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="67">
+      <node id="68">
         <label>uipc/geometry/utils/compute_mesh_d_hat.h</label>
         <link refid="compute__mesh__d__hat_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="63">
+      <node id="64">
         <label>uipc/geometry/utils/compute_mesh_volume.h</label>
         <link refid="compute__mesh__volume_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="66">
+      <node id="67">
         <label>uipc/geometry/utils/constitution_type.h</label>
         <link refid="geometry_2utils_2constitution__type_8h_source"/>
         <childnode refid="6" relation="include">
@@ -390,7 +393,7 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="65">
+      <node id="66">
         <label>uipc/geometry/utils/is_trimesh_closed.h</label>
         <link refid="is__trimesh__closed_8h_source"/>
         <childnode refid="5" relation="include">
@@ -399,6 +402,12 @@
       <node id="60">
         <label>uipc/geometry/utils/label_connected_vertices.h</label>
         <link refid="label__connected__vertices_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>uipc/geometry/utils/label_open_edge.h</label>
+        <link refid="label__open__edge_8h_source"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
@@ -426,7 +435,7 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="64">
+      <node id="65">
         <label>uipc/geometry/utils/optimal_transform.h</label>
         <link refid="optimal__transform_8h_source"/>
         <childnode refid="15" relation="include">
@@ -434,7 +443,7 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="68">
+      <node id="69">
         <label>uipc/geometry/utils/points_from_volume.h</label>
         <link refid="geometry_2utils_2points__from__volume_8h_source"/>
         <childnode refid="5" relation="include">
@@ -552,13 +561,14 @@
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/simplex_utils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/label_connected_vertices.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/label_region.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/apply_region.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/compute_mesh_volume.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/optimal_transform.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/is_trimesh_closed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/constitution_type.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/compute_mesh_d_hat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/points_from_volume.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/label_open_edge.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/apply_region.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/compute_mesh_volume.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/optimal_transform.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/is_trimesh_closed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/constitution_type.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/compute_mesh_d_hat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/points_from_volume.h&gt;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/geometry/utils.h"/>
   </compounddef>

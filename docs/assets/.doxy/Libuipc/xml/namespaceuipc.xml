@@ -972,6 +972,83 @@
         </inbodydescription>
         <location file="include/uipc/common/demangle.h" line="11" column="20" bodyfile="include/uipc/common/demangle.h" bodystart="11" bodyend="14"/>
       </memberdef>
+      <memberdef kind="function" id="flag_8h_1a8c59b4ddfa44b0d0bdcedcb1d716237e" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr auto</type>
+        <definition>constexpr auto uipc::to_underlying</definition>
+        <argsstring>(const T &amp;e) noexcept</argsstring>
+        <name>to_underlying</name>
+        <qualifiedname>uipc::to_underlying</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>e</declname>
+        </param>
+    <requiresclause>std::is_enum_v&lt;T&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/flag.h" line="11" column="16" bodyfile="include/uipc/common/flag.h" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="flag_8h_1af437d43f042a32c653b3afee5bb203b2" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool uipc::has_flags</definition>
+        <argsstring>(const T &amp;flags, const T &amp;test_flags) noexcept</argsstring>
+        <name>has_flags</name>
+        <qualifiedname>uipc::has_flags</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>test_flags</declname>
+        </param>
+    <requiresclause>std::is_enum_v&lt;T&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/flag.h" line="18" column="16" bodyfile="include/uipc/common/flag.h" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="flag_8h_1a6e56f5e1923c44feef8af7e1ff3e619c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool uipc::is_valid_flag</definition>
+        <argsstring>(const T &amp;flag) noexcept</argsstring>
+        <name>is_valid_flag</name>
+        <qualifiedname>uipc::is_valid_flag</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>flag</declname>
+        </param>
+    <requiresclause>std::is_enum_v&lt;T&gt;    </requiresclause>
+        <briefdescription>
+<para>Check if the given flag is a valid flag (only one bit is set). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/common/flag.h" line="29" column="16" bodyfile="include/uipc/common/flag.h" bodystart="29" bodyend="33"/>
+      </memberdef>
       <memberdef kind="function" id="readable__type__name_8h_1ac7b49fff7b09b87fb5c85a92cb77a8f4" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
