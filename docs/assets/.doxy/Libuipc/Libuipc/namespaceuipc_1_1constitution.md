@@ -35,7 +35,9 @@
 | class | [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md) <br> |
 | class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) <br> |
 | class | [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md) <br> |
+| class | [**AffineBodyPrismaticJointLimit**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit.md) <br> |
 | class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) <br> |
+| class | [**AffineBodyRevoluteJointLimit**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit.md) <br> |
 | class | [**Constraint**](classuipc_1_1constitution_1_1Constraint.md) <br> |
 | class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md) <br> |
 | class | [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) <br> |
@@ -47,6 +49,7 @@
 | class | [**HookeanSpring**](classuipc_1_1constitution_1_1HookeanSpring.md) <br> |
 | class | [**IConstitution**](classuipc_1_1constitution_1_1IConstitution.md) <br> |
 | class | [**InterAffineBodyConstitution**](classuipc_1_1constitution_1_1InterAffineBodyConstitution.md) <br> |
+| class | [**InterAffineBodyExtraConstitution**](classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution.md) <br> |
 | class | [**InterPrimitiveConstitution**](classuipc_1_1constitution_1_1InterPrimitiveConstitution.md) <br> |
 | class | [**KirchhoffRodBending**](classuipc_1_1constitution_1_1KirchhoffRodBending.md) <br> |
 | class | [**LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md) <br> |

@@ -8,6 +8,7 @@
     <derivedcompoundref refid="classuipc_1_1constitution_1_1FiniteElementConstitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementConstitution</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementExtraConstitution</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1InterAffineBodyConstitution" prot="public" virt="non-virtual">uipc::constitution::InterAffineBodyConstitution</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution" prot="public" virt="non-virtual">uipc::constitution::InterAffineBodyExtraConstitution</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" prot="public" virt="non-virtual">uipc::constitution::InterPrimitiveConstitution</derivedcompoundref>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -94,7 +95,9 @@
         <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1a82a6cb96c0441075f897f7b43af3cf0c">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyExternalBodyForce_1acd2853ac15c98baa6c4b0c5d8e21c5ec">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJoint_1a99ea7e51511b5f25aab9ece54f3257f2">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1afdef57d5b45b27fdbc837248b5af91c1">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a148444c8ad35ff65bb453c28b72fb5b8">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit_1a5e5c41ac10a0c7f0a6563e1c644ce658">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1ARAP_1aa38d637a1b8828f9e349e9cf5ddfffdf">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1Empty_1a665bb70fe25568572e44d9f79c375929">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a73fa172511936f0fc8d9e2fcf746ad81">get_uid</reimplementedby>
@@ -110,6 +113,7 @@
         <reimplementedby refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a57d019a86a8ae3c31cefeddc1663b100">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1Constraint_1a1c82273f5d6fbaa247b384a5af54a603">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution_1a48e02b80fc81d52413a065f687e8a0d3">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution_1ad5144fb2be6fad43e1b7a90099db5bc2">get_uid</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -154,10 +158,22 @@
         <childnode refid="22" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="26">
+        <label>uipc::constitution::AffineBodyPrismaticJointLimit</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="24">
         <label>uipc::constitution::AffineBodyRevoluteJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint"/>
         <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>uipc::constitution::AffineBodyRevoluteJointLimit</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit"/>
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4">
@@ -213,6 +229,12 @@
         </childnode>
       </node>
       <node id="25">
+        <label>uipc::constitution::InterAffineBodyExtraConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
         <label>uipc::constitution::InterPrimitiveConstitution</label>
         <link refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution"/>
         <childnode refid="1" relation="public-inheritance">
@@ -260,10 +282,10 @@
         <childnode refid="4" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="26">
+      <node id="29">
         <label>uipc::constitution::SoftVertexStitch</label>
         <link refid="classuipc_1_1constitution_1_1SoftVertexStitch"/>
-        <childnode refid="25" relation="public-inheritance">
+        <childnode refid="28" relation="public-inheritance">
         </childnode>
       </node>
       <node id="17">

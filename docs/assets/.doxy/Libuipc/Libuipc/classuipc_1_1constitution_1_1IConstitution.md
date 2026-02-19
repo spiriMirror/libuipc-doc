@@ -15,7 +15,7 @@
 
 
 
-Inherited by the following classes: [uipc::constitution::AffineBodyConstitution](classuipc_1_1constitution_1_1AffineBodyConstitution.md),  [uipc::constitution::AffineBodyExternalBodyForce](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md),  [uipc::constitution::Constraint](classuipc_1_1constitution_1_1Constraint.md),  [uipc::constitution::FiniteElementConstitution](classuipc_1_1constitution_1_1FiniteElementConstitution.md),  [uipc::constitution::FiniteElementExtraConstitution](classuipc_1_1constitution_1_1FiniteElementExtraConstitution.md),  [uipc::constitution::InterAffineBodyConstitution](classuipc_1_1constitution_1_1InterAffineBodyConstitution.md),  [uipc::constitution::InterPrimitiveConstitution](classuipc_1_1constitution_1_1InterPrimitiveConstitution.md)
+Inherited by the following classes: [uipc::constitution::AffineBodyConstitution](classuipc_1_1constitution_1_1AffineBodyConstitution.md),  [uipc::constitution::AffineBodyExternalBodyForce](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md),  [uipc::constitution::Constraint](classuipc_1_1constitution_1_1Constraint.md),  [uipc::constitution::FiniteElementConstitution](classuipc_1_1constitution_1_1FiniteElementConstitution.md),  [uipc::constitution::FiniteElementExtraConstitution](classuipc_1_1constitution_1_1FiniteElementExtraConstitution.md),  [uipc::constitution::InterAffineBodyConstitution](classuipc_1_1constitution_1_1InterAffineBodyConstitution.md),  [uipc::constitution::InterAffineBodyExtraConstitution](classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution.md),  [uipc::constitution::InterPrimitiveConstitution](classuipc_1_1constitution_1_1InterPrimitiveConstitution.md)
 
 
 

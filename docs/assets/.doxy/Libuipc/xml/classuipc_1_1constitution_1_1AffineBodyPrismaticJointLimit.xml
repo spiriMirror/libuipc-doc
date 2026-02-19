@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::AffineBodyPrismaticJointLimit</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution" prot="public" virt="non-virtual">uipc::constitution::InterAffineBodyExtraConstitution</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1af8e03cfde04856361789c42aae417be1" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution" kindref="compound">InterAffineBodyExtraConstitution</ref></type>
+        <definition>using uipc::constitution::AffineBodyPrismaticJointLimit::Base =  InterAffineBodyExtraConstitution</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="8" column="5" bodyfile="include/uipc/constitution/affine_body_prismatic_joint_limit.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1add057ecdcd5c4a25f817016ab4ab4b1b" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::AffineBodyPrismaticJointLimit::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="28" column="10" bodyfile="include/uipc/constitution/affine_body_prismatic_joint_limit.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1aa701330dd22f8f357c48b56deb2fc201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::AffineBodyPrismaticJointLimit::AffineBodyPrismaticJointLimit</definition>
+        <argsstring>(const Json &amp;config=default_config())</argsstring>
+        <name>AffineBodyPrismaticJointLimit</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::AffineBodyPrismaticJointLimit</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="11" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a9db9856a9dec2d3dd33ac6c6e7d98d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::AffineBodyPrismaticJointLimit::~AffineBodyPrismaticJointLimit</definition>
+        <argsstring>() override</argsstring>
+        <name>~AffineBodyPrismaticJointLimit</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::~AffineBodyPrismaticJointLimit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a92c8d89a0de4dcf8d099a0d29b16086b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyPrismaticJointLimit::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float lower, Float upper, Float strength=1.0f)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>lower</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>upper</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>strength</declname>
+          <defval>1.0f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="14" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a6d5472455e561adf4c6b7af069011158" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyPrismaticJointLimit::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; Float &gt; lowers, span&lt; Float &gt; uppers, span&lt; Float &gt; strengths)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>lowers</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>uppers</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>strengths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="19" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a7c1ae7cbf6f9ac92f29a3e1c3c7b1037" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::AffineBodyPrismaticJointLimit::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="24" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1afdef57d5b45b27fdbc837248b5af91c1" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>U64 uipc::constitution::AffineBodyPrismaticJointLimit::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::AffineBodyPrismaticJointLimit::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution_1ad5144fb2be6fad43e1b7a90099db5bc2">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="27" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyPrismaticJointLimit</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::InterAffineBodyExtraConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyPrismaticJointLimit</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::InterAffineBodyExtraConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/affine_body_prismatic_joint_limit.h" line="6" column="1" bodyfile="include/uipc/constitution/affine_body_prismatic_joint_limit.h" bodystart="7" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1aa701330dd22f8f357c48b56deb2fc201" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>AffineBodyPrismaticJointLimit</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a92c8d89a0de4dcf8d099a0d29b16086b" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a6d5472455e561adf4c6b7af069011158" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution_1a6bd2d146b3b4a407f32ac0474577d2c7" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::InterAffineBodyExtraConstitution::"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1af8e03cfde04856361789c42aae417be1" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a7c1ae7cbf6f9ac92f29a3e1c3c7b1037" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1afdef57d5b45b27fdbc837248b5af91c1" prot="private" virt="virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1add057ecdcd5c4a25f817016ab4ab4b1b" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit_1a9db9856a9dec2d3dd33ac6c6e7d98d1d" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>~AffineBodyPrismaticJointLimit</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::AffineBodyPrismaticJointLimit</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
