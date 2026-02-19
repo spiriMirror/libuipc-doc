@@ -2460,15 +2460,25 @@ a_{33}\\
 <h2 id="16-softtransformconstraint">#16 SoftTransformConstraint</h2>
 <p>The soft transform constraint energy has the form of "Kinetic" defined as</p>
 <div class="arithmatex">\[
-\mathbf{\eta} = \begin{bmatrix}
-\eta_p \otimes \mathbf{I}_{3\times3} &amp; \mathbf{0}_{3\times 9} \\
-\mathbf{0}_{9\times 3} &amp; \eta_a \otimes \mathbf{I}_{9\times9}
-\end{bmatrix}  
+\Psi = \frac{1}{2} \left( \mathbf{q} - \hat{\mathbf{q}} \right)^T \tilde{\mathbf{M}} \left( \mathbf{q} - \hat{\mathbf{q}} \right),
 \]</div>
+<p>where <span class="arithmatex">\(\hat{\mathbf{q}}\)</span> is the target state, and <span class="arithmatex">\(\tilde{\mathbf{M}}\)</span> is the modified mass matrix obtained by scaling the blocks of the original mass matrix <span class="arithmatex">\(\mathbf{M}\)</span> according to the strength ratios:</p>
 <div class="arithmatex">\[
-\Psi = \frac{1}{2} \left( \mathbf{q} - \hat{\mathbf{q}} \right)^T \mathbf{\eta} \mathbf{M} \left( \mathbf{q} - \hat{\mathbf{q}} \right),
+\tilde{\mathbf{M}} = \begin{bmatrix}
+\eta_p \mathbf{M}^{pp} &amp; \sqrt{\eta_p \eta_a} \mathbf{M}^{pa} \\
+\sqrt{\eta_p \eta_a} \mathbf{M}^{ap} &amp; \eta_a \mathbf{M}^{aa}
+\end{bmatrix},
 \]</div>
-<p>where <span class="arithmatex">\(\hat{\mathbf{q}}\)</span> is the target state, <span class="arithmatex">\(\mathbf{M}\)</span> is the mass matrix of the affine body, <span class="arithmatex">\(\eta_p \in (0,+\infty)\)</span> is the position constraint strength ratio, and <span class="arithmatex">\(\eta_a \in (0,+\infty)\)</span> is the affine (or rotation if not so rigorous) constraint strength ratio.</p>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{M}^{pp}_{3 \times 3}\)</span> is the position block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
+<li><span class="arithmatex">\(\mathbf{M}^{pa}_{3 \times 9}\)</span> is the cross-term block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
+<li><span class="arithmatex">\(\mathbf{M}^{ap}_{9 \times 3}\)</span> is the cross-term block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
+<li><span class="arithmatex">\(\mathbf{M}^{aa}_{9 \times 9}\)</span> is the affine block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
+<li><span class="arithmatex">\(\eta_p \in (0,+\infty)\)</span> is the position constraint strength ratio</li>
+<li><span class="arithmatex">\(\eta_a \in (0,+\infty)\)</span> is the affine (or rotation if not so rigorous) constraint strength ratio</li>
+</ul>
+<p>The cross-terms use the geometric mean <span class="arithmatex">\(\sqrt{\eta_p \eta_a}\)</span> to maintain consistency between the position and affine constraints.</p>
 <p>The reason we use strength ratio is that the mass matrix <span class="arithmatex">\(\mathbf{M}\)</span> already contains the mass and inertia information, so that users only need to care about how strong the constraint is compared to the mass and inertia of the body, which is more intuitive.</p>
 <p>Because the constraint is "SOFT", we don't allow a too-strong strength which will lead to numerical instability. Normally, <span class="arithmatex">\(\eta_p\)</span> and <span class="arithmatex">\(\eta_a\)</span> are better in the range of <span class="arithmatex">\([0, 100]\)</span>.</p></div>
 

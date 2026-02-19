@@ -2434,17 +2434,21 @@
 <div class="arithmatex">\[
 \mathbf{a}_{ext} = \mathbf{M}^{-1} \mathbf{F}_{ext}
 \]</div>
-<p>where:
-- <span class="arithmatex">\(\mathbf{F}_{ext} \in \mathbb{R}^{12}\)</span> is the generalized force vector
-- <span class="arithmatex">\(\mathbf{M} \in \mathbb{R}^{12 \times 12}\)</span> is the affine body mass matrix
-- <span class="arithmatex">\(\mathbf{a}_{ext} \in \mathbb{R}^{12}\)</span> is the resulting acceleration</p>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{F}_{ext} \in \mathbb{R}^{12}\)</span> is the generalized force vector</li>
+<li><span class="arithmatex">\(\mathbf{M} \in \mathbb{R}^{12 \times 12}\)</span> is the affine body mass matrix</li>
+<li><span class="arithmatex">\(\mathbf{a}_{ext} \in \mathbb{R}^{12}\)</span> is the resulting acceleration</li>
+</ul>
 <p>The force vector is structured as:</p>
 <div class="arithmatex">\[
 \mathbf{F}_{ext} = \begin{bmatrix} \mathbf{f} \\ \mathbf{f}_a \end{bmatrix} \in \mathbb{R}^{12}
 \]</div>
-<p>where:
-- <span class="arithmatex">\(\mathbf{f} \in \mathbb{R}^3\)</span> is the translational force
-- <span class="arithmatex">\(\mathbf{f}_a \in \mathbb{R}^{9}\)</span> is the affine force (flattened 3x3 matrix)</p>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{f} \in \mathbb{R}^3\)</span> is the translational force</li>
+<li><span class="arithmatex">\(\mathbf{f}_a \in \mathbb{R}^{9}\)</span> is the affine force (flattened 3x3 matrix)</li>
+</ul>
 <p>The energy function for the <strong>Affine Body External Force</strong> will be incorporated into the Affine Body Kinetic Term as:</p>
 <div class="arithmatex">\[
 E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(\mathbf{q} - \tilde{\mathbf{q}}\right) 
