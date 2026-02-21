@@ -1045,6 +1045,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#meaning-of-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning of x
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conceptual-requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2493,6 +2515,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#meaning-of-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning of x
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conceptual-requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2534,75 +2578,67 @@
 <div><h1 id="affine-body-revolute-joint-limit">Affine Body Revolute Joint Limit</h1>
 <h2 id="670-affinebodyrevolutejointlimit">#670 AffineBodyRevoluteJointLimit</h2>
 <p>This constitution is an <strong>InterAffineBody extra constitution</strong> defined on a
-revolute-joint geometry. It contributes a unilateral cubic penalty to the
-relative angular coordinate.</p>
-<p>Let <span class="arithmatex">\(x\)</span> be the revolute angle (unit: rad), with lower/upper bounds <span class="arithmatex">\(l, u\)</span> and
-penalty coefficient <span class="arithmatex">\(s\)</span>:</p>
+revolute-joint geometry. It adds a unilateral cubic penalty to the relative
+joint angle.</p>
+<h2 id="meaning-of-x">Meaning of <code>x</code></h2>
+<p>The revolute coordinate is evaluated in incremental form:</p>
 <div class="arithmatex">\[
-E(x)=
-\begin{cases}
-0, &amp; l \le x \le u \\
-s(x-u)^3, &amp; x&gt;u \\
-s(l-x)^3, &amp; x&lt;l
-\end{cases}
+x=\theta^t+\delta,
 \]</div>
-<p>Interpretation of each term:
-- <span class="arithmatex">\(x\)</span>: current relative revolute angle around the joint axis.
-- <span class="arithmatex">\(l\)</span>: admissible lower angle bound.
-- <span class="arithmatex">\(u\)</span>: admissible upper angle bound.
-- <span class="arithmatex">\(s\)</span>: penalty strength (energy scale).</p>
-<p>The angle is represented in incremental form:</p>
 <div class="arithmatex">\[
-x = \theta_0 + \delta,
-$$
-$$
-\theta_0 = \Delta \Theta(\mathbf{q}^{t-1}, \mathbf{q}_{ref}), \quad
-\delta = \Delta \Theta(\mathbf{q}, \mathbf{q}^{t-1}),
+\theta^t=\Delta\Theta(\mathbf{q}^{t-1},\mathbf{q}_{ref}), \quad
+\delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t-1}).
 \]</div>
-<p>where:
-- <span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF,
-- <span class="arithmatex">\(\mathbf{q}^{t-1}\)</span> is the previous-step DOF,
-- <span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.</p>
-<p>For revolute joints, the increment operator <span class="arithmatex">\(\Delta\Theta(\cdot,\cdot)\)</span> is
-computed with an <code>atan2</code> form. Given two states <span class="arithmatex">\(a,b\)</span>, define</p>
+<p>Here:
+- <span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.
+- <span class="arithmatex">\(\mathbf{q}^{t-1}\)</span> is the previous-step DOF.
+- <span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.
+- <span class="arithmatex">\(\theta^t\)</span> is the accumulated revolute angle from the previous step.</p>
+<p>The joint axis direction is defined by edge order <code>p0 -&gt; p1</code>, i.e. <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(x=0\)</span>: current relative revolute angle equals the reference angle.</li>
+<li><span class="arithmatex">\(x&gt;0\)</span>: positive rotation around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (right-hand rule; counterclockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</li>
+<li><span class="arithmatex">\(x&lt;0\)</span>: negative rotation around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (clockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</li>
+</ul>
+<p>For revolute joints:</p>
 <div class="arithmatex">\[
-\Delta\Theta(\mathbf{q}_a,\mathbf{q}_b)
-=
+\Delta\Theta(\mathbf{q}_a,\mathbf{q}_b)=
 \operatorname{atan2}
 \left(
 \sin\theta_a\cos\theta_b-\cos\theta_a\sin\theta_b,\;
 \cos\theta_a\cos\theta_b+\sin\theta_a\sin\theta_b
 \right),
 \]</div>
-<p>with</p>
 <div class="arithmatex">\[
 \cos\theta=\frac{\hat{\mathbf{b}}_i\cdot\hat{\mathbf{b}}_j+\hat{\mathbf{n}}_i\cdot\hat{\mathbf{n}}_j}{2},
 \quad
 \sin\theta=\frac{\hat{\mathbf{n}}_i\cdot\hat{\mathbf{b}}_j-\hat{\mathbf{b}}_i\cdot\hat{\mathbf{n}}_j}{2}.
 \]</div>
-<p>This yields the principal-angle branch in <span class="arithmatex">\((-\pi,\pi]\)</span>, so the limit supports
-full <span class="arithmatex">\(\pm 180^\circ\)</span> angular span.</p>
-<p>This avoids direct optimization over inverse-trigonometric reconstruction of the
-absolute angle and follows the same delta-theta idea used by external articulation.</p>
-<p>First and second derivatives with respect to <span class="arithmatex">\(x\)</span>:</p>
+<p>The sign of <span class="arithmatex">\(x\)</span> follows the sign of <span class="arithmatex">\(\sin\theta\)</span> under this convention.
+The angle branch is <span class="arithmatex">\((-\pi,\pi]\)</span>.</p>
+<h2 id="energy">Energy</h2>
+<p>Let <span class="arithmatex">\(l,u\)</span> be lower/upper limits and <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
+<p>For normal range width (<span class="arithmatex">\(u&gt;l\)</span>):</p>
 <div class="arithmatex">\[
-\frac{dE}{dx}=
+E(x)=
 \begin{cases}
 0, &amp; l \le x \le u \\
-3s(x-u)^2, &amp; x&gt;u \\
--3s(l-x)^2, &amp; x&lt;l
+s\left(\frac{x-u}{u-l}\right)^3, &amp; x&gt;u \\
+s\left(\frac{l-x}{u-l}\right)^3, &amp; x&lt;l
 \end{cases}
 \]</div>
+<p>The normalized gaps are dimensionless, so changing <span class="arithmatex">\((l,u)\)</span> does not require
+retuning <span class="arithmatex">\(s\)</span> just because the interval width changed.</p>
+<p>For degenerate limit (<span class="arithmatex">\(u=l\)</span>), use fallback cubic:</p>
 <div class="arithmatex">\[
-\frac{d^2E}{dx^2}=
+E(x)=s|x-l|^3=
 \begin{cases}
-0, &amp; l \le x \le u \\
-6s(x-u), &amp; x&gt;u \\
-6s(l-x), &amp; x&lt;l
+s(x-l)^3, &amp; x&gt;l \\
+0, &amp; x=l \\
+s(l-x)^3, &amp; x&lt;l
 \end{cases}
 \]</div>
-<p>Boundary points (<span class="arithmatex">\(x=l\)</span> or <span class="arithmatex">\(x=u\)</span>) are treated as in-range; energy and derivatives
-are zero there.</p>
+<p>Boundary points are treated as in-range.</p>
 <h2 id="conceptual-requirement">Conceptual Requirement</h2>
 <p>This limit term is meaningful only on a geometry that already represents a
 revolute joint relation (base joint UID = 18). The limit augments that base

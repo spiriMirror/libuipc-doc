@@ -989,6 +989,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#meaning-of-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning of x
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conceptual-requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2493,6 +2515,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#meaning-of-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meaning of x
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Energy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conceptual-requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2534,60 +2578,64 @@
 <div><h1 id="affine-body-prismatic-joint-limit">Affine Body Prismatic Joint Limit</h1>
 <h2 id="669-affinebodyprismaticjointlimit">#669 AffineBodyPrismaticJointLimit</h2>
 <p>This constitution is an <strong>InterAffineBody extra constitution</strong> defined on a
-prismatic-joint geometry. It contributes a unilateral cubic barrier-like penalty
-to the joint scalar coordinate.</p>
-<p>The coordinate is denoted by <span class="arithmatex">\(x\)</span> (unit: length), with lower/upper bounds
-<span class="arithmatex">\(l, u\)</span> and penalty coefficient <span class="arithmatex">\(s\)</span>:</p>
+prismatic-joint geometry. It adds a unilateral cubic penalty to the scalar
+joint coordinate.</p>
+<h2 id="meaning-of-x">Meaning of <code>x</code></h2>
+<p>The prismatic coordinate is evaluated in incremental form:</p>
+<div class="arithmatex">\[
+x=\theta^t+\delta,
+\]</div>
+<div class="arithmatex">\[
+\theta^t=\Delta\Theta(\mathbf{q}^{t-1},\mathbf{q}_{ref}), \quad
+\delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t-1}).
+\]</div>
+<p>Here:
+- <span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.
+- <span class="arithmatex">\(\mathbf{q}^{t-1}\)</span> is the previous-step DOF.
+- <span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.
+- <span class="arithmatex">\(\theta^t\)</span> is the accumulated prismatic coordinate from the previous step.</p>
+<p>The joint axis direction is defined by edge order <code>p0 -&gt; p1</code>, i.e. <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(x=0\)</span>: current relative prismatic coordinate equals the reference coordinate.</li>
+<li><span class="arithmatex">\(x&gt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</li>
+<li><span class="arithmatex">\(x&lt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(-\hat{\mathbf{t}}\)</span>.</li>
+</ul>
+<p>Equivalent symmetric coordinate (same convention as external articulation):</p>
+<div class="arithmatex">\[
+\theta=
+\frac{
+(\mathbf{c}_j-\mathbf{c}_i)\cdot\hat{\mathbf{t}}_i
+-
+(\mathbf{c}_i-\mathbf{c}_j)\cdot\hat{\mathbf{t}}_j
+}{2}.
+\]</div>
+<h2 id="energy">Energy</h2>
+<p>Let <span class="arithmatex">\(l,u\)</span> be lower/upper limits and <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
+<p>For normal range width (<span class="arithmatex">\(u&gt;l\)</span>):</p>
 <div class="arithmatex">\[
 E(x)=
 \begin{cases}
 0, &amp; l \le x \le u \\
-s(x-u)^3, &amp; x&gt;u \\
+s\left(\frac{x-u}{u-l}\right)^3, &amp; x&gt;u \\
+s\left(\frac{l-x}{u-l}\right)^3, &amp; x&lt;l
+\end{cases}
+\]</div>
+<p>The normalized gaps are dimensionless, so changing <span class="arithmatex">\((l,u)\)</span> does not require
+retuning <span class="arithmatex">\(s\)</span> just because the interval width changed.</p>
+<p>For degenerate limit (<span class="arithmatex">\(u=l\)</span>), use fallback cubic:</p>
+<div class="arithmatex">\[
+E(x)=s|x-l|^3=
+\begin{cases}
+s(x-l)^3, &amp; x&gt;l \\
+0, &amp; x=l \\
 s(l-x)^3, &amp; x&lt;l
 \end{cases}
 \]</div>
-<p>Interpretation of each term:
-- <span class="arithmatex">\(x\)</span>: current prismatic relative coordinate of the joint.
-- <span class="arithmatex">\(l\)</span>: admissible lower bound.
-- <span class="arithmatex">\(u\)</span>: admissible upper bound.
-- <span class="arithmatex">\(s\)</span>: penalty strength (energy scale).</p>
-<p>The scalar coordinate is evaluated in incremental form:</p>
-<div class="arithmatex">\[
-x = \theta_0 + \delta,
-$$
-$$
-\theta_0 = \Delta \Theta(\mathbf{q}^{t-1}, \mathbf{q}_{ref}), \quad
-\delta = \Delta \Theta(\mathbf{q}, \mathbf{q}^{t-1}),
-\]</div>
-<p>where:
-- <span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF,
-- <span class="arithmatex">\(\mathbf{q}^{t-1}\)</span> is the previous-step DOF,
-- <span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.</p>
-<p>So <span class="arithmatex">\(\theta_0\)</span> measures accumulated offset from the reference state, and
-<span class="arithmatex">\(\delta\)</span> is the optimization-time increment in the current step.</p>
-<p>First and second derivatives with respect to <span class="arithmatex">\(x\)</span>:</p>
-<div class="arithmatex">\[
-\frac{dE}{dx}=
-\begin{cases}
-0, &amp; l \le x \le u \\
-3s(x-u)^2, &amp; x&gt;u \\
--3s(l-x)^2, &amp; x&lt;l
-\end{cases}
-\]</div>
-<div class="arithmatex">\[
-\frac{d^2E}{dx^2}=
-\begin{cases}
-0, &amp; l \le x \le u \\
-6s(x-u), &amp; x&gt;u \\
-6s(l-x), &amp; x&lt;l
-\end{cases}
-\]</div>
-<p>Boundary points (<span class="arithmatex">\(x=l\)</span> or <span class="arithmatex">\(x=u\)</span>) are treated as in-range; energy and derivatives
-are zero there.</p>
+<p>Boundary points are treated as in-range.</p>
 <h2 id="conceptual-requirement">Conceptual Requirement</h2>
 <p>This limit term is meaningful only on a geometry that already represents a
-prismatic joint relation (base joint UID = 20). The limit does not replace that
-base relation; it augments it as an extra constitution term.</p>
+prismatic joint relation (base joint UID = 20). The limit augments that base
+relation as an extra constitution term.</p>
 <h2 id="stored-attributes">Stored Attributes</h2>
 <p>Per joint edge:
 - <code>limit/lower</code>
