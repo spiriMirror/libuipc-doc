@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -778,6 +808,8 @@
       
         
       
+        
+      
     
     
     
@@ -1016,6 +1048,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1152,6 +1195,34 @@
     
   
     External Articulation Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
   
 
     
@@ -2470,6 +2541,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2511,7 +2593,12 @@ E = \frac{K}{2} \cdot \left(
     \| \mathbf{J}^1_i \mathbf{q}_i - \mathbf{J}^1_j \mathbf{q}_j \|^2
 \right),
 \]</div>
-<p>where <span class="arithmatex">\(K\)</span> is the stiffness constant of the joint, we choose <span class="arithmatex">\(K=\gamma (m_i + m_j)\)</span>, where <span class="arithmatex">\(\gamma\)</span> is a <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span> and <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p></div>
+<p>where <span class="arithmatex">\(K\)</span> is the stiffness constant of the joint, we choose <span class="arithmatex">\(K=\gamma (m_i + m_j)\)</span>, where <span class="arithmatex">\(\gamma\)</span> is a <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span> and <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On the joint geometry (1D simplicial complex), on <code>edges</code>:</p>
+<ul>
+<li><code>strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
+</ul></div>
 
 
 

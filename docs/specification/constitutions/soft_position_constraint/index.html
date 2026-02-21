@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -742,6 +772,8 @@
       
         
           
+        
+      
         
       
         
@@ -1114,6 +1146,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../hookean_spring/" class="md-nav__link">
         
   
@@ -1290,6 +1350,17 @@
     <span class="md-ellipsis">
       
         #14 SoftPositionConstraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -2470,6 +2541,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2502,7 +2584,13 @@ E = \frac{1}{2} \eta m \|\mathbf{x} - \hat{\mathbf{x}}\|^2
 </ul>
 <p>The soft position constraint energy has the form of "Kinetic" energy, similar to <a href="../soft_transform_constraint/">SoftTransformConstraint</a> but for finite element vertices instead of affine bodies.</p>
 <p>The reason we use strength ratio is that the mass <span class="arithmatex">\(m\)</span> already contains the mass information, so that users only need to care about how strong the constraint is compared to the mass of the vertex, which is more intuitive.</p>
-<p>Because the constraint is "SOFT", we don't allow a too-strong strength which will lead to numerical instability. Normally, <span class="arithmatex">\(\eta\)</span> is better in the range of <span class="arithmatex">\([0, 100]\)</span>.</p></div>
+<p>Because the constraint is "SOFT", we don't allow a too-strong strength which will lead to numerical instability. Normally, <span class="arithmatex">\(\eta\)</span> is better in the range of <span class="arithmatex">\([0, 100]\)</span>.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On <code>vertices</code>:</p>
+<ul>
+<li><code>strength_ratio</code>: <span class="arithmatex">\(\eta\)</span> in the energy above</li>
+<li><code>aim_position</code>: <span class="arithmatex">\(\hat{\mathbf{x}}\)</span> in the energy above</li>
+</ul></div>
 
 
 

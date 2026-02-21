@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -742,6 +772,8 @@
       
         
           
+        
+      
         
       
         
@@ -1114,6 +1146,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../hookean_spring/" class="md-nav__link">
         
   
@@ -1346,6 +1406,17 @@
     <span class="md-ellipsis">
       
         #10 Stable Neo Hookean
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -2470,6 +2541,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2502,7 +2584,13 @@ Practicalities (Now With Code!)
 E = \frac{1}{2} \lambda (J - \alpha)^2 + \frac{1}{2} \mu (I_c - 3) - \frac{1}{2} \mu \ln(I_c + 1),
 \]</div>
 <p>where <span class="arithmatex">\(J = \det(F)\)</span>, <span class="arithmatex">\(I_c = \|F\|_F^2\)</span>, <span class="arithmatex">\(\alpha = 1 + \frac{3\mu}{4\lambda}\)</span>.</p>
-<p>In continuum mechanics, <span class="arithmatex">\(F\)</span> is called the deformation gradient, <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> are the Lamé parameters. <span class="arithmatex">\(I_c\)</span> is the first invariant of the right Cauchy-Green deformation tensor <span class="arithmatex">\(C = \|F\|_F^2\)</span>, <span class="arithmatex">\(\|\cdot\|_F\)</span> is the <a href="https://en.wikipedia.org/wiki/Matrix_norm">Frobenius norm</a>.</p></div>
+<p>In continuum mechanics, <span class="arithmatex">\(F\)</span> is called the deformation gradient, <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> are the Lamé parameters. <span class="arithmatex">\(I_c\)</span> is the first invariant of the right Cauchy-Green deformation tensor <span class="arithmatex">\(C = \|F\|_F^2\)</span>, <span class="arithmatex">\(\|\cdot\|_F\)</span> is the <a href="https://en.wikipedia.org/wiki/Matrix_norm">Frobenius norm</a>.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On <code>tetrahedra</code>:</p>
+<ul>
+<li><code>mu</code>: <span class="arithmatex">\(\mu\)</span> in the energy above</li>
+<li><code>lambda</code>: <span class="arithmatex">\(\lambda\)</span> in the energy above</li>
+</ul></div>
 
 
 

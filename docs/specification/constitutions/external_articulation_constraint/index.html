@@ -12,7 +12,7 @@
         <link rel="prev" href="../empty/">
       
       
-        <link rel="next" href="../hookean_spring/">
+        <link rel="next" href="../finite_element/">
       
       
         
@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -742,6 +772,8 @@
       
         
           
+        
+      
         
       
         
@@ -1184,10 +1216,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2526,6 +2597,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2563,8 +2645,8 @@ K = \frac{1}{2}\left( \delta\boldsymbol{\theta}(\mathbf{q}, \mathbf{q}^t) - \til
 <li><a href="../affine_body_revolute_joint/">Affine Body Revolute Joint</a></li>
 <li><a href="../affine_body_prismatic_joint/">Affine Body Prismatic Joint</a></li>
 </ul>
-<p><img alt="External Articulation Constraint" src="../media/external_articulation_constraint_fig1.drawio.svg"></p>
-<p>In revolute joint case,  <span class="arithmatex">\(\hat{\mathbf{n}}\)</span> is the normal vector perpendicular to the joint axis, <span class="arithmatex">\(\hat{\mathbf{b}}\)</span> is the binormal vector of the joint axis, and <span class="arithmatex">\(\hat{\mathbf{t}}\)</span> is the direction vector along the joint axis pointed into the figure.</p>
+<p>In <a href="../affine_body_revolute_joint/">Revolute Joint</a> case, <span class="arithmatex">\(\hat{\mathbf{n}}\)</span> is the normal vector perpendicular to the joint axis, <span class="arithmatex">\(\hat{\mathbf{b}}\)</span> is the binormal vector of the joint axis, and <span class="arithmatex">\(\hat{\mathbf{t}}\)</span> is the direction vector along the joint axis pointed into the figure.</p>
+<p><img alt="Revolute joint axis \(\hat{\mathbf{t}}\)" src="../media/external_articulation_revolute_constraint_fig1.drawio.svg"></p>
 <p>The angle between two bodies around the joint axis is defined as:</p>
 <div class="arithmatex">\[
 \cos\theta = \frac{
@@ -2581,7 +2663,8 @@ K = \frac{1}{2}\left( \delta\boldsymbol{\theta}(\mathbf{q}, \mathbf{q}^t) - \til
 \delta\theta = \arctan \left(\tan \left(\theta - \theta^t \right)\right) = \arctan \frac{\sin\theta \cos\theta^t - \cos\theta \sin\theta^t}{\cos\theta \cos\theta^t + \sin\theta \sin\theta^t},
 \]</div>
 <p>where <span class="arithmatex">\(\theta^t\)</span> is the joint angle at previous time step, the <span class="arithmatex">\(\sin\theta^t\)</span> and <span class="arithmatex">\(\cos\theta^t\)</span> can be calculated using the previous frame vectors <span class="arithmatex">\(\hat{\mathbf{b}}^t\)</span> and <span class="arithmatex">\(\hat{\mathbf{n}}^t\)</span>s.</p>
-<p>In prismatic joint case, the translation along the joint axis is defined as:</p>
+<p>In <a href="../affine_body_prismatic_joint/">Prismatic Joint</a> case, the translation along the joint axis is defined as:</p>
+<p><img alt="Prismatic joint axis \(\hat{\mathbf{t}}\)" src="../media/external_articulation_prismatic_constraint_fig1.drawio.svg"></p>
 <div class="arithmatex">\[
 \theta = \frac{
     (\mathbf{c}_j - \mathbf{c}_i) \cdot \hat{\mathbf{t}}_i -
@@ -2600,7 +2683,18 @@ $$</p>
 <div class="arithmatex">\[
 K = \frac{1}{2}\left( \delta\boldsymbol{\theta}(\mathbf{q}, \mathbf{q}^t_{ref}) - \tilde{\delta\boldsymbol{\theta}} \right)^T \mathbf{M}^t \left(\delta\boldsymbol{\theta}(\mathbf{q}, \mathbf{q}^t_{ref}) -\tilde{\delta\boldsymbol{\theta}} \right)
 \]</div>
-<p>where <span class="arithmatex">\(\mathbf{q}^t_{ref}\)</span> is the previous DOF of the affine body calculated from the external system. Users are responsible for providing and updating the <code>ref_dof_prev</code> attribute on the affine body instance.</p></div>
+<p>where <span class="arithmatex">\(\mathbf{q}^t_{ref}\)</span> is the previous DOF of the affine body calculated from the external system. Users are responsible for providing and updating the <code>ref_dof_prev</code> attribute on the affine body instance.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On the constraint geometry:</p>
+<p>On <code>joint</code>:</p>
+<ul>
+<li><code>delta_theta_tilde</code>: <span class="arithmatex">\(\tilde{\delta\boldsymbol{\theta}}\)</span> in the kinetic term above</li>
+<li><code>delta_theta</code>: <span class="arithmatex">\(\delta\boldsymbol{\theta}\)</span> in the kinetic term above</li>
+</ul>
+<p>On <code>joint_joint</code>:</p>
+<ul>
+<li><code>mass</code>: entries of <span class="arithmatex">\(\mathbf{M}^t\)</span> in the kinetic term above</li>
+</ul></div>
 
 
 

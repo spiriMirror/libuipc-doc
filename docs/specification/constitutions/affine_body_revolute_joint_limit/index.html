@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -778,6 +808,8 @@
       
         
       
+        
+      
     
     
     
@@ -1045,17 +1077,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#meaning-of-x" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Meaning of x
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#energy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1067,10 +1088,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conceptual-requirement" class="md-nav__link">
+  <a href="#meaning-of-x" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conceptual Requirement
+        Meaning of \(x\)
       
     </span>
   </a>
@@ -1078,10 +1099,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stored-attributes" class="md-nav__link">
+  <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stored Attributes
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -1196,6 +1228,34 @@
     
   
     External Articulation Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
   
 
     
@@ -2515,17 +2575,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#meaning-of-x" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Meaning of x
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#energy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2537,10 +2586,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conceptual-requirement" class="md-nav__link">
+  <a href="#meaning-of-x" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conceptual Requirement
+        Meaning of \(x\)
       
     </span>
   </a>
@@ -2548,10 +2597,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stored-attributes" class="md-nav__link">
+  <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stored Attributes
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -2577,53 +2637,15 @@
 
 <div><h1 id="affine-body-revolute-joint-limit">Affine Body Revolute Joint Limit</h1>
 <h2 id="670-affinebodyrevolutejointlimit">#670 AffineBodyRevoluteJointLimit</h2>
-<p>This constitution is an <strong>InterAffineBody extra constitution</strong> defined on a
-revolute-joint geometry. It adds a unilateral cubic penalty to the relative
-joint angle.</p>
-<h2 id="meaning-of-x">Meaning of <code>x</code></h2>
-<p>The revolute coordinate is evaluated in incremental form:</p>
-<div class="arithmatex">\[
-x=\theta^t+\delta,
-\]</div>
-<div class="arithmatex">\[
-\theta^t=\Delta\Theta(\mathbf{q}^{t-1},\mathbf{q}_{ref}), \quad
-\delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t-1}).
-\]</div>
-<p>Here:
-- <span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.
-- <span class="arithmatex">\(\mathbf{q}^{t-1}\)</span> is the previous-step DOF.
-- <span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.
-- <span class="arithmatex">\(\theta^t\)</span> is the accumulated revolute angle from the previous step.</p>
-<p>The joint axis direction is defined by edge order <code>p0 -&gt; p1</code>, i.e. <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
-<ul>
-<li><span class="arithmatex">\(x=0\)</span>: current relative revolute angle equals the reference angle.</li>
-<li><span class="arithmatex">\(x&gt;0\)</span>: positive rotation around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (right-hand rule; counterclockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</li>
-<li><span class="arithmatex">\(x&lt;0\)</span>: negative rotation around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (clockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</li>
-</ul>
-<p>For revolute joints:</p>
-<div class="arithmatex">\[
-\Delta\Theta(\mathbf{q}_a,\mathbf{q}_b)=
-\operatorname{atan2}
-\left(
-\sin\theta_a\cos\theta_b-\cos\theta_a\sin\theta_b,\;
-\cos\theta_a\cos\theta_b+\sin\theta_a\sin\theta_b
-\right),
-\]</div>
-<div class="arithmatex">\[
-\cos\theta=\frac{\hat{\mathbf{b}}_i\cdot\hat{\mathbf{b}}_j+\hat{\mathbf{n}}_i\cdot\hat{\mathbf{n}}_j}{2},
-\quad
-\sin\theta=\frac{\hat{\mathbf{n}}_i\cdot\hat{\mathbf{b}}_j-\hat{\mathbf{b}}_i\cdot\hat{\mathbf{n}}_j}{2}.
-\]</div>
-<p>The sign of <span class="arithmatex">\(x\)</span> follows the sign of <span class="arithmatex">\(\sin\theta\)</span> under this convention.
-The angle branch is <span class="arithmatex">\((-\pi,\pi]\)</span>.</p>
+<p><strong>Affine Body Revolute Joint Limit</strong> restricts the rotation angle of a <a href="../affine_body_revolute_joint/">Revolute Joint</a> to a specified range. When the joint angle goes beyond the lower or upper bound, a cubic penalty is applied. It is an InterAffineBody extra constitution defined on revolute-joint geometry.</p>
 <h2 id="energy">Energy</h2>
-<p>Let <span class="arithmatex">\(l,u\)</span> be lower/upper limits and <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
+<p>The limit adds an energy <span class="arithmatex">\(E(x)\)</span> where <span class="arithmatex">\(x\)</span> is the scalar joint angle (its exact meaning is given in <a href="#meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></a>). Let <span class="arithmatex">\(l,u\)</span> be lower/upper limits and <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
 <p>For normal range width (<span class="arithmatex">\(u&gt;l\)</span>):</p>
 <div class="arithmatex">\[
 E(x)=
 \begin{cases}
-0, &amp; l \le x \le u \\
 s\left(\frac{x-u}{u-l}\right)^3, &amp; x&gt;u \\
+0, &amp; l \le x \le u \\
 s\left(\frac{l-x}{u-l}\right)^3, &amp; x&lt;l
 \end{cases}
 \]</div>
@@ -2639,17 +2661,63 @@ s(l-x)^3, &amp; x&lt;l
 \end{cases}
 \]</div>
 <p>Boundary points are treated as in-range.</p>
-<h2 id="conceptual-requirement">Conceptual Requirement</h2>
+<h2 id="meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></h2>
+<p>The revolute coordinate is evaluated in incremental form:</p>
+<div class="arithmatex">\[
+x=\theta^t+\delta,
+\]</div>
+<div class="arithmatex">\[
+\theta^t=\Delta\Theta(\mathbf{q}^{t},\mathbf{q}_{ref}), \quad
+\delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t}).
+\]</div>
+<p>Here:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.</li>
+<li><span class="arithmatex">\(\mathbf{q}^{t}\)</span> is the previous-time-step DOF.</li>
+<li><span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.</li>
+<li><span class="arithmatex">\(\theta^t\)</span> is the accumulated revolute angle from the previous step.</li>
+</ul>
+<p>Note that <span class="arithmatex">\(\mathbf{q}\)</span> is the concatenation of the DOF of the two affine bodies connected by the prismatic joint.</p>
+<div class="arithmatex">\[
+\mathbf{q} =
+\begin{bmatrix}
+\mathbf{q}_i \\
+\mathbf{q}_j
+\end{bmatrix},
+\]</div>
+<p>The <a href="../affine_body_revolute_joint/">Revolute Joint</a> geometry is represented as an edge with two endpoints. The joint axis direction is defined by the order of the two endpoints giving <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
+<p><img alt="Revolute joint axis \(\hat{\mathbf{t}}\)" src="../media/external_articulation_revolute_constraint_fig1.drawio.svg"></p>
+<ul>
+<li><span class="arithmatex">\(x=0\)</span>: current relative revolute angle equals the reference angle.</li>
+<li><span class="arithmatex">\(x&gt;0\)</span>: positive rotation around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (right-hand rule; counterclockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</li>
+<li><span class="arithmatex">\(x&lt;0\)</span>: negative rotation around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (clockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</li>
+</ul>
+<p>For <a href="../affine_body_revolute_joint/">Revolute Joints</a>:</p>
+<div class="arithmatex">\[
+\Delta\Theta(\mathbf{q}_a,\mathbf{q}_b)=
+\operatorname{atan2}
+\left(
+\sin\theta_a\cos\theta_b-\cos\theta_a\sin\theta_b,\;
+\cos\theta_a\cos\theta_b+\sin\theta_a\sin\theta_b
+\right),
+\]</div>
+<div class="arithmatex">\[
+\cos\theta=\frac{\hat{\mathbf{b}}_i\cdot\hat{\mathbf{b}}_j+\hat{\mathbf{n}}_i\cdot\hat{\mathbf{n}}_j}{2},
+\quad
+\sin\theta=\frac{\hat{\mathbf{n}}_i\cdot\hat{\mathbf{b}}_j-\hat{\mathbf{b}}_i\cdot\hat{\mathbf{n}}_j}{2}.
+\]</div>
+<p>The sign of <span class="arithmatex">\(x\)</span> follows the sign of <span class="arithmatex">\(\sin\theta\)</span> under this convention.
+The angle branch is <span class="arithmatex">\((-\pi,\pi]\)</span>.</p>
+<h2 id="requirement">Requirement</h2>
 <p>This limit term is meaningful only on a geometry that already represents a
-revolute joint relation (base joint UID = 18). The limit augments that base
-relation as an extra constitution term.</p>
-<h2 id="stored-attributes">Stored Attributes</h2>
-<p>Per joint edge:
-- <code>limit/lower</code>
-- <code>limit/upper</code>
-- <code>limit/strength</code></p>
-<p>Geometry metadata:
-- extra constitution UID <code>670</code> in <code>meta.extra_constitution_uids</code>.</p></div>
+<a href="../affine_body_revolute_joint/">Revolute Joint</a> (UID=18). The limit augments that base relation as an extra constitution term.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On <code>edges</code>:</p>
+<ul>
+<li><code>limit/lower</code>: <span class="arithmatex">\(l\)</span> in the energy above</li>
+<li><code>limit/upper</code>: <span class="arithmatex">\(u\)</span> in the energy above</li>
+<li><code>limit/strength</code>: <span class="arithmatex">\(s\)</span> in the energy above</li>
+</ul></div>
 
 
 

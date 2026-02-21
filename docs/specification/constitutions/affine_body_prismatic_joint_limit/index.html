@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -778,6 +808,8 @@
       
         
       
+        
+      
     
     
     
@@ -989,17 +1021,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#meaning-of-x" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Meaning of x
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#energy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1011,10 +1032,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conceptual-requirement" class="md-nav__link">
+  <a href="#meaning-of-x" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conceptual Requirement
+        Meaning of \(x\)
       
     </span>
   </a>
@@ -1022,10 +1043,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stored-attributes" class="md-nav__link">
+  <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stored Attributes
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -1196,6 +1228,34 @@
     
   
     External Articulation Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
   
 
     
@@ -2515,17 +2575,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#meaning-of-x" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Meaning of x
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#energy" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2537,10 +2586,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conceptual-requirement" class="md-nav__link">
+  <a href="#meaning-of-x" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conceptual Requirement
+        Meaning of \(x\)
       
     </span>
   </a>
@@ -2548,10 +2597,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stored-attributes" class="md-nav__link">
+  <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Stored Attributes
+        Requirement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -2577,46 +2637,15 @@
 
 <div><h1 id="affine-body-prismatic-joint-limit">Affine Body Prismatic Joint Limit</h1>
 <h2 id="669-affinebodyprismaticjointlimit">#669 AffineBodyPrismaticJointLimit</h2>
-<p>This constitution is an <strong>InterAffineBody extra constitution</strong> defined on a
-prismatic-joint geometry. It adds a unilateral cubic penalty to the scalar
-joint coordinate.</p>
-<h2 id="meaning-of-x">Meaning of <code>x</code></h2>
-<p>The prismatic coordinate is evaluated in incremental form:</p>
-<div class="arithmatex">\[
-x=\theta^t+\delta,
-\]</div>
-<div class="arithmatex">\[
-\theta^t=\Delta\Theta(\mathbf{q}^{t-1},\mathbf{q}_{ref}), \quad
-\delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t-1}).
-\]</div>
-<p>Here:
-- <span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.
-- <span class="arithmatex">\(\mathbf{q}^{t-1}\)</span> is the previous-step DOF.
-- <span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.
-- <span class="arithmatex">\(\theta^t\)</span> is the accumulated prismatic coordinate from the previous step.</p>
-<p>The joint axis direction is defined by edge order <code>p0 -&gt; p1</code>, i.e. <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
-<ul>
-<li><span class="arithmatex">\(x=0\)</span>: current relative prismatic coordinate equals the reference coordinate.</li>
-<li><span class="arithmatex">\(x&gt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</li>
-<li><span class="arithmatex">\(x&lt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(-\hat{\mathbf{t}}\)</span>.</li>
-</ul>
-<p>Equivalent symmetric coordinate (same convention as external articulation):</p>
-<div class="arithmatex">\[
-\theta=
-\frac{
-(\mathbf{c}_j-\mathbf{c}_i)\cdot\hat{\mathbf{t}}_i
--
-(\mathbf{c}_i-\mathbf{c}_j)\cdot\hat{\mathbf{t}}_j
-}{2}.
-\]</div>
+<p><strong>Affine Body Prismatic Joint Limit</strong> restricts how far two bodies can slide relative to each other along a <a href="../affine_body_prismatic_joint/">Prismatic Joint</a> axis. When the joint translation goes outside a specified lower or upper bound, a cubic penalty is applied. It is an InterAffineBody extra constitution defined on prismatic-joint geometry.</p>
 <h2 id="energy">Energy</h2>
-<p>Let <span class="arithmatex">\(l,u\)</span> be lower/upper limits and <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
+<p>The limit adds an energy <span class="arithmatex">\(E(x)\)</span> where <span class="arithmatex">\(x\)</span> is the scalar joint coordinate (its exact meaning is given in <a href="#meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></a>). Let <span class="arithmatex">\(l,u\)</span> be lower/upper limits and <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
 <p>For normal range width (<span class="arithmatex">\(u&gt;l\)</span>):</p>
 <div class="arithmatex">\[
 E(x)=
 \begin{cases}
-0, &amp; l \le x \le u \\
 s\left(\frac{x-u}{u-l}\right)^3, &amp; x&gt;u \\
+0, &amp; l \le x \le u \\
 s\left(\frac{l-x}{u-l}\right)^3, &amp; x&lt;l
 \end{cases}
 \]</div>
@@ -2632,17 +2661,56 @@ s(l-x)^3, &amp; x&lt;l
 \end{cases}
 \]</div>
 <p>Boundary points are treated as in-range.</p>
-<h2 id="conceptual-requirement">Conceptual Requirement</h2>
+<h2 id="meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></h2>
+<p>The prismatic coordinate is evaluated in incremental form:</p>
+<div class="arithmatex">\[
+x=\theta^t+\delta,
+\]</div>
+<div class="arithmatex">\[
+\theta^t=\Delta\Theta(\mathbf{q}^{t},\mathbf{q}_{ref}), \quad
+\delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t}).
+\]</div>
+<p>Here:</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.</li>
+<li><span class="arithmatex">\(\mathbf{q}^{t}\)</span> is the previous-time-step DOF.</li>
+<li><span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.</li>
+<li><span class="arithmatex">\(\theta^t\)</span> is the accumulated prismatic coordinate from the previous step.</li>
+</ul>
+<p>Note that <span class="arithmatex">\(\mathbf{q}\)</span> is the concatenation of the DOF of the two affine bodies connected by the prismatic joint.</p>
+<div class="arithmatex">\[
+\mathbf{q} =
+\begin{bmatrix}
+\mathbf{q}_i \\
+\mathbf{q}_j
+\end{bmatrix},
+\]</div>
+<p>The <a href="../affine_body_prismatic_joint/">Prismatic Joint</a> geometry is represented as an edge with two endpoints. The joint axis direction is defined by the order from <span class="arithmatex">\(\mathbf{c}_i\)</span> to <span class="arithmatex">\(\mathbf{c}_j\)</span>, denoted <span class="arithmatex">\(\mathbf{c}_i \to \mathbf{c}_j\)</span>, giving <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
+<p><img alt="Prismatic joint axis \(\hat{\mathbf{t}}\)" src="../media/external_articulation_prismatic_constraint_fig1.drawio.svg"></p>
+<ul>
+<li><span class="arithmatex">\(x=0\)</span>: current relative prismatic coordinate equals the reference coordinate.</li>
+<li><span class="arithmatex">\(x&gt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</li>
+<li><span class="arithmatex">\(x&lt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(-\hat{\mathbf{t}}\)</span>.</li>
+</ul>
+<p>Equivalent symmetric coordinate (same convention as <a href="../external_articulation_constraint/">External Articulation Constraint</a>):</p>
+<div class="arithmatex">\[
+\theta=
+\frac{
+(\mathbf{c}_j-\mathbf{c}_i)\cdot\hat{\mathbf{t}}_i
+-
+(\mathbf{c}_i-\mathbf{c}_j)\cdot\hat{\mathbf{t}}_j
+}{2}.
+\]</div>
+<h2 id="requirement">Requirement</h2>
 <p>This limit term is meaningful only on a geometry that already represents a
-prismatic joint relation (base joint UID = 20). The limit augments that base
-relation as an extra constitution term.</p>
-<h2 id="stored-attributes">Stored Attributes</h2>
-<p>Per joint edge:
-- <code>limit/lower</code>
-- <code>limit/upper</code>
-- <code>limit/strength</code></p>
-<p>Geometry metadata:
-- extra constitution UID <code>669</code> in <code>meta.extra_constitution_uids</code>.</p></div>
+<a href="../affine_body_prismatic_joint/">Prismatic Joint</a> (UID=20). The limit augments that base relation as an extra constitution term.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On <code>edges</code>:</p>
+<ul>
+<li><code>limit/lower</code>: <span class="arithmatex">\(l\)</span> in the energy above</li>
+<li><code>limit/upper</code>: <span class="arithmatex">\(u\)</span> in the energy above</li>
+<li><code>limit/strength</code>: <span class="arithmatex">\(s\)</span> in the energy above</li>
+</ul></div>
 
 
 

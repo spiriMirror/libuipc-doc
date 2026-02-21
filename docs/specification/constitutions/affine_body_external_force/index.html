@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -778,6 +808,8 @@
       
         
       
+        
+      
     
     
     
@@ -926,6 +958,17 @@
     <span class="md-ellipsis">
       
         #666 AffineBodyExternalForce
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -1152,6 +1195,34 @@
     
   
     External Articulation Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
   
 
     
@@ -2470,6 +2541,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2519,7 +2601,12 @@ E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(
 \tilde{\mathbf{q}} = \mathbf{q}^t + \Delta t \cdot \mathbf{v}^t + \Delta t^2 \cdot (\mathbf{a}_{ext} + \mathbf{g}),
 \]</div>
 <p>where <span class="arithmatex">\(\mathbf{q}^t\)</span>, is the previous state vector at time <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\(\mathbf{v}^t\)</span> is the previous velocity vector at time <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\(\Delta t\)</span> is the time step size, and <span class="arithmatex">\(\mathbf{g}\)</span> is the gravitational acceleration.</p>
-<p>Users are allowed to modify the external force <span class="arithmatex">\(\mathbf{F}_{ext}\)</span> using the <code>uipc</code> Animator System interface during the simulation.</p></div>
+<p>Users are allowed to modify the external force <span class="arithmatex">\(\mathbf{F}_{ext}\)</span> using the <code>uipc</code> Animator System interface during the simulation.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On <code>instances</code>:</p>
+<ul>
+<li><code>external_force</code>: <span class="arithmatex">\(\mathbf{F}_{ext}\)</span> in the formulae above</li>
+</ul></div>
 
 
 

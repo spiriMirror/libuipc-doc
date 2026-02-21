@@ -302,6 +302,8 @@
       
         
       
+        
+      
     
     
     
@@ -450,6 +452,34 @@
     
   
     Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build_install/dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
   
 
     
@@ -742,6 +772,8 @@
       
         
           
+        
+      
         
       
         
@@ -1114,6 +1146,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../hookean_spring/" class="md-nav__link">
         
   
@@ -1318,6 +1378,17 @@
     <span class="md-ellipsis">
       
         #16 SoftTransformConstraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
       
     </span>
   </a>
@@ -2470,6 +2541,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2540,7 +2622,13 @@ a_{33}\\
 </ul>
 <p>The cross-terms use the geometric mean <span class="arithmatex">\(\sqrt{\eta_p \eta_a}\)</span> to maintain consistency between the position and affine constraints.</p>
 <p>The reason we use strength ratio is that the mass matrix <span class="arithmatex">\(\mathbf{M}\)</span> already contains the mass and inertia information, so that users only need to care about how strong the constraint is compared to the mass and inertia of the body, which is more intuitive.</p>
-<p>Because the constraint is "SOFT", we don't allow a too-strong strength which will lead to numerical instability. Normally, <span class="arithmatex">\(\eta_p\)</span> and <span class="arithmatex">\(\eta_a\)</span> are better in the range of <span class="arithmatex">\([0, 100]\)</span>.</p></div>
+<p>Because the constraint is "SOFT", we don't allow a too-strong strength which will lead to numerical instability. Normally, <span class="arithmatex">\(\eta_p\)</span> and <span class="arithmatex">\(\eta_a\)</span> are better in the range of <span class="arithmatex">\([0, 100]\)</span>.</p>
+<h2 id="attributes">Attributes</h2>
+<p>On <code>instances</code>:</p>
+<ul>
+<li><code>strength_ratio</code>: <span class="arithmatex">\((\eta_p, \eta_a)\)</span> in the kinetic term</li>
+<li><code>aim_transform</code>: target <span class="arithmatex">\(\tilde{\mathbf{q}}\)</span> in the kinetic term</li>
+</ul></div>
 
 
 
