@@ -517,6 +517,8 @@
       
         
       
+        
+      
     
     
     
@@ -665,6 +667,34 @@
     
   
     Performance Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/profiling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling
   
 
     
@@ -2518,10 +2548,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-engine-14" class="md-nav__link">
+  <a href="#function-engine-15" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function Engine [1/4]
+        function Engine [1/5]
       
     </span>
   </a>
@@ -2529,10 +2559,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-engine-24" class="md-nav__link">
+  <a href="#function-engine-25" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function Engine [2/4]
+        function Engine [2/5]
       
     </span>
   </a>
@@ -2540,10 +2570,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-engine-34" class="md-nav__link">
+  <a href="#function-engine-35" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function Engine [3/4]
+        function Engine [3/5]
       
     </span>
   </a>
@@ -2551,10 +2581,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-engine-44" class="md-nav__link">
+  <a href="#function-engine-45" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function Engine [4/4]
+        function Engine [4/5]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-engine-55" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Engine [5/5]
       
     </span>
   </a>
@@ -2712,19 +2753,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-engine-14"><strong>Engine</strong></a> (std::string_view backend_name, std::string_view workspace="./", const Json &amp; config=default_config()) <br></td>
+<td style="text-align: left;"><a href="#function-engine-15"><strong>Engine</strong></a> (std::string_view backend_name, std::string_view workspace="./", const Json &amp; config=default_config()) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-engine-24"><strong>Engine</strong></a> (std::string_view backend_name, S&lt; <a href="../classuipc_1_1core_1_1IEngine/"><strong>IEngine</strong></a> &gt; overrider, std::string_view workspace="./", const Json &amp; config=default_config()) <br></td>
+<td style="text-align: left;"><a href="#function-engine-25"><strong>Engine</strong></a> (std::string_view backend_name, S&lt; <a href="../classuipc_1_1core_1_1IEngine/"><strong>IEngine</strong></a> &gt; overrider, std::string_view workspace="./", const Json &amp; config=default_config()) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-engine-34"><strong>Engine</strong></a> (const <a href="./"><strong>Engine</strong></a> &amp;) = delete<br></td>
+<td style="text-align: left;"><a href="#function-engine-35"><strong>Engine</strong></a> (const <a href="./"><strong>Engine</strong></a> &amp;) = delete<br></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-engine-44"><strong>Engine</strong></a> (<a href="./"><strong>Engine</strong></a> &amp;&amp;) noexcept<br></td>
+<td style="text-align: left;"><a href="#function-engine-45"><strong>Engine</strong></a> (<a href="./"><strong>Engine</strong></a> &amp;&amp;) noexcept<br></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-engine-55"><strong>Engine</strong></a> (S&lt; <a href="../classuipc_1_1core_1_1internal_1_1Engine/"><strong>internal::Engine</strong></a> &gt; e) noexcept<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">std::string_view</td>
@@ -2776,7 +2821,7 @@
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-engine-14">function Engine [1/4]</h3>
+<h3 id="function-engine-15">function Engine [1/5]</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">backend_name</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">workspace</span><span class="o">=</span><span class="s">"./"</span><span class="p">,</span>
@@ -2785,7 +2830,7 @@
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-engine-24">function Engine [2/4]</h3>
+<h3 id="function-engine-25">function Engine [2/5]</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">backend_name</span><span class="p">,</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IEngine</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">overrider</span><span class="p">,</span>
@@ -2795,66 +2840,73 @@
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-engine-34">function Engine [3/4]</h3>
+<h3 id="function-engine-35">function Engine [3/5]</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-engine-44">function Engine [4/4]</h3>
+<h3 id="function-engine-45">function Engine [4/5]</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;&amp;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-engine-55">function Engine [5/5]</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">internal</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-backend_name">function backend_name</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">backend_name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">backend_name</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-features">function features</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">const</span><span class="w"> </span><span class="n">FeatureCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">features</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="n">FeatureCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">features</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-operator">function operator=</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-operator_1">function operator=</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;&amp;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="n">Engine</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-status">function status</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">EngineStatusCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">status</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">EngineStatusCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">status</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-to_json">function to_json</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">to_json</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-workspace">function workspace</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">workspace</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">workspace</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-engine">function ~Engine</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::~</span><span class="n">Engine</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::~</span><span class="n">Engine</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-default_config">function default_config</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
