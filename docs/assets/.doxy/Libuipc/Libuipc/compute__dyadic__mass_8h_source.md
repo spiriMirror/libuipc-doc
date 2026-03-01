@@ -23,6 +23,13 @@ UIPC_GEOMETRY_API void compute_dyadic_mass(const SimplicialComplex& sc,
                                            Vector3& m_x_bar,
                                            //tex: $$ \sum \mathbf{m} \bar{\mathbf{x}} \cdot \bar{\mathbf{x}}^T$$
                                            Matrix3x3& m_x_bar_x_bar);
+
+UIPC_GEOMETRY_API void compute_dyadic_mass(const SimplicialComplex& sc,
+                                           Float                    rho,
+                                           Float                    thickness,
+                                           Float&                   m,
+                                           Vector3&                 m_x_bar,
+                                           Matrix3x3& m_x_bar_x_bar);
 }  // namespace uipc::geometry::affine_body
 ```
 

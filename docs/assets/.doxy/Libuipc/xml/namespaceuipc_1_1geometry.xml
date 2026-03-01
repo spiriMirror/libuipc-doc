@@ -339,6 +339,51 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/closure.h" line="15" column="38" declfile="include/uipc/geometry/utils/closure.h" declline="15" declcolumn="38"/>
       </memberdef>
+      <memberdef kind="function" id="compute__mesh__area_8h_1a97cb40756b5d5b665a5faaaa7fcc807a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Float</type>
+        <definition>UIPC_GEOMETRY_API Float uipc::geometry::compute_shell_volume</definition>
+        <argsstring>(const SimplicialComplex &amp;sc, Float thickness)</argsstring>
+        <name>compute_shell_volume</name>
+        <qualifiedname>uipc::geometry::compute_shell_volume</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>thickness</declname>
+        </param>
+        <briefdescription>
+<para>Compute the effective volume of a triangle mesh treated as a thin shell. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sums <computeroutput>area_i * 2r</computeroutput> over all triangles, where <computeroutput>area_i = |e1 x e2| / 2</computeroutput> and <computeroutput>r</computeroutput> is the thickness (radius / half-thickness).</para>
+<para>Works on open (non-closed) meshes. Requires <computeroutput>sc.dim() == 2</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex (triangle mesh). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shell thickness radius <computeroutput>r</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The effective volume (= total area * 2r). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/compute_mesh_area.h" line="18" column="25" declfile="include/uipc/geometry/utils/compute_mesh_area.h" declline="18" declcolumn="25"/>
+      </memberdef>
       <memberdef kind="function" id="compute__mesh__d__hat_8h_1a03a28830544647d46b84211de351f11e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; Float &gt; &gt;</type>
         <definition>UIPC_GEOMETRY_API S&lt; AttributeSlot&lt; Float &gt; &gt; uipc::geometry::compute_mesh_d_hat</definition>
@@ -380,6 +425,51 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/uipc/geometry/utils/compute_mesh_d_hat.h" line="12" column="21" declfile="include/uipc/geometry/utils/compute_mesh_d_hat.h" declline="12" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="compute__mesh__length_8h_1a5dcb01de4fe781ef814e63de9cb8502d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Float</type>
+        <definition>UIPC_GEOMETRY_API Float uipc::geometry::compute_rod_volume</definition>
+        <argsstring>(const SimplicialComplex &amp;sc, Float thickness)</argsstring>
+        <name>compute_rod_volume</name>
+        <qualifiedname>uipc::geometry::compute_rod_volume</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>thickness</declname>
+        </param>
+        <briefdescription>
+<para>Compute the effective volume of an edge mesh treated as a thin rod. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sums <computeroutput>length_i * pi * r^2</computeroutput> over all edges, where <computeroutput>length_i = |e1|</computeroutput> and <computeroutput>r</computeroutput> is the thickness (cross-section radius).</para>
+<para>Requires <computeroutput>sc.dim() == 1</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex (edge mesh). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rod cross-section radius <computeroutput>r</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The effective volume (= total length * pi * r^2). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/compute_mesh_length.h" line="18" column="25" declfile="include/uipc/geometry/utils/compute_mesh_length.h" declline="18" declcolumn="25"/>
       </memberdef>
       <memberdef kind="function" id="compute__mesh__volume_8h_1a68556e8706671a0e39893c116d9c806d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API Float</type>

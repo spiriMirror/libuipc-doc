@@ -73,6 +73,8 @@ UIPC_BUILTIN_ATTRIBUTE(dof_count);
 UIPC_BUILTIN_ATTRIBUTE(global_vertex_offset);
 
 UIPC_BUILTIN_ATTRIBUTE(self_collision);
+
+UIPC_BUILTIN_ATTRIBUTE(is_codim);
 #endif
 ```
 

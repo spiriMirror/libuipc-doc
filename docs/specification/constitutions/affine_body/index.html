@@ -1019,6 +1019,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#shell-codim-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell (Codim 2D)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rod-codim-1d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rod (Codim 1D)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-orthopotential" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2657,6 +2679,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#shell-codim-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell (Codim 2D)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rod-codim-1d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rod (Codim 1D)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-orthopotential" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2774,6 +2818,17 @@ z \\
 \end{bmatrix}
 +\mathbf{p}
 \]</div>
+<h2 id="shell-codim-2d">Shell (Codim 2D)</h2>
+<p>Codim 2D variant of <code>AffineBodyConstitution</code> for triangle meshes (<code>dim == 2</code>).</p>
+<p>The shell is modelled as a uniform slab of full <code>thickness</code> <span class="arithmatex">\(2r\)</span>, giving an effective volume per triangle <span class="arithmatex">\(i\)</span>:</p>
+<div class="arithmatex">\[\bar{v}_i = A_i \cdot 2r\]</div>
+<p>where <span class="arithmatex">\(A_i\)</span> is the triangle area and <span class="arithmatex">\(r\)</span> is the thickness radius.</p>
+<h2 id="rod-codim-1d">Rod (Codim 1D)</h2>
+<p>Codim 1D variant of <code>AffineBodyConstitution</code> for edge meshes (<code>dim == 1</code>).</p>
+<p>The rod is modelled as a cylinder of circular cross-section with <code>thickness</code> <span class="arithmatex">\(r\)</span>, giving an effective volume per segment <span class="arithmatex">\(i\)</span>:</p>
+<div class="arithmatex">\[\bar{v}_i = L_i \cdot \pi r^2\]</div>
+<p>where <span class="arithmatex">\(L_i\)</span> is the segment length.</p>
+<hr>
 <h2 id="1-orthopotential">#1 OrthoPotential</h2>
 <p>Formulation: <a href="https://dl.acm.org/doi/10.1145/3528223.3530064">Affine body dynamics: fast, stable and intersection-free simulation of stiff materials</a> (eq. 7)</p>
 <p>Shape preservation energy per body:</p>
@@ -2791,7 +2846,7 @@ Practicalities (Now With Code!)
 <div class="arithmatex">\[
 V = \kappa \bar{v} \|\mathbf{A}-\mathbf{R}\|_F^2 = \kappa \bar{v} \|\mathbf{S}-\mathbf{I}\|_F^2
 \]</div>
-<p>where <span class="arithmatex">\(\mathbf{R}\mathbf{S}\)</span> is the polar decomposition of <span class="arithmatex">\(\mathbf{A}\)</span>. Each concrete Affine Body constitution documents only the attributes it introduces and how they map to its formulae.</p></div>
+<p>where <span class="arithmatex">\(\mathbf{R}\mathbf{S}\)</span> is the polar decomposition of <span class="arithmatex">\(\mathbf{A}\)</span>. Each concrete Affine Body constitution documents only the attributes it introduces and how they map to its formulas.</p></div>
 
 
 

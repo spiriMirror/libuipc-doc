@@ -31,7 +31,9 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**uipc::builtin::UIDInfoCreator**](classuipc_1_1builtin_1_1UIDInfoCreator.md) 
 * **class** [**uipc::builtin::details::UIDRegister::CreatorInfo**](classuipc_1_1builtin_1_1details_1_1UIDRegister_1_1CreatorInfo.md) 
 * **class** [**uipc::constitution::IConstitution**](classuipc_1_1constitution_1_1IConstitution.md)     
-    * **class** [**uipc::constitution::AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md) 
+    * **class** [**uipc::constitution::AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md)     
+        * **class** [**uipc::constitution::AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md) _Codimensional 1D (rod) affine body constitution._ 
+        * **class** [**uipc::constitution::AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md) _Codimensional 2D (shell) affine body constitution._ 
     * **class** [**uipc::constitution::AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md) 
     * **class** [**uipc::constitution::Constraint**](classuipc_1_1constitution_1_1Constraint.md)     
         * **class** [**uipc::constitution::AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md) 

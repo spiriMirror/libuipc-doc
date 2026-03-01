@@ -2559,6 +2559,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-compute_dyadic_mass_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function compute_dyadic_mass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-q_to_transform" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2644,6 +2655,10 @@
 <td style="text-align: left;"><a href="#function-compute_dyadic_mass"><strong>compute_dyadic_mass</strong></a> (const <a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>SimplicialComplex</strong></a> &amp; sc, Float rho, Float &amp; m, Vector3 &amp; m_x_bar, Matrix3x3 &amp; m_x_bar_x_bar) <br><em>Compute the dyadic mass of a simplicial complex.</em></td>
 </tr>
 <tr>
+<td style="text-align: right;">UIPC_GEOMETRY_API void</td>
+<td style="text-align: left;"><a href="#function-compute_dyadic_mass"><strong>compute_dyadic_mass</strong></a> (const <a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>SimplicialComplex</strong></a> &amp; sc, Float rho, Float thickness, Float &amp; m, Vector3 &amp; m_x_bar, Matrix3x3 &amp; m_x_bar_x_bar) <br><em>Compute the dyadic mass of a codimensional simplicial complex (shell or rod).</em></td>
+</tr>
+<tr>
 <td style="text-align: right;">Matrix4x4</td>
 <td style="text-align: left;"><a href="#function-q_to_transform"><strong>q_to_transform</strong></a> (const Vector12 &amp; q) <br></td>
 </tr>
@@ -2696,31 +2711,58 @@
 </ul>
 <hr>
 
-<h3 id="function-q_to_transform">function q_to_transform</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">q_to_transform</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">q</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span>
+<h3 id="function-compute_dyadic_mass_1">function compute_dyadic_mass</h3>
+<p><em>Compute the dyadic mass of a codimensional simplicial complex (shell or rod).</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">compute_dyadic_mass</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">rho</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">thickness</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">Matrix3x3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar_x_bar</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
+<p>Integrates the mass density over the effective 3D volume of the codim body, accounting for thickness to produce an invertible 12×12 ABD mass matrix.</p>
+<ul>
+<li>dim==2 (shell): direct area integration × 2r, plus normal-direction correction.</li>
+<li>dim==1 (rod): segment integration × π r², plus cross-section correction.</li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sc</code> The simplicial complex (triangle mesh for shell, edge mesh for rod). </li>
+<li><code>rho</code> Volume mass density (kg/m³). </li>
+<li><code>thickness</code> Thickness radius <code>r</code> (half-thickness for shell, cross-section radius for rod). </li>
+<li><code>m</code> The total mass. </li>
+<li><code>m_x_bar</code> The total mass times the center of mass. </li>
+<li><code>m_x_bar_x_bar</code> The second dyadic moment (including thickness correction). </li>
+</ul>
 <hr>
 
-<h3 id="function-q_v_to_transform_v">function q_v_to_transform_v</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">q_v_to_transform_v</span><span class="w"> </span><span class="p">(</span>
+<h3 id="function-q_to_transform">function q_to_transform</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">q_to_transform</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">q</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-transform_to_q">function transform_to_q</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">transform_to_q</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">trans</span>
+<h3 id="function-q_v_to_transform_v">function q_v_to_transform_v</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">q_v_to_transform_v</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">q</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-transform_v_to_q_v">function transform_v_to_q_v</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">transform_v_to_q_v</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">transform_v</span>
+<h3 id="function-transform_to_q">function transform_to_q</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">transform_to_q</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">trans</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-transform_v_to_q_v">function transform_v_to_q_v</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">transform_v_to_q_v</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">transform_v</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 

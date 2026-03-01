@@ -59,6 +59,7 @@
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a06e428ed9dd7840a551956fa98c9a28a" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a52d4f8c7afcf705673990aba408d9714" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a4df63da01793d6c48e9e09c6a3f081a4" kind="function"><name>get_uid</name></member>
+    <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a9ee56f46c5c9804bfaac0e47f238c35a" kind="function"><name>setup_abd_attributes</name></member>
   </compound>
   <compound refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint" kind="class"><name>uipc::constitution::AffineBodyDrivingRevoluteJoint</name>
     <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1ac66197be11853f87c8f261ada4e9dfd7" kind="typedef"><name>Base</name></member>
@@ -128,6 +129,14 @@
     <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit_1a934d542f72a628da0bab835d27d505da" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit_1a6f8e8ef885063ac56b00a9fc950d7e9d" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit_1a5e5c41ac10a0c7f0a6563e1c644ce658" kind="function"><name>get_uid</name></member>
+  </compound>
+  <compound refid="classuipc_1_1constitution_1_1AffineBodyRod" kind="class"><name>uipc::constitution::AffineBodyRod</name>
+    <member refid="classuipc_1_1constitution_1_1AffineBodyRod_1a6999562702d0909d7d5eb82d301b94d7" kind="function"><name>AffineBodyRod</name></member>
+    <member refid="classuipc_1_1constitution_1_1AffineBodyRod_1a3375a50a1b6b5bf8b20f2e1b2a9add53" kind="function"><name>apply_to</name></member>
+  </compound>
+  <compound refid="classuipc_1_1constitution_1_1AffineBodyShell" kind="class"><name>uipc::constitution::AffineBodyShell</name>
+    <member refid="classuipc_1_1constitution_1_1AffineBodyShell_1a9d5b89626310a0f09c79d44072fa1082" kind="function"><name>AffineBodyShell</name></member>
+    <member refid="classuipc_1_1constitution_1_1AffineBodyShell_1aab1f599dcdbda98ff3ca1f834610fab4" kind="function"><name>apply_to</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature" kind="class"><name>uipc::core::AffineBodyStateAccessorFeature</name>
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1afcb25872a17a5d11e64ad9c47bca987e" kind="variable"><name>FeatureName</name></member>
@@ -2429,7 +2438,9 @@
     <member refid="apply__region_8h_1ab0207d614bc7e6a944dc5722b5051299" kind="function"><name>apply_region</name></member>
     <member refid="apply__transform_8h_1a438613fb33e8483d363b89d097ec0d65" kind="function"><name>apply_transform</name></member>
     <member refid="closure_8h_1a7b4fec03c6527d1d65cc4a5d2fa17877" kind="function"><name>facet_closure</name></member>
+    <member refid="compute__mesh__area_8h_1a97cb40756b5d5b665a5faaaa7fcc807a" kind="function"><name>compute_shell_volume</name></member>
     <member refid="compute__mesh__d__hat_8h_1a03a28830544647d46b84211de351f11e" kind="function"><name>compute_mesh_d_hat</name></member>
+    <member refid="compute__mesh__length_8h_1a5dcb01de4fe781ef814e63de9cb8502d" kind="function"><name>compute_rod_volume</name></member>
     <member refid="compute__mesh__volume_8h_1a68556e8706671a0e39893c116d9c806d" kind="function"><name>compute_mesh_volume</name></member>
     <member refid="compute__vertex__volume_8h_1a6013e421d0113faf1e74929dc3d5fa97" kind="function"><name>compute_vertex_volume</name></member>
     <member refid="geometry_2utils_2constitution__type_8h_1a34cc681facdb55c913852f6c2b86710f" kind="function"><name>constitution_type</name></member>
@@ -2468,6 +2479,7 @@
   <compound refid="namespaceuipc_1_1geometry_1_1affine__body" kind="namespace"><name>uipc::geometry::affine_body</name>
     <member refid="compute__body__force_8h_1ad9461f8d0d720c9b7e21ba32ddc219e9" kind="function"><name>compute_body_force</name></member>
     <member refid="compute__dyadic__mass_8h_1a6a37eab2820f68aab66a17b0c63ea7ed" kind="function"><name>compute_dyadic_mass</name></member>
+    <member refid="compute__dyadic__mass_8h_1a2b27b3605ea774f3b148b154af8b6691" kind="function"><name>compute_dyadic_mass</name></member>
     <member refid="transform_8h_1a15de13dec89d688ef24afa2541d977a6" kind="function"><name>q_to_transform</name></member>
     <member refid="transform_8h_1aa8e34d5d8c4bcb4b92f7cb097b7fda75" kind="function"><name>transform_to_q</name></member>
     <member refid="transform_8h_1a9bb4af02ba657e420f8d00c88c67607e" kind="function"><name>q_v_to_transform_v</name></member>
@@ -2684,6 +2696,10 @@
   </compound>
   <compound refid="affine__body__revolute__joint__limit_8h" kind="file"><name>affine_body_revolute_joint_limit.h</name>
   </compound>
+  <compound refid="affine__body__rod_8h" kind="file"><name>affine_body_rod.h</name>
+  </compound>
+  <compound refid="affine__body__shell_8h" kind="file"><name>affine_body_shell.h</name>
+  </compound>
   <compound refid="arap_8h" kind="file"><name>arap.h</name>
   </compound>
   <compound refid="baraff__witkin__shell_8h" kind="file"><name>baraff_witkin_shell.h</name>
@@ -2872,7 +2888,11 @@
   </compound>
   <compound refid="closure_8h" kind="file"><name>closure.h</name>
   </compound>
+  <compound refid="compute__mesh__area_8h" kind="file"><name>compute_mesh_area.h</name>
+  </compound>
   <compound refid="compute__mesh__d__hat_8h" kind="file"><name>compute_mesh_d_hat.h</name>
+  </compound>
+  <compound refid="compute__mesh__length_8h" kind="file"><name>compute_mesh_length.h</name>
   </compound>
   <compound refid="compute__mesh__volume_8h" kind="file"><name>compute_mesh_volume.h</name>
   </compound>

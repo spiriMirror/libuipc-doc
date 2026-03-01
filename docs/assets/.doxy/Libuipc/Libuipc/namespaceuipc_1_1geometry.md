@@ -113,6 +113,8 @@
 |  UIPC\_CORE\_API void | [**check\_view**](#function-check_view) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) \* slot) <br> |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; Float &gt; &gt; | [**compute\_mesh\_d\_hat**](#function-compute_mesh_d_hat) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R, Float max\_d\_hat=std::numeric\_limits&lt; Float &gt;::max()) <br>_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._ |
 |  UIPC\_GEOMETRY\_API Float | [**compute\_mesh\_volume**](#function-compute_mesh_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Compute the volume of the simplicial complex._  |
+|  UIPC\_GEOMETRY\_API Float | [**compute\_rod\_volume**](#function-compute_rod_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float thickness) <br>_Compute the effective volume of an edge mesh treated as a thin rod._  |
+|  UIPC\_GEOMETRY\_API Float | [**compute\_shell\_volume**](#function-compute_shell_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float thickness) <br>_Compute the effective volume of a triangle mesh treated as a thin shell._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; Float &gt; &gt; | [**compute\_vertex\_volume**](#function-compute_vertex_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br> |
 |  UIPC\_GEOMETRY\_API std::string | [**constitution\_type**](#function-constitution_type) (const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & geo) <br> |
 |  Float UIPC\_GEOMETRY\_API | [**edge\_edge\_squared\_distance**](#function-edge_edge_squared_distance) (const Vector3 & Ea0, const Vector3 & Ea1, const Vector3 & Eb0, const Vector3 & Eb1) <br> |
@@ -371,6 +373,90 @@ Only tetmesh and closed trimesh are supported.
 **Returns:**
 
 The volume of the simplicial complex. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function compute\_rod\_volume 
+
+_Compute the effective volume of an edge mesh treated as a thin rod._ 
+```C++
+UIPC_GEOMETRY_API Float uipc::geometry::compute_rod_volume (
+    const SimplicialComplex & sc,
+    Float thickness
+) 
+```
+
+
+
+Sums `length_i * pi * r^2` over all edges, where `length_i = |e1|` and `r` is the thickness (cross-section radius).
+
+
+Requires `sc.dim() == 1`.
+
+
+
+
+**Parameters:**
+
+
+* `sc` The simplicial complex (edge mesh). 
+* `thickness` The rod cross-section radius `r`. 
+
+
+
+**Returns:**
+
+The effective volume (= total length \* pi \* r^2). 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function compute\_shell\_volume 
+
+_Compute the effective volume of a triangle mesh treated as a thin shell._ 
+```C++
+UIPC_GEOMETRY_API Float uipc::geometry::compute_shell_volume (
+    const SimplicialComplex & sc,
+    Float thickness
+) 
+```
+
+
+
+Sums `area_i * 2r` over all triangles, where `area_i = |e1 x e2| / 2` and `r` is the thickness (radius / half-thickness).
+
+
+Works on open (non-closed) meshes. Requires `sc.dim() == 2`.
+
+
+
+
+**Parameters:**
+
+
+* `sc` The simplicial complex (triangle mesh). 
+* `thickness` The shell thickness radius `r`. 
+
+
+
+**Returns:**
+
+The effective volume (= total area \* 2r). 
 
 
 

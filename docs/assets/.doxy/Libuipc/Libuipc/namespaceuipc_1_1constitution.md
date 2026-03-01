@@ -38,6 +38,8 @@
 | class | [**AffineBodyPrismaticJointLimit**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit.md) <br> |
 | class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) <br> |
 | class | [**AffineBodyRevoluteJointLimit**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit.md) <br> |
+| class | [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md) <br>_Codimensional 1D (rod) affine body constitution._  |
+| class | [**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md) <br>_Codimensional 2D (shell) affine body constitution._  |
 | class | [**Constraint**](classuipc_1_1constitution_1_1Constraint.md) <br> |
 | class | [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md) <br> |
 | class | [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) <br> |

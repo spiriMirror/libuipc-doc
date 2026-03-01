@@ -16,6 +16,7 @@
 Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstitution.md)
 
 
+Inherited by the following classes: [uipc::constitution::AffineBodyRod](classuipc_1_1constitution_1_1AffineBodyRod.md),  [uipc::constitution::AffineBodyShell](classuipc_1_1constitution_1_1AffineBodyShell.md)
 
 
 
@@ -144,6 +145,7 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 | Type | Name |
 | ---: | :--- |
 | virtual U64 | [**get\_uid**](#function-get_uid) () noexcept override const<br> |
+|  void | [**setup\_abd\_attributes**](#function-setup_abd_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume) const<br>_Common ABD attribute setup without volume computation._  |
 
 
 ## Protected Functions inherited from uipc::constitution::IConstitution
@@ -238,6 +240,32 @@ virtual U64 uipc::constitution::AffineBodyConstitution::get_uid () noexcept over
 
 Implements [*uipc::constitution::IConstitution::get\_uid*](classuipc_1_1constitution_1_1IConstitution.md#function-get_uid)
 
+
+<hr>
+
+
+
+### function setup\_abd\_attributes 
+
+_Common ABD attribute setup without volume computation._ 
+```C++
+void uipc::constitution::AffineBodyConstitution::setup_abd_attributes (
+    geometry::SimplicialComplex & sc,
+    Float kappa,
+    Float mass_density,
+    Float volume
+) const
+```
+
+
+
+Sets constitution\_uid, transforms, dof\_offset, dof\_count, is\_fixed, is\_dynamic, external\_kinetic, velocity, self\_collision, kappa, volume, and mass\_density attributes.
+
+
+Subclasses ([**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md), [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md)) call this with their own pre-computed volume instead of compute\_mesh\_volume(). 
+
+
+        
 
 <hr>
 

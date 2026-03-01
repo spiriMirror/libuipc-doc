@@ -114,6 +114,101 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h" line="23" column="24" declfile="include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h" declline="23" declcolumn="24"/>
       </memberdef>
+      <memberdef kind="function" id="compute__dyadic__mass_8h_1a2b27b3605ea774f3b148b154af8b6691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API void</type>
+        <definition>UIPC_GEOMETRY_API void uipc::geometry::affine_body::compute_dyadic_mass</definition>
+        <argsstring>(const SimplicialComplex &amp;sc, Float rho, Float thickness, Float &amp;m, Vector3 &amp;m_x_bar, Matrix3x3 &amp;m_x_bar_x_bar)</argsstring>
+        <name>compute_dyadic_mass</name>
+        <qualifiedname>uipc::geometry::affine_body::compute_dyadic_mass</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>rho</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>thickness</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>m_x_bar</declname>
+        </param>
+        <param>
+          <type>Matrix3x3 &amp;</type>
+          <declname>m_x_bar_x_bar</declname>
+        </param>
+        <briefdescription>
+<para>Compute the dyadic mass of a codimensional simplicial complex (shell or rod). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Integrates the mass density over the effective 3D volume of the codim body, accounting for thickness to produce an invertible 12×12 ABD mass matrix.</para>
+<para><itemizedlist>
+<listitem><para>dim==2 (shell): direct area integration × 2r, plus normal-direction correction.</para>
+</listitem><listitem><para>dim==1 (rod): segment integration × π r², plus cross-section correction.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex (triangle mesh for shell, edge mesh for rod). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume mass density (kg/m³). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thickness radius <computeroutput>r</computeroutput> (half-thickness for shell, cross-section radius for rod). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total mass. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">m_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total mass times the center of mass. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">m_x_bar_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second dyadic moment (including thickness correction). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h" line="48" column="24" declfile="include/uipc/geometry/utils/affine_body/compute_dyadic_mass.h" declline="48" declcolumn="24"/>
+      </memberdef>
       <memberdef kind="function" id="transform_8h_1a15de13dec89d688ef24afa2541d977a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Matrix4x4</type>
         <definition>Matrix4x4 uipc::geometry::affine_body::q_to_transform</definition>

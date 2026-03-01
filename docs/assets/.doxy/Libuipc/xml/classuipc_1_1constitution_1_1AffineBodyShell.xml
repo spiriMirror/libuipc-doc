@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1AffineBodyShell" kind="class" language="C++" prot="public">
+    <compoundname>uipc::constitution::AffineBodyShell</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1AffineBodyConstitution" prot="public" virt="non-virtual">uipc::constitution::AffineBodyConstitution</basecompoundref>
+    <includes refid="affine__body__shell_8h" local="no">affine_body_shell.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyShell_1a9d5b89626310a0f09c79d44072fa1082" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::AffineBodyShell::AffineBodyShell</definition>
+        <argsstring>(const Json &amp;config=default_config()) noexcept</argsstring>
+        <name>AffineBodyShell</name>
+        <qualifiedname>uipc::constitution::AffineBodyShell::AffineBodyShell</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_shell.h" line="19" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyShell_1aab1f599dcdbda98ff3ca1f834610fab4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyShell::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float kappa, Float mass_density=1e3, Float thickness=0.01) const</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyShell::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>kappa</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>mass_density</declname>
+          <defval>1e3</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>thickness</declname>
+          <defval>0.01</defval>
+        </param>
+        <briefdescription>
+<para>Apply the shell constitution to a 2D simplicial complex. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The triangle mesh (dim == 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kappa</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stiffness parameter for shape energy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mass_density</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume mass density (kg/m³). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thickness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shell thickness radius <computeroutput>r</computeroutput> (effective slab thickness = 2r). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_shell.h" line="29" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Codimensional 2D (shell) affine body constitution. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Convenience subclass of <ref refid="classuipc_1_1constitution_1_1AffineBodyConstitution" kindref="compound">AffineBodyConstitution</ref> for open triangle meshes treated as thin shells with a given thickness.</para>
+<para>Uses the same UID as <ref refid="classuipc_1_1constitution_1_1AffineBodyConstitution" kindref="compound">AffineBodyConstitution</ref> (OrthoPotential = 1 by default). Sets <computeroutput>builtin::is_codim = 1</computeroutput> on the geometry meta so the backend uses the codim dyadic mass computation path. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>uipc::constitution::AffineBodyConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyShell</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyShell"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>uipc::constitution::AffineBodyConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyShell</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyShell"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/affine_body_shell.h" line="16" column="1" bodyfile="include/uipc/constitution/affine_body_shell.h" bodystart="17" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a02e97187d782b484f8977cfcf9dbdb6c" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>AffineBodyConstitution</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyShell_1a9d5b89626310a0f09c79d44072fa1082" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>AffineBodyShell</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyShell_1aab1f599dcdbda98ff3ca1f834610fab4" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a06e428ed9dd7840a551956fa98c9a28a" prot="public" virt="non-virtual" ambiguityscope="uipc::constitution::AffineBodyConstitution::"><scope>uipc::constitution::AffineBodyShell</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a0f3d62e8a33312859ce482ba8538949c" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>create_material</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a52d4f8c7afcf705673990aba408d9714" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a4df63da01793d6c48e9e09c6a3f081a4" prot="protected" virt="virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a9ee56f46c5c9804bfaac0e47f238c35a" prot="protected" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>setup_abd_attributes</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::AffineBodyShell</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

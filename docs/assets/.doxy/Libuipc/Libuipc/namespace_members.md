@@ -27,6 +27,8 @@
 * **check\_view** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_mesh\_d\_hat** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_mesh\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_rod\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **compute\_shell\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_vertex\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **constitution\_type** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_body\_force** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
