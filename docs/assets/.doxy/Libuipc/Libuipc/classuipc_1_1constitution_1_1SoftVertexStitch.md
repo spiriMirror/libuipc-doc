@@ -278,6 +278,7 @@ geometry::Geometry uipc::constitution::SoftVertexStitch::create_geometry (
 * `aim_geo_slots` The slots of the two geometries to be stitched 
 * `stitched_vert_ids` Each element is a pair of vertex ids, the first one is from the first geometry, the second one is from the second geometry 
 * `kappa` The stiffness of the stitch constraint 
+* `rest_length` The rest length of the spring. When 0 (default), the harmonic energy E=0.5\*k\*\|\|x-y\|\|^2 is used, which has no singularity at zero distance. 
 
 
 

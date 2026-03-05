@@ -60,7 +60,9 @@
 | class | [**RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md) <br> |
 | class | [**SoftPositionConstraint**](classuipc_1_1constitution_1_1SoftPositionConstraint.md) <br> |
 | class | [**SoftTransformConstraint**](classuipc_1_1constitution_1_1SoftTransformConstraint.md) <br> |
+| class | [**SoftVertexEdgeStitch**](classuipc_1_1constitution_1_1SoftVertexEdgeStitch.md) <br>_Inter-primitive constitution: (vertex, edge) pairs form triangles with StVK membrane energy. UID = 29._  |
 | class | [**SoftVertexStitch**](classuipc_1_1constitution_1_1SoftVertexStitch.md) <br> |
+| class | [**SoftVertexTriangleStitch**](classuipc_1_1constitution_1_1SoftVertexTriangleStitch.md) <br>_Inter-primitive constitution: (vertex, triangle) pairs form tetrahedra with_ [_**StableNeoHookean**_](classuipc_1_1constitution_1_1StableNeoHookean.md) _energy. UID = 30._ |
 | class | [**StableNeoHookean**](classuipc_1_1constitution_1_1StableNeoHookean.md) <br> |
 | class | [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell.md) <br> |
 

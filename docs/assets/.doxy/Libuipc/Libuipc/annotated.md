@@ -89,7 +89,9 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md)     
         * **class** [**SoftPositionConstraint**](classuipc_1_1constitution_1_1SoftPositionConstraint.md)     
         * **class** [**SoftTransformConstraint**](classuipc_1_1constitution_1_1SoftTransformConstraint.md)     
+        * **class** [**SoftVertexEdgeStitch**](classuipc_1_1constitution_1_1SoftVertexEdgeStitch.md) _Inter-primitive constitution: (vertex, edge) pairs form triangles with StVK membrane energy. UID = 29._     
         * **class** [**SoftVertexStitch**](classuipc_1_1constitution_1_1SoftVertexStitch.md)     
+        * **class** [**SoftVertexTriangleStitch**](classuipc_1_1constitution_1_1SoftVertexTriangleStitch.md) _Inter-primitive constitution: (vertex, triangle) pairs form tetrahedra with_ [_**StableNeoHookean**_](classuipc_1_1constitution_1_1StableNeoHookean.md) _energy. UID = 30._    
         * **class** [**StableNeoHookean**](classuipc_1_1constitution_1_1StableNeoHookean.md)     
         * **class** [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell.md)     
     * **namespace** [**core**](namespaceuipc_1_1core.md)     

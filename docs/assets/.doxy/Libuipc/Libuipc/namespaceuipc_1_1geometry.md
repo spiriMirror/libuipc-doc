@@ -111,6 +111,8 @@
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) &gt; | [**apply\_region**](#function-apply_region) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Take apart the simplicial complex by regions._  |
 |  UIPC\_GEOMETRY\_API vector&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) &gt; | [**apply\_transform**](#function-apply_transform) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Apply the instance transform to the simplicial complex._  |
 |  UIPC\_CORE\_API void | [**check\_view**](#function-check_view) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) \* slot) <br> |
+|  [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) UIPC\_GEOMETRY\_API | [**closest\_vertex\_edge\_pairs**](#function-closest_vertex_edge_pairs) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & vertex\_mesh, const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edge\_mesh, Float max\_distance) <br>_Find all vertex-edge pairs between two meshes within max\_distance and return as a_ [_**Geometry**_](classuipc_1_1geometry_1_1Geometry.md) _._ |
+|  [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) UIPC\_GEOMETRY\_API | [**closest\_vertex\_triangle\_pairs**](#function-closest_vertex_triangle_pairs) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & vertex\_mesh, const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & triangle\_mesh, Float max\_distance, std::string\_view max\_distance\_attr={}, std::string\_view group={}) <br>_Find all vertex–triangle pairs between two meshes within max\_distance and return as a_ [_**Geometry**_](classuipc_1_1geometry_1_1Geometry.md) _._ |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; Float &gt; &gt; | [**compute\_mesh\_d\_hat**](#function-compute_mesh_d_hat) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R, Float max\_d\_hat=std::numeric\_limits&lt; Float &gt;::max()) <br>_Suggest a proper d\_hat for a mesh, create an attribute_ `d_hat` _on meta._ |
 |  UIPC\_GEOMETRY\_API Float | [**compute\_mesh\_volume**](#function-compute_mesh_volume) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Compute the volume of the simplicial complex._  |
 |  UIPC\_GEOMETRY\_API Float | [**compute\_rod\_volume**](#function-compute_rod_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float thickness) <br>_Compute the effective volume of an edge mesh treated as a thin rod._  |
@@ -313,6 +315,92 @@ UIPC_CORE_API void uipc::geometry::check_view (
 
 
 
+
+<hr>
+
+
+
+### function closest\_vertex\_edge\_pairs 
+
+_Find all vertex-edge pairs between two meshes within max\_distance and return as a_ [_**Geometry**_](classuipc_1_1geometry_1_1Geometry.md) _._
+```C++
+Geometry UIPC_GEOMETRY_API uipc::geometry::closest_vertex_edge_pairs (
+    const SimplicialComplex & vertex_mesh,
+    const SimplicialComplex & edge_mesh,
+    Float max_distance
+) 
+```
+
+
+
+One [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) provides vertices (point set), the other provides edges. Returns a [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) with one instance per (vertex\_index, edge\_index) pair; each instance has attribute `topo` (Vector2i): (vertex\_index, edge\_index). No constitution\_uid or geo\_ids. Compatible with SoftVertexEdgeStitch::create\_geometry(..., pair\_geometry, ...).
+
+
+
+
+**Parameters:**
+
+
+* `vertex_mesh` Mesh providing vertices (positions used for point-edge distance). 
+* `edge_mesh` Mesh providing edges (edges().topo() and vertex positions). 
+* `max_distance` Only pairs with point-edge distance &lt;= this are returned. 
+
+
+
+**Returns:**
+
+[**Geometry**](classuipc_1_1geometry_1_1Geometry.md) Instances have topo Vector2i (vertex\_index, edge\_index). 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function closest\_vertex\_triangle\_pairs 
+
+_Find all vertex–triangle pairs between two meshes within max\_distance and return as a_ [_**Geometry**_](classuipc_1_1geometry_1_1Geometry.md) _._
+```C++
+Geometry UIPC_GEOMETRY_API uipc::geometry::closest_vertex_triangle_pairs (
+    const SimplicialComplex & vertex_mesh,
+    const SimplicialComplex & triangle_mesh,
+    Float max_distance,
+    std::string_view max_distance_attr={},
+    std::string_view group={}
+) 
+```
+
+
+
+One [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) provides vertices (point set), the other provides triangles. Returns a [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) with one instance per (vertex\_index, triangle\_index) pair; each instance has attribute `topo` (Vector2i): (vertex\_index, triangle\_index). No constitution\_uid or geo\_ids. Compatible with SoftVertexTriangleStitch::create\_geometry(..., pair\_geometry, ...).
+
+
+
+
+**Parameters:**
+
+
+* `vertex_mesh` Mesh providing vertices (positions used for point–triangle distance). 
+* `triangle_mesh` Mesh providing triangles (triangles().topo() and vertex positions). 
+* `max_distance` Default max distance; only pairs with point–triangle distance &lt;= this (or per-vertex value) are returned. 
+* `max_distance_attr` If non-empty, name of Float attribute on vertices of vertex\_mesh; per-vertex max distance (overrides scalar). If empty or absent, scalar is used. 
+* `group` If non-empty, name of IndexT attribute on vertices (vertex\_mesh) and on triangles (triangle\_mesh); only elements with value 1 are considered (0 = not selected). If empty, no filtering. 
+
+
+
+**Returns:**
+
+[**Geometry**](classuipc_1_1geometry_1_1Geometry.md) Instances have topo Vector2i (vertex\_index, triangle\_index). 
+
+
+
+
+
+        
 
 <hr>
 

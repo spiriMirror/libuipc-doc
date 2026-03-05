@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -862,6 +862,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1374,6 +1378,62 @@
     
   
     Soft Transform Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/soft_vertex_edge_stitch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soft Vertex Edge Stitch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/soft_vertex_triangle_stitch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soft Vertex Triangle Stitch
   
 
     
@@ -2842,6 +2902,7 @@
 <li><code>aim_geo_slots</code> The slots of the two geometries to be stitched </li>
 <li><code>stitched_vert_ids</code> Each element is a pair of vertex ids, the first one is from the first geometry, the second one is from the second geometry </li>
 <li><code>kappa</code> The stiffness of the stitch constraint </li>
+<li><code>rest_length</code> The rest length of the spring. When 0 (default), the harmonic energy E=0.5*k*||x-y||^2 is used, which has no singularity at zero distance. </li>
 </ul>
 <hr>
 

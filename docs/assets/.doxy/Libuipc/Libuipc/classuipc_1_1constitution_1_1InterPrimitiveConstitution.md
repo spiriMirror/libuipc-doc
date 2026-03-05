@@ -16,7 +16,7 @@
 Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstitution.md)
 
 
-Inherited by the following classes: [uipc::constitution::SoftVertexStitch](classuipc_1_1constitution_1_1SoftVertexStitch.md)
+Inherited by the following classes: [uipc::constitution::SoftVertexEdgeStitch](classuipc_1_1constitution_1_1SoftVertexEdgeStitch.md),  [uipc::constitution::SoftVertexStitch](classuipc_1_1constitution_1_1SoftVertexStitch.md),  [uipc::constitution::SoftVertexTriangleStitch](classuipc_1_1constitution_1_1SoftVertexTriangleStitch.md)
 
 
 

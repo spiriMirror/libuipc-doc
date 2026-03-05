@@ -3,7 +3,9 @@
   <compounddef id="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kind="class" language="C++" prot="public">
     <compoundname>uipc::constitution::InterPrimitiveConstitution</compoundname>
     <basecompoundref refid="classuipc_1_1constitution_1_1IConstitution" prot="public" virt="non-virtual">uipc::constitution::IConstitution</basecompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch" prot="public" virt="non-virtual">uipc::constitution::SoftVertexEdgeStitch</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1SoftVertexStitch" prot="public" virt="non-virtual">uipc::constitution::SoftVertexStitch</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch" prot="public" virt="non-virtual">uipc::constitution::SoftVertexTriangleStitch</derivedcompoundref>
     <sectiondef kind="private-type">
       <memberdef kind="typedef" id="classuipc_1_1constitution_1_1InterPrimitiveConstitution_1aa761e705e8228ea6568e92dafdfe62c7" prot="private" static="no">
         <type><ref refid="classuipc_1_1constitution_1_1IConstitution" kindref="compound">IConstitution</ref></type>
@@ -36,8 +38,20 @@
         </childnode>
       </node>
       <node id="3">
+        <label>uipc::constitution::SoftVertexEdgeStitch</label>
+        <link refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
         <label>uipc::constitution::SoftVertexStitch</label>
         <link refid="classuipc_1_1constitution_1_1SoftVertexStitch"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc::constitution::SoftVertexTriangleStitch</label>
+        <link refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

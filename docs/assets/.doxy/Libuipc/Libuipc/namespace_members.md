@@ -25,6 +25,8 @@
 * **CSubsceneModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **ContactModelCollection** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **check\_view** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **closest\_vertex\_edge\_pairs** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **closest\_vertex\_triangle\_pairs** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_mesh\_d\_hat** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_mesh\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **compute\_rod\_volume** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))

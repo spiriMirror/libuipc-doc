@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::SoftVertexTriangleStitch</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" prot="public" virt="non-virtual">uipc::constitution::InterPrimitiveConstitution</basecompoundref>
+    <includes refid="soft__vertex__triangle__stitch_8h" local="no">soft_vertex_triangle_stitch.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a5d8656c66d0e5232cd3294e5c785839f" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kindref="compound">InterPrimitiveConstitution</ref></type>
+        <definition>using uipc::constitution::SoftVertexTriangleStitch::Base =  InterPrimitiveConstitution</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="17" column="5" bodyfile="include/uipc/constitution/soft_vertex_triangle_stitch.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1acef05a6b238b239e12337de59b8beb26" prot="public" static="no">
+        <type>std::tuple&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt;, S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
+        <definition>using uipc::constitution::SoftVertexTriangleStitch::SlotTuple =  std::tuple&lt;S&lt;geometry::SimplicialComplexSlot&gt;, S&lt;geometry::SimplicialComplexSlot&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>SlotTuple</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::SlotTuple</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="20" column="5" bodyfile="include/uipc/constitution/soft_vertex_triangle_stitch.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1aa686ace2a6fdadf0473e99a329544ef2" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::SoftVertexTriangleStitch::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="51" column="10" bodyfile="include/uipc/constitution/soft_vertex_triangle_stitch.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a78d85e407a023e8ce140c6bda07f87f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::SoftVertexTriangleStitch::SoftVertexTriangleStitch</definition>
+        <argsstring>(const Json &amp;config=default_config())</argsstring>
+        <name>SoftVertexTriangleStitch</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::SoftVertexTriangleStitch</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a351a9f4a455f499d3b69c27477f9eebe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
+        <definition>geometry::Geometry uipc::constitution::SoftVertexTriangleStitch::create_geometry</definition>
+        <argsstring>(const SlotTuple &amp;aim_geo_slots, const SlotTuple &amp;rest_geo_slots, span&lt; const Vector2i &gt; stitched_vert_tri_ids, const ElasticModuli &amp;moduli=ElasticModuli::youngs_poisson(120.0_kPa, 0.49), Float min_separate_distance=0.001) const</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::create_geometry</qualifiedname>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>aim_geo_slots</declname>
+        </param>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>rest_geo_slots</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector2i &gt;</type>
+          <declname>stitched_vert_tri_ids</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1constitution_1_1ElasticModuli" kindref="compound">ElasticModuli</ref> &amp;</type>
+          <declname>moduli</declname>
+          <defval>ElasticModuli::youngs_poisson(120.0_kPa, 0.49)</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>min_separate_distance</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Create stitch geometry from explicit (vertex_index, triangle_index) pairs. When a tet is degenerate, rest vertex is offset by min_separate_distance (default 1 mm). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="29" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a813a8e877c23f8c12563a8d6990f96b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
+        <definition>geometry::Geometry uipc::constitution::SoftVertexTriangleStitch::create_geometry</definition>
+        <argsstring>(const SlotTuple &amp;aim_geo_slots, const SlotTuple &amp;rest_geo_slots, const geometry::Geometry &amp;pair_geometry, const ElasticModuli &amp;moduli=ElasticModuli::youngs_poisson(120.0_kPa, 0.49), Float min_separate_distance=0.001) const</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::create_geometry</qualifiedname>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>aim_geo_slots</declname>
+        </param>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>rest_geo_slots</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref> &amp;</type>
+          <declname>pair_geometry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1constitution_1_1ElasticModuli" kindref="compound">ElasticModuli</ref> &amp;</type>
+          <declname>moduli</declname>
+          <defval>ElasticModuli::youngs_poisson(120.0_kPa, 0.49)</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>min_separate_distance</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Create stitch geometry from the Geometry returned by closest_vertex_triangle_pairs. When a tet is degenerate, uses min_separate_distance (default 1 mm). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="40" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a9640bc151082f39cbebb9b97e627c6ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::SoftVertexTriangleStitch::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="47" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a6866e79119c57aeb8434ce85b76eb697" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>U64 uipc::constitution::SoftVertexTriangleStitch::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::SoftVertexTriangleStitch::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1IConstitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="50" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Inter-primitive constitution: (vertex, triangle) pairs form tetrahedra with <ref refid="classuipc_1_1constitution_1_1StableNeoHookean" kindref="compound">StableNeoHookean</ref> energy. UID = 30. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::InterPrimitiveConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::SoftVertexTriangleStitch</label>
+        <link refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::InterPrimitiveConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::SoftVertexTriangleStitch</label>
+        <link refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/soft_vertex_triangle_stitch.h" line="15" column="1" bodyfile="include/uipc/constitution/soft_vertex_triangle_stitch.h" bodystart="16" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a5d8656c66d0e5232cd3294e5c785839f" prot="private" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a351a9f4a455f499d3b69c27477f9eebe" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a813a8e877c23f8c12563a8d6990f96b2" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a9640bc151082f39cbebb9b97e627c6ad" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a6866e79119c57aeb8434ce85b76eb697" prot="private" virt="virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1aa686ace2a6fdadf0473e99a329544ef2" prot="private" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1acef05a6b238b239e12337de59b8beb26" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>SlotTuple</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch_1a78d85e407a023e8ce140c6bda07f87f8" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>SoftVertexTriangleStitch</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::SoftVertexTriangleStitch</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

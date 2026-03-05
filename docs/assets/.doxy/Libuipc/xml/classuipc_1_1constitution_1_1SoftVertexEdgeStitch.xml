@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::SoftVertexEdgeStitch</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" prot="public" virt="non-virtual">uipc::constitution::InterPrimitiveConstitution</basecompoundref>
+    <includes refid="soft__vertex__edge__stitch_8h" local="no">soft_vertex_edge_stitch.h</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1af041dd5f36b586735ac72f1cbefea7bf" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kindref="compound">InterPrimitiveConstitution</ref></type>
+        <definition>using uipc::constitution::SoftVertexEdgeStitch::Base =  InterPrimitiveConstitution</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="17" column="5" bodyfile="include/uipc/constitution/soft_vertex_edge_stitch.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a1a04244e28d5ee66c70c4e314212bdd6" prot="public" static="no">
+        <type>std::tuple&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt;, S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
+        <definition>using uipc::constitution::SoftVertexEdgeStitch::SlotTuple =  std::tuple&lt;S&lt;geometry::SimplicialComplexSlot&gt;, S&lt;geometry::SimplicialComplexSlot&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>SlotTuple</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::SlotTuple</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="20" column="5" bodyfile="include/uipc/constitution/soft_vertex_edge_stitch.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1adafa7a6656eff65513bb92be6a030243" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::SoftVertexEdgeStitch::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="51" column="10" bodyfile="include/uipc/constitution/soft_vertex_edge_stitch.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a8635ee82c56bd4f33d7dccaa9e9ca671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::SoftVertexEdgeStitch::SoftVertexEdgeStitch</definition>
+        <argsstring>(const Json &amp;config=default_config())</argsstring>
+        <name>SoftVertexEdgeStitch</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::SoftVertexEdgeStitch</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="23" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a1b73039e3df72472ba3b6f944275b15d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
+        <definition>geometry::Geometry uipc::constitution::SoftVertexEdgeStitch::create_geometry</definition>
+        <argsstring>(const SlotTuple &amp;aim_geo_slots, const SlotTuple &amp;rest_geo_slots, span&lt; const Vector2i &gt; stitched_vert_edge_ids, const ElasticModuli2D &amp;moduli=ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49), Float thickness=0.001, Float min_separate_distance=0.001) const</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::create_geometry</qualifiedname>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>aim_geo_slots</declname>
+        </param>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>rest_geo_slots</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector2i &gt;</type>
+          <declname>stitched_vert_edge_ids</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref> &amp;</type>
+          <declname>moduli</declname>
+          <defval>ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49)</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>thickness</declname>
+          <defval>0.001</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>min_separate_distance</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Create stitch geometry from explicit (vertex_index, edge_index) pairs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="28" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1ad4ec7ad8299b4aa911c5b9412e6799f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
+        <definition>geometry::Geometry uipc::constitution::SoftVertexEdgeStitch::create_geometry</definition>
+        <argsstring>(const SlotTuple &amp;aim_geo_slots, const SlotTuple &amp;rest_geo_slots, const geometry::Geometry &amp;pair_geometry, const ElasticModuli2D &amp;moduli=ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49), Float thickness=0.001, Float min_separate_distance=0.001) const</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::create_geometry</qualifiedname>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>aim_geo_slots</declname>
+        </param>
+        <param>
+          <type>const SlotTuple &amp;</type>
+          <declname>rest_geo_slots</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref> &amp;</type>
+          <declname>pair_geometry</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1constitution_1_1ElasticModuli2D" kindref="compound">ElasticModuli2D</ref> &amp;</type>
+          <declname>moduli</declname>
+          <defval>ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49)</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>thickness</declname>
+          <defval>0.001</defval>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>min_separate_distance</declname>
+          <defval>0.001</defval>
+        </param>
+        <briefdescription>
+<para>Create stitch geometry from the Geometry returned by closest_vertex_edge_pairs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="39" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a78fb27b90522e69d28876dd5bc10bf12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::SoftVertexEdgeStitch::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="47" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a503ffc274ae70b8b764c6dd4224e28fe" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>U64 uipc::constitution::SoftVertexEdgeStitch::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::SoftVertexEdgeStitch::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1IConstitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="50" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Inter-primitive constitution: (vertex, edge) pairs form triangles with StVK membrane energy. UID = 29. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::InterPrimitiveConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::SoftVertexEdgeStitch</label>
+        <link refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::InterPrimitiveConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>uipc::constitution::SoftVertexEdgeStitch</label>
+        <link refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/soft_vertex_edge_stitch.h" line="15" column="1" bodyfile="include/uipc/constitution/soft_vertex_edge_stitch.h" bodystart="16" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1af041dd5f36b586735ac72f1cbefea7bf" prot="private" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a1b73039e3df72472ba3b6f944275b15d" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1ad4ec7ad8299b4aa911c5b9412e6799f6" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a78fb27b90522e69d28876dd5bc10bf12" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a503ffc274ae70b8b764c6dd4224e28fe" prot="private" virt="virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1adafa7a6656eff65513bb92be6a030243" prot="private" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a1a04244e28d5ee66c70c4e314212bdd6" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>SlotTuple</name></member>
+      <member refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch_1a8635ee82c56bd4f33d7dccaa9e9ca671" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>SoftVertexEdgeStitch</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::SoftVertexEdgeStitch</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -319,6 +319,144 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/apply_transform.h" line="14" column="27" declfile="include/uipc/geometry/utils/apply_transform.h" declline="14" declcolumn="27"/>
       </memberdef>
+      <memberdef kind="function" id="closest__vertex__edge__pairs_8h_1afdee9fa6b1c48683ece2d0c798db8671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> UIPC_GEOMETRY_API</type>
+        <definition>Geometry UIPC_GEOMETRY_API uipc::geometry::closest_vertex_edge_pairs</definition>
+        <argsstring>(const SimplicialComplex &amp;vertex_mesh, const SimplicialComplex &amp;edge_mesh, Float max_distance)</argsstring>
+        <name>closest_vertex_edge_pairs</name>
+        <qualifiedname>uipc::geometry::closest_vertex_edge_pairs</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>vertex_mesh</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>edge_mesh</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>max_distance</declname>
+        </param>
+        <briefdescription>
+<para>Find all vertex-edge pairs between two meshes within max_distance and return as a <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>One <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> provides vertices (point set), the other provides edges. Returns a <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> with one instance per (vertex_index, edge_index) pair; each instance has attribute <computeroutput>topo</computeroutput> (Vector2i): (vertex_index, edge_index). No constitution_uid or geo_ids. Compatible with SoftVertexEdgeStitch::create_geometry(..., pair_geometry, ...).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertex_mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh providing vertices (positions used for point-edge distance). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>edge_mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh providing edges (edges().topo() and vertex positions). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only pairs with point-edge distance &lt;= this are returned. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> Instances have topo Vector2i (vertex_index, edge_index). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/closest_vertex_edge_pairs.h" line="25" column="28" declfile="include/uipc/geometry/utils/closest_vertex_edge_pairs.h" declline="25" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="closest__vertex__triangle__pairs_8h_1a345f0bb57afd0600f5bad79f76fb86eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> UIPC_GEOMETRY_API</type>
+        <definition>Geometry UIPC_GEOMETRY_API uipc::geometry::closest_vertex_triangle_pairs</definition>
+        <argsstring>(const SimplicialComplex &amp;vertex_mesh, const SimplicialComplex &amp;triangle_mesh, Float max_distance, std::string_view max_distance_attr={}, std::string_view group={})</argsstring>
+        <name>closest_vertex_triangle_pairs</name>
+        <qualifiedname>uipc::geometry::closest_vertex_triangle_pairs</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>vertex_mesh</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>triangle_mesh</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>max_distance</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>max_distance_attr</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>group</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Find all vertex–triangle pairs between two meshes within max_distance and return as a <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>One <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> provides vertices (point set), the other provides triangles. Returns a <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> with one instance per (vertex_index, triangle_index) pair; each instance has attribute <computeroutput>topo</computeroutput> (Vector2i): (vertex_index, triangle_index). No constitution_uid or geo_ids. Compatible with SoftVertexTriangleStitch::create_geometry(..., pair_geometry, ...).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vertex_mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh providing vertices (positions used for point–triangle distance). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>triangle_mesh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesh providing triangles (triangles().topo() and vertex positions). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default max distance; only pairs with point–triangle distance &lt;= this (or per-vertex value) are returned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_distance_attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-empty, name of Float attribute on vertices of vertex_mesh; per-vertex max distance (overrides scalar). If empty or absent, scalar is used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-empty, name of IndexT attribute on vertices (vertex_mesh) and on triangles (triangle_mesh); only elements with value 1 are considered (0 = not selected). If empty, no filtering. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> Instances have topo Vector2i (vertex_index, triangle_index). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/closest_vertex_triangle_pairs.h" line="28" column="1" declfile="include/uipc/geometry/utils/closest_vertex_triangle_pairs.h" declline="28" declcolumn="1"/>
+      </memberdef>
       <memberdef kind="function" id="closure_8h_1a7b4fec03c6527d1d65cc4a5d2fa17877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref></type>
         <definition>UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::facet_closure</definition>

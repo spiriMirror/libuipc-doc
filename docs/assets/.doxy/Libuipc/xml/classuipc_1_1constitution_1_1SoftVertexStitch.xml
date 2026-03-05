@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="42" column="10" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="42" bodyend="-1"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="44" column="10" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="44" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -137,12 +137,20 @@
 <para>The stiffness of the stitch constraint </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rest_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rest length of the spring. When 0 (default), the harmonic energy E=0.5*k*||x-y||^2 is used, which has no singularity at zero distance. </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="27" column="24"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="29" column="24"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1constitution_1_1SoftVertexStitch_1a1ab58fbe77f414206d0de8c33f2a477c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref></type>
@@ -178,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="33" column="24"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="35" column="24"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -194,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="38" column="24"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="40" column="24"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -211,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="41" column="10"/>
+        <location file="include/uipc/constitution/soft_vertex_stitch.h" line="43" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -254,7 +262,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/soft_vertex_stitch.h" line="8" column="1" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="9" bodyend="43"/>
+    <location file="include/uipc/constitution/soft_vertex_stitch.h" line="8" column="1" bodyfile="include/uipc/constitution/soft_vertex_stitch.h" bodystart="9" bodyend="45"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a9c1936d6bf053280a7b9589184466ad0" prot="private" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>Base</name></member>
       <member refid="classuipc_1_1constitution_1_1SoftVertexStitch_1aed6c607316b224969f00f5ec3f35d93f" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftVertexStitch</scope><name>ContactElementTuple</name></member>
