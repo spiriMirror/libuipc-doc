@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_constitution.h" line="54" column="10" bodyfile="include/uipc/constitution/affine_body_constitution.h" bodystart="54" bodyend="-1"/>
+        <location file="include/uipc/constitution/affine_body_constitution.h" line="66" column="10" bodyfile="include/uipc/constitution/affine_body_constitution.h" bodystart="66" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -102,6 +102,38 @@
         </inbodydescription>
         <location file="include/uipc/constitution/affine_body_constitution.h" line="31" column="10"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyConstitution_1a46dacbec2ced6af4d81f6b1f1fda9cc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyConstitution::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float kappa, const Matrix12x12 &amp;mass, Float volume) const</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyConstitution::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>kappa</declname>
+        </param>
+        <param>
+          <type>const Matrix12x12 &amp;</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Apply ABD constitution with explicit mass matrix and volume override. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The 12x12 mass matrix is decomposed into (m, m_x_bar, m_x_bar_x_bar) and stored as meta attributes so the backend uses them directly instead of computing from mesh geometry. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_constitution.h" line="40" column="10"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
       <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyConstitution_1a52d4f8c7afcf705673990aba408d9714" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
@@ -116,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_constitution.h" line="33" column="17"/>
+        <location file="include/uipc/constitution/affine_body_constitution.h" line="45" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -133,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_constitution.h" line="36" column="17"/>
+        <location file="include/uipc/constitution/affine_body_constitution.h" line="48" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyConstitution_1a9ee56f46c5c9804bfaac0e47f238c35a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -166,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_constitution.h" line="48" column="10"/>
+        <location file="include/uipc/constitution/affine_body_constitution.h" line="60" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -209,10 +241,11 @@
         <link refid="classuipc_1_1constitution_1_1IConstitution"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/affine_body_constitution.h" line="23" column="1" bodyfile="include/uipc/constitution/affine_body_constitution.h" bodystart="24" bodyend="55"/>
+    <location file="include/uipc/constitution/affine_body_constitution.h" line="23" column="1" bodyfile="include/uipc/constitution/affine_body_constitution.h" bodystart="24" bodyend="67"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a02e97187d782b484f8977cfcf9dbdb6c" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyConstitution</scope><name>AffineBodyConstitution</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a06e428ed9dd7840a551956fa98c9a28a" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyConstitution</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a46dacbec2ced6af4d81f6b1f1fda9cc2" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyConstitution</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1ab6d5ebdb4bb9e9c6722b060acb3e6a26" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyConstitution</scope><name>Base</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a0f3d62e8a33312859ce482ba8538949c" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyConstitution</scope><name>create_material</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a52d4f8c7afcf705673990aba408d9714" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyConstitution</scope><name>default_config</name></member>

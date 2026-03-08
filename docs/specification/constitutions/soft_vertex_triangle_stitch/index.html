@@ -2818,11 +2818,11 @@ E = \Psi \cdot V_0
 <p>where <span class="arithmatex">\(V_0 = \frac{1}{6} |\det(\mathbf{D}_m)|\)</span> is the rest volume of the tetrahedron.</p>
 <h3 id="degenerate-handling">Degenerate Handling</h3>
 <p>When the vertex <span class="arithmatex">\(\bar{\mathbf{x}}_0\)</span> is too close to the triangle plane <span class="arithmatex">\((\bar{\mathbf{x}}_1, \bar{\mathbf{x}}_2, \bar{\mathbf{x}}_3)\)</span> in the rest configuration (signed distance <span class="arithmatex">\(&lt; d\)</span>, where <span class="arithmatex">\(d\)</span> is <code>min_separate_distance</code>):</p>
-<p>The rest vertex is placed at the triangle centroid plus <span class="arithmatex">\(d\)</span> along the outward triangle normal:</p>
+<p>The rest vertex is offset along the triangle normal to achieve exactly distance <span class="arithmatex">\(d\)</span>, while preserving its lateral position on the triangle plane:</p>
 <div class="arithmatex">\[
-\bar{\mathbf{x}}_0' = \frac{\bar{\mathbf{x}}_1 + \bar{\mathbf{x}}_2 + \bar{\mathbf{x}}_3}{3} + d \, \hat{\mathbf{n}}
+\bar{\mathbf{x}}_0' = \bar{\mathbf{x}}_0 + (\text{sign}(s) \cdot d - s) \, \hat{\mathbf{n}}
 \]</div>
-<p>where <span class="arithmatex">\(\hat{\mathbf{n}}\)</span> is the unit outward normal of the triangle, computed as:</p>
+<p>where <span class="arithmatex">\(s = \hat{\mathbf{n}} \cdot (\bar{\mathbf{x}}_0 - \bar{\mathbf{x}}_1)\)</span> is the signed distance, and <span class="arithmatex">\(\hat{\mathbf{n}}\)</span> is the unit triangle normal:</p>
 <div class="arithmatex">\[
 \hat{\mathbf{n}} = \frac{(\bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_1) \times (\bar{\mathbf{x}}_3 - \bar{\mathbf{x}}_1)}{\|(\bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_1) \times (\bar{\mathbf{x}}_3 - \bar{\mathbf{x}}_1)\|}
 \]</div>

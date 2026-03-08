@@ -19,7 +19,7 @@
     
     
       
-        <title>Namespace uipc::geometry::affine_body - Libuipc Documentation</title>
+        <title>File affine_body_from_rigid_body.h - Libuipc Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#namespace-uipcgeometryaffine_body" class="md-skip">
+        <a href="#file-affine_body_from_rigid_bodyh" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Namespace uipc::geometry::affine_body
+              File affine_body_from_rigid_body.h
             
           </span>
         </div>
@@ -2567,141 +2567,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Public Functions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Public Functions Documentation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Functions Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-build_abd_mass_matrix" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function build_abd_mass_matrix
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-compute_body_force" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function compute_body_force
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-compute_dyadic_mass" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function compute_dyadic_mass
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-compute_dyadic_mass_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function compute_dyadic_mass
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-from_rigid_body" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function from_rigid_body
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-q_to_transform" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function q_to_transform
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-q_v_to_transform_v" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function q_v_to_transform_v
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-transform_to_q" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function transform_to_q
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-transform_v_to_q_v" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function transform_v_to_q_v
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2717,189 +2582,26 @@
 
 
 
-<div><h1 id="namespace-uipcgeometryaffine_body">Namespace uipc::geometry::affine_body</h1>
-<p><a href="../namespaces/"><strong>Namespace List</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1geometry/"><strong>geometry</strong></a> <strong>&gt;</strong> <a href="./"><strong>affine_body</strong></a></p>
-<h2 id="public-functions">Public Functions</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">UIPC_GEOMETRY_API Matrix12x12</td>
-<td style="text-align: left;"><a href="#function-build_abd_mass_matrix"><strong>build_abd_mass_matrix</strong></a> (Float m, const Vector3 &amp; m_x_bar, const Matrix3x3 &amp; m_x_bar_x_bar) <br><em>Build the 12x12 ABD mass matrix from dyadic mass components.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">UIPC_GEOMETRY_API Vector12</td>
-<td style="text-align: left;"><a href="#function-compute_body_force"><strong>compute_body_force</strong></a> (const <a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>SimplicialComplex</strong></a> &amp; sc, const Vector3 &amp; body_force_density) <br><em>Compute the body force of an affine body.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">UIPC_GEOMETRY_API void</td>
-<td style="text-align: left;"><a href="#function-compute_dyadic_mass"><strong>compute_dyadic_mass</strong></a> (const <a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>SimplicialComplex</strong></a> &amp; sc, Float rho, Float &amp; m, Vector3 &amp; m_x_bar, Matrix3x3 &amp; m_x_bar_x_bar) <br><em>Compute the dyadic mass of a simplicial complex.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">UIPC_GEOMETRY_API void</td>
-<td style="text-align: left;"><a href="#function-compute_dyadic_mass"><strong>compute_dyadic_mass</strong></a> (const <a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>SimplicialComplex</strong></a> &amp; sc, Float rho, Float thickness, Float &amp; m, Vector3 &amp; m_x_bar, Matrix3x3 &amp; m_x_bar_x_bar) <br><em>Compute the dyadic mass of a codimensional simplicial complex (shell or rod).</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">UIPC_GEOMETRY_API Matrix12x12</td>
-<td style="text-align: left;"><a href="#function-from_rigid_body"><strong>from_rigid_body</strong></a> (Float mass, const Vector3 &amp; center_of_mass, const Matrix3x3 &amp; inertia_cm) <br><em>Build the 12x12 ABD mass matrix from rigid body quantities.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">Matrix4x4</td>
-<td style="text-align: left;"><a href="#function-q_to_transform"><strong>q_to_transform</strong></a> (const Vector12 &amp; q) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">Matrix4x4</td>
-<td style="text-align: left;"><a href="#function-q_v_to_transform_v"><strong>q_v_to_transform_v</strong></a> (const Vector12 &amp; q) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">Vector12</td>
-<td style="text-align: left;"><a href="#function-transform_to_q"><strong>transform_to_q</strong></a> (const Matrix4x4 &amp; trans) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">Vector12</td>
-<td style="text-align: left;"><a href="#function-transform_v_to_q_v"><strong>transform_v_to_q_v</strong></a> (const Matrix4x4 &amp; transform_v) <br></td>
-</tr>
-</tbody>
-</table>
-<h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-build_abd_mass_matrix">function build_abd_mass_matrix</h3>
-<p><em>Build the 12x12 ABD mass matrix from dyadic mass components.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">Matrix12x12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">build_abd_mass_matrix</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">m</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix3x3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar_x_bar</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<p>Assembles the block-structured mass matrix: M = | m*I_3 I_3 (x) (mc^T) | | I_3 (x) (mc) I_3 (x) S |</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>m</code> Total mass. </li>
-<li><code>m_x_bar</code> First moment of mass (m * center_of_mass). </li>
-<li><code>m_x_bar_x_bar</code> Second moment of mass tensor S. </li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>The 12x12 ABD mass matrix. </p>
-<hr>
-
-<h3 id="function-compute_body_force">function compute_body_force</h3>
-<p><em>Compute the body force of an affine body.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">compute_body_force</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">body_force_density</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>sc</code> The simplicial complex. </li>
-<li><code>body_force_density</code> The body force density in N/m^3. </li>
-</ul>
-<hr>
-
-<h3 id="function-compute_dyadic_mass">function compute_dyadic_mass</h3>
-<p><em>Compute the dyadic mass of a simplicial complex.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">compute_dyadic_mass</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">rho</span><span class="p">,</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m</span><span class="p">,</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar</span><span class="p">,</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">Matrix3x3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar_x_bar</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<p>Integrate the mass density over the simplicial complex to compute the dyadic mass.</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>sc</code> The simplicial complex.</li>
-<li><code>m</code> The total mass.</li>
-<li><code>m_x_bar</code> The total mass times the center of mass.</li>
-<li><code>m_x_bar_x_bar</code> The total mass times the center of mass times the center of mass transpose. </li>
-</ul>
-<hr>
-
-<h3 id="function-compute_dyadic_mass_1">function compute_dyadic_mass</h3>
-<p><em>Compute the dyadic mass of a codimensional simplicial complex (shell or rod).</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">compute_dyadic_mass</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">rho</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">thickness</span><span class="p">,</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m</span><span class="p">,</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar</span><span class="p">,</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">Matrix3x3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m_x_bar_x_bar</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<p>Integrates the mass density over the effective 3D volume of the codim body, accounting for thickness to produce an invertible 12×12 ABD mass matrix.</p>
-<ul>
-<li>dim==2 (shell): direct area integration × 2r, plus normal-direction correction.</li>
-<li>dim==1 (rod): segment integration × π r², plus cross-section correction.</li>
-</ul>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>sc</code> The simplicial complex (triangle mesh for shell, edge mesh for rod). </li>
-<li><code>rho</code> Volume mass density (kg/m³). </li>
-<li><code>thickness</code> Thickness radius <code>r</code> (half-thickness for shell, cross-section radius for rod). </li>
-<li><code>m</code> The total mass. </li>
-<li><code>m_x_bar</code> The total mass times the center of mass. </li>
-<li><code>m_x_bar_x_bar</code> The second dyadic moment (including thickness correction). </li>
-</ul>
-<hr>
-
-<h3 id="function-from_rigid_body">function from_rigid_body</h3>
-<p><em>Build the 12x12 ABD mass matrix from rigid body quantities.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">Matrix12x12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">from_rigid_body</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">mass</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">center_of_mass</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix3x3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">inertia_cm</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<p>Given the standard rigid body properties (mass, center of mass, inertia tensor about the center of mass), this function constructs the equivalent affine body dynamics mass matrix.</p>
-<p>Recipe (see scripts/symbol_calculation/rigid_body_to_affine_body.ipynb):
-* Parallel axis theorem: I^O = I_cm + m * (|c|^2 I_3 - c c^T)
-* Inertia-to-second-moment inversion: S = 0.5 * tr(I^O) * I_3 - I^O
-* Assemble the 12x12 block matrix from (m, m*c, S).</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>mass</code> Total mass of the rigid body. </li>
-<li><code>center_of_mass</code> Center of mass in the reference configuration. </li>
-<li><code>inertia_cm</code> 3x3 inertia tensor about the center of mass. </li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>The 12x12 ABD mass matrix. </p>
-<hr>
-
-<h3 id="function-q_to_transform">function q_to_transform</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">q_to_transform</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">q</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<hr>
-
-<h3 id="function-q_v_to_transform_v">function q_v_to_transform_v</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">q_v_to_transform_v</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">q</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<hr>
-
-<h3 id="function-transform_to_q">function transform_to_q</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">transform_to_q</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">trans</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<hr>
-
-<h3 id="function-transform_v_to_q_v">function transform_v_to_q_v</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kr">inline</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">affine_body</span><span class="o">::</span><span class="n">transform_v_to_q_v</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix4x4</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">transform_v</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">)</span><span class="w"> </span>
-</span></code></pre></div>
-<hr>
-
-<hr>
-<p>The documentation for this class was generated from the following file <code>include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h</code></p></div>
+<div><h1 id="file-affine_body_from_rigid_bodyh">File affine_body_from_rigid_body.h</h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_0434b40e061af98901db13a48821d02b/"><strong>affine_body</strong></a> <strong>&gt;</strong> <a href="../affine__body__from__rigid__body_8h/"><strong>affine_body_from_rigid_body.h</strong></a></p>
+<p><a href="../affine__body__from__rigid__body_8h/">Go to the documentation of this file</a></p>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#pragma once</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/common/type_define.h&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/common/dllexport.h&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">geometry</span><span class="o">::</span><span class="nn">affine_body</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">Matrix12x12</span><span class="w"> </span><span class="n">from_rigid_body</span><span class="p">(</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">Float</span><span class="w">            </span><span class="n">mass</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&amp;</span><span class="w">   </span><span class="n">center_of_mass</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix3x3</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inertia_cm</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">UIPC_GEOMETRY_API</span><span class="w"> </span><span class="n">Matrix12x12</span><span class="w"> </span><span class="n">build_abd_mass_matrix</span><span class="p">(</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">Float</span><span class="w">             </span><span class="n">m</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="o">&amp;</span><span class="w">    </span><span class="n">m_x_bar</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Matrix3x3</span><span class="o">&amp;</span><span class="w">  </span><span class="n">m_x_bar_x_bar</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace uipc::geometry::affine_body</span>
+</span></code></pre></div></div>
 
 
 

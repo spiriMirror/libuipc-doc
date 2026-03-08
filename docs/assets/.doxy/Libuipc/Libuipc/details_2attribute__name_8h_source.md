@@ -75,6 +75,12 @@ UIPC_BUILTIN_ATTRIBUTE(global_vertex_offset);
 UIPC_BUILTIN_ATTRIBUTE(self_collision);
 
 UIPC_BUILTIN_ATTRIBUTE(is_codim);
+
+UIPC_BUILTIN_ATTRIBUTE(abd_mass);
+
+UIPC_BUILTIN_ATTRIBUTE(abd_mass_x_bar);
+
+UIPC_BUILTIN_ATTRIBUTE(abd_mass_x_bar_x_bar);
 #endif
 ```
 

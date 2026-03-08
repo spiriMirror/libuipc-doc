@@ -196,6 +196,7 @@ Here is a list of all files with brief descriptions:
                 * **file** [**factory.h**](factory_8h.md)     
                 * **file** [**flip\_inward\_triangles.h**](flip__inward__triangles_8h.md)     
                 * **dir** [**affine\_body**](dir_0434b40e061af98901db13a48821d02b.md)     
+                    * **file** [**affine\_body\_from\_rigid\_body.h**](affine__body__from__rigid__body_8h.md)     
                     * **file** [**compute\_body\_force.h**](compute__body__force_8h.md)     
                     * **file** [**compute\_dyadic\_mass.h**](compute__dyadic__mass_8h.md)     
                     * **file** [**transform.h**](transform_8h.md)     

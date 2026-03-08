@@ -40,6 +40,11 @@ class UIPC_CONSTITUTION_API AffineBodyConstitution : public IConstitution
 
     void apply_to(geometry::SimplicialComplex& sc, Float kappa, Float mass_density = 1e3) const;
 
+    void apply_to(geometry::SimplicialComplex& sc,
+                  Float                        kappa,
+                  const Matrix12x12&           mass,
+                  Float                        volume) const;
+
     static Json default_config() noexcept;
 
   protected:

@@ -3,6 +3,124 @@
   <compounddef id="namespaceuipc_1_1geometry_1_1affine__body" kind="namespace" language="C++">
     <compoundname>uipc::geometry::affine_body</compoundname>
     <sectiondef kind="func">
+      <memberdef kind="function" id="affine__body__from__rigid__body_8h_1a6401bd42158af780a894090a74dd1970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Matrix12x12</type>
+        <definition>UIPC_GEOMETRY_API Matrix12x12 uipc::geometry::affine_body::from_rigid_body</definition>
+        <argsstring>(Float mass, const Vector3 &amp;center_of_mass, const Matrix3x3 &amp;inertia_cm)</argsstring>
+        <name>from_rigid_body</name>
+        <qualifiedname>uipc::geometry::affine_body::from_rigid_body</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>center_of_mass</declname>
+        </param>
+        <param>
+          <type>const Matrix3x3 &amp;</type>
+          <declname>inertia_cm</declname>
+        </param>
+        <briefdescription>
+<para>Build the 12x12 ABD mass matrix from rigid body quantities. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given the standard rigid body properties (mass, center of mass, inertia tensor about the center of mass), this function constructs the equivalent affine body dynamics mass matrix.</para>
+<para>Recipe (see scripts/symbol_calculation/rigid_body_to_affine_body.ipynb):<orderedlist>
+<listitem><para>Parallel axis theorem: I^O = I_cm + m * (|c|^2 I_3 - c c^T)</para>
+</listitem><listitem><para>Inertia-to-second-moment inversion: S = 0.5 * tr(I^O) * I_3 - I^O</para>
+</listitem><listitem><para>Assemble the 12x12 block matrix from (m, m*c, S).</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total mass of the rigid body. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>center_of_mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center of mass in the reference configuration. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inertia_cm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3x3 inertia tensor about the center of mass. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The 12x12 ABD mass matrix. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" line="24" column="31" declfile="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" declline="24" declcolumn="31"/>
+      </memberdef>
+      <memberdef kind="function" id="affine__body__from__rigid__body_8h_1adb8284a27d54b47020cb1a76e1afc70b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Matrix12x12</type>
+        <definition>UIPC_GEOMETRY_API Matrix12x12 uipc::geometry::affine_body::build_abd_mass_matrix</definition>
+        <argsstring>(Float m, const Vector3 &amp;m_x_bar, const Matrix3x3 &amp;m_x_bar_x_bar)</argsstring>
+        <name>build_abd_mass_matrix</name>
+        <qualifiedname>uipc::geometry::affine_body::build_abd_mass_matrix</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>m_x_bar</declname>
+        </param>
+        <param>
+          <type>const Matrix3x3 &amp;</type>
+          <declname>m_x_bar_x_bar</declname>
+        </param>
+        <briefdescription>
+<para>Build the 12x12 ABD mass matrix from dyadic mass components. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assembles the block-structured mass matrix: M = | m*I_3 I_3 (x) (mc^T) | | I_3 (x) (mc) I_3 (x) S |</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total mass. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First moment of mass (m * center_of_mass). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_x_bar_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second moment of mass tensor S. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The 12x12 ABD mass matrix. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" line="41" column="31" declfile="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" declline="41" declcolumn="31"/>
+      </memberdef>
       <memberdef kind="function" id="compute__body__force_8h_1ad9461f8d0d720c9b7e21ba32ddc219e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API Vector12</type>
         <definition>UIPC_GEOMETRY_API Vector12 uipc::geometry::affine_body::compute_body_force</definition>
@@ -286,6 +404,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/geometry/utils/affine_body/compute_body_force.h" line="6" column="1"/>
+    <location file="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" line="5" column="1"/>
   </compounddef>
 </doxygen>

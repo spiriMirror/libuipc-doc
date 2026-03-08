@@ -74,7 +74,8 @@ Inherited by the following classes: [uipc::constitution::AffineBodyRod](classuip
 | Type | Name |
 | ---: | :--- |
 |   | [**AffineBodyConstitution**](#function-affinebodyconstitution) (const Json & config=default\_config()) noexcept<br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density=1e3) const<br> |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density=1e3) const<br> |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, const Matrix12x12 & mass, Float volume) const<br>_Apply ABD constitution with explicit mass matrix and volume override._  |
 |  [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) | [**create\_material**](#function-create_material) (Float kappa) noexcept const<br> |
 
 
@@ -181,7 +182,7 @@ uipc::constitution::AffineBodyConstitution::AffineBodyConstitution (
 
 
 
-### function apply\_to 
+### function apply\_to [1/2]
 
 ```C++
 void uipc::constitution::AffineBodyConstitution::apply_to (
@@ -193,6 +194,29 @@ void uipc::constitution::AffineBodyConstitution::apply_to (
 
 
 
+
+<hr>
+
+
+
+### function apply\_to [2/2]
+
+_Apply ABD constitution with explicit mass matrix and volume override._ 
+```C++
+void uipc::constitution::AffineBodyConstitution::apply_to (
+    geometry::SimplicialComplex & sc,
+    Float kappa,
+    const Matrix12x12 & mass,
+    Float volume
+) const
+```
+
+
+
+The 12x12 mass matrix is decomposed into (m, m\_x\_bar, m\_x\_bar\_x\_bar) and stored as meta attributes so the backend uses them directly instead of computing from mesh geometry. 
+
+
+        
 
 <hr>
 

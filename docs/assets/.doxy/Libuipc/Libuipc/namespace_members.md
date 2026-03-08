@@ -17,6 +17,11 @@
 * **apply\_transform** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 
 
+## b
+
+* **build\_abd\_mass\_matrix** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
+
+
 ## c
 
 * **config** ([**uipc**](namespaceuipc.md))
@@ -67,6 +72,7 @@
 * **from\_json** ([**uipc::core**](namespaceuipc_1_1core.md))
 * **facet\_closure** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **flip\_inward\_triangles** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **from\_rigid\_body** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 
 
 ## g
