@@ -38,6 +38,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**uipc::constitution::Constraint**](classuipc_1_1constitution_1_1Constraint.md)     
         * **class** [**uipc::constitution::AffineBodyDrivingPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint.md) 
         * **class** [**uipc::constitution::AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md) 
+        * **class** [**uipc::constitution::AffineBodyPrismaticJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalBodyForce.md) 
+        * **class** [**uipc::constitution::AffineBodyRevoluteJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce.md) 
         * **class** [**uipc::constitution::ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md) _External articulation constraint for incorporating external kinetic energy into the IPC system._ 
         * **class** [**uipc::constitution::LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md) 
         * **class** [**uipc::constitution::RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md) 
@@ -54,6 +56,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**uipc::constitution::FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1FiniteElementExtraConstitution.md)     
         * **class** [**uipc::constitution::DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md) 
         * **class** [**uipc::constitution::KirchhoffRodBending**](classuipc_1_1constitution_1_1KirchhoffRodBending.md) 
+        * **class** [**uipc::constitution::PlasticDiscreteShellBending**](classuipc_1_1constitution_1_1PlasticDiscreteShellBending.md) 
     * **class** [**uipc::constitution::InterAffineBodyConstitution**](classuipc_1_1constitution_1_1InterAffineBodyConstitution.md)     
         * **class** [**uipc::constitution::AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md) 
         * **class** [**uipc::constitution::AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) 

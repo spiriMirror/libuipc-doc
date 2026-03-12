@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1Constraint" prot="public" virt="non-virtual">uipc::constitution::Constraint</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1ae925fed0c648ab8929bf46ea84934c38" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1Constraint" kindref="compound">Constraint</ref></type>
+        <definition>using uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::Base =  Constraint</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="9" column="5" bodyfile="include/uipc/constitution/affine_body_revolute_joint_external_force.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1ad213720f3bc205bdf8376dd8a6b6f70c" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="42" column="17" bodyfile="include/uipc/constitution/affine_body_revolute_joint_external_force.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a0d640db29dc414dd06f7b3e5ba8e9294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::AffineBodyRevoluteJointExternalBodyForce</definition>
+        <argsstring>(const Json &amp;config=default_config())</argsstring>
+        <name>AffineBodyRevoluteJointExternalBodyForce</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::AffineBodyRevoluteJointExternalBodyForce</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1ae8157ad67aca4b02e2a24acd66ae699d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::~AffineBodyRevoluteJointExternalBodyForce</definition>
+        <argsstring>() override</argsstring>
+        <name>~AffineBodyRevoluteJointExternalBodyForce</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::~AffineBodyRevoluteJointExternalBodyForce</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="14" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a2224443737fbc4b441d48058ffec1312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float torque=Float{0})</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>torque</declname>
+          <defval>Float{0}</defval>
+        </param>
+        <briefdescription>
+<para>Apply uniform external torque around the revolute joint axis to all joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Must be applied AFTER <ref refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint" kindref="compound">AffineBodyRevoluteJoint</ref> (constitution_uid == 18). The torque is a scalar: +τ applied to body_j, -τ applied to body_i, where the axis is defined by the edge direction.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex containing the edges representing the joints. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torque</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scalar torque value applied to all joints. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a664bcc5ef48488484ce77f939d04d048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; Float &gt; torques)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>torques</declname>
+        </param>
+        <briefdescription>
+<para>Apply per-joint external torques around the revolute joint axis. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Must be applied AFTER <ref refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint" kindref="compound">AffineBodyRevoluteJoint</ref> (constitution_uid == 18).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex containing the edges representing the joints. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>torques</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Per-joint scalar torque values (one per edge). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="36" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a730af2cd090c704a4a6b546fe7ec72c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="38" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1aa3177be87f1fb401b8626e0fe7bc25fa" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1Constraint_1a1c82273f5d6fbaa247b384a5af54a603">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="41" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/affine_body_revolute_joint_external_force.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_revolute_joint_external_force.h" bodystart="8" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a0d640db29dc414dd06f7b3e5ba8e9294" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>AffineBodyRevoluteJointExternalBodyForce</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a2224443737fbc4b441d48058ffec1312" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a664bcc5ef48488484ce77f939d04d048" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1a87edc064bcbfd767150a4f185ddbb8c9" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::Constraint::"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1ae925fed0c648ab8929bf46ea84934c38" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1ad1c93564e93d05c9ecd0330cfcacbe46" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>Constraint</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1a730af2cd090c704a4a6b546fe7ec72c5" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1aa3177be87f1fb401b8626e0fe7bc25fa" prot="private" virt="virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1ad213720f3bc205bdf8376dd8a6b6f70c" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce_1ae8157ad67aca4b02e2a24acd66ae699d" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>~AffineBodyRevoluteJointExternalBodyForce</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::AffineBodyRevoluteJointExternalBodyForce</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

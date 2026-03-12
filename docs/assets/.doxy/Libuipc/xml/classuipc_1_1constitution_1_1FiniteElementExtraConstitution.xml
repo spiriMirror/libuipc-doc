@@ -5,6 +5,7 @@
     <basecompoundref refid="classuipc_1_1constitution_1_1IConstitution" prot="public" virt="non-virtual">uipc::constitution::IConstitution</basecompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1DiscreteShellBending" prot="public" virt="non-virtual">uipc::constitution::DiscreteShellBending</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1KirchhoffRodBending" prot="public" virt="non-virtual">uipc::constitution::KirchhoffRodBending</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1PlasticDiscreteShellBending" prot="public" virt="non-virtual">uipc::constitution::PlasticDiscreteShellBending</derivedcompoundref>
     <sectiondef kind="private-type">
       <memberdef kind="typedef" id="classuipc_1_1constitution_1_1FiniteElementExtraConstitution_1ab7929d3802db7a92ca506f1064d71a49" prot="private" static="no">
         <type><ref refid="classuipc_1_1constitution_1_1IConstitution" kindref="compound">IConstitution</ref></type>
@@ -49,6 +50,7 @@
         <reimplements refid="classuipc_1_1constitution_1_1IConstitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
         <reimplementedby refid="classuipc_1_1constitution_1_1DiscreteShellBending_1ab334f8c53f158570d9978b63025fbf97">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1KirchhoffRodBending_1ac3e0416435ab0f1239a04362ed8b0a4a">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1PlasticDiscreteShellBending_1a5d0b49c1bcfb82b7ec1832239f296893">get_uid</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -82,6 +84,12 @@
       <node id="4">
         <label>uipc::constitution::KirchhoffRodBending</label>
         <link refid="classuipc_1_1constitution_1_1KirchhoffRodBending"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>uipc::constitution::PlasticDiscreteShellBending</label>
+        <link refid="classuipc_1_1constitution_1_1PlasticDiscreteShellBending"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

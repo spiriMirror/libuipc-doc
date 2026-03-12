@@ -81,6 +81,10 @@ UIPC_BUILTIN_ATTRIBUTE(abd_mass);
 UIPC_BUILTIN_ATTRIBUTE(abd_mass_x_bar);
 
 UIPC_BUILTIN_ATTRIBUTE(abd_mass_x_bar_x_bar);
+
+UIPC_BUILTIN_ATTRIBUTE(total_mass);
+
+UIPC_BUILTIN_ATTRIBUTE(inertia_tensor);
 #endif
 ```
 

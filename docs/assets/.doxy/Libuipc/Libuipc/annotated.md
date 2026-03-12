@@ -65,8 +65,10 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md)     
         * **class** [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md)     
         * **class** [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md)     
+        * **class** [**AffineBodyPrismaticJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalBodyForce.md)     
         * **class** [**AffineBodyPrismaticJointLimit**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit.md)     
         * **class** [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md)     
+        * **class** [**AffineBodyRevoluteJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce.md)     
         * **class** [**AffineBodyRevoluteJointLimit**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit.md)     
         * **class** [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md) _Codimensional 1D (rod) affine body constitution._     
         * **class** [**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md) _Codimensional 2D (shell) affine body constitution._     
@@ -87,6 +89,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md)     
         * **class** [**NeoHookeanShell**](classuipc_1_1constitution_1_1NeoHookeanShell.md)     
         * **class** [**Particle**](classuipc_1_1constitution_1_1Particle.md)     
+        * **class** [**PlasticDiscreteShellBending**](classuipc_1_1constitution_1_1PlasticDiscreteShellBending.md)     
         * **class** [**RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md)     
         * **class** [**SoftPositionConstraint**](classuipc_1_1constitution_1_1SoftPositionConstraint.md)     
         * **class** [**SoftTransformConstraint**](classuipc_1_1constitution_1_1SoftTransformConstraint.md)     
