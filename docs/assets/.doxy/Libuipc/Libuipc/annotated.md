@@ -60,6 +60,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **namespace** [**constitution**](namespaceuipc_1_1constitution.md)     
         * **class** [**ARAP**](classuipc_1_1constitution_1_1ARAP.md)     
         * **class** [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md)     
+        * **class** [**AffineBodyDrivingPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint.md)     
         * **class** [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md)     
         * **class** [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md)     
         * **class** [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md)     

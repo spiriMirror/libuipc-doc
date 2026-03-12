@@ -3,6 +3,7 @@
   <compounddef id="classuipc_1_1constitution_1_1Constraint" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>uipc::constitution::Constraint</compoundname>
     <basecompoundref refid="classuipc_1_1constitution_1_1IConstitution" prot="public" virt="non-virtual">uipc::constitution::IConstitution</basecompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint" prot="public" virt="non-virtual">uipc::constitution::AffineBodyDrivingPrismaticJoint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint" prot="public" virt="non-virtual">uipc::constitution::AffineBodyDrivingRevoluteJoint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint" prot="public" virt="non-virtual">uipc::constitution::ExternalArticulationConstraint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1LinearMotor" prot="public" virt="non-virtual">uipc::constitution::LinearMotor</derivedcompoundref>
@@ -33,6 +34,7 @@
         <name>get_uid</name>
         <qualifiedname>uipc::constitution::Constraint::get_uid</qualifiedname>
         <reimplements refid="classuipc_1_1constitution_1_1IConstitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
+        <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a114abfa464d7829d1e264548671fc97a">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1a82a6cb96c0441075f897f7b43af3cf0c">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a73fa172511936f0fc8d9e2fcf746ad81">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1SoftPositionConstraint_1afb911802a44a053c0fbe1c273417cf83">get_uid</reimplementedby>
@@ -72,6 +74,12 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
+        <label>uipc::constitution::AffineBodyDrivingPrismaticJoint</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
         <label>uipc::constitution::AffineBodyDrivingRevoluteJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint"/>
         <childnode refid="1" relation="public-inheritance">
@@ -83,7 +91,7 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>uipc::constitution::ExternalArticulationConstraint</label>
         <link refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint"/>
         <childnode refid="1" relation="public-inheritance">
@@ -93,25 +101,25 @@
         <label>uipc::constitution::IConstitution</label>
         <link refid="classuipc_1_1constitution_1_1IConstitution"/>
       </node>
-      <node id="5">
+      <node id="6">
         <label>uipc::constitution::LinearMotor</label>
         <link refid="classuipc_1_1constitution_1_1LinearMotor"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>uipc::constitution::RotatingMotor</label>
         <link refid="classuipc_1_1constitution_1_1RotatingMotor"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>uipc::constitution::SoftPositionConstraint</label>
         <link refid="classuipc_1_1constitution_1_1SoftPositionConstraint"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>uipc::constitution::SoftTransformConstraint</label>
         <link refid="classuipc_1_1constitution_1_1SoftTransformConstraint"/>
         <childnode refid="1" relation="public-inheritance">

@@ -16,7 +16,7 @@
 Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstitution.md)
 
 
-Inherited by the following classes: [uipc::constitution::AffineBodyDrivingRevoluteJoint](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md),  [uipc::constitution::ExternalArticulationConstraint](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md),  [uipc::constitution::LinearMotor](classuipc_1_1constitution_1_1LinearMotor.md),  [uipc::constitution::RotatingMotor](classuipc_1_1constitution_1_1RotatingMotor.md),  [uipc::constitution::SoftPositionConstraint](classuipc_1_1constitution_1_1SoftPositionConstraint.md),  [uipc::constitution::SoftTransformConstraint](classuipc_1_1constitution_1_1SoftTransformConstraint.md)
+Inherited by the following classes: [uipc::constitution::AffineBodyDrivingPrismaticJoint](classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint.md),  [uipc::constitution::AffineBodyDrivingRevoluteJoint](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md),  [uipc::constitution::ExternalArticulationConstraint](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md),  [uipc::constitution::LinearMotor](classuipc_1_1constitution_1_1LinearMotor.md),  [uipc::constitution::RotatingMotor](classuipc_1_1constitution_1_1RotatingMotor.md),  [uipc::constitution::SoftPositionConstraint](classuipc_1_1constitution_1_1SoftPositionConstraint.md),  [uipc::constitution::SoftTransformConstraint](classuipc_1_1constitution_1_1SoftTransformConstraint.md)
 
 
 

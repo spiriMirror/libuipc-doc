@@ -14,6 +14,8 @@
 ([**nlohmann**](namespacenlohmann.md))
 * [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**AffineBodyDrivingPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint.md)
+([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md)

@@ -31,6 +31,7 @@
 | ---: | :--- |
 | class | [**ARAP**](classuipc_1_1constitution_1_1ARAP.md) <br> |
 | class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md) <br> |
+| class | [**AffineBodyDrivingPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint.md) <br> |
 | class | [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md) <br> |
 | class | [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md) <br> |
 | class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) <br> |

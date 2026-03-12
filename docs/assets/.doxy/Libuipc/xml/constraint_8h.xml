@@ -4,6 +4,7 @@
     <compoundname>constraint.h</compoundname>
     <includes refid="constitution_8h" local="no">uipc/constitution/constitution.h</includes>
     <includes refid="geometry_2geometry_8h" local="no">uipc/geometry/geometry.h</includes>
+    <includedby refid="affine__body__driving__prismatic__joint_8h" local="no">include/uipc/constitution/affine_body_driving_prismatic_joint.h</includedby>
     <includedby refid="affine__body__driving__revolute__joint_8h" local="no">include/uipc/constitution/affine_body_driving_revolute_joint.h</includedby>
     <includedby refid="external__articulation__constraint_8h" local="no">include/uipc/constitution/external_articulation_constraint.h</includedby>
     <includedby refid="soft__position__constraint_8h" local="no">include/uipc/constitution/soft_position_constraint.h</includedby>
@@ -346,6 +347,10 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
+        <label>include/uipc/constitution/affine_body_driving_prismatic_joint.h</label>
+        <link refid="affine__body__driving__prismatic__joint_8h_source"/>
+      </node>
+      <node id="3">
         <label>include/uipc/constitution/affine_body_driving_revolute_joint.h</label>
         <link refid="affine__body__driving__revolute__joint_8h_source"/>
       </node>
@@ -360,16 +365,18 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>include/uipc/constitution/external_articulation_constraint.h</label>
         <link refid="external__articulation__constraint_8h_source"/>
       </node>
-      <node id="4">
+      <node id="5">
         <label>include/uipc/constitution/soft_position_constraint.h</label>
         <link refid="soft__position__constraint_8h_source"/>
       </node>
-      <node id="5">
+      <node id="6">
         <label>include/uipc/constitution/soft_transform_constraint.h</label>
         <link refid="soft__transform__constraint_8h_source"/>
       </node>

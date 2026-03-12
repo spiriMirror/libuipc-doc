@@ -25,6 +25,9 @@ class UIPC_CONSTITUTION_API AffineBodyDrivingRevoluteJoint final : public Constr
 
     void apply_to(geometry::SimplicialComplex& sc, Float strength_ratio = Float{100});
 
+
+    void apply_to(geometry::SimplicialComplex& sc, span<Float> strength_ratios);
+
     static Json default_config();
 
   private:

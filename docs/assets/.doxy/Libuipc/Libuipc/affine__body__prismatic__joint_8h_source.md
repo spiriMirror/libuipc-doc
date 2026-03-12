@@ -26,22 +26,17 @@ class UIPC_CONSTITUTION_API AffineBodyPrismaticJoint final : public InterAffineB
 
     virtual ~AffineBodyPrismaticJoint();
 
-    // Deprecated: Use the new apply_to method with instance IDs for multi-instance support
-    void apply_to(geometry::SimplicialComplex& edges,
-                  span<SlotTuple>              geo_slots,
-                  Float                        strength_ratio = Float{100});
-    
-    void apply_to(geometry::SimplicialComplex& edges,
+    void apply_to(geometry::SimplicialComplex&             edges,
                   span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
                   span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
-                  Float                                  strength_ratio = Float{100});
+                  Float strength_ratio = Float{100});
 
-    void apply_to(geometry::SimplicialComplex& edges,
+    void apply_to(geometry::SimplicialComplex&             edges,
                   span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
-                  span<IndexT>                           l_instance_id,
+                  span<IndexT>                             l_instance_id,
                   span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
-                  span<IndexT>                           r_instance_id,
-                  span<Float>                            strength_ratio);
+                  span<IndexT>                             r_instance_id,
+                  span<Float>                              strength_ratio);
 
   private:
     virtual U64 get_uid() const noexcept override;

@@ -84,6 +84,7 @@ Here is a list of all files with brief descriptions:
             * **file** [**zip.h**](zip_8h.md)     
         * **dir** [**constitution**](dir_e6404e629433dfdedefe8b8f43f6234d.md)     
             * **file** [**affine\_body\_constitution.h**](affine__body__constitution_8h.md)     
+            * **file** [**affine\_body\_driving\_prismatic\_joint.h**](affine__body__driving__prismatic__joint_8h.md)     
             * **file** [**affine\_body\_driving\_revolute\_joint.h**](affine__body__driving__revolute__joint_8h.md)     
             * **file** [**affine\_body\_external\_force.h**](affine__body__external__force_8h.md)     
             * **file** [**affine\_body\_prismatic\_joint.h**](affine__body__prismatic__joint_8h.md)     

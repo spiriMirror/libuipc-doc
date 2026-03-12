@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="22" column="17" bodyfile="include/uipc/constitution/affine_body_driving_revolute_joint.h" bodystart="22" bodyend="-1"/>
+        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="42" column="17" bodyfile="include/uipc/constitution/affine_body_driving_revolute_joint.h" bodystart="42" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -85,12 +85,73 @@
           <defval>Float{100}</defval>
         </param>
         <briefdescription>
+<para>Apply driving revolute joint to edges connecting affine bodies (single-instance mode). </para>
         </briefdescription>
         <detaileddescription>
+<para>This method assumes each geometry has exactly one instance (instance 0). All joints use the same strength ratio.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex containing the edges representing the joints. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strength_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The strength ratio of the joint constraint applied to all joints (default: 100). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="16" column="10"/>
+        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1a66cc5c66546bb1e057fed523399933c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyDrivingRevoluteJoint::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; Float &gt; strength_ratios)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingRevoluteJoint::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>strength_ratios</declname>
+        </param>
+        <briefdescription>
+<para>Apply driving revolute joint to edges connecting affine bodies (multi-instance mode). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method supports geometries with multiple instances. Each joint can specify which instance of each geometry to connect, and can have its own strength ratio. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex containing the edges representing the joints. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strength_ratios</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The strength ratio for each joint (one per edge). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="36" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -106,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="18" column="17"/>
+        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="38" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -123,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="21" column="17"/>
+        <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="41" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -166,10 +227,11 @@
         <link refid="classuipc_1_1constitution_1_1IConstitution"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_driving_revolute_joint.h" bodystart="8" bodyend="23"/>
+    <location file="include/uipc/constitution/affine_body_driving_revolute_joint.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_driving_revolute_joint.h" bodystart="8" bodyend="43"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1a4e1e89df0f5ef3956c451538c3bb97aa" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingRevoluteJoint</scope><name>AffineBodyDrivingRevoluteJoint</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1a0d9a6f0aaed2aea6c15b122e977e2c7a" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingRevoluteJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1a66cc5c66546bb1e057fed523399933c0" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingRevoluteJoint</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1Constraint_1a87edc064bcbfd767150a4f185ddbb8c9" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::Constraint::"><scope>uipc::constitution::AffineBodyDrivingRevoluteJoint</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint_1ac66197be11853f87c8f261ada4e9dfd7" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingRevoluteJoint</scope><name>Base</name></member>
       <member refid="classuipc_1_1constitution_1_1Constraint_1ad1c93564e93d05c9ecd0330cfcacbe46" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingRevoluteJoint</scope><name>Constraint</name></member>

@@ -36,6 +36,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::constitution::AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md) _Codimensional 2D (shell) affine body constitution._ 
     * **class** [**uipc::constitution::AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md) 
     * **class** [**uipc::constitution::Constraint**](classuipc_1_1constitution_1_1Constraint.md)     
+        * **class** [**uipc::constitution::AffineBodyDrivingPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint.md) 
         * **class** [**uipc::constitution::AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md) 
         * **class** [**uipc::constitution::ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md) _External articulation constraint for incorporating external kinetic energy into the IPC system._ 
         * **class** [**uipc::constitution::LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md) 

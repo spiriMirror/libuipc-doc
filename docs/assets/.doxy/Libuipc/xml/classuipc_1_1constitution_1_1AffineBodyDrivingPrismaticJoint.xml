@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::AffineBodyDrivingPrismaticJoint</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1Constraint" prot="public" virt="non-virtual">uipc::constitution::Constraint</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a1e1c1b7d1ac5fe995764f1259003f5db" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1Constraint" kindref="compound">Constraint</ref></type>
+        <definition>using uipc::constitution::AffineBodyDrivingPrismaticJoint::Base =  Constraint</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="9" column="5" bodyfile="include/uipc/constitution/affine_body_driving_prismatic_joint.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a7dabe1a50e1864bf440a2257fcb0e190" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::AffineBodyDrivingPrismaticJoint::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="42" column="17" bodyfile="include/uipc/constitution/affine_body_driving_prismatic_joint.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a490554faa91cf9e73198bb2f751e1baf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::AffineBodyDrivingPrismaticJoint::AffineBodyDrivingPrismaticJoint</definition>
+        <argsstring>(const Json &amp;config=default_config())</argsstring>
+        <name>AffineBodyDrivingPrismaticJoint</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::AffineBodyDrivingPrismaticJoint</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a8b831819057efc2cbe179d2a2402ffb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::AffineBodyDrivingPrismaticJoint::~AffineBodyDrivingPrismaticJoint</definition>
+        <argsstring>() override</argsstring>
+        <name>~AffineBodyDrivingPrismaticJoint</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::~AffineBodyDrivingPrismaticJoint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="14" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a6c2c6c7603667889f0ec3c99e4d84c25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyDrivingPrismaticJoint::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float strength_ratio=Float{100})</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>strength_ratio</declname>
+          <defval>Float{100}</defval>
+        </param>
+        <briefdescription>
+<para>Apply driving prismatic joint to edges connecting affine bodies (single-instance mode). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method assumes each geometry has exactly one instance (instance 0). All joints use the same strength ratio.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex containing the edges representing the joints. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strength_ratio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The strength ratio of the joint constraint applied to all joints (default: 100). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="25" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1ab5df65f5fff271b1268e02c356abc7ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::AffineBodyDrivingPrismaticJoint::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; Float &gt; strength_ratios)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>strength_ratios</declname>
+        </param>
+        <briefdescription>
+<para>Apply driving prismatic joint to edges connecting affine bodies (multi-instance mode). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method supports geometries with multiple instances. Each joint can specify which instance of each geometry to connect, and can have its own strength ratio. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The simplicial complex containing the edges representing the joints. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>strength_ratios</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The strength ratio for each joint (one per edge). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="36" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a4b6848d2c43e16991105c4df7ea321e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::AffineBodyDrivingPrismaticJoint::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="38" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a114abfa464d7829d1e264548671fc97a" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::constitution::AffineBodyDrivingPrismaticJoint::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::AffineBodyDrivingPrismaticJoint::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1Constraint_1a1c82273f5d6fbaa247b384a5af54a603">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="41" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyDrivingPrismaticJoint</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::constitution::AffineBodyDrivingPrismaticJoint</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::Constraint</label>
+        <link refid="classuipc_1_1constitution_1_1Constraint"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/affine_body_driving_prismatic_joint.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_driving_prismatic_joint.h" bodystart="8" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a490554faa91cf9e73198bb2f751e1baf" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>AffineBodyDrivingPrismaticJoint</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a6c2c6c7603667889f0ec3c99e4d84c25" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1ab5df65f5fff271b1268e02c356abc7ac" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1a87edc064bcbfd767150a4f185ddbb8c9" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::Constraint::"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a1e1c1b7d1ac5fe995764f1259003f5db" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1Constraint_1ad1c93564e93d05c9ecd0330cfcacbe46" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>Constraint</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a4b6848d2c43e16991105c4df7ea321e4" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a114abfa464d7829d1e264548671fc97a" prot="private" virt="virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a7dabe1a50e1864bf440a2257fcb0e190" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a8b831819057efc2cbe179d2a2402ffb3" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>~AffineBodyDrivingPrismaticJoint</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::AffineBodyDrivingPrismaticJoint</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

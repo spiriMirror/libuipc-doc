@@ -93,7 +93,8 @@ Inherits the following classes: [uipc::constitution::Constraint](classuipc_1_1co
 | Type | Name |
 | ---: | :--- |
 |   | [**AffineBodyDrivingRevoluteJoint**](#function-affinebodydrivingrevolutejoint) (const Json & config=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float strength\_ratio=Float{100}) <br> |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float strength\_ratio=Float{100}) <br>_Apply driving revolute joint to edges connecting affine bodies (single-instance mode)._  |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, span&lt; Float &gt; strength\_ratios) <br>_Apply driving revolute joint to edges connecting affine bodies (multi-instance mode)._  |
 |   | [**~AffineBodyDrivingRevoluteJoint**](#function-affinebodydrivingrevolutejoint) () override<br> |
 
 
@@ -237,8 +238,9 @@ uipc::constitution::AffineBodyDrivingRevoluteJoint::AffineBodyDrivingRevoluteJoi
 
 
 
-### function apply\_to 
+### function apply\_to [1/2]
 
+_Apply driving revolute joint to edges connecting affine bodies (single-instance mode)._ 
 ```C++
 void uipc::constitution::AffineBodyDrivingRevoluteJoint::apply_to (
     geometry::SimplicialComplex & sc,
@@ -248,6 +250,50 @@ void uipc::constitution::AffineBodyDrivingRevoluteJoint::apply_to (
 
 
 
+This method assumes each geometry has exactly one instance (instance 0). All joints use the same strength ratio.
+
+
+
+
+**Parameters:**
+
+
+* `sc` The simplicial complex containing the edges representing the joints. 
+* `strength_ratio` The strength ratio of the joint constraint applied to all joints (default: 100). 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function apply\_to [2/2]
+
+_Apply driving revolute joint to edges connecting affine bodies (multi-instance mode)._ 
+```C++
+void uipc::constitution::AffineBodyDrivingRevoluteJoint::apply_to (
+    geometry::SimplicialComplex & sc,
+    span< Float > strength_ratios
+) 
+```
+
+
+
+This method supports geometries with multiple instances. Each joint can specify which instance of each geometry to connect, and can have its own strength ratio. 
+
+**Parameters:**
+
+
+* `sc` The simplicial complex containing the edges representing the joints. 
+* `strength_ratios` The strength ratio for each joint (one per edge). 
+
+
+
+
+        
 
 <hr>
 

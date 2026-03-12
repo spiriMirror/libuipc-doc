@@ -98,9 +98,8 @@ Inherits the following classes: [uipc::constitution::InterAffineBodyConstitution
 | Type | Name |
 | ---: | :--- |
 |   | [**AffineBodyPrismaticJoint**](#function-affinebodyprismaticjoint) (const Json & config=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to-13) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; SlotTuple &gt; geo\_slots, Float strength\_ratio=Float{100}) <br>_Deprecated: Apply prismatic joint to edges connecting affine bodies._  |
-|  void | [**apply\_to**](#function-apply_to-23) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, Float strength\_ratio=Float{100}) <br>_Apply prismatic joint to edges connecting affine bodies (single-instance mode)._  |
-|  void | [**apply\_to**](#function-apply_to-33) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_id, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_id, span&lt; Float &gt; strength\_ratio) <br>_Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._  |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, Float strength\_ratio=Float{100}) <br>_Apply prismatic joint to edges connecting affine bodies (single-instance mode)._  |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_id, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_id, span&lt; Float &gt; strength\_ratio) <br>_Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._  |
 | virtual  | [**~AffineBodyPrismaticJoint**](#function-affinebodyprismaticjoint) () <br> |
 
 
@@ -244,41 +243,7 @@ uipc::constitution::AffineBodyPrismaticJoint::AffineBodyPrismaticJoint (
 
 
 
-### function apply\_to [1/3]
-
-_Deprecated: Apply prismatic joint to edges connecting affine bodies._ 
-```C++
-void uipc::constitution::AffineBodyPrismaticJoint::apply_to (
-    geometry::SimplicialComplex & edges,
-    span< SlotTuple > geo_slots,
-    Float strength_ratio=Float{100}
-) 
-```
-
-
-
-This method is deprecated. Use the new apply\_to methods with instance IDs for multi-instance support.
-
-
-
-
-**Parameters:**
-
-
-* `edges` The simplicial complex containing the edges representing the joints. 
-* `geo_slots` Pairs of geometry slots representing the connected bodies. 
-* `strength_ratio` The strength ratio of the joint constraint (default: 100). 
-
-
-
-
-        
-
-<hr>
-
-
-
-### function apply\_to [2/3]
+### function apply\_to [1/2]
 
 _Apply prismatic joint to edges connecting affine bodies (single-instance mode)._ 
 ```C++
@@ -314,7 +279,7 @@ This method assumes each geometry has exactly one instance (instance 0). All joi
 
 
 
-### function apply\_to [3/3]
+### function apply\_to [2/2]
 
 _Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._ 
 ```C++
