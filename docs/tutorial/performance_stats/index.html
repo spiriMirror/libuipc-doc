@@ -819,6 +819,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#framewise-n-way-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framewise N-Way Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary-report" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3126,6 +3137,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#framewise-n-way-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framewise N-Way Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#summary-report" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3394,12 +3416,43 @@
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>| 1     | 0.0047s          | 0.0021s     |
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>| ...   | ...              | ...         |
 </span></code></pre></div>
+<h2 id="framewise-n-way-comparison">Framewise N-Way Comparison</h2>
+<p>Use a single public API for all comparison scenarios (including 2 configs):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">stats_map</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s1">'baseline'</span><span class="p">:</span> <span class="n">stats_baseline</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="s1">'candidate_a'</span><span class="p">:</span> <span class="n">stats_a</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="s1">'candidate_b'</span><span class="p">:</span> <span class="n">stats_b</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">}</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">SimulationStats</span><span class="o">.</span><span class="n">create_comparison</span><span class="p">(</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="n">stats_map</span><span class="p">,</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'nway_compare'</span><span class="p">,</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">'Newton Iteration'</span><span class="p">,</span> <span class="s1">'Line Search'</span><span class="p">],</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="n">metric</span><span class="o">=</span><span class="s1">'duration'</span><span class="p">,</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">align</span><span class="o">=</span><span class="s1">'union'</span><span class="p">,</span>  <span class="c1"># or 'intersection'</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="p">)</span>
+</span></code></pre></div>
+<p><code>create_comparison</code> also accepts JSON inputs:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">SimulationStats</span><span class="o">.</span><span class="n">create_comparison</span><span class="p">(</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="p">{</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        <span class="s1">'baseline'</span><span class="p">:</span> <span class="s1">'runs/baseline/timer_frames.json'</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        <span class="s1">'candidate_a'</span><span class="p">:</span> <span class="s1">'runs/candidate_a/timer_frames.json'</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="p">},</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'nway_compare'</span><span class="p">,</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>The generated report includes:</p>
+<ol>
+<li>One profiler heatmap per config</li>
+<li>Grouped bar chart (timer means, config by color)</li>
+<li>Multi-line framewise curves (one chart per timer)</li>
+</ol>
 <h2 id="summary-report">Summary Report</h2>
 <p><code>summary_report()</code> generates a complete performance report as a folder of Markdown + SVG files:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">workspace</span><span class="o">=</span><span class="n">workspace</span><span class="p">,</span>   <span class="c1"># optional: path to workspace for system deps</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">workspace</span><span class="o">=</span><span class="n">workspace</span><span class="p">,</span>   <span class="c1"># optional: path to workspace for system deps</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span>
 </span></code></pre></div>
 <p>The generated <code>report.md</code> includes:</p>
 <ol>
@@ -3450,30 +3503,30 @@
 <p>Timers not found in the data are automatically skipped.</p>
 <h3 id="custom-timer-keys">Custom Timer Keys</h3>
 <p>Pass exact timer names or alias keys:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">'Newton Iteration'</span><span class="p">,</span> <span class="s1">'Build Linear System'</span><span class="p">],</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">'Newton Iteration'</span><span class="p">,</span> <span class="s1">'Build Linear System'</span><span class="p">],</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="custom-aliases">Custom Aliases</h3>
 <p>Add your own regex patterns:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Per-call</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">'newton_iteration'</span><span class="p">,</span> <span class="s1">'my_timer'</span><span class="p">],</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">aliases</span><span class="o">=</span><span class="p">{</span><span class="s1">'my_timer'</span><span class="p">:</span> <span class="sa">r</span><span class="s1">'(?i)my.*custom.*timer'</span><span class="p">},</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">)</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># Or globally</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">SimulationStats</span><span class="o">.</span><span class="n">DEFAULT_ALIASES</span><span class="p">[</span><span class="s1">'my_timer'</span><span class="p">]</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'(?i)my.*custom.*timer'</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">SimulationStats</span><span class="o">.</span><span class="n">ALIAS_DISPLAY</span><span class="p">[</span><span class="s1">'my_timer'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'My Custom Timer'</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Per-call</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">'newton_iteration'</span><span class="p">,</span> <span class="s1">'my_timer'</span><span class="p">],</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">aliases</span><span class="o">=</span><span class="p">{</span><span class="s1">'my_timer'</span><span class="p">:</span> <span class="sa">r</span><span class="s1">'(?i)my.*custom.*timer'</span><span class="p">},</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">)</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># Or globally</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">SimulationStats</span><span class="o">.</span><span class="n">DEFAULT_ALIASES</span><span class="p">[</span><span class="s1">'my_timer'</span><span class="p">]</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'(?i)my.*custom.*timer'</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">SimulationStats</span><span class="o">.</span><span class="n">ALIAS_DISPLAY</span><span class="p">[</span><span class="s1">'my_timer'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'My Custom Timer'</span>
 </span></code></pre></div>
 <h2 id="system-dependency-graph">System Dependency Graph</h2>
 <p>When <code>workspace</code> is provided to <code>summary_report</code>, the backend system dependency graph is included automatically.  You can also generate it standalone:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">stats</span><span class="o">.</span><span class="n">system_dependency_graph</span><span class="p">(</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">workspace</span><span class="p">,</span>                          <span class="c1"># or path to systems.json</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="n">output_path</span><span class="o">=</span><span class="s1">'system_deps.svg'</span><span class="p">,</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">stats</span><span class="o">.</span><span class="n">system_dependency_graph</span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="n">workspace</span><span class="p">,</span>                          <span class="c1"># or path to systems.json</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="n">output_path</span><span class="o">=</span><span class="s1">'system_deps.svg'</span><span class="p">,</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span>
 </span></code></pre></div>
 <p>The graph shows:</p>
 <ul>
@@ -3538,48 +3591,48 @@ Directed graph of backend system dependencies.  Green nodes are **engine-aware**
 <p>Open <code>report.md</code> in any Markdown viewer (VS Code, GitHub, GitLab) to see the SVG charts rendered inline.  The collapsible sections (<code>&lt;details&gt;</code>) work in GitHub and most modern Markdown renderers.</p>
 </div>
 <h2 id="full-example">Full Example</h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">uipc</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Engine</span><span class="p">,</span> <span class="n">World</span><span class="p">,</span> <span class="n">Scene</span><span class="p">,</span> <span class="n">SceneIO</span><span class="p">,</span> <span class="n">Matrix4x4</span><span class="p">,</span> <span class="n">view</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.constitution</span><span class="w"> </span><span class="kn">import</span> <span class="n">AffineBodyConstitution</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimulationStats</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># Setup simulation</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">engine</span> <span class="o">=</span> <span class="n">Engine</span><span class="p">(</span><span class="s2">"cuda"</span><span class="p">,</span> <span class="s2">"workspace"</span><span class="p">)</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">world</span> <span class="o">=</span> <span class="n">World</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">Scene</span><span class="o">.</span><span class="n">default_config</span><span class="p">())</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="n">abd</span> <span class="o">=</span> <span class="n">AffineBodyConstitution</span><span class="p">()</span>
-</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="n">scene</span><span class="o">.</span><span class="n">contact_tabular</span><span class="p">()</span><span class="o">.</span><span class="n">default_model</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1e9</span><span class="p">)</span>
-</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="n">de</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">contact_tabular</span><span class="p">()</span><span class="o">.</span><span class="n">default_element</span><span class="p">()</span>
-</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
-</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="n">io</span> <span class="o">=</span> <span class="n">SimplicialComplexIO</span><span class="p">()</span>
-</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"cube.msh"</span><span class="p">)</span>
-</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="n">label_surface</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
-</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="n">label_triangle_orient</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
-</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">flip_inward_triangles</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
-</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="n">abd</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="mf">1e8</span><span class="p">)</span>
-</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="n">de</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
-</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>
-</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"cubes"</span><span class="p">)</span>
-</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="n">obj</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
-</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="n">obj</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">ground</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
-</span><span id="__span-13-28"><a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>
-</span><span id="__span-13-29"><a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="n">world</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
-</span><span id="__span-13-30"><a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>
-</span><span id="__span-13-31"><a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="c1"># Collect performance data</span>
-</span><span id="__span-13-32"><a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">SimulationStats</span><span class="p">()</span>
-</span><span id="__span-13-33"><a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-</span><span id="__span-13-34"><a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>    <span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
-</span><span id="__span-13-35"><a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>    <span class="n">world</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
-</span><span id="__span-13-36"><a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>    <span class="n">stats</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-</span><span id="__span-13-37"><a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>
-</span><span id="__span-13-38"><a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="c1"># Generate report</span>
-</span><span id="__span-13-39"><a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
-</span><span id="__span-13-40"><a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
-</span><span id="__span-13-41"><a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>    <span class="n">workspace</span><span class="o">=</span><span class="s1">'workspace'</span><span class="p">,</span>
-</span><span id="__span-13-42"><a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">uipc</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Engine</span><span class="p">,</span> <span class="n">World</span><span class="p">,</span> <span class="n">Scene</span><span class="p">,</span> <span class="n">SceneIO</span><span class="p">,</span> <span class="n">Matrix4x4</span><span class="p">,</span> <span class="n">view</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.constitution</span><span class="w"> </span><span class="kn">import</span> <span class="n">AffineBodyConstitution</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimulationStats</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1"># Setup simulation</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">engine</span> <span class="o">=</span> <span class="n">Engine</span><span class="p">(</span><span class="s2">"cuda"</span><span class="p">,</span> <span class="s2">"workspace"</span><span class="p">)</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">world</span> <span class="o">=</span> <span class="n">World</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">scene</span> <span class="o">=</span> <span class="n">Scene</span><span class="p">(</span><span class="n">Scene</span><span class="o">.</span><span class="n">default_config</span><span class="p">())</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="n">abd</span> <span class="o">=</span> <span class="n">AffineBodyConstitution</span><span class="p">()</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="n">scene</span><span class="o">.</span><span class="n">contact_tabular</span><span class="p">()</span><span class="o">.</span><span class="n">default_model</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1e9</span><span class="p">)</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="n">de</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">contact_tabular</span><span class="p">()</span><span class="o">.</span><span class="n">default_element</span><span class="p">()</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="n">io</span> <span class="o">=</span> <span class="n">SimplicialComplexIO</span><span class="p">()</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"cube.msh"</span><span class="p">)</span>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="n">label_surface</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="n">label_triangle_orient</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">flip_inward_triangles</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="n">abd</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="mf">1e8</span><span class="p">)</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="n">de</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">scene</span><span class="o">.</span><span class="n">objects</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">"cubes"</span><span class="p">)</span>
+</span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="n">obj</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="n">obj</span><span class="o">.</span><span class="n">geometries</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">ground</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+</span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>
+</span><span id="__span-15-29"><a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a><span class="n">world</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span>
+</span><span id="__span-15-30"><a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>
+</span><span id="__span-15-31"><a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="c1"># Collect performance data</span>
+</span><span id="__span-15-32"><a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">SimulationStats</span><span class="p">()</span>
+</span><span id="__span-15-33"><a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a><span class="k">for</span> <span class="n">frame</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+</span><span id="__span-15-34"><a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>    <span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
+</span><span id="__span-15-35"><a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>    <span class="n">world</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
+</span><span id="__span-15-36"><a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>    <span class="n">stats</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+</span><span id="__span-15-37"><a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>
+</span><span id="__span-15-38"><a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a><span class="c1"># Generate report</span>
+</span><span id="__span-15-39"><a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span>
+</span><span id="__span-15-40"><a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>    <span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span>
+</span><span id="__span-15-41"><a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>    <span class="n">workspace</span><span class="o">=</span><span class="s1">'workspace'</span><span class="p">,</span>
+</span><span id="__span-15-42"><a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a><span class="p">)</span>
 </span></code></pre></div></div>
 
 
