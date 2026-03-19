@@ -483,6 +483,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#build-libuipc-with-xmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Libuipc with XMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#run-project" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2954,6 +2965,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#build-libuipc-with-xmake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Libuipc with XMake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#run-project" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3045,6 +3067,12 @@
 <td>system install</td>
 </tr>
 <tr>
+<td><a href="https://xmake.io/">XMake</a></td>
+<td>&gt;=3.0.5</td>
+<td>build system</td>
+<td>system install</td>
+</tr>
+<tr>
 <td><a href="https://www.python.org/downloads/">Python</a></td>
 <td>&gt;=3.11</td>
 <td>build system</td>
@@ -3096,33 +3124,46 @@
 <p class="admonition-title">Note</p>
 <p>Use multi-thread to speed up the build process as possible, becasue the NVCC compiler will take a lot of time.</p>
 </div>
+<h2 id="build-libuipc-with-xmake">Build Libuipc with XMake</h2>
+<p>If you prefer XMake over CMake, use the following commands in PowerShell or <code>cmd</code>.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>xmake<span class="w"> </span>f<span class="w"> </span>-c
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>xmake<span class="w"> </span>build<span class="w"> </span>-j8
+</span></code></pre></div>
+<p>Enable Python bindings with the following configuration.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>xmake<span class="w"> </span>f<span class="w"> </span>--pybind<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_system<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_version<span class="o">=</span><span class="m">3</span>.11.x<span class="w"> </span>-c
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>xmake<span class="w"> </span>build<span class="w"> </span>-j8
+</span></code></pre></div>
+<p>If you are building against another Python installation, replace <code>3.11.x</code> with the version you want XMake to resolve.</p>
+<p>The build outputs are placed under <code>build/</code>, and the staged Python package is generated in <code>build/.xpack/pyuipc</code>.</p>
 <h2 id="run-project">Run Project</h2>
 <p>Just run the executable files in <code>build/&lt;Release/RelWithDebInfo&gt;/bin</code> folder.</p>
 <h2 id="install-pyuipc">Install Pyuipc</h2>
 <p>With <code>UIPC_BUILD_PYBIND</code> option set to <code>ON</code>, the Python binding will be <strong>built</strong> and <strong>installed</strong> in the specified Python environment.</p>
 <p>If some <strong>errors</strong> occur during the installation, you can try to <strong>manually</strong> install the Python binding.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>build/python
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>pip<span class="w"> </span>install<span class="w"> </span>.
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>build/python
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>pip<span class="w"> </span>install<span class="w"> </span>.
 </span></code></pre></div>
 <h2 id="conda-environment-alternative">Conda Environment (Alternative)</h2>
 <p>Create and activate a conda environment with the following command:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>conda/env.yaml
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>uipc_env
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>conda/env.yaml
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>conda<span class="w"> </span>activate<span class="w"> </span>uipc_env
 </span></code></pre></div>
 <p>Setup the <code>CMAKE_TOOLCHAIN_FILE</code> environment variable in the conda environment:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>conda<span class="w"> </span>env<span class="w"> </span>config<span class="w"> </span>vars<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">CMAKE_TOOLCHAIN_FILE</span><span class="o">=</span>~/Toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>conda<span class="w"> </span>env<span class="w"> </span>config<span class="w"> </span>vars<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">CMAKE_TOOLCHAIN_FILE</span><span class="o">=</span>~/Toolchain/vcpkg/scripts/buildsystems/vcpkg.cmake
 </span></code></pre></div>
 <p>Then, you can build the project with the same commands as above in the conda environment.</p>
 <h2 id="check-installation">Check Installation</h2>
 <p>You can run the <code>uipc_info.py</code> to check if the <code>Pyuipc</code> is installed correctly.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc/python
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>python<span class="w"> </span>uipc_info.py
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc/python
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>python<span class="w"> </span>uipc_info.py
 </span></code></pre></div>
 <p>More samples are at <a href="https://github.com/spiriMirror/libuipc-samples">Pyuipc Samples</a>.</p>
 <h2 id="install-in-any-python-venv">Install in Any Python Venv</h2>
 <p>If you want to install the Pyuipc to any Python Venv (like <a href="https://docs.astral.sh/uv/">uv</a>) after build, you can use the following command:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cmake<span class="w"> </span>-S<span class="w"> </span>..<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DUIPC_PYTHON_EXECUTABLE_PATH<span class="o">=</span>&lt;YOUR_PYTHON_EXECUTABLE_PATH&gt;
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>-j8
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cmake<span class="w"> </span>-S<span class="w"> </span>..<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span><span class="w"> </span>-DUIPC_PYTHON_EXECUTABLE_PATH<span class="o">=</span>&lt;YOUR_PYTHON_EXECUTABLE_PATH&gt;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>-j8
 </span></code></pre></div></div>
 
 

@@ -2773,6 +2773,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dev-in-uv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dev in uv
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2823,12 +2834,20 @@
 </span></code></pre></div>
 <p>Then, you can use the following commands to build the project.</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>libuipc
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>xmake
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>xmake<span class="w"> </span>f<span class="w"> </span>-c
 </span></code></pre></div>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="out-of-memory">out of memory</h3>
 <p>Xmake uses a lot of process for parallel compilation in order to accelerate the compilation task. However, nvcc will consume a lot of memory, thus will eventually cause an OOM</p>
-<p>✅ Set the multi-process manurally, e.g. <code>xmake -j8</code> to set 8 parallel compilation jobs</p></div>
+<p>✅ Set the multi-process manurally, e.g. <code>xmake -j8</code> to set 8 parallel compilation jobs</p>
+<h2 id="dev-in-uv">dev in uv</h2>
+<p>Use <a href="https://docs.astral.sh/uv/">uv</a> to manage a virtual environment for Python development. The following steps configure xmake with Python binding support, create a virtual environment, build the project, and package the Python wheel.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.11
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>xmake<span class="w"> </span>f<span class="w"> </span>--pybind<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_system<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_version<span class="o">=</span><span class="m">3</span>.12.x<span class="w"> </span>-c
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>xmake<span class="w"> </span>build<span class="w"> </span>-j8
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>xmake<span class="w"> </span>pack<span class="w"> </span>-v
+</span></code></pre></div></div>
 
 
 
