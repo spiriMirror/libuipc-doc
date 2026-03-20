@@ -58,6 +58,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::constitution::KirchhoffRodBending**](classuipc_1_1constitution_1_1KirchhoffRodBending.md) 
         * **class** [**uipc::constitution::PlasticDiscreteShellBending**](classuipc_1_1constitution_1_1PlasticDiscreteShellBending.md) 
     * **class** [**uipc::constitution::InterAffineBodyConstitution**](classuipc_1_1constitution_1_1InterAffineBodyConstitution.md)     
+        * **class** [**uipc::constitution::AffineBodyFixedJoint**](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md) 
         * **class** [**uipc::constitution::AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md) 
         * **class** [**uipc::constitution::AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) 
     * **class** [**uipc::constitution::InterAffineBodyExtraConstitution**](classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution.md)     

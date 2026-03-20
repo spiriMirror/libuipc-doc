@@ -3,6 +3,7 @@
   <compounddef id="classuipc_1_1constitution_1_1InterAffineBodyConstitution" kind="class" language="C++" prot="public">
     <compoundname>uipc::constitution::InterAffineBodyConstitution</compoundname>
     <basecompoundref refid="classuipc_1_1constitution_1_1IConstitution" prot="public" virt="non-virtual">uipc::constitution::IConstitution</basecompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1AffineBodyFixedJoint" prot="public" virt="non-virtual">uipc::constitution::AffineBodyFixedJoint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJoint" prot="public" virt="non-virtual">uipc::constitution::AffineBodyPrismaticJoint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint" prot="public" virt="non-virtual">uipc::constitution::AffineBodyRevoluteJoint</derivedcompoundref>
     <briefdescription>
@@ -11,12 +12,18 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
+        <label>uipc::constitution::AffineBodyFixedJoint</label>
+        <link refid="classuipc_1_1constitution_1_1AffineBodyFixedJoint"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
         <label>uipc::constitution::AffineBodyPrismaticJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJoint"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>uipc::constitution::AffineBodyRevoluteJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint"/>
         <childnode refid="1" relation="public-inheritance">

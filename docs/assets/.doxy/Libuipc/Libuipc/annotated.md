@@ -63,6 +63,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**AffineBodyDrivingPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint.md)     
         * **class** [**AffineBodyDrivingRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyDrivingRevoluteJoint.md)     
         * **class** [**AffineBodyExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyExternalBodyForce.md)     
+        * **class** [**AffineBodyFixedJoint**](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md)     
         * **class** [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md)     
         * **class** [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md)     
         * **class** [**AffineBodyPrismaticJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalBodyForce.md)     
