@@ -40,6 +40,8 @@
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**AffineBodySphericalJoint**](classuipc_1_1constitution_1_1AffineBodySphericalJoint.md)
+([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1AffineBodyStateAccessorFeature.md)
 ([**uipc::core**](namespaceuipc_1_1core.md))
 * [**AffineBodyStateAccessorFeatureOverrider**](classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider.md)

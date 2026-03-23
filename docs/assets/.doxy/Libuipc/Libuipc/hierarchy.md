@@ -61,6 +61,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::constitution::AffineBodyFixedJoint**](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md) 
         * **class** [**uipc::constitution::AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md) 
         * **class** [**uipc::constitution::AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) 
+        * **class** [**uipc::constitution::AffineBodySphericalJoint**](classuipc_1_1constitution_1_1AffineBodySphericalJoint.md) 
     * **class** [**uipc::constitution::InterAffineBodyExtraConstitution**](classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution.md)     
         * **class** [**uipc::constitution::AffineBodyPrismaticJointLimit**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit.md) 
         * **class** [**uipc::constitution::AffineBodyRevoluteJointLimit**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit.md) 

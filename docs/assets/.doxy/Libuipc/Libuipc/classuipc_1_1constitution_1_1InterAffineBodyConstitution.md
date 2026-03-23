@@ -16,7 +16,7 @@
 Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstitution.md)
 
 
-Inherited by the following classes: [uipc::constitution::AffineBodyFixedJoint](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md),  [uipc::constitution::AffineBodyPrismaticJoint](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md),  [uipc::constitution::AffineBodyRevoluteJoint](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md)
+Inherited by the following classes: [uipc::constitution::AffineBodyFixedJoint](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md),  [uipc::constitution::AffineBodyPrismaticJoint](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md),  [uipc::constitution::AffineBodyRevoluteJoint](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md),  [uipc::constitution::AffineBodySphericalJoint](classuipc_1_1constitution_1_1AffineBodySphericalJoint.md)
 
 
 

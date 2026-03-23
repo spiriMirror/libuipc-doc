@@ -73,6 +73,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**AffineBodyRevoluteJointLimit**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit.md)     
         * **class** [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md) _Codimensional 1D (rod) affine body constitution._     
         * **class** [**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md) _Codimensional 2D (shell) affine body constitution._     
+        * **class** [**AffineBodySphericalJoint**](classuipc_1_1constitution_1_1AffineBodySphericalJoint.md)     
         * **class** [**Constraint**](classuipc_1_1constitution_1_1Constraint.md)     
         * **class** [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md)     
         * **class** [**ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md)     

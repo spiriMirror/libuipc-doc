@@ -96,6 +96,7 @@ Here is a list of all files with brief descriptions:
             * **file** [**affine\_body\_revolute\_joint\_limit.h**](affine__body__revolute__joint__limit_8h.md)     
             * **file** [**affine\_body\_rod.h**](affine__body__rod_8h.md)     
             * **file** [**affine\_body\_shell.h**](affine__body__shell_8h.md)     
+            * **file** [**affine\_body\_spherical\_joint.h**](affine__body__spherical__joint_8h.md)     
             * **file** [**arap.h**](arap_8h.md)     
             * **file** [**baraff\_witkin\_shell.h**](baraff__witkin__shell_8h.md) 
             * **file** [**constitution.h**](constitution_8h.md)     
