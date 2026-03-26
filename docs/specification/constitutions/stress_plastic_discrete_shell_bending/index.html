@@ -3069,9 +3069,11 @@
 
 <div><h1 id="stress-plastic-discrete-shell-bending">Stress Plastic Discrete Shell Bending</h1>
 <p><strong>StressPlasticDiscreteShellBending</strong> is a constitutive model for simulating the elastoplastic bending behavior of thin shell structures with residual creases. To ensure stable implicit time integration and physically accurate spring-back effects, this model adopts the <strong>Energy-based Consistent Integration (ECI)</strong> framework. It defines the yield condition on the generalized bending stress (bending moment) rather than the bending strain, variationally limiting the stress to the yield surface via an augmented energy density.</p>
-<p>Reference:
-- <a href="https://www.cs.columbia.edu/cg/pdfs/10_ds.pdf">Discrete Shell</a>
-- <a href="https://dl.acm.org/doi/epdf/10.1145/3528223.3530072">Energy-based Consistent Integration for Elastoplasticity</a> (Section 4.1)</p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://www.cs.columbia.edu/cg/pdfs/10_ds.pdf">Discrete Shell</a></li>
+<li><a href="https://dl.acm.org/doi/epdf/10.1145/3528223.3530072">Energy-based Consistent Integration for Elastoplasticity</a> (Section 4.1)</li>
+</ul>
 <h2 id="32-stressplasticdiscreteshellbending-stress-based-eci">#32 StressPlasticDiscreteShellBending (Stress-Based ECI)</h2>
 <p>For a shell bending element defined by four vertices at positions <span class="arithmatex">\(\mathbf{x}_0\)</span>, <span class="arithmatex">\(\mathbf{x}_1\)</span>, <span class="arithmatex">\(\mathbf{x}_2\)</span>, and <span class="arithmatex">\(\mathbf{x}_3\)</span>, where <span class="arithmatex">\((\mathbf{x}_1, \mathbf{x}_2)\)</span> forms the shared edge between two adjacent triangular faces.</p>
 <p><strong>Dihedral Angle:</strong></p>
