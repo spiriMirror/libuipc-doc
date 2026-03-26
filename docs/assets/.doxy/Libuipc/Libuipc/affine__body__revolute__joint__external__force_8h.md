@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AffineBodyRevoluteJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce.md) <br> |
+| class | [**AffineBodyRevoluteJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalForce.md) <br> |
 
 
 

@@ -37,10 +37,10 @@
 | class | [**AffineBodyFixedJoint**](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md) <br> |
 | class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) <br> |
 | class | [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md) <br> |
-| class | [**AffineBodyPrismaticJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalBodyForce.md) <br> |
+| class | [**AffineBodyPrismaticJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalForce.md) <br> |
 | class | [**AffineBodyPrismaticJointLimit**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit.md) <br> |
 | class | [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md) <br> |
-| class | [**AffineBodyRevoluteJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce.md) <br> |
+| class | [**AffineBodyRevoluteJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalForce.md) <br> |
 | class | [**AffineBodyRevoluteJointLimit**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit.md) <br> |
 | class | [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md) <br>_Codimensional 1D (rod) affine body constitution._  |
 | class | [**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md) <br>_Codimensional 2D (shell) affine body constitution._  |
@@ -62,7 +62,6 @@
 | class | [**LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md) <br> |
 | class | [**NeoHookeanShell**](classuipc_1_1constitution_1_1NeoHookeanShell.md) <br> |
 | class | [**Particle**](classuipc_1_1constitution_1_1Particle.md) <br> |
-| class | [**PlasticDiscreteShellBending**](classuipc_1_1constitution_1_1PlasticDiscreteShellBending.md) <br> |
 | class | [**RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md) <br> |
 | class | [**SoftPositionConstraint**](classuipc_1_1constitution_1_1SoftPositionConstraint.md) <br> |
 | class | [**SoftTransformConstraint**](classuipc_1_1constitution_1_1SoftTransformConstraint.md) <br> |
@@ -71,6 +70,8 @@
 | class | [**SoftVertexTriangleStitch**](classuipc_1_1constitution_1_1SoftVertexTriangleStitch.md) <br>_Inter-primitive constitution: (vertex, triangle) pairs form tetrahedra with_ [_**StableNeoHookean**_](classuipc_1_1constitution_1_1StableNeoHookean.md) _energy. UID = 30._ |
 | class | [**StableNeoHookean**](classuipc_1_1constitution_1_1StableNeoHookean.md) <br> |
 | class | [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell.md) <br> |
+| class | [**StrainPlasticDiscreteShellBending**](classuipc_1_1constitution_1_1StrainPlasticDiscreteShellBending.md) <br> |
+| class | [**StressPlasticDiscreteShellBending**](classuipc_1_1constitution_1_1StressPlasticDiscreteShellBending.md) <br> |
 
 
 

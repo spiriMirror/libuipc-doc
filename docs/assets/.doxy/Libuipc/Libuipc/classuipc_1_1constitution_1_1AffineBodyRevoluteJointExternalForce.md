@@ -1,10 +1,10 @@
 
 
-# Class uipc::constitution::AffineBodyRevoluteJointExternalBodyForce
+# Class uipc::constitution::AffineBodyRevoluteJointExternalForce
 
 
 
-[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**constitution**](namespaceuipc_1_1constitution.md) **>** [**AffineBodyRevoluteJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce.md)
+[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**constitution**](namespaceuipc_1_1constitution.md) **>** [**AffineBodyRevoluteJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalForce.md)
 
 
 
@@ -92,10 +92,10 @@ Inherits the following classes: [uipc::constitution::Constraint](classuipc_1_1co
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AffineBodyRevoluteJointExternalBodyForce**](#function-affinebodyrevolutejointexternalbodyforce) (const Json & config=default\_config()) <br> |
+|   | [**AffineBodyRevoluteJointExternalForce**](#function-affinebodyrevolutejointexternalforce) (const Json & config=default\_config()) <br> |
 |  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float torque=Float{0}) <br>_Apply uniform external torque around the revolute joint axis to all joints._  |
 |  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, span&lt; Float &gt; torques) <br>_Apply per-joint external torques around the revolute joint axis._  |
-|   | [**~AffineBodyRevoluteJointExternalBodyForce**](#function-affinebodyrevolutejointexternalbodyforce) () override<br> |
+|   | [**~AffineBodyRevoluteJointExternalForce**](#function-affinebodyrevolutejointexternalforce) () override<br> |
 
 
 ## Public Functions inherited from uipc::constitution::Constraint
@@ -223,10 +223,10 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 
 
 
-### function AffineBodyRevoluteJointExternalBodyForce 
+### function AffineBodyRevoluteJointExternalForce 
 
 ```C++
-uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::AffineBodyRevoluteJointExternalBodyForce (
+uipc::constitution::AffineBodyRevoluteJointExternalForce::AffineBodyRevoluteJointExternalForce (
     const Json & config=default_config()
 ) 
 ```
@@ -242,7 +242,7 @@ uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::AffineBodyRevolute
 
 _Apply uniform external torque around the revolute joint axis to all joints._ 
 ```C++
-void uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::apply_to (
+void uipc::constitution::AffineBodyRevoluteJointExternalForce::apply_to (
     geometry::SimplicialComplex & sc,
     Float torque=Float{0}
 ) 
@@ -274,7 +274,7 @@ Must be applied AFTER [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_
 
 _Apply per-joint external torques around the revolute joint axis._ 
 ```C++
-void uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::apply_to (
+void uipc::constitution::AffineBodyRevoluteJointExternalForce::apply_to (
     geometry::SimplicialComplex & sc,
     span< Float > torques
 ) 
@@ -302,10 +302,10 @@ Must be applied AFTER [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_
 
 
 
-### function ~AffineBodyRevoluteJointExternalBodyForce 
+### function ~AffineBodyRevoluteJointExternalForce 
 
 ```C++
-uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::~AffineBodyRevoluteJointExternalBodyForce () override
+uipc::constitution::AffineBodyRevoluteJointExternalForce::~AffineBodyRevoluteJointExternalForce () override
 ```
 
 
@@ -320,7 +320,7 @@ uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::~AffineBodyRevolut
 ### function default\_config 
 
 ```C++
-static Json uipc::constitution::AffineBodyRevoluteJointExternalBodyForce::default_config () 
+static Json uipc::constitution::AffineBodyRevoluteJointExternalForce::default_config () 
 ```
 
 

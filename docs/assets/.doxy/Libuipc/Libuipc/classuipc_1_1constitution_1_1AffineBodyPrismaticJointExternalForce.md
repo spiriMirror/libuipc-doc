@@ -1,10 +1,10 @@
 
 
-# Class uipc::constitution::AffineBodyPrismaticJointExternalBodyForce
+# Class uipc::constitution::AffineBodyPrismaticJointExternalForce
 
 
 
-[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**constitution**](namespaceuipc_1_1constitution.md) **>** [**AffineBodyPrismaticJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalBodyForce.md)
+[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**constitution**](namespaceuipc_1_1constitution.md) **>** [**AffineBodyPrismaticJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalForce.md)
 
 
 
@@ -92,10 +92,10 @@ Inherits the following classes: [uipc::constitution::Constraint](classuipc_1_1co
 
 | Type | Name |
 | ---: | :--- |
-|   | [**AffineBodyPrismaticJointExternalBodyForce**](#function-affinebodyprismaticjointexternalbodyforce) (const Json & config=default\_config()) <br> |
+|   | [**AffineBodyPrismaticJointExternalForce**](#function-affinebodyprismaticjointexternalforce) (const Json & config=default\_config()) <br> |
 |  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float force=Float{0}) <br>_Apply uniform external force along the prismatic joint axis to all joints._  |
 |  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, span&lt; Float &gt; forces) <br>_Apply per-joint external forces along the prismatic joint axis._  |
-|   | [**~AffineBodyPrismaticJointExternalBodyForce**](#function-affinebodyprismaticjointexternalbodyforce) () override<br> |
+|   | [**~AffineBodyPrismaticJointExternalForce**](#function-affinebodyprismaticjointexternalforce) () override<br> |
 
 
 ## Public Functions inherited from uipc::constitution::Constraint
@@ -223,10 +223,10 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 
 
 
-### function AffineBodyPrismaticJointExternalBodyForce 
+### function AffineBodyPrismaticJointExternalForce 
 
 ```C++
-uipc::constitution::AffineBodyPrismaticJointExternalBodyForce::AffineBodyPrismaticJointExternalBodyForce (
+uipc::constitution::AffineBodyPrismaticJointExternalForce::AffineBodyPrismaticJointExternalForce (
     const Json & config=default_config()
 ) 
 ```
@@ -242,7 +242,7 @@ uipc::constitution::AffineBodyPrismaticJointExternalBodyForce::AffineBodyPrismat
 
 _Apply uniform external force along the prismatic joint axis to all joints._ 
 ```C++
-void uipc::constitution::AffineBodyPrismaticJointExternalBodyForce::apply_to (
+void uipc::constitution::AffineBodyPrismaticJointExternalForce::apply_to (
     geometry::SimplicialComplex & sc,
     Float force=Float{0}
 ) 
@@ -274,7 +274,7 @@ Must be applied AFTER [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1
 
 _Apply per-joint external forces along the prismatic joint axis._ 
 ```C++
-void uipc::constitution::AffineBodyPrismaticJointExternalBodyForce::apply_to (
+void uipc::constitution::AffineBodyPrismaticJointExternalForce::apply_to (
     geometry::SimplicialComplex & sc,
     span< Float > forces
 ) 
@@ -302,10 +302,10 @@ Must be applied AFTER [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1
 
 
 
-### function ~AffineBodyPrismaticJointExternalBodyForce 
+### function ~AffineBodyPrismaticJointExternalForce 
 
 ```C++
-uipc::constitution::AffineBodyPrismaticJointExternalBodyForce::~AffineBodyPrismaticJointExternalBodyForce () override
+uipc::constitution::AffineBodyPrismaticJointExternalForce::~AffineBodyPrismaticJointExternalForce () override
 ```
 
 
@@ -320,7 +320,7 @@ uipc::constitution::AffineBodyPrismaticJointExternalBodyForce::~AffineBodyPrisma
 ### function default\_config 
 
 ```C++
-static Json uipc::constitution::AffineBodyPrismaticJointExternalBodyForce::default_config () 
+static Json uipc::constitution::AffineBodyPrismaticJointExternalForce::default_config () 
 ```
 
 

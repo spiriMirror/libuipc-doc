@@ -14,14 +14,14 @@
 
 namespace uipc::constitution
 {
-class UIPC_CONSTITUTION_API AffineBodyRevoluteJointExternalBodyForce final : public Constraint
+class UIPC_CONSTITUTION_API AffineBodyRevoluteJointExternalForce final : public Constraint
 {
     using Base = Constraint;
 
   public:
-    AffineBodyRevoluteJointExternalBodyForce(const Json& config = default_config());
+    AffineBodyRevoluteJointExternalForce(const Json& config = default_config());
 
-    ~AffineBodyRevoluteJointExternalBodyForce() override;
+    ~AffineBodyRevoluteJointExternalForce() override;
 
     void apply_to(geometry::SimplicialComplex& sc, Float torque = Float{0});
 

@@ -19,7 +19,7 @@
     
     
       
-        <title>File plastic_discrete_shell_bending.h - Libuipc Documentation</title>
+        <title>Class uipc::constitution::AffineBodyRevoluteJointExternalForce - Libuipc Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#file-plastic_discrete_shell_bendingh" class="md-skip">
+        <a href="#class-uipcconstitutionaffinebodyrevolutejointexternalforce" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File plastic_discrete_shell_bending.h
+              Class uipc::constitution::AffineBodyRevoluteJointExternalForce
             
           </span>
         </div>
@@ -884,6 +884,8 @@
       
         
       
+        
+      
     
     
     
@@ -1528,34 +1530,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../specification/constitutions/plastic_discrete_shell_bending/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Plastic Discrete Shell Bending
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../specification/constitutions/soft_position_constraint/" class="md-nav__link">
         
   
@@ -1732,6 +1706,62 @@
     
   
     Strain Limiting Baraff-Witkin Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/strain_plastic_discrete_shell_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strain Plastic Discrete Shell Bending
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/stress_plastic_discrete_shell_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stress Plastic Discrete Shell Bending
   
 
     
@@ -2844,10 +2874,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#namespaces" class="md-nav__link">
+  <a href="#public-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Namespaces
+        Public Functions
       
     </span>
   </a>
@@ -2855,13 +2885,146 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#classes" class="md-nav__link">
+  <a href="#public-functions-inherited-from-uipcconstitutionconstraint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Classes
+        Public Functions inherited from uipc::constitution::Constraint
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-inherited-from-uipcconstitutioniconstitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Functions inherited from uipc::constitution::IConstitution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Static Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected-functions-inherited-from-uipcconstitutionconstraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protected Functions inherited from uipc::constitution::Constraint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected-functions-inherited-from-uipcconstitutioniconstitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protected Functions inherited from uipc::constitution::IConstitution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Functions Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-affinebodyrevolutejointexternalforce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function AffineBodyRevoluteJointExternalForce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-apply_to-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function apply_to [1/2]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-apply_to-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function apply_to [2/2]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-affinebodyrevolutejointexternalforce_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function ~AffineBodyRevoluteJointExternalForce
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Static Functions Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-default_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function default_config
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2882,14 +3045,10 @@
 
 
 
-<div><h1 id="file-plastic_discrete_shell_bendingh">File plastic_discrete_shell_bending.h</h1>
-<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_e6404e629433dfdedefe8b8f43f6234d/"><strong>constitution</strong></a> <strong>&gt;</strong> <a href="./"><strong>plastic_discrete_shell_bending.h</strong></a></p>
-<p><a href="../plastic__discrete__shell__bending_8h_source/">Go to the source code of this file</a></p>
-<ul>
-<li><code>#include &lt;uipc/constitution/finite_element_extra_constitution.h&gt;</code></li>
-<li><code>#include &lt;uipc/common/unit.h&gt;</code></li>
-</ul>
-<h2 id="namespaces">Namespaces</h2>
+<div><h1 id="class-uipcconstitutionaffinebodyrevolutejointexternalforce">Class uipc::constitution::AffineBodyRevoluteJointExternalForce</h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1constitution/"><strong>constitution</strong></a> <strong>&gt;</strong> <a href="./"><strong>AffineBodyRevoluteJointExternalForce</strong></a></p>
+<p>Inherits the following classes: <a href="../classuipc_1_1constitution_1_1Constraint/">uipc::constitution::Constraint</a></p>
+<h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
 <tr>
@@ -2899,16 +3058,25 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">namespace</td>
-<td style="text-align: left;"><a href="../namespaceuipc/"><strong>uipc</strong></a> <br></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-affinebodyrevolutejointexternalforce"><strong>AffineBodyRevoluteJointExternalForce</strong></a> (const Json &amp; config=default_config()) <br></td>
 </tr>
 <tr>
-<td style="text-align: right;">namespace</td>
-<td style="text-align: left;"><a href="../namespaceuipc_1_1constitution/"><strong>constitution</strong></a> <br></td>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-apply_to-12"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, Float torque=Float{0}) <br><em>Apply uniform external torque around the revolute joint axis to all joints.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-apply_to-22"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, span&lt; Float &gt; torques) <br><em>Apply per-joint external torques around the revolute joint axis.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="#function-affinebodyrevolutejointexternalforce"><strong>~AffineBodyRevoluteJointExternalForce</strong></a> () override<br></td>
 </tr>
 </tbody>
 </table>
-<h2 id="classes">Classes</h2>
+<h2 id="public-functions-inherited-from-uipcconstitutionconstraint">Public Functions inherited from uipc::constitution::Constraint</h2>
+<p>See <a href="../classuipc_1_1constitution_1_1Constraint/">uipc::constitution::Constraint</a></p>
 <table>
 <thead>
 <tr>
@@ -2918,13 +3086,144 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">class</td>
-<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1PlasticDiscreteShellBending/"><strong>PlasticDiscreteShellBending</strong></a> <br></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1Constraint/#function-constraint"><strong>Constraint</strong></a> () noexcept<br></td>
 </tr>
 </tbody>
 </table>
+<h2 id="public-functions-inherited-from-uipcconstitutioniconstitution">Public Functions inherited from uipc::constitution::IConstitution</h2>
+<p>See <a href="../classuipc_1_1constitution_1_1IConstitution/">uipc::constitution::IConstitution</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">std::string_view</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1IConstitution/#function-name"><strong>name</strong></a> () noexcept const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">std::string_view</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1IConstitution/#function-type"><strong>type</strong></a> () noexcept const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">U64</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1IConstitution/#function-uid"><strong>uid</strong></a> () noexcept const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">const <a href="../structuipc_1_1builtin_1_1UIDInfo/"><strong>builtin::UIDInfo</strong></a> &amp;</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1IConstitution/#function-uid_info"><strong>uid_info</strong></a> () noexcept const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1IConstitution/#function-iconstitution"><strong>~IConstitution</strong></a> () = default<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-functions">Public Static Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Json</td>
+<td style="text-align: left;"><a href="#function-default_config"><strong>default_config</strong></a> () <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions-inherited-from-uipcconstitutionconstraint">Protected Functions inherited from uipc::constitution::Constraint</h2>
+<p>See <a href="../classuipc_1_1constitution_1_1Constraint/">uipc::constitution::Constraint</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1Constraint/#function-apply_to"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1Geometry/"><strong>geometry::Geometry</strong></a> &amp; geo) const<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual U64</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1Constraint/#function-get_uid"><strong>get_uid</strong></a> () noexcept const = 0<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions-inherited-from-uipcconstitutioniconstitution">Protected Functions inherited from uipc::constitution::IConstitution</h2>
+<p>See <a href="../classuipc_1_1constitution_1_1IConstitution/">uipc::constitution::IConstitution</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">virtual U64</td>
+<td style="text-align: left;"><a href="../classuipc_1_1constitution_1_1IConstitution/#function-get_uid"><strong>get_uid</strong></a> () noexcept const = 0<br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-functions-documentation">Public Functions Documentation</h2>
+<h3 id="function-affinebodyrevolutejointexternalforce">function AffineBodyRevoluteJointExternalForce</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyRevoluteJointExternalForce</span><span class="o">::</span><span class="n">AffineBodyRevoluteJointExternalForce</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">config</span><span class="o">=</span><span class="n">default_config</span><span class="p">()</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
 <hr>
-<p>The documentation for this class was generated from the following file <code>include/uipc/constitution/plastic_discrete_shell_bending.h</code></p></div>
+
+<h3 id="function-apply_to-12">function apply_to [1/2]</h3>
+<p><em>Apply uniform external torque around the revolute joint axis to all joints.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyRevoluteJointExternalForce</span><span class="o">::</span><span class="n">apply_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">torque</span><span class="o">=</span><span class="n">Float</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p>Must be applied AFTER <a href="../classuipc_1_1constitution_1_1AffineBodyRevoluteJoint/"><strong>AffineBodyRevoluteJoint</strong></a> (constitution_uid == 18). The torque is a scalar: +τ applied to body_j, -τ applied to body_i, where the axis is defined by the edge direction.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sc</code> The simplicial complex containing the edges representing the joints. </li>
+<li><code>torque</code> The scalar torque value applied to all joints. </li>
+</ul>
+<hr>
+
+<h3 id="function-apply_to-22">function apply_to [2/2]</h3>
+<p><em>Apply per-joint external torques around the revolute joint axis.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyRevoluteJointExternalForce</span><span class="o">::</span><span class="n">apply_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">torques</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p>Must be applied AFTER <a href="../classuipc_1_1constitution_1_1AffineBodyRevoluteJoint/"><strong>AffineBodyRevoluteJoint</strong></a> (constitution_uid == 18).</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>sc</code> The simplicial complex containing the edges representing the joints. </li>
+<li><code>torques</code> Per-joint scalar torque values (one per edge). </li>
+</ul>
+<hr>
+
+<h3 id="function-affinebodyrevolutejointexternalforce_1">function ~AffineBodyRevoluteJointExternalForce</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyRevoluteJointExternalForce</span><span class="o">::~</span><span class="n">AffineBodyRevoluteJointExternalForce</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
+</span></code></pre></div>
+<hr>
+<h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
+<h3 id="function-default_config">function default_config</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyRevoluteJointExternalForce</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</span></code></pre></div>
+<hr>
+
+<hr>
+<p>The documentation for this class was generated from the following file <code>include/uipc/constitution/affine_body_revolute_joint_external_force.h</code></p></div>
 
 
 

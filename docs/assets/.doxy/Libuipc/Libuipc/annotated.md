@@ -66,10 +66,10 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**AffineBodyFixedJoint**](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md)     
         * **class** [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md)     
         * **class** [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md)     
-        * **class** [**AffineBodyPrismaticJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalBodyForce.md)     
+        * **class** [**AffineBodyPrismaticJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalForce.md)     
         * **class** [**AffineBodyPrismaticJointLimit**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit.md)     
         * **class** [**AffineBodyRevoluteJoint**](classuipc_1_1constitution_1_1AffineBodyRevoluteJoint.md)     
-        * **class** [**AffineBodyRevoluteJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalBodyForce.md)     
+        * **class** [**AffineBodyRevoluteJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointExternalForce.md)     
         * **class** [**AffineBodyRevoluteJointLimit**](classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit.md)     
         * **class** [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md) _Codimensional 1D (rod) affine body constitution._     
         * **class** [**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md) _Codimensional 2D (shell) affine body constitution._     
@@ -91,7 +91,6 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**LinearMotor**](classuipc_1_1constitution_1_1LinearMotor.md)     
         * **class** [**NeoHookeanShell**](classuipc_1_1constitution_1_1NeoHookeanShell.md)     
         * **class** [**Particle**](classuipc_1_1constitution_1_1Particle.md)     
-        * **class** [**PlasticDiscreteShellBending**](classuipc_1_1constitution_1_1PlasticDiscreteShellBending.md)     
         * **class** [**RotatingMotor**](classuipc_1_1constitution_1_1RotatingMotor.md)     
         * **class** [**SoftPositionConstraint**](classuipc_1_1constitution_1_1SoftPositionConstraint.md)     
         * **class** [**SoftTransformConstraint**](classuipc_1_1constitution_1_1SoftTransformConstraint.md)     
@@ -100,6 +99,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**SoftVertexTriangleStitch**](classuipc_1_1constitution_1_1SoftVertexTriangleStitch.md) _Inter-primitive constitution: (vertex, triangle) pairs form tetrahedra with_ [_**StableNeoHookean**_](classuipc_1_1constitution_1_1StableNeoHookean.md) _energy. UID = 30._    
         * **class** [**StableNeoHookean**](classuipc_1_1constitution_1_1StableNeoHookean.md)     
         * **class** [**StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell.md)     
+        * **class** [**StrainPlasticDiscreteShellBending**](classuipc_1_1constitution_1_1StrainPlasticDiscreteShellBending.md)     
+        * **class** [**StressPlasticDiscreteShellBending**](classuipc_1_1constitution_1_1StressPlasticDiscreteShellBending.md)     
     * **namespace** [**core**](namespaceuipc_1_1core.md)     
         * **class** [**AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1AffineBodyStateAccessorFeature.md)     
         * **class** [**AffineBodyStateAccessorFeatureOverrider**](classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider.md)     

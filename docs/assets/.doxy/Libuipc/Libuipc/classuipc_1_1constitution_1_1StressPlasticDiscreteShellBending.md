@@ -1,10 +1,10 @@
 
 
-# Class uipc::constitution::PlasticDiscreteShellBending
+# Class uipc::constitution::StressPlasticDiscreteShellBending
 
 
 
-[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**constitution**](namespaceuipc_1_1constitution.md) **>** [**PlasticDiscreteShellBending**](classuipc_1_1constitution_1_1PlasticDiscreteShellBending.md)
+[**ClassList**](annotated.md) **>** [**uipc**](namespaceuipc.md) **>** [**constitution**](namespaceuipc_1_1constitution.md) **>** [**StressPlasticDiscreteShellBending**](classuipc_1_1constitution_1_1StressPlasticDiscreteShellBending.md)
 
 
 
@@ -92,8 +92,8 @@ Inherits the following classes: [uipc::constitution::FiniteElementExtraConstitut
 
 | Type | Name |
 | ---: | :--- |
-|   | [**PlasticDiscreteShellBending**](#function-plasticdiscreteshellbending) (const Json & json=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float bending\_stiffness, Float yield\_threshold, Float hardening\_modulus=0.0) <br> |
+|   | [**StressPlasticDiscreteShellBending**](#function-stressplasticdiscreteshellbending) (const Json & json=default\_config()) <br> |
+|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float bending\_stiffness, Float yield\_stress, Float hardening\_modulus=0.0) <br> |
 
 
 
@@ -214,10 +214,10 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 
 
 
-### function PlasticDiscreteShellBending 
+### function StressPlasticDiscreteShellBending 
 
 ```C++
-uipc::constitution::PlasticDiscreteShellBending::PlasticDiscreteShellBending (
+uipc::constitution::StressPlasticDiscreteShellBending::StressPlasticDiscreteShellBending (
     const Json & json=default_config()
 ) 
 ```
@@ -232,10 +232,10 @@ uipc::constitution::PlasticDiscreteShellBending::PlasticDiscreteShellBending (
 ### function apply\_to 
 
 ```C++
-void uipc::constitution::PlasticDiscreteShellBending::apply_to (
+void uipc::constitution::StressPlasticDiscreteShellBending::apply_to (
     geometry::SimplicialComplex & sc,
     Float bending_stiffness,
-    Float yield_threshold,
+    Float yield_stress,
     Float hardening_modulus=0.0
 ) 
 ```
@@ -252,7 +252,7 @@ void uipc::constitution::PlasticDiscreteShellBending::apply_to (
 ### function default\_config 
 
 ```C++
-static Json uipc::constitution::PlasticDiscreteShellBending::default_config () 
+static Json uipc::constitution::StressPlasticDiscreteShellBending::default_config () 
 ```
 
 
@@ -261,5 +261,5 @@ static Json uipc::constitution::PlasticDiscreteShellBending::default_config ()
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `include/uipc/constitution/plastic_discrete_shell_bending.h`
+The documentation for this class was generated from the following file `include/uipc/constitution/stress_plastic_discrete_shell_bending.h`
 

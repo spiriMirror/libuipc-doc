@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**AffineBodyPrismaticJointExternalBodyForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalBodyForce.md) <br> |
+| class | [**AffineBodyPrismaticJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalForce.md) <br> |
 
 
 

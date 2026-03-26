@@ -16,7 +16,7 @@
 Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstitution.md)
 
 
-Inherited by the following classes: [uipc::constitution::DiscreteShellBending](classuipc_1_1constitution_1_1DiscreteShellBending.md),  [uipc::constitution::KirchhoffRodBending](classuipc_1_1constitution_1_1KirchhoffRodBending.md),  [uipc::constitution::PlasticDiscreteShellBending](classuipc_1_1constitution_1_1PlasticDiscreteShellBending.md)
+Inherited by the following classes: [uipc::constitution::DiscreteShellBending](classuipc_1_1constitution_1_1DiscreteShellBending.md),  [uipc::constitution::KirchhoffRodBending](classuipc_1_1constitution_1_1KirchhoffRodBending.md),  [uipc::constitution::StrainPlasticDiscreteShellBending](classuipc_1_1constitution_1_1StrainPlasticDiscreteShellBending.md),  [uipc::constitution::StressPlasticDiscreteShellBending](classuipc_1_1constitution_1_1StressPlasticDiscreteShellBending.md)
 
 
 

@@ -14,14 +14,14 @@
 
 namespace uipc::constitution
 {
-class UIPC_CONSTITUTION_API AffineBodyPrismaticJointExternalBodyForce final : public Constraint
+class UIPC_CONSTITUTION_API AffineBodyPrismaticJointExternalForce final : public Constraint
 {
     using Base = Constraint;
 
   public:
-    AffineBodyPrismaticJointExternalBodyForce(const Json& config = default_config());
+    AffineBodyPrismaticJointExternalForce(const Json& config = default_config());
 
-    ~AffineBodyPrismaticJointExternalBodyForce() override;
+    ~AffineBodyPrismaticJointExternalForce() override;
 
     void apply_to(geometry::SimplicialComplex& sc, Float force = Float{0});
 
