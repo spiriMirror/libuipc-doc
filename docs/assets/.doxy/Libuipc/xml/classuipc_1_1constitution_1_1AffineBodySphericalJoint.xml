@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="33" column="17" bodyfile="include/uipc/constitution/affine_body_spherical_joint.h" bodystart="33" bodyend="-1"/>
+        <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="34" column="17" bodyfile="include/uipc/constitution/affine_body_spherical_joint.h" bodystart="34" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -69,10 +69,10 @@
         </inbodydescription>
         <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="14" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1ae7b4a36f6372c8431fd5a6b016e6df48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1adea4134e2713e4167553584c9de0a463" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::constitution::AffineBodySphericalJoint::apply_to</definition>
-        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, Float strength_ratio=Float{100})</argsstring>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, span&lt; Vector3 &gt; r_local_pos, Float strength_ratio=Float{100})</argsstring>
         <name>apply_to</name>
         <qualifiedname>uipc::constitution::AffineBodySphericalJoint::apply_to</qualifiedname>
         <param>
@@ -86,6 +86,10 @@
         <param>
           <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
           <declname>r_geo_slots</declname>
+        </param>
+        <param>
+          <type>span&lt; Vector3 &gt;</type>
+          <declname>r_local_pos</declname>
         </param>
         <param>
           <type>Float</type>
@@ -100,10 +104,10 @@
         </inbodydescription>
         <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="17" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1a6a2780433c43248233143bee77cf38aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1ac9951a77d4fa8e116d2264a4c4a5dccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::constitution::AffineBodySphericalJoint::apply_to</definition>
-        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_id, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_id, span&lt; Vector3 &gt; r_local_pos, span&lt; Float &gt; strength_ratio)</argsstring>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_ids, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_ids, span&lt; Vector3 &gt; r_local_pos, span&lt; Float &gt; strength_ratios)</argsstring>
         <name>apply_to</name>
         <qualifiedname>uipc::constitution::AffineBodySphericalJoint::apply_to</qualifiedname>
         <param>
@@ -116,7 +120,7 @@
         </param>
         <param>
           <type>span&lt; IndexT &gt;</type>
-          <declname>l_instance_id</declname>
+          <declname>l_instance_ids</declname>
         </param>
         <param>
           <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
@@ -124,7 +128,7 @@
         </param>
         <param>
           <type>span&lt; IndexT &gt;</type>
-          <declname>r_instance_id</declname>
+          <declname>r_instance_ids</declname>
         </param>
         <param>
           <type>span&lt; Vector3 &gt;</type>
@@ -132,7 +136,7 @@
         </param>
         <param>
           <type>span&lt; Float &gt;</type>
-          <declname>strength_ratio</declname>
+          <declname>strength_ratios</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -140,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="23" column="10"/>
+        <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="24" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -157,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="32" column="17"/>
+        <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="33" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -200,11 +204,11 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_spherical_joint.h" bodystart="8" bodyend="34"/>
+    <location file="include/uipc/constitution/affine_body_spherical_joint.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_spherical_joint.h" bodystart="8" bodyend="35"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1aa58b5e77303d414cc43f325c5783fbd2" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>AffineBodySphericalJoint</name></member>
-      <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1ae7b4a36f6372c8431fd5a6b016e6df48" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>apply_to</name></member>
-      <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1a6a2780433c43248233143bee77cf38aa" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1adea4134e2713e4167553584c9de0a463" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1ac9951a77d4fa8e116d2264a4c4a5dccc" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1a5ae7c0a7060adfe1ba837ee9908e13c2" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>default_config</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1a994fd1505fe62ca28c3bc80a0fcce8ce" prot="private" virt="virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>get_uid</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint_1aaadfd463dcc25df73bbaebd03b2c78f9" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodySphericalJoint</scope><name>m_config</name></member>

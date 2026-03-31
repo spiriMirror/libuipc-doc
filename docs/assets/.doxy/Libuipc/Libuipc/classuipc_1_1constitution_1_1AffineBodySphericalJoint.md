@@ -93,8 +93,8 @@ Inherits the following classes: [uipc::constitution::InterAffineBodyConstitution
 | Type | Name |
 | ---: | :--- |
 |   | [**AffineBodySphericalJoint**](#function-affinebodysphericaljoint) (const Json & config=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, Float strength\_ratio=Float{100}) <br> |
-|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_id, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_id, span&lt; Vector3 &gt; r\_local\_pos, span&lt; Float &gt; strength\_ratio) <br> |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; Vector3 &gt; r\_local\_pos, Float strength\_ratio=Float{100}) <br> |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Vector3 &gt; r\_local\_pos, span&lt; Float &gt; strength\_ratios) <br> |
 | virtual  | [**~AffineBodySphericalJoint**](#function-affinebodysphericaljoint) () <br> |
 
 
@@ -230,6 +230,7 @@ void uipc::constitution::AffineBodySphericalJoint::apply_to (
     geometry::SimplicialComplex & sc,
     span< S< geometry::SimplicialComplexSlot > > l_geo_slots,
     span< S< geometry::SimplicialComplexSlot > > r_geo_slots,
+    span< Vector3 > r_local_pos,
     Float strength_ratio=Float{100}
 ) 
 ```
@@ -247,11 +248,11 @@ void uipc::constitution::AffineBodySphericalJoint::apply_to (
 void uipc::constitution::AffineBodySphericalJoint::apply_to (
     geometry::SimplicialComplex & sc,
     span< S< geometry::SimplicialComplexSlot > > l_geo_slots,
-    span< IndexT > l_instance_id,
+    span< IndexT > l_instance_ids,
     span< S< geometry::SimplicialComplexSlot > > r_geo_slots,
-    span< IndexT > r_instance_id,
+    span< IndexT > r_instance_ids,
     span< Vector3 > r_local_pos,
-    span< Float > strength_ratio
+    span< Float > strength_ratios
 ) 
 ```
 

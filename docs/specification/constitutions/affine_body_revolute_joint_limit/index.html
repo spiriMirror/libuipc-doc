@@ -3059,7 +3059,11 @@
 <h2 id="670-affinebodyrevolutejointlimit">#670 AffineBodyRevoluteJointLimit</h2>
 <p><strong>Affine Body Revolute Joint Limit</strong> restricts the rotation angle of a <a href="../affine_body_revolute_joint/">Revolute Joint</a> to a specified range. When the joint angle goes beyond the lower or upper bound, a cubic penalty is applied. It is an InterAffineBody extra constitution defined on revolute-joint geometry.</p>
 <h2 id="energy">Energy</h2>
-<p>The limit adds an energy <span class="arithmatex">\(E(x)\)</span> where <span class="arithmatex">\(x\)</span> is the scalar joint angle (its exact meaning is given in <a href="#meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></a>). Let <span class="arithmatex">\(l,u\)</span> be lower/upper limits and <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
+<p>The limit adds an energy <span class="arithmatex">\(E(x)\)</span> where <span class="arithmatex">\(x\)</span> is the scalar joint angle (its exact meaning is given in <a href="#meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></a>). The effective bounds are computed from the user-specified limits and the initial angle:</p>
+<div class="arithmatex">\[
+l = l_{\text{user}} + \alpha_0, \quad u = u_{\text{user}} + \alpha_0,
+\]</div>
+<p>where <span class="arithmatex">\(l_{\text{user}},u_{\text{user}}\)</span> are <code>limit/lower</code>, <code>limit/upper</code> and <span class="arithmatex">\(\alpha_0\)</span> is <code>init_angle</code>. Let <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
 <p>For normal range width (<span class="arithmatex">\(u&gt;l\)</span>):</p>
 <div class="arithmatex">\[
 E(x)=
@@ -3134,9 +3138,10 @@ The angle branch is <span class="arithmatex">\((-\pi,\pi]\)</span>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>edges</code>:</p>
 <ul>
-<li><code>limit/lower</code>: <span class="arithmatex">\(l\)</span> in the energy above</li>
-<li><code>limit/upper</code>: <span class="arithmatex">\(u\)</span> in the energy above</li>
-<li><code>limit/strength</code>: <span class="arithmatex">\(s\)</span> in the energy above</li>
+<li><code>limit/lower</code>: <span class="arithmatex">\(l_{\text{user}}\)</span> — relative lower bound (default <code>0.0</code>)</li>
+<li><code>limit/upper</code>: <span class="arithmatex">\(u_{\text{user}}\)</span> — relative upper bound (default <code>0.0</code>)</li>
+<li><code>limit/strength</code>: <span class="arithmatex">\(s\)</span> — penalty strength (default <code>1.0</code>)</li>
+<li><code>init_angle</code>: <span class="arithmatex">\(\alpha_0\)</span> — initial revolute angle offset (default <code>0.0</code>). Added to <code>limit/lower</code> and <code>limit/upper</code> to obtain the effective bounds <span class="arithmatex">\(l\)</span> and <span class="arithmatex">\(u\)</span> used in the energy</li>
 </ul></div>
 
 
