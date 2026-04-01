@@ -106,7 +106,6 @@ See [uipc::constitution::AffineBodyConstitution](classuipc_1_1constitution_1_1Af
 |   | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-affinebodyconstitution) (const Json & config=default\_config()) noexcept<br> |
 |  void | [**apply\_to**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density=1e3) const<br> |
 |  void | [**apply\_to**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, const Matrix12x12 & mass, Float volume) const<br>_Apply ABD constitution with explicit mass matrix and volume override._  |
-|  [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) | [**create\_material**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-create_material) (Float kappa) noexcept const<br> |
 
 
 ## Public Functions inherited from uipc::constitution::IConstitution
@@ -203,8 +202,8 @@ See [uipc::constitution::AffineBodyConstitution](classuipc_1_1constitution_1_1Af
 
 | Type | Name |
 | ---: | :--- |
+|  void | [**create\_abd\_attributes**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-create_abd_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume, Float m, const Vector3 & m\_x\_bar, const Matrix3x3 & m\_x\_bar\_x\_bar) const<br>_Common ABD attribute setup._  |
 | virtual U64 | [**get\_uid**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-get_uid) () noexcept override const<br> |
-|  void | [**setup\_abd\_attributes**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-setup_abd_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume) const<br>_Common ABD attribute setup without volume computation._  |
 
 
 ## Protected Functions inherited from uipc::constitution::IConstitution

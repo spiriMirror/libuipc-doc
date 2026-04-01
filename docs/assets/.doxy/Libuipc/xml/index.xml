@@ -55,12 +55,11 @@
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1ab6d5ebdb4bb9e9c6722b060acb3e6a26" kind="typedef"><name>Base</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1ae0f979f206e0b9effd1c78b5296c39cc" kind="variable"><name>m_config</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a02e97187d782b484f8977cfcf9dbdb6c" kind="function"><name>AffineBodyConstitution</name></member>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a0f3d62e8a33312859ce482ba8538949c" kind="function"><name>create_material</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a06e428ed9dd7840a551956fa98c9a28a" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a46dacbec2ced6af4d81f6b1f1fda9cc2" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a52d4f8c7afcf705673990aba408d9714" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a4df63da01793d6c48e9e09c6a3f081a4" kind="function"><name>get_uid</name></member>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1a9ee56f46c5c9804bfaac0e47f238c35a" kind="function"><name>setup_abd_attributes</name></member>
+    <member refid="classuipc_1_1constitution_1_1AffineBodyConstitution_1ab0f0af64e671c0d38d9cc07379a45fa1" kind="function"><name>create_abd_attributes</name></member>
   </compound>
   <compound refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint" kind="class"><name>uipc::constitution::AffineBodyDrivingPrismaticJoint</name>
     <member refid="classuipc_1_1constitution_1_1AffineBodyDrivingPrismaticJoint_1a1e1c1b7d1ac5fe995764f1259003f5db" kind="typedef"><name>Base</name></member>
@@ -100,14 +99,6 @@
     <member refid="classuipc_1_1constitution_1_1AffineBodyFixedJoint_1ac2248555c03800e2bff63e53c7aa61be" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyFixedJoint_1a5e5f594f98c5fdaf9d9f53337f12e3cb" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1AffineBodyFixedJoint_1ab10573d300957cacb9e77288546dd93c" kind="function"><name>get_uid</name></member>
-  </compound>
-  <compound refid="classuipc_1_1constitution_1_1AffineBodyMaterial" kind="class"><name>uipc::constitution::AffineBodyMaterial</name>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyMaterial_1a506d86182b6c1ad50d83e161dfc9c9c1" kind="friend"><name>AffineBodyConstitution</name></member>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyMaterial_1a5c30eade3eec8cec863d6c616c05164a" kind="variable"><name>m_constitution</name></member>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyMaterial_1a5d1c617255ba802d78518ab6e0a012c7" kind="variable"><name>m_kappa</name></member>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyMaterial_1ab01b05b876f1cf9dc9b18f377d257a01" kind="variable"><name>m_mass_density</name></member>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyMaterial_1a62096d6be82f7bd4cbdbc90907f72afb" kind="function"><name>apply_to</name></member>
-    <member refid="classuipc_1_1constitution_1_1AffineBodyMaterial_1a5f7c02b4123e2541174b325f0141e2b3" kind="function"><name>AffineBodyMaterial</name></member>
   </compound>
   <compound refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJoint" kind="class"><name>uipc::constitution::AffineBodyPrismaticJoint</name>
     <member refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJoint_1a8d0065a6d3cd9c9244da6b3897ab99f9" kind="typedef"><name>SlotTuple</name></member>
@@ -2568,6 +2559,8 @@
   <compound refid="namespaceuipc_1_1geometry_1_1affine__body" kind="namespace"><name>uipc::geometry::affine_body</name>
     <member refid="affine__body__from__rigid__body_8h_1a6401bd42158af780a894090a74dd1970" kind="function"><name>from_rigid_body</name></member>
     <member refid="affine__body__from__rigid__body_8h_1adb8284a27d54b47020cb1a76e1afc70b" kind="function"><name>build_abd_mass_matrix</name></member>
+    <member refid="affine__body__from__rigid__body_8h_1a113856a89197fa96ca1e751f5261f60b" kind="function"><name>to_rigid_body</name></member>
+    <member refid="affine__body__from__rigid__body_8h_1aa52263dd47ed07d6b351090c1cf72818" kind="function"><name>to_rigid_body</name></member>
     <member refid="compute__body__force_8h_1ad9461f8d0d720c9b7e21ba32ddc219e9" kind="function"><name>compute_body_force</name></member>
     <member refid="compute__dyadic__mass_8h_1a6a37eab2820f68aab66a17b0c63ea7ed" kind="function"><name>compute_dyadic_mass</name></member>
     <member refid="compute__dyadic__mass_8h_1a2b27b3605ea774f3b148b154af8b6691" kind="function"><name>compute_dyadic_mass</name></member>

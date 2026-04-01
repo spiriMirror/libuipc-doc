@@ -121,6 +121,162 @@
         </inbodydescription>
         <location file="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" line="41" column="31" declfile="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" declline="41" declcolumn="31"/>
       </memberdef>
+      <memberdef kind="function" id="affine__body__from__rigid__body_8h_1a113856a89197fa96ca1e751f5261f60b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API void</type>
+        <definition>UIPC_GEOMETRY_API void uipc::geometry::affine_body::to_rigid_body</definition>
+        <argsstring>(Float m, const Vector3 &amp;m_x_bar, const Matrix3x3 &amp;m_x_bar_x_bar, Float &amp;total_mass, Vector3 &amp;center_of_mass, Matrix3x3 &amp;inertia_cm)</argsstring>
+        <name>to_rigid_body</name>
+        <qualifiedname>uipc::geometry::affine_body::to_rigid_body</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>m_x_bar</declname>
+        </param>
+        <param>
+          <type>const Matrix3x3 &amp;</type>
+          <declname>m_x_bar_x_bar</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>total_mass</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>center_of_mass</declname>
+        </param>
+        <param>
+          <type>Matrix3x3 &amp;</type>
+          <declname>inertia_cm</declname>
+        </param>
+        <briefdescription>
+<para>Extract rigid body properties from dyadic mass components. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Inverse of <computeroutput>from_rigid_body</computeroutput>: given the ABD dyadic mass quantities, recovers the total mass, center of mass, and inertia tensor about the center of mass.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total mass (= sum of element masses). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First moment of mass (m * center_of_mass). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_x_bar_x_bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second moment of mass tensor S. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">total_mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total mass (same as m). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">center_of_mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center of mass in the reference frame. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">inertia_cm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3x3 inertia tensor about the center of mass. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" line="60" column="24" declfile="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" declline="60" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="affine__body__from__rigid__body_8h_1aa52263dd47ed07d6b351090c1cf72818" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API void</type>
+        <definition>UIPC_GEOMETRY_API void uipc::geometry::affine_body::to_rigid_body</definition>
+        <argsstring>(const Matrix12x12 &amp;mass_matrix, Float &amp;total_mass, Vector3 &amp;center_of_mass, Matrix3x3 &amp;inertia_cm)</argsstring>
+        <name>to_rigid_body</name>
+        <qualifiedname>uipc::geometry::affine_body::to_rigid_body</qualifiedname>
+        <param>
+          <type>const Matrix12x12 &amp;</type>
+          <declname>mass_matrix</declname>
+        </param>
+        <param>
+          <type>Float &amp;</type>
+          <declname>total_mass</declname>
+        </param>
+        <param>
+          <type>Vector3 &amp;</type>
+          <declname>center_of_mass</declname>
+        </param>
+        <param>
+          <type>Matrix3x3 &amp;</type>
+          <declname>inertia_cm</declname>
+        </param>
+        <briefdescription>
+<para>Extract rigid body properties from a 12x12 ABD mass matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience overload that decomposes the mass matrix into (m, m_x_bar, m_x_bar_x_bar) and then calls the dyadic-mass version of <computeroutput>to_rigid_body</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mass_matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 12x12 ABD mass matrix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">total_mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total mass. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">center_of_mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center of mass in the reference frame. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">inertia_cm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3x3 inertia tensor about the center of mass. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" line="78" column="24" declfile="include/uipc/geometry/utils/affine_body/affine_body_from_rigid_body.h" declline="78" declcolumn="24"/>
+      </memberdef>
       <memberdef kind="function" id="compute__body__force_8h_1ad9461f8d0d720c9b7e21ba32ddc219e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API Vector12</type>
         <definition>UIPC_GEOMETRY_API Vector12 uipc::geometry::affine_body::compute_body_force</definition>

@@ -76,7 +76,6 @@ Inherited by the following classes: [uipc::constitution::AffineBodyRod](classuip
 |   | [**AffineBodyConstitution**](#function-affinebodyconstitution) (const Json & config=default\_config()) noexcept<br> |
 |  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density=1e3) const<br> |
 |  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, const Matrix12x12 & mass, Float volume) const<br>_Apply ABD constitution with explicit mass matrix and volume override._  |
-|  [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) | [**create\_material**](#function-create_material) (Float kappa) noexcept const<br> |
 
 
 ## Public Functions inherited from uipc::constitution::IConstitution
@@ -145,8 +144,8 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 
 | Type | Name |
 | ---: | :--- |
+|  void | [**create\_abd\_attributes**](#function-create_abd_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume, Float m, const Vector3 & m\_x\_bar, const Matrix3x3 & m\_x\_bar\_x\_bar) const<br>_Common ABD attribute setup._  |
 | virtual U64 | [**get\_uid**](#function-get_uid) () noexcept override const<br> |
-|  void | [**setup\_abd\_attributes**](#function-setup_abd_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume) const<br>_Common ABD attribute setup without volume computation._  |
 
 
 ## Protected Functions inherited from uipc::constitution::IConstitution
@@ -219,21 +218,6 @@ The 12x12 mass matrix is decomposed into (m, m\_x\_bar, m\_x\_bar\_x\_bar) and s
         
 
 <hr>
-
-
-
-### function create\_material 
-
-```C++
-AffineBodyMaterial uipc::constitution::AffineBodyConstitution::create_material (
-    Float kappa
-) noexcept const
-```
-
-
-
-
-<hr>
 ## Public Static Functions Documentation
 
 
@@ -254,6 +238,35 @@ static Json uipc::constitution::AffineBodyConstitution::default_config () noexce
 
 
 
+### function create\_abd\_attributes 
+
+_Common ABD attribute setup._ 
+```C++
+void uipc::constitution::AffineBodyConstitution::create_abd_attributes (
+    geometry::SimplicialComplex & sc,
+    Float kappa,
+    Float mass_density,
+    Float volume,
+    Float m,
+    const Vector3 & m_x_bar,
+    const Matrix3x3 & m_x_bar_x_bar
+) const
+```
+
+
+
+Sets constitution\_uid, transforms, dof\_offset, dof\_count, is\_fixed, is\_dynamic, external\_kinetic, velocity, self\_collision, kappa, volume, mass\_density, abd\_mass/abd\_mass\_x\_bar/abd\_mass\_x\_bar\_x\_bar, and user-facing mass/mass\_center/inertia on sc.meta().
+
+
+Subclasses ([**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md), [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md)) call this with their own pre-computed volume and dyadic mass. 
+
+
+        
+
+<hr>
+
+
+
 ### function get\_uid 
 
 ```C++
@@ -264,32 +277,6 @@ virtual U64 uipc::constitution::AffineBodyConstitution::get_uid () noexcept over
 
 Implements [*uipc::constitution::IConstitution::get\_uid*](classuipc_1_1constitution_1_1IConstitution.md#function-get_uid)
 
-
-<hr>
-
-
-
-### function setup\_abd\_attributes 
-
-_Common ABD attribute setup without volume computation._ 
-```C++
-void uipc::constitution::AffineBodyConstitution::setup_abd_attributes (
-    geometry::SimplicialComplex & sc,
-    Float kappa,
-    Float mass_density,
-    Float volume
-) const
-```
-
-
-
-Sets constitution\_uid, transforms, dof\_offset, dof\_count, is\_fixed, is\_dynamic, external\_kinetic, velocity, self\_collision, kappa, volume, and mass\_density attributes.
-
-
-Subclasses ([**AffineBodyShell**](classuipc_1_1constitution_1_1AffineBodyShell.md), [**AffineBodyRod**](classuipc_1_1constitution_1_1AffineBodyRod.md)) call this with their own pre-computed volume instead of compute\_mesh\_volume(). 
-
-
-        
 
 <hr>
 

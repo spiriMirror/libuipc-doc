@@ -23,6 +23,18 @@ UIPC_GEOMETRY_API Matrix12x12 build_abd_mass_matrix(
     Float             m,
     const Vector3&    m_x_bar,
     const Matrix3x3&  m_x_bar_x_bar);
+
+UIPC_GEOMETRY_API void to_rigid_body(Float             m,
+                                     const Vector3&    m_x_bar,
+                                     const Matrix3x3&  m_x_bar_x_bar,
+                                     Float&            total_mass,
+                                     Vector3&          center_of_mass,
+                                     Matrix3x3&        inertia_cm);
+
+UIPC_GEOMETRY_API void to_rigid_body(const Matrix12x12& mass_matrix,
+                                     Float&             total_mass,
+                                     Vector3&           center_of_mass,
+                                     Matrix3x3&         inertia_cm);
 }  // namespace uipc::geometry::affine_body
 ```
 

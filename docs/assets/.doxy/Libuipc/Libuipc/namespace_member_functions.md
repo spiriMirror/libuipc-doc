@@ -169,6 +169,7 @@
 * **tetmesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **tri\_edge\_intersect** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **trimesh** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
+* **to\_rigid\_body** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **transform\_to\_q** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **transform\_v\_to\_q\_v** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 

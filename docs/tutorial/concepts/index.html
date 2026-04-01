@@ -711,17 +711,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#material" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Material
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3071,17 +3060,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#material" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Material
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3225,8 +3203,8 @@
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyConstitution</span><span class="w"> </span><span class="n">abd</span><span class="p">;</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">// optional, libuipc will do this automatically under default configuration</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">constitution_tabular</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">abd</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">// create a material with affine body stiffness 100 MPa</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">auto</span><span class="w"> </span><span class="n">abd_material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abd</span><span class="p">.</span><span class="n">create_material</span><span class="p">(</span><span class="mf">100.0</span><span class="n">_MPa</span><span class="p">);</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">// apply the constitution to a mesh with affine body stiffness 100 MPa</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">abd</span><span class="p">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="n">_MPa</span><span class="p">);</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -3235,8 +3213,8 @@
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">abd</span> <span class="o">=</span> <span class="n">constitution</span><span class="o">.</span><span class="n">AffineBodyConstitution</span><span class="p">()</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># optional, libuipc will do this automatically under default configuration</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">constitution_tabular</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">abd</span><span class="p">)</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># create a material with affine body stiffness 100 MPa</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">abd_material</span> <span class="o">=</span> <span class="n">abd</span><span class="o">.</span><span class="n">create_material</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">MPa</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># apply the constitution to a mesh with affine body stiffness 100 MPa</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">abd</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">MPa</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
@@ -3302,8 +3280,8 @@
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexIO</span><span class="w"> </span><span class="n">io</span><span class="p">;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="s">"cube.msh"</span><span class="p">);</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">// apply the material and the contact model to the cube</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">abd_material</span><span class="p">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">);</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">// apply the constitution and the contact model to the cube</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">abd</span><span class="p">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="n">_MPa</span><span class="p">);</span>
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">wood_contact</span><span class="p">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">);</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1">// create an object</span>
@@ -3318,8 +3296,8 @@
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">io</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">SimplicialComplexIO</span><span class="p">()</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">cube</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"cube.msh"</span><span class="p">)</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># apply the material and the contact model to the cube</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">abd_material</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># apply the constitution and the contact model to the cube</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">abd</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">MPa</span><span class="p">)</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">wood_contact</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span><span class="n">cube</span><span class="p">)</span>
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># create an object</span>
@@ -3350,8 +3328,6 @@
 <p>For coding convenience, we provide some class like <code>AffineBodyConstitution</code> to help the user create a constitution. </p>
 <h3 id="constraint">Constraint</h3>
 <p>A constraint is a set of coefficients and models that define the constrained behavior of the object. For example, a transform constraint on affine body can force the affine body to move along certain trajectory specified by users. Constraint is always coupling with the animation (see <a href="#animator">Animator</a>) to control the movement of the object.</p>
-<h3 id="material">Material</h3>
-<p>Material is an instance of a constitution. A material has a concrete set of coefficients that define the physics behavior of the object. And it may be a short cut to apply the coefficients to the geometry.</p>
 <h2 id="contact-model">Contact Model</h2>
 <p>Contact model is a set of coefficients and models that define the contact behavior of the object. The contact model is a pairwised relationship, which means the contact model between two objects is different from the contact model between another two objects.</p>
 <h3 id="contact-element">Contact Element</h3>

@@ -38,7 +38,6 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md) <br> |
-| class | [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) <br> |
 
 
 

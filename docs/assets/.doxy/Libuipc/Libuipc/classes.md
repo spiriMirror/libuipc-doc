@@ -22,8 +22,6 @@
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**AffineBodyFixedJoint**](classuipc_1_1constitution_1_1AffineBodyFixedJoint.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
-* [**AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md)
-([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**AffineBodyPrismaticJoint**](classuipc_1_1constitution_1_1AffineBodyPrismaticJoint.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**AffineBodyPrismaticJointExternalForce**](classuipc_1_1constitution_1_1AffineBodyPrismaticJointExternalForce.md)

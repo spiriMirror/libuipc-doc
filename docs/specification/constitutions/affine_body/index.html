@@ -1065,6 +1065,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-attributes-scmeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta Attributes (sc.meta())
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-attributes-scinstances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Attributes (sc.instances())
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-attributes-for-shell-rod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Attributes for Shell / Rod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dyadic-mass-and-the-12x12-mass-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dyadic Mass and the 12x12 Mass Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-orthopotential" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3061,6 +3122,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-attributes-scmeta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meta Attributes (sc.meta())
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-attributes-scinstances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Attributes (sc.instances())
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-attributes-for-shell-rod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Attributes for Shell / Rod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dyadic-mass-and-the-12x12-mass-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dyadic Mass and the 12x12 Mass Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#1-orthopotential" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3188,6 +3310,161 @@ z \\
 <p>The rod is modelled as a cylinder of circular cross-section with <code>thickness</code> <span class="arithmatex">\(r\)</span>, giving an effective volume per segment <span class="arithmatex">\(i\)</span>:</p>
 <div class="arithmatex">\[\bar{v}_i = L_i \cdot \pi r^2\]</div>
 <p>where <span class="arithmatex">\(L_i\)</span> is the segment length.</p>
+<hr>
+<h2 id="attributes">Attributes</h2>
+<p><code>AffineBodyConstitution::apply_to</code> sets the following attributes on the <code>SimplicialComplex</code>.</p>
+<h3 id="meta-attributes-scmeta">Meta Attributes (<code>sc.meta()</code>)</h3>
+<p>Per-geometry, shared by all instances.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>constitution_uid</code></td>
+<td><code>U64</code></td>
+<td>Constitution UID identifying the ABD formulation (e.g. 1 = OrthoPotential, 2 = ARAP).</td>
+</tr>
+<tr>
+<td><code>volume</code></td>
+<td><code>Float</code></td>
+<td>Rest volume <span class="arithmatex">\(\bar{v}\)</span> of the geometry. For full 3D bodies this is the mesh volume; for shells <span class="arithmatex">\(\bar{v} = \sum A_i \cdot 2r\)</span>; for rods <span class="arithmatex">\(\bar{v} = \sum L_i \cdot \pi r^2\)</span>.</td>
+</tr>
+<tr>
+<td><code>mass_density</code></td>
+<td><code>Float</code></td>
+<td>Volume mass density <span class="arithmatex">\(\rho\)</span> (kg/m³).</td>
+</tr>
+<tr>
+<td><code>abd_mass</code></td>
+<td><code>Float</code></td>
+<td>Dyadic mass: total mass <span class="arithmatex">\(m = \rho \bar{v}\)</span>.</td>
+</tr>
+<tr>
+<td><code>abd_mass_x_bar</code></td>
+<td><code>Vector3</code></td>
+<td>Dyadic mass: first moment <span class="arithmatex">\(m\bar{\mathbf{x}} = \int \rho\, \bar{\mathbf{x}}\, dV\)</span>.</td>
+</tr>
+<tr>
+<td><code>abd_mass_x_bar_x_bar</code></td>
+<td><code>Matrix3x3</code></td>
+<td>Dyadic mass: second moment tensor <span class="arithmatex">\(\mathbf{S} = \int \rho\, \bar{\mathbf{x}}\bar{\mathbf{x}}^T\, dV\)</span>.</td>
+</tr>
+<tr>
+<td><code>mass</code></td>
+<td><code>Float</code></td>
+<td>Total mass (same value as <code>abd_mass</code>, for user convenience).</td>
+</tr>
+<tr>
+<td><code>mass_center</code></td>
+<td><code>Vector3</code></td>
+<td>Center of mass <span class="arithmatex">\(\mathbf{c} = m\bar{\mathbf{x}} / m\)</span> in the rest configuration.</td>
+</tr>
+<tr>
+<td><code>inertia</code></td>
+<td><code>Matrix3x3</code></td>
+<td>Inertia tensor about the center of mass <span class="arithmatex">\(\mathbf{I}_{cm}\)</span>. Derived from the dyadic mass via the parallel axis theorem.</td>
+</tr>
+<tr>
+<td><code>self_collision</code></td>
+<td><code>IndexT</code></td>
+<td>Whether self-collision detection is enabled. Default: <code>0</code> (off).</td>
+</tr>
+<tr>
+<td><code>dof_offset</code></td>
+<td><code>IndexT</code></td>
+<td>Degree-of-freedom offset in the global system (filled by the backend).</td>
+</tr>
+<tr>
+<td><code>dof_count</code></td>
+<td><code>IndexT</code></td>
+<td>Degree-of-freedom count in the global system (filled by the backend).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instance-attributes-scinstances">Instance Attributes (<code>sc.instances()</code>)</h3>
+<p>Per-instance (each instance is one affine body sharing the same rest geometry).</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kappa</code></td>
+<td><code>Float</code></td>
+<td><em>user-specified</em></td>
+<td>Stiffness parameter <span class="arithmatex">\(\kappa\)</span> for the shape preservation energy.</td>
+</tr>
+<tr>
+<td><code>is_fixed</code></td>
+<td><code>IndexT</code></td>
+<td><code>0</code></td>
+<td><code>1</code> = body is fixed (position unchanged, not influenced by constitution/kinetics).</td>
+</tr>
+<tr>
+<td><code>is_dynamic</code></td>
+<td><code>IndexT</code></td>
+<td><code>1</code></td>
+<td><code>1</code> = kinetics (inertia, velocity) are considered; <code>0</code> = quasi-static.</td>
+</tr>
+<tr>
+<td><code>velocity</code></td>
+<td><code>Matrix4x4</code></td>
+<td><code>Zero</code></td>
+<td>Initial velocity as the time derivative of the 4x4 transform matrix.</td>
+</tr>
+<tr>
+<td><code>external_kinetic</code></td>
+<td><code>IndexT</code></td>
+<td><code>0</code></td>
+<td><code>1</code> = skip default kinetic computation (used with external constraints).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional-attributes-for-shell-rod">Additional Attributes for Shell / Rod</h3>
+<p><code>AffineBodyShell</code> and <code>AffineBodyRod</code> set extra attributes on top of the above:</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sc.meta()</code></td>
+<td><code>is_codim</code></td>
+<td><code>IndexT</code></td>
+<td>Always <code>1</code> for shell/rod, indicating a codimensional body.</td>
+</tr>
+<tr>
+<td><code>sc.vertices()</code></td>
+<td><code>thickness</code></td>
+<td><code>Float</code></td>
+<td>Thickness radius <span class="arithmatex">\(r\)</span>. For shells, the effective slab thickness is <span class="arithmatex">\(2r\)</span>; for rods, the cross-section radius.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dyadic-mass-and-the-12x12-mass-matrix">Dyadic Mass and the 12x12 Mass Matrix</h3>
+<p>The three dyadic mass attributes (<code>abd_mass</code>, <code>abd_mass_x_bar</code>, <code>abd_mass_x_bar_x_bar</code>) define the 12x12 ABD mass matrix:</p>
+<div class="arithmatex">\[
+\mathbf{M} = \begin{bmatrix}
+m\mathbf{I}_3 &amp; \mathbf{I}_3 \otimes (m\bar{\mathbf{x}})^T \\
+\mathbf{I}_3 \otimes (m\bar{\mathbf{x}}) &amp; \mathbf{I}_3 \otimes \mathbf{S}
+\end{bmatrix}
+\]</div>
+<p>The user-facing attributes (<code>mass</code>, <code>mass_center</code>, <code>inertia</code>) are the equivalent rigid body quantities recovered via <code>geometry::affine_body::to_rigid_body</code>.</p>
 <hr>
 <h2 id="1-orthopotential">#1 OrthoPotential</h2>
 <p>Formulation: <a href="https://dl.acm.org/doi/10.1145/3528223.3530064">Affine body dynamics: fast, stable and intersection-free simulation of stiff materials</a> (eq. 7)</p>

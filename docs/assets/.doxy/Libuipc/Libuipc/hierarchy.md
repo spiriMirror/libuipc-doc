@@ -70,7 +70,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::constitution::SoftVertexEdgeStitch**](classuipc_1_1constitution_1_1SoftVertexEdgeStitch.md) _Inter-primitive constitution: (vertex, edge) pairs form triangles with StVK membrane energy. UID = 29._ 
         * **class** [**uipc::constitution::SoftVertexStitch**](classuipc_1_1constitution_1_1SoftVertexStitch.md) 
         * **class** [**uipc::constitution::SoftVertexTriangleStitch**](classuipc_1_1constitution_1_1SoftVertexTriangleStitch.md) _Inter-primitive constitution: (vertex, triangle) pairs form tetrahedra with_ [_**StableNeoHookean**_](classuipc_1_1constitution_1_1StableNeoHookean.md) _energy. UID = 30._
-* **class** [**uipc::constitution::AffineBodyMaterial**](classuipc_1_1constitution_1_1AffineBodyMaterial.md) 
 * **class** [**uipc::constitution::ElasticModuli**](classuipc_1_1constitution_1_1ElasticModuli.md) 
 * **class** [**uipc::constitution::ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) 
 * **class** [**uipc::core::IFeature**](classuipc_1_1core_1_1IFeature.md)     
