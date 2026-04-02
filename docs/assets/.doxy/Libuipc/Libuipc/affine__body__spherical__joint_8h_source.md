@@ -23,20 +23,33 @@ class UIPC_CONSTITUTION_API AffineBodySphericalJoint final : public InterAffineB
 
     virtual ~AffineBodySphericalJoint();
 
-    // Simplified API: anchor at body1's (right body's) origin in local space
+    [[nodiscard]] geometry::SimplicialComplex create_geometry(
+        span<const Vector3>                      positions,
+        span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
+        span<IndexT>                             l_instance_ids,
+        span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
+        span<IndexT>                             r_instance_ids,
+        span<Float>                              strength_ratios);
+
+    [[nodiscard]] geometry::SimplicialComplex create_geometry(
+        span<const Vector3>                      l_positions,
+        span<const Vector3>                      r_positions,
+        span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
+        span<IndexT>                             l_instance_ids,
+        span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
+        span<IndexT>                             r_instance_ids,
+        span<Float>                              strength_ratios);
+
     void apply_to(geometry::SimplicialComplex&             sc,
                   span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
                   span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
-                  span<Vector3>                            r_local_pos,
                   Float strength_ratio = Float{100});
 
-    // Full API: anchor specified as r_local_pos in body1's (right body's) local frame
     void apply_to(geometry::SimplicialComplex&             sc,
                   span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
                   span<IndexT>                             l_instance_ids,
                   span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
                   span<IndexT>                             r_instance_ids,
-                  span<Vector3>                            r_local_pos,
                   span<Float>                              strength_ratios);
 
   private:

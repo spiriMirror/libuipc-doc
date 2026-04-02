@@ -3002,6 +3002,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-create_geometry-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function create_geometry [1/2]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-create_geometry-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function create_geometry [2/2]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-affinebodyprismaticjoint_1" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3099,7 +3121,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-apply_to-22"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; edges, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_id, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_id, span&lt; Float &gt; strength_ratio) <br><em>Apply prismatic joint to edges connecting affine bodies (multi-instance mode).</em></td>
+<td style="text-align: left;"><a href="#function-apply_to-22"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; edges, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_ids, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_ids, span&lt; Float &gt; strength_ratios) <br><em>Apply prismatic joint to edges connecting affine bodies (multi-instance mode).</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a></td>
+<td style="text-align: left;"><a href="#function-create_geometry-12"><strong>create_geometry</strong></a> (span&lt; const Vector3 &gt; position0s, span&lt; const Vector3 &gt; position1s, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_ids, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_ids, span&lt; Float &gt; strength_ratios) <br><em>Create prismatic joint geometry with world-space endpoint positions.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a></td>
+<td style="text-align: left;"><a href="#function-create_geometry-22"><strong>create_geometry</strong></a> (span&lt; const Vector3 &gt; l_position0, span&lt; const Vector3 &gt; l_position1, span&lt; const Vector3 &gt; r_position0, span&lt; const Vector3 &gt; r_position1, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_ids, span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4/"><strong>geometry::SimplicialComplexSlot</strong></a> &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_ids, span&lt; Float &gt; strength_ratios) <br><em>Create prismatic joint geometry with local-space endpoint positions.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
@@ -3207,10 +3237,10 @@
 </p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyPrismaticJoint</span><span class="o">::</span><span class="n">apply_to</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">edges</span><span class="p">,</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_geo_slots</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_instance_id</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_instance_ids</span><span class="p">,</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_geo_slots</span><span class="p">,</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_instance_id</span><span class="p">,</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">strength_ratio</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_instance_ids</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">strength_ratios</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p>This method supports geometries with multiple instances. Each joint can specify which instance of each geometry to connect, and can have its own strength ratio.</p>
@@ -3218,20 +3248,52 @@
 <ul>
 <li><code>edges</code> The simplicial complex containing the edges representing the joints. </li>
 <li><code>l_geo_slots</code> Left geometry slots for each joint. </li>
-<li><code>l_instance_id</code> Instance IDs for the left geometries (must be in range [0, instances().size())). </li>
+<li><code>l_instance_ids</code> Instance IDs for the left geometries (must be in range [0, instances().size())). </li>
 <li><code>r_geo_slots</code> Right geometry slots for each joint. </li>
-<li><code>r_instance_id</code> Instance IDs for the right geometries (must be in range [0, instances().size())). </li>
-<li><code>strength_ratio</code> The strength ratio for each joint (one per edge). </li>
+<li><code>r_instance_ids</code> Instance IDs for the right geometries (must be in range [0, instances().size())). </li>
+<li><code>strength_ratios</code> The strength ratio for each joint (one per edge). </li>
 </ul>
 <hr>
 
+<h3 id="function-create_geometry-12">function create_geometry [1/2]</h3>
+<p><em>Create prismatic joint geometry with world-space endpoint positions.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyPrismaticJoint</span><span class="o">::</span><span class="n">create_geometry</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">position0s</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">position1s</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_geo_slots</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_instance_ids</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_geo_slots</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_instance_ids</span><span class="p">,</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">strength_ratios</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p>Builds a SimplicialComplex with 2*N vertices and N edges. Writes vertices.position from position0s/position1s. Does not write local position attributes. </p>
+<hr>
+
+<h3 id="function-create_geometry-22">function create_geometry [2/2]</h3>
+<p><em>Create prismatic joint geometry with local-space endpoint positions.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyPrismaticJoint</span><span class="o">::</span><span class="n">create_geometry</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_position0</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_position1</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_position0</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_position1</span><span class="p">,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_geo_slots</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">l_instance_ids</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplexSlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_geo_slots</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r_instance_ids</span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">strength_ratios</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p>Builds a SimplicialComplex with N edges. Writes local position attributes (l_position0, l_position1, r_position0, r_position1) on edges. Does not write vertices.position. </p>
+<hr>
+
 <h3 id="function-affinebodyprismaticjoint_1">function ~AffineBodyPrismaticJoint</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyPrismaticJoint</span><span class="o">::~</span><span class="n">AffineBodyPrismaticJoint</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyPrismaticJoint</span><span class="o">::~</span><span class="n">AffineBodyPrismaticJoint</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
 <h3 id="function-default_config">function default_config</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyPrismaticJoint</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyPrismaticJoint</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 

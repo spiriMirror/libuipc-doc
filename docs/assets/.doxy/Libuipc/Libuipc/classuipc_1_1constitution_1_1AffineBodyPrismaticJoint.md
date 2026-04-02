@@ -99,7 +99,9 @@ Inherits the following classes: [uipc::constitution::InterAffineBodyConstitution
 | ---: | :--- |
 |   | [**AffineBodyPrismaticJoint**](#function-affinebodyprismaticjoint) (const Json & config=default\_config()) <br> |
 |  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, Float strength\_ratio=Float{100}) <br>_Apply prismatic joint to edges connecting affine bodies (single-instance mode)._  |
-|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_id, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_id, span&lt; Float &gt; strength\_ratio) <br>_Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._  |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry-12) (span&lt; const Vector3 &gt; position0s, span&lt; const Vector3 &gt; position1s, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Create prismatic joint geometry with world-space endpoint positions._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry-22) (span&lt; const Vector3 &gt; l\_position0, span&lt; const Vector3 &gt; l\_position1, span&lt; const Vector3 &gt; r\_position0, span&lt; const Vector3 &gt; r\_position1, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Create prismatic joint geometry with local-space endpoint positions._  |
 | virtual  | [**~AffineBodyPrismaticJoint**](#function-affinebodyprismaticjoint) () <br> |
 
 
@@ -286,10 +288,10 @@ _Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._
 void uipc::constitution::AffineBodyPrismaticJoint::apply_to (
     geometry::SimplicialComplex & edges,
     span< S< geometry::SimplicialComplexSlot > > l_geo_slots,
-    span< IndexT > l_instance_id,
+    span< IndexT > l_instance_ids,
     span< S< geometry::SimplicialComplexSlot > > r_geo_slots,
-    span< IndexT > r_instance_id,
-    span< Float > strength_ratio
+    span< IndexT > r_instance_ids,
+    span< Float > strength_ratios
 ) 
 ```
 
@@ -305,12 +307,66 @@ This method supports geometries with multiple instances. Each joint can specify 
 
 * `edges` The simplicial complex containing the edges representing the joints. 
 * `l_geo_slots` Left geometry slots for each joint. 
-* `l_instance_id` Instance IDs for the left geometries (must be in range [0, instances().size())). 
+* `l_instance_ids` Instance IDs for the left geometries (must be in range [0, instances().size())). 
 * `r_geo_slots` Right geometry slots for each joint. 
-* `r_instance_id` Instance IDs for the right geometries (must be in range [0, instances().size())). 
-* `strength_ratio` The strength ratio for each joint (one per edge). 
+* `r_instance_ids` Instance IDs for the right geometries (must be in range [0, instances().size())). 
+* `strength_ratios` The strength ratio for each joint (one per edge). 
 
 
+
+
+        
+
+<hr>
+
+
+
+### function create\_geometry [1/2]
+
+_Create prismatic joint geometry with world-space endpoint positions._ 
+```C++
+geometry::SimplicialComplex uipc::constitution::AffineBodyPrismaticJoint::create_geometry (
+    span< const Vector3 > position0s,
+    span< const Vector3 > position1s,
+    span< S< geometry::SimplicialComplexSlot > > l_geo_slots,
+    span< IndexT > l_instance_ids,
+    span< S< geometry::SimplicialComplexSlot > > r_geo_slots,
+    span< IndexT > r_instance_ids,
+    span< Float > strength_ratios
+) 
+```
+
+
+
+Builds a SimplicialComplex with 2\*N vertices and N edges. Writes vertices.position from position0s/position1s. Does not write local position attributes. 
+
+
+        
+
+<hr>
+
+
+
+### function create\_geometry [2/2]
+
+_Create prismatic joint geometry with local-space endpoint positions._ 
+```C++
+geometry::SimplicialComplex uipc::constitution::AffineBodyPrismaticJoint::create_geometry (
+    span< const Vector3 > l_position0,
+    span< const Vector3 > l_position1,
+    span< const Vector3 > r_position0,
+    span< const Vector3 > r_position1,
+    span< S< geometry::SimplicialComplexSlot > > l_geo_slots,
+    span< IndexT > l_instance_ids,
+    span< S< geometry::SimplicialComplexSlot > > r_geo_slots,
+    span< IndexT > r_instance_ids,
+    span< Float > strength_ratios
+) 
+```
+
+
+
+Builds a SimplicialComplex with N edges. Writes local position attributes (l\_position0, l\_position1, r\_position0, r\_position1) on edges. Does not write vertices.position. 
 
 
         

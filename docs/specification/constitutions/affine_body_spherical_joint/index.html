@@ -3120,15 +3120,11 @@
 <h3 id="state-variables">State variables</h3>
 <p>Each body <span class="arithmatex">\(k \in \{i,j\}\)</span> carries the affine state <span class="arithmatex">\(\mathbf{q}_k \in \mathbb{R}^{12}\)</span> as in <a href="../affine_body/">Affine Body</a>. World position of a material point with rest local coordinates <span class="arithmatex">\(\bar{\mathbf{x}}\)</span> is <span class="arithmatex">\(\mathbf{x}_k = \mathbf{J}(\bar{\mathbf{x}})\mathbf{q}_k\)</span>.</p>
 <h3 id="rest-anchor-and-local-coordinates">Rest anchor and local coordinates</h3>
-<p>At setup, the user specifies an attachment <span class="arithmatex">\(\bar{\mathbf{p}}_j\)</span> in body <span class="arithmatex">\(j\)</span>'s (the <strong>right</strong> body's) rest local frame. The corresponding world anchor at rest is:</p>
+<p>At setup, a single world anchor <span class="arithmatex">\(\mathbf{c}\)</span> is shared by both bodies. When the joint is created via Local <code>create_geometry</code>, optional <strong>vertex</strong> attributes <code>l_position</code> (<code>Vector3</code>, left body local) and <code>r_position</code> (<code>Vector3</code>, right body local) define the attachment; with rest transforms <span class="arithmatex">\(\mathbf{T}_i\)</span>, <span class="arithmatex">\(\mathbf{T}_j\)</span>,</p>
 <div class="arithmatex">\[
-\mathbf{c} = \mathbf{T}_j \bar{\mathbf{p}}_j
+\mathbf{c} = \mathbf{T}_i \bar{\mathbf{c}}_i = \mathbf{T}_j \bar{\mathbf{c}}_j,
 \]</div>
-<p>where <span class="arithmatex">\(\mathbf{T}_j\)</span> is that instance's rest transform. The same world point is expressed in each body's local frame:</p>
-<div class="arithmatex">\[
-\bar{\mathbf{c}}_i = \mathbf{T}_i^{-1} \mathbf{c}, \qquad \bar{\mathbf{c}}_j = \mathbf{T}_j^{-1} \mathbf{c} = \bar{\mathbf{p}}_j
-\]</div>
-<p>These fixed <span class="arithmatex">\(\bar{\mathbf{c}}_i\)</span>, <span class="arithmatex">\(\bar{\mathbf{c}}_j\)</span> are stored per joint and used in the constraint below.</p>
+<p>where <span class="arithmatex">\(\bar{\mathbf{c}}_i\)</span> and <span class="arithmatex">\(\bar{\mathbf{c}}_j\)</span> are taken from <code>l_position</code> and <code>r_position</code> respectively when those attributes are present. If they are omitted, the implementation derives <span class="arithmatex">\(\bar{\mathbf{c}}_i\)</span>, <span class="arithmatex">\(\bar{\mathbf{c}}_j\)</span> from the joint-creation path (e.g. a shared world anchor and the bodies' rest transforms). The backend stores these fixed local anchors per joint and uses them in the constraint below.</p>
 <h3 id="translation-constraint">Translation constraint</h3>
 <p>The constraint requires both bodies to map their local anchor to the same world position at all times:</p>
 <div class="arithmatex">\[
@@ -3160,17 +3156,16 @@ K = \gamma (m_i + m_j)
 <h3 id="parameter-range">Parameter range</h3>
 <p><code>strength_ratio</code> <span class="arithmatex">\(\gamma\)</span> is dimensionless; it scales the penalty with combined mass. Typical values are problem-dependent; the regression test uses <span class="arithmatex">\(\gamma = 100\)</span> for a small two-cube scene.</p>
 <h2 id="attributes-and-geometry">Attributes and geometry</h2>
-<p>The joint is stored as a 1D simplicial complex (one edge per joint).</p>
-<p>On each <strong>edge</strong>:</p>
+<p>The joint is stored as a <strong>0D simplicial complex</strong>: <strong>one vertex per joint</strong> (no edges).</p>
+<p>On each <strong>vertex</strong>:</p>
 <ul>
-<li><code>geo_ids</code>: <code>Vector2i</code> — scene geometry slot ids <span class="arithmatex">\((\text{left},\text{right})\)</span> for bodies <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span></li>
-<li><code>inst_ids</code>: <code>Vector2i</code> — instance indices within each geometry</li>
+<li><code>l_geo_id</code> (<code>IndexT</code>): scene geometry slot id for the left body <span class="arithmatex">\(i\)</span></li>
+<li><code>r_geo_id</code> (<code>IndexT</code>): scene geometry slot id for the right body <span class="arithmatex">\(j\)</span></li>
+<li><code>l_inst_id</code> (<code>IndexT</code>): instance index within the left geometry</li>
+<li><code>r_inst_id</code> (<code>IndexT</code>): instance index within the right geometry</li>
 <li><code>strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span></li>
 </ul>
-<p>On <strong>vertices</strong> (two per joint, for visualization and initialization):</p>
-<ul>
-<li><code>position</code> / builtin positions: vertex <span class="arithmatex">\(2k\)</span> is body <span class="arithmatex">\(i\)</span>'s rest translation (edge endpoint for drawing); vertex <span class="arithmatex">\(2k+1\)</span> is the world-space anchor <span class="arithmatex">\(\mathbf{c} = \mathbf{T}_j \bar{\mathbf{p}}_j\)</span> at setup. The backend evaluates <span class="arithmatex">\(\bar{\mathbf{c}}_i\)</span>, <span class="arithmatex">\(\bar{\mathbf{c}}_j\)</span> from the anchor vertex and the two rest transforms.</li>
-</ul>
+<p>When the joint is created via Local <code>create_geometry</code>, optional <strong>vertex</strong> attributes (each <code>Vector3</code>): <code>l_position</code> (left body's local frame) and <code>r_position</code> (right body's local frame).</p>
 <p>Constitution UID: <span class="arithmatex">\(26\)</span> (see <a href="../">Constitutions index</a>).</p></div>
 
 

@@ -26,6 +26,26 @@ class UIPC_CONSTITUTION_API AffineBodyPrismaticJoint final : public InterAffineB
 
     virtual ~AffineBodyPrismaticJoint();
 
+    [[nodiscard]] geometry::SimplicialComplex create_geometry(
+        span<const Vector3>                      position0s,
+        span<const Vector3>                      position1s,
+        span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
+        span<IndexT>                             l_instance_ids,
+        span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
+        span<IndexT>                             r_instance_ids,
+        span<Float>                              strength_ratios);
+
+    [[nodiscard]] geometry::SimplicialComplex create_geometry(
+        span<const Vector3>                      l_position0,
+        span<const Vector3>                      l_position1,
+        span<const Vector3>                      r_position0,
+        span<const Vector3>                      r_position1,
+        span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
+        span<IndexT>                             l_instance_ids,
+        span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
+        span<IndexT>                             r_instance_ids,
+        span<Float>                              strength_ratios);
+
     void apply_to(geometry::SimplicialComplex&             edges,
                   span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
                   span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
@@ -33,10 +53,10 @@ class UIPC_CONSTITUTION_API AffineBodyPrismaticJoint final : public InterAffineB
 
     void apply_to(geometry::SimplicialComplex&             edges,
                   span<S<geometry::SimplicialComplexSlot>> l_geo_slots,
-                  span<IndexT>                             l_instance_id,
+                  span<IndexT>                             l_instance_ids,
                   span<S<geometry::SimplicialComplexSlot>> r_geo_slots,
-                  span<IndexT>                             r_instance_id,
-                  span<Float>                              strength_ratio);
+                  span<IndexT>                             r_instance_ids,
+                  span<Float>                              strength_ratios);
 
   private:
     virtual U64 get_uid() const noexcept override;

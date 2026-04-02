@@ -3041,10 +3041,15 @@ E = \sum_{k=0}^{3} \frac{K}{2} \| C_k \|^2_2,
 \]</div>
 <p>where <span class="arithmatex">\(K\)</span> is the stiffness constant of the joint, we choose <span class="arithmatex">\(K=\gamma (m_i + m_j)\)</span>, where <span class="arithmatex">\(\gamma\)</span> is a <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span> and <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
 <h2 id="attributes">Attributes</h2>
-<p>On the joint geometry (1D simplicial complex), on <code>edges</code>:</p>
+<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint):</p>
 <ul>
+<li><code>l_geo_id</code> (<code>IndexT</code>): scene geometry slot id for the left body <span class="arithmatex">\(i\)</span></li>
+<li><code>r_geo_id</code> (<code>IndexT</code>): scene geometry slot id for the right body <span class="arithmatex">\(j\)</span></li>
+<li><code>l_inst_id</code> (<code>IndexT</code>): instance index within the left geometry</li>
+<li><code>r_inst_id</code> (<code>IndexT</code>): instance index within the right geometry</li>
 <li><code>strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
-</ul></div>
+</ul>
+<p>When the joint is created via Local <code>create_geometry</code>, optional <strong>edge</strong> attributes (each <code>Vector3</code>) supply local joint geometry: <code>l_position0</code>, <code>l_position1</code> (left body local frame), <code>r_position0</code>, <code>r_position1</code> (right body local frame).</p></div>
 
 
 

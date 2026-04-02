@@ -76,6 +76,8 @@ Inherited by the following classes: [uipc::constitution::AffineBodyRod](classuip
 |   | [**AffineBodyConstitution**](#function-affinebodyconstitution) (const Json & config=default\_config()) noexcept<br> |
 |  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density=1e3) const<br> |
 |  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, const Matrix12x12 & mass, Float volume) const<br>_Apply ABD constitution with explicit mass matrix and volume override._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_proxy**](#function-create_proxy-12) (Float kappa, Float mass, const Vector3 & mass\_center, const Matrix3x3 & inertia, Float volume) const<br>_Create a 1-vertex proxy affine body from rigid body mass properties._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_proxy**](#function-create_proxy-22) (Float kappa, const Matrix12x12 & abd\_mass, Float volume) const<br>_Create a 1-vertex proxy affine body from a precomputed 12x12 ABD mass matrix._  |
 
 
 ## Public Functions inherited from uipc::constitution::IConstitution
@@ -216,6 +218,48 @@ The 12x12 mass matrix is decomposed into (m, m\_x\_bar, m\_x\_bar\_x\_bar) and s
 
 
         
+
+<hr>
+
+
+
+### function create\_proxy [1/2]
+
+_Create a 1-vertex proxy affine body from rigid body mass properties._ 
+```C++
+geometry::SimplicialComplex uipc::constitution::AffineBodyConstitution::create_proxy (
+    Float kappa,
+    Float mass,
+    const Vector3 & mass_center,
+    const Matrix3x3 & inertia,
+    Float volume
+) const
+```
+
+
+
+The returned SimplicialComplex has a single vertex at the origin and carries all ABD meta attributes. It participates in dynamics (gravity, shape energy) but has no collision geometry. 
+
+
+        
+
+<hr>
+
+
+
+### function create\_proxy [2/2]
+
+_Create a 1-vertex proxy affine body from a precomputed 12x12 ABD mass matrix._ 
+```C++
+geometry::SimplicialComplex uipc::constitution::AffineBodyConstitution::create_proxy (
+    Float kappa,
+    const Matrix12x12 & abd_mass,
+    Float volume
+) const
+```
+
+
+
 
 <hr>
 ## Public Static Functions Documentation

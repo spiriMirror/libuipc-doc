@@ -3233,7 +3233,8 @@ E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(
 <h2 id="requirement">Requirement</h2>
 <p>This constitution must be applied to a geometry that already has an <a href="../affine_body_revolute_joint/">AffineBodyRevoluteJoint</a> (UID=18) constitution.</p>
 <h2 id="attributes">Attributes</h2>
-<p>On the joint geometry (1D simplicial complex), on <code>edges</code>:</p>
+<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge carries the same linking fields as <a href="../affine_body_revolute_joint/">Affine Body Revolute Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
+<p>External-force attributes on <strong>edges</strong>:</p>
 <ul>
 <li><code>external_torque</code>: <span class="arithmatex">\(\tau\)</span> in the formulae above, scalar torque around the joint axis (one per edge)</li>
 <li><code>external_torque/is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the external torque</li>

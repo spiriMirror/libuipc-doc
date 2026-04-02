@@ -106,6 +106,8 @@ See [uipc::constitution::AffineBodyConstitution](classuipc_1_1constitution_1_1Af
 |   | [**AffineBodyConstitution**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-affinebodyconstitution) (const Json & config=default\_config()) noexcept<br> |
 |  void | [**apply\_to**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density=1e3) const<br> |
 |  void | [**apply\_to**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, const Matrix12x12 & mass, Float volume) const<br>_Apply ABD constitution with explicit mass matrix and volume override._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_proxy**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-create_proxy-12) (Float kappa, Float mass, const Vector3 & mass\_center, const Matrix3x3 & inertia, Float volume) const<br>_Create a 1-vertex proxy affine body from rigid body mass properties._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_proxy**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-create_proxy-22) (Float kappa, const Matrix12x12 & abd\_mass, Float volume) const<br>_Create a 1-vertex proxy affine body from a precomputed 12x12 ABD mass matrix._  |
 
 
 ## Public Functions inherited from uipc::constitution::IConstitution

@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="58" column="17" bodyfile="include/uipc/constitution/affine_body_revolute_joint.h" bodystart="58" bodyend="-1"/>
+        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="92" column="17" bodyfile="include/uipc/constitution/affine_body_revolute_joint.h" bodystart="92" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -84,6 +84,102 @@
         <inbodydescription>
         </inbodydescription>
         <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="17" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a810997698e16fab81f4c9c1dcd4167a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref></type>
+        <definition>geometry::SimplicialComplex uipc::constitution::AffineBodyRevoluteJoint::create_geometry</definition>
+        <argsstring>(span&lt; const Vector3 &gt; position0s, span&lt; const Vector3 &gt; position1s, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_ids, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_ids, span&lt; Float &gt; strength_ratios)</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJoint::create_geometry</qualifiedname>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>position0s</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>position1s</declname>
+        </param>
+        <param>
+          <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
+          <declname>l_geo_slots</declname>
+        </param>
+        <param>
+          <type>span&lt; IndexT &gt;</type>
+          <declname>l_instance_ids</declname>
+        </param>
+        <param>
+          <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
+          <declname>r_geo_slots</declname>
+        </param>
+        <param>
+          <type>span&lt; IndexT &gt;</type>
+          <declname>r_instance_ids</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>strength_ratios</declname>
+        </param>
+        <briefdescription>
+<para>Create revolute joint geometry with world-space endpoint positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds a SimplicialComplex with 2*N vertices and N edges. Writes vertices.position from position0s/position1s. Does not write local position attributes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="26" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1af94c9af2b7e2c11e70f6d09ed1b4f2a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref></type>
+        <definition>geometry::SimplicialComplex uipc::constitution::AffineBodyRevoluteJoint::create_geometry</definition>
+        <argsstring>(span&lt; const Vector3 &gt; l_position0, span&lt; const Vector3 &gt; l_position1, span&lt; const Vector3 &gt; r_position0, span&lt; const Vector3 &gt; r_position1, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_ids, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_ids, span&lt; Float &gt; strength_ratios)</argsstring>
+        <name>create_geometry</name>
+        <qualifiedname>uipc::constitution::AffineBodyRevoluteJoint::create_geometry</qualifiedname>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>l_position0</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>l_position1</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>r_position0</declname>
+        </param>
+        <param>
+          <type>span&lt; const Vector3 &gt;</type>
+          <declname>r_position1</declname>
+        </param>
+        <param>
+          <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
+          <declname>l_geo_slots</declname>
+        </param>
+        <param>
+          <type>span&lt; IndexT &gt;</type>
+          <declname>l_instance_ids</declname>
+        </param>
+        <param>
+          <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
+          <declname>r_geo_slots</declname>
+        </param>
+        <param>
+          <type>span&lt; IndexT &gt;</type>
+          <declname>r_instance_ids</declname>
+        </param>
+        <param>
+          <type>span&lt; Float &gt;</type>
+          <declname>strength_ratios</declname>
+        </param>
+        <briefdescription>
+<para>Create revolute joint geometry with local-space endpoint positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds a SimplicialComplex with N edges. Writes local position attributes (l_position0, l_position1, r_position0, r_position1) on edges. Does not write vertices.position. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="42" column="34"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a792e518fd4b776205a4d44b990605ce8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -150,12 +246,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="30" column="10"/>
+        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="64" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1aaa931dbaba72de74886b6a607679e099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a6cd21f864d53ebefbf7d17d359e4886f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::constitution::AffineBodyRevoluteJoint::apply_to</definition>
-        <argsstring>(geometry::SimplicialComplex &amp;edges, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_id, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_id, span&lt; Float &gt; strength_ratio)</argsstring>
+        <argsstring>(geometry::SimplicialComplex &amp;edges, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l_geo_slots, span&lt; IndexT &gt; l_instance_ids, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r_geo_slots, span&lt; IndexT &gt; r_instance_ids, span&lt; Float &gt; strength_ratios)</argsstring>
         <name>apply_to</name>
         <qualifiedname>uipc::constitution::AffineBodyRevoluteJoint::apply_to</qualifiedname>
         <param>
@@ -168,7 +264,7 @@
         </param>
         <param>
           <type>span&lt; IndexT &gt;</type>
-          <declname>l_instance_id</declname>
+          <declname>l_instance_ids</declname>
         </param>
         <param>
           <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4" kindref="compound">geometry::SimplicialComplexSlot</ref> &gt; &gt;</type>
@@ -176,11 +272,11 @@
         </param>
         <param>
           <type>span&lt; IndexT &gt;</type>
-          <declname>r_instance_id</declname>
+          <declname>r_instance_ids</declname>
         </param>
         <param>
           <type>span&lt; Float &gt;</type>
-          <declname>strength_ratio</declname>
+          <declname>strength_ratios</declname>
         </param>
         <briefdescription>
 <para>Apply revolute joint to edges connecting affine bodies (multi-instance mode). </para>
@@ -205,7 +301,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>l_instance_id</parametername>
+<parametername>l_instance_ids</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Instance IDs for the left geometries (must be in range [0, instances().size())). </para>
@@ -221,7 +317,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>r_instance_id</parametername>
+<parametername>r_instance_ids</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Instance IDs for the right geometries (must be in range [0, instances().size())). </para>
@@ -229,7 +325,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>strength_ratio</parametername>
+<parametername>strength_ratios</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The strength ratio for each joint (one per edge). </para>
@@ -240,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="48" column="10"/>
+        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="82" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -257,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="57" column="17"/>
+        <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="91" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -300,11 +396,13 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_revolute_joint.h" bodystart="8" bodyend="59"/>
+    <location file="include/uipc/constitution/affine_body_revolute_joint.h" line="7" column="1" bodyfile="include/uipc/constitution/affine_body_revolute_joint.h" bodystart="8" bodyend="93"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a2eb8b9faa4ae380990ff16fe7a7af5e0" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>AffineBodyRevoluteJoint</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a792e518fd4b776205a4d44b990605ce8" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>apply_to</name></member>
-      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1aaa931dbaba72de74886b6a607679e099" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a6cd21f864d53ebefbf7d17d359e4886f" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a810997698e16fab81f4c9c1dcd4167a2" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>create_geometry</name></member>
+      <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1af94c9af2b7e2c11e70f6d09ed1b4f2a5" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>create_geometry</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1abd48bfdd2adb81823aecb594e85babbd" prot="public" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>default_config</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a148444c8ad35ff65bb453c28b72fb5b8" prot="private" virt="virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>get_uid</name></member>
       <member refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint_1a39fafa2e2a5e684d2c374e3b74af3ce6" prot="private" virt="non-virtual"><scope>uipc::constitution::AffineBodyRevoluteJoint</scope><name>m_config</name></member>

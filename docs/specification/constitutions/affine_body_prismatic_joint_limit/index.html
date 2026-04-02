@@ -3129,7 +3129,8 @@ x=\theta^t+\delta,
 <p>This limit term is meaningful only on a geometry that already represents a
 <a href="../affine_body_prismatic_joint/">Prismatic Joint</a> (UID=20). The limit augments that base relation as an extra constitution term.</p>
 <h2 id="attributes">Attributes</h2>
-<p>On <code>edges</code>:</p>
+<p>The host geometry is <strong>edge-based</strong> (one edge per joint), with the same linking fields as <a href="../affine_body_prismatic_joint/">Affine Body Prismatic Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
+<p>On <strong>edges</strong> (in addition to the base joint attributes above):</p>
 <ul>
 <li><code>limit/lower</code>: <span class="arithmatex">\(l_{\text{user}}\)</span> — relative lower bound (default <code>0.0</code>)</li>
 <li><code>limit/upper</code>: <span class="arithmatex">\(u_{\text{user}}\)</span> — relative upper bound (default <code>0.0</code>)</li>

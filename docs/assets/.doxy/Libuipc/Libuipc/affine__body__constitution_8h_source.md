@@ -11,6 +11,7 @@
 #pragma once
 #include <uipc/constitution/constitution.h>
 #include <uipc/geometry/simplicial_complex.h>
+#include <uipc/common/unit.h>
 
 namespace uipc::constitution
 {
@@ -27,6 +28,16 @@ class UIPC_CONSTITUTION_API AffineBodyConstitution : public IConstitution
                   Float                        kappa,
                   const Matrix12x12&           mass,
                   Float                        volume) const;
+
+    [[nodiscard]] geometry::SimplicialComplex create_proxy(Float              kappa,
+                                                           Float              mass,
+                                                           const Vector3&     mass_center,
+                                                           const Matrix3x3&   inertia,
+                                                           Float              volume) const;
+
+    [[nodiscard]] geometry::SimplicialComplex create_proxy(Float              kappa,
+                                                           const Matrix12x12& abd_mass,
+                                                           Float              volume) const;
 
     static Json default_config() noexcept;
 
