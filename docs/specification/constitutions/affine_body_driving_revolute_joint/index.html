@@ -3065,7 +3065,7 @@
 <li><strong>Active mode</strong> (<code>is_passive = 0</code>): the joint drives toward a user-specified <code>aim_angle</code>.</li>
 <li><strong>Passive mode</strong> (<code>is_passive = 1</code>): the joint resists external forces by treating the current angle as the target, effectively locking the joint in place.</li>
 </ul>
-<p>The constraint can also be toggled on and off at runtime via the <code>is_constrained</code> flag.</p>
+<p>The constraint can also be toggled on and off at runtime via the <code>driving/is_constrained</code> flag.</p>
 <h2 id="energy">Energy</h2>
 <p>We assume 2 affine body indices <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, each with their own state vector <span class="arithmatex">\(\mathbf{q}_i\)</span> and <span class="arithmatex">\(\mathbf{q}_j\)</span> as defined in the <a href="../affine_body/">Affine Body</a> constitution.</p>
 <p>The current relative rotation angle <span class="arithmatex">\(\theta\)</span> between the two bodies about the joint axis is extracted from the affine body states using the joint axis and normal rest frames, as defined in the <a href="../affine_body_revolute_joint/">Revolute Joint</a>:</p>
@@ -3088,7 +3088,7 @@
 E = \frac{K}{2} \sin^2(\theta - \tilde\theta) = \frac{K}{2} \left(\sin\theta \cos\tilde\theta - \cos\theta \sin\tilde\theta\right)^2,
 \]</div>
 <p>where <span class="arithmatex">\(K = \gamma (m_i + m_j)\)</span>, <span class="arithmatex">\(\gamma\)</span> is the <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span>, <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
-<p>When <code>is_constrained = 0</code>, the energy is zero and the driving effect is disabled.</p>
+<p>When <code>driving/is_constrained = 0</code>, the energy is zero and the driving effect is disabled.</p>
 <h2 id="state-update">State Update</h2>
 <p>At the end of each time step, the time integrator updates the <code>angle</code> attribute to reflect the current joint angle:</p>
 <div class="arithmatex">\[
@@ -3102,7 +3102,7 @@ E = \frac{K}{2} \sin^2(\theta - \tilde\theta) = \frac{K}{2} \left(\sin\theta \co
 <p>Driving-specific attributes on <strong>edges</strong>:</p>
 <ul>
 <li><code>driving/strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
-<li><code>is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the driving effect</li>
+<li><code>driving/is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the driving effect</li>
 <li><code>is_passive</code>: passive mode (<code>1</code>) locks at the current angle; active mode (<code>0</code>) drives to <code>aim_angle</code></li>
 <li><code>aim_angle</code>: <span class="arithmatex">\(\theta_{\text{aim}}\)</span>, the target angle in active mode</li>
 <li><code>angle</code>: <span class="arithmatex">\(\theta_{\text{current}}\)</span>, the current relative angle (updated by the backend each time step)</li>

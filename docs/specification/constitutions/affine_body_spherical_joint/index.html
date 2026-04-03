@@ -3154,7 +3154,7 @@ K = \gamma (m_i + m_j)
 <p>where <span class="arithmatex">\(\gamma\)</span> is the user-defined <code>strength_ratio</code> and <span class="arithmatex">\(m_i\)</span>, <span class="arithmatex">\(m_j\)</span> are the affine bodies' masses.</p>
 <p>Unlike the <a href="../affine_body_fixed_joint/">Affine Body Fixed Joint</a>, there is <strong>no</strong> additional energy on relative orientation, so the two bodies may rotate freely about the anchor.</p>
 <h3 id="parameter-range">Parameter range</h3>
-<p><code>strength_ratio</code> <span class="arithmatex">\(\gamma\)</span> is dimensionless; it scales the penalty with combined mass. Typical values are problem-dependent; the regression test uses <span class="arithmatex">\(\gamma = 100\)</span> for a small two-cube scene.</p>
+<p><code>strength_ratio</code> <span class="arithmatex">\(\gamma\)</span> is dimensionless; it scales the penalty with combined mass. A proper initial value is <span class="arithmatex">\(\gamma = 100\)</span>.</p>
 <h2 id="attributes-and-geometry">Attributes and geometry</h2>
 <p>The joint is stored as a <strong>0D simplicial complex</strong>: <strong>one vertex per joint</strong> (no edges).</p>
 <p>On each <strong>vertex</strong>:</p>

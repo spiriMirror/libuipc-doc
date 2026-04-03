@@ -315,7 +315,7 @@ geometry::SimplicialComplex uipc::constitution::AffineBodySphericalJoint::create
 
 
 
-Builds a vertex-based SimplicialComplex (1 vertex per joint). Writes local position attributes (position0, position1) on vertices. 
+Builds a vertex-based SimplicialComplex (1 vertex per joint). Writes local position attributes (l\_position, r\_position) on vertices. 
 
 
         

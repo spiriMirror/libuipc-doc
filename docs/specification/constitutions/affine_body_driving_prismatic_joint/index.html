@@ -3065,7 +3065,7 @@
 <li><strong>Active mode</strong> (<code>is_passive = 0</code>): the joint drives toward a user-specified <code>aim_distance</code>.</li>
 <li><strong>Passive mode</strong> (<code>is_passive = 1</code>): the joint resists external forces by treating the current distance as the target, effectively locking the joint in place.</li>
 </ul>
-<p>The constraint can also be toggled on and off at runtime via the <code>is_constrained</code> flag.</p>
+<p>The constraint can also be toggled on and off at runtime via the <code>driving/is_constrained</code> flag.</p>
 <h2 id="energy">Energy</h2>
 <p>We assume 2 affine body indices <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, each with their own state vector <span class="arithmatex">\(\mathbf{q}_i\)</span> and <span class="arithmatex">\(\mathbf{q}_j\)</span> as defined in the <a href="../affine_body/">Affine Body</a> constitution.</p>
 <p>The joint axis is defined by the tangent direction <span class="arithmatex">\(\hat{\mathbf{t}}\)</span> and center positions <span class="arithmatex">\(\mathbf{c}_i\)</span>, <span class="arithmatex">\(\mathbf{c}_j\)</span> as in the <a href="../affine_body_prismatic_joint/">Prismatic Joint</a>.</p>
@@ -3085,7 +3085,7 @@ E = \frac{K}{2} \left( \hat{\mathbf{t}}_i \cdot (\mathbf{c}_j - \mathbf{c}_i) - 
 \]</div>
 <p>where <span class="arithmatex">\(K = \gamma (m_i + m_j)\)</span>, <span class="arithmatex">\(\gamma\)</span> is the <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span>, <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
 <p>The two symmetric terms ensure that the constraint is evaluated from both bodies' perspectives.</p>
-<p>When <code>is_constrained = 0</code>, the energy is zero and the driving effect is disabled.</p>
+<p>When <code>driving/is_constrained = 0</code>, the energy is zero and the driving effect is disabled.</p>
 <h2 id="state-update">State Update</h2>
 <p>At the end of each time step, the time integrator updates the <code>distance</code> attribute to reflect the current joint displacement:</p>
 <div class="arithmatex">\[
@@ -3099,7 +3099,7 @@ d_{\text{current}} = d(\mathbf{q}) - d_{\text{init}}
 <p>Driving-specific attributes on <strong>edges</strong>:</p>
 <ul>
 <li><code>driving/strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
-<li><code>is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the driving effect</li>
+<li><code>driving/is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the driving effect</li>
 <li><code>is_passive</code>: passive mode (<code>1</code>) locks at the current distance; active mode (<code>0</code>) drives to <code>aim_distance</code></li>
 <li><code>aim_distance</code>: <span class="arithmatex">\(d_{\text{aim}}\)</span>, the target distance in active mode</li>
 <li><code>distance</code>: <span class="arithmatex">\(d_{\text{current}}\)</span>, the current displacement (updated by the backend each time step)</li>
