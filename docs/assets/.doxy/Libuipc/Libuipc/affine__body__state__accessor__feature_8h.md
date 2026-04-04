@@ -12,6 +12,7 @@
 
 * `#include <uipc/core/feature.h>`
 * `#include <uipc/geometry/simplicial_complex.h>`
+* `#include <uipc/backend/buffer_view.h>`
 
 
 

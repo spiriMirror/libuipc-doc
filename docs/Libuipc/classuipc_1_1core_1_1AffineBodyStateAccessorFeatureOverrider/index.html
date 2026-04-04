@@ -2930,6 +2930,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-do_copy_transform_to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function do_copy_transform_to
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-do_copy_velocity_to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function do_copy_velocity_to
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-do_create_geometry" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3008,6 +3030,14 @@
 <td style="text-align: left;"><a href="#function-do_copy_to"><strong>do_copy_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; state_geo) = 0<br></td>
 </tr>
 <tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-do_copy_transform_to"><strong>do_copy_transform_to</strong></a> (<a href="../classuipc_1_1backend_1_1BufferView/"><strong>backend::BufferView</strong></a> buffer_view, IndexT body_offset, SizeT body_count) = 0<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-do_copy_velocity_to"><strong>do_copy_velocity_to</strong></a> (<a href="../classuipc_1_1backend_1_1BufferView/"><strong>backend::BufferView</strong></a> buffer_view, IndexT body_offset, SizeT body_count) = 0<br></td>
+</tr>
+<tr>
 <td style="text-align: right;">virtual <a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a></td>
 <td style="text-align: left;"><a href="#function-do_create_geometry"><strong>do_create_geometry</strong></a> (IndexT body_offset, SizeT body_count) <br></td>
 </tr>
@@ -3041,21 +3071,39 @@
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-do_copy_transform_to">function do_copy_transform_to</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::</span><span class="n">do_copy_transform_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">backend</span><span class="o">::</span><span class="n">BufferView</span><span class="w"> </span><span class="n">buffer_view</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">body_offset</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">body_count</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-do_copy_velocity_to">function do_copy_velocity_to</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::</span><span class="n">do_copy_velocity_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">backend</span><span class="o">::</span><span class="n">BufferView</span><span class="w"> </span><span class="n">buffer_view</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">body_offset</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">body_count</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-do_create_geometry">function do_create_geometry</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::</span><span class="n">do_create_geometry</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">body_offset</span><span class="p">,</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">body_count</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::</span><span class="n">do_create_geometry</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">body_offset</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">body_count</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-get_body_count">function get_body_count</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::</span><span class="n">get_body_count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::</span><span class="n">get_body_count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-affinebodystateaccessorfeatureoverrider_1">function ~AffineBodyStateAccessorFeatureOverrider</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::~</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="o">::~</span><span class="n">AffineBodyStateAccessorFeatureOverrider</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
 </span></code></pre></div>
 <hr>
 

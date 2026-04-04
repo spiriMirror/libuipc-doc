@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/i_sanity_checker.h" line="86" column="13"/>
+        <location file="include/uipc/core/i_sanity_checker.h" line="110" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ISanityCheckerCollection_1a4a05b94d329b70e5f337f7d6ea78c51f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -33,7 +33,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/i_sanity_checker.h" line="87" column="18"/>
+        <location file="include/uipc/core/i_sanity_checker.h" line="111" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1ISanityCheckerCollection_1a76bc20384bcc01225a82db5614dece23" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::core::ISanityCheckerCollection::insert</definition>
+        <argsstring>(S&lt; ISanityChecker &gt; checker)=0</argsstring>
+        <name>insert</name>
+        <qualifiedname>uipc::core::ISanityCheckerCollection::insert</qualifiedname>
+        <param>
+          <type>S&lt; <ref refid="classuipc_1_1core_1_1ISanityChecker" kindref="compound">ISanityChecker</ref> &gt;</type>
+          <declname>checker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/i_sanity_checker.h" line="112" column="31"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ISanityCheckerCollection_1aa7b0393e71314c87391d5d39d7c575ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>SanityCheckResult</type>
@@ -51,17 +69,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/i_sanity_checker.h" line="88" column="31"/>
+        <location file="include/uipc/core/i_sanity_checker.h" line="113" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1ISanityCheckerCollection_1a0bea805ca13724303686538d34a6d1c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classuipc_1_1core_1_1ISanityCheckContext" kindref="compound">ISanityCheckContext</ref> &amp;</type>
+        <definition>virtual ISanityCheckContext &amp; uipc::core::ISanityCheckerCollection::context</definition>
+        <argsstring>()=0</argsstring>
+        <name>context</name>
+        <qualifiedname>uipc::core::ISanityCheckerCollection::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/i_sanity_checker.h" line="114" column="33"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/i_sanity_checker.h" line="83" column="1" bodyfile="include/uipc/core/i_sanity_checker.h" bodystart="84" bodyend="89"/>
+    <location file="include/uipc/core/i_sanity_checker.h" line="107" column="1" bodyfile="include/uipc/core/i_sanity_checker.h" bodystart="108" bodyend="115"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1a4a05b94d329b70e5f337f7d6ea78c51f" prot="public" virt="pure-virtual"><scope>uipc::core::ISanityCheckerCollection</scope><name>build</name></member>
       <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1aa7b0393e71314c87391d5d39d7c575ec" prot="public" virt="pure-virtual"><scope>uipc::core::ISanityCheckerCollection</scope><name>check</name></member>
+      <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1a0bea805ca13724303686538d34a6d1c3" prot="public" virt="pure-virtual"><scope>uipc::core::ISanityCheckerCollection</scope><name>context</name></member>
+      <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1a76bc20384bcc01225a82db5614dece23" prot="public" virt="pure-virtual"><scope>uipc::core::ISanityCheckerCollection</scope><name>insert</name></member>
       <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1ae877ae3f74adaf1a96f535ab70b2245d" prot="public" virt="virtual"><scope>uipc::core::ISanityCheckerCollection</scope><name>~ISanityCheckerCollection</name></member>
     </listofallmembers>
   </compounddef>

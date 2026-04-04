@@ -2991,10 +2991,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-copy_position_to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function copy_position_to
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-copy_to" class="md-nav__link">
     <span class="md-ellipsis">
       
         function copy_to
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-copy_velocity_to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function copy_velocity_to
       
     </span>
   </a>
@@ -3086,7 +3108,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-copy_position_to"><strong>copy_position_to</strong></a> (<a href="../classuipc_1_1backend_1_1BufferView/"><strong>backend::BufferView</strong></a> buffer_view, IndexT vertex_offset=0, SizeT vertex_count=~0ull) const<br><em>Copy position data (Vector3) for the specified vertex range into an externally-owned buffer.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-copy_to"><strong>copy_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; state_geo) const<br><em>Copy finite element state data to the given geometry.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-copy_velocity_to"><strong>copy_velocity_to</strong></a> (<a href="../classuipc_1_1backend_1_1BufferView/"><strong>backend::BufferView</strong></a> buffer_view, IndexT vertex_offset=0, SizeT vertex_count=~0ull) const<br><em>Copy velocity data (Vector3) for the specified vertex range into an externally-owned buffer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a></td>
@@ -3173,11 +3203,27 @@
 </ul>
 <hr>
 
+<h3 id="function-copy_position_to">function copy_position_to</h3>
+<p><em>Copy position data (Vector3) for the specified vertex range into an externally-owned buffer.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">copy_position_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">backend</span><span class="o">::</span><span class="n">BufferView</span><span class="w"> </span><span class="n">buffer_view</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">vertex_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">vertex_count</span><span class="o">=~</span><span class="mi">0ull</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>buffer_view</code> The destination buffer view to copy position data into. </li>
+<li><code>vertex_offset</code> The starting vertex index in finite element system. </li>
+<li><code>vertex_count</code> The number of vertices to include, if vertex_count == ~0ull, all vertices from vertex_offset to the end will be included. </li>
+</ul>
+<hr>
+
 <h3 id="function-copy_to">function copy_to</h3>
 <p><em>Copy finite element state data to the given geometry.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">copy_to</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">state_geo</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">copy_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">state_geo</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -3185,12 +3231,28 @@
 </ul>
 <hr>
 
+<h3 id="function-copy_velocity_to">function copy_velocity_to</h3>
+<p><em>Copy velocity data (Vector3) for the specified vertex range into an externally-owned buffer.</em> 
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">copy_velocity_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">backend</span><span class="o">::</span><span class="n">BufferView</span><span class="w"> </span><span class="n">buffer_view</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">vertex_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">vertex_count</span><span class="o">=~</span><span class="mi">0ull</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>buffer_view</code> The destination buffer view to copy velocity data into. </li>
+<li><code>vertex_offset</code> The starting vertex index in finite element system. </li>
+<li><code>vertex_count</code> The number of vertices to include, if vertex_count == ~0ull, all vertices from vertex_offset to the end will be included. </li>
+</ul>
+<hr>
+
 <h3 id="function-create_geometry">function create_geometry</h3>
 <p><em>Create a simplicial complex geometry to contain finite element state data.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">create_geometry</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">vertex_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">vertex_count</span><span class="o">=~</span><span class="mi">0ull</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">create_geometry</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">vertex_offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">SizeT</span><span class="w"> </span><span class="n">vertex_count</span><span class="o">=~</span><span class="mi">0ull</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
@@ -3201,7 +3263,7 @@
 
 <h3 id="function-vertex_count">function vertex_count</h3>
 <p><em>Get the number of vertices in the finite element system.</em> 
-</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">vertex_count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">SizeT</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">FiniteElementStateAccessorFeature</span><span class="o">::</span><span class="n">vertex_count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 

@@ -101,6 +101,8 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1Featu
 |  SizeT | [**body\_count**](#function-body_count) () const<br>_Get the number of bodies in the affine body system._  |
 |  void | [**copy\_from**](#function-copy_from) (const [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & state\_geo) const<br>_Copy affine body state data from the given geometry._  |
 |  void | [**copy\_to**](#function-copy_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & state\_geo) const<br>_Copy affine body state data to the given geometry._  |
+|  void | [**copy\_transform\_to**](#function-copy_transform_to) ([**backend::BufferView**](classuipc_1_1backend_1_1BufferView.md) buffer\_view, IndexT body\_offset=0, SizeT body\_count=~0ull) const<br>_Copy transform data (Matrix4x4) for the specified body range into an externally-owned buffer._  |
+|  void | [**copy\_velocity\_to**](#function-copy_velocity_to) ([**backend::BufferView**](classuipc_1_1backend_1_1BufferView.md) buffer\_view, IndexT body\_offset=0, SizeT body\_count=~0ull) const<br>_Copy velocity data (Matrix4x4) for the specified body range into an externally-owned buffer._  |
 |  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry) (IndexT body\_offset=0, SizeT body\_count=~0ull) <br>_Create a simplicial complex geometry to contain affine body state data._  |
 
 
@@ -297,6 +299,68 @@ void uipc::core::AffineBodyStateAccessorFeature::copy_to (
 
 
 * `state_geo` The geometry to copy affine body state data to. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function copy\_transform\_to 
+
+_Copy transform data (Matrix4x4) for the specified body range into an externally-owned buffer._ 
+```C++
+void uipc::core::AffineBodyStateAccessorFeature::copy_transform_to (
+    backend::BufferView buffer_view,
+    IndexT body_offset=0,
+    SizeT body_count=~0ull
+) const
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `buffer_view` The destination buffer view to copy transform data into. 
+* `body_offset` The starting body index in affine body system. 
+* `body_count` The number of bodies to include, if body\_count == ~0ull, all bodies from body\_offset to the end will be included. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function copy\_velocity\_to 
+
+_Copy velocity data (Matrix4x4) for the specified body range into an externally-owned buffer._ 
+```C++
+void uipc::core::AffineBodyStateAccessorFeature::copy_velocity_to (
+    backend::BufferView buffer_view,
+    IndexT body_offset=0,
+    SizeT body_count=~0ull
+) const
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `buffer_view` The destination buffer view to copy velocity data into. 
+* `body_offset` The starting body index in affine body system. 
+* `body_count` The number of bodies to include, if body\_count == ~0ull, all bodies from body\_offset to the end will be included. 
 
 
 

@@ -127,6 +127,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**IFeature**](classuipc_1_1core_1_1IFeature.md)     
         * **class** [**IObject**](classuipc_1_1core_1_1IObject.md)     
         * **class** [**IObjectCollection**](classuipc_1_1core_1_1IObjectCollection.md)     
+        * **class** [**ISanityCheckContext**](classuipc_1_1core_1_1ISanityCheckContext.md)     
         * **class** [**ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md)     
         * **class** [**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md)     
         * **class** [**Object**](classuipc_1_1core_1_1Object.md)     

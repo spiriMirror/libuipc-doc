@@ -289,6 +289,8 @@
 ([**uipc**](namespaceuipc.md))
 * [**is\_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4.md)
 ([**uipc**](namespaceuipc.md))
+* [**ISanityCheckContext**](classuipc_1_1core_1_1ISanityCheckContext.md)
+([**uipc::core**](namespaceuipc_1_1core.md))
 * [**ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md)
 ([**uipc::core**](namespaceuipc_1_1core.md))
 * [**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md)

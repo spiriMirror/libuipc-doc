@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="27" column="39" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="27" bodyend="-1"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="31" column="39" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="31" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="61" column="7" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="61" bodyend="-1"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="87" column="7" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="87" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="29" column="14"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="33" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1af13e5d3bbef505fa84ef29f9c009387b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>SizeT</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="34" column="11"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="38" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a2924ee483b91be95039a619ca20c2a0e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref></type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="42" column="33"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="46" column="33"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1abf061e5c7d71629cddafabab2ecc3a47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="50" column="10"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="54" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a974a6ff7b58e61e025fedf6f777200d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -170,7 +170,117 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="57" column="10"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a858797bdd1d39f71fa1a1f5981c12e84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::FiniteElementStateAccessorFeature::copy_position_to</definition>
+        <argsstring>(backend::BufferView buffer_view, IndexT vertex_offset=0, SizeT vertex_count=~0ull) const</argsstring>
+        <name>copy_position_to</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::copy_position_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>buffer_view</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>vertex_offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>vertex_count</declname>
+          <defval>~0ull</defval>
+        </param>
+        <briefdescription>
+<para>Copy position data (Vector3) for the specified vertex range into an externally-owned buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer_view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination buffer view to copy position data into. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertex_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting vertex index in finite element system. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertex_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of vertices to include, if vertex_count == ~0ull, all vertices from vertex_offset to the end will be included. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="70" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a50bf67232cae92eff0cbb5fd54d062a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::FiniteElementStateAccessorFeature::copy_velocity_to</definition>
+        <argsstring>(backend::BufferView buffer_view, IndexT vertex_offset=0, SizeT vertex_count=~0ull) const</argsstring>
+        <name>copy_velocity_to</name>
+        <qualifiedname>uipc::core::FiniteElementStateAccessorFeature::copy_velocity_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>buffer_view</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>vertex_offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>vertex_count</declname>
+          <defval>~0ull</defval>
+        </param>
+        <briefdescription>
+<para>Copy velocity data (Vector3) for the specified vertex range into an externally-owned buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer_view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination buffer view to copy velocity data into. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertex_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting vertex index in finite element system. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertex_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of vertices to include, if vertex_count == ~0ull, all vertices from vertex_offset to the end will be included. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="81" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -187,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="60" column="51"/>
+        <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="86" column="51"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -232,10 +342,12 @@
         <link refid="classuipc_1_1core_1_1IFeature"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="24" column="1" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="25" bodyend="62"/>
+    <location file="include/uipc/core/finite_element_state_accessor_feature.h" line="28" column="1" bodyfile="include/uipc/core/finite_element_state_accessor_feature.h" bodystart="29" bodyend="88"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1abf061e5c7d71629cddafabab2ecc3a47" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>copy_from</name></member>
+      <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a858797bdd1d39f71fa1a1f5981c12e84" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>copy_position_to</name></member>
       <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a974a6ff7b58e61e025fedf6f777200d1" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>copy_to</name></member>
+      <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a50bf67232cae92eff0cbb5fd54d062a7" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>copy_velocity_to</name></member>
       <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a2924ee483b91be95039a619ca20c2a0e" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>create_geometry</name></member>
       <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a4154cfe7a2b4095d230b503b690759fa" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>FeatureName</name></member>
       <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a80b2cb86129bafe3be4532dba83c74a0" prot="public" virt="non-virtual"><scope>uipc::core::FiniteElementStateAccessorFeature</scope><name>FiniteElementStateAccessorFeature</name></member>

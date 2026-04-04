@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="10" column="5"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="11" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1ab848e1e62b015df19f7889e7ba0806d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="11" column="13"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="12" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a05ca914910bce1de57eadaf6e3d3f015" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>SizeT</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="13" column="19"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="14" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1ad9bdc2ad14fb3386ecca7460951f5926" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="14" column="41"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="15" column="41"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a4f5a583bed226c9b964bf1bd5ee987c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="15" column="18"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="16" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a55edaf190aa2b07d3cab53ff31ed5222" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -101,18 +101,72 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="16" column="18"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="17" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a1712cf1f4681c2b3a2a5b2dcbe737aea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::core::AffineBodyStateAccessorFeatureOverrider::do_copy_transform_to</definition>
+        <argsstring>(backend::BufferView buffer_view, IndexT body_offset, SizeT body_count)=0</argsstring>
+        <name>do_copy_transform_to</name>
+        <qualifiedname>uipc::core::AffineBodyStateAccessorFeatureOverrider::do_copy_transform_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>buffer_view</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>body_offset</declname>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>body_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="19" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a75bda15706e502eb9e626070ec1d69ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void uipc::core::AffineBodyStateAccessorFeatureOverrider::do_copy_velocity_to</definition>
+        <argsstring>(backend::BufferView buffer_view, IndexT body_offset, SizeT body_count)=0</argsstring>
+        <name>do_copy_velocity_to</name>
+        <qualifiedname>uipc::core::AffineBodyStateAccessorFeatureOverrider::do_copy_velocity_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>buffer_view</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>body_offset</declname>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>body_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="20" column="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="7" column="1" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="8" bodyend="17"/>
+    <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="8" column="1" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="9" bodyend="21"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a272dd2995413dce7750a84acd1e978d0" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>AffineBodyStateAccessorFeatureOverrider</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a4f5a583bed226c9b964bf1bd5ee987c1" prot="public" virt="pure-virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>do_copy_from</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a55edaf190aa2b07d3cab53ff31ed5222" prot="public" virt="pure-virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>do_copy_to</name></member>
+      <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a1712cf1f4681c2b3a2a5b2dcbe737aea" prot="public" virt="pure-virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>do_copy_transform_to</name></member>
+      <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a75bda15706e502eb9e626070ec1d69ea" prot="public" virt="pure-virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>do_copy_velocity_to</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1ad9bdc2ad14fb3386ecca7460951f5926" prot="public" virt="virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>do_create_geometry</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a05ca914910bce1de57eadaf6e3d3f015" prot="public" virt="pure-virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>get_body_count</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1ab848e1e62b015df19f7889e7ba0806d3" prot="public" virt="virtual"><scope>uipc::core::AffineBodyStateAccessorFeatureOverrider</scope><name>~AffineBodyStateAccessorFeatureOverrider</name></member>

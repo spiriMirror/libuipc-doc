@@ -100,7 +100,9 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1Featu
 | ---: | :--- |
 |   | [**FiniteElementStateAccessorFeature**](#function-finiteelementstateaccessorfeature) (S&lt; [**FiniteElementStateAccessorFeatureOverrider**](classuipc_1_1core_1_1FiniteElementStateAccessorFeatureOverrider.md) &gt; overrider) <br> |
 |  void | [**copy\_from**](#function-copy_from) (const [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & state\_geo) const<br>_Copy finite element state data from the given geometry._  |
+|  void | [**copy\_position\_to**](#function-copy_position_to) ([**backend::BufferView**](classuipc_1_1backend_1_1BufferView.md) buffer\_view, IndexT vertex\_offset=0, SizeT vertex\_count=~0ull) const<br>_Copy position data (Vector3) for the specified vertex range into an externally-owned buffer._  |
 |  void | [**copy\_to**](#function-copy_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & state\_geo) const<br>_Copy finite element state data to the given geometry._  |
+|  void | [**copy\_velocity\_to**](#function-copy_velocity_to) ([**backend::BufferView**](classuipc_1_1backend_1_1BufferView.md) buffer\_view, IndexT vertex\_offset=0, SizeT vertex\_count=~0ull) const<br>_Copy velocity data (Vector3) for the specified vertex range into an externally-owned buffer._  |
 |  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry) (IndexT vertex\_offset=0, SizeT vertex\_count=~0ull) const<br>_Create a simplicial complex geometry to contain finite element state data._  |
 |  SizeT | [**vertex\_count**](#function-vertex_count) () const<br>_Get the number of vertices in the finite element system._  |
 
@@ -274,6 +276,37 @@ void uipc::core::FiniteElementStateAccessorFeature::copy_from (
 
 
 
+### function copy\_position\_to 
+
+_Copy position data (Vector3) for the specified vertex range into an externally-owned buffer._ 
+```C++
+void uipc::core::FiniteElementStateAccessorFeature::copy_position_to (
+    backend::BufferView buffer_view,
+    IndexT vertex_offset=0,
+    SizeT vertex_count=~0ull
+) const
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `buffer_view` The destination buffer view to copy position data into. 
+* `vertex_offset` The starting vertex index in finite element system. 
+* `vertex_count` The number of vertices to include, if vertex\_count == ~0ull, all vertices from vertex\_offset to the end will be included. 
+
+
+
+
+        
+
+<hr>
+
+
+
 ### function copy\_to 
 
 _Copy finite element state data to the given geometry._ 
@@ -291,6 +324,37 @@ void uipc::core::FiniteElementStateAccessorFeature::copy_to (
 
 
 * `state_geo` The geometry to copy finite element state data to. 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function copy\_velocity\_to 
+
+_Copy velocity data (Vector3) for the specified vertex range into an externally-owned buffer._ 
+```C++
+void uipc::core::FiniteElementStateAccessorFeature::copy_velocity_to (
+    backend::BufferView buffer_view,
+    IndexT vertex_offset=0,
+    SizeT vertex_count=~0ull
+) const
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `buffer_view` The destination buffer view to copy velocity data into. 
+* `vertex_offset` The starting vertex index in finite element system. 
+* `vertex_count` The number of vertices to include, if vertex\_count == ~0ull, all vertices from vertex\_offset to the end will be included. 
 
 
 

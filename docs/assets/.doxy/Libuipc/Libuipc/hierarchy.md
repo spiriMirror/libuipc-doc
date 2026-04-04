@@ -101,6 +101,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**uipc::core::Object**](classuipc_1_1core_1_1Object.md) 
 * **class** [**uipc::core::IObjectCollection**](classuipc_1_1core_1_1IObjectCollection.md)     
     * **class** [**uipc::core::ObjectCollection**](classuipc_1_1core_1_1ObjectCollection.md) 
+* **class** [**uipc::core::ISanityCheckContext**](classuipc_1_1core_1_1ISanityCheckContext.md) 
 * **class** [**uipc::core::ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md) 
 * **class** [**uipc::core::ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) 
 * **class** [**uipc::core::Object::CGeometries**](classuipc_1_1core_1_1Object_1_1CGeometries.md) 

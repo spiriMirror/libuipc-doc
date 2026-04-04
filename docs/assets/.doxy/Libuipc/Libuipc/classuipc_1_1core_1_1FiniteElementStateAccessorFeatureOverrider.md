@@ -52,7 +52,9 @@
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**do\_copy\_from**](#function-do_copy_from) (const [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & state\_geo) = 0<br> |
+| virtual void | [**do\_copy\_position\_to**](#function-do_copy_position_to) ([**backend::BufferView**](classuipc_1_1backend_1_1BufferView.md) buffer\_view, IndexT vertex\_offset, SizeT vertex\_count) = 0<br> |
 | virtual void | [**do\_copy\_to**](#function-do_copy_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & state\_geo) = 0<br> |
+| virtual void | [**do\_copy\_velocity\_to**](#function-do_copy_velocity_to) ([**backend::BufferView**](classuipc_1_1backend_1_1BufferView.md) buffer\_view, IndexT vertex\_offset, SizeT vertex\_count) = 0<br> |
 | virtual [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**do\_create\_geometry**](#function-do_create_geometry) (IndexT vertex\_offset, SizeT vertex\_count) <br> |
 | virtual SizeT | [**get\_vertex\_count**](#function-get_vertex_count) () = 0<br> |
 | virtual  | [**~FiniteElementStateAccessorFeatureOverrider**](#function-finiteelementstateaccessorfeatureoverrider) () = default<br> |
@@ -104,11 +106,45 @@ virtual void uipc::core::FiniteElementStateAccessorFeatureOverrider::do_copy_fro
 
 
 
+### function do\_copy\_position\_to 
+
+```C++
+virtual void uipc::core::FiniteElementStateAccessorFeatureOverrider::do_copy_position_to (
+    backend::BufferView buffer_view,
+    IndexT vertex_offset,
+    SizeT vertex_count
+) = 0
+```
+
+
+
+
+<hr>
+
+
+
 ### function do\_copy\_to 
 
 ```C++
 virtual void uipc::core::FiniteElementStateAccessorFeatureOverrider::do_copy_to (
     geometry::SimplicialComplex & state_geo
+) = 0
+```
+
+
+
+
+<hr>
+
+
+
+### function do\_copy\_velocity\_to 
+
+```C++
+virtual void uipc::core::FiniteElementStateAccessorFeatureOverrider::do_copy_velocity_to (
+    backend::BufferView buffer_view,
+    IndexT vertex_offset,
+    SizeT vertex_count
 ) = 0
 ```
 

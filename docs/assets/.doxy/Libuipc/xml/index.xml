@@ -195,6 +195,8 @@
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a24f99d4531b49db15230e9992a17f08c" kind="function"><name>create_geometry</name></member>
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1afa94592f2daef52ce506df0dcacf4116" kind="function"><name>copy_from</name></member>
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a8b77310b1f1f10a9f064be548a8ec967" kind="function"><name>copy_to</name></member>
+    <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1adff3552de4130724a4d60bb401e5a968" kind="function"><name>copy_transform_to</name></member>
+    <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a5608a45015ac6a2549be8e126ce1290e" kind="function"><name>copy_velocity_to</name></member>
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a9a8f1b95b681c34788fef26d2bc4276f" kind="function"><name>get_name</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider" kind="class"><name>uipc::core::AffineBodyStateAccessorFeatureOverrider</name>
@@ -204,6 +206,8 @@
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1ad9bdc2ad14fb3386ecca7460951f5926" kind="function"><name>do_create_geometry</name></member>
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a4f5a583bed226c9b964bf1bd5ee987c1" kind="function"><name>do_copy_from</name></member>
     <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a55edaf190aa2b07d3cab53ff31ed5222" kind="function"><name>do_copy_to</name></member>
+    <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a1712cf1f4681c2b3a2a5b2dcbe737aea" kind="function"><name>do_copy_transform_to</name></member>
+    <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeatureOverrider_1a75bda15706e502eb9e626070ec1d69ea" kind="function"><name>do_copy_velocity_to</name></member>
   </compound>
   <compound refid="structuipc_1_1always__false" kind="struct"><name>uipc::always_false</name>
   </compound>
@@ -747,6 +751,7 @@
     <member refid="classuipc_1_1core_1_1internal_1_1Engine_1a4abe02865475c0e89ff817e593f0fe74" kind="function"><name>workspace</name></member>
     <member refid="classuipc_1_1core_1_1internal_1_1Engine_1a72751bc58fdc95c9f44b422dfaf53866" kind="function"><name>status</name></member>
     <member refid="classuipc_1_1core_1_1internal_1_1Engine_1adc379c68241bf1ce7604ddfe00ea000e" kind="function"><name>features</name></member>
+    <member refid="classuipc_1_1core_1_1internal_1_1Engine_1aab7fbee1938fce029c1e1eeca81207b8" kind="function"><name>insert_sanity_checkers</name></member>
     <member refid="classuipc_1_1core_1_1internal_1_1Engine_1a9a72584a1a9e5d5af6aae46da4c06609" kind="function"><name>to_json</name></member>
     <member refid="classuipc_1_1core_1_1internal_1_1Engine_1a3b8e8fbb0b8e1a8930accfc7db8ab688" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1core_1_1internal_1_1Engine_1ae4e350279d590b5f2155ccc046d29a38" kind="function"><name>init</name></member>
@@ -837,6 +842,8 @@
     <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a2924ee483b91be95039a619ca20c2a0e" kind="function"><name>create_geometry</name></member>
     <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1abf061e5c7d71629cddafabab2ecc3a47" kind="function"><name>copy_from</name></member>
     <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a974a6ff7b58e61e025fedf6f777200d1" kind="function"><name>copy_to</name></member>
+    <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a858797bdd1d39f71fa1a1f5981c12e84" kind="function"><name>copy_position_to</name></member>
+    <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1a50bf67232cae92eff0cbb5fd54d062a7" kind="function"><name>copy_velocity_to</name></member>
     <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeature_1abad5c7356cfd457c31f486928a5d654b" kind="function"><name>get_name</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeatureOverrider" kind="class"><name>uipc::core::FiniteElementStateAccessorFeatureOverrider</name>
@@ -845,6 +852,8 @@
     <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeatureOverrider_1a0326462b58e1fb247831b5a29afa2575" kind="function"><name>do_create_geometry</name></member>
     <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeatureOverrider_1a04a5c199218689bcb312f1d1cc31a006" kind="function"><name>do_copy_from</name></member>
     <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeatureOverrider_1a16b13c631a91322e8dd1141acc80c36d" kind="function"><name>do_copy_to</name></member>
+    <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeatureOverrider_1ad6070d0671e2fdcb6477ee68c967aec8" kind="function"><name>do_copy_position_to</name></member>
+    <member refid="classuipc_1_1core_1_1FiniteElementStateAccessorFeatureOverrider_1aaba67fda6171906e0bfb033abb431c7e" kind="function"><name>do_copy_velocity_to</name></member>
   </compound>
   <compound refid="structfmt_1_1formatter_3_01uipc_1_1core_1_1Animation_01_4" kind="struct"><name>fmt::formatter&lt; uipc::core::Animation &gt;</name>
     <member refid="structfmt_1_1formatter_3_01uipc_1_1core_1_1Animation_01_4_1abb0f7cb7b887c2fcc4931a61c25561a2" kind="function"><name>format</name></member>
@@ -1243,6 +1252,7 @@
     <member refid="classuipc_1_1core_1_1IEngine_1a9e6718506f4895c1790a556965667674" kind="function"><name>frame</name></member>
     <member refid="classuipc_1_1core_1_1IEngine_1ac0d57e656ac531af7a8edc08057a7a50" kind="function"><name>status</name></member>
     <member refid="classuipc_1_1core_1_1IEngine_1af17b0f76571078cb8dabe9128d6f5dbf" kind="function"><name>features</name></member>
+    <member refid="classuipc_1_1core_1_1IEngine_1a7b5660ce5c51d5f039a79898a7af16b0" kind="function"><name>insert_sanity_checkers</name></member>
     <member refid="classuipc_1_1core_1_1IEngine_1ac62029eb3b523786f164b6c105ca31a5" kind="function"><name>do_init</name></member>
     <member refid="classuipc_1_1core_1_1IEngine_1ab918424dae6237c0a5eca28ce5d85578" kind="function"><name>do_advance</name></member>
     <member refid="classuipc_1_1core_1_1IEngine_1ac070acb0eb9ae2dcc9fa913b1c27dd39" kind="function"><name>do_sync</name></member>
@@ -1253,6 +1263,7 @@
     <member refid="classuipc_1_1core_1_1IEngine_1a53c83d514071942dc4994da9fd30dd88" kind="function"><name>get_frame</name></member>
     <member refid="classuipc_1_1core_1_1IEngine_1a771c23c7e58d4646bbad5dcb7e425166" kind="function"><name>get_status</name></member>
     <member refid="classuipc_1_1core_1_1IEngine_1a124250ef36ee360fcd8b65156b6c347f" kind="function"><name>get_features</name></member>
+    <member refid="classuipc_1_1core_1_1IEngine_1a44c738362a009ac8f6d2b12eb59b31f0" kind="function"><name>do_insert_sanity_checkers</name></member>
   </compound>
   <compound refid="classuipc_1_1core_1_1IFeature" kind="class"><name>uipc::core::IFeature</name>
     <member refid="classuipc_1_1core_1_1IFeature_1ab047cf9e1f132a4c7b86b5c31ad04c91" kind="friend"><name>FeatureCollection</name></member>
@@ -1360,6 +1371,17 @@
   </compound>
   <compound refid="structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4" kind="struct"><name>uipc::is_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;</name>
   </compound>
+  <compound refid="classuipc_1_1core_1_1ISanityCheckContext" kind="class"><name>uipc::core::ISanityCheckContext</name>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1a75aa3af117b03ce23d693c223a10f934" kind="function"><name>~ISanityCheckContext</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1a11cd2f29e4e07c9a646a50b440e344fa" kind="function"><name>scene_simplicial_surface</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1a6e1baaa75380d4bf8fb4723b23831cf3" kind="function"><name>contact_tabular</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1a93ff403921d3d91cbedfc6da8c26f306" kind="function"><name>subscene_tabular</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1a0afd74c0edc85394b84b9bf022f40240" kind="function"><name>workspace</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1abec9a4ea3632676a7e0facd3c8ea2aab" kind="function"><name>find_object</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1a12c950822c648ff397ed809d00a17ff5" kind="function"><name>geometries</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1a62f455cfbaa2bb5941da54fa959b7ca8" kind="function"><name>find_geometry</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckContext_1ab113e594e552abded836671bceeb73a3" kind="function"><name>config</name></member>
+  </compound>
   <compound refid="classuipc_1_1core_1_1ISanityChecker" kind="class"><name>uipc::core::ISanityChecker</name>
     <member refid="classuipc_1_1core_1_1ISanityChecker_1a75fcb119c1d11d87cb46afd16459cb7a" kind="function"><name>~ISanityChecker</name></member>
     <member refid="classuipc_1_1core_1_1ISanityChecker_1a6e59f7da9c769bad83fd6eff0a9fd169" kind="function"><name>build</name></member>
@@ -1373,7 +1395,9 @@
   <compound refid="classuipc_1_1core_1_1ISanityCheckerCollection" kind="class"><name>uipc::core::ISanityCheckerCollection</name>
     <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1ae877ae3f74adaf1a96f535ab70b2245d" kind="function"><name>~ISanityCheckerCollection</name></member>
     <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1a4a05b94d329b70e5f337f7d6ea78c51f" kind="function"><name>build</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1a76bc20384bcc01225a82db5614dece23" kind="function"><name>insert</name></member>
     <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1aa7b0393e71314c87391d5d39d7c575ec" kind="function"><name>check</name></member>
+    <member refid="classuipc_1_1core_1_1ISanityCheckerCollection_1a0bea805ca13724303686538d34a6d1c3" kind="function"><name>context</name></member>
   </compound>
   <compound refid="classuipc_1_1JsonIOError" kind="class"><name>uipc::JsonIOError</name>
     <member refid="classuipc_1_1JsonIOError_1afa08db1175c0345cda3dbc37c76b1c1e" kind="function"><name>Exception</name></member>
@@ -1638,8 +1662,8 @@
     <member refid="classuipc_1_1core_1_1SanityChecker_1a1d5bfbad7fca0e30f0373dc66929c8c6" kind="variable"><name>m_warns</name></member>
     <member refid="classuipc_1_1core_1_1SanityChecker_1a51c3100144ea6b37a4992a0bd6e7b6ce" kind="variable"><name>m_infos</name></member>
     <member refid="classuipc_1_1core_1_1SanityChecker_1ab20066b73ec40ea8a7793922e12e6a25" kind="variable"><name>m_scene</name></member>
-    <member refid="classuipc_1_1core_1_1SanityChecker_1ae5e92666b10f965a0f500ae7dc7cbeea" kind="variable"><name>m_workspace</name></member>
-    <member refid="classuipc_1_1core_1_1SanityChecker_1a72ad9061363a65470e9bd100bdf2b84b" kind="function"><name>SanityChecker</name></member>
+    <member refid="classuipc_1_1core_1_1SanityChecker_1a20ef8e14c86d662db0f689c6aa098e0d" kind="variable"><name>m_engine</name></member>
+    <member refid="classuipc_1_1core_1_1SanityChecker_1a6565913a3e35989651d05fb2a8601857" kind="function"><name>SanityChecker</name></member>
     <member refid="classuipc_1_1core_1_1SanityChecker_1ae3833d3cb42bee0251c1adfc17645407" kind="function"><name>~SanityChecker</name></member>
     <member refid="classuipc_1_1core_1_1SanityChecker_1a139fc594fcfc3891e12e58fba661f01b" kind="function"><name>check</name></member>
     <member refid="classuipc_1_1core_1_1SanityChecker_1a31eba484d078eb8dadb21405c28ff2e2" kind="function"><name>report</name></member>

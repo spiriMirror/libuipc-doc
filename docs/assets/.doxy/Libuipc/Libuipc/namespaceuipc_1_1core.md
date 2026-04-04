@@ -58,6 +58,7 @@
 | class | [**IFeature**](classuipc_1_1core_1_1IFeature.md) <br> |
 | class | [**IObject**](classuipc_1_1core_1_1IObject.md) <br> |
 | class | [**IObjectCollection**](classuipc_1_1core_1_1IObjectCollection.md) <br> |
+| class | [**ISanityCheckContext**](classuipc_1_1core_1_1ISanityCheckContext.md) <br> |
 | class | [**ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md) <br> |
 | class | [**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) <br> |
 | class | [**Object**](classuipc_1_1core_1_1Object.md) <br> |

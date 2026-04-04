@@ -53,6 +53,8 @@
 | ---: | :--- |
 | virtual void | [**build**](#function-build) ([**core::internal::Scene**](classuipc_1_1core_1_1internal_1_1Scene.md) & s) = 0<br> |
 | virtual SanityCheckResult | [**check**](#function-check) ([**SanityCheckMessageCollection**](classuipc_1_1core_1_1SanityCheckMessageCollection.md) & msg) const = 0<br> |
+| virtual [**ISanityCheckContext**](classuipc_1_1core_1_1ISanityCheckContext.md) & | [**context**](#function-context) () = 0<br> |
+| virtual void | [**insert**](#function-insert) (S&lt; [**ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md) &gt; checker) = 0<br> |
 | virtual  | [**~ISanityCheckerCollection**](#function-isanitycheckercollection) () = default<br> |
 
 
@@ -108,6 +110,34 @@ virtual void uipc::core::ISanityCheckerCollection::build (
 virtual SanityCheckResult uipc::core::ISanityCheckerCollection::check (
     SanityCheckMessageCollection & msg
 ) const = 0
+```
+
+
+
+
+<hr>
+
+
+
+### function context 
+
+```C++
+virtual ISanityCheckContext & uipc::core::ISanityCheckerCollection::context () = 0
+```
+
+
+
+
+<hr>
+
+
+
+### function insert 
+
+```C++
+virtual void uipc::core::ISanityCheckerCollection::insert (
+    S< ISanityChecker > checker
+) = 0
 ```
 
 

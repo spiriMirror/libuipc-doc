@@ -37,12 +37,14 @@
 | namespace | [**backend**](namespaceuipc_1_1backend.md) <br> |
 | namespace | [**core**](namespaceuipc_1_1core.md) <br> |
 | namespace | [**internal**](namespaceuipc_1_1core_1_1internal.md) <br> |
+| namespace | [**geometry**](namespaceuipc_1_1geometry.md) <br> |
 
 
 ## Classes
 
 | Type | Name |
 | ---: | :--- |
+| class | [**ISanityCheckContext**](classuipc_1_1core_1_1ISanityCheckContext.md) <br> |
 | class | [**ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md) <br> |
 | class | [**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) <br> |
 | class | [**SanityCheckMessage**](classuipc_1_1core_1_1SanityCheckMessage.md) <br> |

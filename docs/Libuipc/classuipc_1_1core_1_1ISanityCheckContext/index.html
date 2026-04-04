@@ -19,7 +19,7 @@
     
     
       
-        <title>Class uipc::core::ISanityCheckerCollection - Libuipc Documentation</title>
+        <title>Class uipc::core::ISanityCheckContext - Libuipc Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class-uipccoreisanitycheckercollection" class="md-skip">
+        <a href="#class-uipccoreisanitycheckcontext" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Class uipc::core::ISanityCheckerCollection
+              Class uipc::core::ISanityCheckContext
             
           </span>
         </div>
@@ -2897,10 +2897,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-build" class="md-nav__link">
+  <a href="#function-config" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function build
+        function config
       
     </span>
   </a>
@@ -2908,10 +2908,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-check" class="md-nav__link">
+  <a href="#function-contact_tabular" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function check
+        function contact_tabular
       
     </span>
   </a>
@@ -2919,10 +2919,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-context" class="md-nav__link">
+  <a href="#function-find_geometry" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function context
+        function find_geometry
       
     </span>
   </a>
@@ -2930,10 +2930,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-insert" class="md-nav__link">
+  <a href="#function-find_object" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function insert
+        function find_object
       
     </span>
   </a>
@@ -2941,10 +2941,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-isanitycheckercollection" class="md-nav__link">
+  <a href="#function-geometries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function ~ISanityCheckerCollection
+        function geometries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-scene_simplicial_surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function scene_simplicial_surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-subscene_tabular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function subscene_tabular
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function workspace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-isanitycheckcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function ~ISanityCheckContext
       
     </span>
   </a>
@@ -2973,8 +3017,8 @@
 
 
 
-<div><h1 id="class-uipccoreisanitycheckercollection">Class uipc::core::ISanityCheckerCollection</h1>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1core/"><strong>core</strong></a> <strong>&gt;</strong> <a href="./"><strong>ISanityCheckerCollection</strong></a></p>
+<div><h1 id="class-uipccoreisanitycheckcontext">Class uipc::core::ISanityCheckContext</h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc/"><strong>uipc</strong></a> <strong>&gt;</strong> <a href="../namespaceuipc_1_1core/"><strong>core</strong></a> <strong>&gt;</strong> <a href="./"><strong>ISanityCheckContext</strong></a></p>
 <h2 id="public-functions">Public Functions</h2>
 <table>
 <thead>
@@ -2985,56 +3029,90 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-build"><strong>build</strong></a> (<a href="../classuipc_1_1core_1_1internal_1_1Scene/"><strong>core::internal::Scene</strong></a> &amp; s) = 0<br></td>
+<td style="text-align: right;">virtual const <a href="../classuipc_1_1geometry_1_1AttributeCollection/"><strong>geometry::AttributeCollection</strong></a> &amp;</td>
+<td style="text-align: left;"><a href="#function-config"><strong>config</strong></a> () const = 0<br></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual SanityCheckResult</td>
-<td style="text-align: left;"><a href="#function-check"><strong>check</strong></a> (<a href="../classuipc_1_1core_1_1SanityCheckMessageCollection/"><strong>SanityCheckMessageCollection</strong></a> &amp; msg) const = 0<br></td>
+<td style="text-align: right;">virtual const <a href="../classuipc_1_1core_1_1ContactTabular/"><strong>ContactTabular</strong></a> &amp;</td>
+<td style="text-align: left;"><a href="#function-contact_tabular"><strong>contact_tabular</strong></a> () const = 0<br></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual <a href="../classuipc_1_1core_1_1ISanityCheckContext/"><strong>ISanityCheckContext</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-context"><strong>context</strong></a> () = 0<br></td>
+<td style="text-align: right;">virtual S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlot/"><strong>geometry::GeometrySlot</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#function-find_geometry"><strong>find_geometry</strong></a> (IndexT id) const = 0<br></td>
 </tr>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-insert"><strong>insert</strong></a> (S&lt; <a href="../classuipc_1_1core_1_1ISanityChecker/"><strong>ISanityChecker</strong></a> &gt; checker) = 0<br></td>
+<td style="text-align: right;">virtual S&lt; const <a href="../classuipc_1_1core_1_1Object/"><strong>Object</strong></a> &gt;</td>
+<td style="text-align: left;"><a href="#function-find_object"><strong>find_object</strong></a> (IndexT id) const = 0<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual span&lt; S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlot/"><strong>geometry::GeometrySlot</strong></a> &gt; &gt;</td>
+<td style="text-align: left;"><a href="#function-geometries"><strong>geometries</strong></a> () const = 0<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual const <a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp;</td>
+<td style="text-align: left;"><a href="#function-scene_simplicial_surface"><strong>scene_simplicial_surface</strong></a> () const = 0<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual const <a href="../classuipc_1_1core_1_1SubsceneTabular/"><strong>SubsceneTabular</strong></a> &amp;</td>
+<td style="text-align: left;"><a href="#function-subscene_tabular"><strong>subscene_tabular</strong></a> () const = 0<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual std::string_view</td>
+<td style="text-align: left;"><a href="#function-workspace"><strong>workspace</strong></a> () const = 0<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
-<td style="text-align: left;"><a href="#function-isanitycheckercollection"><strong>~ISanityCheckerCollection</strong></a> () = default<br></td>
+<td style="text-align: left;"><a href="#function-isanitycheckcontext"><strong>~ISanityCheckContext</strong></a> () = default<br></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-functions-documentation">Public Functions Documentation</h2>
-<h3 id="function-build">function build</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckerCollection</span><span class="o">::</span><span class="n">build</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">core</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<h3 id="function-config">function config</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">AttributeCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-check">function check</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">SanityCheckResult</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckerCollection</span><span class="o">::</span><span class="n">check</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">SanityCheckMessageCollection</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<h3 id="function-contact_tabular">function contact_tabular</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ContactTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">contact_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-context">function context</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">ISanityCheckContext</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckerCollection</span><span class="o">::</span><span class="n">context</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<h3 id="function-find_geometry">function find_geometry</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">find_geometry</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">id</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-insert">function insert</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckerCollection</span><span class="o">::</span><span class="n">insert</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">ISanityChecker</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">checker</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<h3 id="function-find_object">function find_object</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">find_object</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">id</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-isanitycheckercollection">function ~ISanityCheckerCollection</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckerCollection</span><span class="o">::~</span><span class="n">ISanityCheckerCollection</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
+<h3 id="function-geometries">function geometries</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-scene_simplicial_surface">function scene_simplicial_surface</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">scene_simplicial_surface</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-subscene_tabular">function subscene_tabular</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">SubsceneTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-workspace">function workspace</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::</span><span class="n">workspace</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</span></code></pre></div>
+<hr>
+
+<h3 id="function-isanitycheckcontext">function ~ISanityCheckContext</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ISanityCheckContext</span><span class="o">::~</span><span class="n">ISanityCheckContext</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span>
 </span></code></pre></div>
 <hr>
 

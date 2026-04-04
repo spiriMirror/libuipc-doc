@@ -56,6 +56,7 @@
 |  const [**FeatureCollection**](classuipc_1_1core_1_1FeatureCollection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
 |  void | [**init**](#function-init) ([**internal::World**](classuipc_1_1core_1_1internal_1_1World.md) & w) <br> |
+|  void | [**insert\_sanity\_checkers**](#function-insert_sanity_checkers) ([**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) & collection) <br> |
 |  bool | [**recover**](#function-recover) (SizeT dst\_frame) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1EngineStatusCollection.md) & | [**status**](#function-status) () <br> |
@@ -93,6 +94,7 @@
 | virtual void | [**do\_advance**](#function-do_advance) () = 0<br> |
 | virtual bool | [**do\_dump**](#function-do_dump) () <br> |
 | virtual void | [**do\_init**](#function-do_init) ([**internal::World**](classuipc_1_1core_1_1internal_1_1World.md) &) = 0<br> |
+| virtual void | [**do\_insert\_sanity\_checkers**](#function-do_insert_sanity_checkers) ([**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) & collection) <br> |
 | virtual bool | [**do\_recover**](#function-do_recover) (SizeT dst\_frame) <br> |
 | virtual void | [**do\_retrieve**](#function-do_retrieve) () = 0<br> |
 | virtual void | [**do\_sync**](#function-do_sync) () = 0<br> |
@@ -166,6 +168,21 @@ SizeT uipc::core::IEngine::frame () const
 ```C++
 void uipc::core::IEngine::init (
     internal::World & w
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function insert\_sanity\_checkers 
+
+```C++
+void uipc::core::IEngine::insert_sanity_checkers (
+    ISanityCheckerCollection & collection
 ) 
 ```
 
@@ -290,6 +307,21 @@ virtual bool uipc::core::IEngine::do_dump ()
 virtual void uipc::core::IEngine::do_init (
     internal::World &
 ) = 0
+```
+
+
+
+
+<hr>
+
+
+
+### function do\_insert\_sanity\_checkers 
+
+```C++
+virtual void uipc::core::IEngine::do_insert_sanity_checkers (
+    ISanityCheckerCollection & collection
+) 
 ```
 
 

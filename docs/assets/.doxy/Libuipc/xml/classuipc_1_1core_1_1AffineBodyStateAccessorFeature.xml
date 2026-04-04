@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="22" column="39" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="22" bodyend="-1"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="26" column="39" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="26" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="56" column="7" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="56" bodyend="-1"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="82" column="7" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="82" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="24" column="14"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="28" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a4bca40140e383e3b0752f87b79754d27" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>SizeT</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="29" column="11"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="33" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a24f99d4531b49db15230e9992a17f08c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref></type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="37" column="33"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="41" column="33"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1afa94592f2daef52ce506df0dcacf4116" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="45" column="10"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="49" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a8b77310b1f1f10a9f064be548a8ec967" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,117 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="52" column="10"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="56" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1adff3552de4130724a4d60bb401e5a968" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::AffineBodyStateAccessorFeature::copy_transform_to</definition>
+        <argsstring>(backend::BufferView buffer_view, IndexT body_offset=0, SizeT body_count=~0ull) const</argsstring>
+        <name>copy_transform_to</name>
+        <qualifiedname>uipc::core::AffineBodyStateAccessorFeature::copy_transform_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>buffer_view</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>body_offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>body_count</declname>
+          <defval>~0ull</defval>
+        </param>
+        <briefdescription>
+<para>Copy transform data (Matrix4x4) for the specified body range into an externally-owned buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer_view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination buffer view to copy transform data into. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting body index in affine body system. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bodies to include, if body_count == ~0ull, all bodies from body_offset to the end will be included. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="65" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a5608a45015ac6a2549be8e126ce1290e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::AffineBodyStateAccessorFeature::copy_velocity_to</definition>
+        <argsstring>(backend::BufferView buffer_view, IndexT body_offset=0, SizeT body_count=~0ull) const</argsstring>
+        <name>copy_velocity_to</name>
+        <qualifiedname>uipc::core::AffineBodyStateAccessorFeature::copy_velocity_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1backend_1_1BufferView" kindref="compound">backend::BufferView</ref></type>
+          <declname>buffer_view</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>body_offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>SizeT</type>
+          <declname>body_count</declname>
+          <defval>~0ull</defval>
+        </param>
+        <briefdescription>
+<para>Copy velocity data (Matrix4x4) for the specified body range into an externally-owned buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer_view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The destination buffer view to copy velocity data into. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body_offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting body index in affine body system. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>body_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bodies to include, if body_count == ~0ull, all bodies from body_offset to the end will be included. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="76" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -186,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="55" column="48"/>
+        <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="81" column="48"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -229,12 +339,14 @@
         <link refid="classuipc_1_1core_1_1IFeature"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="19" column="1" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="20" bodyend="57"/>
+    <location file="include/uipc/core/affine_body_state_accessor_feature.h" line="23" column="1" bodyfile="include/uipc/core/affine_body_state_accessor_feature.h" bodystart="24" bodyend="83"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a603d071f1d5cb7b4bc6451e6d8fbb5aa" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>AffineBodyStateAccessorFeature</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a4bca40140e383e3b0752f87b79754d27" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>body_count</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1afa94592f2daef52ce506df0dcacf4116" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>copy_from</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a8b77310b1f1f10a9f064be548a8ec967" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>copy_to</name></member>
+      <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1adff3552de4130724a4d60bb401e5a968" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>copy_transform_to</name></member>
+      <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a5608a45015ac6a2549be8e126ce1290e" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>copy_velocity_to</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a24f99d4531b49db15230e9992a17f08c" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>create_geometry</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1afcb25872a17a5d11e64ad9c47bca987e" prot="public" virt="non-virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>FeatureName</name></member>
       <member refid="classuipc_1_1core_1_1AffineBodyStateAccessorFeature_1a9a8f1b95b681c34788fef26d2bc4276f" prot="private" virt="virtual"><scope>uipc::core::AffineBodyStateAccessorFeature</scope><name>get_name</name></member>
