@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classuipc_1_1constitution_1_1FiniteElementExternalForce" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>uipc::constitution::FiniteElementExternalForce</compoundname>
+    <basecompoundref refid="classuipc_1_1constitution_1_1IConstitution" prot="public" virt="non-virtual">uipc::constitution::IConstitution</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a55122b9d06d7607b4176093276d817c8" prot="private" static="no">
+        <type><ref refid="classuipc_1_1constitution_1_1IConstitution" kindref="compound">IConstitution</ref></type>
+        <definition>using uipc::constitution::FiniteElementExternalForce::Base =  IConstitution</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>uipc::constitution::FiniteElementExternalForce::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="10" column="5" bodyfile="include/uipc/constitution/finite_element_external_force.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a6891154c28a2d004203aac1fd5455358" prot="private" static="no" mutable="no">
+        <type>Json</type>
+        <definition>Json uipc::constitution::FiniteElementExternalForce::m_config</definition>
+        <argsstring></argsstring>
+        <name>m_config</name>
+        <qualifiedname>uipc::constitution::FiniteElementExternalForce::m_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="29" column="10" bodyfile="include/uipc/constitution/finite_element_external_force.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a43a43ac4a4b8b8831fe23a24f403e439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::FiniteElementExternalForce::FiniteElementExternalForce</definition>
+        <argsstring>(const Json &amp;config=default_config())</argsstring>
+        <name>FiniteElementExternalForce</name>
+        <qualifiedname>uipc::constitution::FiniteElementExternalForce::FiniteElementExternalForce</qualifiedname>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>default_config()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1ad3c65c4db5791d06ac409988ff46dc8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>uipc::constitution::FiniteElementExternalForce::~FiniteElementExternalForce</definition>
+        <argsstring>()</argsstring>
+        <name>~FiniteElementExternalForce</name>
+        <qualifiedname>uipc::constitution::FiniteElementExternalForce::~FiniteElementExternalForce</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="14" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a645a3a29fcb98300743bc8cf6ddd2b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::FiniteElementExternalForce::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, const Vector3 &amp;force)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::FiniteElementExternalForce::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>const Vector3 &amp;</type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+<para>Apply external force (3D) to finite element vertices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SimplicialComplex representing finite element geometry </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>3D force vector applied uniformly to all vertices </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="21" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a3befa8fb0b10686e1d2ab0bc222f2180" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::constitution::FiniteElementExternalForce::default_config</definition>
+        <argsstring>()</argsstring>
+        <name>default_config</name>
+        <qualifiedname>uipc::constitution::FiniteElementExternalForce::default_config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="23" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a917f1699d797d38abc4de8bac5381093" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="virtual">
+        <type>U64</type>
+        <definition>virtual U64 uipc::constitution::FiniteElementExternalForce::get_uid</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>get_uid</name>
+        <qualifiedname>uipc::constitution::FiniteElementExternalForce::get_uid</qualifiedname>
+        <reimplements refid="classuipc_1_1constitution_1_1IConstitution_1ac17ea7e97fecab5d801aade4815d2ee3">get_uid</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="26" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>uipc::constitution::FiniteElementExternalForce</label>
+        <link refid="classuipc_1_1constitution_1_1FiniteElementExternalForce"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>uipc::constitution::FiniteElementExternalForce</label>
+        <link refid="classuipc_1_1constitution_1_1FiniteElementExternalForce"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uipc::constitution::IConstitution</label>
+        <link refid="classuipc_1_1constitution_1_1IConstitution"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/uipc/constitution/finite_element_external_force.h" line="8" column="1" bodyfile="include/uipc/constitution/finite_element_external_force.h" bodystart="9" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a645a3a29fcb98300743bc8cf6ddd2b43" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a55122b9d06d7607b4176093276d817c8" prot="private" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a3befa8fb0b10686e1d2ab0bc222f2180" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>default_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a43a43ac4a4b8b8831fe23a24f403e439" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>FiniteElementExternalForce</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a917f1699d797d38abc4de8bac5381093" prot="protected" virt="virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>get_uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a6891154c28a2d004203aac1fd5455358" prot="private" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a707115b18b4f2f6dfbdb10907751dfaa" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>name</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a45bcb9b54bd6e4b7839b91131dac3479" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>type</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a0a197b0495a57b4576fe7283640e586a" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>uid</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1ad6d454b0c68798e0e42c768c303a81fe" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>uid_info</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1ad3c65c4db5791d06ac409988ff46dc8c" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>~FiniteElementExternalForce</name></member>
+      <member refid="classuipc_1_1constitution_1_1IConstitution_1a85c4cecb41e89df19620224c251952ab" prot="public" virt="virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>~IConstitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

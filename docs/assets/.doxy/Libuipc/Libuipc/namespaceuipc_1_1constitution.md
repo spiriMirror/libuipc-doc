@@ -51,6 +51,7 @@
 | class | [**Empty**](classuipc_1_1constitution_1_1Empty.md) <br> |
 | class | [**ExternalArticulationConstraint**](classuipc_1_1constitution_1_1ExternalArticulationConstraint.md) <br>_External articulation constraint for incorporating external kinetic energy into the IPC system._  |
 | class | [**FiniteElementConstitution**](classuipc_1_1constitution_1_1FiniteElementConstitution.md) <br> |
+| class | [**FiniteElementExternalForce**](classuipc_1_1constitution_1_1FiniteElementExternalForce.md) <br> |
 | class | [**FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1FiniteElementExtraConstitution.md) <br> |
 | class | [**HookeanSpring**](classuipc_1_1constitution_1_1HookeanSpring.md) <br> |
 | class | [**IConstitution**](classuipc_1_1constitution_1_1IConstitution.md) <br> |

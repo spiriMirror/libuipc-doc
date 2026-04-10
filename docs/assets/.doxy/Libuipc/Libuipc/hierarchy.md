@@ -53,6 +53,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::constitution::Particle**](classuipc_1_1constitution_1_1Particle.md) 
         * **class** [**uipc::constitution::StableNeoHookean**](classuipc_1_1constitution_1_1StableNeoHookean.md) 
         * **class** [**uipc::constitution::StrainLimitingBaraffWitkinShell**](classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell.md) 
+    * **class** [**uipc::constitution::FiniteElementExternalForce**](classuipc_1_1constitution_1_1FiniteElementExternalForce.md) 
     * **class** [**uipc::constitution::FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1FiniteElementExtraConstitution.md)     
         * **class** [**uipc::constitution::DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md) 
         * **class** [**uipc::constitution::KirchhoffRodBending**](classuipc_1_1constitution_1_1KirchhoffRodBending.md) 

@@ -6,6 +6,7 @@
     <derivedcompoundref refid="classuipc_1_1constitution_1_1AffineBodyExternalBodyForce" prot="public" virt="non-virtual">uipc::constitution::AffineBodyExternalBodyForce</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1Constraint" prot="public" virt="non-virtual">uipc::constitution::Constraint</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1FiniteElementConstitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementConstitution</derivedcompoundref>
+    <derivedcompoundref refid="classuipc_1_1constitution_1_1FiniteElementExternalForce" prot="public" virt="non-virtual">uipc::constitution::FiniteElementExternalForce</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution" prot="public" virt="non-virtual">uipc::constitution::FiniteElementExtraConstitution</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1InterAffineBodyConstitution" prot="public" virt="non-virtual">uipc::constitution::InterAffineBodyConstitution</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution" prot="public" virt="non-virtual">uipc::constitution::InterAffineBodyExtraConstitution</derivedcompoundref>
@@ -108,6 +109,7 @@
         <reimplementedby refid="classuipc_1_1constitution_1_1ARAP_1aa38d637a1b8828f9e349e9cf5ddfffdf">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1Empty_1a665bb70fe25568572e44d9f79c375929">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1ExternalArticulationConstraint_1a73fa172511936f0fc8d9e2fcf746ad81">get_uid</reimplementedby>
+        <reimplementedby refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a917f1699d797d38abc4de8bac5381093">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1HookeanSpring_1afab06d9c5f84dcd6ab714ce667b10d32">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1NeoHookeanShell_1a9a0e349a728f67681b9e233dff9c435b">get_uid</reimplementedby>
         <reimplementedby refid="classuipc_1_1constitution_1_1Particle_1a08e6bb94865f39cb5d5c94e04bfa6977">get_uid</reimplementedby>
@@ -167,16 +169,16 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="30">
+      <node id="31">
         <label>uipc::constitution::AffineBodyFixedJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyFixedJoint"/>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="30" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="31">
+      <node id="32">
         <label>uipc::constitution::AffineBodyPrismaticJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJoint"/>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="30" relation="public-inheritance">
         </childnode>
       </node>
       <node id="9">
@@ -185,16 +187,16 @@
         <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="35">
+      <node id="36">
         <label>uipc::constitution::AffineBodyPrismaticJointLimit</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyPrismaticJointLimit"/>
-        <childnode refid="34" relation="public-inheritance">
+        <childnode refid="35" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="32">
+      <node id="33">
         <label>uipc::constitution::AffineBodyRevoluteJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJoint"/>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="30" relation="public-inheritance">
         </childnode>
       </node>
       <node id="10">
@@ -203,10 +205,10 @@
         <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="36">
+      <node id="37">
         <label>uipc::constitution::AffineBodyRevoluteJointLimit</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodyRevoluteJointLimit"/>
-        <childnode refid="34" relation="public-inheritance">
+        <childnode refid="35" relation="public-inheritance">
         </childnode>
       </node>
       <node id="3">
@@ -221,10 +223,10 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="33">
+      <node id="34">
         <label>uipc::constitution::AffineBodySphericalJoint</label>
         <link refid="classuipc_1_1constitution_1_1AffineBodySphericalJoint"/>
-        <childnode refid="29" relation="public-inheritance">
+        <childnode refid="30" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6">
@@ -233,10 +235,10 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="25">
+      <node id="26">
         <label>uipc::constitution::DiscreteShellBending</label>
         <link refid="classuipc_1_1constitution_1_1DiscreteShellBending"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
       <node id="18">
@@ -258,6 +260,12 @@
         </childnode>
       </node>
       <node id="24">
+        <label>uipc::constitution::FiniteElementExternalForce</label>
+        <link refid="classuipc_1_1constitution_1_1FiniteElementExternalForce"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
         <label>uipc::constitution::FiniteElementExtraConstitution</label>
         <link refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution"/>
         <childnode refid="1" relation="public-inheritance">
@@ -273,28 +281,28 @@
         <label>uipc::constitution::IConstitution</label>
         <link refid="classuipc_1_1constitution_1_1IConstitution"/>
       </node>
-      <node id="29">
+      <node id="30">
         <label>uipc::constitution::InterAffineBodyConstitution</label>
         <link refid="classuipc_1_1constitution_1_1InterAffineBodyConstitution"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="34">
+      <node id="35">
         <label>uipc::constitution::InterAffineBodyExtraConstitution</label>
         <link refid="classuipc_1_1constitution_1_1InterAffineBodyExtraConstitution"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="37">
+      <node id="38">
         <label>uipc::constitution::InterPrimitiveConstitution</label>
         <link refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="26">
+      <node id="27">
         <label>uipc::constitution::KirchhoffRodBending</label>
         <link refid="classuipc_1_1constitution_1_1KirchhoffRodBending"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
       <node id="12">
@@ -333,22 +341,22 @@
         <childnode refid="6" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="38">
+      <node id="39">
         <label>uipc::constitution::SoftVertexEdgeStitch</label>
         <link refid="classuipc_1_1constitution_1_1SoftVertexEdgeStitch"/>
-        <childnode refid="37" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="39">
-        <label>uipc::constitution::SoftVertexStitch</label>
-        <link refid="classuipc_1_1constitution_1_1SoftVertexStitch"/>
-        <childnode refid="37" relation="public-inheritance">
+        <childnode refid="38" relation="public-inheritance">
         </childnode>
       </node>
       <node id="40">
+        <label>uipc::constitution::SoftVertexStitch</label>
+        <link refid="classuipc_1_1constitution_1_1SoftVertexStitch"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
         <label>uipc::constitution::SoftVertexTriangleStitch</label>
         <link refid="classuipc_1_1constitution_1_1SoftVertexTriangleStitch"/>
-        <childnode refid="37" relation="public-inheritance">
+        <childnode refid="38" relation="public-inheritance">
         </childnode>
       </node>
       <node id="22">
@@ -363,16 +371,16 @@
         <childnode refid="16" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="27">
+      <node id="28">
         <label>uipc::constitution::StrainPlasticDiscreteShellBending</label>
         <link refid="classuipc_1_1constitution_1_1StrainPlasticDiscreteShellBending"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="28">
+      <node id="29">
         <label>uipc::constitution::StressPlasticDiscreteShellBending</label>
         <link refid="classuipc_1_1constitution_1_1StressPlasticDiscreteShellBending"/>
-        <childnode refid="24" relation="public-inheritance">
+        <childnode refid="25" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

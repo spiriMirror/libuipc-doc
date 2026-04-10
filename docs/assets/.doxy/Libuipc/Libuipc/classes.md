@@ -182,6 +182,8 @@
 ([**uipc::core**](namespaceuipc_1_1core.md))
 * [**FiniteElementConstitution**](classuipc_1_1constitution_1_1FiniteElementConstitution.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**FiniteElementExternalForce**](classuipc_1_1constitution_1_1FiniteElementExternalForce.md)
+([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**FiniteElementExtraConstitution**](classuipc_1_1constitution_1_1FiniteElementExtraConstitution.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
 * [**FiniteElementStateAccessorFeature**](classuipc_1_1core_1_1FiniteElementStateAccessorFeature.md)
