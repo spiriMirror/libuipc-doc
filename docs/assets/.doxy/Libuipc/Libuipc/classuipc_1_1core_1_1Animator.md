@@ -60,7 +60,7 @@
 |  void | [**insert**](#function-insert) ([**Object**](classuipc_1_1core_1_1Object.md) & obj, Animation::ActionOnUpdate && on\_update) <br> |
 |  [**Animator**](classuipc_1_1core_1_1Animator.md) & | [**operator=**](#function-operator) (const [**Animator**](classuipc_1_1core_1_1Animator.md) &) = delete<br> |
 |  [**Animator**](classuipc_1_1core_1_1Animator.md) & | [**operator=**](#function-operator_1) ([**Animator**](classuipc_1_1core_1_1Animator.md) &&) = delete<br> |
-|  void | [**substep**](#function-substep-12) (SizeT n) noexcept<br> |
+|  void | [**substep**](#function-substep-12) (SizeT n) <br> |
 |  SizeT | [**substep**](#function-substep-22) () noexcept const<br> |
 
 
@@ -232,7 +232,7 @@ Animator & uipc::core::Animator::operator= (
 ```C++
 void uipc::core::Animator::substep (
     SizeT n
-) noexcept
+) 
 ```
 
 

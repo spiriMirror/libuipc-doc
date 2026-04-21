@@ -64,7 +64,7 @@ Inherits the following classes: std::enable_shared_from_this< Scene >
 |  auto & | [**contact\_tabular**](#function-contact_tabular-22) () noexcept<br> |
 |  auto & | [**diff\_sim**](#function-diff_sim-12) () noexcept const<br> |
 |  auto & | [**diff\_sim**](#function-diff_sim-22) () noexcept<br> |
-|  Float | [**dt**](#function-dt) () noexcept const<br> |
+|  Float | [**dt**](#function-dt) () const<br> |
 |  auto & | [**geometries**](#function-geometries-12) () noexcept const<br> |
 |  auto & | [**geometries**](#function-geometries-22) () noexcept<br> |
 |  void | [**init**](#function-init) ([**internal::World**](classuipc_1_1core_1_1internal_1_1World.md) & world) noexcept<br> |
@@ -74,7 +74,7 @@ Inherits the following classes: std::enable_shared_from_this< Scene >
 |  auto & | [**objects**](#function-objects-22) () noexcept<br> |
 |  auto & | [**rest\_geometries**](#function-rest_geometries-12) () noexcept const<br> |
 |  auto & | [**rest\_geometries**](#function-rest_geometries-22) () noexcept<br> |
-|  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
+|  void | [**solve\_pending**](#function-solve_pending) () <br> |
 |  auto & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept const<br> |
 |  auto & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept<br> |
 |  void | [**update\_from**](#function-update_from) (const [**SceneSnapshotCommit**](classuipc_1_1core_1_1SceneSnapshotCommit.md) & commit) <br> |
@@ -274,7 +274,7 @@ inline auto & uipc::core::internal::Scene::diff_sim () noexcept
 ### function dt 
 
 ```C++
-Float uipc::core::internal::Scene::dt () noexcept const
+Float uipc::core::internal::Scene::dt () const
 ```
 
 
@@ -406,7 +406,7 @@ inline auto & uipc::core::internal::Scene::rest_geometries () noexcept
 ### function solve\_pending 
 
 ```C++
-void uipc::core::internal::Scene::solve_pending () noexcept
+void uipc::core::internal::Scene::solve_pending () 
 ```
 
 

@@ -136,6 +136,7 @@ Here is a list of all files with brief descriptions:
             * **file** [**contact\_system\_feature.h**](contact__system__feature_8h.md)     
             * **file** [**contact\_tabular.h**](contact__tabular_8h.md)     
             * **file** [**diff\_sim.h**](diff__sim_8h.md)     
+            * **file** [**distance\_diagnoser\_feature.h**](distance__diagnoser__feature_8h.md)     
             * **file** [**engine.h**](engine_8h.md)     
             * **file** [**engine\_status.h**](engine__status_8h.md)     
             * **file** [**feature.h**](feature_8h.md)     

@@ -89,7 +89,7 @@ Inherits the following classes: [uipc::geometry::IGeometryCollection](classuipc_
 |  void | [**pending\_destroy**](#function-pending_destroy) (IndexT id) noexcept<br> |
 |  span&lt; IndexT &gt; | [**pending\_destroy\_ids**](#function-pending_destroy_ids) () noexcept const<br> |
 |  S&lt; [**geometry::GeometrySlotT**](classuipc_1_1geometry_1_1GeometrySlotT.md)&lt; GeometryT &gt; &gt; | [**pending\_emplace**](#function-pending_emplace) (const GeometryT & geometry) <br> |
-|  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
+|  void | [**solve\_pending**](#function-solve_pending) () <br> |
 
 
 ## Public Functions inherited from uipc::geometry::IGeometryCollection
@@ -434,7 +434,7 @@ S< geometry::GeometrySlotT < GeometryT > > uipc::geometry::GeometryCollection::p
 ### function solve\_pending 
 
 ```C++
-void uipc::geometry::GeometryCollection::solve_pending () noexcept
+void uipc::geometry::GeometryCollection::solve_pending () 
 ```
 
 

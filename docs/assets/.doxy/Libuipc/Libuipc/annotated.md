@@ -116,6 +116,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**ContactSystemFeatureOverrider**](classuipc_1_1core_1_1ContactSystemFeatureOverrider.md)     
         * **class** [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md)     
         * **class** [**DiffSim**](classuipc_1_1core_1_1DiffSim.md)     
+        * **class** [**DistanceDiagnoserFeature**](classuipc_1_1core_1_1DistanceDiagnoserFeature.md)     
+        * **class** [**DistanceDiagnoserFeatureOverrider**](classuipc_1_1core_1_1DistanceDiagnoserFeatureOverrider.md)     
         * **class** [**Engine**](classuipc_1_1core_1_1Engine.md)     
         * **class** [**EngineException**](classuipc_1_1core_1_1EngineException.md)     
         * **class** [**EngineStatus**](classuipc_1_1core_1_1EngineStatus.md)     

@@ -44,7 +44,7 @@ class UIPC_CONSTITUTION_API AffineBodyConstitution : public IConstitution
   protected:
     virtual U64 get_uid() const noexcept override;
 
-    void create_abd_attributes(geometry::SimplicialComplex& sc,
+    void create_attributes(geometry::SimplicialComplex& sc,
                                Float                        kappa,
                                Float                        mass_density,
                                Float                        volume,

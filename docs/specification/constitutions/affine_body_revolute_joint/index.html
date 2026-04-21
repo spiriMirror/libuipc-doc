@@ -1247,6 +1247,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#angle-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Angle State
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Angle State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convention-for-all-user-facing-bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convention for all user-facing bounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2992,6 +3037,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#angle-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Angle State
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Angle State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convention-for-all-user-facing-bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convention for all user-facing bounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3044,6 +3134,29 @@ E = \frac{K}{2} \cdot \left(
 \right),
 \]</div>
 <p>where <span class="arithmatex">\(K\)</span> is the stiffness constant of the joint, we choose <span class="arithmatex">\(K=\gamma (m_i + m_j)\)</span>, where <span class="arithmatex">\(\gamma\)</span> is a <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span> and <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
+<h2 id="angle-state">Angle State</h2>
+<p>The revolute joint tracks a scalar joint angle <span class="arithmatex">\(\theta\)</span> that extra-per-joint constitutions (driving joint, angle limit, external torque) share. The backend builds, for each body <span class="arithmatex">\(k \in \{i,j\}\)</span>, an orthonormal basis <span class="arithmatex">\((\hat{\mathbf{t}}_k, \hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k)\)</span> aligned with the joint axis at setup, where</p>
+<div class="arithmatex">\[
+\hat{\mathbf{t}}_k = \frac{\mathbf{x}^1_k - \mathbf{x}^0_k}{\|\mathbf{x}^1_k - \mathbf{x}^0_k\|}, \quad
+\hat{\mathbf{b}}_k = \hat{\mathbf{t}}_k \times \hat{\mathbf{n}}_k,
+\]</div>
+<p>and the <span class="arithmatex">\((\hat{\mathbf{n}}, \hat{\mathbf{b}})\)</span> pair is stored per body in the layout <span class="arithmatex">\([\hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k]\)</span>. The current relative angle between the two bodies is extracted as</p>
+<div class="arithmatex">\[
+\cos\theta = \frac{\hat{\mathbf{n}}_i \cdot \hat{\mathbf{n}}_j + \hat{\mathbf{b}}_i \cdot \hat{\mathbf{b}}_j}{2}, \quad
+\sin\theta = \frac{\hat{\mathbf{b}}_i \cdot \hat{\mathbf{n}}_j - \hat{\mathbf{n}}_i \cdot \hat{\mathbf{b}}_j}{2},
+\]</div>
+<div class="arithmatex">\[
+\theta = \operatorname{atan2}(\sin\theta,\; \cos\theta) \in (-\pi, \pi].
+\]</div>
+<p>The sign follows the right-hand rule around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (counterclockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</p>
+<h3 id="state-update">State Update</h3>
+<p>At the end of each time step, the backend writes back the current relative angle, wrapped to <span class="arithmatex">\((-\pi, \pi]\)</span>, to the <code>angle</code> edge attribute:</p>
+<div class="arithmatex">\[
+\theta_{\text{current}} = \operatorname{map}_{(-\pi,\pi]}\left(\theta(\mathbf{q}) + \alpha_0\right),
+\]</div>
+<p>where <span class="arithmatex">\(\theta(\mathbf{q})\)</span> is extracted from the formulas above and <span class="arithmatex">\(\alpha_0\)</span> is <code>init_angle</code>, a <strong>user-facing offset</strong> that shifts the "zero" of the reported value (default <code>0.0</code>). The <code>angle</code> attribute is therefore available to any frontend and to all extra-per-joint constitutions built on top of this joint (driving joint, limit, external torque). When an external state write replaces the body DOF <span class="arithmatex">\(\mathbf{q}\)</span> (e.g. via <code>AffineBodyStateAccessorFeature</code>), the backend re-syncs <code>current_angles</code> synchronously through the <code>GlobalJointDofManager</code>.</p>
+<h4 id="convention-for-all-user-facing-bounds">Convention for all user-facing bounds</h4>
+<p>All user-facing angle quantities on this joint (<code>limit/lower</code>, <code>limit/upper</code> on <a href="../affine_body_revolute_joint_limit/">AffineBodyRevoluteJointLimit</a>; <code>aim_angle</code> on <a href="../affine_body_driving_revolute_joint/">AffineBodyDrivingRevoluteJoint</a>) are expressed in the same "<code>current_*</code> frame" as the reported <code>angle</code> attribute. A user can therefore set them directly against the value they read back from <code>angle</code>, without having to reason about <code>init_angle</code>. Wherever <code>init_angle</code> appears inside a solver-side formula, it is <strong>subtracted</strong> from the user-facing quantity to translate it into the raw frame <span class="arithmatex">\(\theta(\mathbf{q})\)</span>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint):</p>
 <ul>
@@ -3052,6 +3165,8 @@ E = \frac{K}{2} \cdot \left(
 <li><code>l_inst_id</code> (<code>IndexT</code>): instance index within the left geometry</li>
 <li><code>r_inst_id</code> (<code>IndexT</code>): instance index within the right geometry</li>
 <li><code>strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
+<li><code>angle</code> (<code>Float</code>): <span class="arithmatex">\(\theta_{\text{current}}\)</span>, current relative joint angle in radians, wrapped to <span class="arithmatex">\((-\pi, \pi]\)</span>. Written by the backend every time step (read-only for the user).</li>
+<li><code>init_angle</code> (<code>Float</code>): <span class="arithmatex">\(\alpha_0\)</span>, initial angle offset added to the extracted relative angle. Default <code>0.0</code>.</li>
 </ul>
 <p>When the joint is created via Local <code>create_geometry</code>, optional <strong>edge</strong> attributes (each <code>Vector3</code>) supply local joint geometry: <code>l_position0</code>, <code>l_position1</code> (left body local frame), <code>r_position0</code>, <code>r_position1</code> (right body local frame).</p></div>
 

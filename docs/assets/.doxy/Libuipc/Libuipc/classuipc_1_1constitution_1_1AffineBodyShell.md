@@ -204,7 +204,7 @@ See [uipc::constitution::AffineBodyConstitution](classuipc_1_1constitution_1_1Af
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**create\_abd\_attributes**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-create_abd_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume, Float m, const Vector3 & m\_x\_bar, const Matrix3x3 & m\_x\_bar\_x\_bar) const<br>_Common ABD attribute setup._  |
+|  void | [**create\_attributes**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-create_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume, Float m, const Vector3 & m\_x\_bar, const Matrix3x3 & m\_x\_bar\_x\_bar) const<br>_Common ABD attribute setup._  |
 | virtual U64 | [**get\_uid**](classuipc_1_1constitution_1_1AffineBodyConstitution.md#function-get_uid) () noexcept override const<br> |
 
 

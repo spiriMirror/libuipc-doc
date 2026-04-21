@@ -57,7 +57,7 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 |   | [**IAttributeSlot**](#function-iattributeslot-23) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &) = delete<br> |
 |   | [**IAttributeSlot**](#function-iattributeslot-33) ([**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &&) noexcept<br> |
 |  bool | [**allow\_destroy**](#function-allow_destroy) () noexcept const<br>_Check if the underlying attribute is allowed to be destroyed._  |
-|  void | [**from\_json\_array**](#function-from_json_array) (const Json & j) noexcept<br> |
+|  void | [**from\_json\_array**](#function-from_json_array) (const Json & j) <br> |
 |  bool | [**is\_evolving**](#function-is_evolving-12) () noexcept const<br> |
 |  void | [**is\_evolving**](#function-is_evolving-22) (bool v) noexcept<br> |
 |  bool | [**is\_shared**](#function-is_shared) () noexcept const<br>_Check if the underlying attribute is shared._  |
@@ -191,7 +191,7 @@ bool uipc::geometry::IAttributeSlot::allow_destroy () noexcept const
 ```C++
 void uipc::geometry::IAttributeSlot::from_json_array (
     const Json & j
-) noexcept
+) 
 ```
 
 

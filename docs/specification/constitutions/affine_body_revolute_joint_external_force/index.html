@@ -3249,11 +3249,7 @@ E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(
 \mathbf{a}_{ext} = \mathbf{M}^{-1} \mathbf{F}_{ext}.
 \]</div>
 <h2 id="state-update">State Update</h2>
-<p>At the end of each time step, the time integrator computes the current joint angle:</p>
-<div class="arithmatex">\[
-\theta_{\text{current}} = \theta(\mathbf{q}) - \theta_{\text{init}},
-\]</div>
-<p>where <span class="arithmatex">\(\theta(\mathbf{q})\)</span> is the revolute angle extracted from the current affine body states, and <span class="arithmatex">\(\theta_{\text{init}}\)</span> is the initial angle offset captured at the start of the simulation. The angle is mapped to the range <span class="arithmatex">\((-\pi, \pi]\)</span>. This value is written back to the <code>angle</code> attribute for user inspection via the Animator.</p>
+<p>The current joint angle <span class="arithmatex">\(\theta_{\text{current}}\)</span> is tracked and written back to the <code>angle</code> edge attribute by the <strong>base</strong> <a href="../affine_body_revolute_joint/">AffineBodyRevoluteJoint</a> — not by this external-force constitution. See <a href="../affine_body_revolute_joint/#angle-state">Angle State</a> for the formulation.</p>
 <h2 id="runtime-control">Runtime Control</h2>
 <p>The torque can be updated at each frame through the Animator system:</p>
 <ul>
@@ -3263,12 +3259,11 @@ E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(
 <h2 id="requirement">Requirement</h2>
 <p>This constitution must be applied to a geometry that already has an <a href="../affine_body_revolute_joint/">AffineBodyRevoluteJoint</a> (UID=18) constitution.</p>
 <h2 id="attributes">Attributes</h2>
-<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge carries the same linking fields as <a href="../affine_body_revolute_joint/">Affine Body Revolute Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
-<p>External-force attributes on <strong>edges</strong>:</p>
+<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge inherits all linking and state fields of the base <a href="../affine_body_revolute_joint/">Affine Body Revolute Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, <code>angle</code>, <code>init_angle</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
+<p>External-force-specific attributes on <strong>edges</strong>:</p>
 <ul>
 <li><code>external_torque</code>: <span class="arithmatex">\(\tau\)</span> in the formulae above, scalar torque around the joint axis (one per edge)</li>
 <li><code>external_torque/is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the external torque</li>
-<li><code>angle</code>: <span class="arithmatex">\(\theta_{\text{current}}\)</span>, the current joint angle in radians (updated by the backend each time step)</li>
 </ul></div>
 
 

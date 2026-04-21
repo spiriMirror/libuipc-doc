@@ -31,6 +31,7 @@
 | file | [**contact\_system\_feature.h**](contact__system__feature_8h.md) <br> |
 | file | [**contact\_tabular.h**](contact__tabular_8h.md) <br> |
 | file | [**diff\_sim.h**](diff__sim_8h.md) <br> |
+| file | [**distance\_diagnoser\_feature.h**](distance__diagnoser__feature_8h.md) <br> |
 | file | [**engine.h**](engine_8h.md) <br> |
 | file | [**engine\_status.h**](engine__status_8h.md) <br> |
 | file | [**feature.h**](feature_8h.md) <br> |

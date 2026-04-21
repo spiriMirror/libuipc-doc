@@ -43,7 +43,7 @@ class UIPC_CORE_API SceneVisitor
     SceneVisitor& operator=(SceneVisitor&&)      = delete;
 
     void begin_pending() noexcept;
-    void solve_pending() noexcept;
+    void solve_pending();
     bool is_pending() const noexcept;
 
     span<S<geometry::GeometrySlot>> geometries() const noexcept;

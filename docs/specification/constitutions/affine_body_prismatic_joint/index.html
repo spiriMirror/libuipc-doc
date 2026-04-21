@@ -1163,6 +1163,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#distance-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance State
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distance State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convention-for-all-user-facing-bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convention for all user-facing bounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2992,6 +3037,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#distance-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance State
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distance State">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convention-for-all-user-facing-bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convention for all user-facing bounds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3070,6 +3160,20 @@ C_3 &amp;= \hat{\mathbf{b}}_i - \hat{\mathbf{b}}_j &amp;= \mathbf{0}
 E = \sum_{k=0}^{3} \frac{K}{2} \| C_k \|^2_2,
 \]</div>
 <p>where <span class="arithmatex">\(K\)</span> is the stiffness constant of the joint, we choose <span class="arithmatex">\(K=\gamma (m_i + m_j)\)</span>, where <span class="arithmatex">\(\gamma\)</span> is a <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span> and <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
+<h2 id="distance-state">Distance State</h2>
+<p>The prismatic joint tracks a scalar joint coordinate <span class="arithmatex">\(d\)</span> along the sliding axis that extra-per-joint constitutions (driving joint, distance limit, external force) share. Using the same frame <span class="arithmatex">\((\mathbf{c}_k, \hat{\mathbf{t}}_k, \hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k)\)</span> defined above, the symmetric relative displacement along the axis is</p>
+<div class="arithmatex">\[
+d(\mathbf{q}) = \frac{(\mathbf{c}_j - \mathbf{c}_i)\cdot\hat{\mathbf{t}}_i - (\mathbf{c}_i - \mathbf{c}_j)\cdot\hat{\mathbf{t}}_j}{2}.
+\]</div>
+<p>Sign follows <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>: <span class="arithmatex">\(d(\mathbf{q}) &gt; 0\)</span> means body <span class="arithmatex">\(j\)</span> has translated along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> relative to body <span class="arithmatex">\(i\)</span> from the reference (creation-time) configuration. Equivalently, <span class="arithmatex">\(d(\mathbf{q}) = \tfrac{1}{2}(\mathbf{c}_j - \mathbf{c}_i)\cdot(\hat{\mathbf{t}}_i + \hat{\mathbf{t}}_j)\)</span> — a signed scalar projection, not the Euclidean distance between the two anchors.</p>
+<h3 id="state-update">State Update</h3>
+<p>At the end of each time step, the backend writes back the current signed displacement along the axis to the <code>distance</code> edge attribute:</p>
+<div class="arithmatex">\[
+d_{\text{current}} = d(\mathbf{q}) + d_0,
+\]</div>
+<p>where <span class="arithmatex">\(d_0\)</span> is <code>init_distance</code>, a <strong>user-facing offset</strong> that shifts the "zero" of the reported value (default <code>0.0</code>). The <code>distance</code> attribute is therefore available to any frontend and to all extra-per-joint constitutions built on top of this joint (driving joint, limit, external force). When an external state write replaces the body DOF <span class="arithmatex">\(\mathbf{q}\)</span> (e.g. via <code>AffineBodyStateAccessorFeature</code>), the backend re-syncs <code>current_distances</code> synchronously through the <code>GlobalJointDofManager</code>.</p>
+<h4 id="convention-for-all-user-facing-bounds">Convention for all user-facing bounds</h4>
+<p>All user-facing distance quantities on this joint (<code>limit/lower</code>, <code>limit/upper</code> on <a href="../affine_body_prismatic_joint_limit/">AffineBodyPrismaticJointLimit</a>; <code>aim_distance</code> on <a href="../affine_body_driving_prismatic_joint/">AffineBodyDrivingPrismaticJoint</a>) are expressed in the same "<code>current_*</code> frame" as the reported <code>distance</code> attribute. A user can therefore set them directly against the value they read back from <code>distance</code>, without having to reason about <code>init_distance</code>. Wherever <code>init_distance</code> appears inside a solver-side formula, it is <strong>subtracted</strong> from the user-facing quantity to translate it into the raw frame <span class="arithmatex">\(d(\mathbf{q})\)</span>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint):</p>
 <ul>
@@ -3078,6 +3182,8 @@ E = \sum_{k=0}^{3} \frac{K}{2} \| C_k \|^2_2,
 <li><code>l_inst_id</code> (<code>IndexT</code>): instance index within the left geometry</li>
 <li><code>r_inst_id</code> (<code>IndexT</code>): instance index within the right geometry</li>
 <li><code>strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
+<li><code>distance</code> (<code>Float</code>): <span class="arithmatex">\(d_{\text{current}}\)</span>, current signed displacement along the joint axis. Written by the backend every time step (read-only for the user).</li>
+<li><code>init_distance</code> (<code>Float</code>): <span class="arithmatex">\(d_0\)</span>, user-facing offset <strong>added to</strong> the extracted geometric displacement <span class="arithmatex">\(d(\mathbf{q})\)</span> to form <span class="arithmatex">\(d_{\text{current}}\)</span>. Default <code>0.0</code>.</li>
 </ul>
 <p>When the joint is created via Local <code>create_geometry</code>, optional <strong>edge</strong> attributes (each <code>Vector3</code>) supply local joint geometry: <code>l_position0</code>, <code>l_position1</code> (left body local frame), <code>r_position0</code>, <code>r_position1</code> (right body local frame).</p></div>
 

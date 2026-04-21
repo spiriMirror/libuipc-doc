@@ -77,6 +77,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**uipc::core::Feature**](classuipc_1_1core_1_1Feature.md)     
         * **class** [**uipc::core::AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1AffineBodyStateAccessorFeature.md) 
         * **class** [**uipc::core::ContactSystemFeature**](classuipc_1_1core_1_1ContactSystemFeature.md) 
+        * **class** [**uipc::core::DistanceDiagnoserFeature**](classuipc_1_1core_1_1DistanceDiagnoserFeature.md) 
         * **class** [**uipc::core::FiniteElementStateAccessorFeature**](classuipc_1_1core_1_1FiniteElementStateAccessorFeature.md) [_**Feature**_](classuipc_1_1core_1_1Feature.md) _to access finite element state data._
         * **class** [**uipc::diff\_sim::AdjointMethodFeature**](classuipc_1_1diff__sim_1_1AdjointMethodFeature.md) 
         * **class** [**uipc::diff\_sim::EnableGradFeature**](classuipc_1_1diff__sim_1_1EnableGradFeature.md) 
@@ -92,6 +93,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**uipc::core::ContactSystemFeatureOverrider**](classuipc_1_1core_1_1ContactSystemFeatureOverrider.md) 
 * **class** [**uipc::core::ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) 
 * **class** [**uipc::core::DiffSim**](classuipc_1_1core_1_1DiffSim.md) 
+* **class** [**uipc::core::DistanceDiagnoserFeatureOverrider**](classuipc_1_1core_1_1DistanceDiagnoserFeatureOverrider.md) 
 * **class** [**uipc::core::Engine**](classuipc_1_1core_1_1Engine.md) 
 * **class** [**uipc::core::EngineStatus**](classuipc_1_1core_1_1EngineStatus.md) 
 * **class** [**uipc::core::EngineStatusCollection**](classuipc_1_1core_1_1EngineStatusCollection.md) 

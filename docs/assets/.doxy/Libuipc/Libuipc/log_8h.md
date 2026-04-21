@@ -14,6 +14,7 @@
 * `#include <uipc/common/string.h>`
 * `#include <uipc/common/config.h>`
 * `#include <uipc/common/abort.h>`
+* `#include <uipc/common/exception.h>`
 
 
 
@@ -83,6 +84,7 @@
 | Type | Name |
 | ---: | :--- |
 | define  | [**UIPC\_ASSERT**](log_8h.md#define-uipc_assert) (condition, ...) `/* multi line expression */`<br> |
+| define  | [**UIPC\_ASSERT\_THROW**](log_8h.md#define-uipc_assert_throw) (condition, ...) `/* multi line expression */`<br> |
 | define  | [**UIPC\_ERROR\_WITH\_LOCATION**](log_8h.md#define-uipc_error_with_location) (...) `UIPC\_LOG\_WITH\_LOCATION(spdlog::level::err, \_\_VA\_ARGS\_\_)`<br> |
 | define  | [**UIPC\_INFO\_WITH\_LOCATION**](log_8h.md#define-uipc_info_with_location) (...) `UIPC\_LOG\_WITH\_LOCATION(spdlog::level::info, \_\_VA\_ARGS\_\_)`<br> |
 | define  | [**UIPC\_LOG\_WITH\_LOCATION**](log_8h.md#define-uipc_log_with_location) (level, ...) `/* multi line expression */`<br> |
@@ -98,6 +100,22 @@
 
 ```C++
 #define UIPC_ASSERT (
+    condition,
+    ...
+) `/* multi line expression */`
+```
+
+
+
+
+<hr>
+
+
+
+### define UIPC\_ASSERT\_THROW 
+
+```C++
+#define UIPC_ASSERT_THROW (
     condition,
     ...
 ) `/* multi line expression */`

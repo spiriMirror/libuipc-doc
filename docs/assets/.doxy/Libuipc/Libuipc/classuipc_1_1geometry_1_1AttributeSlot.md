@@ -95,7 +95,7 @@ See [uipc::geometry::IAttributeSlot](classuipc_1_1geometry_1_1IAttributeSlot.md)
 |   | [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-iattributeslot-23) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &) = delete<br> |
 |   | [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-iattributeslot-33) ([**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &&) noexcept<br> |
 |  bool | [**allow\_destroy**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-allow_destroy) () noexcept const<br>_Check if the underlying attribute is allowed to be destroyed._  |
-|  void | [**from\_json\_array**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-from_json_array) (const Json & j) noexcept<br> |
+|  void | [**from\_json\_array**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-from_json_array) (const Json & j) <br> |
 |  bool | [**is\_evolving**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-is_evolving-12) () noexcept const<br> |
 |  void | [**is\_evolving**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-is_evolving-22) (bool v) noexcept<br> |
 |  bool | [**is\_shared**](classuipc_1_1geometry_1_1IAttributeSlot.md#function-is_shared) () noexcept const<br>_Check if the underlying attribute is shared._  |

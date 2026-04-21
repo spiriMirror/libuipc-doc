@@ -142,6 +142,10 @@
 ([**uipc::backend**](namespaceuipc_1_1backend.md))
 * [**DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md)
 ([**uipc::constitution**](namespaceuipc_1_1constitution.md))
+* [**DistanceDiagnoserFeature**](classuipc_1_1core_1_1DistanceDiagnoserFeature.md)
+([**uipc::core**](namespaceuipc_1_1core.md))
+* [**DistanceDiagnoserFeatureOverrider**](classuipc_1_1core_1_1DistanceDiagnoserFeatureOverrider.md)
+([**uipc::core**](namespaceuipc_1_1core.md))
 
 
 ## e

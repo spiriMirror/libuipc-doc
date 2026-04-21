@@ -3089,11 +3089,13 @@
 <h2 id="670-affinebodyrevolutejointlimit">#670 AffineBodyRevoluteJointLimit</h2>
 <p><strong>Affine Body Revolute Joint Limit</strong> restricts the rotation angle of a <a href="../affine_body_revolute_joint/">Revolute Joint</a> to a specified range. When the joint angle goes beyond the lower or upper bound, a cubic penalty is applied. It is an InterAffineBody extra constitution defined on revolute-joint geometry.</p>
 <h2 id="energy">Energy</h2>
-<p>The limit adds an energy <span class="arithmatex">\(E(x)\)</span> where <span class="arithmatex">\(x\)</span> is the scalar joint angle (its exact meaning is given in <a href="#meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></a>). The effective bounds are computed from the user-specified limits and the initial angle:</p>
+<p><code>limit/lower</code> and <code>limit/upper</code> are <strong>absolute bounds on the reported <code>angle</code> attribute</strong> (i.e. <span class="arithmatex">\(\theta_{\text{current}}\)</span> as defined by the base <a href="../affine_body_revolute_joint/#angle-state">Revolute Joint</a>). The user can set them directly against the value they read back from <code>angle</code>.</p>
+<p>Internally the penalty is evaluated on the raw revolute coordinate <span class="arithmatex">\(x\)</span> (see <a href="#meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></a>; to a first approximation <span class="arithmatex">\(x \approx \theta(\mathbf{q}) = \theta_{\text{current}} - \alpha_0\)</span>). The effective bounds on <span class="arithmatex">\(x\)</span> are therefore shifted by <span class="arithmatex">\(-\alpha_0\)</span>:</p>
 <div class="arithmatex">\[
-l = l_{\text{user}} + \alpha_0, \quad u = u_{\text{user}} + \alpha_0,
+l = l_{\text{user}} - \alpha_0, \quad u = u_{\text{user}} - \alpha_0,
 \]</div>
-<p>where <span class="arithmatex">\(l_{\text{user}},u_{\text{user}}\)</span> are <code>limit/lower</code>, <code>limit/upper</code> and <span class="arithmatex">\(\alpha_0\)</span> is <code>init_angle</code>. Let <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
+<p>where <span class="arithmatex">\(l_{\text{user}}, u_{\text{user}}\)</span> are <code>limit/lower</code>, <code>limit/upper</code> and <span class="arithmatex">\(\alpha_0\)</span> is <code>init_angle</code> from the base joint. Algebraically this is equivalent to enforcing <span class="arithmatex">\(l_{\text{user}} \le \theta_{\text{current}} \le u_{\text{user}}\)</span>. Let <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
+<p>Because <span class="arithmatex">\(x\)</span> is a raw accumulator that is not wrapped to <span class="arithmatex">\((-\pi,\pi]\)</span>, the limit is well-defined only while <span class="arithmatex">\(|x| &lt; \pi\)</span>; this is the intended operating range (the penalty itself prevents the joint from drifting that far).</p>
 <p>For normal range width (<span class="arithmatex">\(u&gt;l\)</span>):</p>
 <div class="arithmatex">\[
 E(x)=
@@ -3156,9 +3158,9 @@ x=\theta^t+\delta,
 \right),
 \]</div>
 <div class="arithmatex">\[
-\cos\theta=\frac{\hat{\mathbf{b}}_i\cdot\hat{\mathbf{b}}_j+\hat{\mathbf{n}}_i\cdot\hat{\mathbf{n}}_j}{2},
+\cos\theta=\frac{\hat{\mathbf{n}}_i\cdot\hat{\mathbf{n}}_j+\hat{\mathbf{b}}_i\cdot\hat{\mathbf{b}}_j}{2},
 \quad
-\sin\theta=\frac{\hat{\mathbf{n}}_i\cdot\hat{\mathbf{b}}_j-\hat{\mathbf{b}}_i\cdot\hat{\mathbf{n}}_j}{2}.
+\sin\theta=\frac{\hat{\mathbf{b}}_i\cdot\hat{\mathbf{n}}_j-\hat{\mathbf{n}}_i\cdot\hat{\mathbf{b}}_j}{2}.
 \]</div>
 <p>The sign of <span class="arithmatex">\(x\)</span> follows the sign of <span class="arithmatex">\(\sin\theta\)</span> under this convention.
 The angle branch is <span class="arithmatex">\((-\pi,\pi]\)</span>.</p>
@@ -3169,11 +3171,11 @@ The angle branch is <span class="arithmatex">\((-\pi,\pi]\)</span>.</p>
 <p>The host geometry is <strong>edge-based</strong> (one edge per joint), with the same linking fields as <a href="../affine_body_revolute_joint/">Affine Body Revolute Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
 <p>On <strong>edges</strong> (in addition to the base joint attributes above):</p>
 <ul>
-<li><code>limit/lower</code>: <span class="arithmatex">\(l_{\text{user}}\)</span> — relative lower bound (default <code>0.0</code>)</li>
-<li><code>limit/upper</code>: <span class="arithmatex">\(u_{\text{user}}\)</span> — relative upper bound (default <code>0.0</code>)</li>
+<li><code>limit/lower</code>: <span class="arithmatex">\(l_{\text{user}}\)</span> — absolute lower bound on the reported <code>angle</code> (default <code>0.0</code>)</li>
+<li><code>limit/upper</code>: <span class="arithmatex">\(u_{\text{user}}\)</span> — absolute upper bound on the reported <code>angle</code> (default <code>0.0</code>)</li>
 <li><code>limit/strength</code>: <span class="arithmatex">\(s\)</span> — penalty strength (default <code>1.0</code>)</li>
-<li><code>init_angle</code>: <span class="arithmatex">\(\alpha_0\)</span> — initial revolute angle offset (default <code>0.0</code>). Added to <code>limit/lower</code> and <code>limit/upper</code> to obtain the effective bounds <span class="arithmatex">\(l\)</span> and <span class="arithmatex">\(u\)</span> used in the energy</li>
-</ul></div>
+</ul>
+<p>The limit also consumes the base-joint attribute <code>init_angle</code> (<span class="arithmatex">\(\alpha_0\)</span>, default <code>0.0</code>); it is <strong>subtracted</strong> from <code>limit/lower</code>/<code>limit/upper</code> to form the effective bounds <span class="arithmatex">\(l\)</span>/<span class="arithmatex">\(u\)</span> used on the raw coordinate <span class="arithmatex">\(x\)</span>.</p></div>
 
 
 

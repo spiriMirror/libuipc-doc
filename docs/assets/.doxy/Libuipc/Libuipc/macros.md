@@ -27,6 +27,7 @@
 * **UIPC\_NEVER\_INLINE** ([**dllexport.h**](common_2dllexport_8h.md))
 * **UIPC\_NOEXCEPT** ([**dllexport.h**](common_2dllexport_8h.md))
 * **UIPC\_ASSERT** ([**log.h**](log_8h.md))
+* **UIPC\_ASSERT\_THROW** ([**log.h**](log_8h.md))
 * **UIPC\_ERROR\_WITH\_LOCATION** ([**log.h**](log_8h.md))
 * **UIPC\_INFO\_WITH\_LOCATION** ([**log.h**](log_8h.md))
 * **UIPC\_LOG\_WITH\_LOCATION** ([**log.h**](log_8h.md))

@@ -46,6 +46,8 @@
 | class | [**ContactSystemFeatureOverrider**](classuipc_1_1core_1_1ContactSystemFeatureOverrider.md) <br> |
 | class | [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) <br> |
 | class | [**DiffSim**](classuipc_1_1core_1_1DiffSim.md) <br> |
+| class | [**DistanceDiagnoserFeature**](classuipc_1_1core_1_1DistanceDiagnoserFeature.md) <br> |
+| class | [**DistanceDiagnoserFeatureOverrider**](classuipc_1_1core_1_1DistanceDiagnoserFeatureOverrider.md) <br> |
 | class | [**Engine**](classuipc_1_1core_1_1Engine.md) <br> |
 | class | [**EngineException**](classuipc_1_1core_1_1EngineException.md) <br> |
 | class | [**EngineStatus**](classuipc_1_1core_1_1EngineStatus.md) <br> |

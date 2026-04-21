@@ -146,7 +146,7 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**create\_abd\_attributes**](#function-create_abd_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume, Float m, const Vector3 & m\_x\_bar, const Matrix3x3 & m\_x\_bar\_x\_bar) const<br>_Common ABD attribute setup._  |
+|  void | [**create\_attributes**](#function-create_attributes) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float kappa, Float mass\_density, Float volume, Float m, const Vector3 & m\_x\_bar, const Matrix3x3 & m\_x\_bar\_x\_bar) const<br>_Common ABD attribute setup._  |
 | virtual U64 | [**get\_uid**](#function-get_uid) () noexcept override const<br> |
 
 
@@ -282,11 +282,11 @@ static Json uipc::constitution::AffineBodyConstitution::default_config () noexce
 
 
 
-### function create\_abd\_attributes 
+### function create\_attributes 
 
 _Common ABD attribute setup._ 
 ```C++
-void uipc::constitution::AffineBodyConstitution::create_abd_attributes (
+void uipc::constitution::AffineBodyConstitution::create_attributes (
     geometry::SimplicialComplex & sc,
     Float kappa,
     Float mass_density,

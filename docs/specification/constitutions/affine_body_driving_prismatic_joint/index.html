@@ -1062,17 +1062,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#state-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        State Update
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3036,17 +3025,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#state-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        State Update
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3098,42 +3076,34 @@
 <p>The constraint can also be toggled on and off at runtime via the <code>driving/is_constrained</code> flag.</p>
 <h2 id="energy">Energy</h2>
 <p>We assume 2 affine body indices <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, each with their own state vector <span class="arithmatex">\(\mathbf{q}_i\)</span> and <span class="arithmatex">\(\mathbf{q}_j\)</span> as defined in the <a href="../affine_body/">Affine Body</a> constitution.</p>
-<p>The joint axis is defined by the tangent direction <span class="arithmatex">\(\hat{\mathbf{t}}\)</span> and center positions <span class="arithmatex">\(\mathbf{c}_i\)</span>, <span class="arithmatex">\(\mathbf{c}_j\)</span> as in the <a href="../affine_body_prismatic_joint/">Prismatic Joint</a>.</p>
-<p>The target distance <span class="arithmatex">\(\tilde d\)</span> is determined by:</p>
+<p>The joint axis is defined by the per-body tangent directions <span class="arithmatex">\(\hat{\mathbf{t}}_i, \hat{\mathbf{t}}_j\)</span> and anchor positions <span class="arithmatex">\(\mathbf{c}_i, \mathbf{c}_j\)</span> as in the <a href="../affine_body_prismatic_joint/">Prismatic Joint</a>.</p>
+<p><code>aim_distance</code> is a <strong>user-facing target</strong> expressed in the same frame as the reported <code>distance</code> (i.e. <span class="arithmatex">\(d_{\text{current}}\)</span>). To translate it into the raw displacement space actually used by the energy, the solver subtracts <span class="arithmatex">\(d_{\text{init}}\)</span> (the base joint's <code>init_distance</code>):</p>
 <div class="arithmatex">\[
 \tilde{d} =
 \begin{cases}
-d_{\text{aim}} + d_{\text{init}}, &amp; \text{is\_passive} = 0 \\
-d_{\text{current}} + d_{\text{init}}, &amp; \text{is\_passive} = 1
+d_{\text{aim}} - d_{\text{init}}, &amp; \text{is\_passive} = 0 \\
+d_{\text{current}} - d_{\text{init}}, &amp; \text{is\_passive} = 1
 \end{cases}
 \]</div>
-<p>where <span class="arithmatex">\(d_{\text{init}}\)</span> is the initial distance offset captured at the start of the simulation.</p>
-<p>The energy function is:</p>
+<p>In active mode, <span class="arithmatex">\(\tilde d\)</span> is the raw-displacement counterpart of <code>aim_distance</code>. In passive mode, <code>aim_distance</code> is silently replaced by the current reported distance, which gives <span class="arithmatex">\(\tilde d \approx d(\mathbf{q})\)</span> and therefore a near-zero energy — the joint locks at the instant state and resists further motion.</p>
+<p>The energy function is a symmetric two-body quadratic penalty on the raw signed axis projection:</p>
 <div class="arithmatex">\[
 E = \frac{K}{2} \left( \hat{\mathbf{t}}_i \cdot (\mathbf{c}_j - \mathbf{c}_i) - \tilde{d} \right)^2
-  + \frac{K}{2} \left( \hat{\mathbf{t}}_j \cdot (\mathbf{c}_i - \mathbf{c}_j) - \tilde{d} \right)^2,
+  + \frac{K}{2} \left( \hat{\mathbf{t}}_j \cdot (\mathbf{c}_j - \mathbf{c}_i) - \tilde{d} \right)^2,
 \]</div>
-<p>where <span class="arithmatex">\(K = \gamma (m_i + m_j)\)</span>, <span class="arithmatex">\(\gamma\)</span> is the <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span>, <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
-<p>The two symmetric terms ensure that the constraint is evaluated from both bodies' perspectives.</p>
+<p>where <span class="arithmatex">\(K = \gamma (m_i + m_j)\)</span>, <span class="arithmatex">\(\gamma\)</span> is the <strong>user defined</strong> <code>driving/strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span>, <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies. The two terms evaluate the constraint from each body's local tangent; when the base prismatic-joint constraint is satisfied the two tangents coincide and both terms reduce to <span class="arithmatex">\((d(\mathbf{q}) - \tilde d)^2\)</span>, i.e. a single penalty on the raw axis displacement. Substituting the definitions, the penalty is equivalent to pulling the reported <code>distance</code> toward <code>aim_distance</code> in the user-facing frame.</p>
 <p>When <code>driving/is_constrained = 0</code>, the energy is zero and the driving effect is disabled.</p>
-<h2 id="state-update">State Update</h2>
-<p>At the end of each time step, the time integrator updates the <code>distance</code> attribute to reflect the current joint displacement:</p>
-<div class="arithmatex">\[
-d_{\text{current}} = d(\mathbf{q}) - d_{\text{init}}
-\]</div>
-<p>where <span class="arithmatex">\(d(\mathbf{q})\)</span> is the signed displacement along the joint axis extracted from the current affine body states.</p>
+<p>The current distance <span class="arithmatex">\(d_{\text{current}}\)</span> and the initial offset <span class="arithmatex">\(d_{\text{init}}\)</span> are read from the <strong>base</strong> <a href="../affine_body_prismatic_joint/">AffineBodyPrismaticJoint</a>, which tracks them on the <code>distance</code> / <code>init_distance</code> edge attributes and keeps them in sync with the body state. The driving joint only consumes these values — it does not own them.</p>
 <h2 id="requirement">Requirement</h2>
 <p>This constitution must be applied to a geometry that already has an <a href="../affine_body_prismatic_joint/">AffineBodyPrismaticJoint</a> (UID=20) constitution.</p>
 <h2 id="attributes">Attributes</h2>
-<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge carries the same linking fields as <a href="../affine_body_prismatic_joint/">Affine Body Prismatic Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, base <code>strength_ratio</code> (if present), and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
+<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge inherits all linking and state fields of the base <a href="../affine_body_prismatic_joint/">Affine Body Prismatic Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, <code>distance</code>, <code>init_distance</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
 <p>Driving-specific attributes on <strong>edges</strong>:</p>
 <ul>
 <li><code>driving/strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
 <li><code>driving/is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the driving effect</li>
 <li><code>is_passive</code>: passive mode (<code>1</code>) locks at the current distance; active mode (<code>0</code>) drives to <code>aim_distance</code></li>
 <li><code>aim_distance</code>: <span class="arithmatex">\(d_{\text{aim}}\)</span>, the target distance in active mode</li>
-<li><code>distance</code>: <span class="arithmatex">\(d_{\text{current}}\)</span>, the current displacement (updated by the backend each time step)</li>
-<li><code>init_distance</code>: <span class="arithmatex">\(d_{\text{init}}\)</span>, the initial distance offset</li>
 </ul></div>
 
 

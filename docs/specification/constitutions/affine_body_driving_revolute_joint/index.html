@@ -1090,17 +1090,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#state-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        State Update
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3036,17 +3025,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#state-update" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        State Update
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirement" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3098,45 +3076,42 @@
 <p>The constraint can also be toggled on and off at runtime via the <code>driving/is_constrained</code> flag.</p>
 <h2 id="energy">Energy</h2>
 <p>We assume 2 affine body indices <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, each with their own state vector <span class="arithmatex">\(\mathbf{q}_i\)</span> and <span class="arithmatex">\(\mathbf{q}_j\)</span> as defined in the <a href="../affine_body/">Affine Body</a> constitution.</p>
-<p>The current relative rotation angle <span class="arithmatex">\(\theta\)</span> between the two bodies about the joint axis is extracted from the affine body states using the joint axis and normal rest frames, as defined in the <a href="../affine_body_revolute_joint/">Revolute Joint</a>:</p>
+<p>The current relative rotation angle <span class="arithmatex">\(\theta\)</span> between the two bodies about the joint axis is extracted from the affine body states using the per-body <span class="arithmatex">\((\hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k)\)</span> basis maintained by the base <a href="../affine_body_revolute_joint/">Revolute Joint</a>:</p>
 <div class="arithmatex">\[
 \cos\theta = \frac{\hat{\mathbf{n}}_i \cdot \hat{\mathbf{n}}_j + \hat{\mathbf{b}}_i \cdot \hat{\mathbf{b}}_j}{2}, \quad
-\sin\theta = \frac{\hat{\mathbf{n}}_i \cdot \hat{\mathbf{b}}_j - \hat{\mathbf{b}}_i \cdot \hat{\mathbf{n}}_j}{2}.
+\sin\theta = \frac{\hat{\mathbf{b}}_i \cdot \hat{\mathbf{n}}_j - \hat{\mathbf{n}}_i \cdot \hat{\mathbf{b}}_j}{2},
 \]</div>
-<p>where <span class="arithmatex">\(\hat{\mathbf{n}}\)</span> and <span class="arithmatex">\(\hat{\mathbf{b}}\)</span> are the normal and binormal directions in each body's frame.</p>
-<p>The target angle <span class="arithmatex">\(\tilde\theta\)</span> is determined by:</p>
+<div class="arithmatex">\[
+\theta = \operatorname{atan2}(\sin\theta,\; \cos\theta) \in (-\pi, \pi],
+\]</div>
+<p>where <span class="arithmatex">\(\hat{\mathbf{n}}_k\)</span>, <span class="arithmatex">\(\hat{\mathbf{b}}_k\)</span> are the normal and binormal directions in body <span class="arithmatex">\(k\)</span>'s current frame, obtained from the stored rest-space basis via the affine map. The sign follows the right-hand rule around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
+<p><code>aim_angle</code> is a <strong>user-facing target</strong> expressed in the same frame as the reported <code>angle</code> (i.e. <span class="arithmatex">\(\theta_{\text{current}}\)</span>). To translate it into the raw <span class="arithmatex">\(\theta\)</span>-space actually used by the energy, the solver subtracts <span class="arithmatex">\(\theta_{\text{init}}\)</span> (the base joint's <code>init_angle</code>):</p>
 <div class="arithmatex">\[
 \tilde\theta =
 \begin{cases}
-\theta_{\text{aim}} + \theta_{\text{init}}, &amp; \text{is\_passive} = 0 \\
-\theta_{\text{current}} + \theta_{\text{init}}, &amp; \text{is\_passive} = 1
+\theta_{\text{aim}} - \theta_{\text{init}}, &amp; \text{is\_passive} = 0 \\
+\theta_{\text{current}} - \theta_{\text{init}}, &amp; \text{is\_passive} = 1
 \end{cases}
 \]</div>
-<p>where <span class="arithmatex">\(\theta_{\text{init}}\)</span> is the initial angle offset captured at the start of the simulation.</p>
-<p>The energy function is:</p>
+<p>In active mode, <span class="arithmatex">\(\tilde\theta\)</span> is the raw-angle counterpart of <code>aim_angle</code>. In passive mode, <code>aim_angle</code> is silently replaced by the current reported angle, which gives <span class="arithmatex">\(\tilde\theta \approx \theta(\mathbf{q})\)</span> and therefore a near-zero energy — the joint locks at the instant state and resists further motion.</p>
+<p>The energy function is a quadratic penalty on the raw-angle difference:</p>
 <div class="arithmatex">\[
-E = \frac{K}{2} \sin^2(\theta - \tilde\theta) = \frac{K}{2} \left(\sin\theta \cos\tilde\theta - \cos\theta \sin\tilde\theta\right)^2,
+E = \frac{K}{2} \left(\theta - \tilde\theta\right)^2,
 \]</div>
-<p>where <span class="arithmatex">\(K = \gamma (m_i + m_j)\)</span>, <span class="arithmatex">\(\gamma\)</span> is the <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span>, <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
+<p>where <span class="arithmatex">\(K = \gamma (m_i + m_j)\)</span>, <span class="arithmatex">\(\gamma\)</span> is the <strong>user defined</strong> <code>driving/strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span>, <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies. Substituting the definitions, the penalty is equivalent to <span class="arithmatex">\(\tfrac{K}{2}(\theta_{\text{current}} - \theta_{\text{aim}})^2\)</span> in the user-facing frame — the driving joint simply pulls the reported <code>angle</code> toward <code>aim_angle</code>.</p>
+<p>Note that <span class="arithmatex">\(\theta - \tilde\theta\)</span> is a raw difference of two values each returned by <span class="arithmatex">\(\operatorname{atan2}\)</span> in <span class="arithmatex">\((-\pi, \pi]\)</span>; it is <strong>not</strong> wrapped. As a consequence the penalty is only meaningful while <span class="arithmatex">\(|\theta - \tilde\theta| &lt; \pi\)</span>, which is the intended operating range of the driving joint (the controller is expected to deliver a target close to the current angle). Crossing the <span class="arithmatex">\(\pm\pi\)</span> branch cut makes the energy discontinuous; if larger travel is needed the driving target should be advanced incrementally.</p>
 <p>When <code>driving/is_constrained = 0</code>, the energy is zero and the driving effect is disabled.</p>
-<h2 id="state-update">State Update</h2>
-<p>At the end of each time step, the time integrator updates the <code>angle</code> attribute to reflect the current joint angle:</p>
-<div class="arithmatex">\[
-\theta_{\text{current}} = \text{map}_{[-\pi,\pi]}(\theta - \theta_{\text{init}})
-\]</div>
-<p>where <span class="arithmatex">\(\text{map}_{[-\pi,\pi]}\)</span> maps the angle into <span class="arithmatex">\((-\pi, \pi]\)</span>.</p>
+<p>The current angle <span class="arithmatex">\(\theta_{\text{current}}\)</span> and the initial offset <span class="arithmatex">\(\theta_{\text{init}}\)</span> are read from the <strong>base</strong> <a href="../affine_body_revolute_joint/">AffineBodyRevoluteJoint</a>, which tracks them on the <code>angle</code> / <code>init_angle</code> edge attributes and keeps them in sync with the body state. The driving joint only consumes these values — it does not own them.</p>
 <h2 id="requirement">Requirement</h2>
 <p>This constitution must be applied to a geometry that already has an <a href="../affine_body_revolute_joint/">AffineBodyRevoluteJoint</a> (UID=18) constitution.</p>
 <h2 id="attributes">Attributes</h2>
-<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge carries the same linking fields as <a href="../affine_body_revolute_joint/">Affine Body Revolute Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, base <code>strength_ratio</code> (if present), and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
+<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge inherits all linking and state fields of the base <a href="../affine_body_revolute_joint/">Affine Body Revolute Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, <code>angle</code>, <code>init_angle</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
 <p>Driving-specific attributes on <strong>edges</strong>:</p>
 <ul>
 <li><code>driving/strength_ratio</code>: <span class="arithmatex">\(\gamma\)</span> in <span class="arithmatex">\(K = \gamma(m_i + m_j)\)</span> above</li>
 <li><code>driving/is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the driving effect</li>
 <li><code>is_passive</code>: passive mode (<code>1</code>) locks at the current angle; active mode (<code>0</code>) drives to <code>aim_angle</code></li>
 <li><code>aim_angle</code>: <span class="arithmatex">\(\theta_{\text{aim}}\)</span>, the target angle in active mode</li>
-<li><code>angle</code>: <span class="arithmatex">\(\theta_{\text{current}}\)</span>, the current relative angle (updated by the backend each time step)</li>
-<li><code>init_angle</code>: <span class="arithmatex">\(\theta_{\text{init}}\)</span>, the initial angle offset</li>
 </ul></div>
 
 

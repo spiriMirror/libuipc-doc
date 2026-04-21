@@ -62,7 +62,7 @@
 |  bool | [**is\_same\_oriented\_tri**](#function-is_same_oriented_tri) (const Vector3i &, const Vector3i &) noexcept<br> |
 |  bool | [**is\_same\_tet**](#function-is_same_tet) (const Vector4i &, const Vector4i &) noexcept<br> |
 |  bool | [**is\_same\_tri**](#function-is_same_tri) (const Vector3i &, const Vector3i &) noexcept<br> |
-|  void | [**outward\_tri\_from\_tet**](#function-outward_tri_from_tet) (span&lt; const Vector3, 4 &gt; Vs, span&lt; Vector3i, 4 &gt; Fs) noexcept<br> |
+|  void | [**outward\_tri\_from\_tet**](#function-outward_tri_from_tet) (span&lt; const Vector3, 4 &gt; Vs, span&lt; Vector3i, 4 &gt; Fs) <br> |
 
 
 
@@ -244,7 +244,7 @@ static bool uipc::geometry::SimplexUtils::is_same_tri (
 static void uipc::geometry::SimplexUtils::outward_tri_from_tet (
     span< const Vector3, 4 > Vs,
     span< Vector3i, 4 > Fs
-) noexcept
+) 
 ```
 
 

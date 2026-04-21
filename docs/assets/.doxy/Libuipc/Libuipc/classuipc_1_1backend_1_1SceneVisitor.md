@@ -74,7 +74,7 @@
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**pending\_geometries**](#function-pending_geometries) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**pending\_rest\_geometries**](#function-pending_rest_geometries) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**rest\_geometries**](#function-rest_geometries) () noexcept const<br> |
-|  void | [**solve\_pending**](#function-solve_pending) () noexcept<br> |
+|  void | [**solve\_pending**](#function-solve_pending) () <br> |
 |  const [**core::SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept const<br> |
 |  [**core::SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept<br> |
 
@@ -428,7 +428,7 @@ span< S< geometry::GeometrySlot > > uipc::backend::SceneVisitor::rest_geometries
 ### function solve\_pending 
 
 ```C++
-void uipc::backend::SceneVisitor::solve_pending () noexcept
+void uipc::backend::SceneVisitor::solve_pending () 
 ```
 
 

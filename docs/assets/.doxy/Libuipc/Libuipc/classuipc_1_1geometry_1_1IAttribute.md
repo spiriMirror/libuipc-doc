@@ -54,8 +54,8 @@ Inherited by the following classes: [uipc::geometry::Attribute](classuipc_1_1geo
 | Type | Name |
 | ---: | :--- |
 |   | [**IAttribute**](#function-iattribute) () = default<br> |
-|  void | [**from\_json**](#function-from_json) (const Json & j) noexcept<br> |
-|  void | [**from\_json\_array**](#function-from_json_array) (const Json & j) noexcept<br> |
+|  void | [**from\_json**](#function-from_json) (const Json & j) <br> |
+|  void | [**from\_json\_array**](#function-from_json_array) (const Json & j) <br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br>_Get the size of the attribute._  |
 |  Json | [**to\_json**](#function-to_json-12) (SizeT i) noexcept const<br> |
 |  Json | [**to\_json**](#function-to_json-22) () noexcept const<br> |
@@ -92,9 +92,9 @@ Inherited by the following classes: [uipc::geometry::Attribute](classuipc_1_1geo
 | virtual void | [**do\_clear**](#function-do_clear) () = 0<br> |
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone**](#function-do_clone) () const = 0<br> |
 | virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone\_empty**](#function-do_clone_empty) () const = 0<br> |
-| virtual void | [**do\_copy\_from**](#function-do_copy_from) (const [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) noexcept = 0<br> |
-| virtual void | [**do\_from\_json**](#function-do_from_json) (const Json & j) noexcept = 0<br> |
-| virtual void | [**do\_from\_json\_array**](#function-do_from_json_array) (const Json & j) noexcept = 0<br> |
+| virtual void | [**do\_copy\_from**](#function-do_copy_from) (const [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) = 0<br> |
+| virtual void | [**do\_from\_json**](#function-do_from_json) (const Json & j) = 0<br> |
+| virtual void | [**do\_from\_json\_array**](#function-do_from_json_array) (const Json & j) = 0<br> |
 | virtual void | [**do\_reorder**](#function-do_reorder) (span&lt; const SizeT &gt; O) noexcept = 0<br> |
 | virtual void | [**do\_reserve**](#function-do_reserve) (SizeT N) = 0<br> |
 | virtual void | [**do\_resize**](#function-do_resize) (SizeT N) = 0<br> |
@@ -129,7 +129,7 @@ uipc::geometry::IAttribute::IAttribute () = default
 ```C++
 void uipc::geometry::IAttribute::from_json (
     const Json & j
-) noexcept
+) 
 ```
 
 
@@ -144,7 +144,7 @@ void uipc::geometry::IAttribute::from_json (
 ```C++
 void uipc::geometry::IAttribute::from_json_array (
     const Json & j
-) noexcept
+) 
 ```
 
 
@@ -270,7 +270,7 @@ virtual S< IAttribute > uipc::geometry::IAttribute::do_clone_empty () const = 0
 virtual void uipc::geometry::IAttribute::do_copy_from (
     const IAttribute & other,
     const AttributeCopy & copy
-) noexcept = 0
+) = 0
 ```
 
 
@@ -285,7 +285,7 @@ virtual void uipc::geometry::IAttribute::do_copy_from (
 ```C++
 virtual void uipc::geometry::IAttribute::do_from_json (
     const Json & j
-) noexcept = 0
+) = 0
 ```
 
 
@@ -300,7 +300,7 @@ virtual void uipc::geometry::IAttribute::do_from_json (
 ```C++
 virtual void uipc::geometry::IAttribute::do_from_json_array (
     const Json & j
-) noexcept = 0
+) = 0
 ```
 
 

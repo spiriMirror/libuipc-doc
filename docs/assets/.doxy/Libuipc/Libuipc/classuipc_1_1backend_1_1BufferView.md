@@ -52,7 +52,7 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**BufferView**](#function-bufferview-12) () = default<br> |
-|   | [**BufferView**](#function-bufferview-22) (HandleT handle, SizeT element\_offset, SizeT element\_count, SizeT element\_size, SizeT element\_stride, std::string\_view backend\_name) noexcept<br> |
+|   | [**BufferView**](#function-bufferview-22) (HandleT handle, SizeT element\_offset, SizeT element\_count, SizeT element\_size, SizeT element\_stride, std::string\_view backend\_name) <br> |
 |  std::string\_view | [**backend**](#function-backend) () noexcept const<br> |
 |  SizeT | [**element\_size**](#function-element_size) () noexcept const<br> |
 |  SizeT | [**element\_stride**](#function-element_stride) () noexcept const<br> |
@@ -61,7 +61,7 @@
 |   | [**operator bool**](#function-operator-bool) () noexcept const<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
 |  SizeT | [**size\_in\_bytes**](#function-size_in_bytes) () noexcept const<br> |
-|  [**BufferView**](classuipc_1_1backend_1_1BufferView.md) | [**subview**](#function-subview) (SizeT offset, SizeT element\_count) noexcept const<br> |
+|  [**BufferView**](classuipc_1_1backend_1_1BufferView.md) | [**subview**](#function-subview) (SizeT offset, SizeT element\_count) const<br> |
 
 
 
@@ -118,7 +118,7 @@ uipc::backend::BufferView::BufferView (
     SizeT element_size,
     SizeT element_stride,
     std::string_view backend_name
-) noexcept
+) 
 ```
 
 
@@ -238,7 +238,7 @@ SizeT uipc::backend::BufferView::size_in_bytes () noexcept const
 BufferView uipc::backend::BufferView::subview (
     SizeT offset,
     SizeT element_count
-) noexcept const
+) const
 ```
 
 
