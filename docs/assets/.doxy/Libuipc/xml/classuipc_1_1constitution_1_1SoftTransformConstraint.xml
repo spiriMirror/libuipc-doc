@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_transform_constraint.h" line="32" column="10" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="32" bodyend="-1"/>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="33" column="10" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="33" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -86,15 +86,7 @@
 <parametername>strength_ratio</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The strength ratio of the constraint, strength_ratio[0] is the strength of the translation, strength_ratio[1] is the strength of the rotation. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>is_kinematic</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>If the instances&apos; kinetic energy is not considered. </para>
+<para><ref refid="classuipc_1_1constitution_1_1Constraint" kindref="compound">Constraint</ref> strength ratio (eta_p, eta_a), where: strength_ratio[0] = eta_p: center-of-mass translation constraint strength. strength_ratio[1] = eta_a: rotation/deformation-about-CM constraint strength. Both values must be non-negative. Typical range: [0, 100]. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -102,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_transform_constraint.h" line="24" column="10"/>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="25" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -118,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_transform_constraint.h" line="26" column="17"/>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="27" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -135,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/soft_transform_constraint.h" line="29" column="9"/>
+        <location file="include/uipc/constitution/soft_transform_constraint.h" line="30" column="9"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -178,7 +170,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/soft_transform_constraint.h" line="9" column="1" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="10" bodyend="33"/>
+    <location file="include/uipc/constitution/soft_transform_constraint.h" line="9" column="1" bodyfile="include/uipc/constitution/soft_transform_constraint.h" bodystart="10" bodyend="34"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1SoftTransformConstraint_1aaf460a98d9992dbcd0ff491f21303771" prot="public" virt="non-virtual"><scope>uipc::constitution::SoftTransformConstraint</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1Constraint_1a87edc064bcbfd767150a4f185ddbb8c9" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::Constraint::"><scope>uipc::constitution::SoftTransformConstraint</scope><name>apply_to</name></member>

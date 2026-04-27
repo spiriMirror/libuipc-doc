@@ -259,8 +259,7 @@ void uipc::constitution::SoftTransformConstraint::apply_to (
 
 
 * `sc` The simplicial complex to apply the constraint to. 
-* `strength_ratio` The strength ratio of the constraint, strength\_ratio[0] is the strength of the translation, strength\_ratio[1] is the strength of the rotation. 
-* `is_kinematic` If the instances' kinetic energy is not considered. 
+* `strength_ratio` [**Constraint**](classuipc_1_1constitution_1_1Constraint.md) strength ratio (eta\_p, eta\_a), where: strength\_ratio[0] = eta\_p: center-of-mass translation constraint strength. strength\_ratio[1] = eta\_a: rotation/deformation-about-CM constraint strength. Both values must be non-negative. Typical range: [0, 100]. 
 
 
 

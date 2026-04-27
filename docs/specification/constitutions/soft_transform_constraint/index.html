@@ -3050,29 +3050,24 @@ a_{33}\\
 \]</div>
 <p><span class="arithmatex">\(\mathbf{p}\)</span> is the position of the affine body and the <span class="arithmatex">\(\mathbf{a}_i\)</span> are the rows of the affine transformation matrix.</p>
 <h2 id="16-softtransformconstraint">#16 SoftTransformConstraint</h2>
-<p>The soft transform constraint energy has the form of "Kinetic" defined as</p>
+<p>The constraint energy is</p>
 <div class="arithmatex">\[
-\Psi = \frac{1}{2} \left( \mathbf{q} - \hat{\mathbf{q}} \right)^T \tilde{\mathbf{M}} \left( \mathbf{q} - \hat{\mathbf{q}} \right),
+\Psi = \frac{1}{2} \delta\mathbf{q}^T \tilde{\mathbf{M}}\, \delta\mathbf{q}, \quad \delta\mathbf{q} = \mathbf{q} - \hat{\mathbf{q}},
 \]</div>
-<p>where <span class="arithmatex">\(\hat{\mathbf{q}}\)</span> is the target state, and <span class="arithmatex">\(\tilde{\mathbf{M}}\)</span> is the modified mass matrix obtained by scaling the blocks of the original mass matrix <span class="arithmatex">\(\mathbf{M}\)</span> according to the strength ratios:</p>
+<p>where <span class="arithmatex">\(\hat{\mathbf{q}}\)</span> is the target state. The constraint mass matrix <span class="arithmatex">\(\tilde{\mathbf{M}}\)</span> is constructed from the <strong>parallel-axis decomposition</strong> of the physical mass matrix <span class="arithmatex">\(\mathbf{M}\)</span>:</p>
 <div class="arithmatex">\[
-\tilde{\mathbf{M}} = \begin{bmatrix}
-\eta_p \mathbf{M}^{pp} &amp; \sqrt{\eta_p \eta_a} \mathbf{M}^{pa} \\
-\sqrt{\eta_p \eta_a} \mathbf{M}^{ap} &amp; \eta_a \mathbf{M}^{aa}
-\end{bmatrix},
+\tilde{\mathbf{M}} = \eta_p\,\mathbf{M}_{cm} + \eta_a\,\mathbf{M}_{rot}, \quad \mathbf{M} = \mathbf{M}_{cm} + \mathbf{M}_{rot},
 \]</div>
 <p>where:</p>
 <ul>
-<li><span class="arithmatex">\(\mathbf{M}^{pp}_{3 \times 3}\)</span> is the position block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
-<li><span class="arithmatex">\(\mathbf{M}^{pa}_{3 \times 9}\)</span> is the cross-term block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
-<li><span class="arithmatex">\(\mathbf{M}^{ap}_{9 \times 3}\)</span> is the cross-term block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
-<li><span class="arithmatex">\(\mathbf{M}^{aa}_{9 \times 9}\)</span> is the affine block of <span class="arithmatex">\(\mathbf{M}\)</span></li>
-<li><span class="arithmatex">\(\eta_p \in (0,+\infty)\)</span> is the position constraint strength ratio</li>
-<li><span class="arithmatex">\(\eta_a \in (0,+\infty)\)</span> is the affine (or rotation if not so rigorous) constraint strength ratio</li>
+<li><span class="arithmatex">\(\mathbf{c}\)</span> is the center of mass in the reference frame (<span class="arithmatex">\(m\mathbf{c} = m\bar{\mathbf{x}}\)</span>)</li>
+<li><span class="arithmatex">\(\mathbf{M}_{cm} = m\,\mathbf{J}(\mathbf{c})^T\mathbf{J}(\mathbf{c})\)</span> is the ABD mass matrix of a point mass <span class="arithmatex">\(m\)</span> at <span class="arithmatex">\(\mathbf{c}\)</span>, capturing the kinetic energy of center-of-mass translation</li>
+<li><span class="arithmatex">\(\mathbf{M}_{rot} = \mathbf{M} - \mathbf{M}_{cm}\)</span> captures rotation/deformation <em>about</em> the center of mass, with <span class="arithmatex">\(\mathbf{S}_{cm} = \mathbf{S} - m\mathbf{c}\mathbf{c}^T\)</span> in its affine block, where <span class="arithmatex">\(\mathbf{S} = \int\rho\,\bar{\mathbf{x}}\bar{\mathbf{x}}^T\,dV\)</span></li>
+<li><span class="arithmatex">\(\eta_p \in [0,+\infty)\)</span>: translation (center-of-mass) constraint strength</li>
+<li><span class="arithmatex">\(\eta_a \in [0,+\infty)\)</span>: rotation/deformation constraint strength</li>
 </ul>
-<p>The cross-terms use the geometric mean <span class="arithmatex">\(\sqrt{\eta_p \eta_a}\)</span> to maintain consistency between the position and affine constraints.</p>
-<p>The reason we use strength ratio is that the mass matrix <span class="arithmatex">\(\mathbf{M}\)</span> already contains the mass and inertia information, so that users only need to care about how strong the constraint is compared to the mass and inertia of the body, which is more intuitive.</p>
-<p>Because the constraint is "SOFT", we don't allow a too-strong strength which will lead to numerical instability. Normally, <span class="arithmatex">\(\eta_p\)</span> and <span class="arithmatex">\(\eta_a\)</span> are better in the range of <span class="arithmatex">\([0, 100]\)</span>.</p>
+<p>Equivalently: <span class="arithmatex">\(\tilde{\mathbf{M}} = \eta_a\,\mathbf{M} + (\eta_p - \eta_a)\,\mathbf{M}_{cm}\)</span>.</p>
+<p>Because the constraint is "SOFT", overly large values will cause numerical instability. Normally <span class="arithmatex">\(\eta_p\)</span> and <span class="arithmatex">\(\eta_a\)</span> are better kept in the range <span class="arithmatex">\([0, 100]\)</span>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>instances</code>:</p>
 <ul>
