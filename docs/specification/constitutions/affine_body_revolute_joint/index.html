@@ -1259,6 +1259,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#parent-vs-child-along-the-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parent vs. child along the axis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#state-update" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3049,6 +3060,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#parent-vs-child-along-the-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parent vs. child along the axis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#state-update" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3135,12 +3157,7 @@ E = \frac{K}{2} \cdot \left(
 \]</div>
 <p>where <span class="arithmatex">\(K\)</span> is the stiffness constant of the joint, we choose <span class="arithmatex">\(K=\gamma (m_i + m_j)\)</span>, where <span class="arithmatex">\(\gamma\)</span> is a <strong>user defined</strong> <code>strength_ratio</code> parameter, and <span class="arithmatex">\(m_i\)</span> and <span class="arithmatex">\(m_j\)</span> are the masses of the two affine bodies.</p>
 <h2 id="angle-state">Angle State</h2>
-<p>The revolute joint tracks a scalar joint angle <span class="arithmatex">\(\theta\)</span> that extra-per-joint constitutions (driving joint, angle limit, external torque) share. The backend builds, for each body <span class="arithmatex">\(k \in \{i,j\}\)</span>, an orthonormal basis <span class="arithmatex">\((\hat{\mathbf{t}}_k, \hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k)\)</span> aligned with the joint axis at setup, where</p>
-<div class="arithmatex">\[
-\hat{\mathbf{t}}_k = \frac{\mathbf{x}^1_k - \mathbf{x}^0_k}{\|\mathbf{x}^1_k - \mathbf{x}^0_k\|}, \quad
-\hat{\mathbf{b}}_k = \hat{\mathbf{t}}_k \times \hat{\mathbf{n}}_k,
-\]</div>
-<p>and the <span class="arithmatex">\((\hat{\mathbf{n}}, \hat{\mathbf{b}})\)</span> pair is stored per body in the layout <span class="arithmatex">\([\hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k]\)</span>. The current relative angle between the two bodies is extracted as</p>
+<p>The revolute joint tracks a scalar joint angle <span class="arithmatex">\(\theta\)</span> that extra-per-joint constitutions (driving joint, angle limit, external torque) share. The backend constructs per body <span class="arithmatex">\(k \in \{i,j\}\)</span> an orthonormal basis <span class="arithmatex">\((\hat{\mathbf{t}}_k, \hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k)\)</span> from the hinge geometry embedded in symbolic generation and Jacobian layout for this constitution (see <code>sym/affine_body_revolute_joint</code> alongside deployed kernels): <span class="arithmatex">\(\hat{\mathbf{t}}_k\)</span> is the <strong>unit tangent</strong> along body <span class="arithmatex">\(k\)</span>’s hinge segment; <span class="arithmatex">\(\hat{\mathbf{b}}_k = \hat{\mathbf{t}}_k \times \hat{\mathbf{n}}_k\)</span>. Pair <span class="arithmatex">\([\hat{\mathbf{n}}_k, \hat{\mathbf{b}}_k]\)</span> is the rotating perpendicular frame used downstream. Current relative angle is</p>
 <div class="arithmatex">\[
 \cos\theta = \frac{\hat{\mathbf{n}}_i \cdot \hat{\mathbf{n}}_j + \hat{\mathbf{b}}_i \cdot \hat{\mathbf{b}}_j}{2}, \quad
 \sin\theta = \frac{\hat{\mathbf{b}}_i \cdot \hat{\mathbf{n}}_j - \hat{\mathbf{n}}_i \cdot \hat{\mathbf{b}}_j}{2},
@@ -3148,7 +3165,15 @@ E = \frac{K}{2} \cdot \left(
 <div class="arithmatex">\[
 \theta = \operatorname{atan2}(\sin\theta,\; \cos\theta) \in (-\pi, \pi].
 \]</div>
-<p>The sign follows the right-hand rule around <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> (counterclockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>).</p>
+<p>The sign follows the right-hand rule <strong>about the child tangent</strong> <span class="arithmatex">\(+\hat{\mathbf{t}}_{\mathrm{child}}\)</span> (see below): counterclockwise when viewed along <span class="arithmatex">\(+\hat{\mathbf{t}}_{\mathrm{child}}\)</span>.</p>
+<h3 id="parent-vs-child-along-the-axis">Parent vs. child along the axis</h3>
+<p>Map <strong>left geometry</strong> (<code>l_*</code>, body <span class="arithmatex">\(i\)</span>) to <strong>parent</strong> and <strong>right geometry</strong> (<code>r_*</code>, body <span class="arithmatex">\(j\)</span>) to <strong>child</strong>, matching typical kinematic-tree layout.</p>
+<p>At a valid configuration, the mapped joint axis rays are <strong>anti-parallel</strong> on the shared line:</p>
+<div class="arithmatex">\[
+\hat{\mathbf{t}}_{\mathrm{parent}} = \hat{\mathbf{t}}_i = -\,\hat{\mathbf{t}}_{\mathrm{child}} = -\,\hat{\mathbf{t}}_j,
+\]</div>
+<p>because each body carries its edge from attachment point <span class="arithmatex">\(\mathbf{x}^0_k\)</span> to <span class="arithmatex">\(\mathbf{x}^1_k\)</span> while the pairing links endpoints across bodies along the same physical axis.</p>
+<p>Angular state <span class="arithmatex">\(\theta\)</span>, <code>angle</code>, limits, and driving use <strong>both</strong> bodies’ bases symmetrically via the formulas above. Which ray defines <strong>positive external torque</strong> is specified <strong>only</strong> for constitution <strong>Affine Body Revolute Joint External Force</strong> (UID 668): actuator torque follows <strong>child-positive</strong> <span class="arithmatex">\(+\hat{\mathbf{t}}_{\mathrm{child}}\)</span>; see <a href="../affine_body_revolute_joint_external_force/#parent-vs-child-axis-and-positive-torque">Parent vs. child axis and positive torque</a>.</p>
 <h3 id="state-update">State Update</h3>
 <p>At the end of each time step, the backend writes back the current relative angle, wrapped to <span class="arithmatex">\((-\pi, \pi]\)</span>, to the <code>angle</code> edge attribute:</p>
 <div class="arithmatex">\[

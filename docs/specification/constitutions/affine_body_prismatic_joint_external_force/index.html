@@ -1199,24 +1199,41 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#energy-integration" class="md-nav__link">
+    <nav class="md-nav" aria-label="Force Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tangent-direction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Energy Integration
+        Tangent Direction
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#state-update" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#parent-vs-child-tangent-and-positive-force" class="md-nav__link">
     <span class="md-ellipsis">
       
-        State Update
+        Parent vs. child tangent and positive force
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Integration
       
     </span>
   </a>
@@ -3055,24 +3072,41 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#energy-integration" class="md-nav__link">
+    <nav class="md-nav" aria-label="Force Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tangent-direction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Energy Integration
+        Tangent Direction
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#state-update" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#parent-vs-child-tangent-and-positive-force" class="md-nav__link">
     <span class="md-ellipsis">
       
-        State Update
+        Parent vs. child tangent and positive force
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time Integration
       
     </span>
   </a>
@@ -3133,31 +3167,39 @@
 <h2 id="667-affinebodyprismaticjointexternalforce">#667 AffineBodyPrismaticJointExternalForce</h2>
 <p>The <strong>Affine Body Prismatic Joint External Force</strong> applies a scalar external force along the axis of a <a href="../affine_body_prismatic_joint/">Prismatic Joint</a>. The force drives translational motion between the two connected affine bodies along the joint's tangent direction <span class="arithmatex">\(\hat{\mathbf{t}}\)</span>.</p>
 <h2 id="force-application">Force Application</h2>
-<p>Given a scalar force <span class="arithmatex">\(f\)</span> and the joint tangent direction <span class="arithmatex">\(\hat{\mathbf{t}}\)</span>, the external force is applied as a 12D generalized force to each connected affine body:</p>
+<p>Given a scalar force <span class="arithmatex">\(f\)</span> and the per-body joint tangent <span class="arithmatex">\(\hat{\mathbf{t}}_k\)</span>, the external force enters as a translational generalized force on each body's affine origin DOF:</p>
 <div class="arithmatex">\[
-\mathbf{F}_i = \begin{bmatrix} +f \, \hat{\mathbf{t}}_i \\ \mathbf{0}_9 \end{bmatrix} \in \mathbb{R}^{12}, \quad
-\mathbf{F}_j = \begin{bmatrix} -f \, \hat{\mathbf{t}}_j \\ \mathbf{0}_9 \end{bmatrix} \in \mathbb{R}^{12},
+\mathbf{F}_k = \begin{bmatrix} +f \, \hat{\mathbf{t}}_k \\ \mathbf{0}_9 \end{bmatrix} \in \mathbb{R}^{12}, \quad k \in \{i, j\},
 \]</div>
 <p>where:</p>
 <ul>
 <li><span class="arithmatex">\(f\)</span> is the scalar force magnitude (per edge)</li>
-<li><span class="arithmatex">\(\hat{\mathbf{t}}_i = \mathring{\mathbf{J}}^{\hat{t}}_i \mathbf{q}_i\)</span> is the joint tangent direction in body <span class="arithmatex">\(i\)</span>'s current frame</li>
-<li><span class="arithmatex">\(\hat{\mathbf{t}}_j = \mathring{\mathbf{J}}^{\hat{t}}_j \mathbf{q}_j\)</span> is the joint tangent direction in body <span class="arithmatex">\(j\)</span>'s current frame</li>
-<li><span class="arithmatex">\(\mathbf{0}_9\)</span> denotes the nine-dimensional zero vector (no affine force component)</li>
+<li><span class="arithmatex">\(\hat{\mathbf{t}}_k\)</span> is the joint tangent direction on body <span class="arithmatex">\(k\)</span> in world space (see <a href="#tangent-direction">Tangent Direction</a>)</li>
+<li><span class="arithmatex">\(\mathbf{0}_9\)</span> is the nine-dimensional zero vector (no rotational generalized force)</li>
 </ul>
-<p>The tangent directions <span class="arithmatex">\(\hat{\mathbf{t}}_i\)</span> and <span class="arithmatex">\(\hat{\mathbf{t}}_j\)</span> are extracted from the current affine body states using the rest-space tangent coordinates, following the same conventions as the <a href="../affine_body_prismatic_joint/">Prismatic Joint</a>.</p>
-<p>A positive <span class="arithmatex">\(f\)</span> pushes body <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span> and body <span class="arithmatex">\(j\)</span> along <span class="arithmatex">\(-\hat{\mathbf{t}}\)</span>, effectively driving the two bodies apart along the joint axis.</p>
-<h2 id="energy-integration">Energy Integration</h2>
-<p>The external forces are incorporated into each affine body's kinetic energy term through the predicted position <span class="arithmatex">\(\tilde{\mathbf{q}}\)</span>, following the same mechanism as <a href="../affine_body_external_force/">AffineBodyExternalForce</a>:</p>
+<p>The same <span class="arithmatex">\(+f\)</span> is applied to both bodies; Newton's third law is encoded by the strict antisymmetry <span class="arithmatex">\(\hat{\mathbf{t}}_i = -\hat{\mathbf{t}}_j\)</span> that is enforced numerically in § <a href="#tangent-direction">Tangent Direction</a>.</p>
+<h3 id="tangent-direction">Tangent Direction</h3>
+<p>The joint tangent on body <span class="arithmatex">\(k\)</span> is defined by two anchor points <span class="arithmatex">\(\mathbf{x}^0_k\)</span> and <span class="arithmatex">\(\mathbf{x}^1_k\)</span> in world space, following the base <a href="../affine_body_prismatic_joint/">Prismatic Joint</a> convention. Each body first computes its own raw world-space tangent from its own anchors and current pose:</p>
 <div class="arithmatex">\[
-E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(\mathbf{q} - \tilde{\mathbf{q}}\right),
+\tilde{\mathbf{t}}_k = \frac{\mathbf{x}^1_k - \mathbf{x}^0_k}{\bigl\|\mathbf{x}^1_k - \mathbf{x}^0_k\bigr\|}, \quad k \in \{i, j\}.
 \]</div>
-<p>where <span class="arithmatex">\(\tilde{\mathbf{q}}\)</span> is updated each time step to include the acceleration from the external force:</p>
+<p>By construction the two anchor pairs are laid out in opposite order on the two bodies, so <span class="arithmatex">\(\tilde{\mathbf{t}}_i \approx -\tilde{\mathbf{t}}_j\)</span> whenever the joint constraint is satisfied. To absorb residual numerical drift near the singularity (and to guarantee Newton's third law bit-exactly regardless of the per-body roundoff), the two raw tangents are symmetrized into one strictly antisymmetric pair:</p>
 <div class="arithmatex">\[
-\mathbf{a}_{ext} = \mathbf{M}^{-1} \mathbf{F}_{ext}.
+\hat{\mathbf{t}}_j = \tfrac{1}{2}\bigl(\tilde{\mathbf{t}}_j + \tilde{\mathbf{t}}_i\bigr),
 \]</div>
-<h2 id="state-update">State Update</h2>
-<p>The current signed displacement <span class="arithmatex">\(d_{\text{current}}\)</span> is tracked and written back to the <code>distance</code> edge attribute by the <strong>base</strong> <a href="../affine_body_prismatic_joint/">AffineBodyPrismaticJoint</a> — not by this external-force constitution. See <a href="../affine_body_prismatic_joint/#distance-state">Distance State</a> for the formulation.</p>
+<div class="arithmatex">\[
+\hat{\mathbf{t}}_i = -\hat{\mathbf{t}}_j.
+\]</div>
+<p>The averaging step is a first-order denoiser: as long as the joint is well-posed, <span class="arithmatex">\(\tilde{\mathbf{t}}_i + \tilde{\mathbf{t}}_j\)</span> is roundoff-level and the corrected tangents lie within the same <span class="arithmatex">\(\mathcal{O}(\varepsilon)\)</span> neighborhood as the raw ones, while strict antisymmetry <span class="arithmatex">\(\hat{\mathbf{t}}_i = -\hat{\mathbf{t}}_j\)</span> now holds exactly. If the magnitude of <span class="arithmatex">\(\tilde{\mathbf{t}}_i + \tilde{\mathbf{t}}_j\)</span> is non-trivial, the joint constraint itself has drifted and the upstream constraint solver — not this symmetrization — is responsible for the fix.</p>
+<p><a id="parent-vs-child-tangent-and-positive-force"></a></p>
+<h3 id="parent-vs-child-tangent-and-positive-force">Parent vs. child tangent and positive force</h3>
+<p><strong>Parent</strong> <span class="arithmatex">\(=\)</span> left <span class="arithmatex">\((i)\)</span>, <strong>child</strong> <span class="arithmatex">\(=\)</span> right <span class="arithmatex">\((j)\)</span>, matching the base joint. The two anchor pairs are laid out in opposite order on the two bodies, so the raw per-body tangents point opposite ways: <span class="arithmatex">\(\tilde{\mathbf{t}}_i \approx -\tilde{\mathbf{t}}_j\)</span>. After the symmetrization in § <a href="#tangent-direction">Tangent Direction</a> this becomes the exact identity <span class="arithmatex">\(\hat{\mathbf{t}}_i = -\hat{\mathbf{t}}_j\)</span>.</p>
+<p>A positive <code>external_force</code> applies <span class="arithmatex">\(+f\,\hat{\mathbf{t}}_i\)</span> to the parent and <span class="arithmatex">\(+f\,\hat{\mathbf{t}}_j\)</span> to the child; because <span class="arithmatex">\(\hat{\mathbf{t}}_i = -\hat{\mathbf{t}}_j\)</span>, this drives the two bodies apart along the joint axis (or together when <span class="arithmatex">\(f &lt; 0\)</span>). This polarity applies only to this constitution (UID 667); the shared <code>distance</code> frame for limits and driving targets follows the base <a href="../affine_body_prismatic_joint/#distance-state">Prismatic Joint</a>.</p>
+<h2 id="time-integration">Time Integration</h2>
+<p><code>external_force</code> contributes <strong>no potential energy of its own</strong>. The generalized force <span class="arithmatex">\(\mathbf{F}_k\)</span> from § <a href="#force-application">Force Application</a> enters the time step only through the predicted position <span class="arithmatex">\(\tilde{\mathbf{q}}_k\)</span> (i.e. as an inertial shift), in the same way as <a href="../affine_body_external_force/">AffineBodyExternalForce</a>:</p>
+<div class="arithmatex">\[
+\mathbf{a}_{\text{ext},k} = \mathbf{M}_k^{-1} \mathbf{F}_k.
+\]</div>
 <h2 id="runtime-control">Runtime Control</h2>
 <p>The force can be updated at each frame through the Animator system:</p>
 <ul>
@@ -3167,8 +3209,7 @@ E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(
 <h2 id="requirement">Requirement</h2>
 <p>This constitution must be applied to a geometry that already has an <a href="../affine_body_prismatic_joint/">AffineBodyPrismaticJoint</a> (UID=20) constitution.</p>
 <h2 id="attributes">Attributes</h2>
-<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). The edge inherits all linking and state fields of the base <a href="../affine_body_prismatic_joint/">Affine Body Prismatic Joint</a>: <code>l_geo_id</code>, <code>r_geo_id</code>, <code>l_inst_id</code>, <code>r_inst_id</code>, <code>strength_ratio</code>, <code>distance</code>, <code>init_distance</code>, and optional <code>l_position0</code>, <code>l_position1</code>, <code>r_position0</code>, <code>r_position1</code> when created via Local <code>create_geometry</code>.</p>
-<p>External-force-specific attributes on <strong>edges</strong>:</p>
+<p>On the joint geometry (1D simplicial complex), on <strong>edges</strong> (one edge per joint). Linking and state fields are inherited from the base <a href="../affine_body_prismatic_joint/">Affine Body Prismatic Joint</a>. The fields owned by this constitution are:</p>
 <ul>
 <li><code>external_force</code>: <span class="arithmatex">\(f\)</span> in the formulae above, scalar force along the joint axis (one per edge)</li>
 <li><code>external_force/is_constrained</code>: enables (<code>1</code>) or disables (<code>0</code>) the external force</li>
