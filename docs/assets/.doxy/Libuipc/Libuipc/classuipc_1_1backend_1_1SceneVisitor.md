@@ -63,6 +63,7 @@
 |  [**core::ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) & | [**contact\_tabular**](#function-contact_tabular-22) () noexcept<br> |
 |  const [**DiffSimVisitor**](classuipc_1_1backend_1_1DiffSimVisitor.md) & | [**diff\_sim**](#function-diff_sim-12) () noexcept const<br> |
 |  [**DiffSimVisitor**](classuipc_1_1backend_1_1DiffSimVisitor.md) & | [**diff\_sim**](#function-diff_sim-22) () noexcept<br> |
+|  Float | [**dt**](#function-dt) () noexcept const<br> |
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; | [**find\_geometry**](#function-find_geometry) (IndexT id) noexcept<br> |
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; | [**find\_rest\_geometry**](#function-find_rest_geometry) (IndexT id) noexcept<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**geometries**](#function-geometries) () noexcept const<br> |
@@ -265,6 +266,19 @@ const DiffSimVisitor & uipc::backend::SceneVisitor::diff_sim () noexcept const
 
 ```C++
 DiffSimVisitor & uipc::backend::SceneVisitor::diff_sim () noexcept
+```
+
+
+
+
+<hr>
+
+
+
+### function dt 
+
+```C++
+Float uipc::backend::SceneVisitor::dt () noexcept const
 ```
 
 

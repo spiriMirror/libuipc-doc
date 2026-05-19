@@ -3059,6 +3059,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-dt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function dt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-find_geometry" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3294,6 +3305,10 @@
 <td style="text-align: left;"><a href="#function-diff_sim-22"><strong>diff_sim</strong></a> () noexcept<br></td>
 </tr>
 <tr>
+<td style="text-align: right;">Float</td>
+<td style="text-align: left;"><a href="#function-dt"><strong>dt</strong></a> () noexcept const<br></td>
+</tr>
+<tr>
 <td style="text-align: right;">S&lt; <a href="../classuipc_1_1geometry_1_1GeometrySlot/"><strong>geometry::GeometrySlot</strong></a> &gt;</td>
 <td style="text-align: left;"><a href="#function-find_geometry"><strong>find_geometry</strong></a> (IndexT id) noexcept<br></td>
 </tr>
@@ -3420,81 +3435,86 @@
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-find_geometry">function find_geometry</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">find_geometry</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">id</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+<h3 id="function-dt">function dt</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">Float</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">dt</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-find_rest_geometry">function find_rest_geometry</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">find_rest_geometry</span><span class="w"> </span><span class="p">(</span>
+<h3 id="function-find_geometry">function find_geometry</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">find_geometry</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">id</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-find_rest_geometry">function find_rest_geometry</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">find_rest_geometry</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">IndexT</span><span class="w"> </span><span class="n">id</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-geometries">function geometries</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-get">function get</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">core</span><span class="o">::</span><span class="n">Scene</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">get</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">core</span><span class="o">::</span><span class="n">Scene</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">get</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-is_pending">function is_pending</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">is_pending</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">is_pending</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-operator">function operator=</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">SceneVisitor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SceneVisitor</span><span class="w"> </span><span class="o">&amp;</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
-</span></code></pre></div>
-<hr>
-
-<h3 id="function-operator_1">function operator=</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">SceneVisitor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">SceneVisitor</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">SceneVisitor</span><span class="w"> </span><span class="o">&amp;</span>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
 </span></code></pre></div>
 <hr>
 
+<h3 id="function-operator_1">function operator=</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">SceneVisitor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">SceneVisitor</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-pending_destroy_ids">function pending_destroy_ids</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">pending_destroy_ids</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">pending_destroy_ids</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-pending_geometries">function pending_geometries</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">pending_geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">pending_geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-pending_rest_geometries">function pending_rest_geometries</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">pending_rest_geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">pending_rest_geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-rest_geometries">function rest_geometries</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">rest_geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">GeometrySlot</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">rest_geometries</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-solve_pending">function solve_pending</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">solve_pending</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">solve_pending</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-subscene_tabular-12">function subscene_tabular [1/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">const</span><span class="w"> </span><span class="n">core</span><span class="o">::</span><span class="n">SubsceneTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">const</span><span class="w"> </span><span class="n">core</span><span class="o">::</span><span class="n">SubsceneTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <hr>
 
 <h3 id="function-subscene_tabular-22">function subscene_tabular [2/2]</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">core</span><span class="o">::</span><span class="n">SubsceneTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">core</span><span class="o">::</span><span class="n">SubsceneTabular</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">backend</span><span class="o">::</span><span class="n">SceneVisitor</span><span class="o">::</span><span class="n">subscene_tabular</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
 

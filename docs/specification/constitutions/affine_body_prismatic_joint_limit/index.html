@@ -3090,7 +3090,14 @@
 <p><strong>Affine Body Prismatic Joint Limit</strong> restricts how far two bodies can slide relative to each other along a <a href="../affine_body_prismatic_joint/">Prismatic Joint</a> axis. When the joint translation goes outside a specified lower or upper bound, a cubic penalty is applied. It is an InterAffineBody extra constitution defined on prismatic-joint geometry.</p>
 <h2 id="energy">Energy</h2>
 <p><code>limit/lower</code> and <code>limit/upper</code> are <strong>absolute bounds on the reported <code>distance</code> attribute</strong> (i.e. <span class="arithmatex">\(d_{\text{current}}\)</span> as defined by the base <a href="../affine_body_prismatic_joint/#distance-state">Prismatic Joint</a>). The user can set them directly against the value they read back from <code>distance</code>.</p>
-<p>Internally the penalty is evaluated on the raw geometric coordinate <span class="arithmatex">\(x\)</span> (see <a href="#meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></a>; to a first approximation <span class="arithmatex">\(x \approx d(\mathbf{q}) = d_{\text{current}} - d_0\)</span>). The effective bounds on <span class="arithmatex">\(x\)</span> are therefore shifted by <span class="arithmatex">\(-d_0\)</span>:</p>
+<p>Internally the penalty is evaluated on the scalar coordinate <span class="arithmatex">\(x\)</span>, whose
+meaning is the raw joint coordinate <span class="arithmatex">\(d(\mathbf{q})\)</span> defined by the base
+<a href="../affine_body_prismatic_joint/#distance-state">Prismatic Joint</a>. The
+reported distance is</p>
+<div class="arithmatex">\[
+d_{\text{current}} = x + d_0,
+\]</div>
+<p>so the effective bounds on <span class="arithmatex">\(x\)</span> are shifted by <span class="arithmatex">\(-d_0\)</span>:</p>
 <div class="arithmatex">\[
 l = l_{\text{user}} - d_0, \quad u = u_{\text{user}} - d_0,
 \]</div>
@@ -3117,22 +3124,23 @@ s(l-x)^3, &amp; x&lt;l
 \]</div>
 <p>Boundary points are treated as in-range.</p>
 <h2 id="meaning-of-x">Meaning of <span class="arithmatex">\(x\)</span></h2>
-<p>The prismatic coordinate is evaluated in incremental form:</p>
+<p>The coordinate <span class="arithmatex">\(x\)</span> used by the limit is the same raw joint coordinate
+<span class="arithmatex">\(d(\mathbf{q})\)</span> as the base
+<a href="../affine_body_prismatic_joint/#distance-state">Prismatic Joint</a>:</p>
 <div class="arithmatex">\[
-x=\theta^t+\delta,
+x = d(\mathbf{q}) =
+\frac{
+(\mathbf{c}_j(\mathbf{q})-\mathbf{c}_i(\mathbf{q}))
+\cdot
+(\hat{\mathbf{t}}_i(\mathbf{q})+\hat{\mathbf{t}}_j(\mathbf{q}))
+}{2}.
 \]</div>
-<div class="arithmatex">\[
-\theta^t=\Delta\Theta(\mathbf{q}^{t},\mathbf{q}_{ref}), \quad
-\delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t}).
-\]</div>
-<p>Here:</p>
-<ul>
-<li><span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.</li>
-<li><span class="arithmatex">\(\mathbf{q}^{t}\)</span> is the previous-time-step DOF.</li>
-<li><span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.</li>
-<li><span class="arithmatex">\(\theta^t\)</span> is the accumulated prismatic coordinate from the previous step.</li>
-</ul>
-<p>Note that <span class="arithmatex">\(\mathbf{q}\)</span> is the concatenation of the DOF of the two affine bodies connected by the prismatic joint.</p>
+<p>Here <span class="arithmatex">\(\mathbf{c}_i(\mathbf{q})\)</span> and <span class="arithmatex">\(\mathbf{c}_j(\mathbf{q})\)</span> are the current
+world-space joint anchor positions on the two affine bodies, and
+<span class="arithmatex">\(\hat{\mathbf{t}}_i(\mathbf{q})\)</span>, <span class="arithmatex">\(\hat{\mathbf{t}}_j(\mathbf{q})\)</span> are the
+current world-space prismatic axes. Note that <span class="arithmatex">\(\mathbf{q}\)</span> is the
+concatenation of the DOF of the two affine bodies connected by the prismatic
+joint.</p>
 <div class="arithmatex">\[
 \mathbf{q} =
 \begin{bmatrix}
@@ -3143,9 +3151,10 @@ x=\theta^t+\delta,
 <p>The <a href="../affine_body_prismatic_joint/">Prismatic Joint</a> geometry is represented as an edge with two endpoints. The joint axis direction is defined by the order from <span class="arithmatex">\(\mathbf{c}_i\)</span> to <span class="arithmatex">\(\mathbf{c}_j\)</span>, denoted <span class="arithmatex">\(\mathbf{c}_i \to \mathbf{c}_j\)</span>, giving <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</p>
 <p><img alt="Prismatic joint axis \(\hat{\mathbf{t}}\)" src="../media/external_articulation_prismatic_constraint_fig1.drawio.svg"></p>
 <ul>
-<li><span class="arithmatex">\(x=0\)</span>: current relative prismatic coordinate equals the reference coordinate.</li>
-<li><span class="arithmatex">\(x&gt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</li>
-<li><span class="arithmatex">\(x&lt;0\)</span>: link <span class="arithmatex">\(j\)</span> translates relative to link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(-\hat{\mathbf{t}}\)</span>.</li>
+<li><span class="arithmatex">\(x=0\)</span>: the two joint anchors have zero signed separation along the averaged
+  prismatic axis.</li>
+<li><span class="arithmatex">\(x&gt;0\)</span>: link <span class="arithmatex">\(j\)</span> is ahead of link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</li>
+<li><span class="arithmatex">\(x&lt;0\)</span>: link <span class="arithmatex">\(j\)</span> is behind link <span class="arithmatex">\(i\)</span> along <span class="arithmatex">\(+\hat{\mathbf{t}}\)</span>.</li>
 </ul>
 <p>Equivalent symmetric coordinate (same convention as <a href="../external_articulation_constraint/">External Articulation Constraint</a>):</p>
 <div class="arithmatex">\[
@@ -3167,7 +3176,7 @@ x=\theta^t+\delta,
 <li><code>limit/upper</code>: <span class="arithmatex">\(u_{\text{user}}\)</span> — absolute upper bound on the reported <code>distance</code> (default <code>0.0</code>)</li>
 <li><code>limit/strength</code>: <span class="arithmatex">\(s\)</span> — penalty strength (default <code>1.0</code>)</li>
 </ul>
-<p>The limit also consumes the base-joint attribute <code>init_distance</code> (<span class="arithmatex">\(d_0\)</span>, default <code>0.0</code>); it is <strong>subtracted</strong> from <code>limit/lower</code>/<code>limit/upper</code> to form the effective bounds <span class="arithmatex">\(l\)</span>/<span class="arithmatex">\(u\)</span> used on the raw coordinate <span class="arithmatex">\(x\)</span>.</p></div>
+<p>The limit also consumes the base-joint attribute <code>init_distance</code> (<span class="arithmatex">\(d_0\)</span>, default <code>0.0</code>); it is <strong>subtracted</strong> from <code>limit/lower</code>/<code>limit/upper</code> to form the effective bounds <span class="arithmatex">\(l\)</span>/<span class="arithmatex">\(u\)</span> used on <span class="arithmatex">\(x=d(\mathbf{q})\)</span>. Equivalently, the penalty enforces the user-facing reported distance <span class="arithmatex">\(d_{\text{current}} = x + d_0\)</span>.</p></div>
 
 
 
