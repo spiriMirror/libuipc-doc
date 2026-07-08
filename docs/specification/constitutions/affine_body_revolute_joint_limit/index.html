@@ -3095,7 +3095,7 @@
 l = l_{\text{user}} - \alpha_0, \quad u = u_{\text{user}} - \alpha_0,
 \]</div>
 <p>where <span class="arithmatex">\(l_{\text{user}}, u_{\text{user}}\)</span> are <code>limit/lower</code>, <code>limit/upper</code> and <span class="arithmatex">\(\alpha_0\)</span> is <code>init_angle</code> from the base joint. Algebraically this is equivalent to enforcing <span class="arithmatex">\(l_{\text{user}} \le \theta_{\text{current}} \le u_{\text{user}}\)</span>. Let <span class="arithmatex">\(s\)</span> be <code>limit/strength</code>.</p>
-<p>Because <span class="arithmatex">\(x\)</span> is a raw accumulator that is not wrapped to <span class="arithmatex">\((-\pi,\pi]\)</span>, the limit is well-defined only while <span class="arithmatex">\(|x| &lt; \pi\)</span>; this is the intended operating range (the penalty itself prevents the joint from drifting that far).</p>
+<p><span class="arithmatex">\(x\)</span> builds on the base joint's continuously-unwrapped <code>current_angles</code> (see <a href="../affine_body_revolute_joint/#state-update">State Update</a>), not a fixed build-time reference, so it is not restricted to <span class="arithmatex">\((-\pi,\pi]\)</span>: <code>limit/lower</code> and <code>limit/upper</code> may lie beyond <span class="arithmatex">\(\pm\pi\)</span> and multi-turn limits are supported. The precondition (per-step rotation below <span class="arithmatex">\(\pi\)</span>; resets need an explicit <code>angle</code> write) is that of the base joint's <a href="../affine_body_revolute_joint/#state-update">State Update</a>.</p>
 <p>For normal range width (<span class="arithmatex">\(u&gt;l\)</span>):</p>
 <div class="arithmatex">\[
 E(x)=
@@ -3123,15 +3123,15 @@ s(l-x)^3, &amp; x&lt;l
 x=\theta^t+\delta,
 \]</div>
 <div class="arithmatex">\[
-\theta^t=\Delta\Theta(\mathbf{q}^{t},\mathbf{q}_{ref}), \quad
+\theta^t = c^{(n-1)} - \alpha_0, \quad
 \delta=\Delta\Theta(\mathbf{q},\mathbf{q}^{t}).
 \]</div>
 <p>Here:</p>
 <ul>
 <li><span class="arithmatex">\(\mathbf{q}\)</span> is the current affine-body DOF.</li>
 <li><span class="arithmatex">\(\mathbf{q}^{t}\)</span> is the previous-time-step DOF.</li>
-<li><span class="arithmatex">\(\mathbf{q}_{ref}\)</span> is the reference DOF captured at initialization.</li>
-<li><span class="arithmatex">\(\theta^t\)</span> is the accumulated revolute angle from the previous step.</li>
+<li><span class="arithmatex">\(c^{(n-1)}\)</span> is the base joint's <code>current_angles</code>, the continuously-unwrapped angle committed at the previous step (see <a href="../affine_body_revolute_joint/#state-update">State Update</a>), and <span class="arithmatex">\(\alpha_0\)</span> is <code>init_angle</code>.</li>
+<li><span class="arithmatex">\(\theta^t\)</span> is the accumulated revolute angle from the previous step, in the same unbounded frame as <span class="arithmatex">\(c^{(n-1)}\)</span>, so it stays valid across <span class="arithmatex">\(\pm\pi\)</span> and multiple turns.</li>
 </ul>
 <p>Note that <span class="arithmatex">\(\mathbf{q}\)</span> is the concatenation of the DOF of the two affine bodies connected by the revolute joint.</p>
 <div class="arithmatex">\[
@@ -3163,7 +3163,7 @@ x=\theta^t+\delta,
 \sin\theta=\frac{\hat{\mathbf{b}}_i\cdot\hat{\mathbf{n}}_j-\hat{\mathbf{n}}_i\cdot\hat{\mathbf{b}}_j}{2}.
 \]</div>
 <p>The sign of <span class="arithmatex">\(x\)</span> follows the sign of <span class="arithmatex">\(\sin\theta\)</span> under this convention.
-The angle branch is <span class="arithmatex">\((-\pi,\pi]\)</span>.</p>
+<span class="arithmatex">\(\Delta\Theta\)</span>'s own atan2 branch is <span class="arithmatex">\((-\pi,\pi]\)</span> — this bounds the per-step increment <span class="arithmatex">\(\delta\)</span>, but not <span class="arithmatex">\(x\)</span> itself, since <span class="arithmatex">\(\theta^t\)</span> is the unwrapped multi-turn angle described above.</p>
 <h2 id="requirement">Requirement</h2>
 <p>This limit term is meaningful only on a geometry that already represents a
 <a href="../affine_body_revolute_joint/">Revolute Joint</a> (UID=18). The limit augments that base relation as an extra constitution term.</p>
