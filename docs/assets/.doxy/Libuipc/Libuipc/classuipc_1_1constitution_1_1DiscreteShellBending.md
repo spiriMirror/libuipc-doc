@@ -93,7 +93,8 @@ Inherits the following classes: [uipc::constitution::FiniteElementExtraConstitut
 | Type | Name |
 | ---: | :--- |
 |   | [**DiscreteShellBending**](#function-discreteshellbending) (const Json & json=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float bending\_stiffness=100.0\_kPa) <br> |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float bending\_stiffness=100.0\_kPa) <br> |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float young\_modulus, Float poisson\_ratio) <br> |
 
 
 
@@ -115,6 +116,7 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 
 | Type | Name |
 | ---: | :--- |
+|  Float | [**bending\_stiffness**](#function-bending_stiffness) (Float young\_modulus, Float poisson\_ratio, Float thickness) noexcept<br> |
 |  Json | [**default\_config**](#function-default_config) () <br> |
 
 
@@ -229,7 +231,7 @@ uipc::constitution::DiscreteShellBending::DiscreteShellBending (
 
 
 
-### function apply\_to 
+### function apply\_to [1/2]
 
 ```C++
 void uipc::constitution::DiscreteShellBending::apply_to (
@@ -242,8 +244,42 @@ void uipc::constitution::DiscreteShellBending::apply_to (
 
 
 <hr>
+
+
+
+### function apply\_to [2/2]
+
+```C++
+void uipc::constitution::DiscreteShellBending::apply_to (
+    geometry::SimplicialComplex & sc,
+    Float young_modulus,
+    Float poisson_ratio
+) 
+```
+
+
+
+
+<hr>
 ## Public Static Functions Documentation
 
+
+
+
+### function bending\_stiffness 
+
+```C++
+static Float uipc::constitution::DiscreteShellBending::bending_stiffness (
+    Float young_modulus,
+    Float poisson_ratio,
+    Float thickness
+) noexcept
+```
+
+
+
+
+<hr>
 
 
 

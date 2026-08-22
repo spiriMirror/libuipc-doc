@@ -80,7 +80,6 @@
 * **Geometry** ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * **GeometrySlotState** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **ground** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
-* **glfw\_native\_window\_handle** ([**uipc::gui**](namespaceuipc_1_1gui.md))
 * **get\_level** ([**uipc::logger**](namespaceuipc_1_1logger.md))
 
 
@@ -141,12 +140,6 @@
 * **make\_unique** ([**uipc**](namespaceuipc.md))
 * **merge** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
 * **mesh\_partition** ([**uipc::geometry**](namespaceuipc_1_1geometry.md))
-
-
-## n
-
-* **native\_display\_handle** ([**uipc::gui**](namespaceuipc_1_1gui.md))
-* **native\_window\_handle\_type** ([**uipc::gui**](namespaceuipc_1_1gui.md))
 
 
 ## o

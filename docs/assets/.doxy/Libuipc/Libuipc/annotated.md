@@ -220,7 +220,6 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
         * **class** [**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) _A class for reading and writing simplicial complex._     
         * **class** [**SpreadSheetIO**](classuipc_1_1geometry_1_1SpreadSheetIO.md) _A class for writing geometry spreadsheet._     
         * **namespace** [**affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md)     
-    * **namespace** [**gui**](namespaceuipc_1_1gui.md)     
     * **namespace** [**io**](namespaceuipc_1_1io.md)     
         * **class** [**UrdfController**](classuipc_1_1io_1_1UrdfController.md)     
         * **class** [**UrdfIO**](classuipc_1_1io_1_1UrdfIO.md)     

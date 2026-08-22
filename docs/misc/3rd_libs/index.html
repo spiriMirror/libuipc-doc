@@ -17,15 +17,15 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>fmt - Libuipc Documentation</title>
+        <title>Third-Party Libraries - Libuipc Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fmt" class="md-skip">
+        <a href="#third-party-libraries" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              fmt
+              Third-Party Libraries
             
           </span>
         </div>
@@ -2862,6 +2862,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Third-Party Libraries
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2869,7 +2887,7 @@
   <span class="md-ellipsis">
     
   
-    fmt
+    Third-Party Libraries
   
 
     
@@ -2878,6 +2896,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vcpkg-dependencies-always" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vcpkg Dependencies (always)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vcpkg Dependencies (always)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vcpkg-dependencies-conditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vcpkg Dependencies (conditional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-tree-dependencies-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Tree Dependencies (external/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-side-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python-Side Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2911,6 +3031,97 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vcpkg-dependencies-always" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vcpkg Dependencies (always)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vcpkg Dependencies (always)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#private-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vcpkg-dependencies-conditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vcpkg Dependencies (conditional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-tree-dependencies-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Tree Dependencies (external/)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-side-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python-Side Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2926,9 +3137,147 @@
 
 
 
-<div><h1 id="fmt">fmt</h1>
+<div><h1 id="third-party-libraries">Third-Party Libraries</h1>
+<p>This page lists the third-party libraries used by <code>libuipc</code>, their versions and purposes.
+The vcpkg manifest is generated by <code>scripts/gen_vcpkg_json.py</code> at configure time
+(vcpkg tag <code>2025.7.25</code>).</p>
+<h2 id="vcpkg-dependencies-always">vcpkg Dependencies (always)</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://eigen.tuxfamily.org/">eigen3</a></td>
+<td>&gt;= 3.4.0</td>
+<td>Dense linear algebra (<code>Vector3</code>, <code>Matrix3x3</code>, transforms)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/catchorg/Catch2">catch2</a></td>
+<td>&gt;= 3.5.3</td>
+<td>C++ test framework (<code>apps/tests/</code>)</td>
+</tr>
+<tr>
+<td><a href="https://libigl.github.io/">libigl</a></td>
+<td>&gt;= 2.6.0</td>
+<td>Geometry processing algorithms (<code>src/geometry/</code>)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/gabime/spdlog">spdlog</a></td>
+<td>= 1.12.0 (pinned)</td>
+<td>Logging backend for <code>uipc::Logger</code></td>
+</tr>
+<tr>
+<td><a href="https://fmt.dev/">fmt</a></td>
+<td>= 10.2.1 (pinned)</td>
+<td>String formatting; pinned to stay compatible with the pinned spdlog</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ryanhaining/cppitertools">cppitertools</a></td>
+<td>&gt;= 2.1#3</td>
+<td><code>enumerate</code> and other iteration utilities</td>
+</tr>
+<tr>
+<td><a href="https://github.com/martin-olivier/dylib">dylib</a></td>
+<td>&gt;= 2.2.1</td>
+<td>Runtime loading of backend modules (<code>uipc_backend_*</code>)</td>
+</tr>
+<tr>
+<td><a href="https://json.nlohmann.me/">nlohmann-json</a></td>
+<td>&gt;= 3.11.2</td>
+<td><code>uipc::Json</code>, scene/engine configuration</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Neargye/magic_enum">magic-enum</a></td>
+<td>&gt;= 0.9.3</td>
+<td>Enum reflection (config parsing, diagnostics)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/syoyo/tinygltf">tinygltf</a></td>
+<td>&gt;= 2.8.22</td>
+<td>glTF IO (<code>src/io/gltf_io.cpp</code>)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/uxlfoundation/oneTBB">tbb</a></td>
+<td>&gt;= 2022.0.0</td>
+<td>CPU parallelism in geometry processing</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ros/urdfdom">urdfdom</a></td>
+<td>&gt;= 3.1.1</td>
+<td>URDF robot model parsing (<code>UrdfIO</code>)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jeremy-rifkin/cpptrace">cpptrace</a></td>
+<td>&gt;= 0.8.3</td>
+<td>Stack traces on exceptions/asserts</td>
+</tr>
+<tr>
+<td>octree</td>
+<td>&gt;= 2025.10.7</td>
+<td>Spatial indexing for geometry queries (private registry, see below)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="version-overrides">Version Overrides</h3>
+<p><code>fmt</code> and <code>spdlog</code> are pinned via vcpkg <code>overrides</code> in <code>scripts/gen_vcpkg_json.py</code>.
+spdlog bundles a specific fmt API; upgrading fmt without upgrading spdlog breaks the
+build, so both are pinned together. If you bump them, bump both and rebuild.</p>
+<h3 id="private-registry">Private Registry</h3>
+<p><code>octree</code> and <code>ftetwild</code> come from the private registry
+<a href="https://github.com/spiriMirror/vcpkg">spiriMirror/vcpkg</a> (see <code>vcpkg-configuration.json</code>
+generated by <code>scripts/gen_vcpkg_json.py</code>).</p>
+<h2 id="vcpkg-dependencies-conditional">vcpkg Dependencies (conditional)</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Condition</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.openvdb.org/">openvdb</a> (+nanovdb feature)</td>
+<td><code>UIPC_WITH_VDB_SUPPORT=ON</code></td>
+<td>Sparse volumetric data (<code>src/vdb/</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="in-tree-dependencies-external">In-Tree Dependencies (<code>external/</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/MuGdxy/muda">muda</a></td>
+<td>CUDA kernel launch / buffer / linear-algebra wrappers; all GPU kernels go through <code>muda::ParallelFor</code></td>
+</tr>
+<tr>
+<td>METIS</td>
+<td>Mesh/graph partitioning (CPU)</td>
+</tr>
+<tr>
+<td>GKlib</td>
+<td>METIS support library</td>
+</tr>
+</tbody>
+</table>
+<h2 id="python-side-dependencies">Python-Side Dependencies</h2>
+<p>See <code>pyproject.toml</code> / <code>python/pyproject.toml</code>: <code>pybind11</code> (bindings), <code>polyscope</code>
+(optional GUI, <code>uipc.gui</code>), <code>numpy</code>, etc. Optional integrations (torch, warp, usd)
+are loaded lazily via <code>scripts/optional_import/</code>.</p>
+<h2 id="notes">Notes</h2>
 <ul>
-<li><a href="https://fmt.dev/latest/api.html?highlight=custom#formatting-user-defined-types">Format User Type</a></li>
+<li><a href="https://fmt.dev/latest/api.html?highlight=custom#formatting-user-defined-types">fmt: Formatting User Types</a></li>
 </ul></div>
 
 
@@ -2989,7 +3338,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/discrete_shell_bending.h" line="21" column="17" bodyfile="include/uipc/constitution/discrete_shell_bending.h" bodystart="21" bodyend="-1"/>
+        <location file="include/uipc/constitution/discrete_shell_bending.h" line="32" column="17" bodyfile="include/uipc/constitution/discrete_shell_bending.h" bodystart="32" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -78,8 +78,60 @@
         </inbodydescription>
         <location file="include/uipc/constitution/discrete_shell_bending.h" line="14" column="10"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1DiscreteShellBending_1a84d7dc2a4cd1348971bbfb2538499665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::constitution::DiscreteShellBending::apply_to</definition>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, Float young_modulus, Float poisson_ratio)</argsstring>
+        <name>apply_to</name>
+        <qualifiedname>uipc::constitution::DiscreteShellBending::apply_to</qualifiedname>
+        <param>
+          <type><ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">geometry::SimplicialComplex</ref> &amp;</type>
+          <declname>sc</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>young_modulus</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>poisson_ratio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/discrete_shell_bending.h" line="22" column="10"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1DiscreteShellBending_1a7a9a9e30e0691aef7a4c8a794caa1d4e" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>Float</type>
+        <definition>static Float uipc::constitution::DiscreteShellBending::bending_stiffness</definition>
+        <argsstring>(Float young_modulus, Float poisson_ratio, Float thickness) noexcept</argsstring>
+        <name>bending_stiffness</name>
+        <qualifiedname>uipc::constitution::DiscreteShellBending::bending_stiffness</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>young_modulus</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>poisson_ratio</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>thickness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/constitution/discrete_shell_bending.h" line="25" column="18"/>
+      </memberdef>
       <memberdef kind="function" id="classuipc_1_1constitution_1_1DiscreteShellBending_1a64d3d5193d31671a44b0d765ab4f5d68" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
         <definition>static Json uipc::constitution::DiscreteShellBending::default_config</definition>
@@ -92,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/discrete_shell_bending.h" line="16" column="17"/>
+        <location file="include/uipc/constitution/discrete_shell_bending.h" line="27" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -109,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/discrete_shell_bending.h" line="20" column="17"/>
+        <location file="include/uipc/constitution/discrete_shell_bending.h" line="31" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -152,11 +204,13 @@
         <link refid="classuipc_1_1constitution_1_1IConstitution"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/discrete_shell_bending.h" line="7" column="1" bodyfile="include/uipc/constitution/discrete_shell_bending.h" bodystart="8" bodyend="22"/>
+    <location file="include/uipc/constitution/discrete_shell_bending.h" line="7" column="1" bodyfile="include/uipc/constitution/discrete_shell_bending.h" bodystart="8" bodyend="33"/>
     <listofallmembers>
       <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a454714be504ffe2deb61dc4d90be9095" prot="public" virt="non-virtual"><scope>uipc::constitution::DiscreteShellBending</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a84d7dc2a4cd1348971bbfb2538499665" prot="public" virt="non-virtual"><scope>uipc::constitution::DiscreteShellBending</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1FiniteElementExtraConstitution_1aa1605c483aff95fb43ab33d289685f16" prot="protected" virt="non-virtual" ambiguityscope="uipc::constitution::FiniteElementExtraConstitution::"><scope>uipc::constitution::DiscreteShellBending</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1ad28902c238229a7fdc7c30d0b20b586d" prot="private" virt="non-virtual"><scope>uipc::constitution::DiscreteShellBending</scope><name>Base</name></member>
+      <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a7a9a9e30e0691aef7a4c8a794caa1d4e" prot="public" virt="non-virtual"><scope>uipc::constitution::DiscreteShellBending</scope><name>bending_stiffness</name></member>
       <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a64d3d5193d31671a44b0d765ab4f5d68" prot="public" virt="non-virtual"><scope>uipc::constitution::DiscreteShellBending</scope><name>default_config</name></member>
       <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1ac81fbaeedbf0b0e630fbfceac50cdff0" prot="public" virt="non-virtual"><scope>uipc::constitution::DiscreteShellBending</scope><name>DiscreteShellBending</name></member>
       <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1ab334f8c53f158570d9978b63025fbf97" prot="private" virt="virtual"><scope>uipc::constitution::DiscreteShellBending</scope><name>get_uid</name></member>

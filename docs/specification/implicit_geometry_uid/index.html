@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1835,6 +1835,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implicit Geometry UID
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1851,6 +1869,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-uid-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Official UID List
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2872,7 +2920,7 @@
   <span class="md-ellipsis">
     
   
-    fmt
+    Third-Party Libraries
   
 
     
@@ -2913,6 +2961,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-uid-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Official UID List
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2933,7 +3000,35 @@
 <p>The official implicit geometry UID has a range of <span class="arithmatex">\([0, 2^{32}-1]\)</span>. The range <span class="arithmatex">\([2^{32}, 2^{64}-1]\)</span> is reserved for user-defined implicit geometries.</p>
 <p>Every official implicit geometry will be documented in this specification. A user-defined implicit geometry can apply for an official implicit geometry UID by submitting a pull request to the <code>libuipc</code> repository, After code review, the implicit geometry will be added to the official implicit geometry list.</p>
 <p>The related documentation of the implicit geometry will be added to the <a href="../implicit_geometries/">Implicit Geometries/</a> directory.</p>
-<p>When creating a implicit geometry, the <code>implicit_geometry_uid</code> attribute of the <code>meta</code> attribute of the geometry will be set to the implicit geometry UID. The backend will use this UID to determine the implicit geometry of the geometry, and try to find the related coefficients from the attributes of the geometry (in <code>meta</code> or <code>instances</code>).</p></div>
+<p>When creating a implicit geometry, the <code>implicit_geometry_uid</code> attribute of the <code>meta</code> attribute of the geometry will be set to the implicit geometry UID. The backend will use this UID to determine the implicit geometry of the geometry, and try to find the related coefficients from the attributes of the geometry (in <code>meta</code> or <code>instances</code>).</p>
+<h2 id="official-uid-list">Official UID List</h2>
+<!-- AUTO-GENERATED UID TABLE: BEGIN (scripts/gen_uid_doc.py) -->
+
+<table>
+<thead>
+<tr>
+<th>UID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Empty</td>
+<td>ImplicitGeometry</td>
+<td><code>src/geometry/implicit_geometries/empty.cpp</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>HalfPlane</td>
+<td>ImplicitGeometry</td>
+<td><code>src/geometry/implicit_geometries/half_plane.cpp</code></td>
+</tr>
+</tbody>
+</table>
+<!-- AUTO-GENERATED UID TABLE: END --></div>
 
 
 
@@ -2993,7 +3088,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

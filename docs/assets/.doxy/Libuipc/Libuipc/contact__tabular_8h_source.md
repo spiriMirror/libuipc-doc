@@ -60,6 +60,8 @@ class UIPC_CORE_API ContactTabular final
     ContactElement default_element() noexcept;
     ContactModel   default_model() const noexcept;
 
+    bool default_model_is_user_set() const noexcept;
+
 
     friend UIPC_CORE_API void to_json(Json& j, const ContactTabular& ct);
 

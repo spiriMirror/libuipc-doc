@@ -34,7 +34,6 @@
 | namespace | [**details**](namespaceuipc_1_1details.md) <br> |
 | namespace | [**diff\_sim**](namespaceuipc_1_1diff__sim.md) <br> |
 | namespace | [**geometry**](namespaceuipc_1_1geometry.md) <br> |
-| namespace | [**gui**](namespaceuipc_1_1gui.md) <br> |
 | namespace | [**io**](namespaceuipc_1_1io.md) <br> |
 | namespace | [**logger**](namespaceuipc_1_1logger.md) <br> |
 | namespace | [**pmr**](namespaceuipc_1_1pmr.md) <br> |

@@ -93,7 +93,8 @@ Inherits the following classes: [uipc::constitution::FiniteElementConstitution](
 | Type | Name |
 | ---: | :--- |
 |   | [**StrainLimitingBaraffWitkinShell**](#function-strainlimitingbaraffwitkinshell) (const Json & config=default\_config()) noexcept<br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) & moduli=ElasticModuli2D::youngs\_poisson(1.0\_MPa, 0.49), Float mass\_density=2e2, Float thickness=0.001\_m) const<br> |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) & stretch\_moduli, const [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) & shear\_moduli, Float mass\_density=2e2, Float thickness=0.001\_m, Float strain\_rate=100.0) const<br> |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) & moduli=ElasticModuli2D::youngs\_poisson(1.0\_MPa, 0.49), Float mass\_density=2e2, Float thickness=0.001\_m, Float strain\_rate=100.0) const<br> |
 
 
 
@@ -233,14 +234,35 @@ uipc::constitution::StrainLimitingBaraffWitkinShell::StrainLimitingBaraffWitkinS
 
 
 
-### function apply\_to 
+### function apply\_to [1/2]
 
 ```C++
 void uipc::constitution::StrainLimitingBaraffWitkinShell::apply_to (
     geometry::SimplicialComplex & sc,
+    const ElasticModuli2D & stretch_moduli,
+    const ElasticModuli2D & shear_moduli,
+    Float mass_density=2e2,
+    Float thickness=0.001_m,
+    Float strain_rate=100.0
+) const
+```
+
+
+
+
+<hr>
+
+
+
+### function apply\_to [2/2]
+
+```C++
+inline void uipc::constitution::StrainLimitingBaraffWitkinShell::apply_to (
+    geometry::SimplicialComplex & sc,
     const ElasticModuli2D & moduli=ElasticModuli2D::youngs_poisson(1.0_MPa, 0.49),
     Float mass_density=2e2,
-    Float thickness=0.001_m
+    Float thickness=0.001_m,
+    Float strain_rate=100.0
 ) const
 ```
 

@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2801,13 +2801,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-your-own-backend" class="md-nav__link">
+  <a href="#backend-module-abi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create Your Own Backend
+        Backend Module ABI
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-a-minimal-backend-in-30-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tutorial: A Minimal Backend in 30 Minutes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: A Minimal Backend in 30 Minutes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-directory-and-build-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create the directory and build rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-implement-the-entrance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Implement the entrance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-implement-the-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Implement the engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-build-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Build and run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2908,6 +2969,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3020,7 +3092,7 @@
   <span class="md-ellipsis">
     
   
-    fmt
+    Third-Party Libraries
   
 
     
@@ -3068,13 +3140,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-your-own-backend" class="md-nav__link">
+  <a href="#backend-module-abi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create Your Own Backend
+        Backend Module ABI
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-a-minimal-backend-in-30-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tutorial: A Minimal Backend in 30 Minutes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: A Minimal Backend in 30 Minutes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-the-directory-and-build-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create the directory and build rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-implement-the-entrance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Implement the entrance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-implement-the-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Implement the engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-build-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Build and run
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3178,6 +3311,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3196,39 +3340,115 @@
 
 
 <div><h1 id="backend">Backend</h1>
-<p><code>Libuipc</code> has frontend and backend components. The frontend part is used to create the scene, objects, and geometries, and the backend part is used to simulate the physics of the scene.</p>
-<p>A <code>libuipc</code> backend is an independent module that will be dynamically loaded and linked by the frontend, typically through the <code>engine::Engine</code> class.
-The frontend user utilizes the backend functionalities through <code>World</code> interface.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">engine</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">"BACKEND_NAME"</span><span class="p">};</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">world</span><span class="o">::</span><span class="n">World</span><span class="w"> </span><span class="n">world</span><span class="p">{</span><span class="n">engine</span><span class="p">};</span>
+<p><code>Libuipc</code> has frontend and backend components. The frontend is used to create the scene, objects, and geometries; the backend simulates the physics of the scene.</p>
+<p>A <code>libuipc</code> backend is an independent module (a dynamic library named <code>uipc_backend_&lt;name&gt;</code>) that is dynamically loaded by the frontend when an <code>Engine</code> is created. The frontend user drives the backend through the <code>World</code> interface:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">"BACKEND_NAME"</span><span class="p">,</span><span class="w"> </span><span class="s">"workspace/path"</span><span class="p">};</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">core</span><span class="o">::</span><span class="n">World</span><span class="w">  </span><span class="n">world</span><span class="p">{</span><span class="n">engine</span><span class="p">};</span>
 </span></code></pre></div>
-<h2 id="create-your-own-backend">Create Your Own Backend</h2>
-<p>Say, you want to create a backend named <code>my_backend</code>. You need to create a new folder <code>my_backend/</code> in the <code>src/uipc/backends/</code> directory.</p>
-<p>And then, you need to append a line of <code>add_subdirectory(my_backend)</code> in the <code>src/uipc/backends/CMakeLists.txt</code> file to include the new backend in the build system.</p>
-<p>In the <code>my_backend/</code> folder, you need to create a <code>CMakeLists.txt</code> file to define the build rules for the backend.</p>
-<div class="language-cmake highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># my_backend/CMakeLists.txt</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">uipc_add_backend</span><span class="p">(</span><span class="s">my_backend</span><span class="p">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">SOURCES</span><span class="w"> </span><span class="s2">"*.cpp"</span><span class="w"> </span><span class="s2">"*.h"</span><span class="w"> </span><span class="s2">"details/*.inl"</span><span class="p">)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">target_sources</span><span class="p">(</span><span class="s">my_backend</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="o">${</span><span class="nv">SOURCES</span><span class="o">}</span><span class="p">)</span>
+<h2 id="backend-module-abi">Backend Module ABI</h2>
+<p>A backend module must export exactly three C symbols (declared in <code>src/backends/common/module.h</code>):</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">extern</span><span class="w"> </span><span class="s">"C"</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// 1. Called once right after the dynamic library is loaded.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">//    Synchronizes the host's std::pmr::memory_resource into the module,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">//    so pmr containers allocate consistently across the DLL boundary.</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc_init_module</span><span class="p">(</span><span class="n">UIPCModuleInitInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 2. Called to create an engine instance.</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">uipc_create_engine</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">EngineCreateInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 3. Called to destroy the engine instance created by uipc_create_engine.</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc_destroy_engine</span><span class="p">(</span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">engine</span><span class="p">);</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>The backend <code>none</code> is a good example for creating a new backend.</p>
-<p>The entry point of the backend is the engine creation and destruction functions. You need to implement somewhere in the backend source code.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/backends/common/module.h&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">UIPC_BACKEND_API</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">UIPCEngineInterface</span><span class="o">*</span><span class="w"> </span><span class="n">uipc_create_engine</span><span class="p">()</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">{</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="c1">// new your engine instance and return it</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">UIPC_BACKEND_API</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc_destroy_engine</span><span class="p">(</span><span class="n">UIPCEngineInterface</span><span class="o">*</span><span class="w"> </span><span class="n">engine</span><span class="p">)</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">{</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="c1">// delete your engine instance</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
+<ul>
+<li><code>UIPCModuleInitInfo</code> (<code>include/uipc/backend/module_init_info.h</code>) carries the module name and the host PMR memory resource. The shared implementation in <code>src/backends/common/module.cpp</code> does <code>std::pmr::set_default_resource(info-&gt;memory_resource)</code> — reuse it.</li>
+<li><code>EngineCreateInfo</code> (<code>include/uipc/backend/engine_create_info.h</code>) carries the absolute <code>workspace</code> path and the engine <code>Json</code> config (e.g. <code>config["gpu"]["device"]</code>).</li>
+<li>The frontend resolves the module from <code>uipc::config()["module_dir"]</code>, loading <code>uipc_backend_&lt;name&gt;</code> (with the platform shared-library extension). Loaded modules are cached, so repeated <code>Engine{"cuda"}</code> constructions reuse the same library.</li>
+</ul>
+<h2 id="tutorial-a-minimal-backend-in-30-minutes">Tutorial: A Minimal Backend in 30 Minutes</h2>
+<p>The fastest way to create a backend is to copy the <code>none</code> backend (<code>src/backends/none/</code>), which implements the full skeleton with no-op physics.</p>
+<h3 id="step-1-create-the-directory-and-build-rules">Step 1: Create the directory and build rules</h3>
+<p>Create <code>src/backends/my_backend/</code> and register it in <code>src/backends/CMakeLists.txt</code>:</p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c"># src/backends/my_backend/CMakeLists.txt</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">uipc_add_backend</span><span class="p">(</span><span class="s">my_backend</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">SOURCES</span><span class="w"> </span><span class="s2">"*.cpp"</span><span class="w"> </span><span class="s2">"*.h"</span><span class="w"> </span><span class="s2">"details/*.inl"</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">target_sources</span><span class="p">(</span><span class="s">my_backend</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="o">${</span><span class="nv">SOURCES</span><span class="o">}</span><span class="p">)</span>
 </span></code></pre></div>
+<p><code>uipc_add_backend</code> (defined in <code>src/backends/CMakeLists.txt</code>) creates a MODULE library target named <code>uipc_backend_my_backend</code>, links the backend common utilities, and sets the output directory so the frontend can find it.</p>
+<h3 id="step-2-implement-the-entrance">Step 2: Implement the entrance</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// src/backends/my_backend/entrance.cpp</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;backends/common/module.h&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;my_backend/sim_engine.h&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">extern</span><span class="w"> </span><span class="s">"C"</span><span class="w"> </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">uipc_create_engine</span><span class="p">(</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">backend</span><span class="o">::</span><span class="n">EngineCreateInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">my_backend</span><span class="o">::</span><span class="n">SimEngine</span><span class="p">(</span><span class="o">*</span><span class="n">info</span><span class="p">);</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="k">extern</span><span class="w"> </span><span class="s">"C"</span><span class="w"> </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc_destroy_engine</span><span class="p">(</span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">engine</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">{</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">engine</span><span class="p">;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>(<code>uipc_init_module</code> is already provided by <code>src/backends/common/module.cpp</code> — do not redefine it.)</p>
+<h3 id="step-3-implement-the-engine">Step 3: Implement the engine</h3>
+<p>Derive from <code>uipc::backend::SimEngine</code> (<code>src/backends/common/sim_engine.h</code>) and override the lifecycle hooks of <code>core::IEngine</code>:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// src/backends/my_backend/sim_engine.h</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#pragma once</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;backends/common/sim_engine.h&gt;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">{</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">SimEngine</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">backend</span><span class="o">::</span><span class="n">SimEngine</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">{</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">backend</span><span class="o">::</span><span class="n">SimEngine</span><span class="o">::</span><span class="n">SimEngine</span><span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">do_init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_advance</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_sync</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_retrieve</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="c1">// optional: do_dump / do_recover / do_to_json / get_frame / get_status / get_features</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="p">};</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace uipc::my_backend</span>
+</span></code></pre></div>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// src/backends/my_backend/sim_engine.cpp</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;my_backend/sim_engine.h&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">SimEngine::do_init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">{</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="c1">// 1. pull scene data you need from the visitor</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="c1">// 2. build all registered sim systems and their dependencies</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">build_systems</span><span class="p">();</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="c1">// 3. dump system topology to &lt;workspace&gt;/systems.json for debugging</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="n">dump_system_infos</span><span class="p">();</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="kt">void</span><span class="w"> </span><span class="nf">SimEngine::do_advance</span><span class="p">()</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">{</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="c1">// drive your simulation pipeline here</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="p">}</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="kt">void</span><span class="w"> </span><span class="nf">SimEngine::do_sync</span><span class="p">()</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="cm">/* upload results to the frontend buffers */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="kt">void</span><span class="w"> </span><span class="nf">SimEngine::do_retrieve</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* write back geometry attributes */</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="p">}</span><span class="w">  </span><span class="c1">// namespace uipc::my_backend</span>
+</span></code></pre></div>
+<h3 id="step-4-build-and-run">Step 4: Build and run</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build<span class="w"> </span>-DUIPC_WITH_CUDA_BACKEND<span class="o">=</span>OFF
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--config<span class="w"> </span>Release<span class="w"> </span>-j8
+</span></code></pre></div>
+<p>Then create the engine with your backend name:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">core</span><span class="o">::</span><span class="n">Engine</span><span class="w"> </span><span class="n">engine</span><span class="p">{</span><span class="s">"my_backend"</span><span class="p">,</span><span class="w"> </span><span class="s">"my_workspace"</span><span class="p">};</span>
+</span></code></pre></div>
+<p>If the module fails to load, check that <code>uipc_backend_my_backend.{dll,so}</code> sits next to the other backend modules (or in <code>config["module_dir"]</code>).</p>
 <h2 id="official-backends">Official Backends</h2>
-<p><code>Libuipc</code> provides several official backends:</p>
 <table>
 <thead>
 <tr>
@@ -3245,228 +3465,173 @@ The frontend user utilizes the backend functionalities through <code>World</code
 <td><a href="../backend_cuda/">cuda</a></td>
 <td>A backend that utilizes the GPU to compute the physics.</td>
 </tr>
-<tr>
-<td>...</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <h2 id="common-utilities">Common Utilities</h2>
-<p>Some common utilities are shared among different backends. They are in the <code>src/uipc/backends/common/</code> directory. They are automatically included in the build system when you call <code>uipc_add_backend</code> in the <code>CMakeLists.txt</code> file.</p>
+<p>Some common utilities are shared among different backends. They are in <code>src/backends/common/</code> and are automatically linked when you call <code>uipc_add_backend</code>.</p>
 <p>It's recommended to use these utilities to make your backend engine more robust and maintainable.</p>
 <h3 id="simengine">SimEngine</h3>
-<p>The <code>uipc::backend::SimEngine</code> class is the top-level class of the backend, this base class will help you to manage the backend simulation systems. You can derive your own engine class from it.</p>
-<p>Call <code>build_systems()</code> will help you to build all the systems and their dependencies. Call <code>dump_system_infos()</code> will help you to dump the system information to the workspace of this backend.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// my_backend/my_sim_engine.h</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/backends/common/sim_engine.h&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">UIPC_BACKEND_API</span><span class="w"> </span><span class="n">MySimEngine</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SimEngine</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="k">protected</span><span class="o">:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">do_init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_advance</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_sync</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_retrieve</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">...</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">};</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="c1">// my_backend/my_sim_engine.cpp</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="p">{</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MySimEngine::do_init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">{</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="n">build_systems</span><span class="p">();</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="n">dump_system_infos</span><span class="p">();</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">}</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="p">}</span>
-</span></code></pre></div>
+<p>The <code>uipc::backend::SimEngine</code> class is the top-level class of the backend; this base class helps you manage the backend simulation systems. Derive your own engine class from it.</p>
+<p>Call <code>build_systems()</code> to build all the systems and their dependencies. Call <code>dump_system_infos()</code> to dump the system information to the workspace of this backend.</p>
 <h3 id="simsystem">SimSystem</h3>
-<p>The <code>uipc::backend::SimSystem</code> class is the base class of the backend simulation system. You can derive your own system class from it.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// my_backend/my_sim_system.h</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/backends/common/sim_system.h&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">MySimSystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">backend</span><span class="o">::</span><span class="n">SimSystem</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">SimSystem</span><span class="o">::</span><span class="n">SimSystem</span><span class="p">;</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="k">protected</span><span class="o">:</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">do_build</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="c1">// a safe way to keep the reference of other system</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="n">SimSystemSlot</span><span class="o">&lt;</span><span class="n">OtherSimSystem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">other_system</span><span class="p">;</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="c1">// a safe way to keep the reference of a collection of other systems</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">        </span><span class="n">SimSystemSlotCollection</span><span class="o">&lt;</span><span class="n">AnotherSimSystem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">another_systems</span><span class="p">;</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="p">}</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="c1">// my_backend/my_sim_system.cpp</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="p">{</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">    </span><span class="n">REGISTER_SIM_SYSTEM</span><span class="p">(</span><span class="n">MySimSystem</span><span class="p">);</span>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="p">}</span>
+<p>The <code>uipc::backend::SimSystem</code> class is the base class of a backend simulation system. Derive your own system class from it.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// my_backend/my_sim_system.h</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;backends/common/sim_system.h&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">MySimSystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">backend</span><span class="o">::</span><span class="n">SimSystem</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">      </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="n">SimSystem</span><span class="o">::</span><span class="n">SimSystem</span><span class="p">;</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">      </span><span class="k">protected</span><span class="o">:</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">do_build</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="c1">// a safe way to keep the reference of other system</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="n">SimSystemSlot</span><span class="o">&lt;</span><span class="n">OtherSimSystem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">other_system</span><span class="p">;</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="c1">// a safe way to keep the reference of a collection of other systems</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="n">SimSystemSlotCollection</span><span class="o">&lt;</span><span class="n">AnotherSimSystem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">another_systems</span><span class="p">;</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="p">}</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="c1">// my_backend/my_sim_system.cpp</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="p">{</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span><span class="n">REGISTER_SIM_SYSTEM</span><span class="p">(</span><span class="n">MySimSystem</span><span class="p">);</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>Call <code>REGISTER_SIM_SYSTEM(MySimSystem)</code> in source file to register your system to the backend engine automatically.</p>
+<p>Call <code>REGISTER_SIM_SYSTEM(MySimSystem)</code> in the source file to register your system to the backend engine automatically. Note that the constructor signature determines which engine the system belongs to: a system taking <code>cuda::SimEngine&amp;</code> is only instantiated by the CUDA engine, a system taking <code>backend::SimEngine&amp;</code> is instantiated by any engine.</p>
 <h3 id="dependency">Dependency</h3>
-<p>To build up the dependency between systems, you call the <code>require&lt;T&gt;</code> and <code>find&lt;T&gt;</code> in the <code>do_build</code> function of the system.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// my_backend/my_sim_system.cpp</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">{</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MySimSystem::do_build</span><span class="p">()</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">{</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="c1">// require other systems</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other_system_ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="o">&lt;</span><span class="n">OtherSimSystem</span><span class="o">&gt;</span><span class="p">();</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">other_system</span><span class="p">.</span><span class="n">register_system</span><span class="p">(</span><span class="o">&amp;</span><span class="n">other_system_ref</span><span class="p">);</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="c1">// find other systems</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">another_system_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find</span><span class="o">&lt;</span><span class="n">AnotherSimSystem</span><span class="o">&gt;</span><span class="p">();</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="n">another_systems</span><span class="p">.</span><span class="n">register_system</span><span class="p">(</span><span class="n">another_system_ptr</span><span class="p">);</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="k">if</span><span class="p">(...)</span><span class="w"> </span><span class="c1">// if some bad condition happened</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">SimSystemException</span><span class="p">(</span><span class="s">"This system is invalid"</span><span class="p">);</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">}</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="p">}</span>
+<p>To build up the dependency between systems, call <code>require&lt;T&gt;</code> and <code>find&lt;T&gt;</code> in the <code>do_build</code> function of the system.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MySimSystem::do_build</span><span class="p">()</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">{</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="c1">// require other systems</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other_system_ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="o">&lt;</span><span class="n">OtherSimSystem</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">other_system</span><span class="p">.</span><span class="n">register_system</span><span class="p">(</span><span class="o">&amp;</span><span class="n">other_system_ref</span><span class="p">);</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="c1">// find other systems</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="k">auto</span><span class="o">*</span><span class="w"> </span><span class="n">another_system_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find</span><span class="o">&lt;</span><span class="n">AnotherSimSystem</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="n">another_systems</span><span class="p">.</span><span class="n">register_system</span><span class="p">(</span><span class="n">another_system_ptr</span><span class="p">);</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="k">if</span><span class="p">(...)</span><span class="w"> </span><span class="c1">// if some bad condition happened</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="n">SimSystemException</span><span class="p">(</span><span class="s">"This system is invalid"</span><span class="p">);</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="p">}</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><code>require&lt;T&gt;</code> will throw an exception if the system is not found, and <code>find&lt;T&gt;</code> will return a nullptr if the system is not found. If any dependency is not satisfied, the dependent system will throw an exception to invalidate itself.</p>
-<p>You can also manually throw a <code>SimSystemException</code> to invalidate the system.</p>
-<p>The backend common utilities will clean up the invalid systems and keep the valid systems in the backend engine. If such exception is upraised to the level of the backend engine, the engine will close itself and throw the exception to the frontend.</p>
-<p>It's recommended to use the <code>reuiqre&lt;T&gt;</code> for those systems that are necessary for the current system to work properly, and use the <code>find&lt;T&gt;</code> for those systems that are optional.</p>
-<p>To keep the reference of the other systems, you <strong>should</strong> use the <code>SimSystemSlot</code> and <code>SimSystemSlotCollection</code>. They will help you to manage the lifetime of the other systems properly. </p>
-<p>Some wierd situation may happen: the other system is valid when you require it, but it's invalid when you use it. The <code>SimSystemSlot</code> and <code>SimSystemSlotCollection</code> will help you to avoid such situation.</p>
-<p>Or you should manually check the validity of the other systems before you use them.</p>
+<p><code>require&lt;T&gt;</code> will throw an exception if the system is not found, and <code>find&lt;T&gt;</code> will return a nullptr if the system is not found. If any dependency is not satisfied, the dependent system should throw to invalidate itself. You can also manually throw a <code>SimSystemException</code> to invalidate the system.</p>
+<p>The backend common utilities will clean up the invalid systems — including any system that <strong>strongly depends</strong> on an invalid one (weak dependencies are tolerated) — and keep the valid systems in the backend engine. If such an exception propagates to the level of the backend engine, the engine will close itself and throw the exception to the frontend.</p>
+<p>It's recommended to use <code>require&lt;T&gt;</code> for systems that are necessary, and <code>find&lt;T&gt;</code> for optional ones. <code>find&lt;T&gt;({.exact=false})</code> (the default) may return a <strong>derived</strong> implementation of <code>T</code>, which is how backends override a base system's functionality with a specialized one.</p>
+<p>To keep references to other systems, you <strong>should</strong> use <code>SimSystemSlot</code> and <code>SimSystemSlotCollection</code>. They manage the lifetime of the referenced systems properly: a system may be valid when you require it but invalid later (e.g. after a cascading cleanup), and the slots guard against such use-after-invalidation.</p>
 <h3 id="lifecycle-functions">Lifecycle Functions</h3>
-<p>Lifecyle of a simulator is the most complex part of the backend, varying among different simulation methods. So the common utilities won't provide a default implementation for the lifecycle functions.</p>
-<p>It's up to you to design the pipeline. I.e. how every <code>SimSystem</code> is updated in each phase of the simulation.</p>
-<p>It's your responsibility to call the lifecycle functions in the engine's <code>do_init</code>, <code>do_advance</code>, <code>do_sync</code>, and <code>do_retrieve</code> functions.</p>
+<p>The lifecycle of a simulator is the most complex part of a backend, varying among different simulation methods. So the common utilities won't provide a default implementation for the lifecycle functions.</p>
+<p>It's up to you to design the pipeline, i.e. how every <code>SimSystem</code> is updated in each phase of the simulation. It's your responsibility to call the lifecycle functions in the engine's <code>do_init</code>, <code>do_advance</code>, <code>do_sync</code>, and <code>do_retrieve</code> functions.</p>
 <p>But the common utilities still provide some basic tools.</p>
 <h4 id="simaction">SimAction</h4>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/backends/common/sim_system.h&gt;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/backends/common/sim_action_collection.h&gt;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">{</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyActionDispatcher</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SimSystem</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">{</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">SimSystem</span><span class="o">::</span><span class="n">SimSystem</span><span class="p">;</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_build</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">{}</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add_action</span><span class="p">(</span><span class="n">SimAction</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">);</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MySimEngine</span><span class="p">;</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dispatch_actions</span><span class="p">();</span>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="n">SimActionCollection</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_actions</span><span class="p">;</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="p">};</span>
-</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="p">}</span>
-</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
-</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="c1">// my_backend/my_action_dispatcher.cpp</span>
-</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="p">{</span>
-</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="n">REGISTER_SIM_SYSTEM</span><span class="p">(</span><span class="n">MyActionDispatcher</span><span class="p">);</span>
-</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
-</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyActionDispatcher::add_action</span><span class="p">(</span><span class="n">SimAction</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">)</span>
-</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="p">{</span>
-</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">    </span><span class="n">m_actions</span><span class="p">.</span><span class="n">add_action</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">action</span><span class="p">));</span>
-</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="p">}</span>
-</span><span id="__span-6-30"><a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
-</span><span id="__span-6-31"><a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyActionDispatcher::dispatch_actions</span><span class="p">()</span>
-</span><span id="__span-6-32"><a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="p">{</span>
-</span><span id="__span-6-33"><a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m_actions</span><span class="p">.</span><span class="n">view</span><span class="p">())</span>
-</span><span id="__span-6-34"><a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-6-35"><a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">        </span><span class="n">action</span><span class="p">();</span>
-</span><span id="__span-6-36"><a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-6-37"><a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="p">}</span>
-</span><span id="__span-6-38"><a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;backends/common/sim_system.h&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;backends/common/sim_action_collection.h&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">{</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyActionDispatcher</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SimSystem</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">{</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">  </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">SimSystem</span><span class="o">::</span><span class="n">SimSystem</span><span class="p">;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_build</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add_action</span><span class="p">(</span><span class="n">SimAction</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">);</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">  </span><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimEngine</span><span class="p">;</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dispatch_actions</span><span class="p">();</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="n">SimActionCollection</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_actions</span><span class="p">;</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="p">};</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">}</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="c1">// my_backend/my_action_dispatcher.cpp</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="p">{</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="n">REGISTER_SIM_SYSTEM</span><span class="p">(</span><span class="n">MyActionDispatcher</span><span class="p">);</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyActionDispatcher::add_action</span><span class="p">(</span><span class="n">SimAction</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;&amp;&amp;</span><span class="w"> </span><span class="n">action</span><span class="p">)</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="p">{</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w">    </span><span class="n">m_actions</span><span class="p">.</span><span class="n">add_action</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">action</span><span class="p">));</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="p">}</span>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyActionDispatcher::dispatch_actions</span><span class="p">()</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="p">{</span>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m_actions</span><span class="p">.</span><span class="n">view</span><span class="p">())</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="w">        </span><span class="n">action</span><span class="p">();</span>
+</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="p">}</span>
+</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// my_backend/my_sim_engine.h</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/backends/common/sim_engine.h&gt;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">{</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">// forward declaration</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyActionDispatcher</span><span class="p">;</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">UIPC_BACKEND_API</span><span class="w"> </span><span class="n">MySimEngine</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SimEngine</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">{</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="k">protected</span><span class="o">:</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">do_init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_advance</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_sync</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_retrieve</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">   </span><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="n">SimSystemSlot</span><span class="o">&lt;</span><span class="n">MyActionDispatcher</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_action_dispatcher</span><span class="p">;</span>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">};</span>
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="p">}</span>
-</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
-</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="c1">// my_backend/my_sim_engine.cpp</span>
-</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="p">{</span>
-</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MySimEngine::do_init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
-</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="p">{</span>
-</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="n">build_systems</span><span class="p">();</span>
-</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>
-</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">    </span><span class="n">m_action_dispatcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">require</span><span class="o">&lt;</span><span class="n">MyActionDispatcher</span><span class="o">&gt;</span><span class="p">();</span>
-</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>
-</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">    </span><span class="n">dump_system_infos</span><span class="p">();</span>
-</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="p">}</span>
-</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>
-</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MySimEngine::do_advance</span><span class="p">()</span>
-</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="p">{</span>
-</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">action_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_action_dispatcher</span><span class="o">-&gt;</span><span class="n">view</span><span class="p">();</span>
-</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">action_view</span><span class="p">)</span>
-</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="w">        </span><span class="n">action</span><span class="p">();</span>
-</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="p">}</span>
-</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// my_backend/sim_engine.cpp</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">SimEngine::do_init</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">WorldVisitor</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">{</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="n">build_systems</span><span class="p">();</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="n">m_action_dispatcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">require</span><span class="o">&lt;</span><span class="n">MyActionDispatcher</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="n">dump_system_infos</span><span class="p">();</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="kt">void</span><span class="w"> </span><span class="nf">SimEngine::do_advance</span><span class="p">()</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="p">{</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="n">m_action_dispatcher</span><span class="o">-&gt;</span><span class="n">dispatch_actions</span><span class="p">();</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="p">}</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>With the implementation above, other sim systems can add actions to the <code>MyActionDispatcher</code> in the <code>do_build</code> function. </p>
-<p>And because we can require the <code>MyActionDispatcher</code> in the <code>MySimEngine</code> and keep the reference of it, we can dispatch the actions in any where of the engine.</p>
-<p>E.g. The Dispatcher can be a time to integrate some systems, or a time to solve the linear system, or a time to update the geometry.</p>
+<p>With the implementation above, other sim systems can add actions to the <code>MyActionDispatcher</code> in their <code>do_build</code> function. And because the engine can require the <code>MyActionDispatcher</code> and keep a reference to it, we can dispatch the actions anywhere in the engine.</p>
+<p>E.g. the dispatcher can represent a time to integrate some systems, or a time to solve the linear system, or a time to update the geometry. The CUDA backend uses exactly this pattern with <code>on_init_scene / on_rebuild_scene / on_write_scene</code> events (see <code>src/backends/cuda/sim_system.h</code>).</p>
 <h4 id="subsystem">Subsystem</h4>
-<p>Sometimes, it's a good idea to have a global system and several subsystems, all subsystem register itself to the global system, and the global system dispatch the lifecycle functions of the subsystems.</p>
-<p>The common utilities don't provide a default implementation for you. But it's easy to implement it by yourself. Using the same idea of the <code>SimAction</code> and <code>SimActionCollection</code>.</p>
-<p>Just replace the <code>SimAction</code> with <code>SimSystem</code>, <code>SimActionCollection</code> with <code>SimSystemSlotCollection</code>. And ask the subsystems to register themselves to the global system when <code>do_build</code>.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// my_backend/my_global_system.h</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">{</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyGlobalSystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SimSystem</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">{</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">SimSystem</span><span class="o">::</span><span class="n">SimSystem</span><span class="p">;</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_build</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">{}</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add_subsystem</span><span class="p">(</span><span class="n">SimSystem</span><span class="o">*</span><span class="w"> </span><span class="n">subsystem</span><span class="p">);</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dispatch_subsystems</span><span class="p">();</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MySimEngine</span><span class="p">;</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="n">SimSystemSlotCollection</span><span class="o">&lt;</span><span class="n">SimSystem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_subsystems</span><span class="p">;</span>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="p">};</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="p">}</span>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="c1">// my_backend/my_global_system.cpp</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">backend</span><span class="o">::</span><span class="nn">my_backend</span>
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="p">{</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="n">REGISTER_SIM_SYSTEM</span><span class="p">(</span><span class="n">MyGlobalSystem</span><span class="p">);</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyGlobalSystem::add_subsystem</span><span class="p">(</span><span class="n">SimSystem</span><span class="o">*</span><span class="w"> </span><span class="n">subsystem</span><span class="p">)</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="p">{</span>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="n">m_subsystems</span><span class="p">.</span><span class="n">register_system</span><span class="p">(</span><span class="n">subsystem</span><span class="p">);</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="p">}</span>
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyGlobalSystem::dispatch_subsystems</span><span class="p">()</span>
-</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="p">{</span>
-</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">subsystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m_subsystems</span><span class="p">.</span><span class="n">view</span><span class="p">())</span>
-</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">        </span><span class="n">subsystem</span><span class="o">-&gt;</span><span class="n">advance</span><span class="p">();</span>
-</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="p">}</span>
-</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="p">}</span>
+<p>Sometimes, it's a good idea to have a global system and several subsystems; all subsystems register themselves to the global system, and the global system dispatches the lifecycle functions of the subsystems.</p>
+<p>The common utilities don't provide a default implementation, but it's easy to build one using the same idea as <code>SimAction</code> and <code>SimActionCollection</code>: just replace <code>SimAction</code> with <code>SimSystem</code> and <code>SimActionCollection</code> with <code>SimSystemSlotCollection</code>, and ask the subsystems to register themselves to the global system in <code>do_build</code>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// my_backend/my_global_system.h</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">{</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyGlobalSystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SimSystem</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">SimSystem</span><span class="o">::</span><span class="n">SimSystem</span><span class="p">;</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">do_build</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add_subsystem</span><span class="p">(</span><span class="n">SimSystem</span><span class="o">*</span><span class="w"> </span><span class="n">subsystem</span><span class="p">);</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dispatch_subsystems</span><span class="p">();</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">  </span><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="k">friend</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimEngine</span><span class="p">;</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="n">SimSystemSlotCollection</span><span class="o">&lt;</span><span class="n">SimSystem</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m_subsystems</span><span class="p">;</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">};</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">}</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="c1">// my_backend/my_global_system.cpp</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">{</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="n">REGISTER_SIM_SYSTEM</span><span class="p">(</span><span class="n">MyGlobalSystem</span><span class="p">);</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyGlobalSystem::add_subsystem</span><span class="p">(</span><span class="n">SimSystem</span><span class="o">*</span><span class="w"> </span><span class="n">subsystem</span><span class="p">)</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="p">{</span>
+</span><span id="__span-12-25"><a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">    </span><span class="n">m_subsystems</span><span class="p">.</span><span class="n">register_system</span><span class="p">(</span><span class="n">subsystem</span><span class="p">);</span>
+</span><span id="__span-12-26"><a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="p">}</span>
+</span><span id="__span-12-27"><a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>
+</span><span id="__span-12-28"><a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="kt">void</span><span class="w"> </span><span class="nf">MyGlobalSystem::dispatch_subsystems</span><span class="p">()</span>
+</span><span id="__span-12-29"><a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="p">{</span>
+</span><span id="__span-12-30"><a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">subsystem</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m_subsystems</span><span class="p">.</span><span class="n">view</span><span class="p">())</span>
+</span><span id="__span-12-31"><a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-12-32"><a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">        </span><span class="n">subsystem</span><span class="o">-&gt;</span><span class="n">advance</span><span class="p">();</span>
+</span><span id="__span-12-33"><a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-34"><a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="p">}</span>
+</span><span id="__span-12-35"><a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Of course, you should let the engine require the global system and dispatch the subsystems in the lifecycle functions.</p>
-<p>Such global-subsystem pattern can be recursively used. A subsystem can also have its own subsystems.</p></div>
+<p>Such a global-subsystem pattern can be used recursively: a subsystem can also have its own subsystems.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="../">Development Overview</a> — the Data-Oriented Programming and Reporter-Manager-Receiver (RMR) design.</li>
+<li><a href="../backend_cuda/">CUDA Backend</a> — a full-featured production backend.</li>
+<li><a href="../deterministic_mode/">Deterministic Mode</a> — reproducibility design notes for backend authors.</li>
+</ul></div>
 
 
 
@@ -3526,7 +3691,7 @@ The frontend user utilizes the backend functionalities through <code>World</code
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

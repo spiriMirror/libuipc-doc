@@ -60,6 +60,7 @@
 |  [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) | [**default\_element**](#function-default_element) () noexcept<br> |
 |  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) noexcept<br> |
 |  [**ContactModel**](classuipc_1_1core_1_1ContactModel.md) | [**default\_model**](#function-default_model-22) () noexcept const<br> |
+|  bool | [**default\_model\_is\_user\_set**](#function-default_model_is_user_set) () noexcept const<br>_Whether default\_model(...) was ever called by the user._  |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
 |  IndexT | [**insert**](#function-insert) (const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & L, const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & R, Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
 |  [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) & | [**operator=**](#function-operator) (const [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) &) = delete<br> |
@@ -226,6 +227,24 @@ ContactModel uipc::core::ContactTabular::default_model () noexcept const
 
 
 
+
+<hr>
+
+
+
+### function default\_model\_is\_user\_set 
+
+_Whether default\_model(...) was ever called by the user._ 
+```C++
+bool uipc::core::ContactTabular::default_model_is_user_set () noexcept const
+```
+
+
+
+Used by the backend to resolve the default contact stiffness: unset -&gt; use contact/adaptive/min\_kappa; set -&gt; clamp the user's value into [min\_kappa, max\_kappa] (a warning reminds the user of the range); negative values (adaptive-kappa opt-in) are never clamped. 
+
+
+        
 
 <hr>
 

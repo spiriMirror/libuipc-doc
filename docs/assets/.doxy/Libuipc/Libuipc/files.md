@@ -245,7 +245,4 @@ Here is a list of all files with brief descriptions:
             * **file** [**points\_from\_volume.h**](vdb_2points__from__volume_8h.md)     
         * **file** [**io.h**](io_8h.md) 
         * **file** [**uipc.h**](uipc_8h.md) 
-    * **dir** [**uipc\_gui**](dir_e6f33594e1ca9c65efcf98646d93736b.md)     
-        * **dir** [**common**](dir_a4796c188772d0a0fa09f1942d616969.md)     
-            * **file** [**platform\_handle.h**](platform__handle_8h.md)     
 

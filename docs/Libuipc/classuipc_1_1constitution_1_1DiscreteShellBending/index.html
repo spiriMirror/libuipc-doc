@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2856,7 +2856,7 @@
   <span class="md-ellipsis">
     
   
-    fmt
+    Third-Party Libraries
   
 
     
@@ -2982,10 +2982,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-apply_to" class="md-nav__link">
+  <a href="#function-apply_to-12" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function apply_to
+        function apply_to [1/2]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-apply_to-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function apply_to [2/2]
       
     </span>
   </a>
@@ -3008,6 +3019,17 @@
   
     <nav class="md-nav" aria-label="Public Static Functions Documentation">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-bending_stiffness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function bending_stiffness
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#function-default_config" class="md-nav__link">
@@ -3060,7 +3082,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-apply_to"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, Float bending_stiffness=100.0_kPa) <br></td>
+<td style="text-align: left;"><a href="#function-apply_to-12"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, Float bending_stiffness=100.0_kPa) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-apply_to-22"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, Float young_modulus, Float poisson_ratio) <br></td>
 </tr>
 </tbody>
 </table>
@@ -3105,6 +3131,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: right;">Float</td>
+<td style="text-align: left;"><a href="#function-bending_stiffness"><strong>bending_stiffness</strong></a> (Float young_modulus, Float poisson_ratio, Float thickness) noexcept<br></td>
+</tr>
 <tr>
 <td style="text-align: right;">Json</td>
 <td style="text-align: left;"><a href="#function-default_config"><strong>default_config</strong></a> () <br></td>
@@ -3155,16 +3185,34 @@
 </span></code></pre></div>
 <hr>
 
-<h3 id="function-apply_to">function apply_to</h3>
+<h3 id="function-apply_to-12">function apply_to [1/2]</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">DiscreteShellBending</span><span class="o">::</span><span class="n">apply_to</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">bending_stiffness</span><span class="o">=</span><span class="mf">100.0</span><span class="n">_kPa</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
+
+<h3 id="function-apply_to-22">function apply_to [2/2]</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">DiscreteShellBending</span><span class="o">::</span><span class="n">apply_to</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">young_modulus</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">poisson_ratio</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
+<h3 id="function-bending_stiffness">function bending_stiffness</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">DiscreteShellBending</span><span class="o">::</span><span class="n">bending_stiffness</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">young_modulus</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">poisson_ratio</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">Float</span><span class="w"> </span><span class="n">thickness</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
+</span></code></pre></div>
+<hr>
+
 <h3 id="function-default_config">function default_config</h3>
-<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">DiscreteShellBending</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">DiscreteShellBending</span><span class="o">::</span><span class="n">default_config</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
 
@@ -3229,7 +3277,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

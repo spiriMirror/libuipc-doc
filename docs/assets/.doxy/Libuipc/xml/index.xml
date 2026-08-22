@@ -620,6 +620,7 @@
     <member refid="classuipc_1_1core_1_1ContactTabular_1a1931132de81d877303797ae7fc4b9567" kind="function"><name>default_model</name></member>
     <member refid="classuipc_1_1core_1_1ContactTabular_1a2f689fd009cc478e3e706d90d27c6dd9" kind="function"><name>default_element</name></member>
     <member refid="classuipc_1_1core_1_1ContactTabular_1a071645e5d31c012dbde6a9978f422c65" kind="function"><name>default_model</name></member>
+    <member refid="classuipc_1_1core_1_1ContactTabular_1a754e6a7b41c7d01b890d9b17edc8e23f" kind="function"><name>default_model_is_user_set</name></member>
     <member refid="classuipc_1_1core_1_1ContactTabular_1a8fad077d3e0895531c86447e983636ef" kind="function"><name>element_count</name></member>
     <member refid="classuipc_1_1core_1_1ContactTabular_1a9d148f5599f9a1420e026390fbeb7964" kind="function"><name>contact_models</name></member>
     <member refid="classuipc_1_1core_1_1ContactTabular_1a1dff3b267e11f46d5e28396bbbcce253" kind="function"><name>contact_models</name></member>
@@ -676,6 +677,8 @@
     <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a39b4b3684fcab09277d3d681153b44ad" kind="variable"><name>m_config</name></member>
     <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1ac81fbaeedbf0b0e630fbfceac50cdff0" kind="function"><name>DiscreteShellBending</name></member>
     <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a454714be504ffe2deb61dc4d90be9095" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a84d7dc2a4cd1348971bbfb2538499665" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a7a9a9e30e0691aef7a4c8a794caa1d4e" kind="function"><name>bending_stiffness</name></member>
     <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1a64d3d5193d31671a44b0d765ab4f5d68" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1DiscreteShellBending_1ab334f8c53f158570d9978b63025fbf97" kind="function"><name>get_uid</name></member>
   </compound>
@@ -2149,7 +2152,8 @@
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1abd157e92efd10593af6c0a4fca8267da" kind="typedef"><name>Base</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1af1b8f2163595874c5cc47f8ebe399bec" kind="variable"><name>m_config</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a284f63eb2381bc8522c68390da77a278" kind="function"><name>StrainLimitingBaraffWitkinShell</name></member>
-    <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a4b5fbac4467326bd2b3bb1aabc8e9681" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a7d011e0e6761af3519b4b42f02c89b1a" kind="function"><name>apply_to</name></member>
+    <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1ac84628e4f944f472742f23713cb954c4" kind="function"><name>apply_to</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a7458574b80e1f89014cb4520716fbcaf" kind="function"><name>default_config</name></member>
     <member refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell_1a57d019a86a8ae3c31cefeddc1663b100" kind="function"><name>get_uid</name></member>
   </compound>
@@ -2630,11 +2634,6 @@
     <member refid="transform_8h_1a9bb4af02ba657e420f8d00c88c67607e" kind="function"><name>q_v_to_transform_v</name></member>
     <member refid="transform_8h_1a90663031b7aed813ae826203084241a2" kind="function"><name>transform_v_to_q_v</name></member>
   </compound>
-  <compound refid="namespaceuipc_1_1gui" kind="namespace"><name>uipc::gui</name>
-    <member refid="platform__handle_8h_1adb59983a33b6b4ee4223c963211519f7" kind="function"><name>glfw_native_window_handle</name></member>
-    <member refid="platform__handle_8h_1a13f579bf5618bbbfd5e3b0b92740822c" kind="function"><name>native_window_handle_type</name></member>
-    <member refid="platform__handle_8h_1ab164ad5ffd18dccf4bd56fe242b801a7" kind="function"><name>native_display_handle</name></member>
-  </compound>
   <compound refid="namespaceuipc_1_1io" kind="namespace"><name>uipc::io</name>
   </compound>
   <compound refid="namespaceuipc_1_1logger" kind="namespace"><name>uipc::logger</name>
@@ -2933,6 +2932,14 @@
   </compound>
   <compound refid="internal_2engine_8h" kind="file"><name>engine.h</name>
   </compound>
+  <compound refid="internal_2scene_8h" kind="file"><name>scene.h</name>
+  </compound>
+  <compound refid="scene_8h" kind="file"><name>scene.h</name>
+  </compound>
+  <compound refid="internal_2world_8h" kind="file"><name>world.h</name>
+  </compound>
+  <compound refid="world_8h" kind="file"><name>world.h</name>
+  </compound>
   <compound refid="object_8h" kind="file"><name>object.h</name>
   </compound>
   <compound refid="object__collection_8h" kind="file"><name>object_collection.h</name>
@@ -2940,10 +2947,6 @@
   <compound refid="object__snapshot_8h" kind="file"><name>object_snapshot.h</name>
   </compound>
   <compound refid="sanity__checker_8h" kind="file"><name>sanity_checker.h</name>
-  </compound>
-  <compound refid="internal_2scene_8h" kind="file"><name>scene.h</name>
-  </compound>
-  <compound refid="scene_8h" kind="file"><name>scene.h</name>
   </compound>
   <compound refid="scene__archieve_8h" kind="file"><name>scene_archieve.h</name>
   </compound>
@@ -2959,10 +2962,6 @@
   </compound>
   <compound refid="subscene__tabular_8h" kind="file"><name>subscene_tabular.h</name>
   </compound>
-  <compound refid="internal_2world_8h" kind="file"><name>world.h</name>
-  </compound>
-  <compound refid="world_8h" kind="file"><name>world.h</name>
-  </compound>
   <compound refid="adjoint__method__feature_8h" kind="file"><name>adjoint_method_feature.h</name>
   </compound>
   <compound refid="enable__grad__feature_8h" kind="file"><name>enable_grad_feature.h</name>
@@ -2970,10 +2969,6 @@
   <compound refid="parameter__collection_8h" kind="file"><name>parameter_collection.h</name>
   </compound>
   <compound refid="sparse__coo__view_8h" kind="file"><name>sparse_coo_view.h</name>
-  </compound>
-  <compound refid="geometry_8h" kind="file"><name>geometry.h</name>
-  </compound>
-  <compound refid="geometry_2geometry_8h" kind="file"><name>geometry.h</name>
   </compound>
   <compound refid="abstract__simplicial__complex_8h" kind="file"><name>abstract_simplicial_complex.h</name>
   </compound>
@@ -2994,6 +2989,10 @@
   <compound refid="attribute__friend_8h" kind="file"><name>attribute_friend.h</name>
   </compound>
   <compound refid="attribute__slot_8h" kind="file"><name>attribute_slot.h</name>
+  </compound>
+  <compound refid="geometry_8h" kind="file"><name>geometry.h</name>
+  </compound>
+  <compound refid="geometry_2geometry_8h" kind="file"><name>geometry.h</name>
   </compound>
   <compound refid="geometry__atlas_8h" kind="file"><name>geometry_atlas.h</name>
   </compound>
@@ -3089,6 +3088,10 @@
   </compound>
   <compound refid="optimal__transform_8h" kind="file"><name>optimal_transform.h</name>
   </compound>
+  <compound refid="geometry_2utils_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
+  </compound>
+  <compound refid="vdb_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
+  </compound>
   <compound refid="simplex__utils_8h" kind="file"><name>simplex_utils.h</name>
   </compound>
   <compound refid="io_8h" kind="file"><name>io.h</name>
@@ -3104,12 +3107,6 @@
   <compound refid="spread__sheet__io_8h" kind="file"><name>spread_sheet_io.h</name>
   </compound>
   <compound refid="urdf__io_8h" kind="file"><name>urdf_io.h</name>
-  </compound>
-  <compound refid="prim_8h" kind="file"><name>prim.h</name>
-  </compound>
-  <compound refid="stage_8h" kind="file"><name>stage.h</name>
-  </compound>
-  <compound refid="stage__io_8h" kind="file"><name>stage_io.h</name>
   </compound>
   <compound refid="common_2dllexport_8h" kind="file"><name>dllexport.h</name>
     <member refid="common_2dllexport_8h_1a3eb99fe897cd1af9d0dc6aad2a814a56" kind="define"><name>UIPC_EXTERN_C</name></member>
@@ -3130,11 +3127,11 @@
   <compound refid="vdb_2dllexport_8h" kind="file"><name>dllexport.h</name>
     <member refid="vdb_2dllexport_8h_1a14c73594cdba16323c5172fc3eda71ef" kind="define"><name>UIPC_VDB_API</name></member>
   </compound>
-  <compound refid="geometry_2utils_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
+  <compound refid="prim_8h" kind="file"><name>prim.h</name>
   </compound>
-  <compound refid="vdb_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
+  <compound refid="stage_8h" kind="file"><name>stage.h</name>
   </compound>
-  <compound refid="platform__handle_8h" kind="file"><name>platform_handle.h</name>
+  <compound refid="stage__io_8h" kind="file"><name>stage_io.h</name>
   </compound>
   <compound refid="dir_0434b40e061af98901db13a48821d02b" kind="dir"><name>include/uipc/geometry/utils/affine_body</name>
   </compound>
@@ -3145,8 +3142,6 @@
   <compound refid="dir_e46c520626162f9e42d80fd08f196511" kind="dir"><name>include/uipc/builtin</name>
   </compound>
   <compound refid="dir_fe04c8fb910be76d82cd33e795163b9b" kind="dir"><name>include/uipc/common</name>
-  </compound>
-  <compound refid="dir_a4796c188772d0a0fa09f1942d616969" kind="dir"><name>include/uipc_gui/common</name>
   </compound>
   <compound refid="dir_e6404e629433dfdedefe8b8f43f6234d" kind="dir"><name>include/uipc/constitution</name>
   </compound>
@@ -3165,8 +3160,6 @@
   <compound refid="dir_852854ea57a318f61c10cfed1155dbd7" kind="dir"><name>include/uipc/io</name>
   </compound>
   <compound refid="dir_9f30510905f1286cc334e7ecdb1aceca" kind="dir"><name>include/uipc</name>
-  </compound>
-  <compound refid="dir_e6f33594e1ca9c65efcf98646d93736b" kind="dir"><name>include/uipc_gui</name>
   </compound>
   <compound refid="dir_127bf4b01602b8d031b5fde8b608abd9" kind="dir"><name>include/uipc/usd</name>
   </compound>
