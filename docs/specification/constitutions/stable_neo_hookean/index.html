@@ -3029,11 +3029,17 @@ Practicalities (Now With Code!)
 </a></p>
 </blockquote>
 <h2 id="10-stable-neo-hookean">#10 Stable Neo Hookean</h2>
+<p>Since v0.0.26, this constitution is <a href="https://github.com/KemengHuang/Stiff-GIPC">Stiff-GIPC</a>'s <strong>SNK1</strong> (energy, gradient, and analytically SPD-projected Hessian ported verbatim from <code>femEnergy.cu</code>).</p>
 <p>Deformation energy <strong>density</strong>:</p>
 <div class="arithmatex">\[
-E = \frac{1}{2} \lambda (J - \alpha)^2 + \frac{1}{2} \mu (I_c - 3) - \frac{1}{2} \mu \ln(I_c + 1),
+E = \frac{1}{2} \mu (I_c - 3) + \frac{1}{2} \lambda (J - 1 - \mu / \lambda)^2,
 \]</div>
-<p>where <span class="arithmatex">\(J = \det(F)\)</span>, <span class="arithmatex">\(I_c = \|F\|_F^2\)</span>, <span class="arithmatex">\(\alpha = 1 + \frac{3\mu}{4\lambda}\)</span>.</p>
+<p>where <span class="arithmatex">\(J = \det(F)\)</span> and <span class="arithmatex">\(I_c = \|F\|_F^2\)</span>.</p>
+<p>First Piola-Kirchhoff stress (gradient):</p>
+<div class="arithmatex">\[
+P = \frac{\partial E}{\partial F} = \mu F + (\lambda (J - 1) - \mu)\, \mathrm{cof}(F).
+\]</div>
+<p>The 9×9 energy Hessian is projected to SPD analytically — twist/flip eigensystem from the QR-SVD of <span class="arithmatex">\(F\)</span> plus a 3×3 direct eigensolve — instead of a generic eigendecomposition with clamping.</p>
 <p>In continuum mechanics, <span class="arithmatex">\(F\)</span> is called the deformation gradient, <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> are the Lamé parameters. <span class="arithmatex">\(I_c\)</span> is the first invariant of the right Cauchy-Green deformation tensor <span class="arithmatex">\(C = \|F\|_F^2\)</span>, <span class="arithmatex">\(\|\cdot\|_F\)</span> is the <a href="https://en.wikipedia.org/wiki/Matrix_norm">Frobenius norm</a>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>tetrahedra</code>:</p>

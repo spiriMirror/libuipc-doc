@@ -3098,7 +3098,7 @@
 
 
 <div><h1 id="soft-vertex-triangle-stitch">Soft Vertex Triangle Stitch</h1>
-<p><strong>Soft Vertex Triangle Stitch</strong> is an inter-primitive constitutive model where each (vertex, triangle) pair from two separate meshes forms a tetrahedron element. The tetrahedron's shape-keeping energy uses the <a href="../stable_neo_hookean/">Stable Neo-Hookean</a> model.</p>
+<p><strong>Soft Vertex Triangle Stitch</strong> is an inter-primitive constitutive model where each (vertex, triangle) pair from two separate meshes forms a tetrahedron element. The tetrahedron's shape-keeping energy uses a simplified Stable Neo-Hookean variant (distinct from the current <a href="../stable_neo_hookean/">#10 SNK1</a> constitution).</p>
 <p>The first mesh provides a set of vertices, and the second mesh provides a set of triangles. For each paired vertex <span class="arithmatex">\(\mathbf{x}_0\)</span> and triangle <span class="arithmatex">\((\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3)\)</span>, a tetrahedron is formed with vertices <span class="arithmatex">\(\mathbf{x}_0\)</span>, <span class="arithmatex">\(\mathbf{x}_1\)</span>, <span class="arithmatex">\(\mathbf{x}_2\)</span>, <span class="arithmatex">\(\mathbf{x}_3\)</span>.</p>
 <h2 id="30-soft-vertex-triangle-stitch">#30 Soft Vertex Triangle Stitch</h2>
 <p>For a tetrahedron element with vertex <span class="arithmatex">\(\mathbf{x}_0\)</span> (from the vertex mesh) and triangle vertices <span class="arithmatex">\(\mathbf{x}_1\)</span>, <span class="arithmatex">\(\mathbf{x}_2\)</span>, <span class="arithmatex">\(\mathbf{x}_3\)</span> (from the triangle mesh), we define the deformed shape matrix:</p>
@@ -3118,7 +3118,7 @@
 \mathbf{F} = \mathbf{D}_s \, \mathbf{D}_m^{-1}
 \]</div>
 <h3 id="deformation-energy-density">Deformation Energy Density</h3>
-<p>The energy density follows <a href="../stable_neo_hookean/">#10 Stable Neo-Hookean</a>:</p>
+<p>The energy density follows the simplified Stable Neo-Hookean variant used by this stitch (not the <a href="../stable_neo_hookean/">#10 SNK1</a> constitution):</p>
 <div class="arithmatex">\[
 \Psi = \frac{\mu}{2}(I_c - 3) - \mu(J - 1) + \frac{\lambda}{2}(J - 1)^2 + \frac{\mu^2}{\lambda^2}
 \]</div>

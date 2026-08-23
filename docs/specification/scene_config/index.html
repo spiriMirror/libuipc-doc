@@ -3453,6 +3453,27 @@
 <td><code>"fused_pcg"</code> <code>"linear_pcg"</code></td>
 <td>Linear solver; <code>linear_pcg</code> is ~ 30% slower</td>
 </tr>
+<tr>
+<td><code>linear_system/fem_preconditioner</code></td>
+<td>String</td>
+<td><code>"diag"</code></td>
+<td><code>"diag"</code> <code>"mas"</code></td>
+<td>FEM local preconditioner: 3x3 block-Jacobi, or MAS (Multi-Level Additive Schwarz) which auto-partitions every FEM geometry internally (fixed cluster size 16)</td>
+</tr>
+<tr>
+<td><code>linear_system/use_cuda_graph</code></td>
+<td>Int</td>
+<td><code>1</code></td>
+<td></td>
+<td>FusedPCG CUDA graph mode: 1 = replay <code>check_interval</code>-sized iteration blocks, 2 = full-GPU while-loop graph (CUDA ≥ 12.4), 0 = plain per-iteration launches</td>
+</tr>
+<tr>
+<td><code>linear_system/check_interval</code></td>
+<td>Int</td>
+<td><code>5</code></td>
+<td></td>
+<td>Host convergence-check cadence in PCG iterations</td>
+</tr>
 </tbody>
 </table>
 <h2 id="line-search">Line Search</h2>

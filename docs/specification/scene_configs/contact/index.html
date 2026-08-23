@@ -3050,6 +3050,7 @@
 <h2 id="adaptive-contact-stiffness-adaptive">Adaptive Contact Stiffness (<code>adaptive/*</code>)</h2>
 <p>Reference repository: <a href="https://github.com/KemengHuang/Stiff-GIPC">Stiff-GIPC</a></p>
 <p>The GIPC adaptive strategy adjusts contact stiffness <span class="arithmatex">\(\kappa\)</span> each Newton step to balance convergence speed and contact accuracy.</p>
+<p>At init the engine computes a <strong>scene-adaptive <span class="arithmatex">\(\kappa\)</span> corridor</strong> (a port of Stiff-GIPC's <code>suggestKappa</code>/<code>upperBoundKappa</code>, with the <span class="arithmatex">\(dt^2\)</span> conversion — see the <a href="../../scene_config/#ipc-adaptive-stiffness">scene config reference</a> for the formula): <span class="arithmatex">\([\kappa_\text{suggest},\, 100 \times \kappa_\text{suggest}]\)</span> from the scene diagonal, mean mass and <span class="arithmatex">\(d_\text{hat}\)</span>. <strong>The corridor rules</strong>: the default-model resolution, per-model clamps and the adaptive projection are all clamped into it. The config values below are only the fallback when the corridor is not computable.</p>
 <table>
 <thead>
 <tr>
@@ -3062,7 +3063,7 @@
 <tr>
 <td><code>min_kappa</code></td>
 <td>100 MPa (<code>1e8</code>)</td>
-<td>Lower bound — prevents <span class="arithmatex">\(\kappa\)</span> from dropping too low</td>
+<td>Fallback lower bound (used only when the corridor is not computable)</td>
 </tr>
 <tr>
 <td><code>init_kappa</code></td>
@@ -3072,11 +3073,16 @@
 <tr>
 <td><code>max_kappa</code></td>
 <td>100 GPa (<code>1e11</code>)</td>
-<td>Upper bound — caps stiffness to avoid ill-conditioning</td>
+<td>Fallback upper bound (used only when the corridor is not computable)</td>
+</tr>
+<tr>
+<td><code>kappa_eval_scale</code></td>
+<td><code>1e-16</code></td>
+<td>Evaluation-point scale of the corridor (Stiff's raw-<span class="arithmatex">\(\kappa\)</span> value; the <span class="arithmatex">\(/dt^2\)</span> conversion makes it valid for any <code>dt</code>)</td>
 </tr>
 </tbody>
 </table>
-<p>If contacts are too soft (visible penetration), increase <code>init_kappa</code> or <code>min_kappa</code>. If the solver struggles to converge, try lowering <code>max_kappa</code>.</p></div>
+<p>If contacts are too soft (visible penetration), increase <code>init_kappa</code>. If the solver struggles to converge, check the computed corridor in the log (<code>Adaptive kappa corridor: [...]</code>) — it is adapted to the scene's mass and size.</p></div>
 
 
 

@@ -3241,16 +3241,12 @@ I_6 = \hat{\mathbf{a}}^T \mathbf{F}^T \mathbf{F} \hat{\mathbf{b}}
 <h2 id="total-energy">Total Energy</h2>
 <p>The total energy for each triangle element is:</p>
 <div class="arithmatex">\[
-E = \Psi \cdot V, \quad V = 2 \, t \, A_0
+E = \Psi \cdot A_0
 \]</div>
-<p>where:</p>
-<ul>
-<li><span class="arithmatex">\(t\)</span> is the shell thickness parameter</li>
-<li><span class="arithmatex">\(A_0\)</span> is the rest area of the triangle</li>
-<li>The factor of 2 accounts for the one-sided thickness convention</li>
-</ul>
+<p>where <span class="arithmatex">\(A_0\)</span> is the rest area of the triangle. The membrane weight is the <strong>area</strong>, not the volume: the shell thickness enters through the stiffness attributes instead — the stretch stiffness carries <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(E_\text{stretch} \cdot t / (1 - \nu_\text{stretch}^2)\)</span> per unit area), while the shear stiffness <span class="arithmatex">\(E_\text{shear} / (2(1 + \nu_\text{shear}))\)</span> is thickness-independent.</p>
+<p>The directional stretch metric is floored at <span class="arithmatex">\(10^{-12}\)</span> to guard the <span class="arithmatex">\(1/\sqrt{I_5}\)</span> singularity at fully collapsed triangles (finite huge response instead of NaN).</p>
 <h2 id="parameters">Parameters</h2>
-<p>The strain rate parameter <span class="arithmatex">\(r\)</span> is an internal backend constant (currently <span class="arithmatex">\(r = 100\)</span>) that controls the strength of the cubic extension penalty.</p>
+<p>The strain rate parameter <span class="arithmatex">\(r\)</span> is set via the <code>strain_rate</code> argument of <code>apply_to</code> (default 100) and controls the strength of the cubic extension penalty.</p>
 <p>The thickness <span class="arithmatex">\(t\)</span> and mass density are inherited from the <a href="../finite_element/">Finite Element</a> base and set via the <code>apply_to</code> interface.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>triangles</code>:</p>
