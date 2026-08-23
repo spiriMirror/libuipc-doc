@@ -1580,7 +1580,7 @@
 <parametername>part_max_size</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>the vertex number in each partition &lt;= part_max_size </para>
+<para>the vertex number in each partition &lt;= part_max_size. NOTE: the CUDA MAS preconditioner hard-codes BANKSIZE=16, so 16 is the only value it accepts. End users should not call this to enable MAS — set scene config <computeroutput>linear_system/fem_preconditioner = &quot;mas&quot;</computeroutput> instead, which auto-partitions every FEM geometry internally with the fixed size. This function remains for custom C++ partitioning (a pre-existing mesh_part attribute is respected by MAS as-is). </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -1588,7 +1588,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/utils/mesh_partition.h" line="15" column="24" declfile="include/uipc/geometry/utils/mesh_partition.h" declline="15" declcolumn="24"/>
+        <location file="include/uipc/geometry/utils/mesh_partition.h" line="21" column="24" declfile="include/uipc/geometry/utils/mesh_partition.h" declline="21" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="optimal__transform_8h_1a977a754d89cd0d7b7f9190c35d737e5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API Matrix4x4</type>

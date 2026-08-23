@@ -2983,15 +2983,15 @@
 <h2 id="iteration-bounds">Iteration Bounds</h2>
 <ul>
 <li><code>max_iter</code> (default 1024): hard cap on Newton iterations. If reached, a warning is issued (or an exception if <code>extras/strict_mode/enable = 1</code>).</li>
-<li><code>min_iter</code> (default 1): minimum iterations before early exit is allowed. Relevant for semi-implicit mode.</li>
+<li><code>min_iter</code> (default 0): hard floor on Newton iterations. The default <code>0</code> means no forced minimum — the loop exits as soon as the convergence criteria are met.</li>
 </ul>
 <h2 id="semi-implicit-mode">Semi-Implicit Mode</h2>
 <p>When <code>newton/semi_implicit/enable = 1</code>, the solver uses a <span class="arithmatex">\(\beta\)</span>-schedule that blends implicit and explicit updates:</p>
 <ol>
-<li>Run at least <code>min_iter</code> Newton iterations.</li>
-<li>After <code>min_iter</code>, compute <span class="arithmatex">\(\beta\)</span> from the residual ratio.</li>
+<li>From Newton iteration <code>newton/semi_implicit/K_min</code> (default 1) on, accumulate <span class="arithmatex">\(\beta \leftarrow (1 - \alpha)\,\beta\)</span> after each line search.</li>
 <li>Terminate when <span class="arithmatex">\(\beta \leq \texttt{beta\_tol}\)</span>.</li>
 </ol>
+<p><code>K_min</code> is Stiff-GIPC's Kmin: it only gates when <span class="arithmatex">\(\beta\)</span> accumulation starts and is <strong>not</strong> a floor on the iteration count — the normal convergence criteria above may terminate the loop earlier.</p>
 <p>This trades strict convergence for speed — useful for real-time or interactive scenarios where frame budget matters more than per-step accuracy.</p></div>
 
 

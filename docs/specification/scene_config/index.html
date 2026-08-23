@@ -3371,9 +3371,9 @@
 <tr>
 <td><code>newton/min_iter</code></td>
 <td>Int</td>
-<td><code>1</code></td>
+<td><code>0</code></td>
 <td></td>
-<td>Minimum Newton iterations before early exit</td>
+<td>Hard floor on Newton iterations; <code>0</code> = no forced minimum (exit as soon as converged)</td>
 </tr>
 <tr>
 <td><code>newton/use_adaptive_tol</code></td>
@@ -3416,6 +3416,13 @@
 <td><code>1e-3</code></td>
 <td></td>
 <td>Terminate semi-implicit when <code>beta &lt;= beta_tol</code></td>
+</tr>
+<tr>
+<td><code>newton/semi_implicit/K_min</code></td>
+<td>Int</td>
+<td><code>1</code></td>
+<td></td>
+<td>Semi-implicit beta accumulation starts at this Newton iteration (Stiff-GIPC Kmin); not a floor on the iteration count</td>
 </tr>
 </tbody>
 </table>

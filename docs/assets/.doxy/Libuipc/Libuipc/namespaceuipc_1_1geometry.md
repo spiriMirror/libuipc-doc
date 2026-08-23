@@ -1203,7 +1203,7 @@ create a `mesh_part` &lt;IndexT&gt; attribute on the simplicial complex' vertice
 
 
 * `sc` simplicial complex 
-* `part_max_size` the vertex number in each partition &lt;= part\_max\_size 
+* `part_max_size` the vertex number in each partition &lt;= part\_max\_size. NOTE: the CUDA MAS preconditioner hard-codes BANKSIZE=16, so 16 is the only value it accepts. End users should not call this to enable MAS — set scene config `linear_system/fem_preconditioner = "mas"` instead, which auto-partitions every FEM geometry internally with the fixed size. This function remains for custom C++ partitioning (a pre-existing mesh\_part attribute is respected by MAS as-is). 
 
 
 
