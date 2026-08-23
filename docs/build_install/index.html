@@ -2982,7 +2982,7 @@
 <p>Limitations:</p>
 <ul>
 <li>Only supports Windows/Ubuntu22.04</li>
-<li>Only supports CUDA 12.8</li>
+<li>The prebuilt wheels target CUDA 12.8; building from source works with newer toolkits too (13.x is used in daily development), and newer CUDA code is kept compatible back to CUDA 11.x where feasible (e.g. the CUDA-graph helper in <code>cuda_tool/graph.h</code> selects its instantiation API by <code>CUDART_VERSION</code>)</li>
 <li>Only supports Python 3.10-3.13</li>
 </ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pyuipc
