@@ -3534,6 +3534,7 @@
 </table>
 <h3 id="ipc-adaptive-stiffness">IPC Adaptive Stiffness</h3>
 <p>Only takes effect when <code>contact/constitution = "ipc"</code> <strong>and</strong> the contact tabular contains a resistance set to <code>-1.0</code> (i.e. <code>adaptive(-1.0)</code>), which triggers the adaptive <span class="arithmatex">\(\kappa\)</span> mechanism.</p>
+<p>At init the engine computes a <strong>scene-adaptive <span class="arithmatex">\(\kappa\)</span> corridor</strong> (a port of Stiff-GIPC's <code>suggestKappa</code>/<code>upperBoundKappa</code>, <code>GIPC.cu:9850-9888</code>, with the <span class="arithmatex">\(dt^2\)</span> convention conversion — their barrier applies <span class="arithmatex">\(\kappa\)</span> raw, ours is scaled by <span class="arithmatex">\(dt^2\)</span>, so the computed values are divided by <span class="arithmatex">\(dt^2\)</span>): <span class="arithmatex">\(\kappa_{suggest} = c \cdot \bar m / (4 \cdot s \cdot \mathrm{diag}^2 \cdot H_b) / dt^2\)</span> with <span class="arithmatex">\(\bar m\)</span> = total scene mass / vertex count, <span class="arithmatex">\(\mathrm{diag}\)</span> = rest-bbox diagonal, <span class="arithmatex">\(s\)</span> = <code>kappa_eval_scale</code>, <span class="arithmatex">\(H_b\)</span> the barrier curvature at <span class="arithmatex">\(d = s \cdot \mathrm{diag}^2\)</span> vs <span class="arithmatex">\(\hat d^2\)</span>, and <span class="arithmatex">\(\kappa_{upper} = 100 \times \kappa_{suggest}\)</span>. <strong>The computed corridor rules</strong> — all clamping (default-model resolution, per-model clamps, the adaptive strategy's projection result) uses it; the config <code>min/max_kappa</code> below only serve as fallback when the corridor is not computable.</p>
 <table>
 <thead>
 <tr>
@@ -3548,7 +3549,7 @@
 <td><code>contact/adaptive/min_kappa</code></td>
 <td>Float</td>
 <td><code>1e8</code></td>
-<td>Minimum adaptive contact stiffness (<span class="arithmatex">\(Pa\)</span>, 100 MPa)</td>
+<td>Fallback minimum adaptive contact stiffness (<span class="arithmatex">\(Pa\)</span>, 100 MPa) — used only when the corridor is not computable</td>
 </tr>
 <tr>
 <td><code>contact/adaptive/init_kappa</code></td>
@@ -3560,7 +3561,13 @@
 <td><code>contact/adaptive/max_kappa</code></td>
 <td>Float</td>
 <td><code>1e11</code></td>
-<td>Maximum adaptive contact stiffness (<span class="arithmatex">\(Pa\)</span>, 100 GPa)</td>
+<td>Fallback maximum adaptive contact stiffness (<span class="arithmatex">\(Pa\)</span>, 100 GPa) — used only when the corridor is not computable</td>
+</tr>
+<tr>
+<td><code>contact/adaptive/kappa_eval_scale</code></td>
+<td>Float</td>
+<td><code>1e-16</code></td>
+<td>Evaluation-point scale <span class="arithmatex">\(s\)</span> for the corridor (Stiff's raw-<span class="arithmatex">\(\kappa\)</span> value; the <span class="arithmatex">\(/dt^2\)</span> conversion makes it valid for any <code>dt</code>)</td>
 </tr>
 </tbody>
 </table>
