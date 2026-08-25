@@ -297,6 +297,8 @@
       
         
       
+        
+      
     
     
     
@@ -417,6 +419,34 @@
     
   
     Linux-Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build_install/xmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XMake
   
 
     
@@ -2945,6 +2975,8 @@
       
         
       
+        
+      
     
     
     
@@ -3050,6 +3082,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/deterministic_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3059,57 +3119,6 @@
     
       
       
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Misc
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Misc
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -3131,14 +3140,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3418,6 +3419,11 @@
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">evolving_only</span><span class="o">=</span><span class="nb">false</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>geo</code> The geometry to copy into the atlas. </li>
+<li><code>evolving_only</code> Keep only attribute slots marked as evolving. The attribute-collection topology and row counts are preserved, but the resulting geometry is a streaming projection that requires a full baseline to recover omitted static attributes. </li>
+</ul>
 <hr>
 
 <h3 id="function-create-22">function create [2/2]</h3>
@@ -3428,6 +3434,12 @@
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">evolving_only</span><span class="o">=</span><span class="nb">false</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>name</code> Name used to retrieve the collection. </li>
+<li><code>ac</code> The attribute collection to copy into the atlas. </li>
+<li><code>evolving_only</code> Keep only attribute slots marked as evolving while preserving the collection row count. </li>
+</ul>
 <hr>
 
 <h3 id="function-find-12">function find [1/2]</h3>

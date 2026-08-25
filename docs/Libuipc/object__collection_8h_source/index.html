@@ -297,6 +297,8 @@
       
         
       
+        
+      
     
     
     
@@ -417,6 +419,34 @@
     
   
     Linux-Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build_install/xmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XMake
   
 
     
@@ -2945,6 +2975,8 @@
       
         
       
+        
+      
     
     
     
@@ -3050,6 +3082,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/deterministic_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3059,57 +3119,6 @@
     
       
       
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Misc
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Misc
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -3131,14 +3140,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3237,7 +3238,7 @@
 </span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">    </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">IndexT</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;&gt;&amp;</span><span class="w">       </span><span class="n">objects</span><span class="p">();</span>
 </span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">IndexT</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">objects</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 </span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>
-</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">build_from</span><span class="p">(</span><span class="n">span</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">objects</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">build_from</span><span class="p">(</span><span class="n">span</span><span class="o">&lt;</span><span class="n">S</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">objects</span><span class="p">,</span><span class="w"> </span><span class="n">IndexT</span><span class="w"> </span><span class="n">next_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
 </span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">update_from</span><span class="p">(</span><span class="n">internal</span><span class="o">::</span><span class="n">Scene</span><span class="o">&amp;</span><span class="w"> </span><span class="n">scene</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ObjectCollectionSnapshot</span><span class="o">&amp;</span><span class="w"> </span><span class="n">snapshot</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
 </span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="p">};</span>
 </span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>

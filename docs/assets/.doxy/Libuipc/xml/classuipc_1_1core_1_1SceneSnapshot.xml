@@ -113,6 +113,36 @@
         </inbodydescription>
         <location file="include/uipc/core/scene_snapshot.h" line="33" column="19" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="33" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1SceneSnapshot_1a9e729b07eb223a6f62344c1f6edec822" prot="private" static="no" mutable="no">
+        <type>IndexT</type>
+        <definition>IndexT uipc::core::SceneSnapshot::m_geometry_next_id</definition>
+        <argsstring></argsstring>
+        <name>m_geometry_next_id</name>
+        <qualifiedname>uipc::core::SceneSnapshot::m_geometry_next_id</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene_snapshot.h" line="34" column="50" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1SceneSnapshot_1a641058d43cc1ff0e4d03db1159a1c06b" prot="private" static="no" mutable="no">
+        <type>IndexT</type>
+        <definition>IndexT uipc::core::SceneSnapshot::m_rest_geometry_next_id</definition>
+        <argsstring></argsstring>
+        <name>m_rest_geometry_next_id</name>
+        <qualifiedname>uipc::core::SceneSnapshot::m_rest_geometry_next_id</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene_snapshot.h" line="35" column="50" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classuipc_1_1core_1_1SceneSnapshot_1acf42cefd49e7c697f7ee5caf7bbd3857" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref> &gt;</type>
         <definition>vector&lt;ContactElement&gt; uipc::core::SceneSnapshot::m_contact_elements</definition>
@@ -125,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_snapshot.h" line="35" column="13" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="35" bodyend="-1"/>
+        <location file="include/uipc/core/scene_snapshot.h" line="37" column="13" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1core_1_1SceneSnapshot_1a6169903831cda2e348491764319b61a7" prot="private" static="no" mutable="no">
         <type>vector&lt; <ref refid="classuipc_1_1core_1_1SubsceneElement" kindref="compound">SubsceneElement</ref> &gt;</type>
@@ -139,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_snapshot.h" line="36" column="12" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="36" bodyend="-1"/>
+        <location file="include/uipc/core/scene_snapshot.h" line="38" column="12" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1core_1_1SceneSnapshot_1aa14dbe9abb2d29340f0f43942b3263c9" prot="private" static="no" mutable="no">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">geometry::AttributeCollection</ref> &gt;</type>
@@ -153,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_snapshot.h" line="38" column="7" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="38" bodyend="-1"/>
+        <location file="include/uipc/core/scene_snapshot.h" line="40" column="7" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1core_1_1SceneSnapshot_1ac3c663ed1a1ee27e966d1752fd20e615" prot="private" static="no" mutable="no">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">geometry::AttributeCollection</ref> &gt;</type>
@@ -167,7 +197,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene_snapshot.h" line="39" column="7" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="39" bodyend="-1"/>
+        <location file="include/uipc/core/scene_snapshot.h" line="41" column="7" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classuipc_1_1core_1_1SceneSnapshot_1a4b870ee847525e07dd65de9ab7bb307a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool uipc::core::SceneSnapshot::m_contact_default_model_user_set</definition>
+        <argsstring></argsstring>
+        <name>m_contact_default_model_user_set</name>
+        <qualifiedname>uipc::core::SceneSnapshot::m_contact_default_model_user_set</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene_snapshot.h" line="42" column="38" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="42" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -279,14 +324,17 @@
     <detaileddescription>
 <para>Create a scene snapshot from the given scene, which is a plain data copy of the scene (detached from the world). </para>
     </detaileddescription>
-    <location file="include/uipc/core/scene_snapshot.h" line="12" column="1" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="13" bodyend="40"/>
+    <location file="include/uipc/core/scene_snapshot.h" line="12" column="1" bodyfile="include/uipc/core/scene_snapshot.h" bodystart="13" bodyend="43"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1a289c0de9ec996ec2cfc69d6d68000255" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_config</name></member>
+      <member refid="classuipc_1_1core_1_1SceneSnapshot_1a4b870ee847525e07dd65de9ab7bb307a" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_contact_default_model_user_set</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1acf42cefd49e7c697f7ee5caf7bbd3857" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_contact_elements</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1aa14dbe9abb2d29340f0f43942b3263c9" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_contact_models</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1a447a961bbaf6693c768d730cc01963f8" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_geometries</name></member>
+      <member refid="classuipc_1_1core_1_1SceneSnapshot_1a9e729b07eb223a6f62344c1f6edec822" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_geometry_next_id</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1a93e8750c87658dafff8ece3b61415b06" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_object_collection</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1a40ffeb23657d199ede696d31de6031d0" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_rest_geometries</name></member>
+      <member refid="classuipc_1_1core_1_1SceneSnapshot_1a641058d43cc1ff0e4d03db1159a1c06b" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_rest_geometry_next_id</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1a6169903831cda2e348491764319b61a7" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_subscene_elements</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1ac3c663ed1a1ee27e966d1752fd20e615" prot="private" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>m_subscene_models</name></member>
       <member refid="classuipc_1_1core_1_1SceneSnapshot_1a3cb6fbfb5aec22081df26d833a737296" prot="public" virt="non-virtual"><scope>uipc::core::SceneSnapshot</scope><name>operator=</name></member>

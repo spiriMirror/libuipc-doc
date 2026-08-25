@@ -3,6 +3,7 @@
   <compounddef id="stage_8h" kind="file" language="C++">
     <compoundname>stage.h</compoundname>
     <includes refid="prim_8h" local="no">uipc/usd/prim.h</includes>
+    <includedby refid="stage__io_8h" local="no">include/uipc/usd/stage_io.h</includedby>
     <incdepgraph>
       <node id="21">
         <label>uipc/backend/buffer_view.h</label>
@@ -293,6 +294,18 @@
         <label>vector</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/uipc/usd/stage.h</label>
+        <link refid="stage_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/uipc/usd/stage_io.h</label>
+        <link refid="stage__io_8h_source"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classuipc_1_1usd_1_1Stage" prot="public">uipc::usd::Stage</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1usd">uipc::usd</innernamespace>

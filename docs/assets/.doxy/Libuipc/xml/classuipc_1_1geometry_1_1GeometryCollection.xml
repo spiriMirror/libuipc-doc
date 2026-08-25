@@ -585,15 +585,20 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry_collection.h" line="97" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryCollection_1a04f435532b053c4c55d2f2ca9643a05d" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryCollection_1a43741648385b9a78f7588a5f388b83f9" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::geometry::GeometryCollection::build_from</definition>
-        <argsstring>(span&lt; S&lt; geometry::GeometrySlot &gt; &gt; slots) noexcept</argsstring>
+        <argsstring>(span&lt; S&lt; geometry::GeometrySlot &gt; &gt; slots, IndexT next_id=-1) noexcept</argsstring>
         <name>build_from</name>
         <qualifiedname>uipc::geometry::GeometryCollection::build_from</qualifiedname>
         <param>
           <type>span&lt; S&lt; <ref refid="classuipc_1_1geometry_1_1GeometrySlot" kindref="compound">geometry::GeometrySlot</ref> &gt; &gt;</type>
           <declname>slots</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>next_id</declname>
+          <defval>-1</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -603,15 +608,23 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry_collection.h" line="99" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryCollection_1ab83b1c1e046f677aa95bba24398c1675" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryCollection_1a1fed506aee3e4d9be8e371b0e8ffdabe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::geometry::GeometryCollection::update_from</definition>
-        <argsstring>(const unordered_map&lt; IndexT, S&lt; GeometryCommit &gt; &gt; &amp;commits) noexcept</argsstring>
+        <argsstring>(const unordered_map&lt; IndexT, S&lt; GeometryCommit &gt; &gt; &amp;commits, span&lt; const IndexT &gt; removed_ids, IndexT next_id)</argsstring>
         <name>update_from</name>
         <qualifiedname>uipc::geometry::GeometryCollection::update_from</qualifiedname>
         <param>
           <type>const unordered_map&lt; IndexT, S&lt; <ref refid="classuipc_1_1geometry_1_1GeometryCommit" kindref="compound">GeometryCommit</ref> &gt; &gt; &amp;</type>
           <declname>commits</declname>
+        </param>
+        <param>
+          <type>span&lt; const IndexT &gt;</type>
+          <declname>removed_ids</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>next_id</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -650,9 +663,9 @@
         <link refid="classuipc_1_1geometry_1_1IGeometryCollection"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/geometry/geometry_collection.h" line="35" column="1" bodyfile="include/uipc/geometry/geometry_collection.h" bodystart="36" bodyend="101"/>
+    <location file="include/uipc/geometry/geometry_collection.h" line="35" column="1" bodyfile="include/uipc/geometry/geometry_collection.h" bodystart="36" bodyend="103"/>
     <listofallmembers>
-      <member refid="classuipc_1_1geometry_1_1GeometryCollection_1a04f435532b053c4c55d2f2ca9643a05d" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>build_from</name></member>
+      <member refid="classuipc_1_1geometry_1_1GeometryCollection_1a43741648385b9a78f7588a5f388b83f9" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>build_from</name></member>
       <member refid="classuipc_1_1geometry_1_1IGeometryCollection_1a7c98c1de7fc4e8508dc09afe3bde3d42" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>clear</name></member>
       <member refid="classuipc_1_1geometry_1_1GeometryCollection_1a9a4aa06b99add14c13a0eee3decf0229" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>core::internal::Scene</name></member>
       <member refid="classuipc_1_1geometry_1_1GeometryCollection_1a279b1be01bcf72e2aaaabbbe753ebc7f" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>core::SceneFactory</name></member>
@@ -691,7 +704,7 @@
       <member refid="classuipc_1_1geometry_1_1IGeometryCollection_1a082b455627cbffac7dea6bb07d4580e5" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>reserve</name></member>
       <member refid="classuipc_1_1geometry_1_1IGeometryCollection_1a635f3f3be33a2a7f7eab4c98da7de1f8" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>size</name></member>
       <member refid="classuipc_1_1geometry_1_1GeometryCollection_1a6570cf0fde062c19217b3bd28b1b9a53" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>solve_pending</name></member>
-      <member refid="classuipc_1_1geometry_1_1GeometryCollection_1ab83b1c1e046f677aa95bba24398c1675" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>update_from</name></member>
+      <member refid="classuipc_1_1geometry_1_1GeometryCollection_1a1fed506aee3e4d9be8e371b0e8ffdabe" prot="private" virt="non-virtual"><scope>uipc::geometry::GeometryCollection</scope><name>update_from</name></member>
       <member refid="classuipc_1_1geometry_1_1IGeometryCollection_1a6fe89273c2c8ea20de15b5cc35de906b" prot="public" virt="virtual"><scope>uipc::geometry::GeometryCollection</scope><name>~IGeometryCollection</name></member>
     </listofallmembers>
   </compounddef>

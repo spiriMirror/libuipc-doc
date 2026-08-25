@@ -155,6 +155,10 @@ class UIPC_CORE_API Scene final
 
     static Json default_config() noexcept;
 
+    static Json config_schema();
+
+    void validate_config() const;
+
     class UIPC_CORE_API Objects
     {
         friend class Scene;

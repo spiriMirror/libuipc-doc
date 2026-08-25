@@ -301,6 +301,8 @@
       
         
       
+        
+      
     
     
     
@@ -421,6 +423,34 @@
     
   
     Linux-Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_install/xmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XMake
   
 
     
@@ -2951,6 +2981,8 @@
       
         
       
+        
+      
     
     
     
@@ -3056,6 +3088,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deterministic_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3065,57 +3125,6 @@
     
       
       
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Misc
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Misc
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -3137,14 +3146,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3220,7 +3221,7 @@
 <div><h1 id="development">Development</h1>
 <p>This document describes the design and implementation of the <code>libuipc</code>, providing a reference for developers who wish to contribute to the project. Here, we will mainly focus on the backend implementation of the framework.</p>
 <h2 id="data-oriented-programming">Data Oriented Programming</h2>
-<p>The Partial Differential Equation (PDE) of the simulation problem is already an abstract representation of the real world. We don't need to make any conceptual abstraction using <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object Oriented Programming</a> (OOP) to represent the objects. Instead, we keep <a href="https://en.wikipedia.org/wiki/Data-oriented_design">Data Oriented Programming</a> (DOP) in mind to represent the data in a way that is cache-friendly and efficient. In some way, we organize the UIPC framework in a modified <a href="https://en.wikipedia.org/wiki/Entity_component_system">Entity Component System</a> (ECS) pattern, which is called the <a href="#Reporter-Manager-Receiver-Model">Reporter-Manager-Receiver</a> (RMR) model.</p>
+<p>The Partial Differential Equation (PDE) of the simulation problem is already an abstract representation of the real world. We don't need to make any conceptual abstraction using <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object Oriented Programming</a> (OOP) to represent the objects. Instead, we keep <a href="https://en.wikipedia.org/wiki/Data-oriented_design">Data Oriented Programming</a> (DOP) in mind to represent the data in a way that is cache-friendly and efficient. In some way, we organize the UIPC framework in a modified <a href="https://en.wikipedia.org/wiki/Entity_component_system">Entity Component System</a> (ECS) pattern, which is called the <a href="#reporter-manager-receiver-model">Reporter-Manager-Receiver</a> (RMR) model.</p>
 <h2 id="reporter-manager-receiver-model">Reporter-Manager-Receiver Model</h2>
 <p>The model is a conceptual design pattern that organizes the data flow between different components of the framework in a safe, cache-friendly and flexible way.</p>
 <p><img alt="Reporter-Manager-Receiver Model" src="img/RMR.drawio.svg"></p></div>

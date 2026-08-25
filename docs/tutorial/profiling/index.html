@@ -301,6 +301,8 @@
       
         
       
+        
+      
     
     
     
@@ -421,6 +423,34 @@
     
   
     Linux-Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build_install/xmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XMake
   
 
     
@@ -888,6 +918,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Benchmarking (uipc.profile)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-regression-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance regression gates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structured-solver-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structured solver statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3031,6 +3089,8 @@
       
         
       
+        
+      
     
     
     
@@ -3136,6 +3196,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/deterministic_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3145,57 +3233,6 @@
     
       
       
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Misc
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Misc
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -3217,14 +3254,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3274,6 +3303,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Benchmarking (uipc.profile)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-regression-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance regression gates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structured-solver-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structured solver statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3337,13 +3394,106 @@
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="s1">'summary'</span><span class="p">])</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># Scene: phased  |  Frames: 10  |  Wall time: 2.345s  |  Avg: 234.5ms/frame</span>
 </span></code></pre></div>
+<p>Warmup/recovery time is excluded from <code>wall_time</code>, and timers accumulated by a
+warmup phase are drained before the first measured frame. The saved
+<code>benchmark.json</code> records the exact warmup/profile plan plus backend, Python,
+platform, UIPC, CUDA-toolkit, and architecture compatibility facts.</p>
+<p>The command-line runner exposes the same boundary:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>benchmark<span class="w"> </span>run<span class="w"> </span>--scene<span class="w"> </span>cube_ground<span class="w"> </span>--warmup<span class="w"> </span><span class="m">20</span><span class="w"> </span>--frames<span class="w"> </span><span class="m">50</span><span class="w"> </span>--output<span class="w"> </span>bench
+</span></code></pre></div>
+<h3 id="performance-regression-gates">Performance regression gates</h3>
+<p>Create a baseline on a stable runner, then check later results on that same
+runner:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>benchmark<span class="w"> </span>baseline<span class="w"> </span>bench/cube_ground<span class="w"> </span>-o<span class="w"> </span>baselines/cube_ground.json
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>benchmark<span class="w"> </span>check<span class="w"> </span>bench-candidate/cube_ground<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>--baseline<span class="w"> </span>baselines/cube_ground.json<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>--json-output<span class="w"> </span>bench-candidate/gate.json
+</span></code></pre></div>
+<p>The check exits nonzero when an enforced metric exceeds its saved allowance
+(10% by default), a benchmark/frame plan is missing, or compatibility facts do
+not match. It gates profile-only wall time and Timer median/p95 frame time;
+Newton iterations are retained as a diagnostic so a faster algorithm is not
+rejected solely because its iteration count changed. Use
+<code>--max-regression-percent</code> to override the saved allowance. Only use
+<code>--allow-environment-mismatch</code> for exploratory comparisons: timings from
+different GPUs, builds, CUDA toolkits, or platforms are not a valid CI gate.</p>
+<p>The equivalent Python API is
+<code>uipc.profile.create_baseline(...)</code> / <code>uipc.profile.check_baseline(...)</code>.</p>
+<h3 id="structured-solver-statistics">Structured solver statistics</h3>
+<p>The CUDA backend exposes the latest frame without requiring log parsing:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">world</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">frame</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">frame_stats</span><span class="p">()</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">frame</span><span class="p">[</span><span class="s1">'frame'</span><span class="p">],</span> <span class="n">frame</span><span class="p">[</span><span class="s1">'newton_iterations'</span><span class="p">])</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">frame</span><span class="p">[</span><span class="s1">'completed'</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">frame</span><span class="p">[</span><span class="s1">'converged'</span><span class="p">]:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+</span></code></pre></div>
+<p><code>frame_stats()</code> returns an empty dictionary for a backend that does not publish
+frame statistics (including the <code>none</code> backend). The CUDA schema is:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>schema_version</code></td>
+<td>Version of this small JSON contract; currently <code>1</code>.</td>
+</tr>
+<tr>
+<td><code>frame</code>, <code>pipeline</code></td>
+<td>Latest frame number and <code>ipc</code> / <code>al-ipc</code> path.</td>
+</tr>
+<tr>
+<td><code>completed</code></td>
+<td>The frame pipeline reached its end without throwing.</td>
+</tr>
+<tr>
+<td><code>converged</code></td>
+<td>The nonlinear solver met that pipeline's termination rule.</td>
+</tr>
+<tr>
+<td><code>newton_iterations</code></td>
+<td>Number of nonlinear iteration bodies executed.</td>
+</tr>
+<tr>
+<td><code>line_search_trials</code></td>
+<td>Total candidate steps evaluated across the frame.</td>
+</tr>
+<tr>
+<td><code>linear_solver_iterations</code></td>
+<td>Total iterative-linear-solver iterations across all Newton solves.</td>
+</tr>
+<tr>
+<td><code>hit_newton_limit</code>, <code>hit_line_search_limit</code></td>
+<td>Whether any configured iteration ceiling was reached.</td>
+</tr>
+<tr>
+<td><code>last_line_search_alpha</code>, <code>last_ccd_toi</code>, <code>last_cfl_alpha</code></td>
+<td>Last step-size diagnostics (<code>1</code> means no reduction).</td>
+</tr>
+</tbody>
+</table>
+<p><code>completed</code> and <code>converged</code> are deliberately separate: a non-strict scene may
+finish a frame after reaching an iteration limit. Conversely, if an exception
+interrupts the frame, <code>completed</code> remains false and <code>engine.status().to_json()</code>
+contains backend messages. <code>engine.to_json()</code> continues to provide the heavier
+backend topology/feature inventory.</p>
+<p>Profiling sessions collect this snapshot after every measured frame. In-memory
+results expose it as <code>result['frame_stats']</code>; persisted runs write
+<code>frame_stats.json</code>. Baseline reports use these structured counters for Newton,
+line-search, and linear-solver diagnostics while Timer data remains the source
+of duration gates.</p>
 <h2 id="gpu-profiling-uipcprofilensight">GPU Profiling (<code>uipc.profile.nsight</code>)</h2>
 <p><code>nsight.session</code> has the same <code>advance</code> / <code>profile</code> interface, but runs the simulation under <a href="https://developer.nvidia.com/nsight-compute">Nsight Compute</a> (<code>ncu</code>) to collect kernel-level GPU metrics.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.profile</span><span class="w"> </span><span class="kn">import</span> <span class="n">nsight</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">with</span> <span class="n">nsight</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">s</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">s</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.profile</span><span class="w"> </span><span class="kn">import</span> <span class="n">nsight</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">with</span> <span class="n">nsight</span><span class="o">.</span><span class="n">session</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">s</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">s</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Reports are written to the output directory as Markdown, JSON, and <code>.ncu-rep</code> (for the Nsight Compute GUI).</p></div>
 

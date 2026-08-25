@@ -55,6 +55,7 @@
 |  bool | [**dump**](#function-dump) () <br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1FeatureCollection.md) & | [**features**](#function-features) () const<br> |
 |  SizeT | [**frame**](#function-frame) () const<br> |
+|  Json | [**frame\_stats**](#function-frame_stats) () const<br>_Return backend-specific statistics for the latest frame._  |
 |  void | [**init**](#function-init) ([**internal::World**](classuipc_1_1core_1_1internal_1_1World.md) & w) <br> |
 |  void | [**insert\_sanity\_checkers**](#function-insert_sanity_checkers) ([**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) & collection) <br> |
 |  bool | [**recover**](#function-recover) (SizeT dst\_frame) <br> |
@@ -93,6 +94,7 @@
 | ---: | :--- |
 | virtual void | [**do\_advance**](#function-do_advance) () = 0<br> |
 | virtual bool | [**do\_dump**](#function-do_dump) () <br> |
+| virtual Json | [**do\_frame\_stats**](#function-do_frame_stats) () const<br>_Override to publish a small, versioned JSON frame contract._  |
 | virtual void | [**do\_init**](#function-do_init) ([**internal::World**](classuipc_1_1core_1_1internal_1_1World.md) &) = 0<br> |
 | virtual void | [**do\_insert\_sanity\_checkers**](#function-do_insert_sanity_checkers) ([**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) & collection) <br> |
 | virtual bool | [**do\_recover**](#function-do_recover) (SizeT dst\_frame) <br> |
@@ -154,6 +156,20 @@ const FeatureCollection & uipc::core::IEngine::features () const
 
 ```C++
 SizeT uipc::core::IEngine::frame () const
+```
+
+
+
+
+<hr>
+
+
+
+### function frame\_stats 
+
+_Return backend-specific statistics for the latest frame._ 
+```C++
+Json uipc::core::IEngine::frame_stats () const
 ```
 
 
@@ -292,6 +308,20 @@ virtual void uipc::core::IEngine::do_advance () = 0
 
 ```C++
 virtual bool uipc::core::IEngine::do_dump () 
+```
+
+
+
+
+<hr>
+
+
+
+### function do\_frame\_stats 
+
+_Override to publish a small, versioned JSON frame contract._ 
+```C++
+virtual Json uipc::core::IEngine::do_frame_stats () const
 ```
 
 

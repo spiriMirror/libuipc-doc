@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../docker/">
+        <link rel="prev" href="../xmake/">
       
       
         <link rel="next" href="../dev_in_uv/">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-document" class="md-skip">
+        <a href="#build-and-preview-the-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -303,6 +303,8 @@
       
         
       
+        
+      
     
     
     
@@ -423,6 +425,34 @@
     
   
     Linux-Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XMake
   
 
     
@@ -2961,6 +2991,8 @@
       
         
       
+        
+      
     
     
     
@@ -3066,6 +3098,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/deterministic_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3075,57 +3135,6 @@
     
       
       
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Misc
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Misc
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -3147,14 +3156,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3197,15 +3198,30 @@
   
 
 
-<div><h1 id="build-document">Build Document</h1>
+<div><h1 id="build-and-preview-the-documentation">Build and Preview the Documentation</h1>
 <p>Download and install <a href="https://www.doxygen.nl/download.html">doxygen</a>.</p>
 <p>Install <a href="https://www.mkdocs.org/">mkdocs</a> and its plugins:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material<span class="w"> </span>mkdocs-literate-nav<span class="w"> </span>mkdoxy<span class="w"> </span>mkdocs-video
 </span></code></pre></div>
-<p>Turn on the local server:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdocs<span class="w"> </span>serve
+<p>Build the same site that is deployed, including the generated C++ API pages:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>scripts/build_docs.py<span class="w"> </span>-o<span class="w"> </span>output/site
 </span></code></pre></div>
-<p>Open the browser and visit the <a href="http://127.0.0.1:8000/">localhost:8000</a></p></div>
+<p>The build helper uses the active Python interpreter. On Windows it also detects
+Doxygen in the default <code>Program Files/doxygen/bin</code> install directory when that
+directory is not on <code>PATH</code>.</p>
+<p>Serve the generated site locally:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span><span class="w"> </span>--directory<span class="w"> </span>output/site
+</span></code></pre></div>
+<p>Open <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>. Stop the server with
+<code>Ctrl+C</code>.</p>
+<p>For live reload while editing prose, use:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w"> </span>-f<span class="w"> </span>mkdocs-with-api.yaml
+</span></code></pre></div>
+<p>This command requires <code>doxygen</code> to be on <code>PATH</code>. A faster prose-only preview is
+available with <code>python -m mkdocs serve -f mkdocs.yaml</code>, but that configuration
+does not generate the <code>Libuipc/</code> API tree. API links returning 404 in a
+prose-only preview are therefore expected; always validate the deployable site
+with <code>scripts/build_docs.py</code> before publishing.</p></div>
 
 
 

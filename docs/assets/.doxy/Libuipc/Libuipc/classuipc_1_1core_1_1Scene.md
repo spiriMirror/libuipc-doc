@@ -87,6 +87,7 @@
 |  [**SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-12) () noexcept<br> |
 |  const [**SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) & | [**subscene\_tabular**](#function-subscene_tabular-22) () noexcept const<br> |
 |  void | [**update\_from**](#function-update_from) (const [**SceneSnapshotCommit**](classuipc_1_1core_1_1SceneSnapshotCommit.md) & snapshot) <br> |
+|  void | [**validate\_config**](#function-validate_config) () const<br>_Validate the current mutable configuration against_ [_**config\_schema()**_](classuipc_1_1core_1_1Scene.md#function-config_schema) _._ |
 |   | [**~Scene**](#function-scene) () <br> |
 
 
@@ -94,6 +95,7 @@
 
 | Type | Name |
 | ---: | :--- |
+|  Json | [**config\_schema**](#function-config_schema) () <br>_Return machine-readable metadata for every registered scene config key._  |
 |  Json | [**default\_config**](#function-default_config) () noexcept<br> |
 
 
@@ -437,6 +439,24 @@ void uipc::core::Scene::update_from (
 
 
 
+### function validate\_config 
+
+_Validate the current mutable configuration against_ [_**config\_schema()**_](classuipc_1_1core_1_1Scene.md#function-config_schema) _._
+```C++
+void uipc::core::Scene::validate_config () const
+```
+
+
+
+Construction validates the input JSON. World::init validates again so edits made through config() cannot silently bypass the contract. 
+
+
+        
+
+<hr>
+
+
+
 ### function ~Scene 
 
 ```C++
@@ -449,6 +469,24 @@ uipc::core::Scene::~Scene ()
 <hr>
 ## Public Static Functions Documentation
 
+
+
+
+### function config\_schema 
+
+_Return machine-readable metadata for every registered scene config key._ 
+```C++
+static Json uipc::core::Scene::config_schema () 
+```
+
+
+
+Each entry includes its default, storage/type information, constraints, lifecycle, status, description, and backend consumer locations. 
+
+
+        
+
+<hr>
 
 
 

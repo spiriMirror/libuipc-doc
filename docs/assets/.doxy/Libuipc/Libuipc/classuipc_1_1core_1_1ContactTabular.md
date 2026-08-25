@@ -58,7 +58,7 @@
 |  CContactModelCollection | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) | [**create**](#function-create) (std::string\_view name="") noexcept<br> |
 |  [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) | [**default\_element**](#function-default_element) () noexcept<br> |
-|  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) noexcept<br> |
+|  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
 |  [**ContactModel**](classuipc_1_1core_1_1ContactModel.md) | [**default\_model**](#function-default_model-22) () noexcept const<br> |
 |  bool | [**default\_model\_is\_user\_set**](#function-default_model_is_user_set) () noexcept const<br>_Whether default\_model(...) was ever called by the user._  |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
@@ -209,7 +209,7 @@ void uipc::core::ContactTabular::default_model (
     Float resistance,
     bool enable=true,
     const Json & config=default_config()
-) noexcept
+) 
 ```
 
 

@@ -58,6 +58,7 @@
 |   | [**Engine**](#function-engine-55) (S&lt; [**internal::Engine**](classuipc_1_1core_1_1internal_1_1Engine.md) &gt; e) noexcept<br> |
 |  std::string\_view | [**backend\_name**](#function-backend_name) () noexcept const<br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1FeatureCollection.md) & | [**features**](#function-features) () <br> |
+|  Json | [**frame\_stats**](#function-frame_stats) () const<br>_Return structured statistics for the latest backend frame._  |
 |  [**Engine**](classuipc_1_1core_1_1Engine.md) & | [**operator=**](#function-operator) (const [**Engine**](classuipc_1_1core_1_1Engine.md) &) = delete<br> |
 |  [**Engine**](classuipc_1_1core_1_1Engine.md) & | [**operator=**](#function-operator_1) ([**Engine**](classuipc_1_1core_1_1Engine.md) &&) noexcept<br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1EngineStatusCollection.md) & | [**status**](#function-status) () <br> |
@@ -203,6 +204,24 @@ const FeatureCollection & uipc::core::Engine::features ()
 
 
 
+
+<hr>
+
+
+
+### function frame\_stats 
+
+_Return structured statistics for the latest backend frame._ 
+```C++
+Json uipc::core::Engine::frame_stats () const
+```
+
+
+
+Backends that do not publish frame statistics return an empty object. 
+
+
+        
 
 <hr>
 

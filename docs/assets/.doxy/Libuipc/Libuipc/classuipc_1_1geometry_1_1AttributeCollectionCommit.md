@@ -57,6 +57,7 @@
 |  const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & | [**attribute\_collection**](#function-attribute_collection) () noexcept const<br> |
 |  [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & | [**operator=**](#function-operator) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & other) = delete<br> |
 |  span&lt; const std::string &gt; | [**removed\_names**](#function-removed_names) () noexcept const<br> |
+|  IndexT | [**target\_size**](#function-target_size) () noexcept const<br> |
 
 
 
@@ -165,6 +166,19 @@ AttributeCollectionCommit & uipc::geometry::AttributeCollectionCommit::operator=
 
 ```C++
 inline span< const std::string > uipc::geometry::AttributeCollectionCommit::removed_names () noexcept const
+```
+
+
+
+
+<hr>
+
+
+
+### function target\_size 
+
+```C++
+inline IndexT uipc::geometry::AttributeCollectionCommit::target_size () noexcept const
 ```
 
 

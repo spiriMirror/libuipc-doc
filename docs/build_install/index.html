@@ -303,6 +303,8 @@
       
         
       
+        
+      
     
     
     
@@ -423,6 +425,34 @@
     
   
     Linux-Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XMake
   
 
     
@@ -2951,6 +2981,8 @@
       
         
       
+        
+      
     
     
     
@@ -3056,6 +3088,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/deterministic_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3065,57 +3125,6 @@
     
       
       
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Misc
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Misc
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -3137,14 +3146,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -3259,7 +3260,12 @@
 <li>Source builds work with newer toolkits too (CUDA 13.x is used in daily
   development), and newer CUDA code is kept compatible with older toolkits
   where feasible.</li>
-<li>Only supports Python 3.10-3.13</li>
+<li>The release pipeline supports CPython 3.10-3.14. Release 0.0.26 contains only
+  3.10-3.13 wheels; use the next release or build from source on Python 3.14.</li>
+<li>New wheels contain native CUDA code for compute capabilities 7.5, 8.0, 8.6,
+  and 8.9, plus compute-8.9 PTX for forward JIT on newer GPUs. Older wheels
+  compiled only for 8.9 and can fail with <code>no kernel image is available</code> on an
+  Ampere GPU even when the CUDA runtime is installed correctly.</li>
 </ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pyuipc
 </span></code></pre></div>
@@ -3276,6 +3282,20 @@ the actual simulation backend as well:</p>
 <p>On Windows, <code>Could not load ... uipc_backend_cuda.dll</code> together with a missing
 <code>cublas64_12.dll</code> means the CUDA 12.8 runtime is not discoverable on <code>PATH</code>.
 Installing only CUDA 13 does not satisfy that DLL dependency.</p>
+<p>The next release and current source tree provide a compatibility doctor. The
+first command performs non-invasive Python, native ABI, backend-library, CUDA
+runtime, driver, and GPU-architecture checks. The second also creates a CUDA
+engine and therefore initializes the GPU:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>doctor
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>doctor<span class="w"> </span>--probe-cuda
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>doctor<span class="w"> </span>--json
+</span></code></pre></div>
+<p>The human report distinguishes three commonly conflated failures:</p>
+<ul>
+<li>no wheel for the active Python ABI (for example Python 3.14 with 0.0.26);</li>
+<li>no CUDA 12 cuBLAS runtime (<code>cublas64_12.dll</code> / <code>libcublas.so.12</code>);</li>
+<li>no SASS/PTX image compatible with the GPU compute capability.</li>
+</ul>
 <h2 id="development-build">Development Build</h2>
 <ul>
 <li><a href="dev_in_uv/">Development in UV</a></li>

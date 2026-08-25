@@ -10,6 +10,7 @@
 
 
 
+* `#include <uipc/constitution/strain_limiting_baraff_witkin.h>`
 
 
 

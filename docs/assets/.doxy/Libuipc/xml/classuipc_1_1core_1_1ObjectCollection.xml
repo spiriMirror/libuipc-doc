@@ -354,15 +354,20 @@
         </inbodydescription>
         <location file="include/uipc/core/object_collection.h" line="52" column="25"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1ObjectCollection_1a8b5bf762c0d218b79a83770f415a6361" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1ObjectCollection_1a54a96f7f3b3fac11d5b6fbd975b701b1" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::core::ObjectCollection::build_from</definition>
-        <argsstring>(span&lt; S&lt; Object &gt; &gt; objects) noexcept</argsstring>
+        <argsstring>(span&lt; S&lt; Object &gt; &gt; objects, IndexT next_id=-1) noexcept</argsstring>
         <name>build_from</name>
         <qualifiedname>uipc::core::ObjectCollection::build_from</qualifiedname>
         <param>
           <type>span&lt; S&lt; <ref refid="classuipc_1_1core_1_1Object" kindref="compound">Object</ref> &gt; &gt;</type>
           <declname>objects</declname>
+        </param>
+        <param>
+          <type>IndexT</type>
+          <declname>next_id</declname>
+          <defval>-1</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -425,7 +430,7 @@
     </collaborationgraph>
     <location file="include/uipc/core/object_collection.h" line="22" column="1" bodyfile="include/uipc/core/object_collection.h" bodystart="23" bodyend="56"/>
     <listofallmembers>
-      <member refid="classuipc_1_1core_1_1ObjectCollection_1a8b5bf762c0d218b79a83770f415a6361" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>build_from</name></member>
+      <member refid="classuipc_1_1core_1_1ObjectCollection_1a54a96f7f3b3fac11d5b6fbd975b701b1" prot="private" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>build_from</name></member>
       <member refid="classuipc_1_1core_1_1ObjectCollection_1a550cc1033936054c3197d4833a9e1a73" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>destroy</name></member>
       <member refid="classuipc_1_1core_1_1ObjectCollection_1a268bcb5e93eaf3fcbc03db7ac231420c" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>emplace</name></member>
       <member refid="classuipc_1_1core_1_1ObjectCollection_1a5139c9d013892350a24eb5ad816beb57" prot="public" virt="non-virtual"><scope>uipc::core::ObjectCollection</scope><name>find</name></member>

@@ -147,6 +147,18 @@ IndexT uipc::geometry::GeometryAtlas::create (
 
 
 
+
+**Parameters:**
+
+
+* `geo` The geometry to copy into the atlas. 
+* `evolving_only` Keep only attribute slots marked as evolving. The attribute-collection topology and row counts are preserved, but the resulting geometry is a streaming projection that requires a full baseline to recover omitted static attributes. 
+
+
+
+
+        
+
 <hr>
 
 
@@ -164,6 +176,19 @@ void uipc::geometry::GeometryAtlas::create (
 
 
 
+
+
+**Parameters:**
+
+
+* `name` Name used to retrieve the collection. 
+* `ac` The attribute collection to copy into the atlas. 
+* `evolving_only` Keep only attribute slots marked as evolving while preserving the collection row count. 
+
+
+
+
+        
 
 <hr>
 

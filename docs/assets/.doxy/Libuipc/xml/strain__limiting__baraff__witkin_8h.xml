@@ -5,6 +5,7 @@
     <includes refid="finite__element__constitution_8h" local="no">uipc/constitution/finite_element_constitution.h</includes>
     <includes refid="elastic__moduli_8h" local="no">uipc/constitution/elastic_moduli.h</includes>
     <includes refid="unit_8h" local="no">uipc/common/unit.h</includes>
+    <includedby refid="baraff__witkin__shell_8h" local="no">include/uipc/constitution/baraff_witkin_shell.h</includedby>
     <incdepgraph>
       <node id="21">
         <label>uipc/backend/buffer_view.h</label>
@@ -393,6 +394,18 @@
         <label>vector</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/uipc/constitution/baraff_witkin_shell.h</label>
+        <link refid="baraff__witkin__shell_8h_source"/>
+      </node>
+      <node id="1">
+        <label>include/uipc/constitution/strain_limiting_baraff_witkin.h</label>
+        <link refid="strain__limiting__baraff__witkin_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classuipc_1_1constitution_1_1StrainLimitingBaraffWitkinShell" prot="public">uipc::constitution::StrainLimitingBaraffWitkinShell</innerclass>
     <innernamespace refid="namespaceuipc">uipc</innernamespace>
     <innernamespace refid="namespaceuipc_1_1constitution">uipc::constitution</innernamespace>

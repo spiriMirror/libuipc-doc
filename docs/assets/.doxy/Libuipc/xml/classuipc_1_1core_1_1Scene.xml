@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="240" column="7" bodyfile="include/uipc/core/scene.h" bodystart="240" bodyend="-1"/>
+        <location file="include/uipc/core/scene.h" line="256" column="7" bodyfile="include/uipc/core/scene.h" bodystart="256" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -277,6 +277,22 @@
         </inbodydescription>
         <location file="include/uipc/core/scene.h" line="153" column="5"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1ae01d87dbcbbd9322e8f1bf4b0ee218ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void uipc::core::Scene::validate_config</definition>
+        <argsstring>() const</argsstring>
+        <name>validate_config</name>
+        <qualifiedname>uipc::core::Scene::validate_config</qualifiedname>
+        <briefdescription>
+<para>Validate the current mutable configuration against <ref refid="classuipc_1_1core_1_1Scene_1a7bd2e0fe9140a6b6c2fdba80a781924d" kindref="member">config_schema()</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Construction validates the input JSON. World::init validates again so edits made through config() cannot silently bypass the contract. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="171" column="10"/>
+      </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1af42012f8104c234f7918622d30257a48" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>ConfigAttributes</type>
         <definition>ConfigAttributes uipc::core::Scene::config</definition>
@@ -289,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="213" column="23"/>
+        <location file="include/uipc/core/scene.h" line="229" column="23"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a792e0e16c7b6d769cbd12825eb3ae7c2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>CConfigAttributes</type>
@@ -303,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="214" column="23"/>
+        <location file="include/uipc/core/scene.h" line="230" column="23"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a62f3721e455e45efe0ed429b4bc33b2d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1ContactTabular" kindref="compound">ContactTabular</ref> &amp;</type>
@@ -317,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="216" column="26"/>
+        <location file="include/uipc/core/scene.h" line="232" column="26"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a82ca0271cc881ca08c4b4250ca28b3ed" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>const <ref refid="classuipc_1_1core_1_1ContactTabular" kindref="compound">ContactTabular</ref> &amp;</type>
@@ -331,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="217" column="26"/>
+        <location file="include/uipc/core/scene.h" line="233" column="26"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a9755d79376152db7ed7dd7f8685af89e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1SubsceneTabular" kindref="compound">SubsceneTabular</ref> &amp;</type>
@@ -345,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="219" column="27"/>
+        <location file="include/uipc/core/scene.h" line="235" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a859c937365641e6ce1c694006ab7e03e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>const <ref refid="classuipc_1_1core_1_1SubsceneTabular" kindref="compound">SubsceneTabular</ref> &amp;</type>
@@ -359,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="220" column="27"/>
+        <location file="include/uipc/core/scene.h" line="236" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a37a11d0d7a4a06052d3348b388c10001" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1ConstitutionTabular" kindref="compound">ConstitutionTabular</ref> &amp;</type>
@@ -373,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="222" column="31"/>
+        <location file="include/uipc/core/scene.h" line="238" column="31"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1aff050a7d47f1bf523035955606259f28" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>const <ref refid="classuipc_1_1core_1_1ConstitutionTabular" kindref="compound">ConstitutionTabular</ref> &amp;</type>
@@ -387,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="223" column="31"/>
+        <location file="include/uipc/core/scene.h" line="239" column="31"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a79f1fa9c6144b1bb5ef2d3707753d1bd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1Scene_1_1Objects" kindref="compound">Objects</ref></type>
@@ -401,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="225" column="14"/>
+        <location file="include/uipc/core/scene.h" line="241" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1ad2514520befd9203eb7ad906967ddd6f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1Scene_1_1CObjects" kindref="compound">CObjects</ref></type>
@@ -415,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="226" column="14"/>
+        <location file="include/uipc/core/scene.h" line="242" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a32a30a91e21d302949436284ae22491b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1Scene_1_1Geometries" kindref="compound">Geometries</ref></type>
@@ -429,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="228" column="17"/>
+        <location file="include/uipc/core/scene.h" line="244" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1aa8890c30090361e99203b3117971e66a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1Scene_1_1CGeometries" kindref="compound">CGeometries</ref></type>
@@ -443,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="229" column="17"/>
+        <location file="include/uipc/core/scene.h" line="245" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1abe5d010f4c2a7c3844a040cba662ae09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
@@ -457,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="231" column="20"/>
+        <location file="include/uipc/core/scene.h" line="247" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a8b04cdf670cc526387f549bc151bf91f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classuipc_1_1core_1_1Animator" kindref="compound">Animator</ref> &amp;</type>
@@ -471,7 +487,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="232" column="20"/>
+        <location file="include/uipc/core/scene.h" line="248" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a89e3fbd243c278fdf2f2b90c3faf739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classuipc_1_1core_1_1DiffSim" kindref="compound">DiffSim</ref> &amp;</type>
@@ -485,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="234" column="19"/>
+        <location file="include/uipc/core/scene.h" line="250" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1ad81248ee53c29638cf91b9a577d6ddb9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classuipc_1_1core_1_1DiffSim" kindref="compound">DiffSim</ref> &amp;</type>
@@ -499,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="235" column="19"/>
+        <location file="include/uipc/core/scene.h" line="251" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a8e9c98d1d8caa31d2a33ecb523a14294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -517,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="237" column="10"/>
+        <location file="include/uipc/core/scene.h" line="253" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -535,12 +551,28 @@
         </inbodydescription>
         <location file="include/uipc/core/scene.h" line="155" column="17"/>
       </memberdef>
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1a7bd2e0fe9140a6b6c2fdba80a781924d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Json</type>
+        <definition>static Json uipc::core::Scene::config_schema</definition>
+        <argsstring>()</argsstring>
+        <name>config_schema</name>
+        <qualifiedname>uipc::core::Scene::config_schema</qualifiedname>
+        <briefdescription>
+<para>Return machine-readable metadata for every registered scene config key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each entry includes its default, storage/type information, constraints, lifecycle, status, description, and backend consumer locations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/core/scene.h" line="163" column="17"/>
+      </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/scene.h" line="33" column="1" bodyfile="include/uipc/core/scene.h" bodystart="34" bodyend="241"/>
+    <location file="include/uipc/core/scene.h" line="33" column="1" bodyfile="include/uipc/core/scene.h" bodystart="34" bodyend="257"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1Scene_1af47625f50036c466946f960db7320bcf" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>Animation</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1abe5d010f4c2a7c3844a040cba662ae09" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>animator</name></member>
@@ -549,6 +581,7 @@
       <member refid="classuipc_1_1core_1_1Scene_1ad6a43aae4c09e5a6dd23eb7e0c338f88" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>CConfigAttributes</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1af42012f8104c234f7918622d30257a48" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>config</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1a792e0e16c7b6d769cbd12825eb3ae7c2" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>config</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1a7bd2e0fe9140a6b6c2fdba80a781924d" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>config_schema</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1a10394edbab1ca3dcf5d2ab5022ef9c69" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>ConfigAttributes</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1a37a11d0d7a4a06052d3348b388c10001" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>constitution_tabular</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1aff050a7d47f1bf523035955606259f28" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>constitution_tabular</name></member>
@@ -574,6 +607,7 @@
       <member refid="classuipc_1_1core_1_1Scene_1a9755d79376152db7ed7dd7f8685af89e" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>subscene_tabular</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1a859c937365641e6ce1c694006ab7e03e" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>subscene_tabular</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1a8e9c98d1d8caa31d2a33ecb523a14294" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>update_from</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1ae01d87dbcbbd9322e8f1bf4b0ee218ad" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>validate_config</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1a7b4bcdf992c21ae83363f25df05b1d25" prot="private" virt="non-virtual"><scope>uipc::core::Scene</scope><name>World</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1a6afd45e447219f92f17197d16beb2ab1" prot="public" virt="non-virtual"><scope>uipc::core::Scene</scope><name>~Scene</name></member>
     </listofallmembers>

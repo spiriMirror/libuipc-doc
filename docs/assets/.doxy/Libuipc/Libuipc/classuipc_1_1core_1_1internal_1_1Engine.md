@@ -56,6 +56,7 @@ Inherits the following classes: std::enable_shared_from_this< Engine >
 |   | [**Engine**](#function-engine-22) (std::string\_view backend\_name, S&lt; [**IEngine**](classuipc_1_1core_1_1IEngine.md) &gt; overrider, std::string\_view workspace="./", const Json & config=default\_config()) <br> |
 |  std::string\_view | [**backend\_name**](#function-backend_name) () noexcept const<br> |
 |  const [**FeatureCollection**](classuipc_1_1core_1_1FeatureCollection.md) & | [**features**](#function-features) () <br> |
+|  Json | [**frame\_stats**](#function-frame_stats) () const<br> |
 |  void | [**insert\_sanity\_checkers**](#function-insert_sanity_checkers) ([**ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md) & collection) <br> |
 |  [**EngineStatusCollection**](classuipc_1_1core_1_1EngineStatusCollection.md) & | [**status**](#function-status) () <br> |
 |  Json | [**to\_json**](#function-to_json) () const<br> |
@@ -151,6 +152,19 @@ std::string_view uipc::core::internal::Engine::backend_name () noexcept const
 
 ```C++
 const FeatureCollection & uipc::core::internal::Engine::features () 
+```
+
+
+
+
+<hr>
+
+
+
+### function frame\_stats 
+
+```C++
+Json uipc::core::internal::Engine::frame_stats () const
 ```
 
 

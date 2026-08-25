@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="60" column="7" bodyfile="include/uipc/geometry/geometry_atlas.h" bodystart="60" bodyend="-1"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="71" column="7" bodyfile="include/uipc/geometry/geometry_atlas.h" bodystart="71" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -66,10 +66,28 @@
 <para>Create a geometry in the atlas. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>geo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The geometry to copy into the atlas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evolving_only</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Keep only attribute slots marked as evolving. The attribute-collection topology and row counts are preserved, but the resulting geometry is a streaming projection that requires a full baseline to recover omitted static attributes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="19" column="12"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="25" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1a1797b252d98aa04247c20bca6b3aedae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1GeometrySlot" kindref="compound">GeometrySlot</ref> &gt;</type>
@@ -89,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="26" column="7"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="32" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1aab81cf8bf8792ba4d130577c47b2e9f2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
@@ -103,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="28" column="11"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="34" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1a55de98ba9ada88f97c38bf46934b9d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -128,10 +146,36 @@
 <para>Create a named <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> in the atlas. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name used to retrieve the collection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute collection to copy into the atlas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evolving_only</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Keep only attribute slots marked as evolving while preserving the collection row count. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="33" column="10"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="44" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1a34452fb3b2bd7f60054405ad57fb626b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
@@ -151,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="40" column="7"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="51" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1a636e52c38570c97ef496a140e47337e0" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
@@ -165,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="42" column="11"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="53" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1a661f4f338d39acb780fac10c5d23765d" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>vector&lt; std::string &gt;</type>
@@ -179,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="44" column="12"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="55" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1ada5955f300995047f53d158949b0dc68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
@@ -194,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="49" column="10"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="60" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1GeometryAtlas_1a30ad2bf899c1d1ae957bddfbdfc88d2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,14 +275,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry_atlas.h" line="57" column="10"/>
+        <location file="include/uipc/geometry/geometry_atlas.h" line="68" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/geometry/geometry_atlas.h" line="8" column="1" bodyfile="include/uipc/geometry/geometry_atlas.h" bodystart="9" bodyend="61"/>
+    <location file="include/uipc/geometry/geometry_atlas.h" line="8" column="1" bodyfile="include/uipc/geometry/geometry_atlas.h" bodystart="9" bodyend="72"/>
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1GeometryAtlas_1a636e52c38570c97ef496a140e47337e0" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>attribute_collection_count</name></member>
       <member refid="classuipc_1_1geometry_1_1GeometryAtlas_1a661f4f338d39acb780fac10c5d23765d" prot="public" virt="non-virtual"><scope>uipc::geometry::GeometryAtlas</scope><name>attribute_collection_names</name></member>
