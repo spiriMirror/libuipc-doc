@@ -2171,10 +2171,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#augmented-bending-energy-density-eci" class="md-nav__link">
+  <a href="#augmented-bending-energy-eci" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Augmented Bending Energy Density (ECI)
+        Augmented Bending Energy (ECI)
       
     </span>
   </a>
@@ -3093,6 +3093,8 @@
       
         
       
+        
+      
     
     
     
@@ -3226,6 +3228,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3310,10 +3340,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#augmented-bending-energy-density-eci" class="md-nav__link">
+  <a href="#augmented-bending-energy-eci" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Augmented Bending Energy Density (ECI)
+        Augmented Bending Energy (ECI)
       
     </span>
   </a>
@@ -3404,11 +3434,13 @@ $$
 $$
 where <span class="arithmatex">\(\operatorname{wrap}(\cdot)\)</span> maps an angle to the principal branch <span class="arithmatex">\([-\pi,\pi]\)</span>.</p>
 <h3 id="kinematics-and-yield-condition">Kinematics and Yield Condition</h3>
-<p>The purely elastic bending energy density is defined as:
+<p>The purely elastic per-edge bending energy is defined as:
 $$
 E^E(\Delta\theta) = \kappa \frac{\Delta\theta^2 L_0}{\bar{h}}
 $$
 where <span class="arithmatex">\(\kappa\)</span> is the bending stiffness parameter.</p>
+<p>The factor <span class="arithmatex">\(L_0/\bar h=3L_0^2/A\)</span> already contains the complete reference
+metric. No additional triangle-area multiplier is applied.</p>
 <p>The generalized trial bending stress (trial moment) is the derivative of the elastic energy with respect to the deformation angle:
 $$
 \tau^{tr} := \frac{\partial E^E(\Delta\theta^{tr})}{\partial \Delta\theta^{tr}} = 2\kappa \frac{L_0}{\bar{h}} \Delta\theta^{tr}
@@ -3421,12 +3453,12 @@ $$</p>
 $$
 \theta_Y = \frac{\tau_Y \bar{h}}{2\kappa L_0}
 $$</p>
-<h3 id="augmented-bending-energy-density-eci">Augmented Bending Energy Density (ECI)</h3>
+<h3 id="augmented-bending-energy-eci">Augmented Bending Energy (ECI)</h3>
 <p>To formulate a force-based implicit return mapping that perfectly preserves the elastic spring-back force, we construct an augmented energy density. The plastic slip is measured by:
 $$
 \delta \gamma = \max(|\Delta\theta^{tr}| - \theta_Y, 0)
 $$</p>
-<p>The augmented energy density replaces the standard elastic energy in the variational solver:
+<p>The augmented per-edge energy replaces the standard elastic energy in the variational solver:
 $$
 E_{aug}(\theta) = \begin{cases} \kappa \frac{L_0}{\bar{h}} (\Delta\theta^{tr})^2 &amp; |\Delta\theta^{tr}| \le \theta_Y \ \kappa \frac{L_0}{\bar{h}} \theta_Y^2 + \tau_Y \delta \gamma &amp; \text{otherwise} \end{cases}
 $$</p>

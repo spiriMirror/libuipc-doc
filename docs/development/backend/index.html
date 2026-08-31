@@ -2983,6 +2983,8 @@
       
         
       
+        
+      
     
     
     
@@ -3346,6 +3348,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3616,22 +3646,27 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">core</span><span class="o">::</span><span class="n">World</span><span class="w">  </span><span class="n">world</span><span class="p">{</span><span class="n">engine</span><span class="p">};</span>
 </span></code></pre></div>
 <h2 id="backend-module-abi">Backend Module ABI</h2>
-<p>A backend module must export exactly three C symbols (declared in <code>src/backends/common/module.h</code>):</p>
+<p>A backend module must export exactly four C symbols (declared in <code>src/backends/common/module.h</code>):</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">extern</span><span class="w"> </span><span class="s">"C"</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// 1. Called once right after the dynamic library is loaded.</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">//    Synchronizes the host's std::pmr::memory_resource into the module,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">//    so pmr containers allocate consistently across the DLL boundary.</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc_init_module</span><span class="p">(</span><span class="n">UIPCModuleInitInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 2. Called to create an engine instance.</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">uipc_create_engine</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">EngineCreateInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">);</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// 3. Called to destroy the engine instance created by uipc_create_engine.</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc_destroy_engine</span><span class="p">(</span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">engine</span><span class="p">);</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// 1. Called immediately after loading, before any backend code.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">//    Reports ABI version, libuipc build version, and backend identity.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">uipc_query_module</span><span class="p">(</span><span class="n">UIPCBackendModuleInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">);</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="c1">// 2. Called once after the module identity is validated.</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">//    Synchronizes the host's std::pmr::memory_resource into the module,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="c1">//    so pmr containers allocate consistently across the DLL boundary.</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc_init_module</span><span class="p">(</span><span class="n">UIPCModuleInitInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">);</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="c1">// 3. Called to create an engine instance.</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">uipc_create_engine</span><span class="p">(</span><span class="n">backend</span><span class="o">::</span><span class="n">EngineCreateInfo</span><span class="o">*</span><span class="w"> </span><span class="n">info</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="c1">// 4. Called to destroy the engine instance created by uipc_create_engine.</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="n">UIPC_BACKEND_API</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc_destroy_engine</span><span class="p">(</span><span class="n">core</span><span class="o">::</span><span class="n">IEngine</span><span class="o">*</span><span class="w"> </span><span class="n">engine</span><span class="p">);</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
+<li><code>UIPCBackendModuleInfo</code> (<code>include/uipc/backend/module_info.h</code>) is a size-versioned POD contract. The frontend rejects a missing query symbol, ABI mismatch, libuipc major/minor mismatch, or unexpected backend name before calling init/create.</li>
 <li><code>UIPCModuleInitInfo</code> (<code>include/uipc/backend/module_init_info.h</code>) carries the module name and the host PMR memory resource. The shared implementation in <code>src/backends/common/module.cpp</code> does <code>std::pmr::set_default_resource(info-&gt;memory_resource)</code> — reuse it.</li>
 <li><code>EngineCreateInfo</code> (<code>include/uipc/backend/engine_create_info.h</code>) carries the absolute <code>workspace</code> path and the engine <code>Json</code> config (e.g. <code>config["gpu"]["device"]</code>).</li>
 <li>The frontend resolves the module from <code>uipc::config()["module_dir"]</code>, loading <code>uipc_backend_&lt;name&gt;</code> (with the platform shared-library extension). Loaded modules are cached, so repeated <code>Engine{"cuda"}</code> constructions reuse the same library.</li>
@@ -3645,7 +3680,7 @@
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">file</span><span class="p">(</span><span class="s">GLOB</span><span class="w"> </span><span class="s">SOURCES</span><span class="w"> </span><span class="s2">"*.cpp"</span><span class="w"> </span><span class="s2">"*.h"</span><span class="w"> </span><span class="s2">"details/*.inl"</span><span class="p">)</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">target_sources</span><span class="p">(</span><span class="s">my_backend</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="o">${</span><span class="nv">SOURCES</span><span class="o">}</span><span class="p">)</span>
 </span></code></pre></div>
-<p><code>uipc_add_backend</code> (defined in <code>src/backends/CMakeLists.txt</code>) creates a MODULE library target named <code>uipc_backend_my_backend</code>, links the backend common utilities, and sets the output directory so the frontend can find it.</p>
+<p><code>uipc_add_backend</code> (defined in <code>src/backends/CMakeLists.txt</code>) creates a runtime-loadable shared library named <code>uipc_backend_my_backend</code>, links the backend common utilities, and sets the output directory so the frontend can find it. Tests and packaged builds deliberately use the same artifact semantics.</p>
 <h3 id="step-2-implement-the-entrance">Step 2: Implement the entrance</h3>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// src/backends/my_backend/entrance.cpp</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;backends/common/module.h&gt;</span>
@@ -3664,7 +3699,8 @@
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="k">delete</span><span class="w"> </span><span class="n">engine</span><span class="p">;</span>
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>(<code>uipc_init_module</code> is already provided by <code>src/backends/common/module.cpp</code> — do not redefine it.)</p>
+<p>(<code>uipc_query_module</code> and <code>uipc_init_module</code> are already provided by
+<code>src/backends/common/module.cpp</code> — do not redefine them.)</p>
 <h3 id="step-3-implement-the-engine">Step 3: Implement the engine</h3>
 <p>Derive from <code>uipc::backend::SimEngine</code> (<code>src/backends/common/sim_engine.h</code>) and override the lifecycle hooks of <code>core::IEngine</code>:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// src/backends/my_backend/sim_engine.h</span>
@@ -3769,6 +3805,11 @@
 </span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Call <code>REGISTER_SIM_SYSTEM(MySimSystem)</code> in the source file to register your system to the backend engine automatically. Note that the constructor signature determines which engine the system belongs to: a system taking <code>cuda::SimEngine&amp;</code> is only instantiated by the CUDA engine, a system taking <code>backend::SimEngine&amp;</code> is instantiated by any engine.</p>
+<p>Registered systems are instantiated and built in ascending complete type-name
+order. This makes <code>systems.json</code>, compatible implementation lookup, and action
+registration reproducible across link layouts. Do not encode priority through
+source-file or static-initialization order; express required relationships with
+<code>require&lt;T&gt;()</code> and use an explicit dispatcher for ordered runtime actions.</p>
 <h3 id="dependency">Dependency</h3>
 <p>To build up the dependency between systems, call <code>require&lt;T&gt;</code> and <code>find&lt;T&gt;</code> in the <code>do_build</code> function of the system.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">my_backend</span>
@@ -3789,8 +3830,8 @@
 </span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="p">}</span>
 </span></code></pre></div>
 <p><code>require&lt;T&gt;</code> will throw an exception if the system is not found, and <code>find&lt;T&gt;</code> will return a nullptr if the system is not found. If any dependency is not satisfied, the dependent system should throw to invalidate itself. You can also manually throw a <code>SimSystemException</code> to invalidate the system.</p>
-<p>The backend common utilities will clean up the invalid systems — including any system that <strong>strongly depends</strong> on an invalid one (weak dependencies are tolerated) — and keep the valid systems in the backend engine. If such an exception propagates to the level of the backend engine, the engine will close itself and throw the exception to the frontend.</p>
-<p>It's recommended to use <code>require&lt;T&gt;</code> for systems that are necessary, and <code>find&lt;T&gt;</code> for optional ones. By default <code>find&lt;T&gt;</code> matches the exact type only (<code>{.exact = true}</code>); pass <code>find&lt;T&gt;({.exact = false})</code> to also accept a <strong>derived</strong> implementation of <code>T</code>, which is how backends override a base system's functionality with a specialized one.</p>
+<p>The backend common utilities will clean up the invalid systems — including any system that <strong>strongly depends</strong> on an invalid one (weak dependencies are tolerated) — and keep the valid systems in the backend engine. The remaining strong-dependency graph must be acyclic. A cycle aborts backend initialization with the full path, such as <code>SystemA -&gt; SystemB -&gt; SystemA</code>, so mutually recursive ownership should be redesigned around one manager or a weak dependency. If such an exception propagates to the level of the backend engine, the engine will close itself and throw the exception to the frontend.</p>
+<p>It's recommended to use <code>require&lt;T&gt;</code> for systems that are necessary, and <code>find&lt;T&gt;</code> for optional ones. By default <code>find&lt;T&gt;</code> matches the exact type only (<code>{.exact = true}</code>); pass <code>find&lt;T&gt;({.exact = false})</code> to also accept a <strong>derived</strong> implementation of <code>T</code>, which is how backends override a base system's functionality with a specialized one. Compatible lookup follows the same deterministic type-name order and skips implementations that have already invalidated themselves, for example an inactive pipeline variant.</p>
 <p>To keep references to other systems, you <strong>should</strong> use <code>SimSystemSlot</code> and <code>SimSystemSlotCollection</code>. They manage the lifetime of the referenced systems properly: a system may be valid when you require it but invalid later (e.g. after a cascading cleanup), and the slots guard against such use-after-invalidation.</p>
 <h3 id="lifecycle-functions">Lifecycle Functions</h3>
 <p>The lifecycle of a simulator is the most complex part of a backend, varying among different simulation methods. So the common utilities won't provide a default implementation for the lifecycle functions.</p>

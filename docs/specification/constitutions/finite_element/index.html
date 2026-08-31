@@ -1766,6 +1766,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shell-thickness-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell thickness convention
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3043,6 +3054,8 @@
       
         
       
+        
+      
     
     
     
@@ -3176,6 +3189,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3247,6 +3288,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shell-thickness-convention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell thickness convention
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3274,7 +3326,14 @@
 <div class="arithmatex">\[
 \mathbf{x} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}.
 \]</div>
-<p>Positions are the degrees of freedom that evolve over time. Each concrete constitution documents only the attributes it introduces and how they map to its energy formula.</p></div>
+<p>Positions are the degrees of freedom that evolve over time. Each concrete constitution documents only the attributes it introduces and how they map to its energy formula.</p>
+<h2 id="shell-thickness-convention">Shell thickness convention</h2>
+<p>For a triangle mesh, the vertex <code>thickness</code> attribute stores the one-sided
+collision offset (radius) <span class="arithmatex">\(r\)</span>. The physical slab extends to both sides of the
+surface, so its full material thickness is <span class="arithmatex">\(h=2r\)</span>. Shell mass uses
+<span class="arithmatex">\(\rho A_0(2r)\)</span>, and shell constitutions that depend on physical thickness must
+use <span class="arithmatex">\(2r\)</span>. A zero radius switches the generic vertex measure to triangle area,
+so <code>mass_density</code> is then interpreted as a surface density.</p></div>
 
 
 

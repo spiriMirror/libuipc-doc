@@ -3175,6 +3175,8 @@
       
         
       
+        
+      
     
     
     
@@ -3295,6 +3297,34 @@
     
   
     Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
   
 
     
@@ -3537,7 +3567,8 @@ simulation scene. <code>Scene::config_schema()</code> / <code>Scene.config_schem
 machine-readable contract for every registered key: defaults, storage and JSON
 types, units, hard constraints, lifecycle, implementation status, descriptions,
 and source-level consumers. The tables below present the same contract for
-humans. Defaults and metadata come from
+humans. A single typed declaration creates both the runtime defaults and schema
+metadata, preventing the two views from drifting as keys evolve. It lives in
 <a href="https://github.com/spiriMirror/libuipc/blob/main/src/core/core/scene_default_config.cpp"><code>scene_default_config.cpp</code></a>,
 while effective-value rules and selector values were checked against the CUDA
 backend that consumes them.</p>
@@ -3744,7 +3775,7 @@ appropriate geometry instead.</p>
 <tr>
 <td><code>newton/semi_implicit/enable</code></td>
 <td>flag</td>
-<td><code>0</code></td>
+<td><code>1</code></td>
 <td><code>0</code>, <code>1</code></td>
 <td>Enables the semi-implicit beta termination criterion.</td>
 </tr>
@@ -3758,7 +3789,7 @@ appropriate geometry instead.</p>
 <tr>
 <td><code>newton/semi_implicit/K_min</code></td>
 <td>integer</td>
-<td><code>1</code></td>
+<td><code>6</code></td>
 <td><code>&gt;= 0</code></td>
 <td>Iteration at which beta accumulation starts. It is <strong>not</strong> a minimum Newton-iteration count.</td>
 </tr>
@@ -4023,7 +4054,7 @@ over the configured fallback bounds.</p>
 <td><code>collision_detection/method</code></td>
 <td>string</td>
 <td><code>"info_stackless_bvh"</code></td>
-<td><code>"info_stackless_bvh"</code>, <code>"stackless_bvh"</code>, <code>"linear_bvh"</code>; <code>"info_stackless_bvh_v0"</code> is a legacy comparison path</td>
+<td><code>"info_stackless_bvh"</code>; optionally <code>"info_stackless_bvh_v0"</code>, <code>"stackless_bvh"</code>, <code>"linear_bvh"</code></td>
 <td>Broad-phase trajectory filter. Keep the default unless benchmarking or diagnosing the broad phase.</td>
 </tr>
 <tr>
@@ -4084,6 +4115,12 @@ over the configured fallback bounds.</p>
 </tr>
 </tbody>
 </table>
+<p>The three alternate collision selectors are compiled only when
+<code>UIPC_WITH_CUDA_LEGACY_COLLISION=ON</code> (CMake, the default) or
+<code>cuda_legacy_collision=true</code> (XMake). Builds with the option disabled omit the
+filter implementations and remove their names from the schema enum, so scene
+construction rejects a serialized or manually edited unavailable selector.
+The machine-readable entry exposes this state in <code>conditionalValues</code>.</p>
 <h2 id="effective-value-precedence">Effective-value precedence</h2>
 <p>Three pairs of absolute/relative controls follow the same pattern. Let <code>L</code> be
 the diagonal of the rest-scene bounding box:</p>

@@ -22,6 +22,7 @@ Here is a list of all files with brief descriptions:
                 * **file** [**subscene\_tabular\_visitor.h**](subscene__tabular__visitor_8h.md)     
                 * **file** [**world\_visitor.h**](world__visitor_8h.md)     
             * **file** [**macro.h**](backend_2macro_8h.md)     
+            * **file** [**module\_info.h**](module__info_8h.md)     
             * **file** [**module\_init\_info.h**](module__init__info_8h.md)     
             * **file** [**type\_define.h**](backend_2type__define_8h.md)     
         * **dir** [**builtin**](dir_e46c520626162f9e42d80fd08f196511.md)     

@@ -5,6 +5,7 @@
 
 ## a
 
+* **abi\_version** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
 * **Allocator** ([**uipc::PmrDeleter**](structuipc_1_1PmrDeleter.md))
 * **AnimatorVisitor** ([**uipc::backend::AnimatorVisitor**](classuipc_1_1backend_1_1AnimatorVisitor.md))
 * **animator** ([**uipc::backend::WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md), [**uipc::core::Scene**](classuipc_1_1core_1_1Scene.md), [**uipc::core::internal::Scene**](classuipc_1_1core_1_1internal_1_1Scene.md))
@@ -64,6 +65,7 @@
 
 ## b
 
+* **backend\_name** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md), [**uipc::core::Engine**](classuipc_1_1core_1_1Engine.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1Engine.md))
 * **Buffer** ([**uipc::backend::Buffer**](classuipc_1_1backend_1_1Buffer.md))
 * **BufferView** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1BufferView.md))
 * **backend** ([**uipc::backend::BufferView**](classuipc_1_1backend_1_1BufferView.md))
@@ -72,7 +74,6 @@
 * **bending\_stiffness** ([**uipc::constitution::DiscreteShellBending**](classuipc_1_1constitution_1_1DiscreteShellBending.md))
 * **body\_count** ([**uipc::core::AffineBodyStateAccessorFeature**](classuipc_1_1core_1_1AffineBodyStateAccessorFeature.md))
 * **build\_from** ([**uipc::core::ContactTabular**](classuipc_1_1core_1_1ContactTabular.md), [**uipc::core::Object**](classuipc_1_1core_1_1Object.md), [**uipc::core::ObjectCollection**](classuipc_1_1core_1_1ObjectCollection.md), [**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md), [**uipc::core::SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md), [**uipc::geometry::GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md))
-* **backend\_name** ([**uipc::core::Engine**](classuipc_1_1core_1_1Engine.md), [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1Engine.md))
 * **build** ([**uipc::core::ISanityChecker**](classuipc_1_1core_1_1ISanityChecker.md), [**uipc::core::ISanityCheckerCollection**](classuipc_1_1core_1_1ISanityCheckerCollection.md), [**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1ParameterCollection.md), [**uipc::geometry::BVH**](classuipc_1_1geometry_1_1BVH.md), [**uipc::geometry::Octree**](classuipc_1_1geometry_1_1Octree.md))
 * **broadcast** ([**uipc::diff\_sim::ParameterCollection**](classuipc_1_1diff__sim_1_1ParameterCollection.md))
 * **BVH** ([**uipc::geometry::BVH**](classuipc_1_1geometry_1_1BVH.md))
@@ -648,6 +649,7 @@
 
 ## s
 
+* **struct\_size** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
 * **shape** ([**uipc::BufferInfo**](classuipc_1_1BufferInfo.md), [**uipc::diff\_sim::SparseCOOView**](classuipc_1_1diff__sim_1_1SparseCOOView.md))
 * **strides** ([**uipc::BufferInfo**](classuipc_1_1BufferInfo.md))
 * **STimer** ([**uipc::GlobalTimer**](classuipc_1_1GlobalTimer.md))
@@ -746,6 +748,9 @@
 
 ## u
 
+* **uipc\_version\_major** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
+* **uipc\_version\_minor** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
+* **uipc\_version\_patch** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
 * **update** ([**uipc::backend::AnimatorVisitor**](classuipc_1_1backend_1_1AnimatorVisitor.md), [**uipc::core::Animation**](classuipc_1_1core_1_1Animation.md), [**uipc::core::SceneIO**](classuipc_1_1core_1_1SceneIO.md))
 * **UserDefinedUIDStart** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1UIDInfo.md))
 * **uid** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1UIDInfo.md), [**uipc::constitution::IConstitution**](classuipc_1_1constitution_1_1IConstitution.md))

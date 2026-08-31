@@ -3109,6 +3109,8 @@
       
         
       
+        
+      
     
     
     
@@ -3229,6 +3231,34 @@
     
   
     Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
   
 
     
@@ -3557,10 +3587,14 @@ per-material contact model, so one scene cannot mix IPC and AL-IPC pairs.</p>
 Start with IPC unless a method comparison or an AL-specific workflow requires
 the alternative.</p>
 <h2 id="broad-phase-and-sanity-checks">Broad phase and sanity checks</h2>
-<p>The supported broad phases are <code>info_stackless_bvh</code> (default),
-<code>stackless_bvh</code>, and <code>linear_bvh</code>; <code>info_stackless_bvh_v0</code> remains as a legacy
-comparison path. This selector changes candidate generation, not contact
-material behavior.</p>
+<p>The always-available broad phase is <code>info_stackless_bvh</code> (default).
+<code>stackless_bvh</code>, <code>linear_bvh</code>, and the <code>info_stackless_bvh_v0</code> comparison path
+belong to the optional legacy-collision build component. They are present by
+default, but a lean build can disable them with
+<code>UIPC_WITH_CUDA_LEGACY_COLLISION=OFF</code> (CMake) or
+<code>cuda_legacy_collision=false</code> (XMake); the scene schema then rejects those
+names. This selector changes candidate generation, not contact material
+behavior.</p>
 <p>Leave <code>sanity_check/enable = 1</code> while authoring scenes. Before engine
 initialization it detects initial intersections and dangerously close
 surfaces, respects the contact table's enabled masks, and prevents an invalid

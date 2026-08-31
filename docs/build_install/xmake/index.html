@@ -3091,6 +3091,8 @@
       
         
       
+        
+      
     
     
     
@@ -3211,6 +3213,34 @@
     
   
     Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
   
 
     
@@ -3407,6 +3437,9 @@ modules are explicit and disabled by default:</p>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># CPU/interface-only configuration (the none backend still builds).</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>xmake<span class="w"> </span>f<span class="w"> </span>--backend_cuda<span class="o">=</span><span class="nb">false</span><span class="w"> </span>-c
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Lean CUDA build: omit legacy comparison/alternate broad-phase filters.</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>xmake<span class="w"> </span>f<span class="w"> </span>--cuda_legacy_collision<span class="o">=</span><span class="nb">false</span><span class="w"> </span>-c
 </span></code></pre></div>
 <p><code>--usd=true</code> resolves OpenUSD 25.08 or newer, and <code>--vdb=true</code> resolves a shared
 OpenVDB package. XMake's compiler cache is disabled by project policy; use normal

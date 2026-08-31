@@ -490,6 +490,7 @@
 ([**uipc::builtin**](namespaceuipc_1_1builtin.md))
 * [**UIDRegister**](classuipc_1_1builtin_1_1details_1_1UIDRegister.md)
 ([**uipc::builtin::details**](namespaceuipc_1_1builtin_1_1details.md))
+* [**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md)
 * [**UIPCModuleInitInfo**](classUIPCModuleInitInfo.md)
 * [**UpdateHint**](classuipc_1_1core_1_1Animation_1_1UpdateHint.md)
 ([**uipc::core::Animation**](classuipc_1_1core_1_1Animation.md))

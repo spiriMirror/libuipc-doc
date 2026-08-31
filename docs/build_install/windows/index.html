@@ -3157,6 +3157,8 @@
       
         
       
+        
+      
     
     
     
@@ -3277,6 +3279,34 @@
     
   
     Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
   
 
     
@@ -3570,6 +3600,9 @@
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>cmake<span class="w"> </span>-S<span class="w"> </span>..<span class="w"> </span>-DUIPC_BUILD_PYBIND<span class="o">=</span><span class="m">1</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.<span class="w"> </span>--config<span class="w"> </span>&lt;Release/RelWithDebInfo&gt;<span class="w"> </span>-j8
 </span></code></pre></div>
+<p>The default CUDA build retains the V0, stackless, and linear-BVH comparison
+filters. Add <code>-DUIPC_WITH_CUDA_LEGACY_COLLISION=OFF</code> to the configure command
+for a lean build containing only the default broad-phase trajectory filter.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Use multi-thread to speed up the build process as possible, becasue the NVCC compiler will take a lot of time.</p>

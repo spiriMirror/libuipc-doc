@@ -2977,6 +2977,8 @@
       
         
       
+        
+      
     
     
     
@@ -3110,6 +3112,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3198,17 +3228,17 @@
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="k">public</span><span class="o">:</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">DiscreteShellBending</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Json</span><span class="o">&amp;</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">default_config</span><span class="p">());</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">apply_to</span><span class="p">(</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="n">bending_stiffness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span><span class="n">_kPa</span><span class="p">);</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="c1">// Formula-based overload: κ = E·t³/(12·(1-ν²)) (the classical shell</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="c1">// bending stiffness), used literally as the effective stiffness since</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="c1">// the backend bending measure is the element area. The thickness t is</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="c1">// read per edge from the mesh's vertex "thickness" attribute (average of</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="c1">// the two endpoints) — a membrane constitution (stretch) sets it, and</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="c1">// must be applied first.</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="c1">// Raw kappa in the Discrete Shells edge energy. The historical default</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="c1">// retains its numeric value; it is not a per-area coefficient.</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">apply_to</span><span class="p">(</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="n">bending_stiffness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span><span class="n">_kPa</span><span class="p">);</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="c1">// Formula-based overload: D = E·h³/(12·(1-ν²)), where the vertex</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="c1">// `thickness` attribute stores the one-sided offset r and h = 2r is the</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="c1">// full material thickness. The radius is averaged over each edge. A</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="c1">// membrane constitution sets it and must be applied first.</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">apply_to</span><span class="p">(</span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="n">young_modulus</span><span class="p">,</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="n">poisson_ratio</span><span class="p">);</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="c1">// The raw attribute value for a given material: E·t³/(12·(1-ν²)).</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="c1">// Compute D from a one-sided thickness radius r (full thickness h = 2r).</span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="nf">bending_stiffness</span><span class="p">(</span><span class="n">Float</span><span class="w"> </span><span class="n">young_modulus</span><span class="p">,</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="n">poisson_ratio</span><span class="p">,</span><span class="w"> </span><span class="n">Float</span><span class="w"> </span><span class="n">thickness</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
 </span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">Json</span><span class="w"> </span><span class="nf">default_config</span><span class="p">();</span>

@@ -3098,6 +3098,8 @@
       
         
       
+        
+      
     
     
     
@@ -3218,6 +3220,34 @@
     
   
     Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
   
 
     
@@ -3412,6 +3442,9 @@ box diagonal, and <span class="arithmatex">\(v_{\mathrm{abs}}\)</span> is <code>
 <li><code>newton/semi_implicit/K_min</code> only controls when the beta accumulator starts
   updating in semi-implicit mode.</li>
 </ul>
+<p>Semi-implicit termination is enabled by default with <code>K_min = 6</code> and
+<code>beta_tol = 1e-3</code>. Set <code>newton/semi_implicit/enable = 0</code> to disable this
+additional early-exit criterion.</p>
 <p>With semi-implicit mode enabled, iterations at or after <code>K_min</code> update</p>
 <div class="arithmatex">\[
 \beta \leftarrow (1 - \alpha)\beta,

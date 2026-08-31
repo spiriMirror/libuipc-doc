@@ -1684,10 +1684,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bending-energy-density" class="md-nav__link">
+  <a href="#bending-energy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bending Energy Density
+        Bending Energy
       
     </span>
   </a>
@@ -3071,6 +3071,8 @@
       
         
       
+        
+      
     
     
     
@@ -3204,6 +3206,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3277,10 +3307,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bending-energy-density" class="md-nav__link">
+  <a href="#bending-energy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bending Energy Density
+        Bending Energy
       
     </span>
   </a>
@@ -3344,17 +3374,17 @@
   $$
   \bar{h} = \frac{A}{3 L_0}
   $$
-  where <span class="arithmatex">\(A\)</span> is the average area of the two triangles:
+  where <span class="arithmatex">\(A=A_1+A_2\)</span> is the combined rest area of the two triangles:
   $$
-  A = \frac{1}{2}\left(|(\bar{\mathbf{x}}_1 - \bar{\mathbf{x}}_0) \times (\bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_0)|_2 + |(\bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_0) \times (\bar{\mathbf{x}}_1 - \bar{\mathbf{x}}_3)|_2\right)
+  A = \frac{1}{2}\left(|(\bar{\mathbf{x}}_1 - \bar{\mathbf{x}}_0) \times (\bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_0)|_2 + |(\bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_3) \times (\bar{\mathbf{x}}_1 - \bar{\mathbf{x}}_3)|_2\right)
   $$</p>
 </li>
 <li>
 <p><strong>Rest Dihedral Angle:</strong> <span class="arithmatex">\(\bar{\theta}\)</span> is the dihedral angle in the rest configuration</p>
 </li>
 </ul>
-<h3 id="bending-energy-density">Bending Energy Density</h3>
-<p>The bending energy density of the discrete shell element is given by:</p>
+<h3 id="bending-energy">Bending Energy</h3>
+<p>The per-edge bending energy is:</p>
 <div class="arithmatex">\[
 E = \kappa \frac{(\theta - \bar{\theta})^2 L_0}{\bar{h}}
 \]</div>
@@ -3366,11 +3396,20 @@ E = \kappa \frac{(\theta - \bar{\theta})^2 L_0}{\bar{h}}
 <li><span class="arithmatex">\(L_0\)</span> is the rest length of the shared edge</li>
 <li><span class="arithmatex">\(\bar{h}\)</span> is the average height parameter from the rest configuration</li>
 </ul>
-<p>The energy penalizes deviations of the dihedral angle from its rest value, scaled by the edge length and inversely by the average height, which accounts for the local geometry of the shell element.</p>
+<p>Because <span class="arithmatex">\(\bar h=A/(3L_0)\)</span>, the reference metric is
+<span class="arithmatex">\(L_0/\bar h=3L_0^2/A\)</span>. This already contains the complete Discrete Shells
+geometric weight: the backend does <strong>not</strong> multiply by <span class="arithmatex">\(A\)</span> again. Consequently,
+the metric is invariant under uniform scaling of the rest hinge.</p>
+<p>For the formula overload, the mesh stores a one-sided thickness radius <span class="arithmatex">\(r\)</span>.
+The full material thickness is <span class="arithmatex">\(h=2r\)</span>, and</p>
+<div class="arithmatex">\[
+\kappa=D=\frac{E h^3}{12(1-\nu^2)}
+        =\frac{E(2r)^3}{12(1-\nu^2)}.
+\]</div>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>edges</code>:</p>
 <ul>
-<li><code>bending_stiffness</code>: <span class="arithmatex">\(\kappa\)</span> in the energy above</li>
+<li><code>bending_stiffness</code>: <span class="arithmatex">\(\kappa\)</span> in the energy above; it is not a per-area value</li>
 </ul></div>
 
 

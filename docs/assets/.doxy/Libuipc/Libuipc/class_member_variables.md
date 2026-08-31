@@ -5,7 +5,13 @@
 
 ## a
 
+* **abi\_version** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
 * **author** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1UIDInfo.md))
+
+
+## b
+
+* **backend\_name** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
 
 
 ## c
@@ -211,6 +217,7 @@
 
 ## s
 
+* **struct\_size** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
 * **shape** ([**uipc::BufferInfo**](classuipc_1_1BufferInfo.md))
 * **strides** ([**uipc::BufferInfo**](classuipc_1_1BufferInfo.md))
 * **start** ([**uipc::details::ScopedTimer**](classuipc_1_1details_1_1ScopedTimer.md))
@@ -223,6 +230,9 @@
 
 ## u
 
+* **uipc\_version\_major** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
+* **uipc\_version\_minor** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
+* **uipc\_version\_patch** ([**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md))
 * **UserDefinedUIDStart** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1UIDInfo.md))
 * **uid** ([**uipc::builtin::UIDInfo**](structuipc_1_1builtin_1_1UIDInfo.md))
 

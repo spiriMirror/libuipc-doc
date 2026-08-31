@@ -3096,6 +3096,8 @@
       
         
       
+        
+      
     
     
     
@@ -3216,6 +3218,34 @@
     
   
     Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
   
 
     
@@ -3423,14 +3453,15 @@ folding. Applying bending alone does not create a complete cloth model.</p>
 </tbody>
 </table>
 <p>The membrane must be applied before the formula-based bending overload. The
-bending implementation reads the vertex <code>thickness</code> attribute written by the
-membrane and evaluates</p>
+bending implementation reads the one-sided thickness radius <span class="arithmatex">\(r\)</span> from the
+vertex <code>thickness</code> attribute. With full material thickness <span class="arithmatex">\(h=2r\)</span>, it evaluates</p>
 <div class="arithmatex">\[
-D = \frac{E t^3}{12(1-\nu^2)}.
+D = \frac{E h^3}{12(1-\nu^2)}
+  = \frac{E(2r)^3}{12(1-\nu^2)}.
 \]</div>
-<p>The raw overload <code>apply_to(mesh, bending_stiffness)</code> defaults to <code>100 kPa</code>,
-but then the supplied value is already the effective edge stiffness and is not
-derived from thickness.</p>
+<p>The raw overload <code>apply_to(mesh, bending_stiffness)</code> retains its legacy numeric
+default, but the supplied value is <span class="arithmatex">\(\kappa\)</span> directly in the Discrete Shells
+edge energy; it is neither per-area nor derived from thickness.</p>
 <h2 id="complete-pinned-cloth-scene">Complete pinned-cloth scene</h2>
 <p>This minimal mesh has two triangles, one shared bending edge, two pinned top
 vertices, and ground contact. It is intentionally educational rather than a
@@ -3611,12 +3642,12 @@ should resist extension much more strongly than in-plane shear.</p>
 <tr>
 <td><code>mass_density</code></td>
 <td><code>200 kg/m^3</code></td>
-<td>Positive; surface mass scales as density times thickness.</td>
+<td>Positive; surface mass scales as density times full thickness <span class="arithmatex">\(2r\)</span>.</td>
 </tr>
 <tr>
 <td><code>thickness</code></td>
 <td><code>0.001 m</code></td>
-<td>Positive and expressed in scene length units. Contact also consumes it.</td>
+<td>Positive one-sided offset <span class="arithmatex">\(r\)</span> in scene length units; contact consumes <span class="arithmatex">\(r\)</span>, while mass/stretch/bending use full thickness <span class="arithmatex">\(2r\)</span>.</td>
 </tr>
 <tr>
 <td><code>strain_rate</code></td>
@@ -3646,7 +3677,7 @@ through each other when global contact is enabled. The contact table still
 controls material pairs, and the cloth still needs <code>label_surface</code>.</p>
 <p>For cloth, inspect these values together:</p>
 <ul>
-<li>physical <code>thickness</code> on vertices;</li>
+<li>one-sided <code>thickness</code> radius <span class="arithmatex">\(r\)</span> on vertices;</li>
 <li><code>contact/d_hat</code> or <code>contact/d_hat_relative</code>;</li>
 <li>triangle size and aspect ratio;</li>
 <li><code>contact/eps_velocity</code> when friction is enabled; and</li>

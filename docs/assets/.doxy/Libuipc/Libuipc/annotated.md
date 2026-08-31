@@ -4,6 +4,7 @@
 
 Here are the classes, structs, unions and interfaces with brief descriptions:
 
+* **struct** [**UIPCBackendModuleInfo**](structUIPCBackendModuleInfo.md)     
 * **class** [**UIPCModuleInitInfo**](classUIPCModuleInitInfo.md)     
 * **namespace** [**cpptrace**](namespacecpptrace.md) 
 * **namespace** [**fmt**](namespacefmt.md)     

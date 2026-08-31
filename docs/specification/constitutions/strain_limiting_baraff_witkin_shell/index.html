@@ -3137,6 +3137,8 @@
       
         
       
+        
+      
     
     
     
@@ -3257,6 +3259,34 @@
     
   
     Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
   
 
     
@@ -3509,20 +3539,35 @@ I_6 = \hat{\mathbf{a}}^T \mathbf{F}^T \mathbf{F} \hat{\mathbf{b}}
 \Psi_{\text{shear}} = I_6^2
 \]</div>
 <h2 id="total-energy">Total Energy</h2>
+<p>Let the stored vertex <code>thickness</code> be the one-sided collision offset <span class="arithmatex">\(r_t\)</span>, so
+the full material thickness is <span class="arithmatex">\(h=2r_t\)</span>. The effective coefficients are</p>
+<div class="arithmatex">\[
+k_{\mathrm{stretch}}
+= (\lambda_s+2\mu_s)h
+= \frac{E_s(2r_t)}{1-\nu_s^2},
+\qquad
+k_{\mathrm{shear}}
+= \mu_{sh}
+= \frac{E_{sh}}{2(1+\nu_{sh})}.
+\]</div>
 <p>The total energy for each triangle element is:</p>
 <div class="arithmatex">\[
-E = \Psi \cdot A_0
+E = \left(k_{\mathrm{stretch}}\Psi_{\mathrm{stretch}}
+          + k_{\mathrm{shear}}\Psi_{\mathrm{shear}}\right) A_0
 \]</div>
-<p>where <span class="arithmatex">\(A_0\)</span> is the rest area of the triangle. The membrane weight is the <strong>area</strong>, not the volume: the shell thickness enters through the stiffness attributes instead — the stretch stiffness carries <span class="arithmatex">\(t\)</span> (<span class="arithmatex">\(E_\text{stretch} \cdot t / (1 - \nu_\text{stretch}^2)\)</span> per unit area), while the shear stiffness <span class="arithmatex">\(E_\text{shear} / (2(1 + \nu_\text{shear}))\)</span> is thickness-independent.</p>
+<p>Here <span class="arithmatex">\(A_0\)</span> is the rest area. Stretch uses the full shell thickness <span class="arithmatex">\(2r_t\)</span>.
+Shear remains an independently calibrated two-dimensional effective
+coefficient and is intentionally thickness-independent.</p>
 <p>The directional stretch metric is floored at <span class="arithmatex">\(10^{-12}\)</span> to guard the <span class="arithmatex">\(1/\sqrt{I_5}\)</span> singularity at fully collapsed triangles (finite huge response instead of NaN).</p>
 <h2 id="parameters">Parameters</h2>
 <p>The strain rate parameter <span class="arithmatex">\(r\)</span> is set via the <code>strain_rate</code> argument of <code>apply_to</code> (default 100) and controls the strength of the cubic extension penalty.</p>
-<p>The thickness <span class="arithmatex">\(t\)</span> and mass density are inherited from the <a href="../finite_element/">Finite Element</a> base and set via the <code>apply_to</code> interface.</p>
+<p>The one-sided thickness radius <span class="arithmatex">\(r_t\)</span> and mass density are inherited from the
+<a href="../finite_element/">Finite Element</a> base and set via <code>apply_to</code>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>triangles</code>:</p>
 <ul>
-<li><code>mu</code>: <span class="arithmatex">\(\mu\)</span>, the shear stiffness</li>
-<li><code>lambda</code>: <span class="arithmatex">\(\lambda\)</span>, the stretch stiffness</li>
+<li><code>mu</code>: <span class="arithmatex">\(k_{\mathrm{shear}}\)</span>, the effective shear stiffness</li>
+<li><code>lambda</code>: <span class="arithmatex">\(k_{\mathrm{stretch}}\)</span>, the full-thickness stretch stiffness</li>
 </ul></div>
 
 
