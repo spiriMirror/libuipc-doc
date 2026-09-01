@@ -3398,18 +3398,25 @@
 <div><h1 id="profiling">Profiling</h1>
 <h2 id="performance-report">Performance Report</h2>
 <p>After running a simulation, use <code>SimulationStats</code> to generate a full performance report — including per-frame timer charts, a profiler heatmap, and system dependency graphs — in one call:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimulationStats</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">SimulationStats</span><span class="p">()</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_frames</span><span class="p">):</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">world</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">stats</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span><span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span> <span class="n">workspace</span><span class="o">=</span><span class="s1">'workspace'</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Timer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimulationStats</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">stats</span> <span class="o">=</span> <span class="n">SimulationStats</span><span class="p">()</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">Timer</span><span class="o">.</span><span class="n">enable_all</span><span class="p">()</span>  <span class="c1"># synchronized diagnostic scopes; not throughput timing</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_frames</span><span class="p">):</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">world</span><span class="o">.</span><span class="n">retrieve</span><span class="p">()</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">stats</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">stats</span><span class="o">.</span><span class="n">summary_report</span><span class="p">(</span><span class="n">output_dir</span><span class="o">=</span><span class="s1">'perf_report'</span><span class="p">,</span> <span class="n">workspace</span><span class="o">=</span><span class="s1">'workspace'</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">Timer</span><span class="o">.</span><span class="n">disable_all</span><span class="p">()</span>
 </span></code></pre></div>
 <p>This creates a <code>perf_report/</code> folder containing <code>report.md</code> and a set of SVG figures. Open <code>report.md</code> in any Markdown viewer to inspect the results.</p>
+<p>Enabling Timer makes CUDA stages synchronize at scope boundaries. This is
+appropriate for attribution and charts, but it perturbs end-to-end throughput.
+Collect normal wall time with Timer disabled and use a separate Timer-enabled
+run for stage diagnosis.</p>
 <h2 id="benchmarking-uipcprofile">Benchmarking (<code>uipc.profile</code>)</h2>
 <p>Use <code>profile.session</code> to mix <strong>warmup</strong> (no data collected) and <strong>profiling</strong> (data collected) phases. Calls to <code>advance</code> / <code>profile</code> are deferred — the simulation runs when the <code>with</code> block exits.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc</span><span class="w"> </span><span class="kn">import</span> <span class="n">profile</span>
@@ -3449,6 +3456,11 @@ rejected solely because its iteration count changed. Use
 different GPUs, builds, CUDA toolkits, or platforms are not a valid CI gate.</p>
 <p>The equivalent Python API is
 <code>uipc.profile.create_baseline(...)</code> / <code>uipc.profile.check_baseline(...)</code>.</p>
+<p>For the repository's fixed cross-domain workloads, revision archival, and
+current machine-specific reference numbers, see
+<a href="../../development/testing_and_benchmarks/">Testing and Benchmarks</a>. That runner
+keeps throughput and synchronized diagnostics separate and records structured
+solver counters after each frame.</p>
 <h3 id="structured-solver-statistics">Structured solver statistics</h3>
 <p>The CUDA backend exposes the latest frame without requiring log parsing:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">world</span><span class="o">.</span><span class="n">advance</span><span class="p">()</span>

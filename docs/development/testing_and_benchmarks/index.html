@@ -3206,6 +3206,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#current-reference-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current reference measurement
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3297,6 +3308,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#current-reference-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current reference measurement
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3348,18 +3370,90 @@ is the repository-owned registry for large performance scenes. Implementations
 and assets remain in the tracked <code>libuipc-samples</code> submodule, avoiding a second
 copy in the core repository.</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>list
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--quick
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--frames<span class="w"> </span><span class="m">250</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>rigid-wrecking-balls<span class="w"> </span>--quick
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--quick
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--frames<span class="w"> </span><span class="m">250</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>mas-bunny<span class="w"> </span>--frames<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>cube-wall-cloth<span class="w"> </span>--frames<span class="w"> </span><span class="m">100</span>
 </span></code></pre></div>
+<p>The four canonical workloads cover pure affine-body contact (sample 6), mixed
+FEM/cloth contact (88), stiff FEM with MAS (89), and a large affine-body wall
+coupled to cloth (93).</p>
 <p>The canonical runner validates required assets, removes noncanonical tuning
 environment variables, launches the headless sample from its declared working
 directory, preserves the child return code, and writes repo/submodule commits,
 command, frame count, environment overrides, duration, and status to
 <code>output/benchmark-runs/</code>.
 The metadata also captures GPU/driver, CUDA compiler, Python/libuipc versions,
-and the scene's reported mean/median frame time.
+the full per-frame wall distribution, Newton/line-search/linear-solver counts,
+a final physical observable, approximate peak total-device memory, and the raw
+log.
 Timestamped records are retained; the un-suffixed JSON points to the latest
 run.</p>
+<p>Canonical throughput runs keep <code>UIPC_BENCHMARK_TIMERS=0</code>. For a separate stage
+diagnostic use, for example:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--frames<span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--env<span class="w"> </span><span class="nv">UIPC_BENCHMARK_TIMERS</span><span class="o">=</span><span class="m">1</span>
+</span></code></pre></div>
+<p>Timer scopes synchronize nested GPU regions and therefore change wall time.
+Use them to attribute cost, not as a substitute for the Timer-free throughput
+result.</p>
+<h2 id="current-reference-measurement">Current reference measurement</h2>
+<p>The 2026-09-01 reference used an RTX 5090, driver 595.79, CUDA 13.2, Windows
+Release build, and three fresh processes per workload. The value below is the
+median of the three run means; ranges retain desktop/WDDM and dynamic-contact
+variability.</p>
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th style="text-align: right;">Frames</th>
+<th style="text-align: right;">Reference</th>
+<th style="text-align: right;">Three-run range</th>
+<th style="text-align: right;">Newton/frame</th>
+<th style="text-align: right;">Linear iterations/frame</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rigid-wrecking-balls</code></td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">129.5 ms/frame</td>
+<td style="text-align: right;">126.4–131.3</td>
+<td style="text-align: right;">3.95</td>
+<td style="text-align: right;">107.3</td>
+</tr>
+<tr>
+<td><code>stiff-gipc-case2</code></td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">201.1 ms/frame</td>
+<td style="text-align: right;">199.0–230.6</td>
+<td style="text-align: right;">6.64</td>
+<td style="text-align: right;">246.8</td>
+</tr>
+<tr>
+<td><code>mas-bunny</code></td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">60.2 ms/frame</td>
+<td style="text-align: right;">60.1–62.0</td>
+<td style="text-align: right;">4.67</td>
+<td style="text-align: right;">358.8</td>
+</tr>
+<tr>
+<td><code>cube-wall-cloth</code></td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">125.6 ms/frame</td>
+<td style="text-align: right;">121.8–165.0</td>
+<td style="text-align: right;">5.13</td>
+<td style="text-align: right;">200.1</td>
+</tr>
+</tbody>
+</table>
+<p>All 12 runs completed and converged without an iteration-limit hit. These are
+machine-specific references, not portable pass/fail limits. Collision-rich
+final positions are envelopes rather than bitwise goldens. The complete method,
+memory ranges, numerical variability, run IDs, and stage diagnostics are in the
+<a href="https://github.com/spiriMirror/libuipc/blob/main/agent_docs/performance/2026-09-01-cross-domain-baseline.md">cross-domain baseline record</a>.</p>
 <p>Use <code>--dry-run</code> to inspect a resolved invocation. Overrides such as
 <code>--env NO_MAS=1</code> are useful for A/B experiments, but they define a different
 variant and must not be compared as if they were the canonical configuration.
