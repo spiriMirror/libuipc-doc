@@ -3282,16 +3282,22 @@
 <p>Limitations:</p>
 <ul>
 <li>Only supports Windows/Ubuntu22.04</li>
-<li>The prebuilt wheels target the <strong>CUDA 12.8 runtime</strong> and dynamically load
-  <code>cublas64_12.dll</code> on Windows (the corresponding CUDA 12 libraries on
-  Linux). A CUDA 13-only toolkit is not a substitute: driver compatibility
-  does not provide a differently versioned cuBLAS runtime. Install CUDA 12.8
-  side-by-side or build libuipc from source against CUDA 13.</li>
+<li>Wheels built from the current source use CUDA 12.8 at build time but carry
+  the runtime code they need. Users do not need a local CUDA Toolkit; they need
+  an NVIDIA driver &gt;=525.60.13 on Linux or &gt;=528.33 on Windows. A CUDA 13.x
+  driver is backward compatible with the CUDA 12.x application binary; see
+  NVIDIA's <a href="https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html">minor-version compatibility table</a>.
+  These are the CUDA 12.x minor-compatibility floors. Hardware that uses the
+  forward-JIT PTX image instead of one of the packaged native images can need a
+  newer driver.</li>
+<li>The immutable 0.0.27 wheel predates that change and still dynamically loads
+  <code>cublas64_12.dll</code> on Windows (and the corresponding CUDA 12 library on
+  Linux). Install CUDA 12.8 side-by-side for 0.0.27, build from current source,
+  or use the next wheel release.</li>
 <li>Source builds work with newer toolkits too (CUDA 13.x is used in daily
   development), and newer CUDA code is kept compatible with older toolkits
   where feasible.</li>
-<li>The release pipeline supports CPython 3.10-3.14. Release 0.0.26 contains only
-  3.10-3.13 wheels; use the next release or build from source on Python 3.14.</li>
+<li>The release pipeline and release 0.0.27 support CPython 3.10-3.14.</li>
 <li>New wheels contain native CUDA code for compute capabilities 7.5, 8.0, 8.6,
   and 8.9, plus compute-8.9 PTX for forward JIT on newer GPUs. Older wheels
   compiled only for 8.9 and can fail with <code>no kernel image is available</code> on an
@@ -3309,10 +3315,12 @@ the actual simulation backend as well:</p>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"CUDA backend loaded"</span><span class="p">)</span>
 </span></code></pre></div>
-<p>On Windows, <code>Could not load ... uipc_backend_cuda.dll</code> together with a missing
-<code>cublas64_12.dll</code> means the CUDA 12.8 runtime is not discoverable on <code>PATH</code>.
-Installing only CUDA 13 does not satisfy that DLL dependency.</p>
-<p>The next release and current source tree provide a compatibility doctor. The
+<p>For the immutable 0.0.27 Windows wheel, <code>Could not load ...
+uipc_backend_cuda.dll</code> together with a missing <code>cublas64_12.dll</code> means the CUDA
+12.8 runtime is not discoverable on <code>PATH</code>. Current-source and future wheels do
+not have that dependency; use <code>python -m uipc doctor --probe-cuda</code> to distinguish
+an old wheel from a driver or GPU-code-image failure.</p>
+<p>Release 0.0.27 and the current source tree provide a compatibility doctor. The
 first command performs non-invasive Python, native ABI, backend-library, CUDA
 runtime, driver, and GPU-architecture checks. The second also creates a CUDA
 engine and therefore initializes the GPU:</p>
@@ -3320,10 +3328,11 @@ engine and therefore initializes the GPU:</p>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>doctor<span class="w"> </span>--probe-cuda
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>doctor<span class="w"> </span>--json
 </span></code></pre></div>
-<p>The human report distinguishes three commonly conflated failures:</p>
+<p>The human report distinguishes commonly conflated failures:</p>
 <ul>
-<li>no wheel for the active Python ABI (for example Python 3.14 with 0.0.26);</li>
-<li>no CUDA 12 cuBLAS runtime (<code>cublas64_12.dll</code> / <code>libcublas.so.12</code>);</li>
+<li>no wheel for the active Python ABI;</li>
+<li>an old wheel with a missing CUDA 12 cuBLAS runtime;</li>
+<li>an NVIDIA driver below the packaged compatibility floor;</li>
 <li>no SASS/PTX image compatible with the GPU compute capability.</li>
 </ul>
 <h2 id="development-build">Development Build</h2>
