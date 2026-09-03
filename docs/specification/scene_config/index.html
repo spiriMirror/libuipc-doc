@@ -3777,21 +3777,21 @@ appropriate geometry instead.</p>
 <td>flag</td>
 <td><code>1</code></td>
 <td><code>0</code>, <code>1</code></td>
-<td>Enables the semi-implicit beta termination criterion.</td>
+<td>Enables cumulative-step termination in IPC and the configured <code>K_min</code> delay in AL-IPC.</td>
 </tr>
 <tr>
 <td><code>newton/semi_implicit/beta_tol</code></td>
 <td>float</td>
 <td><code>1e-3</code></td>
 <td>normally <code>[0, 1]</code></td>
-<td>Semi-implicit early-exit threshold for accumulated beta.</td>
+<td>Standard IPC early-exit threshold for accumulated beta. AL-IPC uses <code>contact/al-ipc/toi_threshold</code> instead.</td>
 </tr>
 <tr>
 <td><code>newton/semi_implicit/K_min</code></td>
 <td>integer</td>
 <td><code>6</code></td>
 <td><code>&gt;= 0</code></td>
-<td>Iteration at which beta accumulation starts. It is <strong>not</strong> a minimum Newton-iteration count.</td>
+<td>Delays cumulative-progress attenuation until the configured step count. It is not a hard ordinary-Newton floor in IPC; in AL-IPC it prevents safe-path termination before that many completed outer steps. Values below <code>1</code> are treated as <code>1</code> by AL-IPC.</td>
 </tr>
 </tbody>
 </table>
@@ -3955,42 +3955,64 @@ algorithm parameters rather than material contact resistance.</p>
 </thead>
 <tbody>
 <tr>
+<td><code>contact/al-ipc/mu_scale_mode</code></td>
+<td>string</td>
+<td><code>"per_vertex"</code></td>
+<td><code>"per_vertex"</code>, <code>"diag_norm"</code></td>
+<td>Selects the stable mass-based per-vertex estimate or experimental uniform Hessian-diagonal scaling.</td>
+</tr>
+<tr>
+<td><code>contact/al-ipc/mu_scale_diag_norm</code></td>
+<td>float</td>
+<td><code>0.1</code></td>
+<td><code>&gt; 0</code></td>
+<td>In <code>diag_norm</code> mode, sets <code>mu = value * max_i(abs(H_E(i,i)))</code>, with AL contact excluded from <code>H_E</code>.</td>
+</tr>
+<tr>
 <td><code>contact/al-ipc/mu_scale_fem</code></td>
 <td>float</td>
 <td><code>5e7</code></td>
 <td><code>&gt; 0</code></td>
-<td>Scales FEM augmented-Lagrangian penalty estimates.</td>
+<td>FEM scale used only in <code>per_vertex</code> mode: <code>mu_i = mass_i * value * dt²</code>.</td>
 </tr>
 <tr>
 <td><code>contact/al-ipc/mu_scale_abd</code></td>
 <td>float</td>
 <td><code>1e5</code></td>
 <td><code>&gt; 0</code></td>
-<td>Scales ABD penalty estimates; the estimator multiplies body mass, this value, and <code>dt²</code>.</td>
+<td>ABD scale used only in <code>per_vertex</code> mode: <code>mu_i = body_mass * value * dt²</code>.</td>
 </tr>
 <tr>
 <td><code>contact/al-ipc/toi_threshold</code></td>
 <td>float</td>
 <td><code>0.1</code></td>
 <td>normally <code>(0, 1]</code></td>
-<td>TOI threshold used by active-set handling.</td>
+<td>Remaining cumulative safe-path weight tolerated by AL termination. Smaller values require more outer progress.</td>
 </tr>
 <tr>
 <td><code>contact/al-ipc/alpha_lower_bound</code></td>
 <td>float</td>
 <td><code>1e-6</code></td>
 <td>normally <code>(0, 1]</code></td>
-<td>Lower bound for AL step length.</td>
+<td>CCD steps at or below this value do not advance the collision-free state or termination progress.</td>
 </tr>
 <tr>
 <td><code>contact/al-ipc/decay_factor</code></td>
 <td>float</td>
 <td><code>0.3</code></td>
 <td>normally <code>(0, 1)</code></td>
-<td>Penalty/constraint decay factor.</td>
+<td>Multiplies an inactive constraint's weight after each outer AL update. The pair is removed once the accumulated weight is below <code>0.01</code>.</td>
 </tr>
 </tbody>
 </table>
+<p><code>per_vertex</code> is the default because it remains stable when one scene mixes
+cloth, volumetric FEM, affine bodies, and very different vertex masses.
+<code>diag_norm</code> follows the conditioning-aware initialization in the AL-IPC paper,
+but applies one uniform value to every vertex and is retained as an explicit
+experimental comparison mode. Validate its trajectory and line-search status
+before using it for production scenes. If its assembled diagonal norm is empty
+or non-finite, the backend logs a warning and falls back to <code>per_vertex</code> for
+that frame.</p>
 <h2 id="adaptive-contact-resistance">Adaptive contact resistance</h2>
 <table>
 <thead>

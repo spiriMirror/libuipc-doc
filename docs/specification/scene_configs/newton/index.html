@@ -1114,6 +1114,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#al-ipc-termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AL-IPC termination
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linear-solve" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3344,6 +3355,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#al-ipc-termination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AL-IPC termination
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linear-solve" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3411,6 +3433,10 @@
 <p>This page explains how the nonlinear and linear stopping criteria fit
 together. See <a href="../../scene_config/">Scene Configuration Reference</a> for the
 complete key table and defaults.</p>
+<p>The ordinary and IPC semi-implicit criteria below describe the standard <code>ipc</code>
+pipeline. <code>al-ipc</code> shares the tolerance check inside its fixed-active-set inner
+solve and consumes <code>semi_implicit/enable</code> plus <code>K_min</code>, but has a separate
+safe-path termination tolerance described below.</p>
 <h2 id="one-frame-from-outside-to-inside">One frame, from outside to inside</h2>
 <p>For each <code>world.advance()</code>, the CUDA backend performs a nonlinear solve. A
 Newton iteration assembles the global system, solves it with PCG, limits the
@@ -3452,6 +3478,28 @@ additional early-exit criterion.</p>
 <p>where <span class="arithmatex">\(\alpha\)</span> is the accepted line-search step. <code>beta &lt;= beta_tol</code> is an
 additional early-exit condition. It does not force the solver to run until
 <code>K_min</code>; use <code>newton/min_iter</code> if a true iteration floor is required.</p>
+<h2 id="al-ipc-termination">AL-IPC termination</h2>
+<p>AL-IPC retains a possibly penetrating optimization iterate while advancing a
+separate collision-free state by CCD. Let <code>w</code> be the remaining weight of the
+initial collision-free state. It starts at one and, with semi-implicit mode
+enabled, stays at one for the first <code>K_min - 1</code> completed outer updates. From
+the <code>K_min</code>-th update onward,</p>
+<div class="arithmatex">\[
+w \leftarrow (1 - \alpha_{\mathrm{CCD}})w.
+\]</div>
+<p>AL-IPC terminates when <code>w &lt;= contact/al-ipc/toi_threshold</code> and animation plus
+<code>newton/min_iter</code> conditions pass. Therefore its default <code>K_min = 6</code> prevents
+the one-step termination that otherwise changes a stiff scene's transient
+trajectory. <code>beta_tol</code> remains IPC-only. If semi-implicit mode is disabled, or
+if <code>K_min &lt; 1</code>, AL-IPC uses an effective <code>K_min</code> of one.</p>
+<p>An AL CCD fraction is counted only when it is finite, clamped into <code>[0, 1]</code>,
+and greater than <code>contact/al-ipc/alpha_lower_bound</code>. A rejected tiny step does
+not create false termination progress.</p>
+<p>AL line search evaluates the final configured backtracking trial as well as
+the earlier ones. If every trial fails, it restores the exact recorded start
+point and ends that frame as non-converged; strict mode throws. This recovery
+prevents an energy-increasing trial from turning the next CCD query and active
+set into invalid data.</p>
 <h2 id="linear-solve">Linear solve</h2>
 <p><code>linear_system/tol_rate</code> compares the preconditioned residual against its
 initial value. Smaller values request a tighter solve, but an unnecessarily

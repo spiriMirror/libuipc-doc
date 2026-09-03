@@ -3284,12 +3284,15 @@
 <li>Only supports Windows/Ubuntu22.04</li>
 <li>Wheels built from the current source use CUDA 12.8 at build time but carry
   the runtime code they need. Users do not need a local CUDA Toolkit; they need
-  an NVIDIA driver &gt;=525.60.13 on Linux or &gt;=528.33 on Windows. A CUDA 13.x
-  driver is backward compatible with the CUDA 12.x application binary; see
+  a compatible NVIDIA driver. For GPUs served by packaged SASS, the floor is<blockquote>
+<p>=525.60.13 on Linux or &gt;=528.33 on Windows. A CUDA 13.x driver is backward
+  compatible with the CUDA 12.x application binary; see
   NVIDIA's <a href="https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html">minor-version compatibility table</a>.
-  These are the CUDA 12.x minor-compatibility floors. Hardware that uses the
-  forward-JIT PTX image instead of one of the packaged native images can need a
-  newer driver.</li>
+  These are the CUDA 12.x minor-compatibility floors for packaged SASS.
+  Hardware that uses the forward-JIT CUDA 12.8 PTX image instead requires
+  driver &gt;=570.124.06 on Linux or &gt;=572.61 on Windows.</p>
+</blockquote>
+</li>
 <li>The immutable 0.0.27 wheel predates that change and still dynamically loads
   <code>cublas64_12.dll</code> on Windows (and the corresponding CUDA 12 library on
   Linux). Install CUDA 12.8 side-by-side for 0.0.27, build from current source,
@@ -3299,9 +3302,11 @@
   where feasible.</li>
 <li>The release pipeline and release 0.0.27 support CPython 3.10-3.14.</li>
 <li>New wheels contain native CUDA code for compute capabilities 7.5, 8.0, 8.6,
-  and 8.9, plus compute-8.9 PTX for forward JIT on newer GPUs. Older wheels
-  compiled only for 8.9 and can fail with <code>no kernel image is available</code> on an
-  Ampere GPU even when the CUDA runtime is installed correctly.</li>
+  8.9, and 12.0, plus compute-8.9 PTX for forward JIT on other newer GPUs.
+  <code>python -m uipc doctor</code> reports which code path applies and checks its driver
+  floor. Older wheels compiled only for 8.9 and can fail with
+  <code>no kernel image is available</code> on an Ampere GPU even when the CUDA runtime is
+  installed correctly.</li>
 </ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pyuipc
 </span></code></pre></div>
