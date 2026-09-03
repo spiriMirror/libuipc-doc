@@ -4747,7 +4747,11 @@
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>sc</code> simplicial complex </li>
-<li><code>part_max_size</code> the vertex number in each partition &lt;= part_max_size. NOTE: the CUDA MAS preconditioner hard-codes BANKSIZE=16, so 16 is the only value it accepts. End users should not call this to enable MAS — set scene config <code>linear_system/fem_preconditioner = "mas"</code> instead, which auto-partitions every FEM geometry internally with the fixed size. This function remains for custom C++ partitioning (a pre-existing mesh_part attribute is respected by MAS as-is). </li>
+<li><code>part_max_size</code> the vertex number in each partition &lt;= part_max_size. </li>
+</ul>
+<p><strong>Exception:</strong></p>
+<ul>
+<li><a href="../classuipc_1_1Exception/"><strong>uipc::Exception</strong></a> if part_max_size is zero or the graph exceeds the 32-bit index capacity of the embedded METIS implementation. NOTE: the CUDA MAS preconditioner hard-codes BANKSIZE=16, so 16 is the only value it accepts. End users should not call this to enable MAS; set scene config <code>linear_system/fem_preconditioner = "mas"</code> instead, which auto-partitions every FEM geometry internally with the fixed size. This function remains for custom C++ partitioning (a pre-existing mesh_part attribute is respected by MAS as-is). </li>
 </ul>
 <hr>
 
