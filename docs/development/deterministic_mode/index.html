@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deterministic-mode-design-notes" class="md-skip">
+        <a href="#deterministic-mode-historical-proposal" class="md-skip">
           Skip to content
         </a>
       
@@ -303,6 +303,8 @@
       
         
       
+        
+      
     
     
     
@@ -451,6 +453,34 @@
     
   
     XMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build_install/blender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Extension
   
 
     
@@ -889,6 +919,8 @@
       
         
       
+        
+      
     
     
     
@@ -944,6 +976,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../specification/tetrahedralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native Tetrahedralization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -961,10 +1021,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   
@@ -982,8 +1042,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1196,7 +1256,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1218,14 +1278,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2164,7 +2224,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2186,14 +2246,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3405,11 +3465,19 @@
   
 
 
-<div><h1 id="deterministic-mode-design-notes">Deterministic Mode (Design Notes)</h1>
+<div><h1 id="deterministic-mode-historical-proposal">Deterministic Mode (Historical Proposal)</h1>
 <blockquote>
-<p><strong>Status: proposal.</strong> This document describes the design for a deterministic
-execution mode. It is not yet implemented; it records the agreed approach so
-that backend authors can build against it. Last updated: 2026-08.</p>
+<p><strong>Status: withdrawn from the active roadmap, 2026-09-11.</strong> The notes below are
+historical, not an agreed implementation plan. The owner requires preserving
+parallel efficiency: small differences from valid floating-point atomic arrival
+orders are expected and do not establish a correctness defect. Do not add sorting,
+fixed-order reductions or serialization solely to eliminate them. A correctness
+change needs evidence of an algorithmic error or a real concurrency/synchronization
+violation. The experimental fixed-order changes were reverted.</p>
+<p>There is <strong>no supported <code>debug/deterministic</code> configuration key</strong>. The JSON and
+strategies below were proposed, not implemented; the strict scene schema rejects
+the unregistered key. Reconsidering any optional mode requires a new explicit
+requirement, measured costs and separate approval.</p>
 </blockquote>
 <h2 id="motivation">Motivation</h2>
 <p>The CUDA backend is intentionally parallel-first: floating-point results may

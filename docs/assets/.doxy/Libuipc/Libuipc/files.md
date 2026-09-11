@@ -228,6 +228,7 @@ Here is a list of all files with brief descriptions:
             * **file** [**simplicial\_complex.h**](simplicial__complex_8h.md)     
             * **file** [**simplicial\_complex\_attributes.h**](simplicial__complex__attributes_8h.md)     
             * **file** [**simplicial\_complex\_slot.h**](simplicial__complex__slot_8h.md)     
+            * **file** [**tetrahedralization.h**](tetrahedralization_8h.md)     
             * **file** [**utils.h**](utils_8h.md) 
         * **dir** [**io**](dir_852854ea57a318f61c10cfed1155dbd7.md)     
             * **file** [**attribute\_io.h**](attribute__io_8h.md)     

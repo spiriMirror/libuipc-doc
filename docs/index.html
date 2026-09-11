@@ -403,6 +403,8 @@
       
         
       
+        
+      
     
     
     
@@ -551,6 +553,34 @@
     
   
     XMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="build_install/blender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Extension
   
 
     
@@ -989,6 +1019,8 @@
       
         
       
+        
+      
     
     
     
@@ -1044,6 +1076,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="specification/tetrahedralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native Tetrahedralization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1061,10 +1121,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   
@@ -1082,8 +1142,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1296,7 +1356,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1318,14 +1378,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2264,7 +2324,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2286,14 +2346,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3384,14 +3444,14 @@
 <p>Both <strong><font color="red">C++</font></strong> and <strong><font color="red">Python</font></strong> APIs are provided!</p>
 <p><img alt="" src="media/teaser.png"></p>
 <h2 id="introduction">Introduction</h2>
-<p><strong>Libuipc</strong> is a library that offers a unified <strong>GPU</strong> incremental potential contact framework for simulating the dynamics of rigid bodies, soft bodies, cloth, and threads, and their couplings. It ensures accurate, <strong>penetration-free frictional contact</strong> and is naturally <strong>differentiable</strong>. Libuipc aims to provide robust and efficient <strong>forward</strong> and <strong>backward</strong> simulations, making it easy for users to integrate with machine learning frameworks, inverse dynamics, robotics, and more.</p>
+<p><strong>Libuipc</strong> provides a unified <strong>GPU</strong> incremental potential contact framework for rigid bodies, soft bodies, cloth, rods, and their couplings. Its frictional contact pipeline targets non-penetration from valid initial geometry through successful collision and solve steps; this is not a guarantee for invalid inputs or failed solves. Forward simulation is the primary supported workflow. Differentiable-simulation APIs exist for selected paths, while broad backward-simulation coverage remains under development.</p>
 <p>We are <strong>actively</strong> developing Libuipc and will continue to add more features and improve its performance. We welcome any feedback and contributions from the community!</p>
 <h2 id="why-libuipc">Why Libuipc</h2>
 <ul>
 <li><strong>Easy &amp; Powerful</strong>: Libuipc offers an intuitive and unified approach to creating and accessing vivid simulation scenes, supporting a variety of objects and constraints that can be easily added.</li>
-<li><strong>Fast &amp; Robust</strong>: Libuipc is designed to run fully in parallel on the GPU, achieving high performance and enabling large-scale simulations. It features a robust and accurate frictional contact model that effectively handles complex frictional scenarios without penetration.</li>
+<li><strong>GPU Simulation</strong>: Contact, constitutions and linear algebra run on the GPU, with host-side orchestration and convergence checks. Solver settings and validation status matter for accuracy and robustness.</li>
 <li><strong>High Flexibility</strong>: Libuipc provides APIs in both Python and C++ and supports both Linux and Windows systems.</li>
-<li><strong>Fully Differentiable</strong>: Libuipc provides differentiable simulation APIs for backward optimizations. (Coming Soon)</li>
+<li><strong>Differentiable Simulation Roadmap</strong>: Selected APIs are available; complete model and contact coverage is not yet a supported guarantee.</li>
 </ul>
 <table>
   <tr>
@@ -3410,7 +3470,7 @@
 <li>Rigid &amp; Soft Body Strong Coupling Simulation</li>
 <li>Penetration-Free &amp; Accurate Frictional Contact Handling</li>
 <li>User Scriptable Animation Control</li>
-<li>Fully Differentiable Simulation (Diff-Sim Coming Soon)</li>
+<li>Differentiable Simulation APIs (partial coverage; under development)</li>
 </ul>
 <h2 id="document-guidance">Document Guidance</h2>
 <ul>

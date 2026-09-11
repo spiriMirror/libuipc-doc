@@ -24,6 +24,7 @@
     <includes refid="mesh__partition_8h" local="no">uipc/geometry/utils/mesh_partition.h</includes>
     <includes refid="closest__vertex__triangle__pairs_8h" local="no">uipc/geometry/utils/closest_vertex_triangle_pairs.h</includes>
     <includes refid="closest__vertex__edge__pairs_8h" local="no">uipc/geometry/utils/closest_vertex_edge_pairs.h</includes>
+    <includes refid="tetrahedralization_8h" local="no">uipc/geometry/tetrahedralization.h</includes>
     <includedby refid="geometry_8h" local="no">include/uipc/geometry.h</includedby>
     <incdepgraph>
       <node id="23">
@@ -296,6 +297,14 @@
         <childnode refid="40" relation="include">
         </childnode>
       </node>
+      <node id="73">
+        <label>uipc/geometry/tetrahedralization.h</label>
+        <link refid="tetrahedralization_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>include/uipc/geometry/utils.h</label>
         <link refid="utils_8h"/>
@@ -342,6 +351,8 @@
         <childnode refid="71" relation="include">
         </childnode>
         <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
         </childnode>
       </node>
       <node id="63">
@@ -561,6 +572,9 @@
       <node id="13">
         <label>unordered_map</label>
       </node>
+      <node id="74">
+        <label>utility</label>
+      </node>
       <node id="31">
         <label>vector</label>
       </node>
@@ -611,6 +625,7 @@
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/mesh_partition.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/closest_vertex_triangle_pairs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/utils/closest_vertex_edge_pairs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/geometry/tetrahedralization.h&gt;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/geometry/utils.h"/>
   </compounddef>

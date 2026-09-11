@@ -154,6 +154,8 @@
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**pointcloud**](#function-pointcloud) (span&lt; const Vector3 &gt; Vs) <br>_Create a simplicial complex from a point cloud._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**points\_from\_volume**](#function-points_from_volume) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, Float resolution=0.01) <br>_Construct a point cloud inside a volume represented by a simplicial complex._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**tetmesh**](#function-tetmesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Ts) <br>_Create a simplicial complex from a tetrahedral mesh._  |
+|  UIPC\_GEOMETRY\_API Json | [**tetrahedralization\_default\_config**](#function-tetrahedralization_default_config) () <br>_Default options for the native, boundary-conforming volume mesher._  |
+|  UIPC\_GEOMETRY\_API std::pair&lt; [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md), Json &gt; | [**tetrahedralize**](#function-tetrahedralize) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & surface, const Json & config=tetrahedralization\_default\_config()) <br>_Construct a positive-volume tetrahedral mesh of a closed triangle surface._  |
 |  UIPC\_GEOMETRY\_API bool | [**tri\_edge\_intersect**](#function-tri_edge_intersect) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & E0, const Vector3 & E1) <br>_Check if a triangle and an edge intersect._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector3i &gt; Fs) <br>_Create a simplicial complex from a triangle mesh._  |
 |  UIPC\_GEOMETRY\_API [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**trimesh**](#function-trimesh) (span&lt; const Vector3 &gt; Vs, span&lt; const Vector4i &gt; Fs) <br>_Create a 2D simplicial complex from a quad mesh (4-sided polygons)._  |
@@ -1531,6 +1533,45 @@ UIPC_GEOMETRY_API SimplicialComplex uipc::geometry::tetmesh (
 * `Ts` The tetrahedra of the tetrahedral mesh 
 
 
+
+
+        
+
+<hr>
+
+
+
+### function tetrahedralization\_default\_config 
+
+_Default options for the native, boundary-conforming volume mesher._ 
+```C++
+UIPC_GEOMETRY_API Json uipc::geometry::tetrahedralization_default_config () 
+```
+
+
+
+preserve\_surface=true retains input vertex indices, coordinates and boundary triangles. Only interior Steiner vertices may be introduced in this mode. Quality/refinement budgets limit optimization, never boundary construction. 
+
+
+        
+
+<hr>
+
+
+
+### function tetrahedralize 
+
+_Construct a positive-volume tetrahedral mesh of a closed triangle surface._ 
+```C++
+UIPC_GEOMETRY_API std::pair< SimplicialComplex , Json > uipc::geometry::tetrahedralize (
+    const SimplicialComplex & surface,
+    const Json & config=tetrahedralization_default_config()
+) 
+```
+
+
+
+The input must be an embedded, consistently oriented, closed two-manifold. Returns the volume mesh and a quality/construction report. A valid conservative mesh is established before optimization; rejected optimization steps retain it. Original vertices occupy the first input.vertices().size() output entries. Input geometry is never modified. Coordinates are interpreted directly, without applying instance transforms. Apply transforms to the input before calling. 
 
 
         

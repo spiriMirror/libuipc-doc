@@ -274,6 +274,47 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry_commit.h" line="47" column="24" declfile="include/uipc/geometry/geometry_commit.h" declline="47" declcolumn="24"/>
       </memberdef>
+      <memberdef kind="function" id="tetrahedralization_8h_1a827cfcef3d597933f4a748ba0ac17052" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API Json</type>
+        <definition>UIPC_GEOMETRY_API Json uipc::geometry::tetrahedralization_default_config</definition>
+        <argsstring>()</argsstring>
+        <name>tetrahedralization_default_config</name>
+        <qualifiedname>uipc::geometry::tetrahedralization_default_config</qualifiedname>
+        <briefdescription>
+<para>Default options for the native, boundary-conforming volume mesher. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>preserve_surface=true retains input vertex indices, coordinates and boundary triangles. Only interior Steiner vertices may be introduced in this mode. Quality/refinement budgets limit optimization, never boundary construction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/tetrahedralization.h" line="16" column="24" declfile="include/uipc/geometry/tetrahedralization.h" declline="16" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="tetrahedralization_8h_1a241bebbae20bf23ae594956bb3555c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UIPC_GEOMETRY_API std::pair&lt; <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref>, Json &gt;</type>
+        <definition>UIPC_GEOMETRY_API std::pair&lt; SimplicialComplex, Json &gt; uipc::geometry::tetrahedralize</definition>
+        <argsstring>(const SimplicialComplex &amp;surface, const Json &amp;config=tetrahedralization_default_config())</argsstring>
+        <name>tetrahedralize</name>
+        <qualifiedname>uipc::geometry::tetrahedralize</qualifiedname>
+        <param>
+          <type>const <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &amp;</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>const Json &amp;</type>
+          <declname>config</declname>
+          <defval>tetrahedralization_default_config()</defval>
+        </param>
+        <briefdescription>
+<para>Construct a positive-volume tetrahedral mesh of a closed triangle surface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The input must be an embedded, consistently oriented, closed two-manifold. Returns the volume mesh and a quality/construction report. A valid conservative mesh is established before optimization; rejected optimization steps retain it. Original vertices occupy the first input.vertices().size() output entries. Input geometry is never modified. Coordinates are interpreted directly, without applying instance transforms. Apply transforms to the input before calling. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/uipc/geometry/tetrahedralization.h" line="28" column="29" declfile="include/uipc/geometry/tetrahedralization.h" declline="28" declcolumn="29"/>
+      </memberdef>
       <memberdef kind="function" id="apply__region_8h_1ab0207d614bc7e6a944dc5722b5051299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_GEOMETRY_API vector&lt; <ref refid="classuipc_1_1geometry_1_1SimplicialComplex" kindref="compound">SimplicialComplex</ref> &gt;</type>
         <definition>UIPC_GEOMETRY_API vector&lt; SimplicialComplex &gt; uipc::geometry::apply_region</definition>

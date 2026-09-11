@@ -2609,6 +2609,8 @@
     <member refid="geometry__collection__commit_8h_1accab2aae2bb585319f5d335230420bb2" kind="function"><name>operator+=</name></member>
     <member refid="geometry__commit_8h_1a0a72a51577ba297bd875c9766a05be2c" kind="function"><name>operator-</name></member>
     <member refid="geometry__commit_8h_1ad0f1f637a28f503e076fc27c39dcc908" kind="function"><name>operator+=</name></member>
+    <member refid="tetrahedralization_8h_1a827cfcef3d597933f4a748ba0ac17052" kind="function"><name>tetrahedralization_default_config</name></member>
+    <member refid="tetrahedralization_8h_1a241bebbae20bf23ae594956bb3555c9d" kind="function"><name>tetrahedralize</name></member>
     <member refid="apply__region_8h_1ab0207d614bc7e6a944dc5722b5051299" kind="function"><name>apply_region</name></member>
     <member refid="apply__transform_8h_1a438613fb33e8483d363b89d097ec0d65" kind="function"><name>apply_transform</name></member>
     <member refid="closest__vertex__edge__pairs_8h_1afdee9fa6b1c48683ece2d0c798db8671" kind="function"><name>closest_vertex_edge_pairs</name></member>
@@ -2694,10 +2696,23 @@
   <compound refid="engine__create__info_8h" kind="file"><name>engine_create_info.h</name>
     <member refid="engine__create__info_8h_1a1be0db7b6971258c6ade8ee388392e1b" kind="typedef"><name>EngineCreateInfo</name></member>
   </compound>
+  <compound refid="backend_2macro_8h" kind="file"><name>macro.h</name>
+    <member refid="backend_2macro_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
+  </compound>
+  <compound refid="common_2macro_8h" kind="file"><name>macro.h</name>
+    <member refid="common_2macro_8h_1acdc2fb3c333b8db7769ad0edfccd5f4a" kind="define"><name>UIPC_TO_STRING</name></member>
+    <member refid="common_2macro_8h_1a0becbf4b30fc2051ed0f94f281443bc1" kind="define"><name>UIPC_CONCATE</name></member>
+    <member refid="common_2macro_8h_1a01617e255ce2552dadac5c6ec72c7b66" kind="define"><name>UIPC_NAME_WITH_ID_IMPL</name></member>
+    <member refid="common_2macro_8h_1a637181fd667dba92d6cd9d5d66a6bb41" kind="define"><name>UIPC_NAME_WITH_ID</name></member>
+  </compound>
   <compound refid="module__info_8h" kind="file"><name>module_info.h</name>
     <member refid="module__info_8h_1a454c3220cb845ec2343eb8c43211d89d" kind="variable"><name>UIPC_BACKEND_ABI_VERSION</name></member>
   </compound>
   <compound refid="module__init__info_8h" kind="file"><name>module_init_info.h</name>
+  </compound>
+  <compound refid="backend_2type__define_8h" kind="file"><name>type_define.h</name>
+  </compound>
+  <compound refid="common_2type__define_8h" kind="file"><name>type_define.h</name>
   </compound>
   <compound refid="animator__visitor_8h" kind="file"><name>animator_visitor.h</name>
   </compound>
@@ -2721,6 +2736,10 @@
   <compound refid="details_2attribute__name_8h" kind="file"><name>attribute_name.h</name>
   </compound>
   <compound refid="constants_8h" kind="file"><name>constants.h</name>
+  </compound>
+  <compound refid="builtin_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
+  </compound>
+  <compound refid="geometry_2utils_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
   </compound>
   <compound refid="constitution__uid__auto__register_8h" kind="file"><name>constitution_uid_auto_register.h</name>
     <member refid="constitution__uid__auto__register_8h_1a95df5be6fc4ceeb9dcf11e7c66d60469" kind="define"><name>REGISTER_CONSTITUTION_UIDS_INTERNAL</name></member>
@@ -2788,15 +2807,6 @@
   </compound>
   <compound refid="logger_8h" kind="file"><name>logger.h</name>
   </compound>
-  <compound refid="backend_2macro_8h" kind="file"><name>macro.h</name>
-    <member refid="backend_2macro_8h_1ab7c227cc15f4b5e740e50f12f311b8fd" kind="define"><name>UIPC_BACKEND_API</name></member>
-  </compound>
-  <compound refid="common_2macro_8h" kind="file"><name>macro.h</name>
-    <member refid="common_2macro_8h_1acdc2fb3c333b8db7769ad0edfccd5f4a" kind="define"><name>UIPC_TO_STRING</name></member>
-    <member refid="common_2macro_8h_1a0becbf4b30fc2051ed0f94f281443bc1" kind="define"><name>UIPC_CONCATE</name></member>
-    <member refid="common_2macro_8h_1a01617e255ce2552dadac5c6ec72c7b66" kind="define"><name>UIPC_NAME_WITH_ID_IMPL</name></member>
-    <member refid="common_2macro_8h_1a637181fd667dba92d6cd9d5d66a6bb41" kind="define"><name>UIPC_NAME_WITH_ID</name></member>
-  </compound>
   <compound refid="magic__enum_8h" kind="file"><name>magic_enum.h</name>
   </compound>
   <compound refid="map_8h" kind="file"><name>map.h</name>
@@ -2822,15 +2832,7 @@
   </compound>
   <compound refid="timer_8h" kind="file"><name>timer.h</name>
   </compound>
-  <compound refid="backend_2type__define_8h" kind="file"><name>type_define.h</name>
-  </compound>
-  <compound refid="common_2type__define_8h" kind="file"><name>type_define.h</name>
-  </compound>
   <compound refid="type__traits_8h" kind="file"><name>type_traits.h</name>
-  </compound>
-  <compound refid="common_2uipc_8h" kind="file"><name>uipc.h</name>
-  </compound>
-  <compound refid="uipc_8h" kind="file"><name>uipc.h</name>
   </compound>
   <compound refid="unit_8h" kind="file"><name>unit.h</name>
   </compound>
@@ -3054,6 +3056,8 @@
   </compound>
   <compound refid="simplicial__complex__slot_8h" kind="file"><name>simplicial_complex_slot.h</name>
   </compound>
+  <compound refid="tetrahedralization_8h" kind="file"><name>tetrahedralization.h</name>
+  </compound>
   <compound refid="utils_8h" kind="file"><name>utils.h</name>
   </compound>
   <compound refid="affine__body__from__rigid__body_8h" kind="file"><name>affine_body_from_rigid_body.h</name>
@@ -3085,10 +3089,6 @@
   <compound refid="compute__mesh__volume_8h" kind="file"><name>compute_mesh_volume.h</name>
   </compound>
   <compound refid="compute__vertex__volume_8h" kind="file"><name>compute_vertex_volume.h</name>
-  </compound>
-  <compound refid="builtin_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
-  </compound>
-  <compound refid="geometry_2utils_2constitution__type_8h" kind="file"><name>constitution_type.h</name>
   </compound>
   <compound refid="distance_8h" kind="file"><name>distance.h</name>
   </compound>
@@ -3122,10 +3122,6 @@
   </compound>
   <compound refid="optimal__transform_8h" kind="file"><name>optimal_transform.h</name>
   </compound>
-  <compound refid="geometry_2utils_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
-  </compound>
-  <compound refid="vdb_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
-  </compound>
   <compound refid="simplex__utils_8h" kind="file"><name>simplex_utils.h</name>
   </compound>
   <compound refid="io_8h" kind="file"><name>io.h</name>
@@ -3141,6 +3137,16 @@
   <compound refid="spread__sheet__io_8h" kind="file"><name>spread_sheet_io.h</name>
   </compound>
   <compound refid="urdf__io_8h" kind="file"><name>urdf_io.h</name>
+  </compound>
+  <compound refid="common_2uipc_8h" kind="file"><name>uipc.h</name>
+  </compound>
+  <compound refid="uipc_8h" kind="file"><name>uipc.h</name>
+  </compound>
+  <compound refid="prim_8h" kind="file"><name>prim.h</name>
+  </compound>
+  <compound refid="stage_8h" kind="file"><name>stage.h</name>
+  </compound>
+  <compound refid="stage__io_8h" kind="file"><name>stage_io.h</name>
   </compound>
   <compound refid="common_2dllexport_8h" kind="file"><name>dllexport.h</name>
     <member refid="common_2dllexport_8h_1a3eb99fe897cd1af9d0dc6aad2a814a56" kind="define"><name>UIPC_EXTERN_C</name></member>
@@ -3161,11 +3167,9 @@
   <compound refid="vdb_2dllexport_8h" kind="file"><name>dllexport.h</name>
     <member refid="vdb_2dllexport_8h_1a14c73594cdba16323c5172fc3eda71ef" kind="define"><name>UIPC_VDB_API</name></member>
   </compound>
-  <compound refid="prim_8h" kind="file"><name>prim.h</name>
+  <compound refid="geometry_2utils_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
   </compound>
-  <compound refid="stage_8h" kind="file"><name>stage.h</name>
-  </compound>
-  <compound refid="stage__io_8h" kind="file"><name>stage_io.h</name>
+  <compound refid="vdb_2points__from__volume_8h" kind="file"><name>points_from_volume.h</name>
   </compound>
   <compound refid="dir_0434b40e061af98901db13a48821d02b" kind="dir"><name>include/uipc/geometry/utils/affine_body</name>
   </compound>

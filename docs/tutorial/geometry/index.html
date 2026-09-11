@@ -303,6 +303,8 @@
       
         
       
+        
+      
     
     
     
@@ -451,6 +453,34 @@
     
   
     XMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build_install/blender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Extension
   
 
     
@@ -1021,6 +1051,8 @@
       
         
       
+        
+      
     
     
     
@@ -1076,6 +1108,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../specification/tetrahedralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native Tetrahedralization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
       
@@ -1093,10 +1153,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   
@@ -1114,8 +1174,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1328,7 +1388,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1350,14 +1410,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2296,7 +2356,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2318,14 +2378,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -3457,7 +3517,8 @@
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>All geometry interfaces are defined in the <code>pyuipc.geometry</code> module.</p>
+<p>All geometry interfaces are defined in the <code>uipc.geometry</code> module
+(<code>pyuipc</code> is the distribution name installed by pip).</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </span></code></pre></div>
 </div>
@@ -3497,9 +3558,9 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 <p>In <code>libuipc</code>, a <code>Simplicial Complex</code> is a general representation of an explicit mesh. In <span class="arithmatex">\(\mathbb{R}^3\)</span>, a simplicial complex can be a tetrahedral mesh, a triangle mesh, a line mesh, or a point cloud, which have a dimension of <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(1\)</span>, or <span class="arithmatex">\(0\)</span>, respectively.</p>
 <ul>
 <li>The tetrahedral mesh can be used to describe solid objects.</li>
-<li>The triangle mesh can be used to describe some 2D-codimensional objects, like a cloth with a thin thickness or the surface of a solid object.</li>
-<li>The line mesh can be used to describe some 1D-codimensional objects, like a rope, a curve, or a wire.</li>
-<li>The point cloud can be used to describe some 0D-codimensional objects, like a bunch of particles.</li>
+<li>The triangle mesh represents a 2D surface (codimension 1 in 3D), such as cloth or the surface of a solid object.</li>
+<li>The line mesh represents a 1D centerline (codimension 2 in 3D), such as a rope, curve, or wire.</li>
+<li>The point cloud represents 0D particles (codimension 3 in 3D).</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
 <div class="tabbed-content">
@@ -3582,6 +3643,18 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 </div>
 </div>
 <p>Note that, till now, we just get a handle of the attribute <code>position</code>. To access the data, we need to create a view of the attribute.</p>
+<div class="admonition warning">
+<p class="admonition-title">Borrowed facade and view lifetimes</p>
+<p>Keep the owning Scene, Object and Geometry alive while using their collection
+facades. Current Python facade returns such as <code>mesh.vertices()</code> and
+<code>scene.objects()</code> do not all retain their owners. Do not save a facade obtained
+from a temporary parent and then discard that parent.</p>
+<p>NumPy views are live references, not snapshots. Reacquire them after operations
+that can resize, replace or detach attribute storage through copy-on-write.
+Use <code>array.copy()</code> when retaining history across such operations. The read-only
+flag prevents ordinary assignment; it does not make the underlying storage
+immutable or promise that a view survives reallocation.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">

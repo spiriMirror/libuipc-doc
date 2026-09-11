@@ -1,0 +1,4707 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../xmake/">
+      
+      
+        <link rel="next" href="../build_docs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Blender Extension - Libuipc Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/doxide.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#blender-extension" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Libuipc Documentation" class="md-header__button md-logo" aria-label="Libuipc Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Libuipc Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Blender Extension
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/spiriMirror/libuipc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    spiriMirror/libuipc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Libuipc Documentation" class="md-nav__button md-logo" aria-label="Libuipc Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Libuipc Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/spiriMirror/libuipc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    spiriMirror/libuipc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build & Install
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Build & Install
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux-Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    XMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Extension
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blender Extension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-bake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First bake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rod-centerlines-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rod centerlines (0.7)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumetric-fem-and-fixed-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volumetric FEM and fixed objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urdf-robots-and-animated-rigid-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URDF robots and animated rigid targets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scene-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scene parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scene parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-solver-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom solver accuracy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-material-pairs-and-physical-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contact material pairs and physical presets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-report-and-viewport-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality report and viewport diagnostics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality report and viewport diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-and-storage-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance and storage (0.6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact-moving-abd-playback-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compact moving ABD playback (0.8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robot-joint-controls-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot joint controls (0.5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-validation-and-guarded-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache validation and guarded rendering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cache validation and guarded rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#independent-png-render-queue-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independent PNG render queue (0.5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-and-remaining-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifiers and remaining limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build Docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev_in_uv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dev in UV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../tutorial/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/scene_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scene Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/rigid_bodies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rigid Bodies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/fem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volumetric FEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/cloth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloth & Thin Shells
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/coupled_contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rigid-Soft & Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/animation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/profiling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../specification/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Specification
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Specification
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/tetrahedralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native Tetrahedralization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scene Configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scene Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/scene_config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Full Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/scene_configs/newton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Newton & Linear Solvers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/scene_configs/contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact & Collision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitution_uid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Constitution UID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../specification/constitutions/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Constitutions
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Constitutions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_driving_prismatic_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Driving Prismatic Joint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_driving_revolute_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Driving Revolute Joint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Force for Affine Body
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_fixed_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Fixed Joint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_prismatic_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Prismatic Joint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_prismatic_joint_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Prismatic Joint External Force
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_prismatic_joint_limit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Prismatic Joint Limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_revolute_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Revolute Joint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_revolute_joint_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Revolute Joint External Force
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_revolute_joint_limit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Revolute Joint Limit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/affine_body_spherical_joint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Affine Body Spherical Joint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/arap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ARAP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/discrete_shell_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discrete Shell Bending
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/empty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empty
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/external_articulation_constraint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Articulation Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/finite_element/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finite Element
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/finite_element_external_force/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Force for Finite Element
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/hookean_spring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hookean Spring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/kirchhoff_rod_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kirchhoff Rod Bending
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/neo_hookean_shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Neo Hookean Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/particle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Particle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/soft_position_constraint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soft Position Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/soft_transform_constraint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soft Transform Constraint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/soft_vertex_edge_stitch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soft Vertex Edge Stitch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/soft_vertex_stitch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soft Vertex Stitch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/soft_vertex_triangle_stitch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soft Vertex Triangle Stitch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/stable_neo_hookean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stable Neo Hookean
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/strain_limiting_baraff_witkin_shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strain Limiting Baraff-Witkin Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/strain_plastic_discrete_shell_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strain Plastic Discrete Shell Bending
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/constitutions/stress_plastic_discrete_shell_bending/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stress Plastic Discrete Shell Bending
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/implicit_geometry_uid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implicit Geometry UID
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../specification/implicit_geometries/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implicit Geometries
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Implicit Geometries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../specification/implicit_geometries/half_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Half Plane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Documentation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Links
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/class_members/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Members
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/class_member_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/class_member_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/class_member_typedefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Typedefs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/class_member_enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Enumerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Namespaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Namespaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/namespaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/namespace_members/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/namespace_member_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/namespace_member_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Typedefs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/namespace_member_enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member Enumerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Libuipc/files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../development/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/backend_cuda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend Cuda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/deterministic_mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deterministic Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/testing_and_benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing and Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/3rd_libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Third-Party Libraries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-bake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First bake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rod-centerlines-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rod centerlines (0.7)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volumetric-fem-and-fixed-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volumetric FEM and fixed objects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urdf-robots-and-animated-rigid-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URDF robots and animated rigid targets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scene-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scene parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scene parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-solver-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom solver accuracy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact-material-pairs-and-physical-presets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contact material pairs and physical presets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-report-and-viewport-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality report and viewport diagnostics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality report and viewport diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-and-storage-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance and storage (0.6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compact-moving-abd-playback-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compact moving ABD playback (0.8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robot-joint-controls-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robot joint controls (0.5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-validation-and-guarded-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cache validation and guarded rendering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cache validation and guarded rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#independent-png-render-queue-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independent PNG render queue (0.5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifiers-and-remaining-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modifiers and remaining limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Developer validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div><h1 id="blender-extension">Blender Extension</h1>
+<p>The <strong>libuipc Physics</strong> extension connects Blender to the public <code>pyuipc</code> API.
+Blender exports meshes and physics settings, an external Python process runs
+the CUDA solver, and native Mesh Cache modifiers play the resulting MDD files.
+All enabled objects share one libuipc World for coupled contact and friction.</p>
+<p><a href="https://github.com/spiriMirror/libuipc">Project repository</a> ·
+<a href="https://github.com/spiriMirror/libuipc/tree/refactor-main/integrations/blender">Extension source</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blender</td>
+<td>4.2+ API target; tested in 4.5.3 LTS on Windows</td>
+</tr>
+<tr>
+<td>Solver platform</td>
+<td>Windows x64 or Linux x64 with a compatible NVIDIA GPU/driver</td>
+</tr>
+<tr>
+<td>External Python</td>
+<td>CPython 3.10–3.14; independent of Blender's bundled Python</td>
+</tr>
+<tr>
+<td>pyuipc</td>
+<td>Current source build for native tetrahedralization; 0.0.28+ for baking/import APIs</td>
+</tr>
+<tr>
+<td>Build helper</td>
+<td>Python 3.11+ to build the extension ZIP from source</td>
+</tr>
+</tbody>
+</table>
+<p>Blender 4.5's Python 3.11 can use a Python 3.14 solver because the bridge exchanges
+files, not Python objects or native modules. The extension does not run pip or
+modify Blender's Python installation. A compatible driver is sufficient for the
+official 0.0.28 wheel; a system CUDA Toolkit is not required.</p>
+<h2 id="install">Install</h2>
+<p>Licensing is scoped per component: libuipc/pyuipc and the independent worker and
+cache protocol remain Apache-2.0. Only Blender-specific adapter files use
+GPL-3.0-or-later, following Blender's
+<a href="https://www.blender.org/about/license/">published add-on guidance</a>.
+Copyright and maintainer: <strong>spiriMirror</strong>. The ZIP includes full license texts
+and a per-file <code>LICENSE</code> explanation; the libuipc root license is unchanged.</p>
+<ol>
+<li>
+<p>Create a separate solver environment. On Windows, for example:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">py</span> <span class="p">-</span><span class="n">3</span><span class="p">.</span><span class="n">14</span> <span class="n">-m</span> <span class="n">venv</span> <span class="p">.</span><span class="n">venv-uipc-blender</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">.\.</span><span class="n">venv-uipc-blender</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pyuipc</span><span class="p">==</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">28</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">.\.</span><span class="n">venv-uipc-blender</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="n">-m</span> <span class="n">uipc</span> <span class="n">doctor</span> <span class="p">-</span><span class="n">-probe-cuda</span>
+</span></code></pre></div>
+<p>On Linux:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv-uipc-blender
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>.venv-uipc-blender/bin/python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">pyuipc</span><span class="o">==</span><span class="m">0</span>.0.28
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>.venv-uipc-blender/bin/python<span class="w"> </span>-m<span class="w"> </span>uipc<span class="w"> </span>doctor<span class="w"> </span>--probe-cuda
+</span></code></pre></div>
+</li>
+<li>
+<p>Obtain <code>libuipc_blender-0.8.0.zip</code>, or build it from the repository root:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>scripts/build_blender_addon.py
+</span></code></pre></div>
+<p>Output: <code>output/blender-dist/libuipc_blender-0.8.0.zip</code>.</p>
+</li>
+<li>
+<p>In Blender, open <strong>Edit &gt; Preferences &gt; Add-ons</strong>, open the menu, and choose
+   <strong>Install from Disk</strong>. Select the ZIP and enable <strong>libuipc Physics</strong>.</p>
+</li>
+<li>In the add-on preferences, set <strong>Default External Python</strong> to the executable
+   created in step 1. In the 3D Viewport, press <strong>N</strong>, select <strong>libuipc</strong>, and
+   click <strong>Check Python / CUDA</strong>. This actually initializes the CUDA backend.</li>
+<li><strong>External Python</strong> in the scene panel optionally overrides the preference.
+   If both fields are blank the extension searches <code>PATH</code>.</li>
+</ol>
+<h2 id="first-bake">First bake</h2>
+<ol>
+<li>Click <strong>Create Example Scene</strong>. This creates a new scene containing a pinned
+   cloth, a falling ABD cube, a fixed platform, a floor, camera, and lights.</li>
+<li>Save the <code>.blend</code>, or set an absolute <strong>Cache Directory</strong>. By default, caches
+   live in <code>&lt;blend name&gt;_uipc_cache</code> beside the saved file.</li>
+<li>Set the scene's start/end frames and frame rate, then click <strong>Bake Simulation</strong>.
+   The interactive UI polls a separate worker; <strong>Cancel Bake</strong> stops it.</li>
+<li>On success, drag the time slider or render. <strong>Validate Cache</strong> checks that the
+   current scene still matches the bake. <strong>Detach Cache</strong> restores the source
+   meshes by removing only libuipc cache modifiers; it retains cache files.</li>
+</ol>
+<p>Each bake has a new directory. Results are attached only when every file has
+completed, its header/length is valid, and the scene still matches the export.
+Cancelling or failing a bake never replaces the previous completed bake.</p>
+<h2 id="rod-centerlines-07">Rod centerlines (0.7)</h2>
+<p>The extension now exposes libuipc's existing <code>HookeanSpring</code> plus
+<code>KirchhoffRodBending</code> on 1D edge meshes. This is a stretch-and-bend rod model,
+without a material-frame twisting degree of freedom or torsional energy.</p>
+<ol>
+<li>Use an edge-only mesh (no faces), or select a 3D Blender Curve and click
+   <strong>Create Rod from Curve</strong> in the scene panel. Curve conversion creates a new
+   sampled centerline and keeps the source unchanged; hide the original display
+   if it would overlap the rod. Poly, Bezier and NURBS centerlines use Blender's
+   sampling/resolution on a private copy with bevel/extrusion and object modifiers
+   removed. <strong>Object modifiers that deform the centerline are currently ignored</strong>;
+   apply desired deformations before conversion. Hair Curves are not this legacy
+   Curve type. A base/evaluated-source choice is a future improvement, not an
+   implemented behavior.</li>
+<li>Set <strong>Simulation Role &gt; Rod (Stretch + Bending)</strong>. Open/closed chains and
+   disconnected chains are supported; branching, isolated vertices, duplicate/
+   zero-length edges and exact backtracking are rejected before native calls.</li>
+<li>Set the cross-section radius, density and independent stretch/bending moduli.
+   Use the ordinary <strong>Pin Vertex Group</strong> for selected nodes, or <strong>Fixed Entire
+   Object</strong> for the whole rod. Pinning two adjacent nodes also fixes the root
+   tangent; pinning one node alone leaves a pivot. No animated rod pins are exposed.</li>
+<li><strong>Create / Refresh Rod Surface</strong> adds native Geometry Nodes after the simulation
+   cache: circular tube display with round end caps, including nonuniform/negative
+   object scale. The surface is only rendering geometry, never the FEM collision
+   input. It uses the active material initially; its Material modifier input can
+   be changed independently. Rebaking refreshes its radius and scale mapping.</li>
+<li>Bake normally. Rods share the World, contact-pair table and friction with cloth,
+   ABD and FEM. MDD centerline playback and generated surface rendering work after
+   the extension is disabled. All-pinned rods use the constant-cache optimization.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: right;">Default</th>
+<th>Valid domain / interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rod_stretch</code></td>
+<td style="text-align: right;">40,000 Pa</td>
+<td>Finite, &gt;= 1e-6 in UI; Hookean axial modulus</td>
+</tr>
+<tr>
+<td><code>rod_bending</code></td>
+<td style="text-align: right;">100,000 Pa</td>
+<td>Finite, &gt;= 0; zero omits the bending constitution</td>
+</tr>
+<tr>
+<td><code>thickness</code></td>
+<td style="text-align: right;">0.001 m</td>
+<td>Radius r, not diameter; finite, &gt;= 1e-7 in UI</td>
+</tr>
+<tr>
+<td><code>density</code></td>
+<td style="text-align: right;">200 kg/m^3</td>
+<td>Finite, &gt;= 1e-6 in UI</td>
+</tr>
+<tr>
+<td><code>self_collision</code></td>
+<td style="text-align: right;">True</td>
+<td>Uses the native rod self-contact path</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td style="text-align: right;">False</td>
+<td>Fix every centerline node</td>
+</tr>
+<tr>
+<td><code>pin_group</code> / <code>pin_threshold</code></td>
+<td style="text-align: right;">Empty / 0.5</td>
+<td>Weights &gt;= threshold are fixed; threshold in [0.0001, 1]</td>
+</tr>
+</tbody>
+</table>
+<p>For a circular section, <span class="arithmatex">\(A=\pi r^2\)</span>, <span class="arithmatex">\(I=\pi r^4/4\)</span>, axial rigidity is <span class="arithmatex">\(E_s A\)</span>
+(N), bending rigidity is <span class="arithmatex">\(E_b I\)</span> (N m<span class="arithmatex">\(^2\)</span>), and linear density is <span class="arithmatex">\(\rho A\)</span>
+(kg/m). The axial edge energy is
+<span class="arithmatex">\(E_s A (L-L_0)^2/(2L_0)\)</span>. The existing bending energy is
+<span class="arithmatex">\(E_b I\|\boldsymbol{\kappa}\|^2/(L_{0a}+L_{0b})\)</span>, with curvature defined in
+<a href="../../specification/constitutions/kirchhoff_rod_bending/">Kirchhoff Rod Bending</a>.
+Here <span class="arithmatex">\(L\)</span> is current edge length and <span class="arithmatex">\(L_0\)</span> is its rest length. Bending's stress-free
+state is straight: an initially curved centerline is <strong>not</strong> assigned rest curvature.
+There is no rod Poisson-ratio or twisting parameter in this implementation.</p>
+<p>Physical presets, quality reports and physics previews support rods. The preview
+shows centerline edges, fixed nodes and diameter guides; it does not invent a
+material-frame orientation. Schema 7 fingerprints include edge connectivity;
+older non-rod cache fingerprints remain unchanged.</p>
+<h2 id="volumetric-fem-and-fixed-objects">Volumetric FEM and fixed objects</h2>
+<p>For an existing closed Blender surface:</p>
+<ol>
+<li>Set <strong>Simulation Role &gt; Volumetric FEM</strong>.</li>
+<li>Enable <strong>Preserve Original Surface</strong> when vertex positions, vertex indices,
+   and triangle connectivity must stay unchanged. This is the default.</li>
+<li>Optionally set <strong>Target Tet Edge (m)</strong> and <strong>Quality Passes</strong>, then click
+   <strong>Generate Tetrahedra</strong>. Generation runs outside Blender using libuipc's own
+   C++ implementation in <code>src/geometry/tetrahedralization/</code>.</li>
+<li>The resulting Blender object contains all FEM nodes, including internal nodes.
+   Only the true tetrahedral boundary is represented by visible faces. In strict
+   mode the original surface polygons, UVs, coordinates and vertex groups are
+   copied unchanged; additional internal nodes follow the original vertex IDs.</li>
+<li>Set <strong>Solid Young's Modulus (Pa)</strong>, Poisson ratio, density and collision radius,
+   then bake. The material is libuipc's 3D <strong>Stable Neo-Hookean</strong> model.</li>
+</ol>
+<p>The 0.0.28 wheel predates the native mesher API. <strong>Generate Tetrahedra</strong> requires a
+current source build installed into the external Python selected by Blender.
+After building this checkout with Python bindings, install its generated package
+into that interpreter, for example on Windows:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">.\.</span><span class="n">venv-uipc-blender</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="n">-m</span> <span class="n">pip</span> <span class="n">install</span> <span class="p">-</span><span class="n">-no-deps</span> <span class="p">-</span><span class="n">-force-reinstall</span> <span class="p">.\</span><span class="n">build</span><span class="p">\</span><span class="n">python</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">.\.</span><span class="n">venv-uipc-blender</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">python</span><span class="p">.</span><span class="n">exe</span> <span class="n">-c</span> <span class="s2">"from uipc.geometry import tetrahedralize; print('Native mesher ready')"</span>
+</span></code></pre></div>
+<p>No fTetWild, TetGen, PyVista or other tetrahedralizer is called or required.
+Alternatively use <strong>Import FEM Mesh (.msh)</strong> to read an existing tetrahedral mesh
+through <code>SimplicialComplexIO</code>; this path also retains every internal node.</p>
+<p>When surface preservation is disabled, conforming surface refinement is allowed
+before volume construction. The updated boundary is both rendered and used for
+contact. <strong>Restore Original Surface</strong> recovers the saved mesh and vertex groups;
+preparation keeps a private backup so linked source objects cannot alter it.</p>
+<p><strong>Fixed Entire Object</strong> applies to ABD, cloth and volumetric FEM. For ABD it sets
+the instance <code>is_fixed</code> flag; for FEM/cloth it sets every vertex flag, including
+internal nodes. The object's material/role remains intact. It overrides the pin
+group, so a whole object can be fixed without creating any vertex group.</p>
+<p>To fix only selected FEM nodes, generate/import the volume first, enter <strong>Edit
+Mode</strong>, enable vertex selection and <strong>X-Ray</strong> (Alt-Z), select the surface and/or
+internal nodes, and assign them to a vertex group. Select that group in <strong>Pin
+Vertex Group</strong> after leaving Edit Mode. Weights &gt;= <strong>Pin Weight Threshold</strong> mean
+fixed; weights are not soft-constraint strengths. Original vertex selections
+survive preparation, while newly added nodes are initially unpinned.</p>
+<table>
+<thead>
+<tr>
+<th>Meshing control</th>
+<th style="text-align: right;">Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preserve Original Surface</td>
+<td style="text-align: right;">True</td>
+<td>Lock vertices, coordinates and all surface triangles; add only interior nodes</td>
+</tr>
+<tr>
+<td>Target Tet Edge</td>
+<td style="text-align: right;">0 m</td>
+<td>Zero uses median input edge length; positive values request a mesh resolution</td>
+</tr>
+<tr>
+<td>Quality Passes</td>
+<td style="text-align: right;">4</td>
+<td>0–100; zero still builds and returns a conservative valid volume</td>
+</tr>
+<tr>
+<td>Solid Young's Modulus</td>
+<td style="text-align: right;">1e5 Pa</td>
+<td>&gt;= 1e-6 Pa; 3D elastic stiffness</td>
+</tr>
+<tr>
+<td>Fixed Entire Object</td>
+<td style="text-align: right;">False</td>
+<td>Fix the whole instance or all nodes, including internal ones</td>
+</tr>
+</tbody>
+</table>
+<p>Strict mode constructs a conservative boundary-conforming mesh before optimizing.
+Quality limits and rejected quality steps retain that valid mesh, not an altered
+surface. Difficult non-star-shaped inputs can require a larger interior-point
+search; <strong>Cancel Operation</strong> remains available. The mesher requires a valid
+closed, embedded surface. See <a href="../../specification/tetrahedralization/">native tetrahedralization</a>
+for its construction, quality metrics, and C++/Python APIs.</p>
+<h2 id="urdf-robots-and-animated-rigid-targets">URDF robots and animated rigid targets</h2>
+<p>Version 0.3 adds <strong>Import URDF Robot</strong>. Choose a mesh-based URDF with fixed or
+revolute joints. The native libuipc <code>UrdfIO</code> loads the collision meshes; Blender
+creates <code>Robot root - ...</code>, <code>Joint angle ...</code> controllers and driven link meshes.
+The importer checks Blender's forward kinematics against a native controller pose.</p>
+<ol>
+<li>Select the robot root to position the hand and keyframe its Location/Rotation.</li>
+<li>Select a <code>Joint angle ...</code> object and keyframe the angle component of its
+   Axis-Angle rotation. The axis and origin come from the URDF; angles are radians.
+   Authored trajectories must stay inside the imported joint limits.</li>
+<li>Use <strong>Preview Robot Initial Pose</strong> to align the visible links to the first-frame
+   controls. Baking also performs this alignment automatically.</li>
+<li>Click <strong>Bake Simulation</strong>. Controllers are sampled at every solver substep.
+   The resulting link motion and coupled object motion play through native MDD.</li>
+</ol>
+<p>For any other ABD body, enable <strong>Drive from Target</strong> and choose a separate object
+as its <strong>Motion Target</strong>. Its motion relative to the target's first-frame pose
+drives the body's initial pose. The target may have a keyframed object-parent
+hierarchy. The physical mesh itself remains unparented and unanimated; the cache
+contains its solved motion. Shape-changing target motion, constraints, NLA,
+drivers, F-curve modifiers and bone parenting are currently rejected.</p>
+<table>
+<thead>
+<tr>
+<th>Drive setting</th>
+<th style="text-align: right;">Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drive from Target</td>
+<td style="text-align: right;">False</td>
+<td>Requires an unfixed ABD body</td>
+</tr>
+<tr>
+<td>Motion Target</td>
+<td style="text-align: right;">None</td>
+<td>Separate transform controller</td>
+</tr>
+<tr>
+<td>Translation Strength Ratio</td>
+<td style="text-align: right;">10000</td>
+<td>Nonnegative, mass-weighted center-of-mass servo strength</td>
+</tr>
+<tr>
+<td>Rotation Strength Ratio</td>
+<td style="text-align: right;">10000</td>
+<td>Nonnegative, mass-weighted rotation/deformation servo strength</td>
+</tr>
+<tr>
+<td>Robot Collision Group</td>
+<td style="text-align: right;">Empty</td>
+<td>A nonempty shared group disables only contact internal to that assembly</td>
+</tr>
+<tr>
+<td>Robot Contact Friction</td>
+<td style="text-align: right;">0.8</td>
+<td>Nonnegative Coulomb coefficient against ordinary scene objects</td>
+</tr>
+</tbody>
+</table>
+<p>Drives use <code>SoftTransformConstraint</code> and quasi-static links (<code>is_dynamic=0</code>),
+matching sample 87. Collision response may produce a small difference between
+commanded and solved poses. The URDF joint tree supplies target kinematics;
+joint torques and actuator dynamics are not modeled by this interface.
+Internal robot collision can be disabled for assembled links, while collisions
+with the table, cloth, bowl and grasped object remain enabled.</p>
+<p>For the same four-finger grasp as a focused standalone pyuipc program without
+Blender or baked caches, see
+<a href="https://github.com/spiriMirror/libuipc-samples/tree/main/examples/94_robot_hand_grasp_apple"><code>94_robot_hand_grasp_apple</code></a>.
+It directly constructs the World, drives the sample-87 URDF links at every
+solver substep, and numerically verifies the free apple's carry and release.</p>
+<p>The imported collision meshes retain their closed solid components. Isolated
+zero-volume export fragments are removed, and open boundary loops are capped
+with Blender's mesh operations before rigid validation. Repair counts are stored
+on imported link objects and in the import report. The native 3D ABD reporter
+uses zero contact radius on its boundary surface; the cloth/FEM thickness setting
+does not add a separate collision skin to ABD links. Contact activation distance
+still applies.</p>
+<h2 id="scene-parameters">Scene parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th style="text-align: right;">Default</th>
+<th>Valid range and meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame range</td>
+<td style="text-align: right;">Blender scene start/end</td>
+<td>End &gt;= start; start is the unadvanced rest frame</td>
+</tr>
+<tr>
+<td>Frame rate</td>
+<td style="text-align: right;">Blender FPS / FPS Base</td>
+<td>Positive frames/second</td>
+</tr>
+<tr>
+<td>Substeps</td>
+<td style="text-align: right;">2</td>
+<td>Integer 1–1000; <code>dt = FPS Base / (FPS * substeps)</code> seconds</td>
+</tr>
+<tr>
+<td>Solver Accuracy</td>
+<td style="text-align: right;">Library Default</td>
+<td><code>DEFAULT</code>: inherit native settings; <code>CONVERGED</code>: tighter linear/Newton solves; <code>CUSTOM</code>: editable numerical settings</td>
+</tr>
+<tr>
+<td>Gravity</td>
+<td style="text-align: right;">(0, 0, -9.81)</td>
+<td>Finite acceleration components, m/s², Blender world axes</td>
+</tr>
+<tr>
+<td>Contact Distance</td>
+<td style="text-align: right;">0.001 m</td>
+<td>&gt;= 1e-7 m; activation distance beyond thickness offsets</td>
+</tr>
+<tr>
+<td>Friction</td>
+<td style="text-align: right;">0.5</td>
+<td>&gt;= 0; global Coulomb coefficient</td>
+</tr>
+<tr>
+<td>Contact Resistance</td>
+<td style="text-align: right;">1e9 Pa</td>
+<td>&gt;= 1 Pa; global contact model resistance</td>
+</tr>
+<tr>
+<td>Compact ABD Cache</td>
+<td style="text-align: right;">True</td>
+<td>Boolean; affects the next bake's encoding only, not physics or existing cache validity</td>
+</tr>
+</tbody>
+</table>
+<p>Geometry is multiplied by Blender's <strong>Unit Scale</strong> to obtain meters. Material
+parameters, thickness radius, activation distance, and gravity are already SI
+values; they are not multiplied a second time. Object translation, rotation,
+nonuniform scale, and negative scale are included using Blender's evaluated
+world matrix. Output is transformed back to the original object-local frame.</p>
+<p>The worker uses standard IPC. <strong>Library Default</strong> inherits libuipc's
+semi-implicit termination and <code>K_min</code> defaults. <strong>Converged</strong> is an explicit
+per-scene accuracy option for difficult mixed systems such as strong robot
+position drives coupled to light cloth. It sets <code>newton/semi_implicit/enable=0</code>,
+<code>newton/velocity_tol=0.001</code> m/s, <code>newton/velocity_tol_relative=0</code>,
+<code>linear_system/tol_rate=1e-6</code>, and <code>line_search/max_iter=32</code>. It does not alter
+time steps, materials, contact, pins or damping, and can be substantially slower.
+Changing the profile invalidates the bake; old default-profile caches remain valid.</p>
+<p>Sanity and strict solver checks are enabled. Strict mode reports iteration-limit
+failures, but is not itself a tighter convergence tolerance and does not disable
+semi-implicit early termination. The bake result records effective solver
+settings. With runtimes exposing <code>Engine.frame_stats()</code>, <code>solver_steps.jsonl</code>
+also records each substep's iteration counts, convergence and line-search limits.
+No new collision or buffer-allocation code is introduced.</p>
+<h3 id="custom-solver-accuracy">Custom solver accuracy</h3>
+<p>In the 3D Viewport sidebar, open <strong>libuipc → libuipc Physics → Solver Accuracy →
+Custom</strong>. Numerical tolerances are text fields accepting scientific notation
+(for example, <code>1e-8</code>); they are parsed as finite numbers before export. This avoids
+rounding tiny displayed tolerances to zero. They are not Python expressions.
+The initial custom values below provide a high-accuracy starting point; they
+are independent of <strong>Library Default</strong> and remain saved in the <code>.blend</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Custom control</th>
+<th style="text-align: right;">Initial value</th>
+<th>Range / native setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCG Relative Tolerance</td>
+<td style="text-align: right;"><code>1e-6</code></td>
+<td><code>(0, 1)</code>; <code>linear_system/tol_rate</code>, global <code>abs(rᵀz) / abs(r₀ᵀz₀)</code> threshold, not per-object position error</td>
+</tr>
+<tr>
+<td>Newton Velocity Tol</td>
+<td style="text-align: right;"><code>1e-3</code> m/s</td>
+<td>Positive; <code>newton/velocity_tol</code>; maximum per-axis Newton displacement threshold is this value times <code>dt</code></td>
+</tr>
+<tr>
+<td>Relative Velocity Tol</td>
+<td style="text-align: right;"><code>0</code> 1/s</td>
+<td>Nonnegative; positive overrides absolute tolerance with this value times the rest-scene diagonal in meters</td>
+</tr>
+<tr>
+<td>ABD Transform-Rate Tol</td>
+<td style="text-align: right;"><code>0.1</code></td>
+<td>Positive; <code>newton/transrate_tol</code></td>
+</tr>
+<tr>
+<td>Semi-Implicit Early Exit</td>
+<td style="text-align: right;">Off</td>
+<td><code>newton/semi_implicit/enable</code>; additional approximate termination criterion</td>
+</tr>
+<tr>
+<td>K_min</td>
+<td style="text-align: right;"><code>6</code></td>
+<td>Integer 0–100000; beta accumulation starting iteration, <strong>not</strong> a hard Newton iteration floor</td>
+</tr>
+<tr>
+<td>Semi-Implicit Beta Tol</td>
+<td style="text-align: right;"><code>1e-3</code></td>
+<td><code>[0, 1]</code>; <code>newton/semi_implicit/beta_tol</code>; <code>1</code> can terminate immediately when semi-implicit is enabled</td>
+</tr>
+<tr>
+<td>Maximum Newton Iterations</td>
+<td style="text-align: right;"><code>1024</code></td>
+<td>Integer 1–100000; <code>newton/max_iter</code></td>
+</tr>
+<tr>
+<td>Minimum Newton Iterations</td>
+<td style="text-align: right;"><code>0</code></td>
+<td>Integer 0–maximum; <code>newton/min_iter</code>, zero disables the hard floor</td>
+</tr>
+<tr>
+<td>Maximum Line Search Trials</td>
+<td style="text-align: right;"><code>32</code></td>
+<td>Integer 1–128; <code>line_search/max_iter</code></td>
+</tr>
+</tbody>
+</table>
+<p>K_min and beta controls are grayed out when semi-implicit is off. Inconsistent
+iteration limits, NaN/Infinity and invalid text are rejected before baking.
+Normalized numerical values participate in the cache fingerprint: changing a
+tolerance requires a new bake, while equivalent forms such as <code>1e-6</code> and
+<code>0.000001</code> describe the same physics input. Preset modes ignore custom values.
+After reverting edited settings to the baked values, <strong>Validate Cache</strong> checks
+the fingerprint/files and restores the verified cache's viewport/render visibility.
+Smaller tolerances and larger iteration limits can substantially increase bake
+time; check the effective settings and substep statistics in the bake directory.</p>
+<h2 id="object-parameters">Object parameters</h2>
+<p>Select a mesh and use <strong>Object Physics</strong> in the same sidebar.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th style="text-align: right;">Default</th>
+<th>Valid range and behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simulation Role</td>
+<td style="text-align: right;">Disabled</td>
+<td>Disabled / Cloth / Rigid Body (ABD) / Volumetric FEM / Rod / Fixed Collider</td>
+</tr>
+<tr>
+<td>Fixed Entire Object</td>
+<td style="text-align: right;">False</td>
+<td>ABD: instance flag; FEM/cloth/rod: every node, including internal FEM nodes</td>
+</tr>
+<tr>
+<td>Solid Young's Modulus</td>
+<td style="text-align: right;">1e5 Pa</td>
+<td>&gt;= 1e-6; volumetric FEM material</td>
+</tr>
+<tr>
+<td>Density</td>
+<td style="text-align: right;">200 kg/m³</td>
+<td>&gt;= 1e-6; used for cloth, rod, solid FEM and rigid mass</td>
+</tr>
+<tr>
+<td>Thickness Radius <code>r</code></td>
+<td style="text-align: right;">0.001 m</td>
+<td>&gt;= 1e-7; one-sided collision offset; full cloth thickness <code>h = 2r</code></td>
+</tr>
+<tr>
+<td>Stretch E</td>
+<td style="text-align: right;">5e4 Pa</td>
+<td>&gt;= 1e-6; membrane stretch parameter</td>
+</tr>
+<tr>
+<td>Shear E Parameter</td>
+<td style="text-align: right;">10</td>
+<td>&gt;= 1e-6; independent effective 2D shear parameter</td>
+</tr>
+<tr>
+<td>Bending E</td>
+<td style="text-align: right;">3e4 Pa</td>
+<td>&gt;= 0; zero disables bending</td>
+</tr>
+<tr>
+<td>Stretch / Shear / Bending Poisson Ratio</td>
+<td style="text-align: right;">0.49 each</td>
+<td>Independent cloth values; UI range 0–0.499, domain 0 &lt;= nu &lt; 0.5</td>
+</tr>
+<tr>
+<td>Solid Poisson Ratio</td>
+<td style="text-align: right;">0.49</td>
+<td>Volume FEM only; UI range 0–0.499</td>
+</tr>
+<tr>
+<td>Strain Amplification</td>
+<td style="text-align: right;">100</td>
+<td>&gt;= 1e-6; over-stretch amplification rate</td>
+</tr>
+<tr>
+<td>ABD Rigidity</td>
+<td style="text-align: right;">1e8 Pa</td>
+<td>&gt;= 1; OrthoPotential ABD stiffness</td>
+</tr>
+<tr>
+<td>Self Collision</td>
+<td style="text-align: right;">Enabled</td>
+<td>Cloth, FEM and rods</td>
+</tr>
+<tr>
+<td>Pin Vertex Group</td>
+<td style="text-align: right;">Empty</td>
+<td>Optional cloth/FEM/rod node group; fixed in world space; overridden by Fixed Entire Object</td>
+</tr>
+<tr>
+<td>Pin Weight Threshold</td>
+<td style="text-align: right;">0.5</td>
+<td>0.0001–1; vertices with weight &gt;= threshold are fixed</td>
+</tr>
+</tbody>
+</table>
+<p>The cloth coefficients preserve the library's existing conventions:</p>
+<div class="arithmatex">\[
+k_s = \frac{E_s(2r)}{1-\nu_s^2},\qquad
+k_{\mathrm{shear}} = \frac{E_{\mathrm{shear}}}{2(1+\nu_{\mathrm{shear}})},\qquad
+k_b = \frac{E_b(2r)^3}{12(1-\nu_b^2)}.
+\]</div>
+<p>Each channel has its own Young's modulus and Poisson ratio; <code>r</code> is the one-sided
+offset. Version 0.4 inherits the saved shared Poisson ratio from older scenes
+until a channel is explicitly edited. Existing equal-ratio caches remain valid;
+an independent change requires a new bake. The UI and bake result report these
+coefficients before native triangle/edge geometric weights. The shear convention is an
+independently calibrated effective coefficient, not a second multiplication by
+thickness. Refer to <a href="../../tutorial/cloth/">cloth modeling</a> for the full model.</p>
+<p>Ordinary ABD bodies require one closed, connected surface with consistent face winding.
+Driven assemblies may contain several closed components in one rigid link.
+Inward global winding is normalized on export without changing vertex order.
+Fixed colliders may be open triangle surfaces and use fixed FEM vertices.
+Duplicate/degenerate triangles, non-manifold edges, loose vertices, invalid
+coordinates, singular transforms, and invalid pin groups are rejected.</p>
+<h2 id="contact-material-pairs-and-physical-presets">Contact material pairs and physical presets</h2>
+<ol>
+<li>Assign <strong>Contact Material</strong> names to participating objects, including fixed
+   colliders. Blank and <code>Default</code> use the default material. Names are case-sensitive
+   and trimmed; this label is independent of Blender's visual shader material.</li>
+<li>Add rows under <strong>Contact Material Pairs</strong>. A/B order is interchangeable.
+   Friction is finite and &gt;= 0 (new rows copy global friction, initially 0.5),
+   resistance is finite and &gt;= 1 Pa (initially 1e9 Pa), and Contact Enabled
+   defaults to true. Unknown/unassigned names and duplicate unordered pairs fail
+   validation instead of being silently ignored. Disable Contact to deliberately
+   permit passage between that material pair. Global activation distance remains
+   shared; this UI does not implement per-pair <code>d_hat</code>.</li>
+<li>Named pair overrides take precedence over global/robot external-contact
+   friction. A nonempty robot assembly group still disables internal assembly
+   contact, even if a material pair requests contact. With no overrides, ordinary
+   and robot/environment behavior remains unchanged. <code>result.json</code> records the
+   complete effective contact plan for inspection.</li>
+<li>Enter a <strong>Physical Preset</strong> name and choose <strong>Save / Replace</strong>. Presets are
+   stored in the .blend. <strong>Apply to Selected</strong> requires all selected objects to
+   share the preset's Cloth/ABD/FEM role and copies only constitutive parameters.
+   It never changes pins, whole-object fixing, contact labels or robot targets.
+   Cloth presets include all three independent E/Poisson pairs. Presets are
+   explicit value copies, not live links; modifying a preset does not alter objects
+   until Apply is used. No shader settings are modified.</li>
+</ol>
+<p>The default empty contact table and unused presets do not invalidate legacy
+caches. Editing effective contact/physical parameters requires a new bake.</p>
+<h2 id="quality-report-and-viewport-diagnostics">Quality report and viewport diagnostics</h2>
+<h3 id="performance-and-storage-06">Performance and storage (0.6)</h3>
+<p>Physics previews reuse unchanged topology, decoded frames and GPU batches when
+orbiting the viewport. Thickness normals are computed only when guides are shown.
+Edits, changed cache files and file/history changes invalidate the relevant cache.
+This improves viewport overhead without changing the solver or physical materials.</p>
+<p>New bakes include <code>result.json.performance</code>. <strong>Load Quality Report</strong> shows solve
+plus retrieval time, diagnostic time, cache I/O time, bytes/storage saved, and the
+last frontend export/attach/validation timings. Values are host wall seconds with
+no added GPU synchronization, not isolated CUDA kernel times. Historical caches
+without timings still load. Reproducible benchmark instructions and measured
+limits are in the repository's <code>agent_docs/13-blender-integration.md</code>.</p>
+<p>Schema-6 bakes store one MDD sample for wholly fixed ABD/cloth/FEM, including
+cloth/FEM whose every vertex is pinned. They remain in coupled collision/solving;
+only repeated output conversion, diagnostics and storage are removed. The native
+modifier holds the sample throughout the timeline, including fractional frames,
+saved files and background renders without the extension. Partially pinned,
+moving and driven bodies still store every output frame. Starting with 0.8,
+moving/driven ABD can use the compact full-affine encoding below; cloth/FEM/rod
+outputs remain per-vertex MDD.</p>
+<p>No physical parameter, default or solver setting changes. Updating the extension
+does not require rebuilding/reinstalling pyuipc. Old schema-1 through schema-7
+caches remain readable; rebake to benefit from fixed-output storage reduction.</p>
+<h3 id="compact-moving-abd-playback-08">Compact moving ABD playback (0.8)</h3>
+<p><strong>Compact ABD Cache</strong> is on by default for new bakes. Each moving/driven ABD writes
+four vectors to its MDD file per frame: translation <span class="arithmatex">\(\mathbf{t}\)</span> and the three
+columns <span class="arithmatex">\(\mathbf{a}_0,\mathbf{a}_1,\mathbf{a}_2\)</span> of its complete local affine map.
+For a source vertex <span class="arithmatex">\(\mathbf{x}=(x,y,z)\)</span>, native Geometry Nodes evaluates
+<span class="arithmatex">\(\mathbf{x}'=\mathbf{t}+x\mathbf{a}_0+y\mathbf{a}_1+z\mathbf{a}_2\)</span>.
+This retains all 12 coefficients, including shear and nonuniform scale; no
+translation/rotation/scale decomposition or Python playback callback is involved.</p>
+<p>A generated hidden four-point helper owns the ordinary MDD modifier. The visible
+body's first <strong>libuipc Cache</strong> modifier is now Geometry Nodes; normal display
+modifiers can follow it. Keep the generated helpers and cache files with the
+<code>.blend</code>. They remain functional with the addon disabled and in independent render
+workers. Do not edit/delete their node graphs, transforms or MDD settings; explicit
+validation and guarded rendering detect those changes. Detach/rebake removes owned
+unshared helpers, while explicitly reused/fake-user node groups are preserved.</p>
+<p>An F-frame compact ABD file uses <code>8 + 52*F</code> bytes, regardless of source vertex
+count, instead of <code>8 + 4*F + 12*F*N</code> for N source vertices. A 500-frame file is
+26,008 bytes. Wholly fixed ABD continues to use one per-vertex MDD sample.
+Interpolation remains linear in the output samples, as with the old MDD path.
+MDD and Blender geometry use float32, so reconstruction is checked at that
+precision, not for bitwise equality with double-precision solver state.</p>
+<p>For a conventional per-vertex MDD file suitable for direct import into another
+tool, disable <strong>Compact ABD Cache</strong> before baking. Do not attach a compact
+four-vector file directly to the full source mesh. Switching the checkbox does
+not invalidate existing physical results; it only changes subsequent output.
+Attachment is transactional across both encodings, and the render queue captures
+the native helper MDD dependencies in its existing snapshot manifest.</p>
+<h3 id="robot-joint-controls-05">Robot joint controls (0.5)</h3>
+<p>Use <strong>Robot Joint Controls</strong> to choose an imported root. Newly imported robots
+populate the joint list automatically; use <strong>Refresh Joint List</strong> for older
+scenes or renamed controls. Pointers remain valid across object renames. Fixed
+or unknown legacy joint types are read-only. Missing legacy type information is
+read from the original URDF when available; otherwise re-import to recover it.</p>
+<p>Joint sliders display <strong>degrees</strong>, while native controller values and saved pose
+payloads use <strong>radians</strong>. Sliders clamp to the URDF position limits. <strong>Preview
+While Editing</strong> defaults on and <strong>Preview Current Pose</strong> updates only link
+transforms, not mesh vertices or solved contact. This is a kinematic authoring
+preview that invalidates the old bake. Bake realigns links at the first simulated
+frame and runs the existing coupled soft-transform/IPC solver; there is no new
+torque controller or automatic grasp attachment.</p>
+<p><strong>Save / Replace Pose</strong> stores all revolute angles in the robot root's .blend
+data. <strong>Apply Pose</strong> validates joint names/types/axes/limits before writing; it
+does not change the root transform. Create named Open/Grasp poses for your robot.
+Use <strong>Key</strong> or <strong>Key All Joints</strong> to commit edits to actual controller
+<code>rotation_axis_angle[0]</code> curves; proxy UI properties themselves are not animated.
+New/touched keys use Bezier Auto Clamped handles. Auto Key Joint Edits follows
+Blender's auto-key toggle. Without auto-key, edits to already animated controls
+must be keyed before changing frames/baking. <strong>Key Root + Joints</strong> additionally
+keys root translation/rotation, never scale.</p>
+<p><strong>Review Joint Trajectory</strong> samples authored joint curves at the solver's substep
+times without moving the timeline. It reports position-limit violations and peak
+angular speed/acceleration. URDF velocity limits (rad/s) take precedence over the
+fallback review threshold (default 180 deg/s; zero disables the fallback). The
+acceleration review threshold defaults to 720 deg/s²; zero disables it. Both are
+diagnostic only. Reviews are snapshots: rerun after graph-editor edits or timing
+changes. They do not bound root/end-effector motion or all between-sample extrema.
+The review accepts at most 200000 sampled times. Current supported imported joint
+types remain fixed/revolute; prismatic, mimic and torque actuation are future work.</p>
+<p>Expand <strong>Bake Quality and Physics Preview</strong>. New bakes produce
+<code>quality_report.json</code> plus streaming <code>quality_frames.jsonl</code>, with SI world-space
+speed/acceleration observations and native iteration/line-search statistics.
+The result manifest authenticates the summary with SHA-256. Reports load after
+completion; <strong>Load Quality Report</strong> reloads one after reopening a .blend. Older
+bakes remain playable but need rebaking to produce a report.</p>
+<table>
+<thead>
+<tr>
+<th>Setting/action</th>
+<th style="text-align: right;">Default</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed Review Threshold</td>
+<td style="text-align: right;">1 m/s</td>
+<td>Finite, &gt;= 0; zero disables this warning</td>
+</tr>
+<tr>
+<td>Acceleration Review Threshold</td>
+<td style="text-align: right;">10 m/s²</td>
+<td>Finite, &gt;= 0; zero disables this warning</td>
+</tr>
+<tr>
+<td>Inspect Peak Frame</td>
+<td style="text-align: right;">—</td>
+<td>Jump to the reported output frame and select its object; show the peak vertex in magenta when Simulation Mesh is enabled</td>
+</tr>
+<tr>
+<td>Mark Review Frames</td>
+<td style="text-align: right;">Explicit action</td>
+<td>Add warning/solver-limit timeline markers; replace only markers prefixed <code>libuipc quality:</code></td>
+</tr>
+<tr>
+<td>Simulation Mesh</td>
+<td style="text-align: right;">Off</td>
+<td>Cyan edges of the selected object's base simulation topology and current cache positions, before display subdivision/solidify</td>
+</tr>
+<tr>
+<td>Fixed Nodes</td>
+<td style="text-align: right;">Off</td>
+<td>Red fixed nodes, including internal FEM nodes, visible through the surface</td>
+</tr>
+<tr>
+<td>Thickness Guides</td>
+<td style="text-align: right;">Off</td>
+<td>Up to 512 sampled vertex-normal segments from -r to +r, converted through Unit Scale; no ABD radius overlay</td>
+</tr>
+</tbody>
+</table>
+<p>These controls are diagnostic/display-only: they do not change materials, solver
+settings or cache fingerprints. Speed is a finite difference between successive
+<strong>output</strong> frames; acceleration is the difference between those velocities, so
+it is unavailable until three position samples exist. Fast substep events may
+be missed. A threshold crossing is a request for review, not proof of a physical
+error; reported native convergence is not an independent accuracy certificate.
+Thickness lines illustrate material radius, not the exact rounded contact-offset
+surface. The preview never applies modifiers or edits vertices and is Object
+Mode/selected-object only. Native frame statistics may be unavailable on older
+supported runtimes; position diagnostics remain available.</p>
+<h2 id="cache-validation-and-guarded-rendering">Cache validation and guarded rendering</h2>
+<h3 id="independent-png-render-queue-05">Independent PNG render queue (0.5)</h3>
+<p>The timeline <strong>Bake Start/End</strong> still defines the simulated range. <strong>PNG Render
+Queue &gt; Render Start/End</strong> is a separate inclusive range, initially following the
+timeline until explicitly edited. Rendering frames 200-300 of a 1-500 bake does
+not modify its fingerprint, timeline or MDD files. An empty camera list uses the
+active camera; otherwise every enabled, distinct camera renders the selected
+range. Explicit shots override timeline camera-switch markers.</p>
+<p><strong>Validate &amp; Queue Snapshot</strong> verifies the cache and saves a copy of the current
+(including unsaved) scene into a fresh <code>render_&lt;uuid&gt;</code> directory. The source
+.blend, camera, frame and render filepath are not changed. Background Blender
+renders the snapshot without importing the native solver. The global Cancel
+Operation button cancels rendering as well as simulation; only one owned job
+runs at a time. <strong>Resume Saved Snapshot</strong> uses the previous snapshot, not current
+scene edits. Choose a job directory in <strong>Resume Job</strong> to resume an older job.</p>
+<p>Each PNG has a receipt binding it to the manifest, camera, frame and checksum.
+Resume validates snapshot/dependency hashes and each PNG's dimensions, CRCs and
+checksum; missing, incomplete or changed images are rendered again. Complete
+images remain available after cancellation. Settings/camera changes require a
+new queue. The default output root is <code>&lt;blend name&gt;_renders</code> beside the project.
+Input file stamps are checked around every newly rendered frame before its
+receipt is published, so mid-render dependency edits cannot bless mixed-input
+frames as reusable. Receipts predating this guard are rendered again once.</p>
+<p>This first queue supports single-view full-frame PNGs. Render borders, external
+image sequences/movies, dirty unpacked images and compositor File Output nodes
+are rejected rather than incompletely tracked. Secondary live Blender physics
+and stateful Geometry Nodes must first become file-backed mesh caches. Assets are referenced and hashed,
+not copied/packed; keep them unchanged and available. Jobs currently resume from
+their original directory with the same Blender version and configured Cycles
+GPU devices. Python auto-execution is disabled in the background renderer.
+Use normal Blender rendering for workflows requiring unsupported scripted drivers
+or additional output files. Scripts may use
+<code>bpy.ops.uipc.render_queue(blocking=True, resume=False)</code>.</p>
+<p>New 0.5/schema-5 bakes use persistent object/controller IDs rather than display
+names. Renaming an object or reordering names therefore does not invalidate a
+new cache or change which mesh receives it. Older caches keep their original
+name-based contract until rebaked. IDs are assigned only on explicit export;
+validation never modifies them. Blender duplicates copy custom properties, so
+duplicate IDs are rejected: select the duplicate and use <strong>Assign New Simulation
+ID</strong>, then rebake. This prevents a duplicate from stealing the original cache.</p>
+<p>Automatic checks ignore unrelated camera/light updates and compare cheap raw
+input tokens before repeating topology validation. Cached playback with unchanged
+base geometry/controller curves avoids that repeated work. Explicit Validate and
+guarded renders still perform full validation; changed cache-file timestamps
+trigger byte-level checks when automatic validation runs.</p>
+<p>Version 0.4 checks the complete result object list/provenance and every managed
+Mesh Cache playback setting (time mapping, factor, axes, vertex group and stack
+position). Explicit <strong>Validate Cache</strong> also verifies SHA-256 checksums recorded
+by new bakes. Legacy caches without checksums retain structural/input validation;
+rebake to add byte-level integrity. Automatic/debounced checks avoid rereading
+all cache bytes. A failed attachment restores all previous modifier settings,
+ordering and scene cache references, including failures on later objects.</p>
+<p>Use <strong>Validate &amp; Render</strong> or <strong>Render Animation</strong> in the libuipc panel to run
+full validation before dispatching Blender's renderer. Invalid/stale/disabled
+caches or out-of-range still frames block that operator before any rendering.
+Scripts can call <code>bpy.ops.uipc.render_validated(animation=True)</code>.
+Ordinary F12 and direct <code>bpy.ops.render.render</code> remain Blender's unguarded entry
+points: Python handler exceptions do not reliably cancel rendering, so the
+extension does not claim to intercept them. Playback without the addon is unchanged.</p>
+<h2 id="modifiers-and-remaining-limitations">Modifiers and remaining limitations</h2>
+<ul>
+<li>Simulation uses the <strong>base mesh</strong>. The generated MDD modifier is first in the
+  stack. For cloth/rigid bodies, Subdivision, Solidify, Bevel, and Weighted Normal
+  modifiers may follow as visual effects; their additional geometry does not
+  participate in contact. Apply other modifiers before baking. Fixed collider
+  modifiers must be applied or disabled to keep collision and visible shape aligned.</li>
+<li>Mesh data and object transforms remain unchanged. Rigid motion is stored as
+  vertex cache motion, including the full ABD affine transform; object transform
+  channels do not receive keyframes. The bake has fixed topology.</li>
+<li>Physics edits disable stale caches immediately. Mesh/transform edits are
+  checked by a debounced dependency-graph callback. <strong>Validate Cache</strong> also checks
+  frame range/FPS/units, topology, pins, geometry, transforms, material settings,
+  and cache files. Validate explicitly before final rendering, especially after
+  script-driven scene edits. A mismatch during a bake prevents attachment.</li>
+<li>Keep cache files with the <code>.blend</code>. Saved paths are relative when possible.
+  Blender's native MDD modifier supports fractional-frame interpolation, seeking,
+  saving/reopening, and rendering without extension callbacks or a running solver.
+  Do not change vertex count/order after baking.</li>
+<li>Version 0.3 rejects shape keys, animation/drivers/constraints on physical participants
+  or their parents, and Blender Bullet rigid bodies on the same hierarchy.
+  It supports separate animated ABD targets as described above. Animated cloth/FEM
+  pins, rod twisting, torque-driven articulations and topology-changing simulation remain unsupported.</li>
+<li>One bake runs at a time. Loading another file or disabling the extension stops
+  its worker. The worker notices a closed parent Blender process between substeps.</li>
+<li><code>worker.log</code>, <code>request.json</code>, input NPZ files, <code>status.json</code>, and <code>result.json</code>
+  stay in each bake directory for diagnosis. MDD data is written one frame at a
+  time, with no frames-times-vertices allocation in RAM.</li>
+<li>Version 0.1 cloth/ABD caches remain valid when the new fixed/FEM features are
+  unused. Version 0.2 caches also remain readable. New bakes use protocol v3,
+  fingerprinting authored control curves and parents, with separately hashed
+  per-substep target matrices in the exported NPZ files.</li>
+</ul>
+<h2 id="developer-validation">Developer validation</h2>
+<p>See the <a href="https://github.com/spiriMirror/libuipc/tree/refactor-main/integrations/blender">integration README</a>
+for the portable tests and real Blender test commands. The latter execute the
+actual operators, CUDA solve, Mesh Cache evaluation, <code>.blend</code> reopening, and EEVEE
+rendering. Blender-specific behavior has been tested on Windows 4.5.3 LTS;
+other advertised platform/API combinations still require equivalent runtime tests.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://doxide.org" target="_blank" rel="noopener">
+      Doxide
+    </a>
+    and
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

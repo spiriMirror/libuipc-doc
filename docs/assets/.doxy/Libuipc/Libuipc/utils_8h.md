@@ -32,6 +32,7 @@
 * `#include <uipc/geometry/utils/mesh_partition.h>`
 * `#include <uipc/geometry/utils/closest_vertex_triangle_pairs.h>`
 * `#include <uipc/geometry/utils/closest_vertex_edge_pairs.h>`
+* `#include <uipc/geometry/tetrahedralization.h>`
 
 
 
