@@ -3511,12 +3511,18 @@ incremental builds rather than enabling ccache externally.</p>
 compilation jobs.</p>
 <h2 id="dev-in-uv">dev in uv</h2>
 <p>Use <a href="https://docs.astral.sh/uv/">uv</a> to manage a virtual environment for Python development. The following steps configure xmake with Python binding support, create a virtual environment, build the project, and package the Python wheel.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uv<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.11
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uv<span class="w"> </span>venv<span class="w"> </span>--seed<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>.venv
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>xmake<span class="w"> </span>f<span class="w"> </span>--pybind<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_system<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_version<span class="o">=</span><span class="m">3</span>.12.x<span class="w"> </span>-c
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>xmake<span class="w"> </span>build<span class="w"> </span>-j8
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>xmake<span class="w"> </span>pack<span class="w"> </span>-v
-</span></code></pre></div></div>
+</span></code></pre></div>
+<p>Packaging invokes <code>scripts/pyuipc_stubgen.py</code>, shared with CMake, to generate
+the complete <code>uipc</code> stub tree at the staged package root. Missing stub-generation
+dependencies (pybind11-stubgen, numpy, typing_extensions) are installed with
+<code>uv pip --python</code> using the Python selected by the packaging step.
+See <a href="../dev_in_uv/">Python build environments</a> for the CMake/pip dependency
+distinction. This workflow does not add <code>builder=xmake</code> or <code>python_editable</code>.</p></div>
 
 
 

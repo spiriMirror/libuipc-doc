@@ -591,10 +591,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#dependency-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmake-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMake development
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#xmake" class="md-nav__link">
     <span class="md-ellipsis">
       
-        xmake
+        XMake
       
     </span>
   </a>
@@ -3325,10 +3347,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#dependency-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmake-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CMake development
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#xmake" class="md-nav__link">
     <span class="md-ellipsis">
       
-        xmake
+        XMake
       
     </span>
   </a>
@@ -3358,23 +3402,55 @@
 <div><h1 id="development-in-uv">Development in UV</h1>
 <p><a href="https://docs.astral.sh/uv/getting-started/installation/">Install UV</a> if you haven't already.</p>
 <p>Install vcpkg as <a href="../windows/">Windows</a> or <a href="../linux/">Linux</a> guides.</p>
-<p>Install the build dependencies:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>scikit-build-core<span class="w"> </span>setuptools-scm
+<p>The root package continues to use scikit-build-core with Git-derived distribution
+metadata. Its existing CMake editable support is available; there is no custom
+<code>builder=xmake</code> backend or <code>python_editable</code> XMake option.</p>
+<h2 id="dependency-setup">Dependency setup</h2>
+<p>Create and activate a Python environment, then choose the build entry point.
+For example:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>venv<span class="w"> </span>--seed<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>.venv
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
 </span></code></pre></div>
-<p>Build the project and install the Python package in editable mode; specify the build directory to cache the CMake build results; and disable build isolation to prevent always reinstalling the dependencies:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="w"> </span>--config-settings<span class="o">=</span>build-dir<span class="o">=</span>build<span class="w"> </span>--no-build-isolation<span class="w"> </span>-v
+<p>On Windows PowerShell, activate with <code>.\.venv\Scripts\Activate.ps1</code> instead.</p>
+<ul>
+<li><strong>Direct CMake configuration:</strong> missing Python modules are installed
+  automatically with the selected interpreter's <code>python -m pip</code>. Importable
+  modules are reused. An installation or subsequent import failure stops
+  configuration with an error.</li>
+<li><strong>Root pip/uv builds:</strong> build isolation provisions the requirements declared
+  in <code>pyproject.toml</code>. Scikit-build-managed CMake does not bootstrap pip or
+  install extra packages inside that build. With <code>--no-build-isolation</code>, install
+  the requirements into the chosen environment yourself.</li>
+</ul>
+<p>These dependency checks do not change the existing uninstall-first package
+staging workflow.</p>
+<h2 id="cmake-development">CMake development</h2>
+<p>For the non-isolated command below, install all Python build requirements:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>scikit-build-core<span class="w"> </span>setuptools-scm<span class="w"> </span>pybind11<span class="w"> </span>pybind11-stubgen<span class="w"> </span>numpy<span class="w"> </span>typing_extensions
+</span></code></pre></div>
+<p>Build the project and install the Python package in editable mode; specify the build directory to cache the CMake build results; and disable build isolation to reuse the prepared dependencies:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="w"> </span>--config-settings<span class="o">=</span>build-dir<span class="o">=</span>build<span class="w"> </span>--no-build-isolation<span class="w"> </span>-v
 </span></code></pre></div>
 <p>Run the tests, with <code>--no-sync</code> to prevent uv from rebuilding the project every time you run the tests (which is slow):</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>run<span class="w"> </span>--no-sync<span class="w"> </span>pytest<span class="w"> </span>python/tests
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uv<span class="w"> </span>run<span class="w"> </span>--no-sync<span class="w"> </span>pytest<span class="w"> </span>python/tests
 </span></code></pre></div>
-<h2 id="xmake">xmake</h2>
+<p>The root wheel settings target several GPU architectures and require a sufficiently
+new CUDA toolkit. For a local-GPU build, append
+<code>--config-settings=cmake.define.UIPC_CUDA_ARCHITECTURES=native</code>.
+Python source edits are visible through the editable install; native C++/CUDA
+changes still require a rebuild and refreshed binaries.</p>
+<h2 id="xmake">XMake</h2>
 <p>Use <a href="https://xmake.io/">xmake</a> to build the project. The following steps configure xmake with Python binding support, create a virtual environment, build the project, and package the Python wheel.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uv<span class="w"> </span>venv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.11
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>xmake<span class="w"> </span>f<span class="w"> </span>--pybind<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_system<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_version<span class="o">=</span><span class="m">3</span>.12.x<span class="w"> </span>-c
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>xmake<span class="w"> </span>build<span class="w"> </span>-j8
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>xmake<span class="w"> </span>pack<span class="w"> </span>-v
-</span></code></pre></div></div>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uv<span class="w"> </span>venv<span class="w"> </span>--seed<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.12<span class="w"> </span>.venv
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>xmake<span class="w"> </span>f<span class="w"> </span>--pybind<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_system<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--python_version<span class="o">=</span><span class="m">3</span>.12.x<span class="w"> </span>-c
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>xmake<span class="w"> </span>build<span class="w"> </span>-j8
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>xmake<span class="w"> </span>pack<span class="w"> </span>-v
+</span></code></pre></div>
+<p><code>xmake pack</code> invokes the same full-package stub generator as CMake. If
+pybind11-stubgen, numpy or typing_extensions is missing, packaging installs
+them with <code>uv pip --python</code> targeting its chosen interpreter.
+This is the normal XMake wheel workflow, not a new editable install backend.</p></div>
 
 
 
