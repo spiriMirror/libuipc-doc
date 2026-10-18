@@ -73,7 +73,7 @@ Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_
 | Type | Name |
 | ---: | :--- |
 |   | [**FiniteElementExternalForce**](#function-finiteelementexternalforce) (const Json & config=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector3 & force) <br>_Apply external force (3D) to finite element vertices._  |
+|  void | [**apply\_to**](#function-apply_to) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector3 & force, bool enable=true) <br>_Apply external force (3D) to finite element vertices._  |
 |   | [**~FiniteElementExternalForce**](#function-finiteelementexternalforce) () <br> |
 
 
@@ -185,7 +185,8 @@ _Apply external force (3D) to finite element vertices._
 ```C++
 void uipc::constitution::FiniteElementExternalForce::apply_to (
     geometry::SimplicialComplex & sc,
-    const Vector3 & force
+    const Vector3 & force,
+    bool enable=true
 ) 
 ```
 
@@ -198,6 +199,7 @@ void uipc::constitution::FiniteElementExternalForce::apply_to (
 
 * `sc` SimplicialComplex representing finite element geometry 
 * `force` 3D force vector applied uniformly to all vertices 
+* `enable` Enable external force on all vertices (default: true). Sets `external_force/is_constrained`; does not modify `is_constrained` used by soft position constraints. Change the dedicated attribute per vertex in the Animator to toggle forces. Reapplying resets this mask. 
 
 
 

@@ -23,9 +23,9 @@ class UIPC_CONSTITUTION_API AffineBodyExternalBodyForce final : public IConstitu
     AffineBodyExternalBodyForce(const Json& config = default_config());
     ~AffineBodyExternalBodyForce();
 
-    void apply_to(geometry::SimplicialComplex& sc, const Vector12& force);
+    void apply_to(geometry::SimplicialComplex& sc, const Vector12& force, bool enable = true);
 
-    void apply_to(geometry::SimplicialComplex& sc, const Vector3& force);
+    void apply_to(geometry::SimplicialComplex& sc, const Vector3& force, bool enable = true);
 
     static Json default_config();
 

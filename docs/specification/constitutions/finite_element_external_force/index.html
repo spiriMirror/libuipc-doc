@@ -1855,6 +1855,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#activation-and-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation and animation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activation and animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-from-the-shared-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration from the shared flag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3349,6 +3377,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#activation-and-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation and animation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activation and animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-from-the-shared-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration from the shared flag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3407,11 +3463,34 @@ E = \frac{1}{2} \sum_i m_i \left\|\mathbf{x}_i - \tilde{\mathbf{x}}_i\right\|^2
 \mathbf{g}_{\text{eff},i} = \mathbf{g} + \mathbf{a}_{ext,i}
 \]</div>
 <p>Users are allowed to modify the external force <span class="arithmatex">\(\mathbf{F}_{ext,i}\)</span> per vertex using the <code>uipc</code> Animator System interface during the simulation.</p>
+<h2 id="activation-and-animation">Activation and animation</h2>
+<p><code>apply_to(sc, force, enable=true)</code> in C++, or <code>apply_to(sc, force, enable=True)</code>
+in Python, sets the force uniformly and <strong>enables it by default</strong> on all
+vertices. Pass <code>false</code> / <code>False</code> to store a force for later activation.
+Each call resets the force and <code>external_force/is_constrained</code> on all current
+vertices; edit their attributes directly for per-vertex selection.</p>
+<p>The Animator can change <code>external_force</code> and <code>external_force/is_constrained</code>
+before each step: <code>1</code> enables a force and <code>0</code> disables it. The flag persists
+until changed; disabling every force clears the backend's active force buffers.
+The dedicated flag is independent of <code>is_constrained</code>, which controls
+<code>SoftPositionConstraint</code>. Applying or toggling a force does not activate that
+soft constraint, regardless of which constitution was applied first.</p>
+<h3 id="migration-from-the-shared-flag">Migration from the shared flag</h3>
+<p>Code that calls <code>apply_to</code> and then toggles <code>vertices.is_constrained</code> to control
+external forces must instead toggle <code>vertices["external_force/is_constrained"]</code>.
+For delayed activation, pass <code>enable=false</code> / <code>enable=False</code> or clear the new
+mask before initialization. <code>apply_to</code> no longer creates or modifies the shared
+<code>is_constrained</code> attribute.</p>
+<p>Older serialized geometries lacking the dedicated attribute retain their
+original behavior: the backend reads their shared <code>is_constrained</code> flag. If both
+attributes exist, <strong>only the dedicated force flag</strong> controls the force, including
+when it is zero. Reapplying the constitution upgrades a geometry to the new
+layout and resets its force mask from <code>enable</code>; it does not copy a legacy mask.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>vertices</code>:</p>
 <ul>
 <li><code>external_force</code>: <span class="arithmatex">\(\mathbf{F}_{ext,i} \in \mathbb{R}^3\)</span> per-vertex external force vector</li>
-<li><code>is_constrained</code>: flag indicating whether the vertex is subject to external force (<span class="arithmatex">\(1\)</span> = enabled, <span class="arithmatex">\(0\)</span> = disabled)</li>
+<li><code>external_force/is_constrained</code>: integer enable flag (<span class="arithmatex">\(1\)</span> = enabled, <span class="arithmatex">\(0\)</span> = disabled), set from <code>enable</code> (default <code>true</code>) by <code>apply_to</code></li>
 </ul></div>
 
 

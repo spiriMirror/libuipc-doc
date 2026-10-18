@@ -73,8 +73,8 @@ Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_
 | Type | Name |
 | ---: | :--- |
 |   | [**AffineBodyExternalBodyForce**](#function-affinebodyexternalbodyforce) (const Json & config=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector12 & force) <br>_Apply external force (12D generalized force) to affine body instances._  |
-|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector3 & force) <br>_Apply external translational force to affine body instances (only translational force, affine force = 0)_  |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector12 & force, bool enable=true) <br>_Apply external force (12D generalized force) to affine body instances._  |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector3 & force, bool enable=true) <br>_Apply external translational force to affine body instances (only translational force, affine force = 0)_  |
 |   | [**~AffineBodyExternalBodyForce**](#function-affinebodyexternalbodyforce) () <br> |
 
 
@@ -186,7 +186,8 @@ _Apply external force (12D generalized force) to affine body instances._
 ```C++
 void uipc::constitution::AffineBodyExternalBodyForce::apply_to (
     geometry::SimplicialComplex & sc,
-    const Vector12 & force
+    const Vector12 & force,
+    bool enable=true
 ) 
 ```
 
@@ -199,6 +200,7 @@ void uipc::constitution::AffineBodyExternalBodyForce::apply_to (
 
 * `sc` SimplicialComplex representing affine body geometry 
 * `force` 12D generalized force vector: [fx, fy, fz, f\_a11, f\_a12, f\_a13, f\_a21, f\_a22, f\_a23, f\_a31, f\_a32, f\_a33] where f is the 3D translational force and f\_a is the 9D affine force 
+* `enable` Enable external force on all instances (default: true). Sets `external_force/is_constrained`; does not modify `is_constrained` used by soft transform constraints. Change the dedicated attribute per instance in the Animator to toggle forces. Reapplying resets this mask. 
 
 
 
@@ -215,7 +217,8 @@ _Apply external translational force to affine body instances (only translational
 ```C++
 void uipc::constitution::AffineBodyExternalBodyForce::apply_to (
     geometry::SimplicialComplex & sc,
-    const Vector3 & force
+    const Vector3 & force,
+    bool enable=true
 ) 
 ```
 
@@ -228,6 +231,7 @@ void uipc::constitution::AffineBodyExternalBodyForce::apply_to (
 
 * `sc` SimplicialComplex representing affine body geometry 
 * `force` 3D translational force vector 
+* `enable` Enable external force on all instances (default: true). Sets `external_force/is_constrained`; does not modify `is_constrained` used by soft transform constraints. Change the dedicated attribute per instance in the Animator to toggle forces. Reapplying resets this mask. 
 
 
 

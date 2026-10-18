@@ -1463,6 +1463,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#activation-and-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation and animation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activation and animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-from-the-shared-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration from the shared flag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3349,6 +3377,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#activation-and-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation and animation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Activation and animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migration-from-the-shared-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migration from the shared flag
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3412,10 +3468,34 @@ E = \frac{1}{2} \left(\mathbf{q} - \tilde{\mathbf{q}}\right)^T \mathbf{M} \left(
 \]</div>
 <p>where <span class="arithmatex">\(\mathbf{q}^t\)</span>, is the previous state vector at time <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\(\mathbf{v}^t\)</span> is the previous velocity vector at time <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\(\Delta t\)</span> is the time step size, and <span class="arithmatex">\(\mathbf{g}\)</span> is the gravitational acceleration.</p>
 <p>Users are allowed to modify the external force <span class="arithmatex">\(\mathbf{F}_{ext}\)</span> using the <code>uipc</code> Animator System interface during the simulation.</p>
+<h2 id="activation-and-animation">Activation and animation</h2>
+<p><code>apply_to(sc, force, enable=true)</code> in C++, or <code>apply_to(sc, force, enable=True)</code>
+in Python, sets the force uniformly and <strong>enables it by default</strong> on all
+instances. Pass <code>false</code> / <code>False</code> to store a force for later activation.
+Each call resets the force and <code>external_force/is_constrained</code> on all current
+instances; edit their attributes directly for per-instance selection.</p>
+<p>The Animator can change <code>external_force</code> and <code>external_force/is_constrained</code>
+before each step: <code>1</code> enables a force and <code>0</code> disables it. The flag persists
+until changed; disabling every force clears the backend's active force buffers.
+The dedicated flag is independent of <code>is_constrained</code>, which controls
+<code>SoftTransformConstraint</code>. Applying or toggling a force does not activate that
+soft constraint, regardless of which constitution was applied first.</p>
+<h3 id="migration-from-the-shared-flag">Migration from the shared flag</h3>
+<p>Code that calls <code>apply_to</code> and then toggles <code>instances.is_constrained</code> to control
+external forces must instead toggle <code>instances["external_force/is_constrained"]</code>.
+For delayed activation, pass <code>enable=false</code> / <code>enable=False</code> or clear the new
+mask before initialization. <code>apply_to</code> no longer creates or modifies the shared
+<code>is_constrained</code> attribute.</p>
+<p>Older serialized geometries lacking the dedicated attribute retain their
+original behavior: the backend reads their shared <code>is_constrained</code> flag. If both
+attributes exist, <strong>only the dedicated force flag</strong> controls the force, including
+when it is zero. Reapplying the constitution upgrades a geometry to the new
+layout and resets its force mask from <code>enable</code>; it does not copy a legacy mask.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>instances</code>:</p>
 <ul>
 <li><code>external_force</code>: <span class="arithmatex">\(\mathbf{F}_{ext}\)</span> in the formulae above</li>
+<li><code>external_force/is_constrained</code>: integer enable flag (<span class="arithmatex">\(1\)</span> = enabled, <span class="arithmatex">\(0\)</span> = disabled), set from <code>enable</code> (default <code>true</code>) by <code>apply_to</code></li>
 </ul></div>
 
 

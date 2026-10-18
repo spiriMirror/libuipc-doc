@@ -23,7 +23,7 @@ class UIPC_CONSTITUTION_API FiniteElementExternalForce final : public IConstitut
     FiniteElementExternalForce(const Json& config = default_config());
     ~FiniteElementExternalForce();
 
-    void apply_to(geometry::SimplicialComplex& sc, const Vector3& force);
+    void apply_to(geometry::SimplicialComplex& sc, const Vector3& force, bool enable = true);
 
     static Json default_config();
 

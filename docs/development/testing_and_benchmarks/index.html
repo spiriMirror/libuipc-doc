@@ -3450,10 +3450,30 @@ a final physical observable, approximate peak total-device memory, and the raw
 log.
 Timestamped records are retained; the un-suffixed JSON points to the latest
 run.</p>
+<p>Each run fingerprints the selected interpreter's package before and after
+execution: <code>build_info()</code>, package path, Python source hashes, and SHA-256 hashes
+of colocated native binaries. Declared scene/helper/asset files are also hashed
+before and after the run. All this work happens outside the frame timing interval
+and does not launch CUDA work. <code>provenance.runtimeUnchanged</code> and
+<code>provenance.inputsUnchanged</code> must both be true for a controlled comparison.
+An unavailable runtime probe is not counted as an unchanged runtime. These are
+package-file fingerprints, not a claim that every bundled DLL was loaded, nor a
+proof that the installed package was built from the recorded worktree commit.
+Check the backend hash against the intended build output as well.</p>
+<p>To avoid changing local sample parameters, create an isolated samples worktree
+under the root repository and select it explicitly:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>-C<span class="w"> </span>libuipc-samples<span class="w"> </span>worktree<span class="w"> </span>add<span class="w"> </span>--detach<span class="w"> </span>../output/perf-samples<span class="w"> </span>&lt;samples-commit&gt;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--samples-directory<span class="w"> </span>output/perf-samples<span class="w"> </span>--frames<span class="w"> </span><span class="m">250</span>
+</span></code></pre></div>
+<p>The selected worktree's revision and input hashes are recorded; the original
+submodule and its local edits are untouched. This option rebases sample inputs
+only, not the benchmark's result destination. Keep concurrent GPU workloads off
+the device during measurements and alternate repeated baseline/candidate runs.</p>
 <p>Canonical throughput runs keep <code>UIPC_BENCHMARK_TIMERS=0</code>. For a separate stage
 diagnostic use, for example:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--frames<span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--env<span class="w"> </span><span class="nv">UIPC_BENCHMARK_TIMERS</span><span class="o">=</span><span class="m">1</span>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--frames<span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>--env<span class="w"> </span><span class="nv">UIPC_BENCHMARK_TIMERS</span><span class="o">=</span><span class="m">1</span>
 </span></code></pre></div>
 <p>Timer scopes synchronize nested GPU regions and therefore change wall time.
 Use them to attribute cost, not as a substitute for the Timer-free throughput

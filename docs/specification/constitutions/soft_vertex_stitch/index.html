@@ -2128,6 +2128,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Input
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3437,6 +3448,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python Input
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3499,7 +3521,16 @@ E = \frac{\kappa}{2} \left(\|\mathbf{x}_0 - \mathbf{x}_1\| - L_0\right)^2
 <li><code>topo</code>: vertex index pairs <span class="arithmatex">\((\mathbf{x}_0, \mathbf{x}_1)\)</span> identifying stitched vertices</li>
 <li><code>kappa</code>: <span class="arithmatex">\(\kappa\)</span>, the stiffness of the stitch constraint</li>
 <li><code>rest_length</code>: <span class="arithmatex">\(L_0\)</span>, the rest length of the spring (0 for harmonic energy)</li>
-</ul></div>
+</ul>
+<h2 id="python-input">Python Input</h2>
+<p>Both <code>SoftVertexStitch.create_geometry</code> overloads accept <code>stitched_vert_ids</code>
+as an integer array of shape <code>(N, 2)</code> or <code>(N, 2, 1)</code>. Each row identifies one
+vertex in each geometry; IDs must fit in <code>int32</code> and be valid vertex indices
+in the corresponding geometry.</p>
+<p>The binding converts <code>int64</code> arrays and non-contiguous views to contiguous
+<code>int32</code> storage as needed, retaining that storage throughout the call.
+The returned geometry owns a copy of the index pairs in <code>instances.topo</code>;
+changing or releasing the input afterward does not change the stitches.</p></div>
 
 
 

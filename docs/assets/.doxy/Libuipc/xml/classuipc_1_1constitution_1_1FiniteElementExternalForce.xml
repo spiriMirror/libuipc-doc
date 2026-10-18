@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/finite_element_external_force.h" line="29" column="10" bodyfile="include/uipc/constitution/finite_element_external_force.h" bodystart="29" bodyend="-1"/>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="33" column="10" bodyfile="include/uipc/constitution/finite_element_external_force.h" bodystart="33" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -69,10 +69,10 @@
         </inbodydescription>
         <location file="include/uipc/constitution/finite_element_external_force.h" line="14" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a645a3a29fcb98300743bc8cf6ddd2b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a81218e1290bebc2c375ee00d578f1a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void uipc::constitution::FiniteElementExternalForce::apply_to</definition>
-        <argsstring>(geometry::SimplicialComplex &amp;sc, const Vector3 &amp;force)</argsstring>
+        <argsstring>(geometry::SimplicialComplex &amp;sc, const Vector3 &amp;force, bool enable=true)</argsstring>
         <name>apply_to</name>
         <qualifiedname>uipc::constitution::FiniteElementExternalForce::apply_to</qualifiedname>
         <param>
@@ -82,6 +82,11 @@
         <param>
           <type>const Vector3 &amp;</type>
           <declname>force</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+          <defval>true</defval>
         </param>
         <briefdescription>
 <para>Apply external force (3D) to finite element vertices. </para>
@@ -103,12 +108,20 @@
 <para>3D force vector applied uniformly to all vertices </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable external force on all vertices (default: true). Sets <computeroutput>external_force/is_constrained</computeroutput>; does not modify <computeroutput>is_constrained</computeroutput> used by soft position constraints. Change the dedicated attribute per vertex in the Animator to toggle forces. Reapplying resets this mask. </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/finite_element_external_force.h" line="21" column="10"/>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="25" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -124,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/finite_element_external_force.h" line="23" column="17"/>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="27" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -141,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/constitution/finite_element_external_force.h" line="26" column="17"/>
+        <location file="include/uipc/constitution/finite_element_external_force.h" line="30" column="17"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -172,9 +185,9 @@
         <link refid="classuipc_1_1constitution_1_1IConstitution"/>
       </node>
     </collaborationgraph>
-    <location file="include/uipc/constitution/finite_element_external_force.h" line="8" column="1" bodyfile="include/uipc/constitution/finite_element_external_force.h" bodystart="9" bodyend="30"/>
+    <location file="include/uipc/constitution/finite_element_external_force.h" line="8" column="1" bodyfile="include/uipc/constitution/finite_element_external_force.h" bodystart="9" bodyend="34"/>
     <listofallmembers>
-      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a645a3a29fcb98300743bc8cf6ddd2b43" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>apply_to</name></member>
+      <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a81218e1290bebc2c375ee00d578f1a64" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>apply_to</name></member>
       <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a55122b9d06d7607b4176093276d817c8" prot="private" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>Base</name></member>
       <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a3befa8fb0b10686e1d2ab0bc222f2180" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>default_config</name></member>
       <member refid="classuipc_1_1constitution_1_1FiniteElementExternalForce_1a43a43ac4a4b8b8831fe23a24f403e439" prot="public" virt="non-virtual"><scope>uipc::constitution::FiniteElementExternalForce</scope><name>FiniteElementExternalForce</name></member>

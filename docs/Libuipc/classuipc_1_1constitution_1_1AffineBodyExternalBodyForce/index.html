@@ -3470,11 +3470,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-apply_to-12"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, const Vector12 &amp; force) <br><em>Apply external force (12D generalized force) to affine body instances.</em></td>
+<td style="text-align: left;"><a href="#function-apply_to-12"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, const Vector12 &amp; force, bool enable=true) <br><em>Apply external force (12D generalized force) to affine body instances.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-apply_to-22"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, const Vector3 &amp; force) <br><em>Apply external translational force to affine body instances (only translational force, affine force = 0)</em></td>
+<td style="text-align: left;"><a href="#function-apply_to-22"><strong>apply_to</strong></a> (<a href="../classuipc_1_1geometry_1_1SimplicialComplex/"><strong>geometry::SimplicialComplex</strong></a> &amp; sc, const Vector3 &amp; force, bool enable=true) <br><em>Apply external translational force to affine body instances (only translational force, affine force = 0)</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
@@ -3572,13 +3572,15 @@
 <p><em>Apply external force (12D generalized force) to affine body instances.</em> 
 </p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyExternalBodyForce</span><span class="o">::</span><span class="n">apply_to</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">force</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector12</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">force</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">=</span><span class="nb">true</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>sc</code> SimplicialComplex representing affine body geometry </li>
 <li><code>force</code> 12D generalized force vector: [fx, fy, fz, f_a11, f_a12, f_a13, f_a21, f_a22, f_a23, f_a31, f_a32, f_a33] where f is the 3D translational force and f_a is the 9D affine force </li>
+<li><code>enable</code> Enable external force on all instances (default: true). Sets <code>external_force/is_constrained</code>; does not modify <code>is_constrained</code> used by soft transform constraints. Change the dedicated attribute per instance in the Animator to toggle forces. Reapplying resets this mask. </li>
 </ul>
 <hr>
 
@@ -3586,13 +3588,15 @@
 <p><em>Apply external translational force to affine body instances (only translational force, affine force = 0)</em> 
 </p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">constitution</span><span class="o">::</span><span class="n">AffineBodyExternalBodyForce</span><span class="o">::</span><span class="n">apply_to</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">geometry</span><span class="o">::</span><span class="n">SimplicialComplex</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">sc</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">force</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">force</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable</span><span class="o">=</span><span class="nb">true</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>sc</code> SimplicialComplex representing affine body geometry </li>
 <li><code>force</code> 3D translational force vector </li>
+<li><code>enable</code> Enable external force on all instances (default: true). Sets <code>external_force/is_constrained</code>; does not modify <code>is_constrained</code> used by soft transform constraints. Change the dedicated attribute per instance in the Animator to toggle forces. Reapplying resets this mask. </li>
 </ul>
 <hr>
 
