@@ -3963,6 +3963,10 @@ older non-rod cache fingerprints remain unchanged.</p>
 <li>Set <strong>Solid Young's Modulus (Pa)</strong>, Poisson ratio, density and collision radius,
    then bake. The material is libuipc's 3D <strong>Stable Neo-Hookean</strong> model.</li>
 </ol>
+<p>The native Stable Neo-Hookean parameter mapping was corrected on 2026-10-19
+so its small-strain response matches the entered E/nu. Rebaking older scenes
+with the corrected runtime may change their deformation; see the
+<a href="../../specification/constitutions/stable_neo_hookean/">material specification</a>.</p>
 <p>The 0.0.28 wheel predates the native mesher API. <strong>Generate Tetrahedra</strong> requires a
 current source build installed into the external Python selected by Blender.
 After building this checkout with Python bindings, install its generated package
@@ -4354,7 +4358,7 @@ time; check the effective settings and substep statistics in the bake directory.
 <div class="arithmatex">\[
 k_s = \frac{E_s(2r)}{1-\nu_s^2},\qquad
 k_{\mathrm{shear}} = \frac{E_{\mathrm{shear}}}{2(1+\nu_{\mathrm{shear}})},\qquad
-k_b = \frac{E_b(2r)^3}{12(1-\nu_b^2)}.
+k_b = \frac{E_b(2r)^3}{24(1-\nu_b^2)} = \frac{D}{2}.
 \]</div>
 <p>Each channel has its own Young's modulus and Poisson ratio; <code>r</code> is the one-sided
 offset. Version 0.4 inherits the saved shared Poisson ratio from older scenes

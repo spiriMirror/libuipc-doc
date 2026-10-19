@@ -2132,6 +2132,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="#10 Stable Neo Hookean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-inputs-and-snk1-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material inputs and SNK1 calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3346,6 +3363,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="#10 Stable Neo Hookean">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-inputs-and-snk1-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material inputs and SNK1 calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3399,7 +3433,54 @@ E = \frac{1}{2} \mu (I_c - 3) + \frac{1}{2} \lambda (J - 1 - \mu / \lambda)^2,
 P = \frac{\partial E}{\partial F} = \mu F + (\lambda (J - 1) - \mu)\, \mathrm{cof}(F).
 \]</div>
 <p>The 9×9 energy Hessian is projected to SPD analytically — twist/flip eigensystem from the QR-SVD of <span class="arithmatex">\(F\)</span> plus a 3×3 direct eigensolve — instead of a generic eigendecomposition with clamping.</p>
-<p>In continuum mechanics, <span class="arithmatex">\(F\)</span> is called the deformation gradient, <span class="arithmatex">\(\lambda\)</span> and <span class="arithmatex">\(\mu\)</span> are the Lamé parameters. <span class="arithmatex">\(I_c\)</span> is the first invariant of the right Cauchy-Green deformation tensor <span class="arithmatex">\(C = \|F\|_F^2\)</span>, <span class="arithmatex">\(\|\cdot\|_F\)</span> is the <a href="https://en.wikipedia.org/wiki/Matrix_norm">Frobenius norm</a>.</p>
+<p>Here <span class="arithmatex">\(F\)</span> is the deformation gradient, <span class="arithmatex">\(C=F^T F\)</span> is the right Cauchy-Green
+deformation tensor, and <span class="arithmatex">\(I_c=\operatorname{tr}(C)=\|F\|_F^2\)</span>.
+The coefficients <span class="arithmatex">\(\lambda,\mu\)</span> in this SNK1 energy are stored on tetrahedra;
+they must be distinguished from the physical Lamé parameters below.</p>
+<h3 id="material-inputs-and-snk1-calibration">Material inputs and SNK1 calibration</h3>
+<p><code>ElasticModuli.youngs_poisson(E, nu)</code> first computes the physical 3D parameters</p>
+<div class="arithmatex">\[
+\mu_L=\frac{E}{2(1+\nu)},\qquad
+\lambda_L=\frac{E\nu}{(1+\nu)(1-2\nu)}.
+\]</div>
+<p><span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\lambda_L\)</span> and <span class="arithmatex">\(\mu_L\)</span> have units Pa; <span class="arithmatex">\(\nu\)</span> is dimensionless.
+The native C++ and Python <code>StableNeoHookean.apply_to</code> defaults are
+<span class="arithmatex">\(E=120000\)</span> Pa, <span class="arithmatex">\(\nu=0.49\)</span>, and mass density <span class="arithmatex">\(\rho=1000\)</span> kg/m<span class="arithmatex">\(^3\)</span>.
+Blender defaults to <span class="arithmatex">\(E=100000\)</span> Pa, <span class="arithmatex">\(\nu=0.49\)</span>, and <span class="arithmatex">\(\rho=200\)</span> kg/m<span class="arithmatex">\(^3\)</span>,
+and passes these values to the same native API. Tetrahedral energy is weighted
+by rest volume, and vertex mass by <span class="arithmatex">\(\rho\)</span> times lumped rest volume. The collision
+radius does not multiply the solid's material stiffness or mass.</p>
+<p>The material entry point stores the SNK1 coefficients</p>
+<div class="arithmatex">\[
+\mu=\mu_L,\qquad \lambda=\lambda_L+\mu_L.
+\]</div>
+<p>The active SNK1 backend uses the energy above without a logarithmic term.
+Linearizing its stress at <span class="arithmatex">\(F=I\)</span>, for infinitesimal strain <span class="arithmatex">\(\epsilon\)</span>, gives</p>
+<div class="arithmatex">\[
+P=2\mu\epsilon+(\lambda-\mu)\operatorname{tr}(\epsilon)I
+  +O(\|F-I\|^2).
+\]</div>
+<p>Substituting the stored coefficients recovers Hooke's law with the supplied
+physical <span class="arithmatex">\(\lambda_L,\mu_L\)</span>, and therefore the requested small-strain <span class="arithmatex">\(E,\nu\)</span>.
+At identity the stress is zero; the energy has an irrelevant constant offset
+<span class="arithmatex">\(\mu^2/(2\lambda)\)</span>, which disappears from forces and tangents.</p>
+<p><strong>Migration, 2026-10-19:</strong> earlier versions stored
+<span class="arithmatex">\(\mu=4\mu_L/3\)</span>, <span class="arithmatex">\(\lambda=\lambda_L+5\mu_L/6\)</span>. That mapping belongs to the
+version with the <span class="arithmatex">\(-\mu\log(I_c+1)/2\)</span> term
+(<a href="https://www.tkim.graphics/NEO/StableNeoHookean2018.pdf">Smith et al., Section 3.4, Eq. (14)</a>),
+not the active SNK1 model. The former mapping gave 4/3 of the requested shear
+modulus and shifted E/nu (for example, 100 kPa/0.3 behaved as 124.54 kPa/0.214286).
+New applications of the constitution now match the physical inputs; existing
+scenes may deform differently and should be rebaked or recalibrated as needed.
+Serialized tetrahedral <code>mu</code>/<code>lambda</code> attributes remain raw energy coefficients;
+reapply the constitution from physical moduli to update them. Reapplying replaces
+the coefficients on every tetrahedron, including previously created attributes.</p>
+<p>The usual positive-definite isotropic linear-elastic input domain is finite
+<span class="arithmatex">\(E&gt;0\)</span> and <span class="arithmatex">\(-1&lt;\nu&lt;0.5\)</span>. Native validation is incomplete: it admits nonpositive
+or nonfinite <span class="arithmatex">\(E\)</span> and invalid <span class="arithmatex">\(\nu\)</span>, and incorrectly rejects <span class="arithmatex">\(\nu=-0.5\)</span>.
+Blender restricts solid inputs to finite positive <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(0\le\nu&lt;0.5\)</span>.
+These validation findings remain open and are separate from calibration; see the
+<a href="../../../agent_docs/14-project-audit.md">material audit</a>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>tetrahedra</code>:</p>
 <ul>

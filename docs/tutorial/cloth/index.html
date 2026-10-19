@@ -3516,9 +3516,13 @@ folding. Applying bending alone does not create a complete cloth model.</p>
 bending implementation reads the one-sided thickness radius <span class="arithmatex">\(r\)</span> from the
 vertex <code>thickness</code> attribute. With full material thickness <span class="arithmatex">\(h=2r\)</span>, it evaluates</p>
 <div class="arithmatex">\[
-D = \frac{E h^3}{12(1-\nu^2)}
-  = \frac{E(2r)^3}{12(1-\nu^2)}.
+\kappa = \frac{D}{2} = \frac{E h^3}{24(1-\nu^2)}
+  = \frac{E(2r)^3}{24(1-\nu^2)}.
 \]</div>
+<p>The hinge energy has no extra <span class="arithmatex">\(1/2\)</span>, so its coefficient <span class="arithmatex">\(\kappa\)</span> is half the
+classical flexural rigidity <span class="arithmatex">\(D\)</span>, in N m. See the
+<a href="../../specification/constitutions/discrete_shell_bending/">bending specification</a>
+for the physical calibration and migration from the previous factor of two.</p>
 <p>The raw overload <code>apply_to(mesh, bending_stiffness)</code> retains its legacy numeric
 default, but the supplied value is <span class="arithmatex">\(\kappa\)</span> directly in the Discrete Shells
 edge energy; it is neither per-area nor derived from thickness.</p>

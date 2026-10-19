@@ -1754,6 +1754,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#complete-mesh-energy-and-solver-contribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete mesh energy and solver contribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-and-hessian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force and Hessian
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3377,6 +3399,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#complete-mesh-energy-and-solver-contribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete mesh energy and solver contribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-and-hessian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force and Hessian
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3418,11 +3462,23 @@
 <p>Reference:</p>
 <ul>
 <li><a href="https://www.cs.columbia.edu/cg/pdfs/10_ds.pdf">Discrete Shell</a></li>
+<li><a href="https://media.disneyanimation.com/uploads/production/publication_asset/74/asset/main_preprint.pdf">Discrete bending forces and their Jacobians</a>, Section 5, Eq. (11)</li>
 </ul>
 <h2 id="17-discrete-shell-bending">#17 Discrete Shell Bending</h2>
 <p>For a shell bending element defined by four vertices at positions <span class="arithmatex">\(\mathbf{x}_0\)</span>, <span class="arithmatex">\(\mathbf{x}_1\)</span>, <span class="arithmatex">\(\mathbf{x}_2\)</span>, and <span class="arithmatex">\(\mathbf{x}_3\)</span>, where <span class="arithmatex">\((\mathbf{x}_1, \mathbf{x}_2)\)</span> forms the shared edge between two adjacent triangular faces, we define:</p>
 <p><strong>Dihedral Angle:</strong></p>
-<p>The dihedral angle <span class="arithmatex">\(\theta\)</span> is the angle between the two triangular faces sharing the edge <span class="arithmatex">\((\mathbf{x}_1, \mathbf{x}_2)\)</span>. The first triangle is formed by vertices <span class="arithmatex">\(\mathbf{x}_0\)</span>, <span class="arithmatex">\(\mathbf{x}_1\)</span>, <span class="arithmatex">\(\mathbf{x}_2\)</span>, and the second triangle is formed by vertices <span class="arithmatex">\(\mathbf{x}_1\)</span>, <span class="arithmatex">\(\mathbf{x}_2\)</span>, <span class="arithmatex">\(\mathbf{x}_3\)</span>.</p>
+<p>The dihedral angle <span class="arithmatex">\(\theta\)</span> is a signed angle in radians between the faces
+sharing <span class="arithmatex">\((\mathbf{x}_1,\mathbf{x}_2)\)</span>. The implementation uses oriented normals</p>
+<div class="arithmatex">\[
+\mathbf{n}_1=(\mathbf{x}_1-\mathbf{x}_0)\times(\mathbf{x}_2-\mathbf{x}_0),
+\qquad
+\mathbf{n}_2=(\mathbf{x}_2-\mathbf{x}_3)\times(\mathbf{x}_1-\mathbf{x}_3).
+\]</div>
+<p>It computes the magnitude with
+<span class="arithmatex">\(\arccos(\operatorname{clamp}(\mathbf{n}_1\cdot\mathbf{n}_2/
+(\|\mathbf{n}_1\|\|\mathbf{n}_2\|),-1,1))\)</span>, then negates it when
+<span class="arithmatex">\((\mathbf{n}_2\times\mathbf{n}_1)\cdot(\mathbf{x}_1-\mathbf{x}_2)&lt;0\)</span>.
+The same convention is used for the reference angle <span class="arithmatex">\(\bar\theta\)</span>.</p>
 <p><strong>Rest Configuration Parameters:</strong></p>
 <p>From the reference configuration with rest positions <span class="arithmatex">\(\bar{\mathbf{x}}_0\)</span>, <span class="arithmatex">\(\bar{\mathbf{x}}_1\)</span>, <span class="arithmatex">\(\bar{\mathbf{x}}_2\)</span>, and <span class="arithmatex">\(\bar{\mathbf{x}}_3\)</span>:</p>
 <ul>
@@ -3430,7 +3486,8 @@
 <p><strong>Rest Length:</strong> <span class="arithmatex">\(L_0 = \|\bar{\mathbf{x}}_2 - \bar{\mathbf{x}}_1\|_2\)</span> is the length of the shared edge in the rest configuration</p>
 </li>
 <li>
-<p><strong>Average Height:</strong> <span class="arithmatex">\(\bar{h}\)</span> is computed as:
+<p><strong>Reference Height Parameter:</strong> <span class="arithmatex">\(\bar{h}\)</span> is one third of the mean of the
+  two triangle altitudes to the shared edge, computed as:
   $$
   \bar{h} = \frac{A}{3 L_0}
   $$
@@ -3454,7 +3511,7 @@ E = \kappa \frac{(\theta - \bar{\theta})^2 L_0}{\bar{h}}
 <li><span class="arithmatex">\(\theta\)</span> is the current dihedral angle</li>
 <li><span class="arithmatex">\(\bar{\theta}\)</span> is the rest dihedral angle</li>
 <li><span class="arithmatex">\(L_0\)</span> is the rest length of the shared edge</li>
-<li><span class="arithmatex">\(\bar{h}\)</span> is the average height parameter from the rest configuration</li>
+<li><span class="arithmatex">\(\bar{h}\)</span> is the reference height parameter, not the material thickness</li>
 </ul>
 <p>Because <span class="arithmatex">\(\bar h=A/(3L_0)\)</span>, the reference metric is
 <span class="arithmatex">\(L_0/\bar h=3L_0^2/A\)</span>. This already contains the complete Discrete Shells
@@ -3463,9 +3520,72 @@ the metric is invariant under uniform scaling of the rest hinge.</p>
 <p>For the formula overload, the mesh stores a one-sided thickness radius <span class="arithmatex">\(r\)</span>.
 The full material thickness is <span class="arithmatex">\(h=2r\)</span>, and</p>
 <div class="arithmatex">\[
-\kappa=D=\frac{E h^3}{12(1-\nu^2)}
-        =\frac{E(2r)^3}{12(1-\nu^2)}.
+\kappa=\frac{D}{2}=\frac{E h^3}{24(1-\nu^2)}
+        =\frac{E(2r)^3}{24(1-\nu^2)}.
 \]</div>
+<p>Here <span class="arithmatex">\(E\)</span> is Young's modulus (Pa), <span class="arithmatex">\(\nu\)</span> is Poisson's ratio, <span class="arithmatex">\(h\)</span> is in meters,
+and <span class="arithmatex">\(D=Eh^3/[12(1-\nu^2)]\)</span> is the classical flexural rigidity (N m).
+The hinge coefficient is half of <span class="arithmatex">\(D\)</span> because the edge energy above has no
+additional factor of <span class="arithmatex">\(1/2\)</span>.</p>
+<p>The 2026-10-19 correction halves the formula-derived coefficient and bending
+forces for the same material inputs. To reproduce earlier formula-based scenes,
+double their bending Young's modulus. Raw <code>apply_to(mesh, bending_stiffness)</code>
+values retain their existing meaning and behavior; no migration is needed for
+raw coefficients. Existing baked animation must be rebaked to use the correction.</p>
+<h3 id="complete-mesh-energy-and-solver-contribution">Complete mesh energy and solver contribution</h3>
+<p>For a manifold triangle mesh, let <span class="arithmatex">\(\mathcal E_{\mathrm{int}}\)</span> be its interior
+edges. For edge <span class="arithmatex">\(e=(i,j)\)</span> define</p>
+<div class="arithmatex">\[
+r_e=\frac{r_i+r_j}{2},\qquad h_e=2r_e=r_i+r_j,\qquad
+w_e=\frac{3L_{0,e}^2}{A_{1,e}+A_{2,e}},\qquad
+\delta\theta_e=\theta_e(\mathbf{x})-\bar\theta_e.
+\]</div>
+<p>Here <span class="arithmatex">\(r_i,r_j\)</span> are the stored one-sided radii at the shared edge endpoints;
+the opposite vertices' radii are not part of this material average. The full
+physical elastic bending energy is</p>
+<div class="arithmatex">\[
+U_b(\mathbf{x})
+=\sum_{e\in\mathcal E_{\mathrm{int}}}\kappa_e w_e\delta\theta_e^2
+=\sum_{e\in\mathcal E_{\mathrm{int}}}
+\frac{E_b h_e^3 L_{0,e}^2}
+     {8(1-\nu_b^2)(A_{1,e}+A_{2,e})}\delta\theta_e^2.
+\]</div>
+<p>The second expression applies to the formula-based material overload;
+the raw-coefficient overload uses the first expression. <span class="arithmatex">\(E_b\)</span> and <span class="arithmatex">\(\nu_b\)</span>
+are the bending channel's Young's modulus and Poisson ratio. <span class="arithmatex">\(L_{0,e}\)</span>,
+<span class="arithmatex">\(A_{1,e}\)</span>, <span class="arithmatex">\(A_{2,e}\)</span> and <span class="arithmatex">\(\bar\theta_e\)</span> are fixed reference-configuration
+values; only <span class="arithmatex">\(\theta_e(\mathbf{x})\)</span> changes during elastic deformation.
+For initially curved cloth, <span class="arithmatex">\(\bar\theta_e\)</span> need not be zero.</p>
+<p>The CUDA backend adds <span class="arithmatex">\(\Delta t^2 U_b\)</span> to its incremental objective; the
+physical energy <span class="arithmatex">\(U_b\)</span> itself contains no time step. Its generic outer weight
+is exactly 1. There is no second area, volume, thickness or 1/2 multiplier.
+With SI inputs, <span class="arithmatex">\(\kappa_e\)</span> is in N m, <span class="arithmatex">\(w_e\)</span> and angles are dimensionless, and
+<span class="arithmatex">\(U_b\)</span> is in joules. Boundary edges have no bending stencil. The current
+implementation includes edges with exactly two distinct opposite vertices;
+nonmanifold edges with more neighbors are not included by this constitution.</p>
+<h3 id="force-and-hessian">Force and Hessian</h3>
+<p>For one hinge, let <span class="arithmatex">\(\mathbf{g}_e=\nabla\theta_e\)</span> and
+<span class="arithmatex">\(H_{\theta,e}=\nabla^2\theta_e\)</span> with respect to its 12 position coordinates.
+Since the material and reference weights are fixed,</p>
+<div class="arithmatex">\[
+\mathbf{f}_e=-2\kappa_e w_e\delta\theta_e\mathbf{g}_e,
+\qquad
+\nabla^2U_e=2\kappa_e w_e
+\left(\mathbf{g}_e\mathbf{g}_e^T+\delta\theta_e H_{\theta,e}\right).
+\]</div>
+<p>The backend scales the gradient and Hessian by <span class="arithmatex">\(\Delta t^2\)</span>.
+For the Newton solve, <code>make_spd</code> clamps negative Hessian eigenvalues to zero;
+this positive-semidefinite approximation does not change the energy or gradient.
+The angular restoring moment is <span class="arithmatex">\(-\partial U_e/\partial\theta_e
+=-2\kappa_e w_e\delta\theta_e\)</span>.</p>
+<p>These formulas assume nondegenerate triangles and a consistent signed-angle
+branch. The elastic model directly subtracts the two angles: it does not wrap
+their difference across the <span class="arithmatex">\(\pm\pi\)</span> branch or add a bending-angle barrier.
+Collision response is handled by the separate contact model. There is no
+velocity-dependent damping term in this elastic bending constitution.</p>
+<p>Regression coverage checks the calibrated scalar energy/moment, flat and
+curved rest hinges, both fold signs, rigid-motion invariance, and finite
+differences of the spatial gradient and unprojected Hessian.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>edges</code>:</p>
 <ul>
