@@ -2243,6 +2243,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directional-parameter-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directional parameter interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API compatibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3512,6 +3540,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directional-parameter-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directional parameter interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API compatibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3556,12 +3612,15 @@
 <div class="arithmatex">\[
 \mathbf{D}_s = \begin{bmatrix} \mathbf{x}_1 - \mathbf{x}_0 &amp; \mathbf{x}_2 - \mathbf{x}_0 \end{bmatrix} \in \mathbb{R}^{3 \times 2}
 \]</div>
-<p>The rest shape matrix <span class="arithmatex">\(\mathbf{D}_m \in \mathbb{R}^{2 \times 2}\)</span> is obtained by rotating the rest triangle so that its normal aligns with a canonical axis, then extracting the 2D in-plane edge vectors. The deformation gradient is:</p>
+<p>The rest shape matrix <span class="arithmatex">\(\mathbf{D}_m \in \mathbb{R}^{2 \times 2}\)</span> is obtained by rotating the rest triangle normal toward <span class="arithmatex">\(+Z\)</span>, then extracting the XY in-plane edge vectors. The deformation gradient is:</p>
 <div class="arithmatex">\[
 \mathbf{F} = \mathbf{D}_s \, \mathbf{D}_m^{-1} \in \mathbb{R}^{3 \times 2}
 \]</div>
 <h2 id="strain-measures">Strain Measures</h2>
 <p>Given two orthogonal material directions <span class="arithmatex">\(\hat{\mathbf{a}} = (1, 0)^T\)</span> and <span class="arithmatex">\(\hat{\mathbf{b}} = (0, 1)^T\)</span>, the following invariants are defined:</p>
+<p>These directions are fixed in the existing per-triangle rest frame. On a
+rest mesh in XY with <span class="arithmatex">\(+Z\)</span> normals they coincide with world X and Y. The API
+does not currently accept UV coordinates or an arbitrary fiber orientation.</p>
 <p><strong>Stretch invariants:</strong></p>
 <div class="arithmatex">\[
 I_{5u} = \| \mathbf{F} \hat{\mathbf{a}} \|, \quad
@@ -3576,23 +3635,23 @@ I_6 = \hat{\mathbf{a}}^T \mathbf{F}^T \mathbf{F} \hat{\mathbf{b}}
 <h2 id="deformation-energy-density">Deformation Energy Density</h2>
 <p>The energy density separates stretch and shear contributions:</p>
 <div class="arithmatex">\[
-\Psi = \lambda \, \Psi_{\text{stretch}} + \mu \, \Psi_{\text{shear}}
+\Psi = K_a \phi(I_{5u}) + K_b \phi(I_{5v}) + K_g I_6^2
 \]</div>
 <p>where:</p>
 <ul>
-<li><span class="arithmatex">\(\lambda\)</span> is the stretch stiffness (Lamé parameter)</li>
-<li><span class="arithmatex">\(\mu\)</span> is the shear stiffness</li>
+<li><span class="arithmatex">\(K_a\)</span> and <span class="arithmatex">\(K_b\)</span> are independent directional stretch coefficients;</li>
+<li><span class="arithmatex">\(K_g\)</span> is the independent shear coefficient;</li>
+<li>the old API sets <span class="arithmatex">\(K_a=K_b=K_s\)</span>.</li>
 </ul>
+<p>The attribute name <code>lambda</code> is historical: it stores <span class="arithmatex">\(K_a\)</span> (or the shared
+<span class="arithmatex">\(K_s\)</span>), not a physical Lamé parameter.</p>
 <h3 id="stretch-energy">Stretch Energy</h3>
 <div class="arithmatex">\[
-\Psi_{\text{stretch}} = (I_{5u} - 1)^2 + \alpha_u \, r \, (I_{5u} - 1)^3
-  + (I_{5v} - 1)^2 + \alpha_v \, r \, (I_{5v} - 1)^3
+\phi(s) = (s-1)^2 + \eta \max(s-1,0)^3
 \]</div>
-<p>where <span class="arithmatex">\(r\)</span> is the strain rate parameter and:</p>
-<div class="arithmatex">\[
-\alpha_u = \begin{cases} 1, &amp; I_{5u} &gt; 1 \\ 0, &amp; I_{5u} \le 1 \end{cases}, \quad
-\alpha_v = \begin{cases} 1, &amp; I_{5v} &gt; 1 \\ 0, &amp; I_{5v} \le 1 \end{cases}
-\]</div>
+<p>where <span class="arithmatex">\(\eta\)</span> is the dimensionless <code>strain_rate</code> parameter shared by both
+directions. With equal coefficients, the legacy stretch term is
+<span class="arithmatex">\(\Psi_{\text{stretch}}=\phi(I_{5u})+\phi(I_{5v})\)</span>.</p>
 <p>The quadratic term penalizes both compression and extension. The cubic term is only active when the material is stretched beyond its rest length (<span class="arithmatex">\(I_5 &gt; 1\)</span>), providing asymmetric strain limiting that progressively stiffens under large extension.</p>
 <h3 id="shear-energy">Shear Energy</h3>
 <div class="arithmatex">\[
@@ -3602,33 +3661,81 @@ I_6 = \hat{\mathbf{a}}^T \mathbf{F}^T \mathbf{F} \hat{\mathbf{b}}
 <p>Let the stored vertex <code>thickness</code> be the one-sided collision offset <span class="arithmatex">\(r_t\)</span>, so
 the full material thickness is <span class="arithmatex">\(h=2r_t\)</span>. The effective coefficients are</p>
 <div class="arithmatex">\[
-k_{\mathrm{stretch}}
-= (\lambda_s+2\mu_s)h
-= \frac{E_s(2r_t)}{1-\nu_s^2},
+K_a = (\lambda_a+2\mu_a)h
+= \frac{E_a(2r_t)}{1-\nu_a^2},
 \qquad
-k_{\mathrm{shear}}
+K_b = (\lambda_b+2\mu_b)h
+= \frac{E_b(2r_t)}{1-\nu_b^2},
+\qquad
+K_g
 = \mu_{sh}
 = \frac{E_{sh}}{2(1+\nu_{sh})}.
 \]</div>
 <p>The total energy for each triangle element is:</p>
 <div class="arithmatex">\[
-E = \left(k_{\mathrm{stretch}}\Psi_{\mathrm{stretch}}
-          + k_{\mathrm{shear}}\Psi_{\mathrm{shear}}\right) A_0
+E = A_0\left(K_a\phi(I_{5u}) + K_b\phi(I_{5v}) + K_g I_6^2\right).
 \]</div>
 <p>Here <span class="arithmatex">\(A_0\)</span> is the rest area. Stretch uses the full shell thickness <span class="arithmatex">\(2r_t\)</span>.
 Shear remains an independently calibrated two-dimensional effective
 coefficient and is intentionally thickness-independent.</p>
-<p>The directional stretch metric is floored at <span class="arithmatex">\(10^{-12}\)</span> to guard the <span class="arithmatex">\(1/\sqrt{I_5}\)</span> singularity at fully collapsed triangles (finite huge response instead of NaN).</p>
+<p>The solver multiplies this physical energy and its spatial derivatives by
+<span class="arithmatex">\(\Delta t^2\)</span>. The gradient uses the matching directional weights; the solver
+Hessian weights the separately projected stretch blocks by <span class="arithmatex">\(K_a,K_b\)</span> and the
+projected shear contribution by <span class="arithmatex">\(K_g\)</span>. It is a positive-semidefinite
+approximation rather than the unprojected second derivative in compression.</p>
+<p>The squared stretch metric in derivative evaluation is floored at <span class="arithmatex">\(10^{-12}\)</span>
+to guard reciprocal stretch. The energy itself uses the unmodified norm.
+This is not a guarantee of a smooth or well-conditioned model at degenerate
+triangles.</p>
 <h2 id="parameters">Parameters</h2>
-<p>The strain rate parameter <span class="arithmatex">\(r\)</span> is set via the <code>strain_rate</code> argument of <code>apply_to</code> (default 100) and controls the strength of the cubic extension penalty.</p>
+<p>The strain rate parameter <span class="arithmatex">\(\eta\)</span> is set via the <code>strain_rate</code> argument of <code>apply_to</code> (default 100) and controls the strength of the cubic extension penalty.</p>
 <p>The one-sided thickness radius <span class="arithmatex">\(r_t\)</span> and mass density are inherited from the
 <a href="../finite_element/">Finite Element</a> base and set via <code>apply_to</code>.</p>
+<h3 id="directional-parameter-interpretation">Directional parameter interpretation</h3>
+<p>Each <span class="arithmatex">\((E,\nu)\)</span> pair retains the existing <code>ElasticModuli2D</code> coefficient
+conversion. Changing <span class="arithmatex">\(\nu_a\)</span> changes only <span class="arithmatex">\(K_a\)</span>, and changing <span class="arithmatex">\(\nu_b\)</span> changes
+only <span class="arithmatex">\(K_b\)</span>. These inputs do not calibrate physical Young's moduli and
+transverse Poisson ratios: there is no cross term between the normal strains.
+For example, <span class="arithmatex">\(\nu_a=0.3\)</span> does not prescribe 0.3% transverse contraction for
+1% axial extension. Shear, geometry and boundary conditions can still couple
+the resulting motion.</p>
+<p>A physical orthotropic plane-stress law would require normal-strain coupling
+and reciprocal Poisson parameters, <span class="arithmatex">\(\nu_{ab}/E_a=\nu_{ba}/E_b\)</span>. That is a
+different material calibration and is not introduced by this extension.</p>
+<p>Use finite positive directional E values, <span class="arithmatex">\(-1&lt;\nu&lt;1\)</span>, positive thickness
+and mass density, and <span class="arithmatex">\(\eta\ge0\)</span>. General material-domain validation remains
+incomplete; these are intended input domains, not a new validation guarantee.</p>
+<h3 id="api-compatibility">API compatibility</h3>
+<ul>
+<li><code>apply_to(sc, moduli, ...)</code> keeps all three channels derived from one pair.</li>
+<li><code>apply_to(sc, stretch_moduli, shear_moduli, ...)</code> keeps shared directional
+  stretch and independent shear.</li>
+<li>The new overload takes <code>stretch_a_moduli</code>, <code>stretch_b_moduli</code> and
+  <code>shear_moduli</code>, all required. In Python these three arguments and the trailing
+  settings are keyword-only; old positional calls and keyword names retain
+  their meanings.</li>
+<li>Defaults remain density 200 kg/m³, one-sided radius 0.001 m and strain rate</li>
+<li>The convenience modulus remains E=1 MPa, nu=0.49.</li>
+<li>Reapplying either old overload removes the independent b override and
+  restores shared stretch. Reapplying the new overload replaces all triangle
+  coefficients.</li>
+</ul>
+<p>See the <a href="../../../tutorial/cloth/">cloth tutorial</a> and sample
+<a href="https://github.com/spiriMirror/libuipc-samples/tree/main/examples/95_anisotropic_cloth"><code>95_anisotropic_cloth</code></a>
+for API usage and a biaxial comparison.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>triangles</code>:</p>
 <ul>
-<li><code>mu</code>: <span class="arithmatex">\(k_{\mathrm{shear}}\)</span>, the effective shear stiffness</li>
-<li><code>lambda</code>: <span class="arithmatex">\(k_{\mathrm{stretch}}\)</span>, the full-thickness stretch stiffness</li>
-</ul></div>
+<li><code>mu</code>: <span class="arithmatex">\(K_g\)</span>, the effective shear stiffness;</li>
+<li><code>lambda</code>: <span class="arithmatex">\(K_a\)</span>, or the shared <span class="arithmatex">\(K_s\)</span> when no b override is present;</li>
+<li>optional <code>stretch_stiffness_b</code>: <span class="arithmatex">\(K_b\)</span>. Absence means use that triangle's
+  <code>lambda</code> for both directions. The backend does not materialize this fallback,
+  preserving legacy per-triangle <code>lambda</code> edits;</li>
+<li><code>strain_rate</code>: <span class="arithmatex">\(\eta\)</span>. Legacy scenes without it use 100.</li>
+</ul>
+<p>Generic scene serialization preserves the optional attribute. Old scenes load
+with their original shared behavior in the new runtime; older runtimes do not
+understand the independent b coefficient in newly saved anisotropic scenes.</p></div>
 
 
 

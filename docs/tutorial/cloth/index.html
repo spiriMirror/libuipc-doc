@@ -812,6 +812,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#independent-directional-stretch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independent directional stretch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameter-meanings-and-defaults" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3402,6 +3413,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#independent-directional-stretch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independent directional stretch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parameter-meanings-and-defaults" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3688,6 +3710,64 @@ visual demo; production cloth needs enough resolution for the desired folds.</p>
 stretch material uses <code>E = 50 kPa</code>, while the shear material uses <code>E = 0.5
 kPa</code>; their Poisson ratios are both <code>0.40</code>. This is useful when a woven sheet
 should resist extension much more strongly than in-plane shear.</p>
+<h2 id="independent-directional-stretch">Independent directional stretch</h2>
+<p>Use the three-modulus overload to control stretch along the two existing
+rest-frame axes independently. All three moduli are required; the Python
+overload uses keywords to preserve the meaning of old positional calls.
+This standalone material-assignment example creates an XY triangle, where
+<code>a</code> is X and <code>b</code> is Y:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/uipc.h&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;uipc/constitution/strain_limiting_baraff_witkin.h&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">uipc</span><span class="o">::</span><span class="nn">constitution</span><span class="p">;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}};</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3i</span><span class="o">&gt;</span><span class="w"> </span><span class="n">triangles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}};</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="o">::</span><span class="n">trimesh</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span><span class="w"> </span><span class="n">triangles</span><span class="p">);</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">StrainLimitingBaraffWitkinShell</span><span class="p">().</span><span class="n">apply_to</span><span class="p">(</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="n">mesh</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="n">ElasticModuli2D</span><span class="o">::</span><span class="n">youngs_poisson</span><span class="p">(</span><span class="mf">2e5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.30</span><span class="p">),</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="n">ElasticModuli2D</span><span class="o">::</span><span class="n">youngs_poisson</span><span class="p">(</span><span class="mf">2e3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">),</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="n">ElasticModuli2D</span><span class="o">::</span><span class="n">youngs_poisson</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">),</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">trimesh</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">uipc.constitution</span><span class="w"> </span><span class="kn">import</span> <span class="n">ElasticModuli2D</span><span class="p">,</span> <span class="n">StrainLimitingBaraffWitkinShell</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">mesh</span> <span class="o">=</span> <span class="n">trimesh</span><span class="p">(</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]]),</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">StrainLimitingBaraffWitkinShell</span><span class="p">()</span><span class="o">.</span><span class="n">apply_to</span><span class="p">(</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">mesh</span><span class="p">,</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">stretch_a_moduli</span><span class="o">=</span><span class="n">ElasticModuli2D</span><span class="o">.</span><span class="n">youngs_poisson</span><span class="p">(</span><span class="mf">2e5</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">),</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">stretch_b_moduli</span><span class="o">=</span><span class="n">ElasticModuli2D</span><span class="o">.</span><span class="n">youngs_poisson</span><span class="p">(</span><span class="mf">2e3</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">),</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">shear_moduli</span><span class="o">=</span><span class="n">ElasticModuli2D</span><span class="o">.</span><span class="n">youngs_poisson</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">),</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">mass_density</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">strain_rate</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Each direction uses <span class="arithmatex">\(K_i=E_i(2r)/(1-\nu_i^2)\)</span>. These are coefficient controls:
+the nu inputs do not prescribe transverse contraction, and the energy has no
+normal-strain cross term. Shear and geometry can still couple the motion.
+Both directions share <code>strain_rate</code>; shear and bending retain their own
+parameters. Arbitrary UV/fiber orientations are not exposed by this API.</p>
+<p>Calling an old overload again restores shared stretch. Older saved scenes,
+which lack <code>stretch_stiffness_b</code>, also use shared stretch. The
+<a href="https://github.com/spiriMirror/libuipc-samples/tree/main/examples/95_anisotropic_cloth"><code>95_anisotropic_cloth</code></a>
+sample generates three cloth meshes and compares shared, a-stiff and b-stiff
+materials under equal biaxial traction, with GUI and headless validation.</p>
 <h2 id="parameter-meanings-and-defaults">Parameter meanings and defaults</h2>
 <table>
 <thead>
