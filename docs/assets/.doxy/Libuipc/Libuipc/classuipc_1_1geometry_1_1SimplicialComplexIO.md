@@ -55,10 +55,10 @@ _A class for reading and writing simplicial complex._
 |   | [**SimplicialComplexIO**](#function-simplicialcomplexio-15) () = default<br> |
 |   | [**SimplicialComplexIO**](#function-simplicialcomplexio-25) (const Matrix4x4 & pre\_transform) noexcept<br> |
 |   | [**SimplicialComplexIO**](#function-simplicialcomplexio-35) (const Transform & pre\_transform) noexcept<br> |
-|   | [**SimplicialComplexIO**](#function-simplicialcomplexio-45) (const [**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) &) = default<br> |
-|   | [**SimplicialComplexIO**](#function-simplicialcomplexio-55) ([**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) &&) = default<br> |
-|  [**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) & | [**operator=**](#function-operator) (const [**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) &) = default<br> |
-|  [**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) & | [**operator=**](#function-operator_1) ([**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) &&) = default<br> |
+|   | [**SimplicialComplexIO**](#function-simplicialcomplexio-45) (const SimplicialComplexIO &) = default<br> |
+|   | [**SimplicialComplexIO**](#function-simplicialcomplexio-55) (SimplicialComplexIO &&) = default<br> |
+|  SimplicialComplexIO & | [**operator=**](#function-operator) (const SimplicialComplexIO &) = default<br> |
+|  SimplicialComplexIO & | [**operator=**](#function-operator_1) (SimplicialComplexIO &&) = default<br> |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**read**](#function-read) (std::string\_view file\_name) <br>_A unified interface for reading a simplicial complex from a file, the file type is determined by the file extension._  |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**read\_msh**](#function-read_msh) (std::string\_view file\_name) <br>_Read a tetmesh from a .msh file._  |
 |  [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**read\_obj**](#function-read_obj) (std::string\_view file\_name) <br>_Read a trimesh, linemesh or particles from a .obj file._  |

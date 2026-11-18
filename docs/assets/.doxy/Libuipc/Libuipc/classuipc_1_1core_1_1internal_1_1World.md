@@ -61,8 +61,8 @@ Inherits the following classes: std::enable_shared_from_this< World >
 |  bool | [**is\_valid**](#function-is_valid) () const<br> |
 |  bool | [**recover**](#function-recover) (SizeT aim\_frame=~0ull) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
-|  [**SanityChecker**](classuipc_1_1core_1_1SanityChecker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
-|  const [**SanityChecker**](classuipc_1_1core_1_1SanityChecker.md) & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
+|  SanityChecker & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
+|  const SanityChecker & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
 |  void | [**sync**](#function-sync) () <br> |
 
 

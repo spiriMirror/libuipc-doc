@@ -45,6 +45,7 @@
 
 | Type | Name |
 | ---: | :--- |
+| struct | [**formatter&lt; uipc::core::Object &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1Object_01_4.md) &lt;&gt;<br> |
 | class | [**IObject**](classuipc_1_1core_1_1IObject.md) <br> |
 | class | [**Object**](classuipc_1_1core_1_1Object.md) <br> |
 | class | [**CGeometries**](classuipc_1_1core_1_1Object_1_1CGeometries.md) <br> |

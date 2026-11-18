@@ -52,14 +52,14 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**SubsceneElement**](#function-subsceneelement-14) () = default<br> |
-|   | [**SubsceneElement**](#function-subsceneelement-24) (const [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) &) = default<br> |
-|   | [**SubsceneElement**](#function-subsceneelement-34) ([**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) &&) = default<br> |
+|   | [**SubsceneElement**](#function-subsceneelement-24) (const SubsceneElement &) = default<br> |
+|   | [**SubsceneElement**](#function-subsceneelement-34) (SubsceneElement &&) = default<br> |
 |   | [**SubsceneElement**](#function-subsceneelement-44) (IndexT id, std::string\_view name) noexcept<br> |
 |  S&lt; [**geometry::AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**apply\_to**](#function-apply_to) ([**geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md) & geo) const<br> |
 |  IndexT | [**id**](#function-id) () noexcept const<br> |
 |  std::string\_view | [**name**](#function-name) () noexcept const<br> |
-|  [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) & | [**operator=**](#function-operator) (const [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) &) = default<br> |
-|  [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) & | [**operator=**](#function-operator_1) ([**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) &&) = default<br> |
+|  SubsceneElement & | [**operator=**](#function-operator) (const SubsceneElement &) = default<br> |
+|  SubsceneElement & | [**operator=**](#function-operator_1) (SubsceneElement &&) = default<br> |
 
 
 

@@ -45,7 +45,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr bool | [**IsScalar**](#variable-isscalar)   = `(N == 0)`<br> |
+|  bool | [**IsScalar**](#variable-isscalar)   = `(N == 0)`<br> |
 
 
 
@@ -64,17 +64,17 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**SimplicialComplexAttributes**](#function-simplicialcomplexattributes-25) (const [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) & o) = default<br> |
-|   | [**SimplicialComplexAttributes**](#function-simplicialcomplexattributes-35) ([**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) && o) = default<br> |
-|   | [**SimplicialComplexAttributes**](#function-simplicialcomplexattributes-45) (const [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md)&lt; OtherIsConst, N &gt; & o) noexcept<br> |
+|   | [**SimplicialComplexAttributes**](#function-simplicialcomplexattributes-25) (const SimplicialComplexAttributes & o) = default<br> |
+|   | [**SimplicialComplexAttributes**](#function-simplicialcomplexattributes-35) (SimplicialComplexAttributes && o) = default<br> |
+|   | [**SimplicialComplexAttributes**](#function-simplicialcomplexattributes-45) (const SimplicialComplexAttributes&lt; OtherIsConst, N &gt; & o) noexcept<br> |
 |  void | [**clear**](#function-clear) () <br> |
-|  void | [**copy\_from**](#function-copy_from) ([**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md)&lt; true, N &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
+|  void | [**copy\_from**](#function-copy_from) (SimplicialComplexAttributes&lt; true, N &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
 |  decltype(auto) | [**create**](#function-create) (std::string\_view name, const T & default\_value={}, bool allow\_destroy=true) <br> |
 |  void | [**destroy**](#function-destroy) (std::string\_view name) <br> |
 |  decltype(auto) | [**find**](#function-find-12) (std::string\_view name) <br>_Find an attribute by type and name, if the attribute does not exist, return nullptr._  |
 |  decltype(auto) | [**find**](#function-find-22) (std::string\_view name) const<br>_Find an attribute by type and name, if the attribute does not exist, return nullptr._  |
-|  [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) & | [**operator=**](#function-operator) (const [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) & o) = default<br> |
-|  [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) & | [**operator=**](#function-operator_1) ([**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) && o) = default<br> |
+|  SimplicialComplexAttributes & | [**operator=**](#function-operator) (const SimplicialComplexAttributes & o) = default<br> |
+|  SimplicialComplexAttributes & | [**operator=**](#function-operator_1) (SimplicialComplexAttributes && o) = default<br> |
 |  void | [**reserve**](#function-reserve) (SizeT size) <br> |
 |  void | [**resize**](#function-resize) (SizeT size) <br> |
 |  decltype(auto) | [**share**](#function-share) (std::string\_view name, const [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; & slot, bool allow\_destroy=true) <br> |
@@ -118,7 +118,8 @@
 ### typedef AutoAttributeCollection 
 
 ```C++
-using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCollection =  std::conditional_t<IsConst, const AttributeCollection, AttributeCollection>;
+using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCollection = 
+        std::conditional_t<IsConst, const AttributeCollection, AttributeCollection>;
 ```
 
 
@@ -131,7 +132,7 @@ using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::AutoAttributeCo
 ### typedef TopoValueT 
 
 ```C++
-using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  std::conditional_t<IsScalar, IndexT, Vector<IndexT, N + 1> >;
+using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  std::conditional_t<IsScalar, IndexT, Vector<IndexT, N + 1>>;
 ```
 
 
@@ -146,7 +147,7 @@ using uipc::geometry::SimplicialComplexAttributes< IsConst, N >::TopoValueT =  s
 ### variable IsScalar 
 
 ```C++
-constexpr bool uipc::geometry::SimplicialComplexAttributes< IsConst, N >::IsScalar;
+bool uipc::geometry::SimplicialComplexAttributes< IsConst, N >::IsScalar;
 ```
 
 
@@ -193,7 +194,7 @@ uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes (
 ```C++
 template<bool OtherIsConst>
 inline uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes (
-    const SimplicialComplexAttributes < OtherIsConst, N > & o
+    const SimplicialComplexAttributes< OtherIsConst, N > & o
 ) noexcept
 ```
 
@@ -228,7 +229,7 @@ inline void uipc::geometry::SimplicialComplexAttributes::clear ()
 
 ```C++
 inline void uipc::geometry::SimplicialComplexAttributes::copy_from (
-    SimplicialComplexAttributes < true, N > other,
+    SimplicialComplexAttributes< true, N > other,
     const AttributeCopy & copy={},
     span< const string > include_names={},
     span< const string > exclude_names={}
@@ -517,7 +518,7 @@ class uipc::geometry::SimplicialComplexAttributes::SimplicialComplexAttributes (
 
 ```C++
 class uipc::geometry::SimplicialComplexAttributes::formatter< SimplicialComplexAttributes< IsConst, N > > (
-    fmt::formatter< SimplicialComplexAttributes < IsConst, N > >
+    fmt::formatter< SimplicialComplexAttributes< IsConst, N > >
 ) 
 ```
 

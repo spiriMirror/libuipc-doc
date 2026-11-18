@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="soft__vertex__stitch_8h" kind="file" language="C++">
     <compoundname>soft_vertex_stitch.h</compoundname>
     <includes refid="inter__primitive__constitution_8h" local="no">uipc/constitution/inter_primitive_constitution.h</includes>
@@ -427,16 +427,16 @@
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;uipc/core/contact_element.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">uipc::constitution</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="classuipc_1_1constitution_1_1SoftVertexStitch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/><ref refid="classuipc_1_1constitution_1_1SoftVertexStitch" kindref="compound">SoftVertexStitch</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kindref="compound">InterPrimitiveConstitution</ref></highlight></codeline>
+<codeline lineno="8" refid="classuipc_1_1constitution_1_1SoftVertexStitch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UIPC_CONSTITUTION_API<sp/>SoftVertexStitch<sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kindref="compound">InterPrimitiveConstitution</ref></highlight></codeline>
 <codeline lineno="9"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kindref="compound">Base</ref><sp/>=<sp/><ref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kindref="compound">InterPrimitiveConstitution</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Base<sp/>=<sp/><ref refid="classuipc_1_1constitution_1_1InterPrimitiveConstitution" kindref="compound">InterPrimitiveConstitution</ref>;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">SlotTuple<sp/>=</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::tuple&lt;S&lt;geometry::SimplicialComplexSlot&gt;,<sp/>S&lt;geometry::SimplicialComplexSlot&gt;&gt;;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ContactElementTuple<sp/>=<sp/>std::tuple&lt;core::ContactElement,<sp/>core::ContactElement&gt;;</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1constitution_1_1SoftVertexStitch" kindref="compound">SoftVertexStitch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json&amp;<sp/>config<sp/>=<sp/>default_config());</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>SoftVertexStitch(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Json&amp;<sp/>config<sp/>=<sp/>default_config());</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29" refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a1936d4b5749e89af17f9d0ea121c540b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref><sp/><ref refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a1936d4b5749e89af17f9d0ea121c540b" kindref="member">create_geometry</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SlotTuple&amp;<sp/><sp/><sp/><sp/><sp/>aim_geo_slots,</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;const<sp/>Vector2i&gt;<sp/>stitched_vert_ids,</highlight></codeline>
@@ -444,7 +444,7 @@
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Float<sp/>rest_length<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.0)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref><sp/>create_geometry(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SlotTuple&amp;<sp/><sp/><sp/><sp/><sp/>aim_geo_slots,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">geometry::Geometry</ref><sp/><ref refid="classuipc_1_1constitution_1_1SoftVertexStitch_1a1936d4b5749e89af17f9d0ea121c540b" kindref="member">create_geometry</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SlotTuple&amp;<sp/><sp/><sp/><sp/><sp/>aim_geo_slots,</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;const<sp/>Vector2i&gt;<sp/>stitched_vert_ids,</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ContactElementTuple&amp;<sp/>contact_elements,</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Float<sp/>kappa<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1e6,</highlight></codeline>
@@ -455,7 +455,7 @@
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>U64<sp/><sp/>get_uid()<sp/>const<sp/>noexcept<sp/>override;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Json<sp/>m_config;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::constitution</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/constitution/soft_vertex_stitch.h"/>
   </compounddef>

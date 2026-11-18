@@ -54,17 +54,17 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**ConfigAttributesT**](#function-configattributest-25) (AutoAttributeCollection & attributes) <br> |
-|   | [**ConfigAttributesT**](#function-configattributest-35) (const [**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md)&lt; OtherIsConst &gt; & o) noexcept<br> |
-|   | [**ConfigAttributesT**](#function-configattributest-45) (const [**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md) & o) = default<br> |
-|   | [**ConfigAttributesT**](#function-configattributest-55) ([**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md) && o) = default<br> |
-|  void | [**build\_from**](#function-build_from) (const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & ac) <br> |
-|  void | [**copy\_from**](#function-copy_from) ([**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md)&lt; true &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
+|   | [**ConfigAttributesT**](#function-configattributest-35) (const ConfigAttributesT&lt; OtherIsConst &gt; & o) noexcept<br> |
+|   | [**ConfigAttributesT**](#function-configattributest-45) (const ConfigAttributesT & o) = default<br> |
+|   | [**ConfigAttributesT**](#function-configattributest-55) (ConfigAttributesT && o) = default<br> |
+|  void | [**build\_from**](#function-build_from) (const AttributeCollection & ac) <br> |
+|  void | [**copy\_from**](#function-copy_from) (ConfigAttributesT&lt; true &gt; other, const AttributeCopy & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
 |  decltype(auto) | [**create**](#function-create) (std::string\_view name, const T & init\_value={}) <br>_Create an attribute with the given name._  |
 |  void | [**destroy**](#function-destroy) (std::string\_view name) <br> |
 |  auto | [**find**](#function-find) (std::string\_view name) <br>_Find an attribute by type and name, if the attribute does not exist, return nullptr._  |
-|  [**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md) & | [**operator=**](#function-operator) (const [**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md) & o) = default<br> |
-|  [**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md) & | [**operator=**](#function-operator_1) ([**ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md) && o) = default<br> |
-|  decltype(auto) | [**share**](#function-share) (std::string\_view name, const [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; & slot) <br> |
+|  ConfigAttributesT & | [**operator=**](#function-operator) (const ConfigAttributesT & o) = default<br> |
+|  ConfigAttributesT & | [**operator=**](#function-operator_1) (ConfigAttributesT && o) = default<br> |
+|  decltype(auto) | [**share**](#function-share) (std::string\_view name, const AttributeSlot&lt; T &gt; & slot) <br> |
 |  Json | [**to\_json**](#function-to_json) () const<br> |
 |  void | [**update\_from**](#function-update_from) (const [**geometry::AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & commit) <br> |
 
@@ -120,7 +120,7 @@ inline uipc::core::Scene::ConfigAttributesT::ConfigAttributesT (
 ```C++
 template<bool OtherIsConst>
 inline uipc::core::Scene::ConfigAttributesT::ConfigAttributesT (
-    const ConfigAttributesT < OtherIsConst > & o
+    const ConfigAttributesT< OtherIsConst > & o
 ) noexcept
 ```
 
@@ -180,7 +180,7 @@ inline void uipc::core::Scene::ConfigAttributesT::build_from (
 
 ```C++
 inline void uipc::core::Scene::ConfigAttributesT::copy_from (
-    ConfigAttributesT < true > other,
+    ConfigAttributesT< true > other,
     const AttributeCopy & copy={},
     span< const string > include_names={},
     span< const string > exclude_names={}
@@ -287,7 +287,7 @@ ConfigAttributesT & uipc::core::Scene::ConfigAttributesT::operator= (
 template<typename T>
 inline decltype(auto) uipc::core::Scene::ConfigAttributesT::share (
     std::string_view name,
-    const AttributeSlot < T > & slot
+    const AttributeSlot< T > & slot
 ) 
 ```
 
@@ -332,7 +332,7 @@ inline void uipc::core::Scene::ConfigAttributesT::update_from (
 
 ```C++
 struct uipc::core::Scene::ConfigAttributesT::formatter< ConfigAttributesT< IsConst > > (
-    fmt::formatter< ConfigAttributesT < IsConst > >
+    fmt::formatter< ConfigAttributesT< IsConst > >
 ) 
 ```
 

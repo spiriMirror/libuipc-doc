@@ -37,6 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
+| class | [**GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) <br> |
 | class | [**SimplicialComplexIO**](classuipc_1_1geometry_1_1SimplicialComplexIO.md) <br>_A class for reading and writing simplicial complex._  |
 
 

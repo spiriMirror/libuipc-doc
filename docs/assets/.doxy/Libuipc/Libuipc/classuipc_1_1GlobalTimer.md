@@ -52,9 +52,9 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**GlobalTimer**](#function-globaltimer-12) (std::string\_view name="GlobalTimer") <br> |
-|   | [**GlobalTimer**](#function-globaltimer-22) (const [**GlobalTimer**](classuipc_1_1GlobalTimer.md) &) = delete<br> |
+|   | [**GlobalTimer**](#function-globaltimer-22) (const GlobalTimer &) = delete<br> |
 |  void | [**clear**](#function-clear) () <br> |
-|  [**GlobalTimer**](classuipc_1_1GlobalTimer.md) & | [**operator=**](#function-operator) (const [**GlobalTimer**](classuipc_1_1GlobalTimer.md) &) = delete<br> |
+|  GlobalTimer & | [**operator=**](#function-operator) (const GlobalTimer &) = delete<br> |
 |  void | [**print\_merged\_timings**](#function-print_merged_timings) (std::ostream & o=std::cout) <br> |
 |  void | [**print\_timings**](#function-print_timings) (std::ostream & o=std::cout) <br> |
 |  Json | [**report\_as\_json**](#function-report_as_json) () <br> |
@@ -67,7 +67,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**GlobalTimer**](classuipc_1_1GlobalTimer.md) \* | [**current**](#function-current) () <br> |
+|  GlobalTimer \* | [**current**](#function-current) () <br> |
 
 
 

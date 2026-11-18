@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1Geometry" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::Geometry</compoundname>
     <basecompoundref refid="classuipc_1_1geometry_1_1IGeometry" prot="public" virt="non-virtual">uipc::geometry::IGeometry</basecompoundref>
@@ -7,8 +7,8 @@
     <derivedcompoundref refid="classuipc_1_1geometry_1_1ImplicitGeometry" prot="public" virt="non-virtual">uipc::geometry::ImplicitGeometry</derivedcompoundref>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1SimplicialComplex" prot="public" virt="non-virtual">uipc::geometry::SimplicialComplex</derivedcompoundref>
     <includes refid="geometry_2geometry_8h" local="no">geometry.h</includes>
-    <innerclass refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" prot="public">uipc::geometry::Geometry::InstanceAttributesT</innerclass>
     <innerclass refid="classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT" prot="public">uipc::geometry::Geometry::MetaAttributesT</innerclass>
+    <innerclass refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" prot="public">uipc::geometry::Geometry::InstanceAttributesT</innerclass>
     <sectiondef kind="public-type">
       <memberdef kind="typedef" id="classuipc_1_1geometry_1_1Geometry_1aeff3a87dbc61dd448bb575718d848cc0" prot="public" static="no">
         <type><ref refid="classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT" kindref="compound">MetaAttributesT</ref>&lt; false &gt;</type>
@@ -80,7 +80,7 @@
         <name>GeometryFriend</name>
         <qualifiedname>uipc::geometry::Geometry::GeometryFriend</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1GeometryFriend" kindref="compound">GeometryFriend</ref></type>
+          <type>GeometryFriend</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -97,7 +97,7 @@
         <name>GeometryCommit</name>
         <qualifiedname>uipc::geometry::Geometry::GeometryCommit</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1GeometryCommit" kindref="compound">GeometryCommit</ref></type>
+          <type>GeometryCommit</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -174,7 +174,7 @@
         <name>Geometry</name>
         <qualifiedname>uipc::geometry::Geometry::Geometry</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <type>const Geometry &amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -192,7 +192,7 @@
         <name>Geometry</name>
         <qualifiedname>uipc::geometry::Geometry::Geometry</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &amp;&amp;</type>
+          <type>Geometry &amp;&amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -204,13 +204,13 @@
         <location file="include/uipc/geometry/geometry.h" line="287" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a423d4829283031ce5187af7dd96e36aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <type>Geometry &amp;</type>
         <definition>Geometry &amp; uipc::geometry::Geometry::operator=</definition>
         <argsstring>(const Geometry &amp;o)=delete</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::Geometry::operator=</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+          <type>const Geometry &amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -222,13 +222,13 @@
         <location file="include/uipc/geometry/geometry.h" line="290" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a544f93f60aad58d0e786ad7a20b3e198" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &amp;</type>
+        <type>Geometry &amp;</type>
         <definition>Geometry &amp; uipc::geometry::Geometry::operator=</definition>
         <argsstring>(Geometry &amp;&amp;o)=delete</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::Geometry::operator=</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &amp;&amp;</type>
+          <type>Geometry &amp;&amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -239,7 +239,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="291" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a63fa2b147f6291979058c8904c9a7e05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a63fa2b147f6291979058c8904c9a7e05" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>MetaAttributes</type>
         <definition>MetaAttributes uipc::geometry::Geometry::meta</definition>
         <argsstring>()</argsstring>
@@ -257,7 +257,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="298" column="22"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a08509c0019bf17e77e90e93b0ae3d65b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a08509c0019bf17e77e90e93b0ae3d65b" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>CMetaAttributes</type>
         <definition>CMetaAttributes uipc::geometry::Geometry::meta</definition>
         <argsstring>() const</argsstring>
@@ -271,7 +271,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="299" column="22"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a2c69a90d531766e530b07283cc658bd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a2c69a90d531766e530b07283cc658bd7" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>InstanceAttributes</type>
         <definition>InstanceAttributes uipc::geometry::Geometry::instances</definition>
         <argsstring>()</argsstring>
@@ -289,7 +289,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="307" column="26"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1afdd40b40772dacce92a29da6c77c6b77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1afdd40b40772dacce92a29da6c77c6b77" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>CInstanceAttributes</type>
         <definition>CInstanceAttributes uipc::geometry::Geometry::instances</definition>
         <argsstring>() const</argsstring>
@@ -303,10 +303,10 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="308" column="26"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a7fe466c99370a0ce5d6098b08d96972a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a7fe466c99370a0ce5d6098b08d96972a" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>std::derived_from&lt; <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &gt;</type>
+            <type>std::derived_from&lt; Geometry &gt;</type>
             <declname>T</declname>
             <defname>T</defname>
           </param>
@@ -324,10 +324,10 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="311" column="8"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a1a01fb0cff0db2e3077e73bcad0ded23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a1a01fb0cff0db2e3077e73bcad0ded23" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>std::derived_from&lt; <ref refid="classuipc_1_1geometry_1_1Geometry" kindref="compound">Geometry</ref> &gt;</type>
+            <type>std::derived_from&lt; Geometry &gt;</type>
             <declname>T</declname>
             <defname>T</defname>
           </param>
@@ -442,7 +442,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="343" column="7"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a963276013347db9b2a36d191d7ce6a77" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1a963276013347db9b2a36d191d7ce6a77" prot="protected" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
         <definition>S&lt; const AttributeCollection &gt; uipc::geometry::Geometry::find</definition>
         <argsstring>(std::string_view name) const</argsstring>
@@ -475,7 +475,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="352" column="8"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1aad19797db112953054c1bf925b1fdef5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1aad19797db112953054c1bf925b1fdef5" prot="protected" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
         <definition>S&lt; AttributeCollection &gt; uipc::geometry::Geometry::find</definition>
         <argsstring>(std::string_view name)</argsstring>
@@ -586,7 +586,7 @@
         <qualifiedname>uipc::geometry::Geometry::do_update_from</qualifiedname>
         <reimplements refid="classuipc_1_1geometry_1_1IGeometry_1a29b5d38dbf41388d5c187b241ef37775">do_update_from</reimplements>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1GeometryCommit" kindref="compound">GeometryCommit</ref> &amp;</type>
+          <type>const GeometryCommit &amp;</type>
           <declname>commit</declname>
         </param>
         <briefdescription>

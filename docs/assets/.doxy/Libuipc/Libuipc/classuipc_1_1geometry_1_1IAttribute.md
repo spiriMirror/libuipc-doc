@@ -90,9 +90,9 @@ Inherited by the following classes: [uipc::geometry::Attribute](classuipc_1_1geo
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**do\_clear**](#function-do_clear) () = 0<br> |
-| virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone**](#function-do_clone) () const = 0<br> |
-| virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone\_empty**](#function-do_clone_empty) () const = 0<br> |
-| virtual void | [**do\_copy\_from**](#function-do_copy_from) (const [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) = 0<br> |
+| virtual S&lt; IAttribute &gt; | [**do\_clone**](#function-do_clone) () const = 0<br> |
+| virtual S&lt; IAttribute &gt; | [**do\_clone\_empty**](#function-do_clone_empty) () const = 0<br> |
+| virtual void | [**do\_copy\_from**](#function-do_copy_from) (const IAttribute & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) = 0<br> |
 | virtual void | [**do\_from\_json**](#function-do_from_json) (const Json & j) = 0<br> |
 | virtual void | [**do\_from\_json\_array**](#function-do_from_json_array) (const Json & j) = 0<br> |
 | virtual void | [**do\_reorder**](#function-do_reorder) (span&lt; const SizeT &gt; O) noexcept = 0<br> |

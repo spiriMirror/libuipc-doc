@@ -66,9 +66,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**EngineStatus**](classuipc_1_1core_1_1EngineStatus.md) | [**error**](#function-error) (std::string\_view msg) <br> |
-|  [**EngineStatus**](classuipc_1_1core_1_1EngineStatus.md) | [**info**](#function-info) (std::string\_view msg) <br> |
-|  [**EngineStatus**](classuipc_1_1core_1_1EngineStatus.md) | [**warning**](#function-warning) (std::string\_view msg) <br> |
+|  EngineStatus | [**error**](#function-error) (std::string\_view msg) <br> |
+|  EngineStatus | [**info**](#function-info) (std::string\_view msg) <br> |
+|  EngineStatus | [**warning**](#function-warning) (std::string\_view msg) <br> |
 
 
 

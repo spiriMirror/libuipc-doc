@@ -52,7 +52,7 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**ContactTabular**](#function-contacttabular-12) () noexcept<br> |
-|   | [**ContactTabular**](#function-contacttabular-22) (const [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) &) = delete<br> |
+|   | [**ContactTabular**](#function-contacttabular-22) (const ContactTabular &) = delete<br> |
 |  [**ContactModel**](classuipc_1_1core_1_1ContactModel.md) | [**at**](#function-at) (IndexT i, IndexT j) const<br> |
 |  ContactModelCollection | [**contact\_models**](#function-contact_models-12) () noexcept<br> |
 |  CContactModelCollection | [**contact\_models**](#function-contact_models-22) () noexcept const<br> |
@@ -63,7 +63,7 @@
 |  bool | [**default\_model\_is\_user\_set**](#function-default_model_is_user_set) () noexcept const<br>_Whether default\_model(...) was ever called by the user._  |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
 |  IndexT | [**insert**](#function-insert) (const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & L, const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & R, Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
-|  [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) & | [**operator=**](#function-operator) (const [**ContactTabular**](classuipc_1_1core_1_1ContactTabular.md) &) = delete<br> |
+|  ContactTabular & | [**operator=**](#function-operator) (const ContactTabular &) = delete<br> |
 |   | [**~ContactTabular**](#function-contacttabular) () noexcept<br> |
 
 

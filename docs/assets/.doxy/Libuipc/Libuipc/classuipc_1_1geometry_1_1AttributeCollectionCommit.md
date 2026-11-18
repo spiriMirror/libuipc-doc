@@ -52,10 +52,10 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**AttributeCollectionCommit**](#function-attributecollectioncommit-14) () = default<br> |
-|   | [**AttributeCollectionCommit**](#function-attributecollectioncommit-24) (const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & dst) <br> |
-|   | [**AttributeCollectionCommit**](#function-attributecollectioncommit-34) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & other) = default<br> |
-|  const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & | [**attribute\_collection**](#function-attribute_collection) () noexcept const<br> |
-|  [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & | [**operator=**](#function-operator) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & other) = delete<br> |
+|   | [**AttributeCollectionCommit**](#function-attributecollectioncommit-24) (const AttributeCollection & dst) <br> |
+|   | [**AttributeCollectionCommit**](#function-attributecollectioncommit-34) (const AttributeCollectionCommit & other) = default<br> |
+|  const AttributeCollection & | [**attribute\_collection**](#function-attribute_collection) () noexcept const<br> |
+|  AttributeCollectionCommit & | [**operator=**](#function-operator) (const AttributeCollectionCommit & other) = delete<br> |
 |  span&lt; const std::string &gt; | [**removed\_names**](#function-removed_names) () noexcept const<br> |
 |  IndexT | [**target\_size**](#function-target_size) () noexcept const<br> |
 

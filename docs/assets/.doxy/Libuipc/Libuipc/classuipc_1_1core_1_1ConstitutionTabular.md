@@ -52,9 +52,9 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**ConstitutionTabular**](#function-constitutiontabular-12) () noexcept<br> |
-|   | [**ConstitutionTabular**](#function-constitutiontabular-22) (const [**ConstitutionTabular**](classuipc_1_1core_1_1ConstitutionTabular.md) &) = delete<br> |
+|   | [**ConstitutionTabular**](#function-constitutiontabular-22) (const ConstitutionTabular &) = delete<br> |
 |  void | [**insert**](#function-insert) (const [**constitution::IConstitution**](classuipc_1_1constitution_1_1IConstitution.md) & constitution) <br> |
-|  [**ConstitutionTabular**](classuipc_1_1core_1_1ConstitutionTabular.md) & | [**operator=**](#function-operator) (const [**ConstitutionTabular**](classuipc_1_1core_1_1ConstitutionTabular.md) &) = delete<br> |
+|  ConstitutionTabular & | [**operator=**](#function-operator) (const ConstitutionTabular &) = delete<br> |
 |  const set&lt; std::string &gt; & | [**types**](#function-types) () noexcept const<br> |
 |  span&lt; U64 &gt; | [**uids**](#function-uids) () noexcept const<br> |
 |   | [**~ConstitutionTabular**](#function-constitutiontabular) () noexcept<br> |

@@ -52,7 +52,7 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**ObjectCollectionSnapshot**](#function-objectcollectionsnapshot-12) () = default<br> |
-|   | [**ObjectCollectionSnapshot**](#function-objectcollectionsnapshot-22) (const [**ObjectCollection**](classuipc_1_1core_1_1ObjectCollection.md) & dst) <br> |
+|   | [**ObjectCollectionSnapshot**](#function-objectcollectionsnapshot-22) (const ObjectCollection & dst) <br> |
 
 
 

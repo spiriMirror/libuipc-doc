@@ -61,7 +61,7 @@
 |   | [**operator bool**](#function-operator-bool) () noexcept const<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
 |  SizeT | [**size\_in\_bytes**](#function-size_in_bytes) () noexcept const<br> |
-|  [**BufferView**](classuipc_1_1backend_1_1BufferView.md) | [**subview**](#function-subview) (SizeT offset, SizeT element\_count) const<br> |
+|  BufferView | [**subview**](#function-subview) (SizeT offset, SizeT element\_count) const<br> |
 
 
 

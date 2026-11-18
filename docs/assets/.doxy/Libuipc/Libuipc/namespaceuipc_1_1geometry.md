@@ -57,6 +57,7 @@
 | class | [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) <br> |
 | class | [**GeometryFactory**](classuipc_1_1geometry_1_1GeometryFactory.md) <br> |
 | class | [**GeometryFriend**](classuipc_1_1geometry_1_1GeometryFriend.md) &lt;typename T&gt;<br> |
+| class | [**GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) <br> |
 | class | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) <br> |
 | class | [**GeometrySlotT**](classuipc_1_1geometry_1_1GeometrySlotT.md) &lt;GeometryT&gt;<br> |
 | class | [**GeometrySlotT&lt; Geometry &gt;**](classuipc_1_1geometry_1_1GeometrySlotT_3_01Geometry_01_4.md) &lt;&gt;<br> |
@@ -212,7 +213,7 @@ enum uipc::geometry::GeometrySlotState {
 ### typedef ImplicitGeometrySlot 
 
 ```C++
-using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeometry>;
+using uipc::geometry::ImplicitGeometrySlot =  GeometrySlotT<ImplicitGeometry>;
 ```
 
 
@@ -225,7 +226,7 @@ using uipc::geometry::ImplicitGeometrySlot = typedef GeometrySlotT<ImplicitGeome
 ### typedef SimplicialComplexSlot 
 
 ```C++
-using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialComplex>;
+using uipc::geometry::SimplicialComplexSlot =  GeometrySlotT<SimplicialComplex>;
 ```
 
 
@@ -238,7 +239,7 @@ using uipc::geometry::SimplicialComplexSlot = typedef GeometrySlotT<SimplicialCo
 ### typedef TimePoint 
 
 ```C++
-using uipc::geometry::TimePoint = typedef std::chrono::time_point<std::chrono::high_resolution_clock>;
+using uipc::geometry::TimePoint =  std::chrono::time_point<std::chrono::high_resolution_clock>;
 ```
 
 

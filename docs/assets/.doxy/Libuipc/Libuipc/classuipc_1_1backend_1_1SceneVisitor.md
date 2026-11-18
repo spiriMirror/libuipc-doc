@@ -53,8 +53,8 @@
 | ---: | :--- |
 |   | [**SceneVisitor**](#function-scenevisitor-14) ([**core::Scene**](classuipc_1_1core_1_1Scene.md) & scene) noexcept<br> |
 |   | [**SceneVisitor**](#function-scenevisitor-24) ([**core::internal::Scene**](classuipc_1_1core_1_1internal_1_1Scene.md) & scene) noexcept<br> |
-|   | [**SceneVisitor**](#function-scenevisitor-34) (const [**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) &) = delete<br> |
-|   | [**SceneVisitor**](#function-scenevisitor-44) ([**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) &&) = default<br> |
+|   | [**SceneVisitor**](#function-scenevisitor-34) (const SceneVisitor &) = delete<br> |
+|   | [**SceneVisitor**](#function-scenevisitor-44) (SceneVisitor &&) = default<br> |
 |  void | [**begin\_pending**](#function-begin_pending) () noexcept<br> |
 |  const [**geometry::AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & | [**config**](#function-config) () noexcept const<br> |
 |  const [**core::ConstitutionTabular**](classuipc_1_1core_1_1ConstitutionTabular.md) & | [**constitution\_tabular**](#function-constitution_tabular-12) () noexcept const<br> |
@@ -69,8 +69,8 @@
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**geometries**](#function-geometries) () noexcept const<br> |
 |  [**core::Scene**](classuipc_1_1core_1_1Scene.md) | [**get**](#function-get) () noexcept const<br> |
 |  bool | [**is\_pending**](#function-is_pending) () noexcept const<br> |
-|  [**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) & | [**operator=**](#function-operator) (const [**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) &) = delete<br> |
-|  [**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) & | [**operator=**](#function-operator_1) ([**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) &&) = delete<br> |
+|  SceneVisitor & | [**operator=**](#function-operator) (const SceneVisitor &) = delete<br> |
+|  SceneVisitor & | [**operator=**](#function-operator_1) (SceneVisitor &&) = delete<br> |
 |  span&lt; IndexT &gt; | [**pending\_destroy\_ids**](#function-pending_destroy_ids) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**pending\_geometries**](#function-pending_geometries) () noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**pending\_rest\_geometries**](#function-pending_rest_geometries) () noexcept const<br> |

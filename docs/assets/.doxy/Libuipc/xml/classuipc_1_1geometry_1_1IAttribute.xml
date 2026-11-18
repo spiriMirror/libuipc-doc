@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1IAttribute" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>uipc::geometry::IAttribute</compoundname>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1Attribute" prot="public" virt="non-virtual">uipc::geometry::Attribute&lt; T &gt;</derivedcompoundref>
@@ -17,7 +17,7 @@
         <name>AttributeFriend</name>
         <qualifiedname>uipc::geometry::IAttribute::AttributeFriend</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeFriend" kindref="compound">AttributeFriend</ref></type>
+          <type>AttributeFriend</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -34,7 +34,7 @@
         <name>AttributeCollection</name>
         <qualifiedname>uipc::geometry::IAttribute::AttributeCollection</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref></type>
+          <type>AttributeCollection</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -51,7 +51,7 @@
         <name>IAttributeSlot</name>
         <qualifiedname>uipc::geometry::IAttribute::IAttributeSlot</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref></type>
+          <type>IAttributeSlot</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -91,7 +91,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute.h" line="25" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1ab46f1f01551144af3ef5714e0669cf14" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1ab46f1f01551144af3ef5714e0669cf14" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
         <definition>SizeT uipc::geometry::IAttribute::size</definition>
         <argsstring>() const noexcept</argsstring>
@@ -106,7 +106,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute.h" line="30" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1a082de0f7755edc46b08afcbb5454dfa9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1a082de0f7755edc46b08afcbb5454dfa9" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::IAttribute::to_json</definition>
         <argsstring>(SizeT i) const noexcept</argsstring>
@@ -124,7 +124,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute.h" line="32" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1aaa0fcb020ce3ef32e0cb3cdce8b76348" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1aaa0fcb020ce3ef32e0cb3cdce8b76348" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::IAttribute::to_json</definition>
         <argsstring>() const noexcept</argsstring>
@@ -174,7 +174,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute.h" line="38" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1a8cead22cebc85814e2882bd9dcca4417" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1a8cead22cebc85814e2882bd9dcca4417" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string_view</type>
         <definition>std::string_view uipc::geometry::IAttribute::type_name</definition>
         <argsstring>() const noexcept</argsstring>
@@ -228,7 +228,7 @@
         <location file="include/uipc/geometry/attribute.h" line="49" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1ac6444381b6b67b38afb3b6f070d57848" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &gt;</type>
+        <type>S&lt; IAttribute &gt;</type>
         <definition>S&lt; IAttribute &gt; uipc::geometry::IAttribute::clone</definition>
         <argsstring>() const</argsstring>
         <name>clone</name>
@@ -242,7 +242,7 @@
         <location file="include/uipc/geometry/attribute.h" line="50" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1ae4d2e102d3fab1878be2eb9fe64ba7ce" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &gt;</type>
+        <type>S&lt; IAttribute &gt;</type>
         <definition>S&lt; IAttribute &gt; uipc::geometry::IAttribute::clone_empty</definition>
         <argsstring>() const</argsstring>
         <name>clone_empty</name>
@@ -294,7 +294,7 @@
         <name>copy_from</name>
         <qualifiedname>uipc::geometry::IAttribute::copy_from</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &amp;</type>
+          <type>const IAttribute &amp;</type>
           <declname>other</declname>
         </param>
         <param>
@@ -395,7 +395,7 @@
         <location file="include/uipc/geometry/attribute.h" line="62" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1a0947e512dd6ea551d11ec0928ecf4e71" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &gt;</type>
+        <type>S&lt; IAttribute &gt;</type>
         <definition>virtual S&lt; IAttribute &gt; uipc::geometry::IAttribute::do_clone</definition>
         <argsstring>() const =0</argsstring>
         <name>do_clone</name>
@@ -410,7 +410,7 @@
         <location file="include/uipc/geometry/attribute.h" line="63" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttribute_1a75988befdb7b0105b440941d895abc23" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &gt;</type>
+        <type>S&lt; IAttribute &gt;</type>
         <definition>virtual S&lt; IAttribute &gt; uipc::geometry::IAttribute::do_clone_empty</definition>
         <argsstring>() const =0</argsstring>
         <name>do_clone_empty</name>
@@ -451,7 +451,7 @@
         <qualifiedname>uipc::geometry::IAttribute::do_copy_from</qualifiedname>
         <reimplementedby refid="classuipc_1_1geometry_1_1Attribute_1afccf77518afc895a2cab9d7e24b8e71f">do_copy_from</reimplementedby>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1IAttribute" kindref="compound">IAttribute</ref> &amp;</type>
+          <type>const IAttribute &amp;</type>
           <declname>other</declname>
         </param>
         <param>

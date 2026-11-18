@@ -116,7 +116,6 @@ Example:
 
 
 ```C++
-++
 REGISTER_IMPLICIT_GEOMETRY_UIDS()
 {
     using namespace uipc::builtin;

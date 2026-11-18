@@ -85,7 +85,7 @@ See [uipc::builtin::details::UIDRegister](classuipc_1_1builtin_1_1details_1_1UID
 
 | Type | Name |
 | ---: | :--- |
-|  const [**ImplicitGeometryUIDCollection**](classuipc_1_1builtin_1_1ImplicitGeometryUIDCollection.md) & | [**instance**](#function-instance) () noexcept<br> |
+|  const ImplicitGeometryUIDCollection & | [**instance**](#function-instance) () noexcept<br> |
 
 
 

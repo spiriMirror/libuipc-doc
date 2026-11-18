@@ -32,7 +32,7 @@ Inherits the following classes: [uipc::constitution::InterAffineBodyConstitution
 
 | Type | Name |
 | ---: | :--- |
-| typedef std::tuple&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt;, S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
+| typedef std::tuple&lt; S&lt; geometry::SimplicialComplexSlot &gt;, S&lt; geometry::SimplicialComplexSlot &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
 
 
 
@@ -98,10 +98,10 @@ Inherits the following classes: [uipc::constitution::InterAffineBodyConstitution
 | Type | Name |
 | ---: | :--- |
 |   | [**AffineBodyPrismaticJoint**](#function-affinebodyprismaticjoint) (const Json & config=default\_config()) <br> |
-|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, Float strength\_ratio=Float{100}) <br>_Apply prismatic joint to edges connecting affine bodies (single-instance mode)._  |
-|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._  |
-|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry-12) (span&lt; const Vector3 &gt; position0s, span&lt; const Vector3 &gt; position1s, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Create prismatic joint geometry with world-space endpoint positions._  |
-|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry-22) (span&lt; const Vector3 &gt; l\_position0, span&lt; const Vector3 &gt; l\_position1, span&lt; const Vector3 &gt; r\_position0, span&lt; const Vector3 &gt; r\_position1, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Create prismatic joint geometry with local-space endpoint positions._  |
+|  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l\_geo\_slots, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r\_geo\_slots, Float strength\_ratio=Float{100}) <br>_Apply prismatic joint to edges connecting affine bodies (single-instance mode)._  |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & edges, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Apply prismatic joint to edges connecting affine bodies (multi-instance mode)._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry-12) (span&lt; const Vector3 &gt; position0s, span&lt; const Vector3 &gt; position1s, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Create prismatic joint geometry with world-space endpoint positions._  |
+|  [**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) | [**create\_geometry**](#function-create_geometry-22) (span&lt; const Vector3 &gt; l\_position0, span&lt; const Vector3 &gt; l\_position1, span&lt; const Vector3 &gt; r\_position0, span&lt; const Vector3 &gt; r\_position1, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; l\_geo\_slots, span&lt; IndexT &gt; l\_instance\_ids, span&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; r\_geo\_slots, span&lt; IndexT &gt; r\_instance\_ids, span&lt; Float &gt; strength\_ratios) <br>_Create prismatic joint geometry with local-space endpoint positions._  |
 | virtual  | [**~AffineBodyPrismaticJoint**](#function-affinebodyprismaticjoint) () <br> |
 
 
@@ -218,7 +218,8 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 ### typedef SlotTuple 
 
 ```C++
-using uipc::constitution::AffineBodyPrismaticJoint::SlotTuple =  std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot> >;
+using uipc::constitution::AffineBodyPrismaticJoint::SlotTuple = 
+        std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot>>;
 ```
 
 

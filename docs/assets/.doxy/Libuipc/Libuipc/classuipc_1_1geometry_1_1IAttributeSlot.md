@@ -54,8 +54,8 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 | Type | Name |
 | ---: | :--- |
 |   | [**IAttributeSlot**](#function-iattributeslot-13) () = default<br> |
-|   | [**IAttributeSlot**](#function-iattributeslot-23) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &) = delete<br> |
-|   | [**IAttributeSlot**](#function-iattributeslot-33) ([**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &&) noexcept<br> |
+|   | [**IAttributeSlot**](#function-iattributeslot-23) (const IAttributeSlot &) = delete<br> |
+|   | [**IAttributeSlot**](#function-iattributeslot-33) (IAttributeSlot &&) noexcept<br> |
 |  bool | [**allow\_destroy**](#function-allow_destroy) () noexcept const<br>_Check if the underlying attribute is allowed to be destroyed._  |
 |  void | [**from\_json\_array**](#function-from_json_array) (const Json & j) <br> |
 |  bool | [**is\_evolving**](#function-is_evolving-12) () noexcept const<br> |
@@ -63,8 +63,8 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 |  bool | [**is\_shared**](#function-is_shared) () noexcept const<br>_Check if the underlying attribute is shared._  |
 |  TimePoint | [**last\_modified**](#function-last_modified-12) () noexcept const<br>_Get the last modification time of the attribute slot._  |
 |  std::string\_view | [**name**](#function-name) () noexcept const<br>_Get the name of the attribute slot._  |
-|  [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) & | [**operator=**](#function-operator) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &) = delete<br> |
-|  [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) & | [**operator=**](#function-operator_1) ([**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &&) noexcept<br> |
+|  IAttributeSlot & | [**operator=**](#function-operator) (const IAttributeSlot &) = delete<br> |
+|  IAttributeSlot & | [**operator=**](#function-operator_1) (IAttributeSlot &&) noexcept<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
 |  Json | [**to\_json**](#function-to_json-12) () const<br> |
 |  Json | [**to\_json**](#function-to_json-22) (SizeT i) const<br> |
@@ -100,12 +100,12 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 | ---: | :--- |
 | virtual [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & | [**attribute**](#function-attribute-12) () noexcept<br> |
 | virtual const [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & | [**attribute**](#function-attribute-22) () noexcept const<br> |
-|  S&lt; [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &gt; | [**clone**](#function-clone) (std::string\_view name, bool allow\_destroy) const<br> |
-|  S&lt; [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &gt; | [**clone\_empty**](#function-clone_empty) (std::string\_view name, bool allow\_destroy) const<br> |
-| virtual S&lt; [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &gt; | [**do\_clone**](#function-do_clone) (std::string\_view name, bool allow\_destroy) const = 0<br> |
-| virtual S&lt; [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &gt; | [**do\_clone\_empty**](#function-do_clone_empty) (std::string\_view name, bool allow\_destroy) const = 0<br> |
+|  S&lt; IAttributeSlot &gt; | [**clone**](#function-clone) (std::string\_view name, bool allow\_destroy) const<br> |
+|  S&lt; IAttributeSlot &gt; | [**clone\_empty**](#function-clone_empty) (std::string\_view name, bool allow\_destroy) const<br> |
+| virtual S&lt; IAttributeSlot &gt; | [**do\_clone**](#function-do_clone) (std::string\_view name, bool allow\_destroy) const = 0<br> |
+| virtual S&lt; IAttributeSlot &gt; | [**do\_clone\_empty**](#function-do_clone_empty) (std::string\_view name, bool allow\_destroy) const = 0<br> |
 | virtual void | [**do\_make\_owned**](#function-do_make_owned) () = 0<br> |
-| virtual void | [**do\_share\_from**](#function-do_share_from) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) & other) noexcept = 0<br> |
+| virtual void | [**do\_share\_from**](#function-do_share_from) (const IAttributeSlot & other) noexcept = 0<br> |
 | virtual bool | [**get\_allow\_destroy**](#function-get_allow_destroy) () noexcept const = 0<br> |
 | virtual [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & | [**get\_attribute**](#function-get_attribute-12) () noexcept = 0<br> |
 | virtual const [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & | [**get\_attribute**](#function-get_attribute-22) () noexcept const = 0<br> |
@@ -118,7 +118,7 @@ Inherited by the following classes: [uipc::geometry::AttributeSlot](classuipc_1_
 |  void | [**rw\_access**](#function-rw_access) () <br> |
 | virtual void | [**set\_is\_evolving**](#function-set_is_evolving) (bool v) noexcept = 0<br> |
 | virtual void | [**set\_last\_modified**](#function-set_last_modified) (const TimePoint & tp) noexcept = 0<br> |
-|  void | [**share\_from**](#function-share_from) (const [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) & other) noexcept<br> |
+|  void | [**share\_from**](#function-share_from) (const IAttributeSlot & other) noexcept<br> |
 |  SizeT | [**use\_count**](#function-use_count) () const<br> |
 
 

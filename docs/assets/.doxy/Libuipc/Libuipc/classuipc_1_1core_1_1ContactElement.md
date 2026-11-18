@@ -52,14 +52,14 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**ContactElement**](#function-contactelement-14) () = default<br> |
-|   | [**ContactElement**](#function-contactelement-24) (const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) &) = default<br> |
-|   | [**ContactElement**](#function-contactelement-34) ([**ContactElement**](classuipc_1_1core_1_1ContactElement.md) &&) = default<br> |
+|   | [**ContactElement**](#function-contactelement-24) (const ContactElement &) = default<br> |
+|   | [**ContactElement**](#function-contactelement-34) (ContactElement &&) = default<br> |
 |   | [**ContactElement**](#function-contactelement-44) (IndexT id, std::string\_view name) noexcept<br> |
 |  S&lt; [**geometry::AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**apply\_to**](#function-apply_to) ([**geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md) & geo) const<br> |
 |  IndexT | [**id**](#function-id) () noexcept const<br> |
 |  std::string\_view | [**name**](#function-name) () noexcept const<br> |
-|  [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & | [**operator=**](#function-operator) (const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) &) = default<br> |
-|  [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & | [**operator=**](#function-operator_1) ([**ContactElement**](classuipc_1_1core_1_1ContactElement.md) &&) = default<br> |
+|  ContactElement & | [**operator=**](#function-operator) (const ContactElement &) = default<br> |
+|  ContactElement & | [**operator=**](#function-operator_1) (ContactElement &&) = default<br> |
 
 
 

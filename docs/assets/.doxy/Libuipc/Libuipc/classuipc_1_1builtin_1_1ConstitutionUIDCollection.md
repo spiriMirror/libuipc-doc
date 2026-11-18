@@ -85,7 +85,7 @@ See [uipc::builtin::details::UIDRegister](classuipc_1_1builtin_1_1details_1_1UID
 
 | Type | Name |
 | ---: | :--- |
-|  const [**ConstitutionUIDCollection**](classuipc_1_1builtin_1_1ConstitutionUIDCollection.md) & | [**instance**](#function-instance) () noexcept<br> |
+|  const ConstitutionUIDCollection & | [**instance**](#function-instance) () noexcept<br> |
 
 
 

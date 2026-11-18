@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3267,10 +3267,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#current-reference-measurement" class="md-nav__link">
+  <a href="#same-environment-comparisons" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Current reference measurement
+        Same-environment comparisons
       
     </span>
   </a>
@@ -3369,10 +3369,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#current-reference-measurement" class="md-nav__link">
+  <a href="#same-environment-comparisons" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Current reference measurement
+        Same-environment comparisons
       
     </span>
   </a>
@@ -3426,22 +3426,74 @@ fails in the aggregate is evidence of cross-case state pollution; the isolated
 runner is complementary coverage, not a replacement for the aggregate.</p>
 <h2 id="end-to-end-performance-registry">End-to-end performance registry</h2>
 <p><a href="https://github.com/spiriMirror/libuipc/blob/main/benchmarks/manifest.json"><code>benchmarks/manifest.json</code></a>
-is the repository-owned registry for large performance scenes. Implementations
+is the repository-owned registry for portable performance workloads. Implementations
 and assets remain in the tracked <code>libuipc-samples</code> submodule, avoiding a second
 copy in the core repository.</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>list
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>rigid-wrecking-balls<span class="w"> </span>--quick
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--quick
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--frames<span class="w"> </span><span class="m">250</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>mas-bunny<span class="w"> </span>--frames<span class="w"> </span><span class="m">100</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>cube-wall-cloth<span class="w"> </span>--frames<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>validate
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>anisotropic-cloth-small
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>rigid-wrecking-balls<span class="w"> </span>--quick
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--quick
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>stiff-gipc-case2<span class="w"> </span>--frames<span class="w"> </span><span class="m">250</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>mas-bunny<span class="w"> </span>--frames<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>python<span class="w"> </span>scripts/run_benchmark.py<span class="w"> </span>run<span class="w"> </span>cube-wall-cloth<span class="w"> </span>--frames<span class="w"> </span><span class="m">100</span>
 </span></code></pre></div>
-<p>The four canonical workloads cover pure affine-body contact (sample 6), mixed
-FEM/cloth contact (88), stiff FEM with MAS (89), and a large affine-body wall
-coupled to cloth (93).</p>
+<p>Choose a workload by problem size and subsystem. No GPU model is prescribed;
+simulation requires a CUDA device supported by the installed build.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Workload</th>
+<th>Scope</th>
+<th style="text-align: right;">Default frames</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td><code>anisotropic-cloth-small</code> (95)</td>
+<td>Three procedural cloth sheets, 243 vertices / 384 triangles, no contact</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td><code>rigid-wrecking-balls</code> (6)</td>
+<td>Affine-body contact</td>
+<td style="text-align: right;">120</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td><code>mas-bunny</code> (89)</td>
+<td>One stiff FEM bunny with MAS and ground contact</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>Stress</td>
+<td><code>stiff-gipc-case2</code> (88)</td>
+<td>Two FEM bunnies and high-resolution cloth</td>
+<td style="text-align: right;">250</td>
+</tr>
+<tr>
+<td>Stress</td>
+<td><code>cube-wall-cloth</code> (93)</td>
+<td>1920 affine bodies and high-resolution cloth</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+<p>Tiers describe workloads, not hardware eligibility or speed targets. Start with
+the small workload; run larger scenes when relevant and within local resources.
+<code>--quick</code> reduces only the frame count to three: it is an execution smoke test,
+not a smaller mesh or a representative performance measurement. Init and GPU
+runtime overhead can dominate small scenes; report that limitation.</p>
+<p>Initialize the pinned samples with <code>git submodule update --init libuipc-samples</code>.
+<code>validate</code> checks the actual required files and Python syntax without importing
+uipc or requiring a GPU. Repository Contracts CI runs it against the pinned
+samples revision. <code>--dry-run</code> inspects an invocation without executing it.</p>
 <p>The canonical runner validates required assets, removes noncanonical tuning
 environment variables, launches the headless sample from its declared working
-directory, preserves the child return code, and writes repo/submodule commits,
+directory, preserves child failures, and writes repo/submodule commits,
 command, frame count, environment overrides, duration, and status to
 <code>output/benchmark-runs/</code>.
 The metadata also captures GPU/driver, CUDA compiler, Python/libuipc versions,
@@ -3449,7 +3501,10 @@ the full per-frame wall distribution, Newton/line-search/linear-solver counts,
 a final physical observable, approximate peak total-device memory, and the raw
 log.
 Timestamped records are retained; the un-suffixed JSON points to the latest
-run.</p>
+run. A zero child exit without a <code>BENCHMARK_RESULT</code> containing the complete
+frame sequence and finite non-negative frame times is a runner failure; both
+the child status and validation error are archived. Completion
+does not imply convergence: inspect convergence and iteration-limit flags too.</p>
 <p>Each run fingerprints the selected interpreter's package before and after
 execution: <code>build_info()</code>, package path, Python source hashes, and SHA-256 hashes
 of colocated native binaries. Declared scene/helper/asset files are also hashed
@@ -3478,67 +3533,46 @@ diagnostic use, for example:</p>
 <p>Timer scopes synchronize nested GPU regions and therefore change wall time.
 Use them to attribute cost, not as a substitute for the Timer-free throughput
 result.</p>
-<h2 id="current-reference-measurement">Current reference measurement</h2>
-<p>The 2026-09-01 reference used an RTX 5090, driver 595.79, CUDA 13.2, Windows
-Release build, and three fresh processes per workload. The value below is the
-median of the three run means; ranges retain desktop/WDDM and dynamic-contact
-variability.</p>
-<table>
-<thead>
-<tr>
-<th>Benchmark</th>
-<th style="text-align: right;">Frames</th>
-<th style="text-align: right;">Reference</th>
-<th style="text-align: right;">Three-run range</th>
-<th style="text-align: right;">Newton/frame</th>
-<th style="text-align: right;">Linear iterations/frame</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>rigid-wrecking-balls</code></td>
-<td style="text-align: right;">120</td>
-<td style="text-align: right;">129.5 ms/frame</td>
-<td style="text-align: right;">126.4–131.3</td>
-<td style="text-align: right;">3.95</td>
-<td style="text-align: right;">107.3</td>
-</tr>
-<tr>
-<td><code>stiff-gipc-case2</code></td>
-<td style="text-align: right;">250</td>
-<td style="text-align: right;">201.1 ms/frame</td>
-<td style="text-align: right;">199.0–230.6</td>
-<td style="text-align: right;">6.64</td>
-<td style="text-align: right;">246.8</td>
-</tr>
-<tr>
-<td><code>mas-bunny</code></td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">60.2 ms/frame</td>
-<td style="text-align: right;">60.1–62.0</td>
-<td style="text-align: right;">4.67</td>
-<td style="text-align: right;">358.8</td>
-</tr>
-<tr>
-<td><code>cube-wall-cloth</code></td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">125.6 ms/frame</td>
-<td style="text-align: right;">121.8–165.0</td>
-<td style="text-align: right;">5.13</td>
-<td style="text-align: right;">200.1</td>
-</tr>
-</tbody>
-</table>
-<p>All 12 runs completed and converged without an iteration-limit hit. These are
-machine-specific references, not portable pass/fail limits. Collision-rich
-final positions are envelopes rather than bitwise goldens. The complete method,
-memory ranges, numerical variability, run IDs, and stage diagnostics are in the
-<a href="https://github.com/spiriMirror/libuipc/blob/main/agent_docs/performance/2026-09-01-cross-domain-baseline.md">cross-domain baseline record</a>.</p>
-<p>Use <code>--dry-run</code> to inspect a resolved invocation. Overrides such as
-<code>--env NO_MAS=1</code> are useful for A/B experiments, but they define a different
-variant and must not be compared as if they were the canonical configuration.
-Use <code>uipc.profile</code> baseline/check reports for repeated measurements, and never
-turn one machine's wall time into a universal correctness assertion.</p></div>
+<h2 id="same-environment-comparisons">Same-environment comparisons</h2>
+<p>The project standardizes workloads and reporting, not an absolute ms/frame
+target. GPU model, CPU/OS, driver, toolkit and build flags describe a result;
+they do not define the community's required computer. Historical measurements
+remain in the <a href="https://github.com/spiriMirror/libuipc/blob/main/agent_docs/performance/README.md">performance archive</a>
+with their original environment and revisions. They are not current defaults
+or community regression thresholds.</p>
+<p>For a library change:</p>
+<ol>
+<li>Select a workload and freeze its sample revision, asset hashes, arguments,
+   frame count and environment. Record both library revisions and verify each
+   installed package against its intended build. The library revisions and
+   binary hashes may differ between the before/after runs, but must not change
+   during either run.</li>
+<li>Use the same machine/device, driver, toolkit, Python, Release build flags,
+   power settings and background-load conditions. Keep timer mode unchanged.
+   Changing <code>--env NO_MAS=1</code>, scene parameters or any of these conditions creates
+   a separate experiment; do not silently pool it with the original workload.</li>
+<li>Alternate at least three fresh-process runs per version. The registry times
+   every requested <code>advance()</code> + <code>retrieve()</code> frame (including any frame-validity
+   check) from frame 1, with no discarded
+   warmup frames; initialization, reporting and file output are outside that
+   interval. Use the same full frame window on both versions because contact
+   workloads evolve. Retain the timestamped JSON/log files for every run.</li>
+<li>Compare the distribution of run means and per-frame median/p95, reporting
+   relative change <code>(candidate / before - 1) * 100%</code> and repeat variation.
+   Check completion/convergence, Newton/line-search/linear counts and final
+   physical observables before attributing a change to throughput. Final
+   positions in contact scenes are not bitwise goldens. Memory samples are total
+   device usage and include other processes; they are not exact scene allocations.</li>
+</ol>
+<p>Portable CI checks the runner/submodule contract, not wall time. A dedicated
+GPU runner may maintain its own baseline and an explicitly chosen allowance
+based on repeated local measurements. Cross-machine results are useful reports,
+but do not constitute a regression gate for each other.</p>
+<p>For the separate <code>python -m uipc benchmark</code> scene runner, reuse the existing
+<a href="../../tutorial/profiling/#performance-regression-gates">baseline/check workflow</a>
+with environment matching enabled. It consumes that runner's result directories;
+the registry JSON files described here use a different format and should be
+compared using the protocol above, not passed directly to <code>baseline/check</code>.</p></div>
 
 
 
@@ -3595,10 +3629,10 @@ turn one machine's wall time into a universal correctness assertion.</p></div>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

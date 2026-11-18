@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1IAttributeSlot" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>uipc::geometry::IAttributeSlot</compoundname>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1AttributeSlot" prot="public" virt="non-virtual">uipc::geometry::AttributeSlot&lt; T &gt;</derivedcompoundref>
@@ -17,7 +17,7 @@
         <name>AttributeFriend</name>
         <qualifiedname>uipc::geometry::IAttributeSlot::AttributeFriend</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeFriend" kindref="compound">AttributeFriend</ref></type>
+          <type>AttributeFriend</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -34,7 +34,7 @@
         <name>AttributeCollection</name>
         <qualifiedname>uipc::geometry::IAttributeSlot::AttributeCollection</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref></type>
+          <type>AttributeCollection</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -81,7 +81,7 @@
         <name>IAttributeSlot</name>
         <qualifiedname>uipc::geometry::IAttributeSlot::IAttributeSlot</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+          <type>const IAttributeSlot &amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -92,13 +92,13 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="28" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a55c13bf1084d3221bcec64e213d08a14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+        <type>IAttributeSlot &amp;</type>
         <definition>IAttributeSlot &amp; uipc::geometry::IAttributeSlot::operator=</definition>
         <argsstring>(const IAttributeSlot &amp;)=delete</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::IAttributeSlot::operator=</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+          <type>const IAttributeSlot &amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -115,7 +115,7 @@
         <name>IAttributeSlot</name>
         <qualifiedname>uipc::geometry::IAttributeSlot::IAttributeSlot</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;&amp;</type>
+          <type>IAttributeSlot &amp;&amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -126,13 +126,13 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="31" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1abf79d20076eeef6b62c780d9176cefc2" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+        <type>IAttributeSlot &amp;</type>
         <definition>IAttributeSlot &amp; uipc::geometry::IAttributeSlot::operator=</definition>
         <argsstring>(IAttributeSlot &amp;&amp;) noexcept=default</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::IAttributeSlot::operator=</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;&amp;</type>
+          <type>IAttributeSlot &amp;&amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -142,7 +142,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="32" column="20"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a07995e9d78cc362984d6081784840d4e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a07995e9d78cc362984d6081784840d4e" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string_view</type>
         <definition>std::string_view uipc::geometry::IAttributeSlot::name</definition>
         <argsstring>() const noexcept</argsstring>
@@ -157,7 +157,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="37" column="23"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1af8fdbf15774c9cf829dde0481c9d2065" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1af8fdbf15774c9cf829dde0481c9d2065" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string_view</type>
         <definition>std::string_view uipc::geometry::IAttributeSlot::type_name</definition>
         <argsstring>() const noexcept</argsstring>
@@ -172,7 +172,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="42" column="23"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a56fb0e32f4cfb8f8133ba3b3bc5d1bf5" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a56fb0e32f4cfb8f8133ba3b3bc5d1bf5" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool uipc::geometry::IAttributeSlot::allow_destroy</definition>
         <argsstring>() const noexcept</argsstring>
@@ -187,7 +187,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="47" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1ab07e2c5b7280e9f68385a10f274cd507" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1ab07e2c5b7280e9f68385a10f274cd507" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool uipc::geometry::IAttributeSlot::is_shared</definition>
         <argsstring>() const noexcept</argsstring>
@@ -207,7 +207,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="55" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1ad694f2117a902bd3d2f385fc71a23c95" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1ad694f2117a902bd3d2f385fc71a23c95" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
         <definition>SizeT uipc::geometry::IAttributeSlot::size</definition>
         <argsstring>() const noexcept</argsstring>
@@ -221,7 +221,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="57" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a0e76dd0ea94cd918c44e8559d682279f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a0e76dd0ea94cd918c44e8559d682279f" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::IAttributeSlot::to_json</definition>
         <argsstring>() const</argsstring>
@@ -235,7 +235,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="59" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a69eedb59d90dbfb2fdc0c145d360bccd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a69eedb59d90dbfb2fdc0c145d360bccd" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::IAttributeSlot::to_json</definition>
         <argsstring>(SizeT i) const</argsstring>
@@ -271,7 +271,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="63" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a1337cfdfa42e55607f791b572ae94f46" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a1337cfdfa42e55607f791b572ae94f46" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool uipc::geometry::IAttributeSlot::is_evolving</definition>
         <argsstring>() const noexcept</argsstring>
@@ -303,7 +303,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="66" column="24"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1ab8ea3035873ff6c883808fd2e7b4ee08" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1ab8ea3035873ff6c883808fd2e7b4ee08" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>TimePoint</type>
         <definition>TimePoint uipc::geometry::IAttributeSlot::last_modified</definition>
         <argsstring>() const noexcept</argsstring>
@@ -443,7 +443,7 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="86" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a9dbd0dce8acc363736613a54250e640b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <type>S&lt; IAttributeSlot &gt;</type>
         <definition>S&lt; IAttributeSlot &gt; uipc::geometry::IAttributeSlot::clone</definition>
         <argsstring>(std::string_view name, bool allow_destroy) const</argsstring>
         <name>clone</name>
@@ -465,7 +465,7 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="88" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1ae77d96a7676786330b50c6fde51beb94" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <type>S&lt; IAttributeSlot &gt;</type>
         <definition>virtual S&lt; IAttributeSlot &gt; uipc::geometry::IAttributeSlot::do_clone</definition>
         <argsstring>(std::string_view name, bool allow_destroy) const =0</argsstring>
         <name>do_clone</name>
@@ -488,7 +488,7 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="89" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1adad12e51e64a3f31672ed5bbb6d5a864" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <type>S&lt; IAttributeSlot &gt;</type>
         <definition>S&lt; IAttributeSlot &gt; uipc::geometry::IAttributeSlot::clone_empty</definition>
         <argsstring>(std::string_view name, bool allow_destroy) const</argsstring>
         <name>clone_empty</name>
@@ -510,7 +510,7 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="91" column="7"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1IAttributeSlot_1a978096ff4b55ff45ffcdd56878728d67" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <type>S&lt; IAttributeSlot &gt;</type>
         <definition>virtual S&lt; IAttributeSlot &gt; uipc::geometry::IAttributeSlot::do_clone_empty</definition>
         <argsstring>(std::string_view name, bool allow_destroy) const =0</argsstring>
         <name>do_clone_empty</name>
@@ -539,7 +539,7 @@
         <name>share_from</name>
         <qualifiedname>uipc::geometry::IAttributeSlot::share_from</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+          <type>const IAttributeSlot &amp;</type>
           <declname>other</declname>
         </param>
         <briefdescription>
@@ -558,7 +558,7 @@
         <qualifiedname>uipc::geometry::IAttributeSlot::do_share_from</qualifiedname>
         <reimplementedby refid="classuipc_1_1geometry_1_1AttributeSlot_1a346ea9aa4c08b95b0c9118dd787f5507">do_share_from</reimplementedby>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+          <type>const IAttributeSlot &amp;</type>
           <declname>other</declname>
         </param>
         <briefdescription>

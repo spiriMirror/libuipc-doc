@@ -59,9 +59,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) | [**lame**](#function-lame) (Float lambda, Float mu) noexcept<br> |
-|  [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) | [**youngs\_poisson**](#function-youngs_poisson) (Float E, Float nu) <br> |
-|  [**ElasticModuli2D**](classuipc_1_1constitution_1_1ElasticModuli2D.md) | [**youngs\_shear**](#function-youngs_shear) (Float E, Float G) noexcept<br> |
+|  ElasticModuli2D | [**lame**](#function-lame) (Float lambda, Float mu) noexcept<br> |
+|  ElasticModuli2D | [**youngs\_poisson**](#function-youngs_poisson) (Float E, Float nu) <br> |
+|  ElasticModuli2D | [**youngs\_shear**](#function-youngs_shear) (Float E, Float G) noexcept<br> |
 
 
 

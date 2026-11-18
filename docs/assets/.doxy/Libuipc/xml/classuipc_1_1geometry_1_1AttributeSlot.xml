@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1AttributeSlot" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::AttributeSlot</compoundname>
     <basecompoundref refid="classuipc_1_1geometry_1_1IAttributeSlot" prot="public" virt="non-virtual">uipc::geometry::IAttributeSlot</basecompoundref>
@@ -33,7 +33,7 @@
         <name>AttributeCollection</name>
         <qualifiedname>uipc::geometry::AttributeSlot::AttributeCollection</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref></type>
+          <type>AttributeCollection</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -55,7 +55,7 @@
         <name>view</name>
         <qualifiedname>uipc::geometry::AttributeSlot::view</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; U &gt; &amp;</type>
+          <type>AttributeSlot&lt; U &gt; &amp;</type>
           <declname>slot</declname>
         </param>
         <briefdescription>
@@ -201,7 +201,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_slot.h" line="123" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a99622e01f7f2b316925798f1f581fe9b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a99622e01f7f2b316925798f1f581fe9b" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>span&lt; const T &gt;</type>
         <definition>span&lt; const T &gt; uipc::geometry::AttributeSlot&lt; T &gt;::view</definition>
         <argsstring>() const noexcept</argsstring>
@@ -346,7 +346,7 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="153" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a8a628172d893c825f985f9a06272782e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <type>S&lt; IAttributeSlot &gt;</type>
         <definition>virtual S&lt; IAttributeSlot &gt; uipc::geometry::AttributeSlot&lt; T &gt;::do_clone</definition>
         <argsstring>(std::string_view name, bool allow_destroy) const override</argsstring>
         <name>do_clone</name>
@@ -369,7 +369,7 @@
         <location file="include/uipc/geometry/attribute_slot.h" line="154" column="15"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeSlot_1a6ddea42ff87ea6af514d4833f473e9b3" prot="private" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
+        <type>S&lt; IAttributeSlot &gt;</type>
         <definition>virtual S&lt; IAttributeSlot &gt; uipc::geometry::AttributeSlot&lt; T &gt;::do_clone_empty</definition>
         <argsstring>(std::string_view name, bool allow_destroy) const override</argsstring>
         <name>do_clone_empty</name>
@@ -399,7 +399,7 @@
         <qualifiedname>uipc::geometry::AttributeSlot::do_share_from</qualifiedname>
         <reimplements refid="classuipc_1_1geometry_1_1IAttributeSlot_1a88e95187daec91aeab5a6bcc8469c6df">do_share_from</reimplements>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &amp;</type>
+          <type>const IAttributeSlot &amp;</type>
           <declname>other</declname>
         </param>
         <briefdescription>

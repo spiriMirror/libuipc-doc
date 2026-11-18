@@ -56,7 +56,7 @@ Inherited by the following classes: [uipc::geometry::Geometry](classuipc_1_1geom
 |  S&lt; [**IGeometry**](classuipc_1_1geometry_1_1IGeometry.md) &gt; | [**clone**](#function-clone) () const<br> |
 |  Json | [**to\_json**](#function-to_json) () const<br> |
 |  std::string\_view | [**type**](#function-type) () noexcept const<br>_Get the type of the geometries, check the type to downcast the geometries to a specific type._  |
-|  void | [**update\_from**](#function-update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) & commit) <br> |
+|  void | [**update\_from**](#function-update_from) (const GeometryCommit & commit) <br> |
 | virtual  | [**~IGeometry**](#function-igeometry) () = default<br> |
 
 
@@ -91,7 +91,7 @@ Inherited by the following classes: [uipc::geometry::Geometry](classuipc_1_1geom
 | virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections-12) (vector&lt; std::string &gt; & names, vector&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) \* &gt; & collections) const = 0<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](#function-do_collect_attribute_collections-22) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) \* &gt; & collections) = 0<br> |
 | virtual Json | [**do\_to\_json**](#function-do_to_json) () const = 0<br> |
-| virtual void | [**do\_update\_from**](#function-do_update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) & commit) = 0<br> |
+| virtual void | [**do\_update\_from**](#function-do_update_from) (const GeometryCommit & commit) = 0<br> |
 | virtual std::string\_view | [**get\_type**](#function-get_type) () noexcept const = 0<br> |
 
 

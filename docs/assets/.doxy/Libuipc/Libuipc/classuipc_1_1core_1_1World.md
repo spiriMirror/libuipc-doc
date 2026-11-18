@@ -52,8 +52,8 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**World**](#function-world-14) ([**Engine**](classuipc_1_1core_1_1Engine.md) & e) noexcept<br> |
-|   | [**World**](#function-world-24) (const [**World**](classuipc_1_1core_1_1World.md) &) = delete<br> |
-|   | [**World**](#function-world-34) ([**World**](classuipc_1_1core_1_1World.md) &&) = default<br> |
+|   | [**World**](#function-world-24) (const World &) = delete<br> |
+|   | [**World**](#function-world-34) (World &&) = default<br> |
 |   | [**World**](#function-world-44) (S&lt; [**internal::World**](classuipc_1_1core_1_1internal_1_1World.md) &gt; w) noexcept<br> |
 |  void | [**advance**](#function-advance) () <br> |
 |  bool | [**dump**](#function-dump) () <br> |
@@ -61,12 +61,12 @@
 |  SizeT | [**frame**](#function-frame) () const<br> |
 |  void | [**init**](#function-init) ([**Scene**](classuipc_1_1core_1_1Scene.md) & s) <br> |
 |  bool | [**is\_valid**](#function-is_valid) () const<br> |
-|  [**World**](classuipc_1_1core_1_1World.md) & | [**operator=**](#function-operator) (const [**World**](classuipc_1_1core_1_1World.md) &) = delete<br> |
-|  [**World**](classuipc_1_1core_1_1World.md) & | [**operator=**](#function-operator_1) ([**World**](classuipc_1_1core_1_1World.md) &&) = default<br> |
+|  World & | [**operator=**](#function-operator) (const World &) = delete<br> |
+|  World & | [**operator=**](#function-operator_1) (World &&) = default<br> |
 |  bool | [**recover**](#function-recover) (SizeT aim\_frame=~0ull) <br> |
 |  void | [**retrieve**](#function-retrieve) () <br> |
-|  [**SanityChecker**](classuipc_1_1core_1_1SanityChecker.md) & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
-|  const [**SanityChecker**](classuipc_1_1core_1_1SanityChecker.md) & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
+|  SanityChecker & | [**sanity\_checker**](#function-sanity_checker-12) () <br> |
+|  const SanityChecker & | [**sanity\_checker**](#function-sanity_checker-22) () const<br> |
 |  void | [**sync**](#function-sync) () <br> |
 |   | [**~World**](#function-world) () <br> |
 

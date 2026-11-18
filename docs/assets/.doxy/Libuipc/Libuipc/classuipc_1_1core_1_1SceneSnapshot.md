@@ -52,11 +52,11 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**SceneSnapshot**](#function-scenesnapshot-14) (const [**Scene**](classuipc_1_1core_1_1Scene.md) & scene) <br> |
-|   | [**SceneSnapshot**](#function-scenesnapshot-24) (const [**SceneSnapshot**](classuipc_1_1core_1_1SceneSnapshot.md) &) = default<br> |
-|   | [**SceneSnapshot**](#function-scenesnapshot-34) ([**SceneSnapshot**](classuipc_1_1core_1_1SceneSnapshot.md) &&) = default<br> |
-|  [**SceneSnapshot**](classuipc_1_1core_1_1SceneSnapshot.md) & | [**operator=**](#function-operator) (const [**SceneSnapshot**](classuipc_1_1core_1_1SceneSnapshot.md) &) = default<br> |
-|  [**SceneSnapshot**](classuipc_1_1core_1_1SceneSnapshot.md) & | [**operator=**](#function-operator_1) ([**SceneSnapshot**](classuipc_1_1core_1_1SceneSnapshot.md) &&) = default<br> |
+|   | [**SceneSnapshot**](#function-scenesnapshot-14) (const Scene & scene) <br> |
+|   | [**SceneSnapshot**](#function-scenesnapshot-24) (const SceneSnapshot &) = default<br> |
+|   | [**SceneSnapshot**](#function-scenesnapshot-34) (SceneSnapshot &&) = default<br> |
+|  SceneSnapshot & | [**operator=**](#function-operator) (const SceneSnapshot &) = default<br> |
+|  SceneSnapshot & | [**operator=**](#function-operator_1) (SceneSnapshot &&) = default<br> |
 
 
 

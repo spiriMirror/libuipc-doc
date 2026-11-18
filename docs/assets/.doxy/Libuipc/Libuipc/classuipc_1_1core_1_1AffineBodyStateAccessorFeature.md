@@ -50,7 +50,7 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1Featu
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr std::string\_view | [**FeatureName**](#variable-featurename)   = `"core/affine\_body\_state\_accessor"`<br> |
+|  std::string\_view | [**FeatureName**](#variable-featurename)   = `"core/affine\_body\_state\_accessor"`<br> |
 
 
 
@@ -214,7 +214,7 @@ See [uipc::core::IFeature](classuipc_1_1core_1_1IFeature.md)
 ### variable FeatureName 
 
 ```C++
-constexpr std::string_view uipc::core::AffineBodyStateAccessorFeature::FeatureName;
+std::string_view uipc::core::AffineBodyStateAccessorFeature::FeatureName;
 ```
 
 

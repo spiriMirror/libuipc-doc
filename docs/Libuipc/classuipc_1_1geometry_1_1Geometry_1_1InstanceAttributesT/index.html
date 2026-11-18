@@ -15,7 +15,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -23,10 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3534,15 +3534,15 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-instanceattributest-35"><strong>InstanceAttributesT</strong></a> (const <a href="./"><strong>InstanceAttributesT</strong></a>&lt; OtherIsConst &gt; &amp; o) noexcept<br></td>
+<td style="text-align: left;"><a href="#function-instanceattributest-35"><strong>InstanceAttributesT</strong></a> (const InstanceAttributesT&lt; OtherIsConst &gt; &amp; o) noexcept<br></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-instanceattributest-45"><strong>InstanceAttributesT</strong></a> (const <a href="./"><strong>InstanceAttributesT</strong></a> &amp; o) = default<br></td>
+<td style="text-align: left;"><a href="#function-instanceattributest-45"><strong>InstanceAttributesT</strong></a> (const InstanceAttributesT &amp; o) = default<br></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-instanceattributest-55"><strong>InstanceAttributesT</strong></a> (<a href="./"><strong>InstanceAttributesT</strong></a> &amp;&amp; o) = default<br></td>
+<td style="text-align: left;"><a href="#function-instanceattributest-55"><strong>InstanceAttributesT</strong></a> (InstanceAttributesT &amp;&amp; o) = default<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -3550,7 +3550,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-copy_from"><strong>copy_from</strong></a> (<a href="./"><strong>InstanceAttributesT</strong></a>&lt; true &gt; other, const <a href="../classuipc_1_1geometry_1_1AttributeCopy/"><strong>AttributeCopy</strong></a> &amp; copy={}, span&lt; const string &gt; include_names={}, span&lt; const string &gt; exclude_names={}) <br></td>
+<td style="text-align: left;"><a href="#function-copy_from"><strong>copy_from</strong></a> (InstanceAttributesT&lt; true &gt; other, const <a href="../classuipc_1_1geometry_1_1AttributeCopy/"><strong>AttributeCopy</strong></a> &amp; copy={}, span&lt; const string &gt; include_names={}, span&lt; const string &gt; exclude_names={}) <br></td>
 </tr>
 <tr>
 <td style="text-align: right;">decltype(auto)</td>
@@ -3565,12 +3565,12 @@
 <td style="text-align: left;"><a href="#function-find"><strong>find</strong></a> (std::string_view name) <br><em>Find an attribute by type and name, if the attribute does not exist, return nullptr.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;"><a href="./"><strong>InstanceAttributesT</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator"><strong>operator=</strong></a> (const <a href="./"><strong>InstanceAttributesT</strong></a> &amp; o) = default<br></td>
+<td style="text-align: right;">InstanceAttributesT &amp;</td>
+<td style="text-align: left;"><a href="#function-operator"><strong>operator=</strong></a> (const InstanceAttributesT &amp; o) = default<br></td>
 </tr>
 <tr>
-<td style="text-align: right;"><a href="./"><strong>InstanceAttributesT</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-operator_1"><strong>operator=</strong></a> (<a href="./"><strong>InstanceAttributesT</strong></a> &amp;&amp; o) = default<br></td>
+<td style="text-align: right;">InstanceAttributesT &amp;</td>
+<td style="text-align: left;"><a href="#function-operator_1"><strong>operator=</strong></a> (InstanceAttributesT &amp;&amp; o) = default<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -3605,7 +3605,7 @@
 <h3 id="function-instanceattributest-35">function InstanceAttributesT [3/5]</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="kt">bool</span><span class="w"> </span><span class="n">OtherIsConst</span><span class="o">&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kr">inline</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">InstanceAttributesT</span><span class="o">::</span><span class="n">InstanceAttributesT</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">InstanceAttributesT</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">OtherIsConst</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">o</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">InstanceAttributesT</span><span class="o">&lt;</span><span class="w"> </span><span class="n">OtherIsConst</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">o</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span>
 </span></code></pre></div>
 <hr>
@@ -3632,7 +3632,7 @@
 
 <h3 id="function-copy_from">function copy_from</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">InstanceAttributesT</span><span class="o">::</span><span class="n">copy_from</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">InstanceAttributesT</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">,</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">InstanceAttributesT</span><span class="o">&lt;</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">,</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">AttributeCopy</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">copy</span><span class="o">=</span><span class="p">{},</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">include_names</span><span class="o">=</span><span class="p">{},</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">span</span><span class="o">&lt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">exclude_names</span><span class="o">=</span><span class="p">{}</span>
@@ -3719,7 +3719,7 @@
 <h2 id="friends-documentation">Friends Documentation</h2>
 <h3 id="friend-formatter-instanceattributest-isconst">friend formatter&lt; InstanceAttributesT&lt; IsConst &gt; &gt;</h3>
 <div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">uipc</span><span class="o">::</span><span class="n">geometry</span><span class="o">::</span><span class="n">Geometry</span><span class="o">::</span><span class="n">InstanceAttributesT</span><span class="o">::</span><span class="n">formatter</span><span class="o">&lt;</span><span class="w"> </span><span class="n">InstanceAttributesT</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IsConst</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">fmt</span><span class="o">::</span><span class="n">formatter</span><span class="o">&lt;</span><span class="w"> </span><span class="n">InstanceAttributesT</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">IsConst</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">fmt</span><span class="o">::</span><span class="n">formatter</span><span class="o">&lt;</span><span class="w"> </span><span class="n">InstanceAttributesT</span><span class="o">&lt;</span><span class="w"> </span><span class="n">IsConst</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span>
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
 </span></code></pre></div>
 <hr>
@@ -3782,10 +3782,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       

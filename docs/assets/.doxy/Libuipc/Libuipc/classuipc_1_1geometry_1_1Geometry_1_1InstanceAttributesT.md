@@ -55,16 +55,16 @@ _A wrapper class for the instance attributes of a geometries._
 | Type | Name |
 | ---: | :--- |
 |   | [**InstanceAttributesT**](#function-instanceattributest-25) (AutoAttributeCollection & attributes) <br> |
-|   | [**InstanceAttributesT**](#function-instanceattributest-35) (const [**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md)&lt; OtherIsConst &gt; & o) noexcept<br> |
-|   | [**InstanceAttributesT**](#function-instanceattributest-45) (const [**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md) & o) = default<br> |
-|   | [**InstanceAttributesT**](#function-instanceattributest-55) ([**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md) && o) = default<br> |
+|   | [**InstanceAttributesT**](#function-instanceattributest-35) (const InstanceAttributesT&lt; OtherIsConst &gt; & o) noexcept<br> |
+|   | [**InstanceAttributesT**](#function-instanceattributest-45) (const InstanceAttributesT & o) = default<br> |
+|   | [**InstanceAttributesT**](#function-instanceattributest-55) (InstanceAttributesT && o) = default<br> |
 |  void | [**clear**](#function-clear) () <br> |
-|  void | [**copy\_from**](#function-copy_from) ([**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md)&lt; true &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
+|  void | [**copy\_from**](#function-copy_from) (InstanceAttributesT&lt; true &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
 |  decltype(auto) | [**create**](#function-create) (std::string\_view name, const T & init\_value={}) <br>_Create an attribute with the given name._  |
 |  void | [**destroy**](#function-destroy) (std::string\_view name) <br> |
 |  auto | [**find**](#function-find) (std::string\_view name) <br>_Find an attribute by type and name, if the attribute does not exist, return nullptr._  |
-|  [**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md) & | [**operator=**](#function-operator) (const [**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md) & o) = default<br> |
-|  [**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md) & | [**operator=**](#function-operator_1) ([**InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md) && o) = default<br> |
+|  InstanceAttributesT & | [**operator=**](#function-operator) (const InstanceAttributesT & o) = default<br> |
+|  InstanceAttributesT & | [**operator=**](#function-operator_1) (InstanceAttributesT && o) = default<br> |
 |  void | [**reserve**](#function-reserve) (size\_t size) <br> |
 |  void | [**resize**](#function-resize) (size\_t size) <br> |
 |  decltype(auto) | [**share**](#function-share) (std::string\_view name, const [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; & slot) <br> |
@@ -123,7 +123,7 @@ inline uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
 ```C++
 template<bool OtherIsConst>
 inline uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT (
-    const InstanceAttributesT < OtherIsConst > & o
+    const InstanceAttributesT< OtherIsConst > & o
 ) noexcept
 ```
 
@@ -188,7 +188,7 @@ void uipc::geometry::Geometry::InstanceAttributesT::clear ()
 
 ```C++
 inline void uipc::geometry::Geometry::InstanceAttributesT::copy_from (
-    InstanceAttributesT < true > other,
+    InstanceAttributesT< true > other,
     const AttributeCopy & copy={},
     span< const string > include_names={},
     span< const string > exclude_names={}
@@ -389,7 +389,7 @@ Json uipc::geometry::Geometry::InstanceAttributesT::to_json () const
 
 ```C++
 struct uipc::geometry::Geometry::InstanceAttributesT::formatter< InstanceAttributesT< IsConst > > (
-    fmt::formatter< InstanceAttributesT < IsConst > >
+    fmt::formatter< InstanceAttributesT< IsConst > >
 ) 
 ```
 

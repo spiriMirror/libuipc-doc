@@ -55,15 +55,15 @@ _A wrapper class for the meta attributes of a geometries._
 | Type | Name |
 | ---: | :--- |
 |   | [**MetaAttributesT**](#function-metaattributest-25) (AutoAttributeCollection & attributes) <br> |
-|   | [**MetaAttributesT**](#function-metaattributest-35) (const [**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md)&lt; OtherIsConst &gt; & o) noexcept<br> |
-|   | [**MetaAttributesT**](#function-metaattributest-45) (const [**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md) & o) = default<br> |
-|   | [**MetaAttributesT**](#function-metaattributest-55) ([**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md) && o) = default<br> |
-|  void | [**copy\_from**](#function-copy_from) ([**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md)&lt; true &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
+|   | [**MetaAttributesT**](#function-metaattributest-35) (const MetaAttributesT&lt; OtherIsConst &gt; & o) noexcept<br> |
+|   | [**MetaAttributesT**](#function-metaattributest-45) (const MetaAttributesT & o) = default<br> |
+|   | [**MetaAttributesT**](#function-metaattributest-55) (MetaAttributesT && o) = default<br> |
+|  void | [**copy\_from**](#function-copy_from) (MetaAttributesT&lt; true &gt; other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy={}, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br> |
 |  decltype(auto) | [**create**](#function-create) (std::string\_view name, const T & init\_value={}) <br>_Create an attribute with the given name._  |
 |  void | [**destroy**](#function-destroy) (std::string\_view name) <br> |
 |  auto | [**find**](#function-find) (std::string\_view name) <br>_Find an attribute by type and name, if the attribute does not exist, return nullptr._  |
-|  [**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md) & | [**operator=**](#function-operator) (const [**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md) & o) = default<br> |
-|  [**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md) & | [**operator=**](#function-operator_1) ([**MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md) && o) = default<br> |
+|  MetaAttributesT & | [**operator=**](#function-operator) (const MetaAttributesT & o) = default<br> |
+|  MetaAttributesT & | [**operator=**](#function-operator_1) (MetaAttributesT && o) = default<br> |
 |  decltype(auto) | [**share**](#function-share) (std::string\_view name, const [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; & slot) <br> |
 |  Json | [**to\_json**](#function-to_json) () const<br> |
 
@@ -119,7 +119,7 @@ inline uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
 ```C++
 template<bool OtherIsConst>
 inline uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
-    const MetaAttributesT < OtherIsConst > & o
+    const MetaAttributesT< OtherIsConst > & o
 ) noexcept
 ```
 
@@ -164,7 +164,7 @@ uipc::geometry::Geometry::MetaAttributesT::MetaAttributesT (
 
 ```C++
 inline void uipc::geometry::Geometry::MetaAttributesT::copy_from (
-    MetaAttributesT < true > other,
+    MetaAttributesT< true > other,
     const AttributeCopy & copy={},
     span< const string > include_names={},
     span< const string > exclude_names={}
@@ -301,7 +301,7 @@ Json uipc::geometry::Geometry::MetaAttributesT::to_json () const
 
 ```C++
 struct uipc::geometry::Geometry::MetaAttributesT::formatter< MetaAttributesT< IsConst > > (
-    fmt::formatter< MetaAttributesT < IsConst > >
+    fmt::formatter< MetaAttributesT< IsConst > >
 ) 
 ```
 

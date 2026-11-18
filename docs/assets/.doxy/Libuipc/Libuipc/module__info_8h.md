@@ -41,7 +41,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr std::uint32\_t | [**UIPC\_BACKEND\_ABI\_VERSION**](#variable-uipc_backend_abi_version)   = `1`<br> |
+|  std::uint32\_t | [**UIPC\_BACKEND\_ABI\_VERSION**](#variable-uipc_backend_abi_version)   = `1`<br> |
 
 
 
@@ -94,7 +94,7 @@
 ### variable UIPC\_BACKEND\_ABI\_VERSION 
 
 ```C++
-constexpr std::uint32_t UIPC_BACKEND_ABI_VERSION;
+std::uint32_t UIPC_BACKEND_ABI_VERSION;
 ```
 
 

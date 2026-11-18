@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1GlobalTimer" kind="class" language="C++" prot="public">
     <compoundname>uipc::GlobalTimer</compoundname>
     <innerclass refid="structuipc_1_1GlobalTimer_1_1MergeResult" prot="private">uipc::GlobalTimer::MergeResult</innerclass>
@@ -21,7 +21,7 @@
     </sectiondef>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classuipc_1_1GlobalTimer_1ae353e8f5a905171165ae4089b0955e30" prot="private" static="no" mutable="no">
-        <type>stack&lt; <ref refid="classuipc_1_1details_1_1ScopedTimer" kindref="compound">STimer</ref> * &gt;</type>
+        <type>stack&lt; STimer * &gt;</type>
         <definition>stack&lt;STimer*&gt; uipc::GlobalTimer::m_timer_stack</definition>
         <argsstring></argsstring>
         <name>m_timer_stack</name>
@@ -35,7 +35,7 @@
         <location file="include/uipc/common/timer.h" line="89" column="11" bodyfile="include/uipc/common/timer.h" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1GlobalTimer_1a884a1e8d18d0306f3a2801665eac217b" prot="private" static="no" mutable="no">
-        <type><ref refid="classuipc_1_1details_1_1ScopedTimer" kindref="compound">STimer</ref> *</type>
+        <type>STimer *</type>
         <definition>STimer* uipc::GlobalTimer::m_root</definition>
         <argsstring></argsstring>
         <name>m_root</name>
@@ -49,7 +49,7 @@
         <location file="include/uipc/common/timer.h" line="90" column="19" bodyfile="include/uipc/common/timer.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1GlobalTimer_1a04210e5dc4c1a7bcf73d47222a48da37" prot="private" static="no" mutable="no">
-        <type>list&lt; U&lt; <ref refid="classuipc_1_1details_1_1ScopedTimer" kindref="compound">STimer</ref> &gt; &gt;</type>
+        <type>list&lt; U&lt; STimer &gt; &gt;</type>
         <definition>list&lt;U&lt;STimer&gt; &gt; uipc::GlobalTimer::m_timers</definition>
         <argsstring></argsstring>
         <name>m_timers</name>
@@ -117,7 +117,7 @@
         <name>Timer</name>
         <qualifiedname>uipc::GlobalTimer::Timer</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1Timer" kindref="compound">Timer</ref></type>
+          <type>Timer</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -130,7 +130,7 @@
     </sectiondef>
     <sectiondef kind="private-static-attrib">
       <memberdef kind="variable" id="classuipc_1_1GlobalTimer_1a7e77af99194e4d6181913246497b957a" prot="private" static="yes" mutable="no">
-        <type><ref refid="classuipc_1_1GlobalTimer" kindref="compound">GlobalTimer</ref></type>
+        <type>GlobalTimer</type>
         <definition>GlobalTimer uipc::GlobalTimer::default_instance</definition>
         <argsstring></argsstring>
         <name>default_instance</name>
@@ -144,7 +144,7 @@
         <location file="include/uipc/common/timer.h" line="99" column="25" bodyfile="include/uipc/common/timer.h" bodystart="99" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classuipc_1_1GlobalTimer_1a343ab9f9beb18d344e675437099a7470" prot="private" static="yes" mutable="no">
-        <type><ref refid="classuipc_1_1GlobalTimer" kindref="compound">GlobalTimer</ref> *</type>
+        <type>GlobalTimer *</type>
         <definition>GlobalTimer* uipc::GlobalTimer::m_current</definition>
         <argsstring></argsstring>
         <name>m_current</name>
@@ -160,7 +160,7 @@
     </sectiondef>
     <sectiondef kind="private-func">
       <memberdef kind="function" id="classuipc_1_1GlobalTimer_1a20ee38a8b104754c6db81b8ba78ff56b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1details_1_1ScopedTimer" kindref="compound">STimer</ref> &amp;</type>
+        <type>STimer &amp;</type>
         <definition>STimer &amp; uipc::GlobalTimer::push_timer</definition>
         <argsstring>(std::string_view)</argsstring>
         <name>push_timer</name>
@@ -177,7 +177,7 @@
         <location file="include/uipc/common/timer.h" line="96" column="12"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1GlobalTimer_1aab8fc2322e5fd8bc6efcd3db787389c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1details_1_1ScopedTimer" kindref="compound">STimer</ref> &amp;</type>
+        <type>STimer &amp;</type>
         <definition>STimer &amp; uipc::GlobalTimer::pop_timer</definition>
         <argsstring>()</argsstring>
         <name>pop_timer</name>
@@ -201,7 +201,7 @@
           <declname>o</declname>
         </param>
         <param>
-          <type>const <ref refid="classuipc_1_1details_1_1ScopedTimer" kindref="compound">STimer</ref> *</type>
+          <type>const STimer *</type>
           <declname>timer</declname>
         </param>
         <param>
@@ -338,7 +338,7 @@
         <name>GlobalTimer</name>
         <qualifiedname>uipc::GlobalTimer::GlobalTimer</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1GlobalTimer" kindref="compound">GlobalTimer</ref> &amp;</type>
+          <type>const GlobalTimer &amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -349,13 +349,13 @@
         <location file="include/uipc/common/timer.h" line="135" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1GlobalTimer_1a9f55857b1321181fe600a4e3b6084eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1GlobalTimer" kindref="compound">GlobalTimer</ref> &amp;</type>
+        <type>GlobalTimer &amp;</type>
         <definition>GlobalTimer &amp; uipc::GlobalTimer::operator=</definition>
         <argsstring>(const GlobalTimer &amp;)=delete</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::GlobalTimer::operator=</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1GlobalTimer" kindref="compound">GlobalTimer</ref> &amp;</type>
+          <type>const GlobalTimer &amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -476,7 +476,7 @@
     </sectiondef>
     <sectiondef kind="public-static-func">
       <memberdef kind="function" id="classuipc_1_1GlobalTimer_1a175bf66d5e35ca3078e63c211be1dd25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1GlobalTimer" kindref="compound">GlobalTimer</ref> *</type>
+        <type>GlobalTimer *</type>
         <definition>static GlobalTimer * uipc::GlobalTimer::current</definition>
         <argsstring>()</argsstring>
         <name>current</name>

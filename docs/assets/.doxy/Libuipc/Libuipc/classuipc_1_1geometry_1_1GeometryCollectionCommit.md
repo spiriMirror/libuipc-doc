@@ -52,9 +52,9 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**GeometryCollectionCommit**](#function-geometrycollectioncommit-13) () = default<br> |
-|   | [**GeometryCollectionCommit**](#function-geometrycollectioncommit-23) (const [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1GeometryCollectionCommit.md) &) <br> |
+|   | [**GeometryCollectionCommit**](#function-geometrycollectioncommit-23) (const GeometryCollectionCommit &) <br> |
 |   | [**GeometryCollectionCommit**](#function-geometrycollectioncommit-33) (const [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & dst, const [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & src) <br> |
-|  [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1GeometryCollectionCommit.md) & | [**operator=**](#function-operator) (const [**GeometryCollectionCommit**](classuipc_1_1geometry_1_1GeometryCollectionCommit.md) &) = delete<br> |
+|  GeometryCollectionCommit & | [**operator=**](#function-operator) (const GeometryCollectionCommit &) = delete<br> |
 
 
 

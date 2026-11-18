@@ -103,7 +103,7 @@
 ### typedef HandleT 
 
 ```C++
-using uipc::backend::HandleT = typedef std::uint64_t;
+using uipc::backend::HandleT =  std::uint64_t;
 ```
 
 

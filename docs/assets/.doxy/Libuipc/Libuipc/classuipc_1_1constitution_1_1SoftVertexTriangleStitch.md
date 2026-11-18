@@ -33,7 +33,7 @@ Inherits the following classes: [uipc::constitution::InterPrimitiveConstitution]
 
 | Type | Name |
 | ---: | :--- |
-| typedef std::tuple&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt;, S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
+| typedef std::tuple&lt; S&lt; geometry::SimplicialComplexSlot &gt;, S&lt; geometry::SimplicialComplexSlot &gt; &gt; | [**SlotTuple**](#typedef-slottuple)  <br> |
 
 
 
@@ -216,7 +216,8 @@ See [uipc::constitution::IConstitution](classuipc_1_1constitution_1_1IConstituti
 ### typedef SlotTuple 
 
 ```C++
-using uipc::constitution::SoftVertexTriangleStitch::SlotTuple =  std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot> >;
+using uipc::constitution::SoftVertexTriangleStitch::SlotTuple = 
+        std::tuple<S<geometry::SimplicialComplexSlot>, S<geometry::SimplicialComplexSlot>>;
 ```
 
 

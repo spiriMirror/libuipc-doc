@@ -68,8 +68,8 @@
 | ---: | :--- |
 |   | [**Scene**](#function-scene-14) (const Json & config=default\_config()) <br> |
 |   | [**Scene**](#function-scene-24) (S&lt; [**internal::Scene**](classuipc_1_1core_1_1internal_1_1Scene.md) &gt; scene) noexcept<br> |
-|   | [**Scene**](#function-scene-34) (const [**Scene**](classuipc_1_1core_1_1Scene.md) &) = delete<br> |
-|   | [**Scene**](#function-scene-44) ([**Scene**](classuipc_1_1core_1_1Scene.md) &&) = default<br> |
+|   | [**Scene**](#function-scene-34) (const Scene &) = delete<br> |
+|   | [**Scene**](#function-scene-44) (Scene &&) = default<br> |
 |  [**Animator**](classuipc_1_1core_1_1Animator.md) & | [**animator**](#function-animator-12) () <br> |
 |  const [**Animator**](classuipc_1_1core_1_1Animator.md) & | [**animator**](#function-animator-22) () const<br> |
 |  ConfigAttributes | [**config**](#function-config-12) () noexcept<br> |

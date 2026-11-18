@@ -52,14 +52,14 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**GeometryCommit**](#function-geometrycommit-14) () = default<br> |
-|   | [**GeometryCommit**](#function-geometrycommit-24) (const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) &) <br> |
-|   | [**GeometryCommit**](#function-geometrycommit-34) (const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & dst) <br> |
+|   | [**GeometryCommit**](#function-geometrycommit-24) (const GeometryCommit &) <br> |
+|   | [**GeometryCommit**](#function-geometrycommit-34) (const Geometry & dst) <br> |
 |  const unordered\_map&lt; std::string, S&lt; [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) &gt; &gt; & | [**attribute\_collections**](#function-attribute_collections) () noexcept const<br> |
 |  bool | [**is\_modification**](#function-is_modification) () noexcept const<br> |
 |  bool | [**is\_new**](#function-is_new) () noexcept const<br> |
 |  bool | [**is\_valid**](#function-is_valid) () noexcept const<br> |
-|  S&lt; [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) &gt; | [**new\_geometry**](#function-new_geometry) () noexcept const<br> |
-|  [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) & | [**operator=**](#function-operator) (const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) &) = delete<br> |
+|  S&lt; Geometry &gt; | [**new\_geometry**](#function-new_geometry) () noexcept const<br> |
+|  GeometryCommit & | [**operator=**](#function-operator) (const GeometryCommit &) = delete<br> |
 |  const std::string & | [**type**](#function-type) () noexcept const<br> |
 
 

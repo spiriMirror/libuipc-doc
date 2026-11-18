@@ -205,6 +205,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
     * **class** [**uipc::Exception**](classuipc_1_1Exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1JsonIOError.md) 
@@ -212,6 +213,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
     * **class** [**uipc::Exception**](classuipc_1_1Exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1JsonIOError.md) 
@@ -219,6 +221,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
     * **class** [**uipc::Exception**](classuipc_1_1Exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1JsonIOError.md) 
@@ -226,6 +229,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
     * **class** [**uipc::Exception**](classuipc_1_1Exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1JsonIOError.md) 
@@ -233,6 +237,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
     * **class** [**uipc::Exception**](classuipc_1_1Exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1JsonIOError.md) 
@@ -240,6 +245,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
     * **class** [**uipc::Exception**](classuipc_1_1Exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1JsonIOError.md) 
@@ -247,6 +253,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
     * **class** [**uipc::Exception**](classuipc_1_1Exception.md)     
         * **class** [**uipc::JsonIOError**](classuipc_1_1JsonIOError.md) 
@@ -254,6 +261,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**uipc::core::SceneIOError**](classuipc_1_1core_1_1SceneIOError.md) 
         * **class** [**uipc::geometry::AttributeCollectionError**](classuipc_1_1geometry_1_1AttributeCollectionError.md) 
         * **class** [**uipc::geometry::AttributeIOError**](classuipc_1_1geometry_1_1AttributeIOError.md) 
+        * **class** [**uipc::geometry::GeometryIOError**](classuipc_1_1geometry_1_1GeometryIOError.md) 
         * **class** [**uipc::io::UrdfIOError**](classuipc_1_1io_1_1UrdfIOError.md) 
 * **class** **std::enable_shared_from_this< Engine >**    
     * **class** [**uipc::core::internal::Engine**](classuipc_1_1core_1_1internal_1_1Engine.md) 
@@ -261,12 +269,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**uipc::core::internal::Scene**](classuipc_1_1core_1_1internal_1_1Scene.md) 
 * **class** **std::enable_shared_from_this< World >**    
     * **class** [**uipc::core::internal::World**](classuipc_1_1core_1_1internal_1_1World.md) 
-* **class** **formatter< std::string_view >**    
-    * **struct** [**fmt::formatter&lt; uipc::geometry::AttributeCollection &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1AttributeCollection_01_4.md) 
-    * **struct** [**fmt::formatter&lt; uipc::geometry::ImplicitGeometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1ImplicitGeometry_01_4.md) 
-    * **struct** [**fmt::formatter&lt; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1SimplicialComplexAttributes_3_01IsConst_00_01N_01_4_01_4.md) 
 * **class** **formatter< string_view >**    
-    * **struct** [**fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1SimplicialComplex_01_4.md) 
     * **struct** [**fmt::formatter&lt; uipc::core::Animation &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1Animation_01_4.md) 
     * **struct** [**fmt::formatter&lt; uipc::core::Animator &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1Animator_01_4.md) 
     * **struct** [**fmt::formatter&lt; uipc::core::Object &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1Object_01_4.md) 
@@ -276,9 +279,15 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **struct** [**fmt::formatter&lt; uipc::geometry::Geometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1Geometry_01_4.md) 
     * **struct** [**fmt::formatter&lt; uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_3_01IsConst_01_4_01_4.md) 
     * **struct** [**fmt::formatter&lt; uipc::geometry::Geometry::MetaAttributesT&lt; IsConst &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1Geometry_1_1MetaAttributesT_3_01IsConst_01_4_01_4.md) 
+    * **struct** [**fmt::formatter&lt; uipc::geometry::SimplicialComplex &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1SimplicialComplex_01_4.md) 
+* **class** **formatter< std::string_view >**    
+    * **struct** [**fmt::formatter&lt; uipc::geometry::AttributeCollection &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1AttributeCollection_01_4.md) 
+    * **struct** [**fmt::formatter&lt; uipc::geometry::ImplicitGeometry &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1ImplicitGeometry_01_4.md) 
+    * **struct** [**fmt::formatter&lt; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1SimplicialComplexAttributes_3_01IsConst_00_01N_01_4_01_4.md) 
 * **class** **std::false_type**    
     * **struct** [**uipc::always\_false**](structuipc_1_1always__false.md) 
     * **struct** [**uipc::is\_matrix**](structuipc_1_1is__matrix.md) 
+    * **struct** [**uipc::is\_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4.md) 
 * **class** **std::true_type**    
     * **struct** [**uipc::is\_matrix&lt; Eigen::Matrix&lt; Scalar, Rows, Cols, Options, MaxRows, MaxCols &gt; &gt;**](structuipc_1_1is__matrix_3_01Eigen_1_1Matrix_3_01Scalar_00_01Rows_00_01Cols_00_01Options_00_01MaxRows_00_01MaxCols_01_4_01_4.md) 
 

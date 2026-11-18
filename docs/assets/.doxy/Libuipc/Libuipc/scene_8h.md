@@ -47,6 +47,7 @@
 
 | Type | Name |
 | ---: | :--- |
+| struct | [**formatter&lt; uipc::core::Scene &gt;**](structfmt_1_1formatter_3_01uipc_1_1core_1_1Scene_01_4.md) &lt;&gt;<br> |
 | class | [**Scene**](classuipc_1_1core_1_1Scene.md) <br> |
 | class | [**CGeometries**](classuipc_1_1core_1_1Scene_1_1CGeometries.md) <br> |
 | class | [**CObjects**](classuipc_1_1core_1_1Scene_1_1CObjects.md) <br> |

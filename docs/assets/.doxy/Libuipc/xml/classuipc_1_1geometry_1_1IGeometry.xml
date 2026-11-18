@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1IGeometry" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>uipc::geometry::IGeometry</compoundname>
     <derivedcompoundref refid="classuipc_1_1geometry_1_1Geometry" prot="public" virt="non-virtual">uipc::geometry::Geometry</derivedcompoundref>
@@ -17,7 +17,7 @@
         <name>GeometryFriend</name>
         <qualifiedname>uipc::geometry::IGeometry::GeometryFriend</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1GeometryFriend" kindref="compound">GeometryFriend</ref></type>
+          <type>GeometryFriend</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -51,7 +51,7 @@
         <name>GeometryCommit</name>
         <qualifiedname>uipc::geometry::IGeometry::GeometryCommit</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1GeometryCommit" kindref="compound">GeometryCommit</ref></type>
+          <type>GeometryCommit</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -68,7 +68,7 @@
         <name>GeometryCollection</name>
         <qualifiedname>uipc::geometry::IGeometry::GeometryCollection</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1GeometryCollection" kindref="compound">GeometryCollection</ref></type>
+          <type>GeometryCollection</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -80,7 +80,7 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1acffe2791e52c598766df64c010b439d9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1acffe2791e52c598766df64c010b439d9" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string_view</type>
         <definition>std::string_view uipc::geometry::IGeometry::type</definition>
         <argsstring>() const noexcept</argsstring>
@@ -112,7 +112,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="34" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1a7e33167a2c1322aeed0303fb97e69a04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1a7e33167a2c1322aeed0303fb97e69a04" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::IGeometry::to_json</definition>
         <argsstring>() const</argsstring>
@@ -126,7 +126,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="35" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1aff0aef528fed6098098d8a0f0d38e8c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1aff0aef528fed6098098d8a0f0d38e8c0" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IGeometry" kindref="compound">IGeometry</ref> &gt;</type>
         <definition>S&lt; IGeometry &gt; uipc::geometry::IGeometry::clone</definition>
         <argsstring>() const</argsstring>
@@ -147,7 +147,7 @@
         <name>update_from</name>
         <qualifiedname>uipc::geometry::IGeometry::update_from</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1GeometryCommit" kindref="compound">GeometryCommit</ref> &amp;</type>
+          <type>const GeometryCommit &amp;</type>
           <declname>commit</declname>
         </param>
         <briefdescription>
@@ -160,7 +160,7 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1a8ebf50e0ad154bbeeff39c83a2deec22" prot="protected" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1IGeometry_1a8ebf50e0ad154bbeeff39c83a2deec22" prot="protected" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
         <type>std::string_view</type>
         <definition>virtual std::string_view uipc::geometry::IGeometry::get_type</definition>
         <argsstring>() const noexcept=0</argsstring>
@@ -288,7 +288,7 @@
         <qualifiedname>uipc::geometry::IGeometry::do_update_from</qualifiedname>
         <reimplementedby refid="classuipc_1_1geometry_1_1Geometry_1ae088e18904dbda4add76c57a2fdd4dbe">do_update_from</reimplementedby>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1GeometryCommit" kindref="compound">GeometryCommit</ref> &amp;</type>
+          <type>const GeometryCommit &amp;</type>
           <declname>commit</declname>
         </param>
         <briefdescription>

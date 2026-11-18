@@ -51,12 +51,12 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**UrdfController**](#function-urdfcontroller-13) (const [**UrdfController**](classuipc_1_1io_1_1UrdfController.md) & other) <br> |
-|   | [**UrdfController**](#function-urdfcontroller-23) ([**UrdfController**](classuipc_1_1io_1_1UrdfController.md) && other) = default<br> |
+|   | [**UrdfController**](#function-urdfcontroller-13) (const UrdfController & other) <br> |
+|   | [**UrdfController**](#function-urdfcontroller-23) (UrdfController && other) = default<br> |
 |  void | [**apply\_to**](#function-apply_to) (std::string\_view attr) const<br> |
-|  vector&lt; S&lt; [**geometry::SimplicialComplexSlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01SimplicialComplex_01_4.md) &gt; &gt; | [**links**](#function-links) () const<br> |
+|  vector&lt; S&lt; geometry::SimplicialComplexSlot &gt; &gt; | [**links**](#function-links) () const<br> |
 |  void | [**move\_root**](#function-move_root) (const Vector3 & xyz, const Vector3 & rpy) const<br> |
-|  S&lt; [**geometry::ImplicitGeometrySlot**](classuipc_1_1geometry_1_1GeometrySlotT_3_01ImplicitGeometry_01_4.md) &gt; | [**revolute\_joints**](#function-revolute_joints) () const<br> |
+|  S&lt; geometry::ImplicitGeometrySlot &gt; | [**revolute\_joints**](#function-revolute_joints) () const<br> |
 |  void | [**rotate\_to**](#function-rotate_to) (std::string\_view joint\_name, Float angle) const<br> |
 |  void | [**sync\_visual\_mesh**](#function-sync_visual_mesh) () const<br> |
 |   | [**~UrdfController**](#function-urdfcontroller) () <br> |

@@ -73,8 +73,8 @@ Inherits the following classes: [uipc::geometry::IGeometryCollection](classuipc_
 | Type | Name |
 | ---: | :--- |
 |   | [**GeometryCollection**](#function-geometrycollection-13) () = default<br> |
-|   | [**GeometryCollection**](#function-geometrycollection-23) (const [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) &) <br> |
-|   | [**GeometryCollection**](#function-geometrycollection-33) ([**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) &&) noexcept<br> |
+|   | [**GeometryCollection**](#function-geometrycollection-23) (const GeometryCollection &) <br> |
+|   | [**GeometryCollection**](#function-geometrycollection-33) (GeometryCollection &&) noexcept<br> |
 |  void | [**destroy**](#function-destroy) (IndexT id) noexcept<br> |
 |  S&lt; [**geometry::GeometrySlotT**](classuipc_1_1geometry_1_1GeometrySlotT.md)&lt; GeometryT &gt; &gt; | [**emplace**](#function-emplace-12) (const GeometryT & geometry) <br> |
 |  S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; | [**emplace**](#function-emplace-22) (const [**geometry::Geometry**](classuipc_1_1geometry_1_1Geometry.md) & geometry) <br> |
@@ -83,8 +83,8 @@ Inherits the following classes: [uipc::geometry::IGeometryCollection](classuipc_
 |  S&lt; const [**geometry::GeometrySlotT**](classuipc_1_1geometry_1_1GeometrySlotT.md)&lt; GeometryT &gt; &gt; | [**find**](#function-find-34) (IndexT id) noexcept const<br> |
 |  S&lt; const [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; | [**find**](#function-find-44) (IndexT id) noexcept const<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**geometry\_slots**](#function-geometry_slots) () noexcept const<br> |
-|  [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & | [**operator=**](#function-operator) (const [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) &) = delete<br> |
-|  [**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) & | [**operator=**](#function-operator_1) ([**GeometryCollection**](classuipc_1_1geometry_1_1GeometryCollection.md) &&) = default<br> |
+|  GeometryCollection & | [**operator=**](#function-operator) (const GeometryCollection &) = delete<br> |
+|  GeometryCollection & | [**operator=**](#function-operator_1) (GeometryCollection &&) = default<br> |
 |  span&lt; S&lt; [**geometry::GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; &gt; | [**pending\_create\_slots**](#function-pending_create_slots) () noexcept const<br> |
 |  void | [**pending\_destroy**](#function-pending_destroy) (IndexT id) noexcept<br> |
 |  span&lt; IndexT &gt; | [**pending\_destroy\_ids**](#function-pending_destroy_ids) () noexcept const<br> |

@@ -56,7 +56,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**ConstitutionUIDAutoRegister**](#function-constitutionuidautoregister) ([**Creator**](classuipc_1_1builtin_1_1UIDInfoCreator.md) creator) noexcept<br> |
+|   | [**ConstitutionUIDAutoRegister**](#function-constitutionuidautoregister) (Creator creator) noexcept<br> |
 
 
 

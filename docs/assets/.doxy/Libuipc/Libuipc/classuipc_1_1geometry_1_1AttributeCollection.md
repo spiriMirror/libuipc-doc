@@ -53,11 +53,11 @@ _A collection of geometries attributes._ [More...](#detailed-description)
 | Type | Name |
 | ---: | :--- |
 |   | [**AttributeCollection**](#function-attributecollection-13) () = default<br> |
-|   | [**AttributeCollection**](#function-attributecollection-23) (const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &) <br> |
-|   | [**AttributeCollection**](#function-attributecollection-33) ([**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &&) noexcept<br> |
+|   | [**AttributeCollection**](#function-attributecollection-23) (const AttributeCollection &) <br> |
+|   | [**AttributeCollection**](#function-attributecollection-33) (AttributeCollection &&) noexcept<br> |
 |  SizeT | [**attribute\_count**](#function-attribute_count) () const<br>_Get the number of attribute slots._  |
 |  void | [**clear**](#function-clear) () <br>_clear the underlying attribute values of all attribute slots, the attribute slots will not be destroyed._  |
-|  void | [**copy\_from**](#function-copy_from) (const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br>_copy\_from the underlying attribute values of all attribute slots._  |
+|  void | [**copy\_from**](#function-copy_from) (const AttributeCollection & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy, span&lt; const string &gt; include\_names={}, span&lt; const string &gt; exclude\_names={}) <br>_copy\_from the underlying attribute values of all attribute slots._  |
 |  S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; &gt; | [**create**](#function-create) (std::string\_view name, const T & default\_value={}, bool allow\_destroy=true) <br>_Create a new attribute slot of type T with a given name._  |
 |  void | [**destroy**](#function-destroy) (std::string\_view name) <br>_Remove the attribute slot with the given name._  |
 |  S&lt; [**IAttributeSlot**](classuipc_1_1geometry_1_1IAttributeSlot.md) &gt; | [**find**](#function-find-14) (std::string\_view name) <br>_Find the attribute slot with the given name._  |
@@ -65,8 +65,8 @@ _A collection of geometries attributes._ [More...](#detailed-description)
 |  S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; &gt; | [**find**](#function-find-34) (std::string\_view name) <br>_Template version of find._  |
 |  S&lt; const [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; &gt; | [**find**](#function-find-44) (std::string\_view name) const<br>_Template const version of find._  |
 |  vector&lt; string &gt; | [**names**](#function-names) () const<br>_Get the names of all attribute slots._  |
-|  [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & | [**operator=**](#function-operator) (const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &) <br> |
-|  [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) & | [**operator=**](#function-operator_1) ([**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &&) noexcept<br> |
+|  AttributeCollection & | [**operator=**](#function-operator) (const AttributeCollection &) <br> |
+|  AttributeCollection & | [**operator=**](#function-operator_1) (AttributeCollection &&) noexcept<br> |
 |  void | [**reorder**](#function-reorder) (span&lt; const SizeT &gt; O) <br>_Reorder the underlying attribute values of all attribute slots._  |
 |  void | [**reserve**](#function-reserve) (SizeT N) <br>_Reserve memory for all attribute slots._  |
 |  void | [**resize**](#function-resize) (SizeT N) <br>_Resize all attribute slots to the given size._  |
@@ -74,7 +74,7 @@ _A collection of geometries attributes._ [More...](#detailed-description)
 |  S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; &gt; | [**share**](#function-share-22) (std::string\_view name, const [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; T &gt; & slot, bool allow\_destroy=true) <br>_Template version of share._  |
 |  SizeT | [**size**](#function-size) () const<br>_Get the size of the attribute slots._  |
 |  Json | [**to\_json**](#function-to_json) () const<br>_Get the json representation of the attribute collection._  |
-|  void | [**update\_from**](#function-update_from) (const [**AttributeCollectionCommit**](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) & commit) <br>_Update the attribute collection from_ [_**AttributeCollectionCommit**_](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) _._ |
+|  void | [**update\_from**](#function-update_from) (const AttributeCollectionCommit & commit) <br>_Update the attribute collection from_ [_**AttributeCollectionCommit**_](classuipc_1_1geometry_1_1AttributeCollectionCommit.md) _._ |
 
 
 

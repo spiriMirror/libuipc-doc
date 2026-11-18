@@ -81,10 +81,10 @@ Inherits the following classes: [uipc::geometry::IAttribute](classuipc_1_1geomet
 | Type | Name |
 | ---: | :--- |
 |   | [**Attribute**](#function-attribute-13) (const T & default\_value={}) noexcept<br> |
-|   | [**Attribute**](#function-attribute-23) (const [**Attribute**](classuipc_1_1geometry_1_1Attribute.md)&lt; T &gt; &) = default<br> |
-|   | [**Attribute**](#function-attribute-33) ([**Attribute**](classuipc_1_1geometry_1_1Attribute.md)&lt; T &gt; &&) = default<br> |
-|  [**Attribute**](classuipc_1_1geometry_1_1Attribute.md)&lt; T &gt; & | [**operator=**](#function-operator) (const [**Attribute**](classuipc_1_1geometry_1_1Attribute.md)&lt; T &gt; &) = default<br> |
-|  [**Attribute**](classuipc_1_1geometry_1_1Attribute.md)&lt; T &gt; & | [**operator=**](#function-operator_1) ([**Attribute**](classuipc_1_1geometry_1_1Attribute.md)&lt; T &gt; &&) = default<br> |
+|   | [**Attribute**](#function-attribute-23) (const Attribute&lt; T &gt; &) = default<br> |
+|   | [**Attribute**](#function-attribute-33) (Attribute&lt; T &gt; &&) = default<br> |
+|  Attribute&lt; T &gt; & | [**operator=**](#function-operator) (const Attribute&lt; T &gt; &) = default<br> |
+|  Attribute&lt; T &gt; & | [**operator=**](#function-operator_1) (Attribute&lt; T &gt; &&) = default<br> |
 |  span&lt; const T &gt; | [**view**](#function-view-22) () noexcept const<br> |
 
 
@@ -158,9 +158,9 @@ See [uipc::geometry::IAttribute](classuipc_1_1geometry_1_1IAttribute.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**do\_clear**](#function-do_clear) () override<br> |
-| virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
-| virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone\_empty**](#function-do_clone_empty) () override const<br> |
-| virtual void | [**do\_copy\_from**](#function-do_copy_from) (const [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) override<br> |
+| virtual S&lt; IAttribute &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
+| virtual S&lt; IAttribute &gt; | [**do\_clone\_empty**](#function-do_clone_empty) () override const<br> |
+| virtual void | [**do\_copy\_from**](#function-do_copy_from) (const IAttribute & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) override<br> |
 | virtual void | [**do\_from\_json**](#function-do_from_json) (const Json & j) override<br> |
 | virtual void | [**do\_from\_json\_array**](#function-do_from_json_array) (const Json & j) override<br> |
 | virtual void | [**do\_reorder**](#function-do_reorder) (span&lt; const SizeT &gt; O) noexcept override<br> |
@@ -179,9 +179,9 @@ See [uipc::geometry::IAttribute](classuipc_1_1geometry_1_1IAttribute.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**do\_clear**](classuipc_1_1geometry_1_1IAttribute.md#function-do_clear) () = 0<br> |
-| virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1IAttribute.md#function-do_clone) () const = 0<br> |
-| virtual S&lt; [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) &gt; | [**do\_clone\_empty**](classuipc_1_1geometry_1_1IAttribute.md#function-do_clone_empty) () const = 0<br> |
-| virtual void | [**do\_copy\_from**](classuipc_1_1geometry_1_1IAttribute.md#function-do_copy_from) (const [**IAttribute**](classuipc_1_1geometry_1_1IAttribute.md) & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) = 0<br> |
+| virtual S&lt; IAttribute &gt; | [**do\_clone**](classuipc_1_1geometry_1_1IAttribute.md#function-do_clone) () const = 0<br> |
+| virtual S&lt; IAttribute &gt; | [**do\_clone\_empty**](classuipc_1_1geometry_1_1IAttribute.md#function-do_clone_empty) () const = 0<br> |
+| virtual void | [**do\_copy\_from**](classuipc_1_1geometry_1_1IAttribute.md#function-do_copy_from) (const IAttribute & other, const [**AttributeCopy**](classuipc_1_1geometry_1_1AttributeCopy.md) & copy) = 0<br> |
 | virtual void | [**do\_from\_json**](classuipc_1_1geometry_1_1IAttribute.md#function-do_from_json) (const Json & j) = 0<br> |
 | virtual void | [**do\_from\_json\_array**](classuipc_1_1geometry_1_1IAttribute.md#function-do_from_json_array) (const Json & j) = 0<br> |
 | virtual void | [**do\_reorder**](classuipc_1_1geometry_1_1IAttribute.md#function-do_reorder) (span&lt; const SizeT &gt; O) noexcept = 0<br> |
@@ -250,7 +250,7 @@ uipc::geometry::Attribute::Attribute (
 
 ```C++
 uipc::geometry::Attribute::Attribute (
-    const Attribute < T > &
+    const Attribute< T > &
 ) = default
 ```
 
@@ -265,7 +265,7 @@ uipc::geometry::Attribute::Attribute (
 
 ```C++
 uipc::geometry::Attribute::Attribute (
-    Attribute < T > &&
+    Attribute< T > &&
 ) = default
 ```
 
@@ -279,8 +279,8 @@ uipc::geometry::Attribute::Attribute (
 ### function operator= 
 
 ```C++
-Attribute < T > & uipc::geometry::Attribute::operator= (
-    const Attribute < T > &
+Attribute< T > & uipc::geometry::Attribute::operator= (
+    const Attribute< T > &
 ) = default
 ```
 
@@ -294,8 +294,8 @@ Attribute < T > & uipc::geometry::Attribute::operator= (
 ### function operator= 
 
 ```C++
-Attribute < T > & uipc::geometry::Attribute::operator= (
-    Attribute < T > &&
+Attribute< T > & uipc::geometry::Attribute::operator= (
+    Attribute< T > &&
 ) = default
 ```
 
@@ -552,7 +552,7 @@ Implements [*uipc::geometry::IAttribute::get\_type\_name*](classuipc_1_1geometry
 
 ```C++
 inline span< T > uipc::geometry::Attribute::view (
-    Attribute < T > & a
+    Attribute< T > & a
 ) noexcept
 ```
 

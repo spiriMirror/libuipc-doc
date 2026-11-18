@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1AttributeCollection" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::AttributeCollection</compoundname>
     <includes refid="attribute__collection_8h" local="no">attribute_collection.h</includes>
@@ -16,7 +16,7 @@
         <name>AttributeFriend</name>
         <qualifiedname>uipc::geometry::AttributeCollection::AttributeFriend</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeFriend" kindref="compound">AttributeFriend</ref></type>
+          <type>AttributeFriend</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -33,7 +33,7 @@
         <name>fmt::formatter&lt; AttributeCollection &gt;</name>
         <qualifiedname>uipc::geometry::AttributeCollection::formatter&lt; AttributeCollection &gt;</qualifiedname>
         <param>
-          <type>fmt::formatter&lt; <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
+          <type>fmt::formatter&lt; AttributeCollection &gt;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -50,7 +50,7 @@
         <name>AttributeCollectionCommit</name>
         <qualifiedname>uipc::geometry::AttributeCollection::AttributeCollectionCommit</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref></type>
+          <type>AttributeCollectionCommit</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -114,7 +114,7 @@
         <name>AttributeCollection</name>
         <qualifiedname>uipc::geometry::AttributeCollection::AttributeCollection</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <type>const AttributeCollection &amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -125,13 +125,13 @@
         <location file="include/uipc/geometry/attribute_collection.h" line="31" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a818f16080d6efff47ed678801a95b044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+        <type>AttributeCollection &amp;</type>
         <definition>AttributeCollection &amp; uipc::geometry::AttributeCollection::operator=</definition>
         <argsstring>(const AttributeCollection &amp;)</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::AttributeCollection::operator=</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <type>const AttributeCollection &amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -148,7 +148,7 @@
         <name>AttributeCollection</name>
         <qualifiedname>uipc::geometry::AttributeCollection::AttributeCollection</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;&amp;</type>
+          <type>AttributeCollection &amp;&amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -159,13 +159,13 @@
         <location file="include/uipc/geometry/attribute_collection.h" line="34" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a9179b840a21125c2a97f45d1cbfd2b06" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+        <type>AttributeCollection &amp;</type>
         <definition>AttributeCollection &amp; uipc::geometry::AttributeCollection::operator=</definition>
         <argsstring>(AttributeCollection &amp;&amp;) noexcept</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::AttributeCollection::operator=</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;&amp;</type>
+          <type>AttributeCollection &amp;&amp;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -350,7 +350,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="80" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a7597679f4fce2084f00d90058442c5f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a7597679f4fce2084f00d90058442c5f3" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
         <definition>S&lt; IAttributeSlot &gt; uipc::geometry::AttributeCollection::find</definition>
         <argsstring>(std::string_view name)</argsstring>
@@ -383,7 +383,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="89" column="8"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a9bed8ad0c30f250eba51382304f4fb9e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a9bed8ad0c30f250eba51382304f4fb9e" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>S&lt; const <ref refid="classuipc_1_1geometry_1_1IAttributeSlot" kindref="compound">IAttributeSlot</ref> &gt;</type>
         <definition>S&lt; const IAttributeSlot &gt; uipc::geometry::AttributeCollection::find</definition>
         <argsstring>(std::string_view name) const</argsstring>
@@ -402,7 +402,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="93" column="8"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a1227ff84bc6c5773cb7d6228a9dcbbff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a1227ff84bc6c5773cb7d6228a9dcbbff" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -426,7 +426,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="99" column="8"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1ad8bf4284206dd0db10e975a7296ebe13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1ad8bf4284206dd0db10e975a7296ebe13" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -510,7 +510,7 @@
         <name>copy_from</name>
         <qualifiedname>uipc::geometry::AttributeCollection::copy_from</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <type>const AttributeCollection &amp;</type>
           <declname>other</declname>
         </param>
         <param>
@@ -562,7 +562,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="130" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a69c0a11471d3f335f52b427773cb1216" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a69c0a11471d3f335f52b427773cb1216" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>SizeT</type>
         <definition>SizeT uipc::geometry::AttributeCollection::size</definition>
         <argsstring>() const</argsstring>
@@ -617,7 +617,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="150" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a8eacb7916a17737d644435cc568288db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a8eacb7916a17737d644435cc568288db" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; string &gt;</type>
         <definition>vector&lt; string &gt; uipc::geometry::AttributeCollection::names</definition>
         <argsstring>() const</argsstring>
@@ -632,7 +632,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="155" column="13"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1aa405afa586696b46829f89c4470977a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1aa405afa586696b46829f89c4470977a1" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>SizeT</type>
         <definition>SizeT uipc::geometry::AttributeCollection::attribute_count</definition>
         <argsstring>() const</argsstring>
@@ -647,7 +647,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/attribute_collection.h" line="160" column="12"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a2871a2a290e463bd343a2dfb3ac4159a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1AttributeCollection_1a2871a2a290e463bd343a2dfb3ac4159a" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>Json</type>
         <definition>Json uipc::geometry::AttributeCollection::to_json</definition>
         <argsstring>() const</argsstring>
@@ -669,7 +669,7 @@
         <name>update_from</name>
         <qualifiedname>uipc::geometry::AttributeCollection::update_from</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollectionCommit" kindref="compound">AttributeCollectionCommit</ref> &amp;</type>
+          <type>const AttributeCollectionCommit &amp;</type>
           <declname>commit</declname>
         </param>
         <briefdescription>

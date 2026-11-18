@@ -74,7 +74,7 @@ Inherits the following classes: [uipc::constitution::IConstitution](classuipc_1_
 | ---: | :--- |
 |   | [**AffineBodyExternalBodyForce**](#function-affinebodyexternalbodyforce) (const Json & config=default\_config()) <br> |
 |  void | [**apply\_to**](#function-apply_to-12) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector12 & force, bool enable=true) <br>_Apply external force (12D generalized force) to affine body instances._  |
-|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector3 & force, bool enable=true) <br>_Apply external translational force to affine body instances (only translational force, affine force = 0)_  |
+|  void | [**apply\_to**](#function-apply_to-22) ([**geometry::SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc, const Vector3 & force, bool enable=true) <br>_Apply external translational force to affine body instances (only translational force, affine force = 0)._  |
 |   | [**~AffineBodyExternalBodyForce**](#function-affinebodyexternalbodyforce) () <br> |
 
 
@@ -213,7 +213,7 @@ void uipc::constitution::AffineBodyExternalBodyForce::apply_to (
 
 ### function apply\_to [2/2]
 
-_Apply external translational force to affine body instances (only translational force, affine force = 0)_ 
+_Apply external translational force to affine body instances (only translational force, affine force = 0)._ 
 ```C++
 void uipc::constitution::AffineBodyExternalBodyForce::apply_to (
     geometry::SimplicialComplex & sc,

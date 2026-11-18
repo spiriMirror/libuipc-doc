@@ -86,14 +86,14 @@ See [uipc::geometry::GeometrySlot](classuipc_1_1geometry_1_1GeometrySlot.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometryslot-13) (IndexT id) noexcept<br> |
-|   | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometryslot-23) (const [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &) = delete<br> |
-|   | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometryslot-33) ([**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &&) = delete<br> |
-|  S&lt; [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; | [**clone**](classuipc_1_1geometry_1_1GeometrySlot.md#function-clone) () const<br> |
+|   | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometryslot-23) (const GeometrySlot &) = delete<br> |
+|   | [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometryslot-33) (GeometrySlot &&) = delete<br> |
+|  S&lt; GeometrySlot &gt; | [**clone**](classuipc_1_1geometry_1_1GeometrySlot.md#function-clone) () const<br> |
 |  [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**geometry**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometry-12) () noexcept<br> |
 |  const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**geometry**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometry-22) () noexcept const<br> |
 |  IndexT | [**id**](classuipc_1_1geometry_1_1GeometrySlot.md#function-id-12) () noexcept const<br> |
-|  [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) & | [**operator=**](classuipc_1_1geometry_1_1GeometrySlot.md#function-operator) (const [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &) = delete<br> |
-|  [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) & | [**operator=**](classuipc_1_1geometry_1_1GeometrySlot.md#function-operator_1) ([**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &&) = delete<br> |
+|  GeometrySlot & | [**operator=**](classuipc_1_1geometry_1_1GeometrySlot.md#function-operator) (const GeometrySlot &) = delete<br> |
+|  GeometrySlot & | [**operator=**](classuipc_1_1geometry_1_1GeometrySlot.md#function-operator_1) (GeometrySlot &&) = delete<br> |
 |  GeometrySlotState | [**state**](classuipc_1_1geometry_1_1GeometrySlot.md#function-state-12) () noexcept const<br> |
 | virtual  | [**~GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md#function-geometryslot) () = default<br> |
 
@@ -146,7 +146,7 @@ See [uipc::geometry::GeometrySlot](classuipc_1_1geometry_1_1GeometrySlot.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual S&lt; [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
+| virtual S&lt; GeometrySlot &gt; | [**do\_clone**](#function-do_clone) () override const<br> |
 | virtual [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**get\_geometry**](#function-get_geometry-12) () noexcept override<br> |
 | virtual const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**get\_geometry**](#function-get_geometry-22) () noexcept override const<br> |
 
@@ -157,7 +157,7 @@ See [uipc::geometry::GeometrySlot](classuipc_1_1geometry_1_1GeometrySlot.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual S&lt; [**GeometrySlot**](classuipc_1_1geometry_1_1GeometrySlot.md) &gt; | [**do\_clone**](classuipc_1_1geometry_1_1GeometrySlot.md#function-do_clone) () const = 0<br> |
+| virtual S&lt; GeometrySlot &gt; | [**do\_clone**](classuipc_1_1geometry_1_1GeometrySlot.md#function-do_clone) () const = 0<br> |
 | virtual [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**get\_geometry**](classuipc_1_1geometry_1_1GeometrySlot.md#function-get_geometry-12) () noexcept = 0<br> |
 | virtual const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**get\_geometry**](classuipc_1_1geometry_1_1GeometrySlot.md#function-get_geometry-22) () noexcept const = 0<br> |
 

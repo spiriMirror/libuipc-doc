@@ -8,7 +8,7 @@
 * **Allocator** ([**uipc::PmrDeleter**](structuipc_1_1PmrDeleter.md))
 * **ActionOnUpdate** ([**uipc::core::Animation**](classuipc_1_1core_1_1Animation.md))
 * **AutoAttributeCollection** ([**uipc::core::ContactModelCollectionT**](classuipc_1_1core_1_1ContactModelCollectionT.md), [**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md), [**uipc::core::SubsceneModelCollectionT**](classuipc_1_1core_1_1SubsceneModelCollectionT.md), [**uipc::geometry::Geometry::InstanceAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT.md), [**uipc::geometry::Geometry::MetaAttributesT**](classuipc_1_1geometry_1_1Geometry_1_1MetaAttributesT.md), [**uipc::geometry::SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md))
-* **AutoGeometrySlot** ([**uipc::core::ObjectGeometrySlots**](classuipc_1_1core_1_1ObjectGeometrySlots.md))
+* **AutoGeometrySlot** ([**uipc::core::ObjectGeometrySlots**](classuipc_1_1core_1_1ObjectGeometrySlots.md), [**uipc::core::ObjectGeometrySlots&lt; const geometry::Geometry &gt;**](classuipc_1_1core_1_1ObjectGeometrySlots_3_01const_01geometry_1_1Geometry_01_4.md), [**uipc::core::ObjectGeometrySlots&lt; geometry::Geometry &gt;**](classuipc_1_1core_1_1ObjectGeometrySlots_3_01geometry_1_1Geometry_01_4.md))
 * **AttributeCollection** ([**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md))
 * **AttributeCopy** ([**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md))
 * **AttributeSlot** ([**uipc::core::Scene::ConfigAttributesT**](classuipc_1_1core_1_1Scene_1_1ConfigAttributesT.md))
@@ -62,7 +62,7 @@
 
 ## n
 
-* **NonConstGeometryT** ([**uipc::core::ObjectGeometrySlots**](classuipc_1_1core_1_1ObjectGeometrySlots.md))
+* **NonConstGeometryT** ([**uipc::core::ObjectGeometrySlots**](classuipc_1_1core_1_1ObjectGeometrySlots.md), [**uipc::core::ObjectGeometrySlots&lt; const geometry::Geometry &gt;**](classuipc_1_1core_1_1ObjectGeometrySlots_3_01const_01geometry_1_1Geometry_01_4.md), [**uipc::core::ObjectGeometrySlots&lt; geometry::Geometry &gt;**](classuipc_1_1core_1_1ObjectGeometrySlots_3_01geometry_1_1Geometry_01_4.md))
 
 
 ## s

@@ -52,13 +52,13 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**SubsceneTabular**](#function-subscenetabular-12) () noexcept<br> |
-|   | [**SubsceneTabular**](#function-subscenetabular-22) (const [**SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) &) = delete<br> |
+|   | [**SubsceneTabular**](#function-subscenetabular-22) (const SubsceneTabular &) = delete<br> |
 |  [**SubsceneModel**](classuipc_1_1core_1_1SubsceneModel.md) | [**at**](#function-at) (IndexT i, IndexT j) const<br> |
 |  [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) | [**create**](#function-create) (std::string\_view name="") noexcept<br> |
 |  [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) | [**default\_element**](#function-default_element) () noexcept const<br> |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
 |  IndexT | [**insert**](#function-insert) (const [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) & L, const [**SubsceneElement**](classuipc_1_1core_1_1SubsceneElement.md) & R, bool enable=false, const Json & config=default\_config()) <br> |
-|  [**SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) & | [**operator=**](#function-operator) (const [**SubsceneTabular**](classuipc_1_1core_1_1SubsceneTabular.md) &) = delete<br> |
+|  SubsceneTabular & | [**operator=**](#function-operator) (const SubsceneTabular &) = delete<br> |
 |  SubsceneModelCollection | [**subscene\_models**](#function-subscene_models-12) () noexcept<br> |
 |  CSubsceneModelCollection | [**subscene\_models**](#function-subscene_models-22) () noexcept const<br> |
 |   | [**~SubsceneTabular**](#function-subscenetabular) () noexcept<br> |

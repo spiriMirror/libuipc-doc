@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kind="class" language="C++" prot="public">
     <compoundname>uipc::geometry::Geometry::InstanceAttributesT</compoundname>
     <includes refid="geometry_2geometry_8h" local="no">geometry.h</includes>
@@ -11,9 +11,10 @@
       </param>
     </templateparamlist>
     <sectiondef kind="private-type">
-      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1a18a58820f3ba24db3dd4d48d9c4f8fdc" prot="private" static="no">
+      <memberdef kind="typedef" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1a1f2e4c824fc59679810366504b917eaf" prot="private" static="no">
         <type>std::conditional_t&lt; IsConst, const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref>, <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
-        <definition>using uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt;::AutoAttributeCollection =  std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
+        <definition>using uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt;::AutoAttributeCollection = 
+            std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
         <argsstring></argsstring>
         <name>AutoAttributeCollection</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::AutoAttributeCollection</qualifiedname>
@@ -23,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/geometry/geometry.h" line="197" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="198" bodyend="-1"/>
+        <location file="include/uipc/geometry/geometry.h" line="197" column="9" bodyfile="include/uipc/geometry/geometry.h" bodystart="197" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
@@ -34,7 +35,7 @@
         <name>fmt::formatter&lt; InstanceAttributesT&lt; IsConst &gt; &gt;</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::formatter&lt; InstanceAttributesT&lt; IsConst &gt; &gt;</qualifiedname>
         <param>
-          <type>fmt::formatter&lt; <ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref>&lt; IsConst &gt; &gt;</type>
+          <type>fmt::formatter&lt; InstanceAttributesT&lt; IsConst &gt; &gt;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -58,7 +59,7 @@
         <name>InstanceAttributesT</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref></type>
+          <type>InstanceAttributesT</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -80,7 +81,7 @@
         <name>AttributeFriend</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::AttributeFriend</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1AttributeFriend" kindref="compound">AttributeFriend</ref></type>
+          <type>AttributeFriend</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -140,7 +141,7 @@
         <name>InstanceAttributesT</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref>&lt; OtherIsConst &gt; &amp;</type>
+          <type>const InstanceAttributesT&lt; OtherIsConst &gt; &amp;</type>
           <declname>o</declname>
         </param>
     <requiresclause>(IsConst)    </requiresclause>
@@ -159,7 +160,7 @@
         <name>InstanceAttributesT</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref> &amp;</type>
+          <type>const InstanceAttributesT &amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -177,7 +178,7 @@
         <name>InstanceAttributesT</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::InstanceAttributesT</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref> &amp;&amp;</type>
+          <type>InstanceAttributesT &amp;&amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -189,13 +190,13 @@
         <location file="include/uipc/geometry/geometry.h" line="214" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1af5e3f87ecfbe49df23c6333684147861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref> &amp;</type>
+        <type>InstanceAttributesT &amp;</type>
         <definition>InstanceAttributesT &amp; uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt;::operator=</definition>
         <argsstring>(const InstanceAttributesT &amp;o)=default</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::operator=</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref> &amp;</type>
+          <type>const InstanceAttributesT &amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -207,13 +208,13 @@
         <location file="include/uipc/geometry/geometry.h" line="215" column="29"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1aa7269758183a4839cf9fb805c230ebbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref> &amp;</type>
+        <type>InstanceAttributesT &amp;</type>
         <definition>InstanceAttributesT &amp; uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt;::operator=</definition>
         <argsstring>(InstanceAttributesT &amp;&amp;o)=default</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::operator=</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref> &amp;&amp;</type>
+          <type>InstanceAttributesT &amp;&amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -286,7 +287,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="229" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1ab20edf246f7eb3e18d9f93add2d3c21b" prot="public" static="no" const="no" explicit="no" inline="no" refqual="rvalue" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1ab20edf246f7eb3e18d9f93add2d3c21b" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="no" refqual="rvalue" virt="non-virtual">
         <type>SizeT</type>
         <definition>SizeT uipc::geometry::Geometry::InstanceAttributesT&lt; IsConst &gt;::size</definition>
         <argsstring>() &amp;&amp;</argsstring>
@@ -325,7 +326,7 @@
         </inbodydescription>
         <location file="include/uipc/geometry/geometry.h" line="238" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1a57e9b316d82cadef265b42dba7b1808f" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1a57e9b316d82cadef265b42dba7b1808f" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" refqual="rvalue" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -413,7 +414,7 @@
         <name>copy_from</name>
         <qualifiedname>uipc::geometry::Geometry::InstanceAttributesT::copy_from</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT" kindref="compound">InstanceAttributesT</ref>&lt; true &gt;</type>
+          <type>InstanceAttributesT&lt; true &gt;</type>
           <declname>other</declname>
         </param>
         <param>
@@ -463,7 +464,7 @@
     <location file="include/uipc/geometry/geometry.h" line="187" column="5" bodyfile="include/uipc/geometry/geometry.h" bodystart="188" bodyend="278"/>
     <listofallmembers>
       <member refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1abd621cd374772a67fae8b860ddfca14c" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>AttributeFriend</name></member>
-      <member refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1a18a58820f3ba24db3dd4d48d9c4f8fdc" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>AutoAttributeCollection</name></member>
+      <member refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1a1f2e4c824fc59679810366504b917eaf" prot="private" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>AutoAttributeCollection</name></member>
       <member refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1ab7b24bcb573e8b711ff4a1c9a0842df5" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>clear</name></member>
       <member refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1ae74b2e36e0d8bdafde745023c97b14e2" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>copy_from</name></member>
       <member refid="classuipc_1_1geometry_1_1Geometry_1_1InstanceAttributesT_1a7214a2b8c23f825af43e6e238f169dc3" prot="public" virt="non-virtual"><scope>uipc::geometry::Geometry::InstanceAttributesT</scope><name>create</name></member>

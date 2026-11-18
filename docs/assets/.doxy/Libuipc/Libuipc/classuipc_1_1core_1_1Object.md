@@ -80,12 +80,12 @@ Inherits the following classes: [uipc::core::IObject](classuipc_1_1core_1_1IObje
 | ---: | :--- |
 |   | [**Object**](#function-object-14) ([**internal::Scene**](classuipc_1_1core_1_1internal_1_1Scene.md) & scene, IndexT id, std::string\_view name="") noexcept<br> |
 |   | [**Object**](#function-object-24) () noexcept<br> |
-|   | [**Object**](#function-object-34) ([**Object**](classuipc_1_1core_1_1Object.md) &&) = default<br> |
-|   | [**Object**](#function-object-44) (const [**Object**](classuipc_1_1core_1_1Object.md) &) = delete<br> |
+|   | [**Object**](#function-object-34) (Object &&) = default<br> |
+|   | [**Object**](#function-object-44) (const Object &) = delete<br> |
 |  [**Geometries**](classuipc_1_1core_1_1Object_1_1Geometries.md) | [**geometries**](#function-geometries-12) () noexcept<br> |
 |  [**CGeometries**](classuipc_1_1core_1_1Object_1_1CGeometries.md) | [**geometries**](#function-geometries-22) () noexcept const<br> |
-|  [**Object**](classuipc_1_1core_1_1Object.md) & | [**operator=**](#function-operator) (const [**Object**](classuipc_1_1core_1_1Object.md) &) = delete<br> |
-|  [**Object**](classuipc_1_1core_1_1Object.md) & | [**operator=**](#function-operator_1) ([**Object**](classuipc_1_1core_1_1Object.md) &&) = delete<br> |
+|  Object & | [**operator=**](#function-operator) (const Object &) = delete<br> |
+|  Object & | [**operator=**](#function-operator_1) (Object &&) = delete<br> |
 |   | [**~Object**](#function-object) () <br> |
 
 

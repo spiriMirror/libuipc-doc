@@ -116,13 +116,13 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1Geometry.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**AbstractSimplicialComplex**](#function-abstractsimplicialcomplex-13) () = default<br> |
-|   | [**AbstractSimplicialComplex**](#function-abstractsimplicialcomplex-23) (const [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md) & o) = default<br> |
-|   | [**AbstractSimplicialComplex**](#function-abstractsimplicialcomplex-33) ([**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md) && o) = default<br> |
+|   | [**AbstractSimplicialComplex**](#function-abstractsimplicialcomplex-23) (const AbstractSimplicialComplex & o) = default<br> |
+|   | [**AbstractSimplicialComplex**](#function-abstractsimplicialcomplex-33) (AbstractSimplicialComplex && o) = default<br> |
 |  IndexT | [**dim**](#function-dim) () noexcept const<br>_Get the dimension of the simplicial complex._  |
 |  [**EdgeAttributes**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md#typedef-edgeattributes) | [**edges**](#function-edges-12) () noexcept<br>_A wrapper of the edges and its attributes of the simplicial complex._  |
 |  CEdgeAttributes | [**edges**](#function-edges-22) () noexcept const<br> |
-|  [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md) & | [**operator=**](#function-operator) (const [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md) & o) = delete<br> |
-|  [**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md) & | [**operator=**](#function-operator_1) ([**AbstractSimplicialComplex**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md) && o) = delete<br> |
+|  AbstractSimplicialComplex & | [**operator=**](#function-operator) (const AbstractSimplicialComplex & o) = delete<br> |
+|  AbstractSimplicialComplex & | [**operator=**](#function-operator_1) (AbstractSimplicialComplex && o) = delete<br> |
 |  [**TetrahedronAttributes**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md#typedef-tetrahedronattributes) | [**tetrahedra**](#function-tetrahedra-12) () noexcept<br>_A wrapper of the tetrahedra and its attributes of the simplicial complex._  |
 |  CTetrahedronAttributes | [**tetrahedra**](#function-tetrahedra-22) () noexcept const<br> |
 |  [**TriangleAttributes**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md#typedef-triangleattributes) | [**triangles**](#function-triangles-12) () noexcept<br>_A wrapper of the triangles and its attributes of the simplicial complex._  |
@@ -138,16 +138,16 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1Geometry.md)
 | Type | Name |
 | ---: | :--- |
 |   | [**Geometry**](classuipc_1_1geometry_1_1Geometry.md#function-geometry-13) () <br> |
-|   | [**Geometry**](classuipc_1_1geometry_1_1Geometry.md#function-geometry-23) (const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & o) <br> |
-|   | [**Geometry**](classuipc_1_1geometry_1_1Geometry.md#function-geometry-33) ([**Geometry**](classuipc_1_1geometry_1_1Geometry.md) && o) = default<br> |
+|   | [**Geometry**](classuipc_1_1geometry_1_1Geometry.md#function-geometry-23) (const Geometry & o) <br> |
+|   | [**Geometry**](classuipc_1_1geometry_1_1Geometry.md#function-geometry-33) (Geometry && o) = default<br> |
 |  T \* | [**as**](classuipc_1_1geometry_1_1Geometry.md#function-as-12) () <br> |
 |  const T \* | [**as**](classuipc_1_1geometry_1_1Geometry.md#function-as-22) () const<br> |
 |  InstanceAttributes | [**instances**](classuipc_1_1geometry_1_1Geometry.md#function-instances-12) () <br>_Get the instance attributes of the geometries._  |
 |  CInstanceAttributes | [**instances**](classuipc_1_1geometry_1_1Geometry.md#function-instances-22) () const<br> |
 |  MetaAttributes | [**meta**](classuipc_1_1geometry_1_1Geometry.md#function-meta-12) () <br>_Get the meta attributes of the geometries._  |
 |  CMetaAttributes | [**meta**](classuipc_1_1geometry_1_1Geometry.md#function-meta-22) () const<br> |
-|  [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1Geometry.md#function-operator) (const [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & o) = delete<br> |
-|  [**Geometry**](classuipc_1_1geometry_1_1Geometry.md) & | [**operator=**](classuipc_1_1geometry_1_1Geometry.md#function-operator_1) ([**Geometry**](classuipc_1_1geometry_1_1Geometry.md) && o) = delete<br> |
+|  Geometry & | [**operator=**](classuipc_1_1geometry_1_1Geometry.md#function-operator) (const Geometry & o) = delete<br> |
+|  Geometry & | [**operator=**](classuipc_1_1geometry_1_1Geometry.md#function-operator_1) (Geometry && o) = delete<br> |
 |  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &gt; | [**operator[]**](classuipc_1_1geometry_1_1Geometry.md#function-operator_2) (std::string\_view name) <br>_Get the attribute collection with the given name._  |
 |  S&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &gt; | [**operator[]**](classuipc_1_1geometry_1_1Geometry.md#function-operator_3) (std::string\_view name) const<br>_Get the attribute collection with the given name._  |
 
@@ -161,7 +161,7 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1IGeometry.md)
 |  S&lt; [**IGeometry**](classuipc_1_1geometry_1_1IGeometry.md) &gt; | [**clone**](classuipc_1_1geometry_1_1IGeometry.md#function-clone) () const<br> |
 |  Json | [**to\_json**](classuipc_1_1geometry_1_1IGeometry.md#function-to_json) () const<br> |
 |  std::string\_view | [**type**](classuipc_1_1geometry_1_1IGeometry.md#function-type) () noexcept const<br>_Get the type of the geometries, check the type to downcast the geometries to a specific type._  |
-|  void | [**update\_from**](classuipc_1_1geometry_1_1IGeometry.md#function-update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) & commit) <br> |
+|  void | [**update\_from**](classuipc_1_1geometry_1_1IGeometry.md#function-update_from) (const GeometryCommit & commit) <br> |
 | virtual  | [**~IGeometry**](classuipc_1_1geometry_1_1IGeometry.md#function-igeometry) () = default<br> |
 
 
@@ -251,7 +251,7 @@ See [uipc::geometry::Geometry](classuipc_1_1geometry_1_1Geometry.md)
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1Geometry.md#function-do_collect_attribute_collections-12) (vector&lt; std::string &gt; & names, vector&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) \* &gt; & collections) override const<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1Geometry.md#function-do_collect_attribute_collections-22) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) \* &gt; & collections) override<br> |
 | virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1Geometry.md#function-do_to_json) () override const<br> |
-| virtual void | [**do\_update\_from**](classuipc_1_1geometry_1_1Geometry.md#function-do_update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) & commit) override<br> |
+| virtual void | [**do\_update\_from**](classuipc_1_1geometry_1_1Geometry.md#function-do_update_from) (const GeometryCommit & commit) override<br> |
 |  S&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &gt; | [**find**](classuipc_1_1geometry_1_1Geometry.md#function-find-12) (std::string\_view name) const<br>_Find the attribute collection with the given name._  |
 |  S&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) &gt; | [**find**](classuipc_1_1geometry_1_1Geometry.md#function-find-22) (std::string\_view name) <br> |
 | virtual std::string\_view | [**get\_type**](classuipc_1_1geometry_1_1Geometry.md#function-get_type) () noexcept override const<br> |
@@ -268,7 +268,7 @@ See [uipc::geometry::IGeometry](classuipc_1_1geometry_1_1IGeometry.md)
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1IGeometry.md#function-do_collect_attribute_collections-12) (vector&lt; std::string &gt; & names, vector&lt; const [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) \* &gt; & collections) const = 0<br> |
 | virtual void | [**do\_collect\_attribute\_collections**](classuipc_1_1geometry_1_1IGeometry.md#function-do_collect_attribute_collections-22) (vector&lt; std::string &gt; & names, vector&lt; [**AttributeCollection**](classuipc_1_1geometry_1_1AttributeCollection.md) \* &gt; & collections) = 0<br> |
 | virtual Json | [**do\_to\_json**](classuipc_1_1geometry_1_1IGeometry.md#function-do_to_json) () const = 0<br> |
-| virtual void | [**do\_update\_from**](classuipc_1_1geometry_1_1IGeometry.md#function-do_update_from) (const [**GeometryCommit**](classuipc_1_1geometry_1_1GeometryCommit.md) & commit) = 0<br> |
+| virtual void | [**do\_update\_from**](classuipc_1_1geometry_1_1IGeometry.md#function-do_update_from) (const GeometryCommit & commit) = 0<br> |
 | virtual std::string\_view | [**get\_type**](classuipc_1_1geometry_1_1IGeometry.md#function-get_type) () noexcept const = 0<br> |
 
 
@@ -519,7 +519,7 @@ EdgeAttributes uipc::geometry::AbstractSimplicialComplex::edges () noexcept
 
 **Returns:**
 
-EdgeAttributes 
+[**EdgeAttributes**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md#typedef-edgeattributes) 
 
 
 
@@ -587,7 +587,7 @@ TetrahedronAttributes uipc::geometry::AbstractSimplicialComplex::tetrahedra () n
 
 **Returns:**
 
-TetrahedronAttributes 
+[**TetrahedronAttributes**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md#typedef-tetrahedronattributes) 
 
 
 
@@ -625,7 +625,7 @@ TriangleAttributes uipc::geometry::AbstractSimplicialComplex::triangles () noexc
 
 **Returns:**
 
-TriangleAttributes 
+[**TriangleAttributes**](classuipc_1_1geometry_1_1AbstractSimplicialComplex.md#typedef-triangleattributes) 
 
 
 

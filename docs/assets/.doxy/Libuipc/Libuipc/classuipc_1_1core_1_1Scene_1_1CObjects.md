@@ -52,8 +52,8 @@
 | Type | Name |
 | ---: | :--- |
 |  SizeT | [**created\_count**](#function-created_count) () noexcept const<br> |
-|  S&lt; const [**Object**](classuipc_1_1core_1_1Object.md) &gt; | [**find**](#function-find-12) (IndexT id) noexcept<br> |
-|  vector&lt; S&lt; const [**Object**](classuipc_1_1core_1_1Object.md) &gt; &gt; | [**find**](#function-find-22) (std::string\_view name) noexcept<br> |
+|  S&lt; const Object &gt; | [**find**](#function-find-12) (IndexT id) noexcept<br> |
+|  vector&lt; S&lt; const Object &gt; &gt; | [**find**](#function-find-22) (std::string\_view name) noexcept<br> |
 |  SizeT | [**size**](#function-size) () noexcept const<br> |
 
 

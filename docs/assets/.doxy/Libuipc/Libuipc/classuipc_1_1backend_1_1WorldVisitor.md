@@ -53,13 +53,13 @@
 | ---: | :--- |
 |   | [**WorldVisitor**](#function-worldvisitor-14) ([**core::World**](classuipc_1_1core_1_1World.md) & w) noexcept<br> |
 |   | [**WorldVisitor**](#function-worldvisitor-24) ([**core::internal::World**](classuipc_1_1core_1_1internal_1_1World.md) & w) noexcept<br> |
-|   | [**WorldVisitor**](#function-worldvisitor-34) (const [**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) &) = delete<br> |
-|   | [**WorldVisitor**](#function-worldvisitor-44) ([**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) &&) = default<br> |
+|   | [**WorldVisitor**](#function-worldvisitor-34) (const WorldVisitor &) = delete<br> |
+|   | [**WorldVisitor**](#function-worldvisitor-44) (WorldVisitor &&) = default<br> |
 |  [**AnimatorVisitor**](classuipc_1_1backend_1_1AnimatorVisitor.md) | [**animator**](#function-animator) () noexcept<br> |
 |  [**core::Engine**](classuipc_1_1core_1_1Engine.md) | [**engine**](#function-engine) () noexcept const<br> |
 |  [**core::World**](classuipc_1_1core_1_1World.md) | [**get**](#function-get) () noexcept const<br> |
-|  [**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) & | [**operator=**](#function-operator) (const [**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) &) = delete<br> |
-|  [**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) & | [**operator=**](#function-operator_1) ([**WorldVisitor**](classuipc_1_1backend_1_1WorldVisitor.md) &&) = delete<br> |
+|  WorldVisitor & | [**operator=**](#function-operator) (const WorldVisitor &) = delete<br> |
+|  WorldVisitor & | [**operator=**](#function-operator_1) (WorldVisitor &&) = delete<br> |
 |  [**SceneVisitor**](classuipc_1_1backend_1_1SceneVisitor.md) | [**scene**](#function-scene) () noexcept<br> |
 
 

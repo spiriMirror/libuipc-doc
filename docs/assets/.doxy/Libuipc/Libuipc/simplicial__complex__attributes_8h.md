@@ -40,6 +40,7 @@
 
 | Type | Name |
 | ---: | :--- |
+| struct | [**formatter&lt; uipc::geometry::SimplicialComplexAttributes&lt; IsConst, N &gt; &gt;**](structfmt_1_1formatter_3_01uipc_1_1geometry_1_1SimplicialComplexAttributes_3_01IsConst_00_01N_01_4_01_4.md) &lt;IsConst, N&gt;<br> |
 | class | [**SimplicialComplexAttributes**](classuipc_1_1geometry_1_1SimplicialComplexAttributes.md) &lt;IsConst, N&gt;<br> |
 
 

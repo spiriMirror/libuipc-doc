@@ -59,7 +59,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**Stage**](classuipc_1_1usd_1_1Stage.md) | [**open**](#function-open) (std::string\_view path) <br> |
+|  Stage | [**open**](#function-open) (std::string\_view path) <br> |
 
 
 

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="en-US">
   <compounddef id="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kind="class" language="C++" prot="public">
     <compoundname>uipc::core::Scene::ConfigAttributesT</compoundname>
     <templateparamlist>
@@ -57,9 +57,10 @@
         </inbodydescription>
         <location file="include/uipc/core/scene.h" line="52" column="9" bodyfile="include/uipc/core/scene.h" bodystart="52" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1aedda1f682e83df87c53075d8387aa76b" prot="private" static="no">
-        <type>std::conditional_t&lt; IsConst, const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref>, <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &gt;</type>
-        <definition>using uipc::core::Scene::ConfigAttributesT&lt; IsConst &gt;::AutoAttributeCollection =  std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
+      <memberdef kind="typedef" id="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1ab070cfc761b40ed7bcda2b566bd0ea3d" prot="private" static="no">
+        <type>std::conditional_t&lt; IsConst, const AttributeCollection, AttributeCollection &gt;</type>
+        <definition>using uipc::core::Scene::ConfigAttributesT&lt; IsConst &gt;::AutoAttributeCollection = 
+            std::conditional_t&lt;IsConst, const AttributeCollection, AttributeCollection&gt;</definition>
         <argsstring></argsstring>
         <name>AutoAttributeCollection</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::AutoAttributeCollection</qualifiedname>
@@ -69,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/scene.h" line="54" column="9" bodyfile="include/uipc/core/scene.h" bodystart="55" bodyend="-1"/>
+        <location file="include/uipc/core/scene.h" line="54" column="9" bodyfile="include/uipc/core/scene.h" bodystart="54" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="friend">
@@ -80,7 +81,7 @@
         <name>fmt::formatter&lt; ConfigAttributesT&lt; IsConst &gt; &gt;</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::formatter&lt; ConfigAttributesT&lt; IsConst &gt; &gt;</qualifiedname>
         <param>
-          <type>fmt::formatter&lt; <ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref>&lt; IsConst &gt; &gt;</type>
+          <type>fmt::formatter&lt; ConfigAttributesT&lt; IsConst &gt; &gt;</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -104,7 +105,7 @@
         <name>ConfigAttributesT</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::ConfigAttributesT</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref></type>
+          <type>ConfigAttributesT</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -143,7 +144,7 @@
         <name>SceneFactory</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::SceneFactory</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1core_1_1SceneFactory" kindref="compound">SceneFactory</ref></type>
+          <type>SceneFactory</type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -203,7 +204,7 @@
         <name>ConfigAttributesT</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::ConfigAttributesT</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref>&lt; OtherIsConst &gt; &amp;</type>
+          <type>const ConfigAttributesT&lt; OtherIsConst &gt; &amp;</type>
           <declname>o</declname>
         </param>
     <requiresclause>(IsConst)    </requiresclause>
@@ -222,7 +223,7 @@
         <name>ConfigAttributesT</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::ConfigAttributesT</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref> &amp;</type>
+          <type>const ConfigAttributesT &amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -240,7 +241,7 @@
         <name>ConfigAttributesT</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::ConfigAttributesT</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref> &amp;&amp;</type>
+          <type>ConfigAttributesT &amp;&amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -252,13 +253,13 @@
         <location file="include/uipc/core/scene.h" line="77" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1a50bea8a47b96fc869e866336fb49b64a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref> &amp;</type>
+        <type>ConfigAttributesT &amp;</type>
         <definition>ConfigAttributesT &amp; uipc::core::Scene::ConfigAttributesT&lt; IsConst &gt;::operator=</definition>
         <argsstring>(const ConfigAttributesT &amp;o)=default</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::operator=</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref> &amp;</type>
+          <type>const ConfigAttributesT &amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -270,13 +271,13 @@
         <location file="include/uipc/core/scene.h" line="78" column="27"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1ab0d8826905db7300c48073604127a246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref> &amp;</type>
+        <type>ConfigAttributesT &amp;</type>
         <definition>ConfigAttributesT &amp; uipc::core::Scene::ConfigAttributesT&lt; IsConst &gt;::operator=</definition>
         <argsstring>(ConfigAttributesT &amp;&amp;o)=default</argsstring>
         <name>operator=</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::operator=</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref> &amp;&amp;</type>
+          <type>ConfigAttributesT &amp;&amp;</type>
           <declname>o</declname>
         </param>
         <briefdescription>
@@ -287,7 +288,7 @@
         </inbodydescription>
         <location file="include/uipc/core/scene.h" line="79" column="27"/>
       </memberdef>
-      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1a6e0ce03f9d28e202c0b28b3c04216784" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1a6e0ce03f9d28e202c0b28b3c04216784" prot="public" static="no" nodiscard="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -356,7 +357,7 @@
           <declname>name</declname>
         </param>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeSlot" kindref="compound">AttributeSlot</ref>&lt; T &gt; &amp;</type>
+          <type>const AttributeSlot&lt; T &gt; &amp;</type>
           <declname>slot</declname>
         </param>
     <requiresclause>(!IsConst)    </requiresclause>
@@ -397,11 +398,11 @@
         <name>copy_from</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::copy_from</qualifiedname>
         <param>
-          <type><ref refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT" kindref="compound">ConfigAttributesT</ref>&lt; true &gt;</type>
+          <type>ConfigAttributesT&lt; true &gt;</type>
           <declname>other</declname>
         </param>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCopy" kindref="compound">AttributeCopy</ref> &amp;</type>
+          <type>const AttributeCopy &amp;</type>
           <declname>copy</declname>
           <defval>{}</defval>
         </param>
@@ -464,7 +465,7 @@
         <name>build_from</name>
         <qualifiedname>uipc::core::Scene::ConfigAttributesT::build_from</qualifiedname>
         <param>
-          <type>const <ref refid="classuipc_1_1geometry_1_1AttributeCollection" kindref="compound">AttributeCollection</ref> &amp;</type>
+          <type>const AttributeCollection &amp;</type>
           <declname>ac</declname>
         </param>
     <requiresclause>(!IsConst)    </requiresclause>
@@ -486,7 +487,7 @@
       <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1a390dd2491e9487a011ee2919437013f7" prot="private" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>AttributeCollection</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1acff5397586f30c9f6cd458c6ab787b04" prot="private" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>AttributeCopy</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1aed26f18ebbcccc358d8c23c92c8529c1" prot="private" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>AttributeSlot</name></member>
-      <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1aedda1f682e83df87c53075d8387aa76b" prot="private" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>AutoAttributeCollection</name></member>
+      <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1ab070cfc761b40ed7bcda2b566bd0ea3d" prot="private" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>AutoAttributeCollection</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1af42223a55cb7746c0fd7e673278e626f" prot="public" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>build_from</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1a8a666c6d62ba7f64de15f32bb591f914" prot="private" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>ConfigAttributesT</name></member>
       <member refid="classuipc_1_1core_1_1Scene_1_1ConfigAttributesT_1ac796a34e52239bf7c0fddc5276260d2a" prot="public" virt="non-virtual"><scope>uipc::core::Scene::ConfigAttributesT</scope><name>ConfigAttributesT</name></member>

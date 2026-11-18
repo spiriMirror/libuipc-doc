@@ -50,7 +50,7 @@ Inherits the following classes: [uipc::core::Feature](classuipc_1_1core_1_1Featu
 
 | Type | Name |
 | ---: | :--- |
-|  constexpr std::string\_view | [**FeatureName**](#variable-featurename)   = `"diff\_sim/enable\_grad"`<br> |
+|  std::string\_view | [**FeatureName**](#variable-featurename)   = `"diff\_sim/enable\_grad"`<br> |
 
 
 
@@ -211,7 +211,7 @@ See [uipc::core::IFeature](classuipc_1_1core_1_1IFeature.md)
 ### variable FeatureName 
 
 ```C++
-constexpr std::string_view uipc::diff_sim::EnableGradFeature::FeatureName;
+std::string_view uipc::diff_sim::EnableGradFeature::FeatureName;
 ```
 
 

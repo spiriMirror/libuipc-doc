@@ -52,7 +52,7 @@
 | Type | Name |
 | ---: | :--- |
 |   | [**ObjectSnapshot**](#function-objectsnapshot-12) () = default<br> |
-|   | [**ObjectSnapshot**](#function-objectsnapshot-22) (const [**Object**](classuipc_1_1core_1_1Object.md) & object) <br> |
+|   | [**ObjectSnapshot**](#function-objectsnapshot-22) (const Object & object) <br> |
 |  IndexT | [**id**](#function-id) () noexcept const<br> |
 
 

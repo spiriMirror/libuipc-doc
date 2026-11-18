@@ -16,7 +16,7 @@
 Inherits the following classes: cpptrace::exception_with_message
 
 
-Inherited by the following classes: [uipc::JsonIOError](classuipc_1_1JsonIOError.md),  [uipc::core::EngineException](classuipc_1_1core_1_1EngineException.md),  [uipc::core::SceneIOError](classuipc_1_1core_1_1SceneIOError.md),  [uipc::geometry::AttributeCollectionError](classuipc_1_1geometry_1_1AttributeCollectionError.md),  [uipc::geometry::AttributeIOError](classuipc_1_1geometry_1_1AttributeIOError.md),  [uipc::io::UrdfIOError](classuipc_1_1io_1_1UrdfIOError.md)
+Inherited by the following classes: [uipc::JsonIOError](classuipc_1_1JsonIOError.md),  [uipc::core::EngineException](classuipc_1_1core_1_1EngineException.md),  [uipc::core::SceneIOError](classuipc_1_1core_1_1SceneIOError.md),  [uipc::geometry::AttributeCollectionError](classuipc_1_1geometry_1_1AttributeCollectionError.md),  [uipc::geometry::AttributeIOError](classuipc_1_1geometry_1_1AttributeIOError.md),  [uipc::geometry::GeometryIOError](classuipc_1_1geometry_1_1GeometryIOError.md),  [uipc::io::UrdfIOError](classuipc_1_1io_1_1UrdfIOError.md)
 
 
 
