@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -3502,6 +3502,19 @@ safe-path termination tolerance described below.</p>
 Newton iteration assembles the global system, solves it with PCG, limits the
 step for contact, performs backtracking line search, and then asks every active
 tolerance checker whether it converged.</p>
+<p>The line search accepts the first trial whose total energy does not exceed the
+energy at the start of the step, halving the step after each rejected trial.
+With <code>line_search/cubic_refinement = 1</code> (default <code>0</code>), a step accepted after
+at least one rejection is refined once: the solver evaluates the minimizer of
+the cubic that interpolates the start energy, the energy slope <code>g.dx</code> along
+the Newton step and the energies of the last rejected and the accepted trial,
+when that minimizer lies between 5% of the rejected step and the rejected step
+and differs from the accepted step by more than 25%, and keeps whichever of the
+two trials has the lower energy. The refinement runs only while at least two
+of the <code>line_search/max_iter</code> trials remain. It changes which step is
+accepted, so trajectories differ from the default. Only the standard IPC
+pipeline refines; with <code>contact/constitution = "al-ipc"</code> the key has no effect
+and a warning is logged.</p>
 <p>Ordinary termination requires all applicable checks to pass:</p>
 <ol>
 <li>animation targets have been reached;</li>
@@ -3605,6 +3618,18 @@ tight PCG solve may not improve the outer Newton result.</p>
 <p>MAS affects FEM degrees of freedom only. ABD and other subsystems keep their
 own preconditioners, so mixed ABD/FEM scenes can enable MAS safely for the FEM
 portion.</p>
+<p>Every Newton iteration assembles fresh preconditioners by default.
+<code>linear_system/keep_preconditioner = 1</code> lets every odd iteration from the
+third on reuse the preconditioners of the previous iteration. This saves their
+assembly time but is not accuracy-neutral. PCG stops when <code>|r^T z|</code> has
+fallen by <code>tol_rate</code> relative to its start, and both values are measured in
+the norm of the preconditioner. A one-step-old preconditioner changes that
+threshold: the solve can stop while the step of the freely moving bodies is
+still about zero, Newton's displacement test then passes and the frame ends
+early. The scene loses momentum (falling bodies fall too slowly, stacked or
+swinging bodies lose kinetic energy) although every frame converges. The key
+applies to the standard <code>ipc</code> pipeline only; keep it at <code>0</code> unless a scene
+has been checked to move the same with both values.</p>
 <h2 id="cuda-graph-modes">CUDA graph modes</h2>
 <p><code>linear_system/use_cuda_graph</code> is a mode, despite its historical name:</p>
 <table>

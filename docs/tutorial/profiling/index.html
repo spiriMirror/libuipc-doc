@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -3576,6 +3576,14 @@ frame statistics (including the <code>none</code> backend). The CUDA schema is:<
 <tr>
 <td><code>last_line_search_alpha</code>, <code>last_ccd_toi</code>, <code>last_cfl_alpha</code></td>
 <td>Last step-size diagnostics (<code>1</code> means no reduction).</td>
+</tr>
+<tr>
+<td><code>active_set_reused</code></td>
+<td>The frame started from the previous frame's contact active set instead of a DCD pass (IPC pipeline; the vertex positions were unchanged since the previous frame).</td>
+</tr>
+<tr>
+<td><code>trajectory_reuses</code></td>
+<td>Newton iterations that kept the trajectory candidates of an earlier iteration of the frame instead of running the trajectory broad phase (IPC pipeline; every vertex stayed within the detection skin).</td>
 </tr>
 </tbody>
 </table>

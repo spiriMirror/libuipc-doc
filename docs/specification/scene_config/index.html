@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -3923,6 +3923,13 @@ termination logic and tuning guidance.</p>
 <td><code>&gt;= 1</code></td>
 <td>Number of fused-PCG iterations between host convergence checks in modes 0/1. Larger values reduce checks but make exit granularity coarser.</td>
 </tr>
+<tr>
+<td><code>linear_system/keep_preconditioner</code></td>
+<td>flag</td>
+<td><code>0</code></td>
+<td><code>0</code>, <code>1</code></td>
+<td>Opt-in, off by default. <code>1</code>: every odd Newton iteration from the third on reuses the preconditioner of the previous iteration instead of assembling a new one (standard <code>ipc</code> pipeline only; <code>al-ipc</code> always assembles). This saves preconditioner assembly time but is not accuracy-neutral: it changes PCG's stopping threshold and can stop PCG and Newton early, so the scene can lose momentum (falling or stacked bodies). Keep <code>0</code> unless the scene has been checked with both values.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="line-search">Line search</h2>
@@ -3950,6 +3957,13 @@ termination logic and tuning guidance.</p>
 <td><code>0</code></td>
 <td><code>0</code>, <code>1</code></td>
 <td>Logs the energy contribution of every line-search reporter. Useful for diagnosis, noisy for normal runs.</td>
+</tr>
+<tr>
+<td><code>line_search/cubic_refinement</code></td>
+<td>flag</td>
+<td><code>0</code></td>
+<td><code>0</code>, <code>1</code></td>
+<td>Opt-in. <code>1</code>: after a backtrack, one more trial at the minimizer of a cubic fit of the energy along the Newton step; the lower-energy accepted step is kept (see <a href="../scene_configs/newton/">Newton and Linear Solvers</a>). Standard <code>ipc</code> pipeline only: with <code>contact/constitution = "al-ipc"</code> the key has no effect and a warning is logged. <code>0</code> is the plain halving line search.</td>
 </tr>
 </tbody>
 </table>
