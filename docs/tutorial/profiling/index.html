@@ -3532,7 +3532,9 @@ solver counters after each frame.</p>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
 </span></code></pre></div>
 <p><code>frame_stats()</code> returns an empty dictionary for a backend that does not publish
-frame statistics (including the <code>none</code> backend). The CUDA schema is:</p>
+frame statistics (including the <code>none</code> backend). After <code>world.recover()</code>, CUDA
+reports the restored frame number with cleared statistics and <code>completed=false</code>
+until the next completed advance.</p>
 <table>
 <thead>
 <tr>

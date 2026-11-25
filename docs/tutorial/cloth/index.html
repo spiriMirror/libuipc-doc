@@ -3765,7 +3765,7 @@ Both directions share <code>strain_rate</code>; shear and bending retain their o
 parameters. Arbitrary UV/fiber orientations are not exposed by this API.</p>
 <p>Calling an old overload again restores shared stretch. Older saved scenes,
 which lack <code>stretch_stiffness_b</code>, also use shared stretch. The
-<a href="https://github.com/spiriMirror/libuipc-samples/tree/main/examples/95_anisotropic_cloth"><code>95_anisotropic_cloth</code></a>
+<a href="https://github.com/spiriMirror/libuipc-samples/tree/main/examples/53_anisotropic_cloth"><code>53_anisotropic_cloth</code></a>
 sample generates three cloth meshes and compares shared, a-stiff and b-stiff
 materials under equal biaxial traction, with GUI and headless validation.</p>
 <h2 id="parameter-meanings-and-defaults">Parameter meanings and defaults</h2>
@@ -3812,7 +3812,7 @@ set of support vertices.</p>
 <p>For moving grippers or prescribed motion, do not overwrite positions after
 <code>world.init()</code>. Add a soft position constraint and update its animation
 attributes through the scene's animation/update path. The
-<a href="https://github.com/spiriMirror/libuipc-samples/blob/main/examples/91_pinned_cloth/main.py"><code>91_pinned_cloth</code></a>
+<a href="https://github.com/spiriMirror/libuipc-samples/blob/main/examples/49_pinned_cloth/main.py"><code>49_pinned_cloth</code></a>
 sample is the static-pin baseline.</p>
 <h2 id="contact-and-self-collision">Contact and self-collision</h2>
 <p>The FEM base constitution sets <code>self_collision = 1</code> for cloth as well as
@@ -3837,7 +3837,7 @@ more candidates and make the solve unnecessarily stiff.</p>
 <li>multiple self-contacting sheets:
   <a href="https://github.com/spiriMirror/libuipc-samples/blob/main/examples/34_cloth_stack/main.py"><code>34_cloth_stack</code></a></li>
 <li>pinned source-backed scene:
-  <a href="https://github.com/spiriMirror/libuipc-samples/blob/main/examples/91_pinned_cloth/main.py"><code>91_pinned_cloth</code></a></li>
+  <a href="https://github.com/spiriMirror/libuipc-samples/blob/main/examples/49_pinned_cloth/main.py"><code>49_pinned_cloth</code></a></li>
 <li>C++ pin, bending, and MAS regressions:
   <a href="https://github.com/spiriMirror/libuipc/blob/main/apps/tests/sim_case/19_shell_fixed_point.cpp"><code>19_shell_fixed_point.cpp</code></a>,
   <a href="https://github.com/spiriMirror/libuipc/blob/main/apps/tests/sim_case/33_discrete_shell_bending.cpp"><code>33_discrete_shell_bending.cpp</code></a>,
