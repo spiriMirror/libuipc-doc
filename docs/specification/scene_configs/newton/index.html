@@ -3631,7 +3631,7 @@ swinging bodies lose kinetic energy) although every frame converges. The key
 applies to the standard <code>ipc</code> pipeline only; keep it at <code>0</code> unless a scene
 has been checked to move the same with both values.</p>
 <h2 id="cuda-graph-modes">CUDA graph modes</h2>
-<p><code>linear_system/use_cuda_graph</code> is a mode, despite its historical name:</p>
+<p><code>linear_system/use_cuda_graph</code> selects the fused PCG execution mode.</p>
 <table>
 <thead>
 <tr>
@@ -3646,11 +3646,11 @@ has been checked to move the same with both values.</p>
 </tr>
 <tr>
 <td><code>1</code></td>
-<td>Replays blocks of <code>check_interval</code> iterations, then checks convergence on the host. This is the measured default.</td>
+<td>Replays blocks of <code>check_interval</code> iterations, then checks convergence on the host.</td>
 </tr>
 <tr>
-<td><code>2</code></td>
-<td>Uses a CUDA conditional while-loop graph (CUDA 12.4+). It removes the CPU from the loop but is not necessarily faster. It falls back when unavailable.</td>
+<td><code>2</code> (default)</td>
+<td>Uses a conditional CUDA Graph to control the while loop on the GPU. It requires CUDA 12.4+ toolkit and driver support and selects mode 1 when conditional nodes are unavailable.</td>
 </tr>
 </tbody>
 </table>

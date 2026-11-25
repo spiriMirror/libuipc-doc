@@ -3912,9 +3912,9 @@ termination logic and tuning guidance.</p>
 <tr>
 <td><code>linear_system/use_cuda_graph</code></td>
 <td>integer mode</td>
-<td><code>1</code></td>
+<td><code>2</code></td>
 <td><code>0</code>, <code>1</code>, <code>2</code></td>
-<td>Fused-PCG launch mode: <code>0</code> plain launches; <code>1</code> host-checked block replay; <code>2</code> full-GPU while-loop graph. Mode 2 requires CUDA 12.4+ and falls back when unsupported. Non-IPC pipelines currently force graphs off.</td>
+<td>Fused PCG supports plain launches (<code>0</code>), host-checked block replay (<code>1</code>), and a device-side while-loop graph (<code>2</code>). Mode 2 requires CUDA 12.4+ toolkit and driver support and falls back to mode 1 when conditional nodes are unavailable. Non-IPC pipelines use plain launches.</td>
 </tr>
 <tr>
 <td><code>linear_system/check_interval</code></td>
