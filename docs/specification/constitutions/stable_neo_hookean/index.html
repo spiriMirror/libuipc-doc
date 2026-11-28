@@ -3438,7 +3438,9 @@ deformation tensor, and <span class="arithmatex">\(I_c=\operatorname{tr}(C)=\|F\
 The coefficients <span class="arithmatex">\(\lambda,\mu\)</span> in this SNK1 energy are stored on tetrahedra;
 they must be distinguished from the physical Lamé parameters below.</p>
 <h3 id="material-inputs-and-snk1-calibration">Material inputs and SNK1 calibration</h3>
-<p><code>ElasticModuli.youngs_poisson(E, nu)</code> first computes the physical 3D parameters</p>
+<p><code>ElasticModuli.youngs_poisson(E, nu)</code> accepts finite <span class="arithmatex">\(E\geq 0\)</span> and
+<span class="arithmatex">\(-1&lt;\nu&lt;0.5\)</span>, including auxetic materials such as <span class="arithmatex">\(\nu=-0.5\)</span>. It computes
+the physical 3D parameters</p>
 <div class="arithmatex">\[
 \mu_L=\frac{E}{2(1+\nu)},\qquad
 \lambda_L=\frac{E\nu}{(1+\nu)(1-2\nu)}.
@@ -3475,12 +3477,9 @@ scenes may deform differently and should be rebaked or recalibrated as needed.
 Serialized tetrahedral <code>mu</code>/<code>lambda</code> attributes remain raw energy coefficients;
 reapply the constitution from physical moduli to update them. Reapplying replaces
 the coefficients on every tetrahedron, including previously created attributes.</p>
-<p>The usual positive-definite isotropic linear-elastic input domain is finite
-<span class="arithmatex">\(E&gt;0\)</span> and <span class="arithmatex">\(-1&lt;\nu&lt;0.5\)</span>. Native validation is incomplete: it admits nonpositive
-or nonfinite <span class="arithmatex">\(E\)</span> and invalid <span class="arithmatex">\(\nu\)</span>, and incorrectly rejects <span class="arithmatex">\(\nu=-0.5\)</span>.
-Blender restricts solid inputs to finite positive <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(0\le\nu&lt;0.5\)</span>.
-These validation findings remain open and are separate from calibration; see the
-<a href="../../../agent_docs/14-project-audit.md">material audit</a>.</p>
+<p>For a positive-definite isotropic solid, choose <span class="arithmatex">\(E&gt;0\)</span> in the native domain
+above. Setting <span class="arithmatex">\(E=0\)</span> produces zero Lamé parameters. The Blender solid-body
+material controls use finite positive <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(0\le\nu&lt;0.5\)</span>.</p>
 <h2 id="attributes">Attributes</h2>
 <p>On <code>tetrahedra</code>:</p>
 <ul>

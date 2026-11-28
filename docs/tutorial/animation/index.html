@@ -3566,7 +3566,10 @@
   <figcaption>Successive poses produced by the rotating-motor animation callback.</figcaption>
 </figure>
 
-<p><code>Libuipc</code> also provide <code>LinearMotor</code> for you to control the translation of an affine body by specifying the translation axis and speed.</p>
+<p><code>LinearMotor</code> controls translation along the specified material-space axis.
+For both motors, an instance with current transform <span class="arithmatex">\(T\)</span> receives a target
+<span class="arithmatex">\(T\,\Delta T\)</span>, where <span class="arithmatex">\(\Delta T\)</span> is the local translation or rotation for the step.
+A rotation about the local origin preserves the translation column of <span class="arithmatex">\(T\)</span>.</p>
 <p>When you ask the name of them:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label></div>
 <div class="tabbed-content">

@@ -185,6 +185,8 @@
 * **readable\_type\_name&lt; float &gt;** ([**uipc**](namespaceuipc.md))
 * **readable\_type\_name&lt; std::string &gt;** ([**uipc**](namespaceuipc.md))
 * **run\_length\_encode** ([**uipc**](namespaceuipc.md))
+* **resize\_positions** ([**uipc::geometry::detail**](namespaceuipc_1_1geometry_1_1detail.md))
+* **resize\_topology** ([**uipc::geometry::detail**](namespaceuipc_1_1geometry_1_1detail.md))
 
 
 ## s
@@ -218,6 +220,7 @@
 * **to\_rigid\_body** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **transform\_to\_q** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
 * **transform\_v\_to\_q\_v** ([**uipc::geometry::affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md))
+* **triangulate\_quads** ([**uipc::geometry::detail**](namespaceuipc_1_1geometry_1_1detail.md))
 
 
 ## u

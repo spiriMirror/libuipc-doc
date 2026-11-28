@@ -3595,6 +3595,9 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">points</span> <span class="o">=</span> <span class="n">pointcloud</span><span class="p">(</span><span class="n">Vs</span><span class="p">)</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">points</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="c1"># 0</span>
 </span></code></pre></div>
+<p>These factories accept NumPy slices for both vertices and connectivity.
+For example, <code>pointcloud(Vs[::2])</code> uses vertices 0, 2, 4, and so on.
+Connectivity indices refer to the vertex array passed to the factory.</p>
 <p>Or, you want to read the meshes from a file, you can use <code>SimplicialComplexIO</code>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">io</span> <span class="o">=</span> <span class="n">SimplicialComplexIO</span><span class="p">()</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># .msh file</span>
@@ -3645,10 +3648,8 @@ A = \{ a_{ijk} \mid (i,j,k) \in F \}.
 <p>Note that, till now, we just get a handle of the attribute <code>position</code>. To access the data, we need to create a view of the attribute.</p>
 <div class="admonition warning">
 <p class="admonition-title">Borrowed facade and view lifetimes</p>
-<p>Keep the owning Scene, Object and Geometry alive while using their collection
-facades. Current Python facade returns such as <code>mesh.vertices()</code> and
-<code>scene.objects()</code> do not all retain their owners. Do not save a facade obtained
-from a temporary parent and then discard that parent.</p>
+<p>Python collection facades such as <code>mesh.vertices()</code> and <code>scene.objects()</code>
+retain their owners for the lifetime of the facade.</p>
 <p>NumPy views are live references, not snapshots. Reacquire them after operations
 that can resize, replace or detach attribute storage through copy-on-write.
 Use <code>array.copy()</code> when retaining history across such operations. The read-only
@@ -3665,7 +3666,9 @@ The view of the <code>position</code> is a <code>span&lt;const Vector3&gt;</code
 <div class="tabbed-block">
 <p></p><div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">const_view</span> <span class="o">=</span> <span class="n">pos</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
 </span></code></pre></div>
-The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is a const view of the position data. You can not modify the data through the view.
+<code>pos.view()</code> returns a read-only NumPy array. If assignment raises
+<code>ValueError: assignment destination is read-only</code>, use <code>uipc.view(pos)</code>
+to request writable access, as shown below.
 </div>
 </div>
 </div>
@@ -3677,7 +3680,9 @@ The view of the <code>position</code> is a <code>numpy.ndarray</code>, which is 
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">non_const_view</span> <span class="o">=</span> <span class="n">view</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">uipc</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">uipc</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">pos</span><span class="p">)[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.1</span>  <span class="c1"># Set the second vertex's x coordinate.</span>
 </span></code></pre></div>
 </div>
 </div>

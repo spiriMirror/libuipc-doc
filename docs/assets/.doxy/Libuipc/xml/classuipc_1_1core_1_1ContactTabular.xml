@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="79" column="18" bodyfile="include/uipc/core/contact_tabular.h" bodystart="79" bodyend="-1"/>
+        <location file="include/uipc/core/contact_tabular.h" line="80" column="18" bodyfile="include/uipc/core/contact_tabular.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="classuipc_1_1core_1_1ContactTabular_1a0ab2bdf919897f99de3dfdb2f7d213f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>UIPC_CORE_API void</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="67" column="31"/>
+        <location file="include/uipc/core/contact_tabular.h" line="68" column="31"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="78" column="7" bodyfile="include/uipc/core/contact_tabular.h" bodystart="78" bodyend="-1"/>
+        <location file="include/uipc/core/contact_tabular.h" line="79" column="7" bodyfile="include/uipc/core/contact_tabular.h" bodystart="79" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -338,14 +338,14 @@
         <name>default_model_is_user_set</name>
         <qualifiedname>uipc::core::ContactTabular::default_model_is_user_set</qualifiedname>
         <briefdescription>
-<para>Whether default_model(...) was ever called by the user. </para>
+<para>Whether the user explicitly set the default model, through default_model(...) or insert(default_element(), default_element(), ...). </para>
         </briefdescription>
         <detaileddescription>
 <para>Used by the backend to resolve the default contact stiffness: unset -&gt; use contact/adaptive/min_kappa; set -&gt; clamp the user&apos;s value into [min_kappa, max_kappa] (a warning reminds the user of the range); negative values (adaptive-kappa opt-in) are never clamped. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="64" column="10"/>
+        <location file="include/uipc/core/contact_tabular.h" line="65" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ContactTabular_1a8fad077d3e0895531c86447e983636ef" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>SizeT</type>
@@ -359,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="69" column="11"/>
+        <location file="include/uipc/core/contact_tabular.h" line="70" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ContactTabular_1a9d148f5599f9a1420e026390fbeb7964" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>ContactModelCollection</type>
@@ -373,7 +373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="73" column="29"/>
+        <location file="include/uipc/core/contact_tabular.h" line="74" column="29"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ContactTabular_1a1dff3b267e11f46d5e28396bbbcce253" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>CContactModelCollection</type>
@@ -387,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="74" column="29"/>
+        <location file="include/uipc/core/contact_tabular.h" line="75" column="29"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -403,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="71" column="17"/>
+        <location file="include/uipc/core/contact_tabular.h" line="72" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -419,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="80" column="35"/>
+        <location file="include/uipc/core/contact_tabular.h" line="81" column="35"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ContactTabular_1aa667a58ff7c76d7db0e15857913e19cd" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>span&lt; <ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref> &gt;</type>
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="81" column="20"/>
+        <location file="include/uipc/core/contact_tabular.h" line="82" column="20"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ContactTabular_1a7be44e83a6bbb004e613ae58e354179d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="82" column="10"/>
+        <location file="include/uipc/core/contact_tabular.h" line="83" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classuipc_1_1core_1_1ContactTabular_1a64293a937634ee784e89797f726aa7f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -485,14 +485,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/uipc/core/contact_tabular.h" line="85" column="10"/>
+        <location file="include/uipc/core/contact_tabular.h" line="86" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/uipc/core/contact_tabular.h" line="20" column="1" bodyfile="include/uipc/core/contact_tabular.h" bodystart="21" bodyend="88"/>
+    <location file="include/uipc/core/contact_tabular.h" line="20" column="1" bodyfile="include/uipc/core/contact_tabular.h" bodystart="21" bodyend="89"/>
     <listofallmembers>
       <member refid="classuipc_1_1core_1_1ContactTabular_1abee08e7eda2d95763a6793569ad85ea0" prot="public" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>at</name></member>
       <member refid="classuipc_1_1core_1_1ContactTabular_1a7be44e83a6bbb004e613ae58e354179d" prot="private" virt="non-virtual"><scope>uipc::core::ContactTabular</scope><name>build_from</name></member>

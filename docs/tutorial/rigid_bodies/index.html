@@ -3748,6 +3748,10 @@ the right size:</p>
 </div>
 <p>Instancing is preferable to duplicating identical meshes when only pose and
 per-body state differ.</p>
+<p>In Python, <code>uipc.geometry.affine_body.transform_to_q(transforms)</code> accepts
+an array of shape <code>(N, 4, 4)</code> and returns <code>(N, 12, 1)</code>. The first three
+entries of each state are the translation from <code>transforms[i, :3, 3]</code>.
+To convert back, pass <code>states[:, :, 0]</code> to <code>q_to_transform</code>.</p>
 <h2 id="mass-and-stiffness">Mass and stiffness</h2>
 <p>The standard overload computes mass properties from mesh geometry and
 <code>mass_density</code> (default 1000 kg/m^3). A closed, consistently oriented shape is

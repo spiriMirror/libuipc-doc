@@ -3699,8 +3699,8 @@ interface. Call <code>scene.validate_config()</code> for an earlier explicit che
 <code>world.init(scene)</code> calls it automatically.</p>
 <p>In Python, <code>Scene.default_config()</code> returns a dictionary, but <code>scene.config()</code>
 returns a <strong>ConfigAttributes facade</strong>, not a dictionary. Use <code>find("dt")</code> and
-<code>uipc.view(slot)</code> for attribute access; retain the owning <code>scene</code> while using the
-facade. Post-initialization attribute writes are not automatically revalidated by
+<code>uipc.view(slot)</code> for attribute access. The facade retains the owning <code>scene</code>.
+Post-initialization attribute writes are not automatically revalidated by
 every <code>world.advance()</code> call and are not a general backend reconfiguration API.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
 <div class="tabbed-content">
@@ -3779,17 +3779,11 @@ appropriate geometry instead.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">BDF2 startup and variable-step limitation</p>
-<p>The 2026-09-11 audit of <code>4757859c</code> found that BDF2 history initialization does
-not preserve a prescribed nonzero constant velocity at startup. A contact-free
-particle with velocity 1 m/s and dt=0.01 s advanced 0.0066667 m on its first
-BDF2 step rather than 0.01 m. The implemented BDF2 coefficients also assume a
-constant step size; live dt reads do not establish variable-step BDF2 support.
-Use default BDF1 when relying on these cases until the integration contract is
-corrected and tested. This is an identified algorithm/history limitation,
-not a requirement for bitwise repeatability or a change to the solver here.</p>
-</div>
+<p>BDF2 uses a constant time step. At startup the FEM and ABD integrators
+extrapolate the previous dynamic position from the initial velocity
+(<code>x[-1] = x[0] - dt * v[0]</code>, or the equivalent affine coordinates).
+This preserves uniform free motion from the first frame. Checkpoint recovery
+uses the saved position and velocity history.</p>
 <h2 id="newton-solve">Newton solve</h2>
 <table>
 <thead>
@@ -3807,14 +3801,14 @@ not a requirement for bitwise repeatability or a change to the solver here.</p>
 <td>integer</td>
 <td><code>1024</code></td>
 <td><code>&gt;= 1</code></td>
-<td>Maximum nonlinear iterations in one frame. Reaching it warns, or throws in strict mode.</td>
+<td>Maximum nonlinear iterations in one frame. Exhausting the budget without convergence warns, or records an engine error in strict mode.</td>
 </tr>
 <tr>
 <td><code>newton/min_iter</code></td>
 <td>integer</td>
 <td><code>0</code></td>
 <td><code>0 &lt;= value &lt;= max_iter</code></td>
-<td>Hard floor before ordinary Newton convergence may terminate. <code>0</code> disables the floor.</td>
+<td>Minimum number of completed Newton iterations before convergence can end a frame. <code>0</code> disables the floor.</td>
 </tr>
 <tr>
 <td><code>newton/use_adaptive_tol</code></td>
@@ -4123,7 +4117,7 @@ that frame.</p>
 <td>float, Pa</td>
 <td><code>1e8</code> (100 MPa)</td>
 <td><code>&gt; 0</code></td>
-<td>Lower fallback bound and the effective default resistance when the user never calls <code>default_model(...)</code>.</td>
+<td>Lower fallback bound and the effective default resistance when the user has not explicitly set the default pair.</td>
 </tr>
 <tr>
 <td><code>contact/adaptive/init_kappa</code></td>
@@ -4148,7 +4142,8 @@ that frame.</p>
 </tr>
 </tbody>
 </table>
-<p>If a user explicitly sets a non-negative default contact resistance, the
+<p>Both <code>default_model(...)</code> and <code>insert(default_element, default_element, ...)</code>
+set the default pair explicitly. For a non-negative default resistance, the
 backend clamps it into <code>[min_kappa, max_kappa]</code> and reports the range. A
 negative resistance is the explicit opt-in marker for adaptive kappa and is
 not clamped. When a scene-derived corridor is computable, it takes precedence
@@ -4226,7 +4221,7 @@ over the configured fallback bounds.</p>
 <td>flag</td>
 <td><code>0</code></td>
 <td><code>0</code>, <code>1</code></td>
-<td>Converts nonlinear/line-search limit warnings into engine errors. Recommended for automated validation, not exploratory tuning.</td>
+<td>Converts nonlinear/line-search limit warnings into errors in <code>engine.status()</code>. The world then reports <code>is_valid() == false</code>. Recommended for automated validation, not exploratory tuning.</td>
 </tr>
 </tbody>
 </table>

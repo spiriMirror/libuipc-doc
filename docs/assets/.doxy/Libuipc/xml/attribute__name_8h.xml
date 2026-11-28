@@ -5,6 +5,7 @@
     <includes local="no">string_view</includes>
     <includes refid="details_2attribute__name_8h" local="no">uipc/builtin/details/attribute_name.h</includes>
     <includedby refid="core_8h" local="no">include/uipc/core.h</includedby>
+    <includedby refid="details_2factory_8h" local="no">include/uipc/geometry/details/factory.h</includedby>
     <incdepgraph>
       <node id="1">
         <label>include/uipc/builtin/attribute_name.h</label>
@@ -28,12 +29,18 @@
         <link refid="attribute__name_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>include/uipc/core.h</label>
         <link refid="core_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
+      </node>
+      <node id="4">
+        <label>include/uipc/geometry/details/factory.h</label>
+        <link refid="details_2factory_8h_source"/>
       </node>
       <node id="3">
         <label>include/uipc/uipc.h</label>

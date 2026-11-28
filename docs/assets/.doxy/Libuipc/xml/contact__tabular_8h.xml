@@ -509,34 +509,34 @@
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref><sp/>default_element()<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classuipc_1_1core_1_1ContactModel" kindref="compound">ContactModel</ref><sp/><sp/><sp/>default_model()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="classuipc_1_1core_1_1ContactTabular_1a754e6a7b41c7d01b890d9b17edc8e23f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1ContactTabular_1a754e6a7b41c7d01b890d9b17edc8e23f" kindref="member">default_model_is_user_set</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classuipc_1_1core_1_1ContactTabular_1a754e6a7b41c7d01b890d9b17edc8e23f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classuipc_1_1core_1_1ContactTabular_1a754e6a7b41c7d01b890d9b17edc8e23f" kindref="member">default_model_is_user_set</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>UIPC_CORE_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>to_json(Json&amp;<sp/>j,<sp/>const<sp/>ContactTabular&amp;<sp/>ct);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>SizeT<sp/>element_count()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>Json<sp/>default_config()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>ContactModelCollection<sp/><sp/>contact_models()<sp/>noexcept;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>CContactModelCollection<sp/>contact_models()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/>private:</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>Impl;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>U&lt;Impl&gt;<sp/>m_impl;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>class<sp/>SceneFactory;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::AttributeCollection&amp;<sp/>internal_contact_models()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;<ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contact_elements()<sp/>const<sp/>noexcept;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>build_from(const<sp/>geometry::AttributeCollection&amp;<sp/>ac,</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;const<sp/><ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ce,</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>default_model_user_set);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_from(const<sp/>geometry::AttributeCollectionCommit&amp;<sp/>acc,</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;const<sp/><ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ce,</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>default_model_user_set);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal">UIPC_CORE_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>to_json(Json&amp;<sp/>j,<sp/>const<sp/>ContactTabular&amp;<sp/>ct);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>UIPC_CORE_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>to_json(Json&amp;<sp/>j,<sp/>const<sp/>ContactTabular&amp;<sp/>ct);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>SizeT<sp/>element_count()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>Json<sp/>default_config()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ContactModelCollection<sp/><sp/>contact_models()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>CContactModelCollection<sp/>contact_models()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>private:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>Impl;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>U&lt;Impl&gt;<sp/>m_impl;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>friend<sp/>class<sp/>SceneFactory;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>geometry::AttributeCollection&amp;<sp/>internal_contact_models()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>span&lt;<ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contact_elements()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>build_from(const<sp/>geometry::AttributeCollection&amp;<sp/>ac,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;const<sp/><ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ce,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>default_model_user_set);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_from(const<sp/>geometry::AttributeCollectionCommit&amp;<sp/>acc,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>span&lt;const<sp/><ref refid="classuipc_1_1core_1_1ContactElement" kindref="compound">ContactElement</ref>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ce,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>default_model_user_set);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">UIPC_CORE_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>to_json(Json&amp;<sp/>j,<sp/>const<sp/>ContactTabular&amp;<sp/>ct);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>uipc::core</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/uipc/core/contact_tabular.h"/>
   </compounddef>

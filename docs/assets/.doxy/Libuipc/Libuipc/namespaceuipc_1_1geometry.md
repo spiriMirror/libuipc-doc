@@ -28,6 +28,7 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**affine\_body**](namespaceuipc_1_1geometry_1_1affine__body.md) <br> |
+| namespace | [**detail**](namespaceuipc_1_1geometry_1_1detail.md) <br> |
 
 
 ## Classes
@@ -129,7 +130,7 @@
 |  UIPC\_GEOMETRY\_API [**ImplicitGeometry**](classuipc_1_1geometry_1_1ImplicitGeometry.md) | [**halfplane**](#function-halfplane) (const Vector3 & P=Vector3::Zero(), const Vector3 & N=Vector3::UnitY()) <br>_Create a half-plane._  |
 |  Float UIPC\_GEOMETRY\_API | [**halfplane\_vertex\_signed\_distance**](#function-halfplane_vertex_signed_distance) (const Vector3 & P, const Vector3 & N, const Vector3 & V, Float V\_thickness=0.0) <br>_Compute the distance between a half-plane (P, N) and a vertex V (with thickness V\_thickness)._  |
 |  UIPC\_GEOMETRY\_API bool | [**is\_point\_in\_tet**](#function-is_point_in_tet) (const Vector3 & T0, const Vector3 & T1, const Vector3 & T2, const Vector3 & T3, const Vector3 & P) <br>_Check if a point is in a tetrahedron._  |
-|  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Check if a trimesh is closed._  |
+|  UIPC\_GEOMETRY\_API bool | [**is\_trimesh\_closed**](#function-is_trimesh_closed) (const [**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Check whether every undirected edge occurs exactly twice in the triangle list._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_connected\_vertices**](#function-label_connected_vertices) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & complex) <br>_Label the connected vertices of a simplicial complex (by edges)._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_graph\_color**](#function-label_graph_color) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & sc) <br>_Label the vertex color of a simplicial complex by graph coloring algorithm._  |
 |  UIPC\_GEOMETRY\_API S&lt; [**AttributeSlot**](classuipc_1_1geometry_1_1AttributeSlot.md)&lt; IndexT &gt; &gt; | [**label\_open\_edge**](#function-label_open_edge) ([**SimplicialComplex**](classuipc_1_1geometry_1_1SimplicialComplex.md) & R) <br>_Label open edges in a trimesh._  |
@@ -853,7 +854,7 @@ true if the point is in the tetrahedron
 
 ### function is\_trimesh\_closed 
 
-_Check if a trimesh is closed._ 
+_Check whether every undirected edge occurs exactly twice in the triangle list._ 
 ```C++
 UIPC_GEOMETRY_API bool uipc::geometry::is_trimesh_closed (
     const SimplicialComplex & R

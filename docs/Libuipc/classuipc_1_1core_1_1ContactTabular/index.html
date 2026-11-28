@@ -3600,7 +3600,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-default_model_is_user_set"><strong>default_model_is_user_set</strong></a> () noexcept const<br><em>Whether default_model(...) was ever called by the user.</em></td>
+<td style="text-align: left;"><a href="#function-default_model_is_user_set"><strong>default_model_is_user_set</strong></a> () noexcept const<br><em>Whether the user explicitly set the default model, through default_model(...) or insert(default_element(), default_element(), ...).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">SizeT</td>
@@ -3694,7 +3694,7 @@
 <hr>
 
 <h3 id="function-default_model_is_user_set">function default_model_is_user_set</h3>
-<p><em>Whether default_model(...) was ever called by the user.</em> 
+<p><em>Whether the user explicitly set the default model, through default_model(...) or insert(default_element(), default_element(), ...).</em> 
 </p><div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">uipc</span><span class="o">::</span><span class="n">core</span><span class="o">::</span><span class="n">ContactTabular</span><span class="o">::</span><span class="n">default_model_is_user_set</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="k">const</span>
 </span></code></pre></div>
 <p>Used by the backend to resolve the default contact stiffness: unset -&gt; use contact/adaptive/min_kappa; set -&gt; clamp the user's value into [min_kappa, max_kappa] (a warning reminds the user of the range); negative values (adaptive-kappa opt-in) are never clamped. </p>

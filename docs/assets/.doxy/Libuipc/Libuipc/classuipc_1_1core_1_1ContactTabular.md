@@ -60,7 +60,7 @@
 |  [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) | [**default\_element**](#function-default_element) () noexcept<br> |
 |  void | [**default\_model**](#function-default_model-12) (Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
 |  [**ContactModel**](classuipc_1_1core_1_1ContactModel.md) | [**default\_model**](#function-default_model-22) () noexcept const<br> |
-|  bool | [**default\_model\_is\_user\_set**](#function-default_model_is_user_set) () noexcept const<br>_Whether default\_model(...) was ever called by the user._  |
+|  bool | [**default\_model\_is\_user\_set**](#function-default_model_is_user_set) () noexcept const<br>_Whether the user explicitly set the default model, through default\_model(...) or insert(default\_element(), default\_element(), ...)._  |
 |  SizeT | [**element\_count**](#function-element_count) () noexcept const<br> |
 |  IndexT | [**insert**](#function-insert) (const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & L, const [**ContactElement**](classuipc_1_1core_1_1ContactElement.md) & R, Float friction\_rate, Float resistance, bool enable=true, const Json & config=default\_config()) <br> |
 |  ContactTabular & | [**operator=**](#function-operator) (const ContactTabular &) = delete<br> |
@@ -234,7 +234,7 @@ ContactModel uipc::core::ContactTabular::default_model () noexcept const
 
 ### function default\_model\_is\_user\_set 
 
-_Whether default\_model(...) was ever called by the user._ 
+_Whether the user explicitly set the default model, through default\_model(...) or insert(default\_element(), default\_element(), ...)._ 
 ```C++
 bool uipc::core::ContactTabular::default_model_is_user_set () noexcept const
 ```
